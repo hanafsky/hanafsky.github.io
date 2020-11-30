@@ -1,0 +1,41 @@
+<!doctype html> <!-- Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes Free for personal and commercial use under the MIT license https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE --> <html lang=ja > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/minimal-mistakes.css"> <link rel=stylesheet  href="/css/adjust.css"> <link rel=icon  href="/assets/favicon.ico"> <!--[if IE ]> <style> /* old IE unsupported flexbox fixes */ .greedy-nav .site-title { padding-right: 3em; } .greedy-nav button { position: absolute; top: 0; right: 0; height: 100%; } </style> <![endif]--> <title>julia起動時の初期設定 - startup.jl</title> <body class=layout--single > <div class=masthead > <div class=masthead__inner-wrap > <div class=masthead__menu > <nav id=site-nav  class=greedy-nav > <a class=site-title  href="/">Toccatina</a> <ul class=visible-links > <li class=masthead__menu-item ><a href="/tips/" >JuliaTips</a> <li class=masthead__menu-item ><a href="/blog/" >Blog</a> <li class=masthead__menu-item ><a href="/project/" >Projects</a> <li class=masthead__menu-item ><a href="/about/">About</a> </ul> <button class="greedy-nav__toggle hidden" type=button > <span class=visually-hidden >Toggle menu</span> <div class=navicon ></div> </button> <ul class="hidden-links hidden"></ul> </nav> </div> </div> </div> <div class=initial-content > <div id=main  role=main > <div class="sidebar sticky"> <div itemscope itemtype="https://schema.org/Person"> <div class=author__avatar > <img src="/assets/design/author3.png" alt=Dio  itemprop=image > </div> <div class=author__content > <h3 class=author__name  itemprop=name >Kei Hanafusa</h3> <p class=author__bio  itemprop=description >Chemical Engineer, <br> living in Osaka, 🗾</p> </div> <div class=author__urls-wrapper > <button class="btn btn--inverse">Follow</button> <ul class="author__urls social-icons"> <li itemprop=homeLocation  itemscope itemtype="https://schema.org/Place"> <i class="fas fa-fw fa-map-marker-alt" aria-hidden=true ></i> <span itemprop=name >Osaka, Japan</span> <li><a href="https://twitter.com/mmistakes" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden=true ></i> Twitter</a> <li><a href="https://github.com/mmistakes" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i> GitHub</a> </ul> </div> </div> </div> <div class=franklin-content ><h1 id="julia起動時の初期設定_-_startupjl"><a href="#julia起動時の初期設定_-_startupjl">julia起動時の初期設定 - startup.jl</a></h1> <h2 id="startupjlとは"><a href="#startupjlとは">startup.jlとは？</a></h2> <p>startup.jlは、juliaのREPL起動時に自動的に実行されるプログラムです。 よく使うパッケージの読み込みや環境変数の設定などに利用できます。 私は会社ではプロキシ環境下でjuliaを利用するので、重宝しています。 <div class=note ><div class=title >😲 Note</div> <div class=content >環境変数は直接設定をいじっても問題ありませんが、他のソフトウェアに影響を及ぼしたり、 再起動しないと変更が反映されないこともあるので、julia関係の環境変数はstartup.jlを 使って設定した方が良いと思っています。</div></div></p> <h2 id="startupjlの場所"><a href="#startupjlの場所">startup.jlの場所</a></h2> <ul> <li><p>Windowsの場合: <code>&#37;USERPROFILE&#37;\.julia\config\startup.jl</code></p> <li><p>Linuxの場合: <code>.julia/config/startup.jl</code></p> </ul> <div class=warning ><div class=title >😕 Warning&#33;</div> <div class=content >configフォルダは自分で作る必要があります。</div></div> <h2 id="内容"><a href="#内容">内容</a></h2> <p>参考までに私のstartup.jlをさらしてみます。</p> <p>なお、proxyのアドレスやポートは知らなくても、自動構成スクリプト&#40;<code>***.pac</code>&#41;を 使っている場合、テキストエディタで開けば調べられる可能性があります。</p> <pre><code class="julia hljs"><span class=hljs-string >&quot;&quot;&quot;
+Proxy 設定関連
+&quot;&quot;&quot;</span>
+<span class=hljs-keyword >import</span>  Pkg
+Pkg.setprotocol!(protocol=<span class=hljs-string >&quot;https&quot;</span>) <span class=hljs-comment ># gitではなくhttps経由でダウンロード</span>
+
+<span class=hljs-comment ># 認証付きプロキシの場合</span>
+username = <span class=hljs-string >&quot;xxxxxxxx&quot;</span>
+pw= <span class=hljs-string >&quot;xxxxxxxx&quot;</span>
+proxy = <span class=hljs-string >&quot;123.123.123.123&quot;</span> 
+port = <span class=hljs-string >&quot;8000&quot;</span>
+<span class=hljs-literal >ENV</span>[<span class=hljs-string >&quot;BINARYPROVIDER_DOWNLOAD_ENGINE&quot;</span>] = <span class=hljs-string >&quot;curl&quot;</span>
+<span class=hljs-literal >ENV</span>[<span class=hljs-string >&quot;HTTP_PROXY&quot;</span>] = <span class=hljs-string >&quot;http://<span class=hljs-subst >$(username)</span>:<span class=hljs-subst >$(pw)</span>@<span class=hljs-subst >$(proxy)</span>:<span class=hljs-subst >$(port)</span>&quot;</span>
+<span class=hljs-literal >ENV</span>[<span class=hljs-string >&quot;HTTPS_PROXY&quot;</span>] = <span class=hljs-literal >ENV</span>[<span class=hljs-string >&quot;HTTP_PROXY&quot;</span>]
+
+<span class=hljs-comment ># 認証無しなら</span>
+<span class=hljs-comment ># ENV[&quot;HTTP_PROXY&quot;] = &quot;http://$(proxy):$(port)&quot;</span>
+
+<span class=hljs-comment ># PythonとJupyterをインストール済みの場合の環境変数設定</span>
+<span class=hljs-literal >ENV</span>[<span class=hljs-string >&quot;PYTHON&quot;</span>] = Sys.which(<span class=hljs-string >&quot;python&quot;</span>)
+<span class=hljs-literal >ENV</span>[<span class=hljs-string >&quot;PYTHON3&quot;</span>] = Sys.which(<span class=hljs-string >&quot;python&quot;</span>)
+<span class=hljs-literal >ENV</span>[<span class=hljs-string >&quot;JUPYTER&quot;</span>] = Sys.which(<span class=hljs-string >&quot;jupyter&quot;</span>)
+
+<span class=hljs-string >&quot;&quot;&quot;
+よく使うパッケージ
+&quot;&quot;&quot;</span>
+
+<span class=hljs-keyword >using</span> OhMyREPL <span class=hljs-comment ># REPLで分かりやすく色付けをしてくれる。</span>
+<span class=hljs-keyword >using</span> Revise <span class=hljs-comment ># パッケージ開発時に利用する。</span>
+
+<span class=hljs-keyword >using</span> TabularDisplay <span class=hljs-comment ># arrayをテーブル形式で表示してくれる。</span>
+<span class=hljs-comment >#手抜きのためのマクロと関数</span>
+<span class=hljs-keyword >macro</span> dt(expr)
+    <span class=hljs-keyword >quote</span>
+        displaytable($(expr);padding=<span class=hljs-number >5</span>, index=<span class=hljs-literal >true</span>, indexsep=<span class=hljs-string >&quot; -&gt; &quot;</span>) 
+    <span class=hljs-keyword >end</span>
+<span class=hljs-keyword >end</span>
+
+<span class=hljs-keyword >function</span> dt(a)
+    displaytable(a;padding=<span class=hljs-number >5</span>, index=<span class=hljs-literal >true</span>, indexsep=<span class=hljs-string >&quot; -&gt; &quot;</span>)
+<span class=hljs-keyword >end</span></code></pre> <h2 id="注意事項"><a href="#注意事項">注意事項</a></h2> <div class=danger ><div class=title >😱 Danger&#33;</div> <div class=content >Windows環境下ではjuliaの新しいバージョンをインストールしてjuliaを実行すると、エラーが発生して、<strong>そもそもREPLが立ち上がらない</strong>問題が発生します。</div></div> <p>これはjuliaが参照するProject.tomlファイルが変更されたときに起こります。 &#40;つまり、v1.4 -&gt; v1.5のようなversion変更を行ったとき。 v1.5.2 -&gt; v1.5.3のような マイナーチェンジの時は起こりません。&#41;</p> <p>新バージョンのjuliaをインストールしたときは、startup.jlのusing文を一旦コメントアウトしておきましょう。</p> <p style="text-align:right"> 以　上 </p> <div class=page-foot > <div class=copyright > &copy; Kei Hanafusa. Last modified: November 30, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>. </div> </div> </div> </div> </div> <div class=page__footer > <footer> <div class=page__footer-follow > <ul class=social-icons > <li><strong>Follow:</strong> <li><a href="https://twitter.com/keihanafusa" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden=true ></i> Twitter</a> <li><a href="https://github.com/lethal8723" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i> GitHub</a> </ul> </div> <div class=page__footer-copyright >&copy; Kei Hanafusa. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel=nofollow >Minimal Mistakes</a>.</div> </footer> </div> <script src="/libs/minimal-mistakes/main.min.js"></script> <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin=anonymous ></script>
