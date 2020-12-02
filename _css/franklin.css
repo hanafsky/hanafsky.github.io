@@ -256,7 +256,7 @@ code {
     border-radius: 0 10px 10px 0;
     border-left: 5px solid #4C9CF1; }
 
- /* adomition note */
+ /* admomonition note */
 .note {
   margin-top: 1.5em;
   width: 95%;
@@ -286,7 +286,7 @@ code {
   background: #209cee;
 }
 
- /* adomition success */
+ /* admonition success */
 .success {
   margin-top: 1.5em;
   width: 95%;
@@ -313,7 +313,7 @@ code {
   color: white;
   background: #22c35b;
 }
- /* adomition warning */
+ /* admonition warning */
 .warning {
   margin-top: 1.5em;
   width: 95%;
@@ -340,7 +340,7 @@ code {
   color: white;
   background: #ffdd57;
 }
- /* adomition danger*/
+ /* admonition danger*/
 .danger {
   margin-top: 1.5em;
   width: 95%;
@@ -367,7 +367,7 @@ code {
   color: white;
   background: #da0b00;
 }
- /* adomition compat*/
+ /* admonition compat*/
 .compat {
   margin-top: 1.5em;
   width: 95%;
