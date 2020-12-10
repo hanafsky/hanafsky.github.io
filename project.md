@@ -1,6 +1,6 @@
-@def title = "More goodies"
+@def title = "Projects"
 @def hascode = true
 
-# More goodies
+# 自前のパッケージなど
 
 ## More markdown support
