@@ -5,9 +5,11 @@
 julia言語に関するトピックを書いていきます。
 
 ## トピック
-
-- [**プロキシ利用者必見** julia起動時の初期設定 - startup.jl](/tips/startup)
-- [静的サイトジェネレータ Franklin.jlを使った感想](/tips/franklin)
-
+@@cards
+@@row
+@@column \card{https://franklinjl.org/assets/infra/logoF2.svg}{静的サイトジェネレータ Franklin.jl}{/tips/franklin} @@
+@@column \card{/assets/tips/1415596_s.jpg}{julia起動時の初期設定 - startup.jl}{/tips/startup} @@
+@@
+@@
 ## タグ
 * [`設定関連`](/tag/設定/)
