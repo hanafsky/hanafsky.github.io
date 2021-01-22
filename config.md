@@ -38,3 +38,98 @@ For instance:
 \newcommand{\right}[1]{~~~ <p style="text-align:right"> #1 </p>~~~}
 \newcommand{\center}[1]{~~~ <div style="text-align:center"> #1 </div>~~~}
 \newcommand{\mermaid}[1]{~~~ <div style="text-align:center" class="mermaid"> #1 </div>~~~}
+\newcommand{\backtotop}{~~~ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> ~~~}
+\newcommand{\mytoc}{
+  @@mytoc
+  目次
+  \toc @@
+
+}
+\newcommand{\html}[1]{~~~#1~~~}
+\newenvironment{center}{
+  \html{<div style="text-align:center">}
+}{
+  \html{</div>}
+}
+\newcommand{\luminous}[1]{
+    ~~~
+    <div style="text-align:center">
+    <a href="#1" class="zoom"><img src="#1" alt=""></a>
+    </div>
+    ~~~
+}
+\newcommand{\card}[3]{
+  @@card
+  ~~~<p style="text-align:center"><img src="#1" alt="No Image"></p>~~~
+    @@container
+    \center{#2}
+    ~~~
+    <p><button class="button" onclick="location.href='#3'">読む</button></p>
+    ~~~
+    @@
+  @@
+}
+\newcommand{\textcard}[3]{
+  @@card
+    @@container
+  ~~~<div style="font-family:yozakura; font-size:200%; text-align:center;padding-top:30pt;padding-bottom:15pt">#1</div>~~~
+    @@title
+    \center{#2}
+    @@
+    ~~~
+    <p><button class="button" onclick="location.href='#3'">読む</button></p>
+    ~~~
+    @@
+  @@
+}
+
+\newcommand{\prettyshow}[1]{
+  @@code-output \output{#1} @@
+}
+
+
+\newcommand{\prevnext}[4]{
+  ~~~
+  <div class="prev-next-link">
+  <a class="prev-link" href="#1">
+    <p class="prev-next-label">前の記事</p>
+    <p>
+      #2
+    </p>
+  </a>
+  <a class="next-link" href="#3">
+    <p class="prev-next-label">次の記事</p>
+    <p>
+      #4
+    </p>
+  </a>
+</div>
+~~~
+}
+\newcommand{\next}[2]{
+  ~~~
+  <div class="prev-next-link">
+  <a class="next-link" href="#1">
+    <p class="prev-next-label">次の記事</p>
+    <p>
+      #2
+    </p>
+  </a>
+</div>
+~~~
+}
+\newcommand{\prev}[2]{
+  ~~~
+  <div class="prev-next-link">
+  <a class="prev-link" href="#1">
+    <p class="prev-next-label">次の記事</p>
+    <p>
+      #2
+    </p>
+  </a>
+</div>
+~~~
+}
+\newcommand{\yozakura}[1]{
+  ~~~<p style="font-family:yozakura;font-size:xx-large">#1</p>~~~
+}
