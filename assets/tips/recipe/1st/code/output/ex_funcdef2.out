@@ -1,0 +1,9 @@
+f(2) = 4
+((x->begin
+        #= none:1 =#
+        x ^ 2
+    end))(2) = 4
+(((x, y)->begin
+        #= none:1 =#
+        x + y
+    end))(1, 2) = 3
