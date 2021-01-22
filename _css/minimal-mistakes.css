@@ -6,6 +6,17 @@
 .mfp-counter {
   font-family: Georgia,Times,serif
 }
+@font-face {
+  font-family: JuliaMono-Regular;
+  src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Regular.woff2");
+}
+
+@font-face {
+  font-family: yozakura;
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/yozakura.woff') format('woff');
+  }
 
 .mfp-bg {
   top: 0;
@@ -728,7 +739,7 @@ a:hover {
 }
 
 tt,code,kbd,samp,pre {
-  font-family: Monaco,Consolas,"Lucida Console",monospace
+  font-family: "JuliaMono-Regular",Monaco,Consolas,"Lucida Console",monospace
 }
 
 pre {
@@ -1726,7 +1737,8 @@ tr,td,th {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif
+  padding-top: 10px;
+  font-family: yozakura,-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif
 }
 
 .masthead__inner-wrap::after {
@@ -2023,6 +2035,7 @@ tr,td,th {
 .greedy-nav .visible-links li {
   -webkit-box-flex: 0;
   -ms-flex: none;
+  padding-top: 5px;
   flex: none
 }
 

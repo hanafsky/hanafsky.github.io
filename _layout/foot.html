@@ -20,6 +20,8 @@
 
     <script src="/libs/minimal-mistakes/main.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <script src="/libs/myBtn/myBtn.js"></script>
+    <script src="/libs/luminous/Luminous.min.js"></script>
 
     {{ if hasmath }}
         {{ insert foot_katex.html }}
@@ -30,6 +32,7 @@
     {{ if hasmermaid }}
         {{ insert foot_mermaid.html }}
     {{ end }}
-
+    {{ insert foot_luminous.html }}
+    {{ insert foot_mytoc.html }}
   </body>
 </html>
