@@ -20,5 +20,12 @@
               <li><a href="https://github.com/lethal8723" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
             </ul>
           </div>
+
+          {{ if isblog }}
+              {{ insert tagblog.html }}
+          {{ end }}
+          {{ if isjulia }}
+              {{ insert tagjulia.html }}
+          {{ end }}
         </div>
       </div>

@@ -1,6 +1,7 @@
 @def title="julia起動時の初期設定 - startup.jl"
 @def hascode=true
-@def tags=["julia","設定"]
+@def tags=["setting"]
+@def isjulia =true
 # julia起動時の初期設定 - startup.jl
 startup.jlは、juliaのREPL起動時に自動的に実行されるプログラムです。
 よく使うパッケージの読み込みや環境変数の設定などに利用できます。
@@ -55,19 +56,6 @@ ENV["JUPYTER"] = Sys.which("jupyter")
 
 using OhMyREPL # REPLで分かりやすく色付けをしてくれる。
 using Revise # パッケージ開発時に利用する。
-
-using TabularDisplay # arrayをテーブル形式で表示してくれる。
-#手抜きのためのマクロと関数
-macro dt(expr)
-    quote
-        displaytable($(expr);padding=5, index=true, indexsep=" -> ") 
-    end
-end
-
-function dt(a)
-    displaytable(a;padding=5, index=true, indexsep=" -> ")
-end
-
 ```
 
 ## 注意事項
@@ -79,7 +67,7 @@ end
 (つまり、v1.4 -> v1.5のようなversion変更を行ったとき。 v1.5.2 -> v1.5.3のような
 マイナーチェンジの時は起こりません。)
 
-新バージョンのjuliaをインストールしたときは、startup.jlのusing文を一旦コメントアウトしておきましょう。
+新バージョンのjuliaをインストールしたときは、startup.jlのusing文を一旦コメントアウトしておく必要があります。
 
 \right{めでたしめでたし}
 \backtotop

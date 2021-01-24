@@ -1,7 +1,8 @@
 @def title="juliaの文法"
 @def rss=""
-@def tags=["julia","設定"]
+@def tags=["recipe"]
 @def hascode=true
+@def isjulia =true 
 # Juliaの文法
 
 \mytoc

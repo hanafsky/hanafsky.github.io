@@ -1,5 +1,5 @@
 @def title = "Julia Tips"
-@def tags = ["julia"]
+@def isjulia =true
 
 # Julia Tips
 julia言語に関するトピックを書いていきます。

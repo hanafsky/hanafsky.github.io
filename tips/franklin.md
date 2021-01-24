@@ -1,6 +1,7 @@
 @def title="Franklin.jlを使った話"
-@def tags=["julia","設定"]
+@def tags=["thirdparty","setting"]
 @def hascode=true
+@def isjulia =true
 
 # 静的サイトジェネレータ　Franklin.jl を使った話
 [Franklin.jl](https://github.com/tlienart/Franklin.jl)はjulia言語で作られた静的サイト作成パッケージです。
@@ -161,14 +162,14 @@ github actions(githubのレポジトリの中で自動的に実行される処�
 Franklinの場合は、
 ``.github\workflows\deploy.yml``にコードが記載されていて、
 リモートレポジトリにpushしたときに処理が実行されるようになっています。
-deploy.ymlの中身を見れば雰囲気が分かると思いますが、処理の内容をざっくり説明すると
+deploy.ymlの中身を見れば雰囲気が分かると思いますが、処理の流れをざっくり説明すると
 1. github上でOSを立ち上げて、juliaやら何やら必要なものをインストール
 1. Franklinを実行して、サイト(__siteフォルダ以下)を作る
 1. gh-pagesブランチにできたサイトをぶちこむ
 ということになります。
 
 個別の状況によりますが、このdeploy.ymlは修正する必要があります。
-私がはまった点を書いておきたいと思います。
+私がハマった点を書いておきます。
 #### master or main?
 \warning{
 2020年の米国の騒動が原因githubのデフォルトブランチ名がmasterからmainに変更されました。
@@ -215,7 +216,7 @@ default(
 ## せっかくなので、拡張してみる。
 htmlやcssに関する知識が多少あれば、色々と機能を拡張[^1]することができます。
 [^1]: 多少の知識があれば、WordPressの立ち上げより簡単だと思います。
-### adomonition
+私はadomonitionの設定、トップに戻るボタン、mermaidによるフローチャート描画の機能を追加してみました。
 ### コードのフォントにはjuliamonoを使おう
 [juliamono](https://github.com/cormullion/juliamono)フォントを使えば、juliaのコードを洗練された見栄えに変更できます。
 パイプ演算子や無名関数を多用する人は、気に入るのではないでしょうか？
@@ -240,3 +241,11 @@ code {
 としておけば良いです。(font-familyの一番左に書くことが重要)
 
 ## まとめ
+- Franklin.jlを使えば、テンプレートサイトをいじって簡単に自分だけのサイトが作れる。
+- 自分だけのコマンドを作れるが、``\ ``の記号には注意が必要。
+- juliaコードを実行するときは変数のスコープに注意する。
+- githubにプッシュして簡単にホームページが作れる。
+    - github-pagesを使うときは、deploy.yml、Project.toml、ソースブランチの設定に注意。
+- cssやjavascriptをいじって自分で拡張できる。
+\right{めでたしめでたし}
+\backtotop

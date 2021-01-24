@@ -1,6 +1,7 @@
 @def title="Pluto.jlでレポートを作る。"
 @def hascode=true
-@def tags=["julia","Pluto"]
+@def tags=["thirdparty"]
+@def isjulia =true
 # Pluto.jlとは
 ## Installation
 ```julia

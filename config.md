@@ -12,6 +12,8 @@ The website_* must be defined for the RSS to work
 @def mintoclevel = 2
 
 @def hasmermaid = false
+@def isblog = false
+@def isjulia = false
 <!--
 Add here files or directories that should be ignored by Franklin, otherwise
 these files might be copied and, if markdown, processed by Franklin which
