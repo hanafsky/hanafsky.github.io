@@ -1,4 +1,4 @@
-<!doctype html> <!-- Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes Free for personal and commercial use under the MIT license https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE --> <html lang=ja > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/minimal-mistakes.css"> <link rel=stylesheet  href="/css/adjust.css"> <link rel=stylesheet  href="/css/luminous-basic.min.css"> <link rel=icon  href="/assets/favicon.ico"> <!--[if IE ]> <style> /* old IE unsupported flexbox fixes */ .greedy-nav .site-title { padding-right: 3em; } .greedy-nav button { position: absolute; top: 0; right: 0; height: 100%; } </style> <![endif]--> <title>juliaの文法</title> <body class=layout--single > <div class=masthead > <div class=masthead__inner-wrap > <div class=masthead__menu > <nav id=site-nav  class=greedy-nav > <a class=site-title  href="/">Toccatina</a> <ul class=visible-links > <li class=masthead__menu-item ><a href="/tips/" >Julia-tips</a> <li class=masthead__menu-item ><a href="/blog/" >Blog</a> <li class=masthead__menu-item ><a href="/project/" >Projects</a> <li class=masthead__menu-item ><a href="/about/">About</a> </ul> <button class="greedy-nav__toggle hidden" type=button > <span class=visually-hidden >Toggle menu</span> <div class=navicon ></div> </button> <ul class="hidden-links hidden"></ul> </nav> </div> </div> </div> <div class=initial-content > <div id=main  role=main > <div class="sidebar sticky"> <div itemscope itemtype="https://schema.org/Person"> <div class=author__avatar > <img src="/assets/design/author3.png" alt=Dio  itemprop=image > </div> <div class=author__content > <h3 class=author__name  itemprop=name >Kei Hanafusa</h3> <p class=author__bio  itemprop=description >Chemical Engineer, <br> living in Osaka, 🗾</p> </div> <div class=author__urls-wrapper > <button class="btn btn--inverse">Follow</button> <ul class="author__urls social-icons"> <li itemprop=homeLocation  itemscope itemtype="https://schema.org/Place"> <i class="fas fa-fw fa-map-marker-alt" aria-hidden=true ></i> <span itemprop=name >Osaka, Japan</span> <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden=true ></i> Twitter</a> <li><a href="https://github.com/lethal8723" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i> GitHub</a> </ul> </div> <div class=author__urls-wrapper > <button class="btn btn--inverse">Tag</button> <ul class="author__urls social-icons"> <li>タグ <li> <li><a href="/tag/setting/">設定</a> <li><a href="/tag/thirdparty/">サードパーティライブラリ</a> <li><a href="/tag/recipe">レシピ</a> </ul> </div> </div> </div> <div class=franklin-content ><h1 id="juliaの文法"><a href="#juliaの文法">Juliaの文法</a></h1> <h2><div class=mytoc >目次 <div class=franklin-toc ><ol><li><a href="#リテラル">リテラル</a><li><a href="#演算子">演算子</a><li><a href="#変数と定数">変数と定数</a><li><a href="#代入">代入</a><li><a href="#文の区切り">文の区切り</a><li><a href="#コメント">コメント</a><li><a href="#真偽値と条件分岐">真偽値と条件分岐</a><li><a href="#繰り返し">繰り返し</a><li><a href="#メソッド呼び出し">メソッド呼び出し</a><li><a href="#ブロック">ブロック</a><li><a href="#関数定義">関数定義</a><li><a href="#複合型定義">複合型定義</a><li><a href="#モジュール定義">モジュール定義</a><li><a href="#特異メソッド">特異メソッド</a><li><a href="#例外処理">例外処理</a><li><a href="#aliasとundef">aliasとundef?</a><li><a href="#予約語">予約語</a></ol></div></div></h2> <h2 id="リテラル"><a href="#リテラル">リテラル</a></h2> <p>リテラルとは組み込み型の定数を表すものです。いくつか列挙します。</p> <pre><code class="julia hljs"><span class=hljs-comment >#数値リテラル</span>
+<!doctype html> <!-- Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes Free for personal and commercial use under the MIT license https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE --> <html lang=ja > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/minimal-mistakes.css"> <link rel=stylesheet  href="/css/adjust.css"> <link rel=stylesheet  href="/css/luminous-basic.min.css"> <link rel=icon  href="/assets/favicon.ico"> <!--[if IE ]> <style> /* old IE unsupported flexbox fixes */ .greedy-nav .site-title { padding-right: 3em; } .greedy-nav button { position: absolute; top: 0; right: 0; height: 100%; } </style> <![endif]--> <title>juliaの文法</title> <body class=layout--single > <div class=masthead > <div class=masthead__inner-wrap > <div class=masthead__menu > <nav id=site-nav  class=greedy-nav > <a class=site-title  href="/">Toccatina</a> <ul class=visible-links > <li class=masthead__menu-item ><a href="/tips/" >Julia-tips</a> <li class=masthead__menu-item ><a href="/blog/" >Blog</a> <li class=masthead__menu-item ><a href="/project/" >Projects</a> <li class=masthead__menu-item ><a href="/about/">About</a> </ul> <button class="greedy-nav__toggle hidden" type=button > <span class=visually-hidden >Toggle menu</span> <div class=navicon ></div> </button> <ul class="hidden-links hidden"></ul> </nav> </div> </div> </div> <div class=initial-content > <div id=main  role=main > <div class="sidebar sticky"> <div itemscope itemtype="https://schema.org/Person"> <div class=author__avatar > <img src="/assets/design/author3.png" alt=Dio  itemprop=image > </div> <div class=author__content > <h3 class=author__name  itemprop=name >Kei Hanafusa</h3> <p class=author__bio  itemprop=description >Chemical Engineer, <br> living in Osaka, 🗾</p> </div> <div class=author__urls-wrapper > <button class="btn btn--inverse">Follow</button> <ul class="author__urls social-icons"> <li itemprop=homeLocation  itemscope itemtype="https://schema.org/Place"> <i class="fas fa-fw fa-map-marker-alt" aria-hidden=true ></i> <span itemprop=name >Osaka, Japan</span> <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden=true ></i> Twitter</a> <li><a href="https://github.com/lethal8723" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i> GitHub</a> </ul> </div> <div class=author__urls-wrapper > <button class="btn btn--inverse">Tag</button> <ul class="author__urls social-icons"> <li>タグ <li> <li><a href="/tag/setting/">設定</a> <li><a href="/tag/thirdparty/">サードパーティライブラリ</a> <li><a href="/tag/recipe">レシピ</a> </ul> </div> </div> </div> <div class=franklin-content ><h1 id="juliaの文法"><a href="#juliaの文法">Juliaの文法</a></h1> <h2><div class=mytoc >目次 <div class=franklin-toc ><ol><li><a href="#リテラル">リテラル</a><li><a href="#演算子">演算子</a><li><a href="#変数と定数">変数と定数</a><li><a href="#代入">代入</a><li><a href="#文の区切り">文の区切り</a><li><a href="#コメント">コメント</a><li><a href="#真偽値と条件分岐">真偽値と条件分岐</a><li><a href="#繰り返し">繰り返し</a><li><a href="#メソッド呼び出し">メソッド呼び出し</a><li><a href="#ブロック">ブロック</a><li><a href="#関数定義">関数定義</a><ol><li><a href="#無名関数">無名関数</a></ol><li><a href="#複合型の定義">複合型の定義</a><ol><li><a href="#可変な複合型">可変な複合型</a><li><a href="#初期値付きの複合型">初期値付きの複合型</a></ol><li><a href="#モジュール定義">モジュール定義</a><ol><li><a href="#別のソースファイルをインポートしたい">別のソースファイルをインポートしたい</a><li><a href="#モジュールを定義する">モジュールを定義する。</a><li><a href="#パッケージ">パッケージ</a></ol><li><a href="#特異メソッド">特異メソッド</a><li><a href="#例外処理">例外処理</a><li><a href="#aliasとundef">aliasとundef?</a><li><a href="#予約語">予約語</a></ol></div></div></h2> <h2 id="リテラル"><a href="#リテラル">リテラル</a></h2> <p>リテラルとは組み込み型の定数を表すものです。いくつか列挙します。</p> <pre><code class="julia hljs"><span class=hljs-comment >#数値リテラル</span>
 <span class=hljs-meta >@show</span> typeof(<span class=hljs-number >1</span>)
 <span class=hljs-meta >@show</span> typeof(<span class=hljs-number >1.0</span>)
 <span class=hljs-meta >@show</span> typeof(<span class=hljs-number >1.0f0</span>)
@@ -24,14 +24,70 @@ typeof([1, 2, 3]) = Array{Int64,1}
 typeof((1, 2, 3)) = Tuple{Int64,Int64,Int64}
 typeof((a = 1, b = 3)) = NamedTuple{(:a, :b),Tuple{Int64,Int64}}
 typeof(Dict(&quot;a&quot; =&gt; 1, &quot;b&quot; =&gt; 2)) = Dict{String,Int64}
-</code></pre></div> 組み込み型は他にもいっぱいあります。</p> <h2 id="演算子"><a href="#演算子">演算子</a></h2> <h2 id="変数と定数"><a href="#変数と定数">変数と定数</a></h2> <h2 id="代入"><a href="#代入">代入</a></h2> <h2 id="文の区切り"><a href="#文の区切り">文の区切り</a></h2> <h2 id="コメント"><a href="#コメント">コメント</a></h2> <h2 id="真偽値と条件分岐"><a href="#真偽値と条件分岐">真偽値と条件分岐</a></h2> <h2 id="繰り返し"><a href="#繰り返し">繰り返し</a></h2> <h2 id="メソッド呼び出し"><a href="#メソッド呼び出し">メソッド呼び出し</a></h2> <h2 id="ブロック"><a href="#ブロック">ブロック</a></h2> <h2 id="関数定義"><a href="#関数定義">関数定義</a></h2> <p>関数の定義にはfunction文を使います。 戻り値はreturnの後に書くか、最後に書いた行の値になります。 また、戻り値の型や引数の型を指定することもできます。&#40;省略することもできます。&#41;</p> <pre><code class="julia hljs"><span class=hljs-keyword >function</span> add(a::<span class=hljs-built_in >Number</span>,b::<span class=hljs-built_in >Number</span>)::<span class=hljs-built_in >Number</span>
+</code></pre></div> 組み込み型は他にもいっぱいあります。</p> <h2 id="演算子"><a href="#演算子">演算子</a></h2> <h2 id="変数と定数"><a href="#変数と定数">変数と定数</a></h2> <h2 id="代入"><a href="#代入">代入</a></h2> <h2 id="文の区切り"><a href="#文の区切り">文の区切り</a></h2> <p>文の区切りもpythonと同じく<code>;</code>です。 ただし、<code>;</code>には評価結果を出力しないという意味もあります。</p> <pre><code class="julia hljs">x=<span class=hljs-number >1</span>;y=<span class=hljs-number >2</span>;</code></pre>
+<p>また、括弧が閉じていないときは自動的に複数行扱いになります。 文末をパイプ演算子にしても複数行扱いにできます。</p>
+<pre><code class="julia hljs">a = [<span class=hljs-number >1</span>,
+    <span class=hljs-number >2</span>,
+    <span class=hljs-number >3</span>]
+a .|&gt; sqrt |&gt;
+     println</code></pre>
+<div class=code-output ><pre><code class="plaintext hljs">[1.0, 1.4142135623730951, 1.7320508075688772]
+</code></pre></div>
+<h2 id="コメント"><a href="#コメント">コメント</a></h2>
+<p>コメントの書き方はpythonと同じです。</p>
+<pre><code class="julia hljs"><span class=hljs-comment ># コメント1</span>
+a=<span class=hljs-number >1</span> <span class=hljs-comment ># コメント2</span></code></pre>
+<p>複数行にわたるコメントは<code>&quot;&quot;&quot;</code>で囲まれた環境で表します。</p>
+<pre><code class="julia hljs"><span class=hljs-string >&quot;&quot;&quot;
+ここはコメントです。
+&quot;&quot;&quot;</span></code></pre>
+<h2 id="真偽値と条件分岐"><a href="#真偽値と条件分岐">真偽値と条件分岐</a></h2>
+<p>if文の使い方は以下の通りです。</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >if</span> condition1
+    process1
+<span class=hljs-keyword >elseif</span> condition2
+    process2
+<span class=hljs-keyword >else</span>
+    process3
+<span class=hljs-keyword >end</span></code></pre>
+<p><code>condition</code>の部分には<code>true</code>または<code>false</code>の真偽値を返すような 条件式が入ります。</p>
+<p>ある条件を満たしたときの処理を書ければ良いだけならば、次の短絡評価が便利です。</p>
+<pre><code class="julia hljs">a = <span class=hljs-number >1</span>
+a == <span class=hljs-number >1</span> &amp;&amp; println(a) <span class=hljs-comment ># aが1なら, aを出力</span>
+a == <span class=hljs-number >2</span> || println(a) <span class=hljs-comment ># aが2でないなら、aを出力</span></code></pre>
+<div class=code-output ><pre><code class="plaintext hljs">1
+1
+</code></pre></div>
+<h2 id="繰り返し"><a href="#繰り返し">繰り返し</a></h2>
+<h2 id="メソッド呼び出し"><a href="#メソッド呼び出し">メソッド呼び出し</a></h2>
+<h2 id="ブロック"><a href="#ブロック">ブロック</a></h2>
+<h2 id="関数定義"><a href="#関数定義">関数定義</a></h2>
+<p>関数の定義にはfunction文を使います。 戻り値はreturnの後に書くか、最後に書いた行の値になります。 また、戻り値の型や引数の型を指定することもできます。</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >function</span> add(a::<span class=hljs-built_in >Number</span>,b::<span class=hljs-built_in >Number</span>)::<span class=hljs-built_in >Number</span>
     a+b
 <span class=hljs-keyword >end</span>
-println(add(<span class=hljs-number >1</span>,<span class=hljs-number >2</span>))</code></pre> <p><pre><code class="plaintext hljs">3
-</code></pre> 同じ名前の関数でも、引数の型を変えて定義することが可能です。 これが多重ディスパッチというjuliaの重要な機能のひとつです。</p> <p>無名関数も使えます。（引数）-&gt;（処理）の形式で使います。</p> <pre><code class="julia hljs">f = x-&gt;x^<span class=hljs-number >2</span>
+
+<span class=hljs-keyword >function</span> add(a::<span class=hljs-built_in >String</span>,b::<span class=hljs-built_in >String</span>)::<span class=hljs-built_in >String</span>
+    a*b
+<span class=hljs-keyword >end</span>
+
+println(add(<span class=hljs-number >1</span>,<span class=hljs-number >2</span>))
+println(add(<span class=hljs-string >&quot;abc&quot;</span>,<span class=hljs-string >&quot;def&quot;</span>))</code></pre>
+<div class=code-output ><pre><code class="plaintext hljs">3
+abcdef
+</code></pre></div>
+<div class=note ><div class=title >😲 Note</div>
+<div class=content ><p>同じ名前の関数でも、引数の型を変えて定義することが可能です。 これが<strong>多重ディスパッチ</strong>というjuliaの重要な機能のひとつです。</p>
+<p><strong>自分で定義した複合型を、既存の関数でも使えるように再定義する</strong> というのが、よくある使い方です。</p></div></div>
+<div class=warning ><div class=title >😕 Warning&#33;</div>
+<div class=content >型を<code>Float64</code>のようにガチガチに固めてしまうと、 融通が効かなくなるので、juliaが上手く型推論できる程度に緩くしておくのが、 吉です。</div></div>
+<h3 id="無名関数"><a href="#無名関数">無名関数</a></h3>
+<p>無名関数も使えます。（引数）-&gt;（処理）の形式で使います。</p>
+<pre><code class="julia hljs">f = x-&gt;x^<span class=hljs-number >2</span>
 <span class=hljs-meta >@show</span> f(<span class=hljs-number >2</span>)
 <span class=hljs-meta >@show</span> (x-&gt;x^<span class=hljs-number >2</span>)(<span class=hljs-number >2</span>)
-<span class=hljs-meta >@show</span> ((x,y)-&gt;x+y)(<span class=hljs-number >1</span>,<span class=hljs-number >2</span>)</code></pre> <pre><code class="plaintext hljs">f(2) = 4
+<span class=hljs-meta >@show</span> ((x,y)-&gt;x+y)(<span class=hljs-number >1</span>,<span class=hljs-number >2</span>)</code></pre>
+<div class=code-output ><pre><code class="plaintext hljs">f(2) = 4
 ((x-&gt;begin
         #= none:1 =#
         x ^ 2
@@ -40,4 +96,191 @@ println(add(<span class=hljs-number >1</span>,<span class=hljs-number >2</span>)
         #= none:1 =#
         x + y
     end))(1, 2) = 3
-</code></pre> <h2 id="複合型定義"><a href="#複合型定義">複合型定義</a></h2> <p>もともとはクラス定義でしたが、juliaにはクラスがありません。 オブジェクト指向でいうクラスの属性が複合型に相当します。 メソッドがない点は、多重ディスパッチ 複合型は抽象型から継承はできますが、複合型から複合型への継承はできません。 struct文を使います。</p> <h2 id="モジュール定義"><a href="#モジュール定義">モジュール定義</a></h2> <h2 id="特異メソッド"><a href="#特異メソッド">特異メソッド</a></h2> <h2 id="例外処理"><a href="#例外処理">例外処理</a></h2> <h2 id="aliasとundef"><a href="#aliasとundef">aliasとundef?</a></h2> <h2 id="予約語"><a href="#予約語">予約語</a></h2> <button onclick="topFunction()" id=myBtn  title="Go to top">Top</button> <div class=page-foot > <div class=copyright > &copy; Kei Hanafusa. Last modified: January 24, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>. </div> </div> </div> </div> </div> <div class=page__footer > <footer> <div class=page__footer-follow > <ul class=social-icons > <li><strong>Follow:</strong> <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden=true ></i> Twitter</a> <li><a href="https://github.com/lethal8723" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i> GitHub</a> </ul> </div> <div class=page__footer-copyright >&copy; Kei Hanafusa. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel=nofollow >Minimal Mistakes</a>.</div> </footer> </div> <script src="/libs/minimal-mistakes/main.min.js"></script> <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin=anonymous ></script> <script src="/libs/myBtn/myBtn.js"></script> <script src="/libs/luminous/Luminous.min.js"></script> <script> new Luminous(document.querySelectorAll('.zoom')); </script> <script> function myToc() { var x = document.getElementsByClassName("mytoc"); if (x.style.display === "none") { x.style.display = "block"; } else { x.style.display = "none"; } } </script>
+</code></pre></div>
+<p>例えば、filter関数のように、&quot;関数を引数にできる関数&quot;で良く利用します。</p>
+<pre><code class="julia hljs">filter(r-&gt;r%<span class=hljs-number >3</span>==<span class=hljs-number >0</span>, <span class=hljs-number >1</span>:<span class=hljs-number >10</span>) |&gt; println</code></pre>
+<div class=code-output ><pre><code class="plaintext hljs">[3, 6, 9]
+</code></pre></div>
+<h2 id="複合型の定義"><a href="#複合型の定義">複合型の定義</a></h2>
+<p>この項目はもともとはクラス定義でしたが、juliaにはクラスがありません。 オブジェクト指向でいうクラスの属性が複合型に相当します。 メソッドがない点は、多重ディスパッチで補うことができます。</p>
+<p>複合型は、複数の型をセットにしたものです。 型の定義にはstruct文を使います。具体例を見てみましょう。</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >struct</span> Baz
+    a
+    b::<span class=hljs-built_in >Int</span>
+<span class=hljs-keyword >end</span>
+
+baz = Baz(<span class=hljs-string >&quot;a&quot;</span>,<span class=hljs-number >4</span>)
+<span class=hljs-meta >@show</span> baz.a
+<span class=hljs-meta >@show</span> baz.b</code></pre>
+<div class=code-output ><pre><code class="plaintext hljs">baz.a = &quot;a&quot;
+baz.b = 4
+</code></pre></div>
+<p>このように複合型のインスタンスを生成すると、<code>インスタンス名.要素名</code>で 要素を呼び出すことができます。</p>
+<p>struct文では、要素について型を指定することができます。</p>
+<h3 id="可変な複合型"><a href="#可変な複合型">可変な複合型</a></h3>
+<p>複合型のインスタンスは基本的に値が固定されてしまいます。 要素の値を変動させたいときには、<code>mutable struct</code>文を使います。</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >mutable struct</span> mBaz
+    a
+    b
+<span class=hljs-keyword >end</span>
+
+mbaz=mBaz(<span class=hljs-number >1</span>,<span class=hljs-number >2</span>)
+<span class=hljs-meta >@show</span> mbaz.a
+mbaz.a = <span class=hljs-number >2</span>
+<span class=hljs-meta >@show</span> mbaz.a</code></pre>
+<div class=code-output ><pre><code class="plaintext hljs">mbaz.a = 1
+mbaz.a = 2
+</code></pre></div>
+<h3 id="初期値付きの複合型"><a href="#初期値付きの複合型">初期値付きの複合型</a></h3>
+<p>複合型を定義した時点で、初期値を設定しておきたいこともあります。 そんな時は、Baseモジュールの@kwdefマクロが使えます。 ヘルプを読んでみましょう。</p>
+<pre><code class="julia hljs">println(<span class=hljs-meta >@doc</span> Base.<span class=hljs-meta >@kwdef</span>)</code></pre>
+<div class=code-output ><pre><code class="plaintext hljs">```
+@kwdef typedef
+```
+
+This is a helper macro that automatically defines a keyword-based constructor for the type declared in the expression `typedef`, which must be a `struct` or `mutable struct` expression. The default argument is supplied by declaring fields of the form `field::T = default` or `field = default`. If no default is provided then the keyword argument becomes a required keyword argument in the resulting type constructor.
+
+Inner constructors can still be defined, but at least one should accept arguments in the same form as the default inner constructor (i.e. one positional argument per field) in order to function correctly with the keyword outer constructor.
+
+!!! compat &quot;Julia 1.1&quot;
+    `Base.@kwdef` for parametric structs, and structs with supertypes requires at least Julia 1.1.
+
+
+# Examples
+
+```jldoctest
+julia&gt; Base.@kwdef struct Foo
+           a::Int = 1         # specified default
+           b::String          # required keyword
+       end
+Foo
+
+julia&gt; Foo(b=&quot;hi&quot;)
+Foo(1, &quot;hi&quot;)
+
+julia&gt; Foo()
+ERROR: UndefKeywordError: keyword argument b not assigned
+Stacktrace:
+[...]
+```
+
+</code></pre></div>
+<div class=note ><div class=title >😲 Note</div>
+<div class=content >REPLで?関数名,とタイプしてもヘルプを読むことができます。　     @docマクロでヘルプを文字列として取り出すことができます。</div></div>
+<div class=note ><div class=title >😲 Note</div>
+<div class=content >同様の機能は, Parameters.jlでも実装可能です。 Parameters.jlは複合型の中身を簡単にまとめたり、吐き出すマクロがあるので、 私はこちらの方をよく使います。</div></div>
+<h2 id="モジュール定義"><a href="#モジュール定義">モジュール定義</a></h2>
+<p>juliaのモジュールとpythonのモジュールはちょっと違います。 &#40;pythonでいうモジュールは、juliaでいうpackageに相当します。&#41;</p>
+<p>用途に応じて書き分けたいと思います。</p>
+<h3 id="別のソースファイルをインポートしたい"><a href="#別のソースファイルをインポートしたい">別のソースファイルをインポートしたい</a></h3>
+<p>source_a.jlのコードを読み込みたいとしましょう。 その場合は、次のようにinclude関数にソースファイルのパスを渡せばOKです。</p>
+<pre><code class="julia hljs">include(<span class=hljs-string >&quot;source_a.jl&quot;</span>)</code></pre>
+<h3 id="モジュールを定義する"><a href="#モジュールを定義する">モジュールを定義する。</a></h3>
+<p>juliaにおけるモジュールは、以下のように<code>module end</code>で囲まれた環境のことをさします。</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >module</span> A
+
+<span class=hljs-keyword >struct</span> bar
+    x
+    y
+<span class=hljs-keyword >end</span>
+
+<span class=hljs-keyword >function</span> foo()
+    println(<span class=hljs-string >&quot;foo&quot;</span>)
+<span class=hljs-keyword >end</span>
+
+<span class=hljs-keyword >end</span> <span class=hljs-comment >#end module</span>
+
+BAR = A.bar(<span class=hljs-number >1</span>,<span class=hljs-number >2</span>)
+println(BAR.x)
+
+A.foo()</code></pre>
+<p><div class=code-output ><pre><code class="plaintext hljs">1
+foo
+</code></pre></div> モジュール環境の中に書かれた関数や複合型は、他のモジュールの中に 同名の関数があっても<code>A.foo&#40;&#41;</code>のように呼び出す限りは名前の衝突を 避けることができます。 <div class=note ><div class=title >😲 Note</div>
+<div class=content >実は、REPLでコードを叩いているときは、Mainモジュールの中で関数の定義や 複合型を定義しています。このため、一度定義した複合型を書き換えると 怒られてしまうのですが、モジュール内で複合型を定義しておけば、 名前空間が異なるので、コードを試しながら複合型を変更することが可能です。</div></div></p>
+<h3 id="パッケージ"><a href="#パッケージ">パッケージ</a></h3>
+<p>juliaを使っているときに、<code>using DelimitedFiles</code>のように、 using文でパッケージをインポートします。 <div class=note ><div class=title >😲 Note</div>
+<div class=content >import文も使えます。</div></div></p>
+<p>これは、モジュールをインポートしていることになりますが、 こうしたモジュールはパッケージと呼ばれています。</p>
+<p>モジュールとパッケージの違いは何かというと難しいですが、 モジュール&#40;ソース&#41;とドキュメントとテスト結果がまとまっているものが、 パッケージというべきでしょうか。 パッケージの作り方は<a href="https://zlatanvasovic.github.io/blog/2020/06/make-your-julia-package/">zlatanのブログ</a>が分かりやすいです。</p>
+<h2 id="特異メソッド"><a href="#特異メソッド">特異メソッド</a></h2>
+<p>そもそもjuliaはオブジェクト指向ではないので、特異メソッドはありません。 以下のように、複合型のインスタンスに対して関数を定義しようとすると、 helloというフィールドがFooの中にないので、アウトです。 &#40;逆にhelloというフィールドがあれば定義できる。でも何もうれしくない&#41;</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >struct</span> Foo
+    x
+<span class=hljs-keyword >end</span>
+
+test=Foo(<span class=hljs-number >3</span>)
+
+<span class=hljs-keyword >function</span> test.hello()
+    println(<span class=hljs-string >&quot;hello&quot;</span>)
+<span class=hljs-keyword >end</span></code></pre>
+<p>なお、複合型に対して、関数を定義することはfunction-like objectの機能を利用して実装可能です。</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >struct</span> FLO
+    a
+    b
+    c
+<span class=hljs-keyword >end</span>
+
+<span class=hljs-keyword >function</span> (flo::FLO)(x)
+    flo.a*x^<span class=hljs-number >2</span>+flo.b*x+flo.c
+<span class=hljs-keyword >end</span>
+
+f=FLO(<span class=hljs-number >1</span>,<span class=hljs-number >2</span>,<span class=hljs-number >3</span>)
+<span class=hljs-meta >@show</span> f(<span class=hljs-number >2</span>)</code></pre>
+<div class=code-output ><pre><code class="plaintext hljs">f(2) = 11
+</code></pre></div>
+<p>インスタンスごとに別の関数を割り当てることはできません。</p>
+<h2 id="例外処理"><a href="#例外処理">例外処理</a></h2>
+<h2 id="aliasとundef"><a href="#aliasとundef">aliasとundef?</a></h2>
+<h2 id="予約語"><a href="#予約語">予約語</a></h2>
+ <button onclick="topFunction()" id=myBtn  title="Go to top">Top</button> 
+<div class=page-foot >
+  <div class=copyright >
+    &copy; Kei Hanafusa. Last modified: February 02, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+  </div>
+</div>
+</div>
+
+      </div> 
+    </div>   
+
+    <div class=page__footer >
+      <footer>
+        
+        
+        <div class=page__footer-follow >
+          <ul class=social-icons >
+            <li><strong>Follow:</strong>
+            <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden=true ></i> Twitter</a>
+            <li><a href="https://github.com/lethal8723" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i> GitHub</a>
+          </ul>
+        </div>
+        <div class=page__footer-copyright >&copy; Kei Hanafusa. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel=nofollow >Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="/libs/minimal-mistakes/main.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin=anonymous ></script>
+    <script src="/libs/myBtn/myBtn.js"></script>
+    <script src="/libs/luminous/Luminous.min.js"></script>
+
+    
+    
+        
+
+
+    
+    
+    <script>
+    new Luminous(document.querySelectorAll('.zoom'));
+</script>
+    <script>
+function myToc() {
+    var x = document.getElementsByClassName("mytoc");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  } 
+</script>

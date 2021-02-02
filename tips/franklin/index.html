@@ -109,9 +109,9 @@ default(
 )</code></pre>
 <hr />
 <h2 id="せっかくなので拡張してみる"><a href="#せっかくなので拡張してみる">せっかくなので、拡張してみる。</a></h2>
-<p>htmlやcssに関する知識が多少あれば、色々と機能を拡張<a href="#footnote-1" class=footnote >[1]</a>することができます。 私はadomonitionの設定、トップに戻るボタン、mermaidによるフローチャート描画の機能を追加してみました。</p>
+<p>htmlやcssに関する知識が多少あれば、テンプレートファイルをいじって機能を拡張<a href="#footnote-1" class=footnote >[1]</a>することが可能です。 私はadomonitionの設定、トップに戻るボタン、mermaidによるフローチャート描画の機能を追加してみました。 フォントを追加した例を書いておきます。</p>
 <h3 id="コードのフォントにはjuliamonoを使おう"><a href="#コードのフォントにはjuliamonoを使おう">コードのフォントにはjuliamonoを使おう</a></h3>
-<p><a href="https://github.com/cormullion/juliamono">juliamono</a>フォントを使えば、juliaのコードを洗練された見栄えに変更できます。 パイプ演算子や無名関数を多用する人は、気に入るのではないでしょうか？ -&gt;が<code>-&gt;</code>になったり、|&gt;が<code>|&gt;</code>になるわけです。 <a href="https://cormullion.github.io/pages/2020-07-26-JuliaMono/">Cormullionのブログ</a>&#40;このサイトもFranklinで作られている。&#41;にインストール方法は載っています。</p>
+<p><a href="https://github.com/cormullion/juliamono">juliamono</a>フォントを使えば、juliaのコードを洗練された見栄えに変更できます。 -&gt;が<code>-&gt;</code>になったり、|&gt;が<code>|&gt;</code>になるので、パイプ演算子や無名関数を多用する人は、気に入るのではないでしょうか？ <a href="https://cormullion.github.io/pages/2020-07-26-JuliaMono/">Cormullionのブログ</a>&#40;このサイトもFranklinで作られている。&#41;にインストール方法は載っています。</p>
 <p>cssでwebフォントとして使うのも簡単で<a href="https://cormullion.github.io/pages/2020-07-26-JuliaMono/#how_can_i_use_the_web_fonts_for_my_blog">こちら</a>にやり方が載っています。 少し改変したものが以下になります。まず、cssファイルに</p>
 <pre><code class="css hljs"><span class=hljs-keyword >@font-face</span> {
     <span class=hljs-attribute >font-family</span>: JuliaMono-Regular;
@@ -142,7 +142,7 @@ default(
 <p> <p style="text-align:right">  めでたしめでたし </p>  <button onclick="topFunction()" id=myBtn  title="Go to top">Top</button> </p>
 <div class=page-foot >
   <div class=copyright >
-    &copy; Kei Hanafusa. Last modified: January 24, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: February 02, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div>
