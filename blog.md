@@ -5,7 +5,7 @@
 @def isblog = true
 # Blog 
 
-julia以外のことを書いていきます。
+julia以外のことを書いていきます。主に散財した話とか。
 @@cards
 @@row
 @@column \card{https://www.pfu.fujitsu.com/direct/hhkb/images/detail_pd-kb800bs-1.jpg}{HHKBの話}{/blog/hhkb} @@
