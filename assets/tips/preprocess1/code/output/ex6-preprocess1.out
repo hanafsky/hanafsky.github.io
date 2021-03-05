@@ -1,1 +1,5 @@
-UndefVarError: DataFrame not defined
+DataFrameRow
+ Row │ a%      b(m/s)
+     │ String  Float64
+─────┼─────────────────
+   1 │ a           1.0

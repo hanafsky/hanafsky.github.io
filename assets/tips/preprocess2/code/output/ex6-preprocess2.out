@@ -1,3 +1,13 @@
-ArgumentError: Package Chain not found in current path:
-- Run `import Pkg; Pkg.add("Chain")` to install the Chain package.
+df3_4 = 2×4 DataFrame
+ Row │ a       b_sum  b_var    b_std
+     │ String  Int64  Float64  Float64
+─────┼────────────────────────────────────
+   1 │ あ          3      0.5    0.707107
+   2 │ い          3      0.0  NaN
 
+df3_4 = 2×4 DataFrame
+ Row │ a       b_sum  b_var    b_std
+     │ String  Int64  Float64  Float64
+─────┼──────────────────────────────────
+   1 │ あ          3      0.5  0.707107
+   2 │ い          3      0.0  0.0
