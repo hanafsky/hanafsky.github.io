@@ -1,0 +1,3 @@
+ArgumentError: Package Chain not found in current path:
+- Run `import Pkg; Pkg.add("Chain")` to install the Chain package.
+
