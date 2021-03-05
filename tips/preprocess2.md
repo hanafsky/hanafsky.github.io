@@ -17,7 +17,8 @@ reserve_df = CSV.read(path,DataFrame)
 
 \prettyshow{ex1-preprocess2}
 
-
+\mytoc
+---
 ## 3 集約
 ### 3-1 データ数、種類数の算出
 ホテルごとに予約数、顧客数の集計を行う練習です。
@@ -193,7 +194,7 @@ end
 \prettyshow{ex10-preprocess2}
 一番右の列に`:log_no`の列が追加されていることが確認できます。
 
-#### Q ランキング
+### Q ランキング
 ホテル毎に予約数を集計して、ランキング付けを行います。同じ予約数の場合は、
 最小の順位を付けることになっているので、ordinalrankではなくて、competerankを利用します。
 
