@@ -1,1 +1,14 @@
-UndefVarError: reserve_df not defined
+10×3 DataFrame
+ Row │ hotel_id  rsv_cnt  rsv_cnt_rank
+     │ String    Int64    Int64
+─────┼─────────────────────────────────
+   1 │ h_75           12           100
+   2 │ h_219          13           127
+   3 │ h_179          19           270
+   4 │ h_214          11            67
+   5 │ h_16           19           270
+   6 │ h_241          27           300
+   7 │ h_256          11            67
+   8 │ h_217          11            67
+   9 │ h_240          15           187
+  10 │ h_183          18           259

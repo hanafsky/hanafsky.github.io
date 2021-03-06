@@ -5,31 +5,48 @@ df =</code></pre> <p>datファイルなら、標準パッケージのDelimitedFi
 df = DataFrame(readdlm(<span class=hljs-string >&quot;file.dat&quot;</span>))</code></pre> <p>そのほかに、Rとpythonで共通なFeather形式を利用していたこともありましたが、 ほかの言語で処理することもなかったし、特段ファイルサイズが小さくなるわけでもありませんでした。</p> <p>早速サンプルのホテルの予約データ（reserve.csv）を読み込んでいきます。 長ったらしいので、最初の行だけをfirst関数で見てみます。</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> DataFrames,CSV
 path = joinpath(<span class=hljs-string >&quot;tips&quot;</span>,<span class=hljs-string >&quot;data&quot;</span>,<span class=hljs-string >&quot;reserve.csv&quot;</span>)
 reserve_df = CSV.read(path,DataFrame)
-println(first(reserve_df))</code></pre> <div class=code-output ><pre><code class="plaintext hljs">ArgumentError: Package CSV not found in current path:
-- Run `import Pkg; Pkg.add(&quot;CSV&quot;)` to install the CSV package.
-
+println(first(reserve_df))</code></pre> <div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+ Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
+     │ String      String    String       String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
 </code></pre></div> <h2 id="2_抽出"><a href="#2_抽出" class=header-anchor >2 抽出</a></h2> <h3 id="2-1_データ列の抽出"><a href="#2-1_データ列の抽出" class=header-anchor >2-1 データ列の抽出</a></h3> <p>前処理大全では、可読性を高めるために、データの列番号ではなく、ラベルによって列を抽出することが推奨されています。 まず、ラベル名を確認しておきます。</p> <pre><code class="julia hljs"><span class=hljs-meta >@show</span> names(reserve_df);</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">UndefVarError: reserve_df not defined
+<div class=code-output ><pre><code class="plaintext hljs">names(reserve_df) = [&quot;reserve_id&quot;, &quot;hotel_id&quot;, &quot;customer_id&quot;, &quot;reserve_datetime&quot;, &quot;checkin_date&quot;, &quot;checkin_time&quot;, &quot;checkout_date&quot;, &quot;people_num&quot;, &quot;total_price&quot;]
 </code></pre></div>
 <p>試しに<code>reserve_id</code>と<code>hotel_id</code>の列を抽出してみます。</p>
 <h4 id="string_で指定"><a href="#string_で指定" class=header-anchor >String で指定</a></h4>
 <p>オーソドックスなラベル名をString型で指定する場合です。</p>
 <pre><code class="julia hljs">reserve_df[!,[<span class=hljs-string >&quot;reserve_id&quot;</span>,<span class=hljs-string >&quot;hotel_id&quot;</span>]] |&gt; first |&gt; println</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">UndefVarError: reserve_df not defined
+<div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+ Row │ reserve_id  hotel_id
+     │ String      String
+─────┼──────────────────────
+   1 │ r1          h_75
 </code></pre></div>
 <h4 id="symbol_で指定"><a href="#symbol_で指定" class=header-anchor >Symbol で指定</a></h4>
 <p>同じことを Symbol型で指定してやってみます。</p>
 <pre><code class="julia hljs">reserve_df[!,[:reserve_id,<span class=hljs-built_in >Symbol</span>(<span class=hljs-string >&quot;hotel_id&quot;</span>)]] |&gt; first |&gt; println
 println()
 <span class=hljs-meta >@show</span> typeof(:reserve_id)</code></pre>
-<p><div class=code-output ><pre><code class="plaintext hljs">UndefVarError: reserve_df not defined
+<p><div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+ Row │ reserve_id  hotel_id
+     │ String      String
+─────┼──────────────────────
+   1 │ r1          h_75
+
+typeof(:reserve_id) = Symbol
 </code></pre></div> ここで、<code>:reserve_id</code>と<code>Symbol&#40;&quot;reserve_id&quot;&#41;</code>は同じ結果を示します。 ともに型は Symbol 型です。</p>
 <p><code>:reserve_id</code>の方が、タイプ数が少ないので省エネです。</p>
 <p>また、一列だけ抽出したいときは、<code>df.reserve_id</code>のようにすることもできます。 ただし、返り値の型は DataFrame 型ではなく、Vecter 型になります。</p>
 <pre><code class="julia hljs"><span class=hljs-meta >@show</span> first(reserve_df.reserve_id,<span class=hljs-number >5</span>)
 println()
 <span class=hljs-meta >@show</span> typeof(reserve_df.reserve_id)</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">UndefVarError: reserve_df not defined
+<div class=code-output ><pre><code class="plaintext hljs">MethodError: no method matching first(::Array{String,1}, ::Int64)
+Closest candidates are:
+  first(::AbstractArray) at abstractarray.jl:323
+  first(!Matched::AbstractString, ::Integer) at strings/basic.jl:633
+  first(!Matched::DataFrames.AbstractDataFrame, ::Integer) at /home/runner/.julia/packages/DataFrames/oQ5c7/src/abstractdataframe/abstractdataframe.jl:463
+  ...
 </code></pre></div>
 <div class=warning ><div class=title >😕 Warning&#33;</div>
 <div class=content ><p>いつでも<code>:reserve_id</code>のようにできるわけではありません。よくあるトラップが、 ラベル名に<code>&#37;</code>や<code>/</code>などの2項演算子が文字列に使われている時です。</p>
@@ -47,32 +64,55 @@ println(first(testdf))</code></pre>
 <pre><code class="julia hljs"><span class=hljs-meta >@time</span> testdf[:,[<span class=hljs-string >&quot;a%&quot;</span>,<span class=hljs-string >&quot;b(m/s)&quot;</span>]]
 println()
 <span class=hljs-meta >@time</span> testdf[!,[<span class=hljs-string >&quot;a%&quot;</span>,<span class=hljs-string >&quot;b(m/s)&quot;</span>]]</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">  0.125340 seconds (156.68 k allocations: 9.575 MiB, 11.91% gc time)
+<div class=code-output ><pre><code class="plaintext hljs">  0.016310 seconds (17.77 k allocations: 2.530 MiB)
 
-  0.011651 seconds (17.73 k allocations: 1.002 MiB)
+  0.000023 seconds (22 allocations: 2.172 KiB)
 </code></pre></div></div></div>
 <h4 id="select_関数"><a href="#select_関数" class=header-anchor >select 関数</a></h4>
 <p>列を抽出するには、select 関数も利用できます。</p>
 <pre><code class="julia hljs">select(reserve_df,:reserve_id, :hotel_id) |&gt; first |&gt; println</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">UndefVarError: reserve_df not defined
+<div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+ Row │ reserve_id  hotel_id
+     │ String      String
+─────┼──────────────────────
+   1 │ r1          h_75
 </code></pre></div>
 <p>select関数には、新しい列を作る機能もあるので、 後で活躍しそうです。</p>
 <h4 id="not_や正規表現による抽出"><a href="#not_や正規表現による抽出" class=header-anchor >Not や正規表現による抽出</a></h4>
 <p>ラベルが<code>id</code>で終わる列を正規表現で抽出します。</p>
 <pre><code class="julia hljs">reserve_df[!,<span class=hljs-string >r&quot;id$&quot;</span>] |&gt; first |&gt; println</code></pre>
-<p><div class=code-output ><pre><code class="plaintext hljs">UndefVarError: reserve_df not defined
+<p><div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+ Row │ reserve_id  hotel_id  customer_id
+     │ String      String    String
+─────┼───────────────────────────────────
+   1 │ r1          h_75      c_1
 </code></pre></div> <div class=warning ><div class=title >😕 Warning&#33;</div>
 <div class=content >前処理大全では、ずっと使うコードにこのような抽出方法を採用することは避けるべきだとされています。</div></div></p>
 <p>ラベル名が<code>id</code>で終わらない列を抽出するには、Not に入れてしまうと楽です。 Not の中身は、直接ラベル名を指定することもできるので、有用です。</p>
 <pre><code class="julia hljs">reserve_df[!,Not(<span class=hljs-string >r&quot;id$&quot;</span>)] |&gt; first |&gt; println</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">UndefVarError: reserve_df not defined
+<div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+ Row │ reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
+     │ String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+─────┼─────────────────────────────────────────────────────────────────────────────────────────
+   1 │ 2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
 </code></pre></div>
 <h3 id="2-2_条件指定による抽出"><a href="#2-2_条件指定による抽出" class=header-anchor >2-2 条件指定による抽出</a></h3>
 <p><code>checkin_date</code>が2016-10-12から2016-10-13までのデータを抽出します。 ここではfilter関数を使います。 filter関数には、見ての通り2通りの使い方があります。 基本的には無名関数を使って、<code>引数x-&gt; a&lt;x&lt;b</code>のような書き方をしています。</p>
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> Dates: Date
 <span class=hljs-comment ># filter(:checkin_date =&gt; row-&gt; Date(2016,10,12) &lt;= row &lt;= Date(2016,10,13), reserve_df) |&gt; println</span>
 filter(row-&gt; Date(<span class=hljs-number >2016</span>,<span class=hljs-number >10</span>,<span class=hljs-number >12</span>) &lt;= row.checkin_date &lt;= Date(<span class=hljs-number >2016</span>,<span class=hljs-number >10</span>,<span class=hljs-number >13</span>), reserve_df) |&gt; println</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">UndefVarError: reserve_df not defined
+<div class=code-output ><pre><code class="plaintext hljs">8×9 DataFrame
+ Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
+     │ String      String    String       String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ r285        h_121     c_67         2016-09-27 06:13:19  2016-10-12    12:00:00      2016-10-14              4       184000
+   2 │ r1933       h_113     c_477        2016-09-24 09:04:26  2016-10-12    11:30:00      2016-10-13              4        77200
+   3 │ r2291       h_230     c_574        2016-10-09 04:34:14  2016-10-12    12:00:00      2016-10-13              1        17400
+   4 │ r2524       h_203     c_631        2016-09-14 10:45:15  2016-10-12    10:30:00      2016-10-14              3       167400
+   5 │ r3147       h_163     c_794        2016-10-02 07:35:16  2016-10-13    09:00:00      2016-10-16              1        64200
+   6 │ r3328       h_23      c_833        2016-09-28 08:22:57  2016-10-13    09:00:00      2016-10-14              4       260400
+   7 │ r3381       h_110     c_844        2016-09-17 17:44:02  2016-10-13    12:30:00      2016-10-15              1        52800
+   8 │ r3444       h_14      c_859        2016-10-03 17:26:00  2016-10-13    12:30:00      2016-10-15              3        46200
 </code></pre></div>
 <p>上の例では1行で書きましたが、いくつかの前処理を一気に行うなら、以下のように複数行に分けたほうが、可読性は高いでしょう。</p>
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> Chain
@@ -81,15 +121,13 @@ filter(row-&gt; Date(<span class=hljs-number >2016</span>,<span class=hljs-numbe
   filter(:checkin_date =&gt; &lt;=(Date(<span class=hljs-number >2016</span>,<span class=hljs-number >10</span>,<span class=hljs-number >13</span>)),_)
   <span class=hljs-comment ># println</span>
 <span class=hljs-keyword >end</span></code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">UndefVarError: reserve_df not defined
-</code></pre></div>
+<div class=code-output ></div>
 <h3 id="2-3_データ値に基づかないサンプリング"><a href="#2-3_データ値に基づかないサンプリング" class=header-anchor >2-3 データ値に基づかないサンプリング</a></h3>
 <p>データ数を大体半分にしたいときの処方箋です。 pythonやRのようにDataFrame用にsample関数のようなものがあってもよさそうですが、 ないみたいなので、StatsBase.jlのsample関数を利用します。 DataFrameの行数から重複を許さずに、半分の値をサンプリングします。 そして、それを行番号として指定します。</p>
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> StatsBase: sample 
 sample_row = sample(<span class=hljs-number >1</span>:nrow(reserve_df), round(<span class=hljs-built_in >Int</span>,nrow(reserve_df)/<span class=hljs-number >2</span>), replace=<span class=hljs-literal >false</span>)
 reserve_df[sample_row,:]</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">UndefVarError: reserve_df not defined
-</code></pre></div>
+<div class=code-output ></div>
 <p>SQLで出てきた、乱数を使って、データ数を約半分にする方法も使えそうです。</p>
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> Chain
 reserve_df.rand=rand(nrow(reserve_df))
@@ -98,7 +136,11 @@ sdf = <span class=hljs-meta >@chain</span> reserve_df <span class=hljs-keyword >
   select!(Not(:rand))
 <span class=hljs-keyword >end</span>
 println(first(sdf))</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">UndefVarError: reserve_df not defined
+<div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+ Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
+     │ String      String    String       String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
 </code></pre></div>
 <h3 id="2-4_集約idに基づくサンプリング"><a href="#2-4_集約idに基づくサンプリング" class=header-anchor >2-4 集約IDに基づくサンプリング</a></h3>
 <p>顧客IDを集約して、半分にサンプリングし、顧客IDによるデータの抽出を行います。 chainマクロを使ったパイプラインの実装ですが、可読性は高いと思います。</p>
@@ -107,8 +149,7 @@ println(first(sdf))</code></pre>
   sample(_, round(<span class=hljs-built_in >Int</span>,length(_)/<span class=hljs-number >2</span>),replace=<span class=hljs-literal >false</span>)
   filter(:customer_id =&gt; <span class=hljs-keyword >in</span>(_),reserve_df) 
 <span class=hljs-keyword >end</span></code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">UndefVarError: reserve_df not defined
-</code></pre></div>
+<div class=code-output ></div>
 
   <div class=prev-next-link >
   <a class=next-link  href=" /tips/preprocess2">
@@ -122,7 +163,7 @@ println(first(sdf))</code></pre>
  <button onclick="topFunction()" id=myBtn  title="Go to top">Top</button> 
 <div class=page-foot >
   <div class=copyright >
-    &copy; Kei Hanafusa. Last modified: March 05, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: March 06, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div>

@@ -1,1 +1,5 @@
-UndefVarError: reserve_df not defined
+DataFrameRow
+ Row │ reserve_id  hotel_id  customer_id
+     │ String      String    String
+─────┼───────────────────────────────────
+   1 │ r1          h_75      c_1
