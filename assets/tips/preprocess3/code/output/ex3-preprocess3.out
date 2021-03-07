@@ -1,0 +1,14 @@
+10×2 DataFrame
+ Row │ hotel_id  rec_hotel_id
+     │ String    String
+─────┼────────────────────────
+   1 │ h_1       h_14
+   2 │ h_1       h_22
+   3 │ h_1       h_27
+   4 │ h_1       h_40
+   5 │ h_1       h_45
+   6 │ h_1       h_77
+   7 │ h_1       h_79
+   8 │ h_1       h_85
+   9 │ h_1       h_91
+  10 │ h_1       h_103
