@@ -14,10 +14,13 @@ SQL、R、pythonの3つの言語でAwesomeなコードの書き方を教えて�
 具体的には、メモリに収まらない大規模なデータならSQL、プロトタイピングにはR、
 システムへの組み込みにはpythonという具合です。
 
-著者の人柄が偲ばれるような余談もおもしろかったです。
+余談やあとがきも著者の人柄が偲ばれて、とてもおもしろかったです。
 
 私は、普段からプロトタイピングもウェブアプリもjuliaで作っているので、
-自分用にjulia版（DataFrames.jlを利用）でのエッセンスをまとめたいと思います。
+自分用にjulia版（DataFrames.jlを利用[^1]）でのエッセンスをまとめたいと思います。
+
+[^1]: 大規模なデータについては、JuliaDBを使う選択肢もありますが、今のところその機会はなさそうなので、DataFrames.jlだけでやってみます。
+
 
 ほかの参考資料としては、[Julia 1.0 Programming CookBook](https://www.packtpub.com/product/julia-1-0-programming-cookbook/9781788998369)の著者のBogumił Kamiński先生のブログと
 [Hands-On Design Patterns and Best Practices with Julia](https://www.packtpub.com/product/hands-on-design-patterns-and-best-practices-with-julia/9781838648817)の著者のTom Kwong さんのデータレングリングのvideoとブログを挙げておきます。
