@@ -64,9 +64,9 @@ println(first(testdf))</code></pre>
 <pre><code class="julia hljs"><span class=hljs-meta >@time</span> testdf[:,[<span class=hljs-string >&quot;a%&quot;</span>,<span class=hljs-string >&quot;b(m/s)&quot;</span>]]
 println()
 <span class=hljs-meta >@time</span> testdf[!,[<span class=hljs-string >&quot;a%&quot;</span>,<span class=hljs-string >&quot;b(m/s)&quot;</span>]]</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">  0.031461 seconds (17.77 k allocations: 2.530 MiB, 50.54% gc time)
+<div class=code-output ><pre><code class="plaintext hljs">  0.014236 seconds (17.67 k allocations: 2.526 MiB)
 
-  0.000021 seconds (22 allocations: 2.172 KiB)
+  0.000019 seconds (22 allocations: 2.172 KiB)
 </code></pre></div></div></div>
 <h4 id="select_関数"><a href="#select_関数" class=header-anchor >select 関数</a></h4>
 <p>列を抽出するには、select 関数も利用できます。</p>
@@ -163,7 +163,7 @@ println(first(sdf))</code></pre>
  <button onclick="topFunction()" id=myBtn  title="Go to top">Top</button> 
 <div class=page-foot >
   <div class=copyright >
-    &copy; Kei Hanafusa. Last modified: March 07, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: March 17, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div>
