@@ -97,9 +97,9 @@ println()
 <div class=code-output >Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
 Deprecated as of 10.7.0. Please use highlight(code, options) instead.
 https://github.com/highlightjs/highlight.js/issues/2277
-<pre><code class="plaintext hljs">  0.013322 seconds (17.67 k allocations: 2.526 MiB)
+<pre><code class="plaintext hljs">  0.014950 seconds (17.67 k allocations: 2.526 MiB)
 
-  0.000018 seconds (22 allocations: 2.172 KiB)
+  0.000020 seconds (22 allocations: 2.172 KiB)
 </code></pre></div></div></div>
 <h4 id="select_関数"><a href="#select_関数" class=header-anchor >select 関数</a></h4>
 <p>列を抽出するには、select 関数も利用できます。</p>
@@ -209,7 +209,7 @@ https://github.com/highlightjs/highlight.js/issues/2277
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
      │ String      String    String       String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-   1 │ r3          h_179     c_1          2016-09-24 10:03:17  2016-10-19    09:00:00      2016-10-22              2        33600
+   1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
 </code></pre></div>
 <h3 id="2-4_集約idに基づくサンプリング"><a href="#2-4_集約idに基づくサンプリング" class=header-anchor >2-4 集約IDに基づくサンプリング</a></h3>
 <p>顧客IDを集約して、半分にサンプリングし、顧客IDによるデータの抽出を行います。 chainマクロを使ったパイプラインの実装ですが、可読性は高いと思います。</p>
