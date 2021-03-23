@@ -1,23 +1,32 @@
-<!doctype html> <!-- Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes Free for personal and commercial use under the MIT license https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE --> <html lang=ja > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/minimal-mistakes.css"> <link rel=stylesheet  href="/css/adjust.css"> <link rel=stylesheet  href="/css/luminous-basic.min.css"> <link rel=icon  href="/assets/favicon.ico"> <!--[if IE ]> <style> /* old IE unsupported flexbox fixes */ .greedy-nav .site-title { padding-right: 3em; } .greedy-nav button { position: absolute; top: 0; right: 0; height: 100%; } </style> <![endif]--> <title>Awesome な前処理</title> <body class=layout--single > <div class=masthead > <div class=masthead__inner-wrap > <div class=masthead__menu > <nav id=site-nav  class=greedy-nav > <a class=site-title  href="/">Hanafsky.com</a> <ul class=visible-links > <li class=masthead__menu-item ><a href="/tips/" >Julia-tips</a> <li class=masthead__menu-item ><a href="/blog/" >Blog</a> <li class=masthead__menu-item ><a href="/project/" >Projects</a> <li class=masthead__menu-item ><a href="/about/">About</a> </ul> <button class="greedy-nav__toggle hidden" type=button > <span class=visually-hidden >Toggle menu</span> <div class=navicon ></div> </button> <ul class="hidden-links hidden"></ul> </nav> </div> </div> </div> <div class=initial-content > <div id=main  role=main > <div class="sidebar sticky"> <div itemscope itemtype="https://schema.org/Person"> <div class=author__avatar > <img src="/assets/design/author3.png" alt=Dio  itemprop=image > </div> <div class=author__content > <h3 class=author__name  itemprop=name >Kei Hanafusa</h3> <p class=author__bio  itemprop=description >Chemical Engineer, <br> living in Osaka, 🗾</p> </div> <div class=author__urls-wrapper > <button class="btn btn--inverse">Follow</button> <ul class="author__urls social-icons"> <li itemprop=homeLocation  itemscope itemtype="https://schema.org/Place"> <i class="fas fa-fw fa-map-marker-alt" aria-hidden=true ></i> <span itemprop=name >Osaka, Japan</span> <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden=true ></i> Twitter</a> <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i> GitHub</a> </ul> </div> <div class=author__urls-wrapper > <button class="btn btn--inverse">Tag</button> <ul class="author__urls social-icons"> <li>タグ <li> <li><a href="/tag/setting/">設定</a> <li><a href="/tag/thirdparty/">サードパーティライブラリ</a> <li><a href="/tag/recipe">レシピ</a> </ul> </div> </div> </div> <div class=franklin-content ><h1 id="awesome_な前処理_1"><a href="#awesome_な前処理_1" class=header-anchor >Awesome な前処理 1</a></h1> <p>機械学習を利用した仕事でデータの前処理をする必要に迫られました。 一冊くらいは前処理の本を読んだほうがいいだろうと思い、ホクソエムの方が 著者の<a href="https://gihyo.jp/book/2018/978-4-7741-9647-3">前処理大全</a>という本を読んでみました。</p> <p>この本は、データ解析の場面において、複数の言語を使い分けることを想定して、 SQL、R、pythonの3つの言語でAwesomeなコードの書き方を教えてくれます。 具体的には、メモリに収まらない大規模なデータならSQL、プロトタイピングにはR、 システムへの組み込みにはpythonという具合です。</p> <p>余談やあとがきも著者の人柄が偲ばれて、とてもおもしろかったです。</p> <p>私は、普段からプロトタイピングもウェブアプリもjuliaで作っているので、 自分用にjulia版（DataFrames.jlを利用<sup id="fnref:1"><a href="#fndef:1" class=fnref >[1]</a></sup>）でのエッセンスをまとめたいと思います。</p> <table class=fndef  id="fndef:1"> <tr> <td class=fndef-backref ><a href="#fnref:1">[1]</a> <td class=fndef-content >大規模なデータについては、JuliaDBを使う選択肢もありますが、今のところその機会はなさそうなので、DataFrames.jlだけでやってみます。 </table> <p>ほかの参考資料としては、<a href="https://www.packtpub.com/product/julia-1-0-programming-cookbook/9781788998369">Julia 1.0 Programming CookBook</a>の著者のBogumił Kamiński先生のブログと <a href="https://www.packtpub.com/product/hands-on-design-patterns-and-best-practices-with-julia/9781838648817">Hands-On Design Patterns and Best Practices with Julia</a>の著者のTom Kwong さんのデータレングリングのvideoとブログを挙げておきます。</p> <ul> <li><p><a href="https://bkamins.github.io/">Blog by Bogumił Kamiński</a></p> <li><p><a href="https://ahsmart.com/">Tom Kwong&#39;s Infinite Loop</a></p> </ul> <p>Tom Kwong さんのブログには、DataFrames.jlのチートシートがおいてあるので、手元において活用させてもらっています。</p> <iframe width=560  height=315  src="https://www.youtube.com/embed/txme9o0EdLk" frameborder=0  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <p>データは <a href="https://github.com/ghmagazine/awesomebook">前処理大全のサポートページのデータ</a>を利用しました。</p> <h2><div class=mytoc >目次 <div class=franklin-toc ><ol><li><a href="#ファイルを読み込む">ファイルを読み込む</a><li><a href="#2_抽出">2 抽出</a><ol><li><a href="#2-1_データ列の抽出">2-1 データ列の抽出</a><ol><li><a href="#string_で指定">String で指定</a><li><a href="#symbol_で指定">Symbol で指定</a><li><a href="#select_関数">select 関数</a><li><a href="#not_や正規表現による抽出">Not や正規表現による抽出</a></ol><li><a href="#2-2_条件指定による抽出">2-2 条件指定による抽出</a><li><a href="#2-3_データ値に基づかないサンプリング">2-3 データ値に基づかないサンプリング</a><li><a href="#2-4_集約idに基づくサンプリング">2-4 集約IDに基づくサンプリング</a></ol></ol></div></div></h2> <h2 id="ファイルを読み込む"><a href="#ファイルを読み込む" class=header-anchor >ファイルを読み込む</a></h2> <p>CSV ファイルの読み込みでは、以下の方法をよく使います。</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> DataFrames,CSV
-df = CSV.read(<span class=hljs-string >&quot;file.csv&quot;</span>, DataFrame)</code></pre> <div class=warning ><div class=title >😕 Warning&#33;</div> <div class=content >最近、<code>CSV.read</code>関数は、出力するデータ型（この場合は DataFrame 型）を指定しないとエラーを吐くようになりました。</div></div> <p>CSVファイル以外の読み込みでは、Excelから読み込むことが多いので、 ExcelFiles.jlをよく利用します。こちらはシート名を直接指定する必要があります。</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> DataFrames, ExcelFiles
-df =</code></pre> <p>datファイルなら、標準パッケージのDelimitedFiles.jlを利用すると読み込みが高速です。</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> DataFrames,DelimitedFiles
+<!doctype html> <!-- Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes Free for personal and commercial use under the MIT license https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE --> <html lang=ja > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/minimal-mistakes.css"> <link rel=stylesheet  href="/css/adjust.css"> <link rel=stylesheet  href="/css/luminous-basic.min.css"> <link rel=icon  href="/assets/favicon.ico"> <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel=stylesheet > <!--[if IE ]> <style> /* old IE unsupported flexbox fixes */ .greedy-nav .site-title { padding-right: 3em; } .greedy-nav button { position: absolute; top: 0; right: 0; height: 100%; } </style> <![endif]--> <title>Awesome な前処理</title> <body class=layout--single > <div class=masthead > <div class=masthead__inner-wrap > <div class=masthead__menu > <nav id=site-nav  class=greedy-nav > <a class=site-title  href="/">Hanafsky.com</a> <ul class=visible-links > <li class=masthead__menu-item ><a href="/tips/" >Julia-tips</a> <li class=masthead__menu-item ><a href="/blog/" >Blog</a> <li class=masthead__menu-item ><a href="/project/" >Projects</a> <li class=masthead__menu-item ><a href="/about/">About</a> </ul> <button class="greedy-nav__toggle hidden" type=button > <span class=visually-hidden >Toggle menu</span> <div class=navicon ></div> </button> <ul class="hidden-links hidden"></ul> </nav> </div> </div> </div> <div class=initial-content > <div id=main  role=main > <div class="sidebar sticky"> <div itemscope itemtype="https://schema.org/Person"> <div class=author__avatar > <img src="/assets/design/author3.png" alt=Dio  itemprop=image > </div> <div class=author__content > <h3 class=author__name  itemprop=name >Kei Hanafusa</h3> <p class=author__bio  itemprop=description >Chemical Engineer, <br> living in Osaka, 🗾</p> </div> <div class=author__urls-wrapper > <button class="btn btn--inverse">Follow</button> <ul class="author__urls social-icons"> <li itemprop=homeLocation  itemscope itemtype="https://schema.org/Place"> <i class="fas fa-fw fa-map-marker-alt" aria-hidden=true ></i> <span itemprop=name >Osaka, Japan</span> <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden=true ></i> Twitter</a> <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i> GitHub</a> </ul> </div> <div class=author__urls-wrapper > <button class="btn btn--inverse">Tag</button> <ul class="author__urls social-icons"> <li>タグ <li> <li><a href="/tag/setting/">設定</a> <li><a href="/tag/thirdparty/">サードパーティライブラリ</a> <li><a href="/tag/recipe">レシピ</a> </ul> </div> </div> </div> <div class=franklin-content ><h1 id="awesome_な前処理_1"><a href="#awesome_な前処理_1" class=header-anchor >Awesome な前処理 1</a></h1> <p>機械学習を利用した仕事でデータの前処理をする必要に迫られました。 一冊くらいは前処理の本を読んだほうがいいだろうと思い、ホクソエムの方が 著者の<a href="https://gihyo.jp/book/2018/978-4-7741-9647-3">前処理大全</a>という本を読んでみました。</p> <p>この本は、データ解析の場面において、複数の言語を使い分けることを想定して、 SQL、R、pythonの3つの言語でAwesomeなコードの書き方を教えてくれます。 具体的には、メモリに収まらない大規模なデータならSQL、プロトタイピングにはR、 システムへの組み込みにはpythonという具合です。</p> <p>余談やあとがきも著者の人柄が偲ばれて、とてもおもしろかったです。</p> <p>私は、普段からプロトタイピングもウェブアプリもjuliaで作っているので、 自分用にjulia版（DataFrames.jlを利用<sup id="fnref:1"><a href="#fndef:1" class=fnref >[1]</a></sup>）でのエッセンスをまとめたいと思います。</p> <table class=fndef  id="fndef:1"> <tr> <td class=fndef-backref ><a href="#fnref:1">[1]</a> <td class=fndef-content >大規模なデータについては、JuliaDBを使う選択肢もありますが、今のところその機会はなさそうなので、DataFrames.jlだけでやってみます。 </table> <p>ほかの参考資料としては、<a href="https://www.packtpub.com/product/julia-1-0-programming-cookbook/9781788998369">Julia 1.0 Programming CookBook</a>の著者のBogumił Kamiński先生のブログと <a href="https://www.packtpub.com/product/hands-on-design-patterns-and-best-practices-with-julia/9781838648817">Hands-On Design Patterns and Best Practices with Julia</a>の著者のTom Kwong さんのデータレングリングのvideoとブログを挙げておきます。</p> <ul> <li><p><a href="https://bkamins.github.io/">Blog by Bogumił Kamiński</a></p> <li><p><a href="https://ahsmart.com/">Tom Kwong&#39;s Infinite Loop</a></p> </ul> <p>Tom Kwong さんのブログには、DataFrames.jlのチートシートがおいてあるので、手元において活用させてもらっています。</p> <iframe width=560  height=315  src="https://www.youtube.com/embed/txme9o0EdLk" frameborder=0  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <p>データは <a href="https://github.com/ghmagazine/awesomebook">前処理大全のサポートページのデータ</a>を利用しました。</p> <h2><div class=mytoc >目次 <div class=franklin-toc ><ol><li><a href="#ファイルを読み込む">ファイルを読み込む</a><li><a href="#2_抽出">2 抽出</a><ol><li><a href="#2-1_データ列の抽出">2-1 データ列の抽出</a><ol><li><a href="#string_で指定">String で指定</a><li><a href="#symbol_で指定">Symbol で指定</a><li><a href="#select_関数">select 関数</a><li><a href="#not_や正規表現による抽出">Not や正規表現による抽出</a></ol><li><a href="#2-2_条件指定による抽出">2-2 条件指定による抽出</a><li><a href="#2-3_データ値に基づかないサンプリング">2-3 データ値に基づかないサンプリング</a><li><a href="#2-4_集約idに基づくサンプリング">2-4 集約IDに基づくサンプリング</a></ol></ol></div></div></h2> <h2 id="ファイルを読み込む"><a href="#ファイルを読み込む" class=header-anchor >ファイルを読み込む</a></h2> <p>CSV ファイルの読み込みでは、以下の方法をよく使います。</p> Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated. Deprecated as of 10.7.0. Please use highlight(code, options) instead. https://github.com/highlightjs/highlight.js/issues/2277 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> DataFrames,CSV
+df = CSV.read(<span class=hljs-string >&quot;file.csv&quot;</span>, DataFrame)</code></pre> <div class=warning ><div class=title >😕 Warning&#33;</div> <div class=content >最近、<code>CSV.read</code>関数は、出力するデータ型（この場合は DataFrame 型）を指定しないとエラーを吐くようになりました。</div></div> <p>CSVファイル以外の読み込みでは、Excelから読み込むことが多いので、 ExcelFiles.jlをよく利用します。こちらはシート名を直接指定する必要があります。</p> Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated. Deprecated as of 10.7.0. Please use highlight(code, options) instead. https://github.com/highlightjs/highlight.js/issues/2277 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> DataFrames, ExcelFiles
+df =</code></pre> <p>datファイルなら、標準パッケージのDelimitedFiles.jlを利用すると読み込みが高速です。</p> Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated. Deprecated as of 10.7.0. Please use highlight(code, options) instead. https://github.com/highlightjs/highlight.js/issues/2277 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> DataFrames,DelimitedFiles
 
-df = DataFrame(readdlm(<span class=hljs-string >&quot;file.dat&quot;</span>))</code></pre> <p>そのほかに、Rとpythonで共通なFeather形式を利用していたこともありましたが、 ほかの言語で処理することもなかったし、特段ファイルサイズが小さくなるわけでもありませんでした。</p> <p>早速サンプルのホテルの予約データ（reserve.csv）を読み込んでいきます。 長ったらしいので、最初の行だけをfirst関数で見てみます。</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> DataFrames,CSV
+df = DataFrame(readdlm(<span class=hljs-string >&quot;file.dat&quot;</span>))</code></pre> <p>そのほかに、Rとpythonで共通なFeather形式を利用していたこともありましたが、 ほかの言語で処理することもなかったし、特段ファイルサイズが小さくなるわけでもありませんでした。</p> <p>早速サンプルのホテルの予約データ（reserve.csv）を読み込んでいきます。 長ったらしいので、最初の行だけをfirst関数で見てみます。</p> Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated. Deprecated as of 10.7.0. Please use highlight(code, options) instead. https://github.com/highlightjs/highlight.js/issues/2277 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> DataFrames,CSV
 path = joinpath(<span class=hljs-string >&quot;tips&quot;</span>,<span class=hljs-string >&quot;data&quot;</span>,<span class=hljs-string >&quot;reserve.csv&quot;</span>)
 reserve_df = CSV.read(path,DataFrame)
-println(first(reserve_df))</code></pre> <div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+println(first(reserve_df))</code></pre> <div class=code-output >Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated. Deprecated as of 10.7.0. Please use highlight(code, options) instead. https://github.com/highlightjs/highlight.js/issues/2277 <pre><code class="plaintext hljs">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
      │ String      String    String       String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
    1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
-</code></pre></div> <h2 id="2_抽出"><a href="#2_抽出" class=header-anchor >2 抽出</a></h2> <h3 id="2-1_データ列の抽出"><a href="#2-1_データ列の抽出" class=header-anchor >2-1 データ列の抽出</a></h3> <p>前処理大全では、可読性を高めるために、データの列番号ではなく、ラベルによって列を抽出することが推奨されています。 まず、ラベル名を確認しておきます。</p> <pre><code class="julia hljs"><span class=hljs-meta >@show</span> names(reserve_df);</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">names(reserve_df) = [&quot;reserve_id&quot;, &quot;hotel_id&quot;, &quot;customer_id&quot;, &quot;reserve_datetime&quot;, &quot;checkin_date&quot;, &quot;checkin_time&quot;, &quot;checkout_date&quot;, &quot;people_num&quot;, &quot;total_price&quot;]
+</code></pre></div> <h2 id="2_抽出"><a href="#2_抽出" class=header-anchor >2 抽出</a></h2> <h3 id="2-1_データ列の抽出"><a href="#2-1_データ列の抽出" class=header-anchor >2-1 データ列の抽出</a></h3> <p>前処理大全では、可読性を高めるために、データの列番号ではなく、ラベルによって列を抽出することが推奨されています。 まず、ラベル名を確認しておきます。</p> Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated. Deprecated as of 10.7.0. Please use highlight(code, options) instead. https://github.com/highlightjs/highlight.js/issues/2277 <pre><code class="julia hljs"><span class=hljs-meta >@show</span> names(reserve_df);</code></pre>
+<div class=code-output >Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
+<pre><code class="plaintext hljs">names(reserve_df) = [&quot;reserve_id&quot;, &quot;hotel_id&quot;, &quot;customer_id&quot;, &quot;reserve_datetime&quot;, &quot;checkin_date&quot;, &quot;checkin_time&quot;, &quot;checkout_date&quot;, &quot;people_num&quot;, &quot;total_price&quot;]
 </code></pre></div>
 <p>試しに<code>reserve_id</code>と<code>hotel_id</code>の列を抽出してみます。</p>
 <h4 id="string_で指定"><a href="#string_で指定" class=header-anchor >String で指定</a></h4>
 <p>オーソドックスなラベル名をString型で指定する場合です。</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs">reserve_df[!,[<span class=hljs-string >&quot;reserve_id&quot;</span>,<span class=hljs-string >&quot;hotel_id&quot;</span>]] |&gt; first |&gt; println</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+<div class=code-output >Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
+<pre><code class="plaintext hljs">DataFrameRow
  Row │ reserve_id  hotel_id
      │ String      String
 ─────┼──────────────────────
@@ -25,10 +34,16 @@ println(first(reserve_df))</code></pre> <div class=code-output ><pre><code class
 </code></pre></div>
 <h4 id="symbol_で指定"><a href="#symbol_で指定" class=header-anchor >Symbol で指定</a></h4>
 <p>同じことを Symbol型で指定してやってみます。</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs">reserve_df[!,[:reserve_id,<span class=hljs-built_in >Symbol</span>(<span class=hljs-string >&quot;hotel_id&quot;</span>)]] |&gt; first |&gt; println
 println()
 <span class=hljs-meta >@show</span> typeof(:reserve_id)</code></pre>
-<p><div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+<p><div class=code-output >Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
+<pre><code class="plaintext hljs">DataFrameRow
  Row │ reserve_id  hotel_id
      │ String      String
 ─────┼──────────────────────
@@ -38,10 +53,16 @@ typeof(:reserve_id) = Symbol
 </code></pre></div> ここで、<code>:reserve_id</code>と<code>Symbol&#40;&quot;reserve_id&quot;&#41;</code>は同じ結果を示します。 ともに型は Symbol 型です。</p>
 <p><code>:reserve_id</code>の方が、タイプ数が少ないので省エネです。</p>
 <p>また、一列だけ抽出したいときは、<code>df.reserve_id</code>のようにすることもできます。 ただし、返り値の型は DataFrame 型ではなく、Vecter 型になります。</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs"><span class=hljs-meta >@show</span> first(reserve_df.reserve_id,<span class=hljs-number >5</span>)
 println()
 <span class=hljs-meta >@show</span> typeof(reserve_df.reserve_id)</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">MethodError: no method matching first(::Array{String,1}, ::Int64)
+<div class=code-output >Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
+<pre><code class="plaintext hljs">MethodError: no method matching first(::Array{String,1}, ::Int64)
 Closest candidates are:
   first(::AbstractArray) at abstractarray.jl:323
   first(!Matched::AbstractString, ::Integer) at strings/basic.jl:633
@@ -50,9 +71,15 @@ Closest candidates are:
 </code></pre></div>
 <div class=warning ><div class=title >😕 Warning&#33;</div>
 <div class=content ><p>いつでも<code>:reserve_id</code>のようにできるわけではありません。よくあるトラップが、 ラベル名に<code>&#37;</code>や<code>/</code>などの2項演算子が文字列に使われている時です。</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs">testdf = DataFrame(<span class=hljs-string >&quot;a%&quot;</span>=&gt;<span class=hljs-string >&quot;a&quot;</span>, <span class=hljs-string >&quot;b(m/s)&quot;</span>=&gt;<span class=hljs-number >1</span>:<span class=hljs-number >1e5</span>)
 println(first(testdf))</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+<div class=code-output >Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
+<pre><code class="plaintext hljs">DataFrameRow
  Row │ a%      b(m/s)
      │ String  Float64
 ─────┼─────────────────
@@ -61,17 +88,29 @@ println(first(testdf))</code></pre>
 <p>この場合には、<code>df&#91;&#33;,Symbol&#40;&quot;a&#37;&quot;&#41;&#93;</code>のようにして指定する必要があります。 演算子がラベル名に使われている場合は、私は最初にラベル名を当たり障りのないように変更するようにしています。</p></div></div>
 <div class=note ><div class=title >😲 Note</div>
 <div class=content ><p><code>reserve_df&#91;:,&#91;&quot;reserve_id&quot;&#93;&#93;</code>でも<code>reserve_df&#91;&#33;,&#91;&quot;reserve_id&quot;&#93;&#93;</code> でも、返り値は同じです。 ただし、前者の場合は新しくメモリ割り当てが発生します。その結果として実行速度も遅くなります。</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs"><span class=hljs-meta >@time</span> testdf[:,[<span class=hljs-string >&quot;a%&quot;</span>,<span class=hljs-string >&quot;b(m/s)&quot;</span>]]
 println()
 <span class=hljs-meta >@time</span> testdf[!,[<span class=hljs-string >&quot;a%&quot;</span>,<span class=hljs-string >&quot;b(m/s)&quot;</span>]]</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">  0.014780 seconds (17.67 k allocations: 2.526 MiB)
+<div class=code-output >Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
+<pre><code class="plaintext hljs">  0.014397 seconds (17.67 k allocations: 2.526 MiB)
 
-  0.000018 seconds (22 allocations: 2.172 KiB)
+  0.000017 seconds (22 allocations: 2.172 KiB)
 </code></pre></div></div></div>
 <h4 id="select_関数"><a href="#select_関数" class=header-anchor >select 関数</a></h4>
 <p>列を抽出するには、select 関数も利用できます。</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs">select(reserve_df,:reserve_id, :hotel_id) |&gt; first |&gt; println</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+<div class=code-output >Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
+<pre><code class="plaintext hljs">DataFrameRow
  Row │ reserve_id  hotel_id
      │ String      String
 ─────┼──────────────────────
@@ -80,8 +119,14 @@ println()
 <p>select関数には、新しい列を作る機能もあるので、 後で活躍しそうです。</p>
 <h4 id="not_や正規表現による抽出"><a href="#not_や正規表現による抽出" class=header-anchor >Not や正規表現による抽出</a></h4>
 <p>ラベルが<code>id</code>で終わる列を正規表現で抽出します。</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs">reserve_df[!,<span class=hljs-string >r&quot;id$&quot;</span>] |&gt; first |&gt; println</code></pre>
-<p><div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+<p><div class=code-output >Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
+<pre><code class="plaintext hljs">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id
      │ String      String    String
 ─────┼───────────────────────────────────
@@ -89,8 +134,14 @@ println()
 </code></pre></div> <div class=warning ><div class=title >😕 Warning&#33;</div>
 <div class=content >前処理大全では、ずっと使うコードにこのような抽出方法を採用することは避けるべきだとされています。</div></div></p>
 <p>ラベル名が<code>id</code>で終わらない列を抽出するには、Not に入れてしまうと楽です。 Not の中身は、直接ラベル名を指定することもできるので、有用です。</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs">reserve_df[!,Not(<span class=hljs-string >r&quot;id$&quot;</span>)] |&gt; first |&gt; println</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+<div class=code-output >Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
+<pre><code class="plaintext hljs">DataFrameRow
  Row │ reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
      │ String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼─────────────────────────────────────────────────────────────────────────────────────────
@@ -98,10 +149,16 @@ println()
 </code></pre></div>
 <h3 id="2-2_条件指定による抽出"><a href="#2-2_条件指定による抽出" class=header-anchor >2-2 条件指定による抽出</a></h3>
 <p><code>checkin_date</code>が2016-10-12から2016-10-13までのデータを抽出します。 ここではfilter関数を使います。 filter関数には、見ての通り2通りの使い方があります。 基本的には無名関数を使って、<code>引数x-&gt; a&lt;x&lt;b</code>のような書き方をしています。</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> Dates: Date
 <span class=hljs-comment ># filter(:checkin_date =&gt; row-&gt; Date(2016,10,12) &lt;= row &lt;= Date(2016,10,13), reserve_df) |&gt; println</span>
 filter(row-&gt; Date(<span class=hljs-number >2016</span>,<span class=hljs-number >10</span>,<span class=hljs-number >12</span>) &lt;= row.checkin_date &lt;= Date(<span class=hljs-number >2016</span>,<span class=hljs-number >10</span>,<span class=hljs-number >13</span>), reserve_df) |&gt; println</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">8×9 DataFrame
+<div class=code-output >Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
+<pre><code class="plaintext hljs">8×9 DataFrame
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
      │ String      String    String       String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -115,6 +172,9 @@ filter(row-&gt; Date(<span class=hljs-number >2016</span>,<span class=hljs-numbe
    8 │ r3444       h_14      c_859        2016-10-03 17:26:00  2016-10-13    12:30:00      2016-10-15              3        46200
 </code></pre></div>
 <p>上の例では1行で書きましたが、いくつかの前処理を一気に行うなら、以下のように複数行に分けたほうが、可読性は高いでしょう。</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> Chain
 <span class=hljs-meta >@chain</span> reserve_df <span class=hljs-keyword >begin</span>
   filter(:checkin_date =&gt; &gt;=(Date(<span class=hljs-number >2016</span>,<span class=hljs-number >10</span>,<span class=hljs-number >12</span>)),_)
@@ -124,11 +184,17 @@ filter(row-&gt; Date(<span class=hljs-number >2016</span>,<span class=hljs-numbe
 <div class=code-output ></div>
 <h3 id="2-3_データ値に基づかないサンプリング"><a href="#2-3_データ値に基づかないサンプリング" class=header-anchor >2-3 データ値に基づかないサンプリング</a></h3>
 <p>データ数を大体半分にしたいときの処方箋です。 pythonやRのようにDataFrame用にsample関数のようなものがあってもよさそうですが、 ないみたいなので、StatsBase.jlのsample関数を利用します。 DataFrameの行数から重複を許さずに、半分の値をサンプリングします。 そして、それを行番号として指定します。</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> StatsBase: sample 
 sample_row = sample(<span class=hljs-number >1</span>:nrow(reserve_df), round(<span class=hljs-built_in >Int</span>,nrow(reserve_df)/<span class=hljs-number >2</span>), replace=<span class=hljs-literal >false</span>)
 reserve_df[sample_row,:]</code></pre>
 <div class=code-output ></div>
 <p>SQLで出てきた、乱数を使って、データ数を約半分にする方法も使えそうです。</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> Chain
 reserve_df.rand=rand(nrow(reserve_df))
 sdf = <span class=hljs-meta >@chain</span> reserve_df <span class=hljs-keyword >begin</span>
@@ -136,7 +202,10 @@ sdf = <span class=hljs-meta >@chain</span> reserve_df <span class=hljs-keyword >
   select!(Not(:rand))
 <span class=hljs-keyword >end</span>
 println(first(sdf))</code></pre>
-<div class=code-output ><pre><code class="plaintext hljs">DataFrameRow
+<div class=code-output >Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
+<pre><code class="plaintext hljs">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
      │ String      String    String       String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -144,6 +213,9 @@ println(first(sdf))</code></pre>
 </code></pre></div>
 <h3 id="2-4_集約idに基づくサンプリング"><a href="#2-4_集約idに基づくサンプリング" class=header-anchor >2-4 集約IDに基づくサンプリング</a></h3>
 <p>顧客IDを集約して、半分にサンプリングし、顧客IDによるデータの抽出を行います。 chainマクロを使ったパイプラインの実装ですが、可読性は高いと思います。</p>
+Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
 <pre><code class="julia hljs"><span class=hljs-meta >@chain</span> reserve_df.customer_id <span class=hljs-keyword >begin</span>
   unique
   sample(_, round(<span class=hljs-built_in >Int</span>,length(_)/<span class=hljs-number >2</span>),replace=<span class=hljs-literal >false</span>)
@@ -163,7 +235,7 @@ println(first(sdf))</code></pre>
  <button onclick="topFunction()" id=myBtn  title="Go to top">Top</button> 
 <div class=page-foot >
   <div class=copyright >
-    &copy; Kei Hanafusa. Last modified: March 17, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: March 23, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div>
