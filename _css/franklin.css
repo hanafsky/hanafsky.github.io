@@ -99,7 +99,7 @@ html {
 
 .franklin-content h2 {
     position: relative;
-    padding: 5px 26px 5px 42px;
+    padding: 5px 26px 5px 5px;
     background: rgba(253,237,228,0.5);
     color: #2d2d2d;
     line-height: 1;
@@ -132,7 +132,7 @@ html {
   font-size: 1em;/*サイズ*/
   left: 0;/*アイコンの位置*/
   top: 0;/*アイコンの位置*/
-  color: #5ab9ff; /*アイコン色*/
+  color: rgb(246,189,192); /*アイコン色*/
   font-weight: 900;
 }
 
