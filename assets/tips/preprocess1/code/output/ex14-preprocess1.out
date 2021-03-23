@@ -2,4 +2,4 @@ DataFrameRow
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
      │ String      String    String       String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-   1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
+   1 │ r2          h_219     c_1          2016-07-16 23:39:55  2016-07-20    11:30:00      2016-07-21              2        20600
