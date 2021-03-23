@@ -80,7 +80,7 @@ html {
     TITLES
 ================================================================== */
 
-.franklin-content h1 { font-size: 24px; }
+.franklin-content h1 { font-size: 28px; }
 .franklin-content h2 { font-size: 22px; }
 .franklin-content h3 { font-size: 20px; }
 
@@ -88,16 +88,49 @@ html {
     text-align: left; }
 
 .franklin-content h1 {
-    padding-bottom: 0.5em;
-    border-bottom: 3px double lightgrey;
-    margin-top: 1.5em;
-    margin-bottom: 1em; }
+    position: relative;
+    color: rgba(0,0,0,0.56);
+    border-bottom: double;
+    padding: 0.5em 0;
+    margin: 1.5em 0;
+    }
 
 .franklin-content h2 {
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid lightgrey;
-    margin-top: 2em;
-    margin-bottom: 1em; }
+    padding: 0.2em 0.5em;
+    background: rgba(255,249,177,0.2);
+    border: solid 3px rgb(246,189,192);
+    border-radius: 10px;
+    /* margin-top: 2em; */
+    /* margin-bottom: 1em;  */
+}
+.franklin-content h3 {
+    position: relative;
+    padding: 0.25em 0;
+}
+
+.franklin-content h3::after{
+    content: "";
+    display: block;
+    height: 4px;
+    background: -webkit-linear-gradient(to right, rgb(250,219,218),rgb(253,237,228));
+    background: linear-gradient(to right, rgb(250,219,218),rgb(253,237,228));
+}
+.franklin-content h4 {
+    position: relative;
+    padding-left: 1.2em;/*アイコン分のスペース*/
+    line-height: 1.4;}
+
+.franklin-content h4:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";/*アイコンのユニコード*/
+  font-weight: 900;
+  position: absolute;/*絶対位置*/
+  font-size: 1em;/*サイズ*/
+  left: 0;/*アイコンの位置*/
+  top: 0;/*アイコンの位置*/
+  color: #5ab9ff; /*アイコン色*/
+  font-weight: 900;
+}
 
 .franklin-content h1 a { color: inherit; }
 .franklin-content h1 a:hover {text-decoration: none;}
@@ -137,7 +170,7 @@ html {
 
 /* spacing between bullet points */
 .franklin-content li p {
-        margin: 10px 0; }
+        margin: 3px 0; }
 
 .franklin-content a {
     color: #004de6;
@@ -427,7 +460,9 @@ code {
     padding-top: 10px;
 }
 .mytoc li {
-    margin-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
 }
 /* icard */
 .column {
