@@ -4,7 +4,7 @@
 @def hasmath=true
 @def isjulia =true
 
-# 静的サイトジェネレータ　 Franklin.jl を使った話
+# 静的サイトジェネレーター Franklin.jl を使った話
 
 [Franklin.jl](https://github.com/tlienart/Franklin.jl)は julia 言語で作られた静的サイト作成パッケージです。
 このサイトは Franklin.jl で作成しました。
@@ -43,7 +43,7 @@ serve()
 
 テンプレートは[ここ](https://tlienart.github.io/FranklinTemplates.jl/)で確認できます。
 
-mySiteフォルダ以下にマークダウンファイルや素材が入っています。
+mySiteフォルダー以下にマークダウンファイルや素材が入っています。
 テンプレートファイルをいじりながら使って行くことになります。
 ライブレンダリングによって編集後の結果をすぐに確認できるので、
 初心者でも使いやすいと思います。
@@ -95,7 +95,7 @@ println("Hello Franklin")
 \show{test}
 `````
 
-するとこのコードが実行された結果を出力することができます。
+するとこのコードが実行された結果を出力できます。
 
 ```julia:test
 println("Hello Franklin")
@@ -200,8 +200,8 @@ a
 
 ### github actions の罠
 
-github pagesを使えば、無料でホームページを作ることができます。Franklin.jlでは
-github actions(github のレポジトリの中で自動的に実行される処理) を利用して、
+GitHub pagesを使えば、無料でホームページを作ることができます。Franklin.jlでは
+GitHub actions（GitHubのレポジトリの中で自動的に実行される処理）を利用して、
 サイトを構成することが推奨されています。
 
 Franklin の場合は、
@@ -209,8 +209,8 @@ Franklin の場合は、
 リモートレポジトリへpushしたときに処理が実行されます。
 deploy.ymlの中身を見れば雰囲気がわかると思いますが、処理の流れをざっくり説明すると
 
-1. github 上で OS を立ち上げて、julia やら何やら必要なものをインストール
-1. Franklin を実行して、サイト(__siteフォルダ以下)を作る
+1. GitHub 上で OS を立ち上げて、julia やら何やら必要なものをインストール
+1. Franklin を実行して、サイト（__siteフォルダー以下）を作る
 1. gh-pages ブランチにできたサイトをぶちこむ
    ということになります。
 
@@ -221,12 +221,12 @@ deploy.ymlの中身を見れば雰囲気がわかると思いますが、処理�
 
 \warning{
 2020年の米国の騒動が原因で、GitHubのデフォルトブランチ名がmasterからmainに変更されました。
-これに伴って、Franklinでもdeploy.ymlには、mainブランチにプッシュされたときに
+これに伴って、Franklinでもdeploy.ymlには、mainブランチにプッシュされると
 動作するようになっています。当たり前ですが、この状態でmasterブランチにプッシュしても
 何も起こりません。deploy.ymlのブランチ名を実際のブランチ名と合わせる必要があります。
 }
 
-#### github-pages の設定をしておくこと
+#### gh-pages の設定をしておくこと
 
 \warning{
 レポジトリのページの Settings タブの下の方に GitHub Pages の欄があります。
@@ -242,7 +242,7 @@ optimize(;prepath="レポジトリ名")にしておく必要があります。�
 
 #### Project.toml を入れておこう。
 
-github actions でのデプロイ時には、julia コードの中で使用したパッケージが分かるように、
+GitHub actionsでのデプロイ時には、juliaコードの中で使用したパッケージがわかるように、
 教えてやる必要があります。ローカルレポジトリで、以下のように処理しておくと、
 
 ```julia
@@ -307,8 +307,8 @@ code {
 - Franklin.jl を使えば、テンプレートサイトをいじって簡単に自分だけのサイトが作れる。
 - 自分だけのコマンドを作れるが、`\ `の記号には注意が必要。
 - julia コードを実行するときは変数のスコープに注意する。
-- github にプッシュして簡単にホームページが作れる。
-  - github-pages を使うときは、deploy.yml、Project.toml、ソースブランチの設定に注意。
-- css や javascript をいじって自分で拡張できる。
+- GitHubにプッシュして簡単にホームページが作れる。
+  - GitHub-pagesを使うときは、deploy.yml、Project.toml、ソースブランチの設定に注意。
+- cssやjavascriptをいじって自分で拡張できる。
   \right{めでたしめでたし}
   \backtotop
