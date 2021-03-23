@@ -13,7 +13,6 @@ startup.jlは、juliaのREPL起動時に自動的に実行されるプログラ�
 }
 
 \mytoc
----
 
 ## startup.jlの場所
 - Windowsの場合: `%USERPROFILE%\.julia\config\startup.jl`

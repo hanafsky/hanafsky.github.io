@@ -18,7 +18,6 @@ reserve_df = CSV.read(path,DataFrame)
 \prettyshow{ex1-preprocess2}
 
 \mytoc
----
 ## 3 集約
 ### 3-1 データ数、種類数の算出
 ホテルごとに予約数、顧客数の集計を行う練習です。

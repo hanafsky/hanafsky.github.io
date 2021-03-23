@@ -13,7 +13,6 @@ python への依存関係もないので、インストールに苦労するこ�
 [Computational Thinking](https://computationalthinking.mit.edu/) の授業でも、大いに活用されています。
 
 \mytoc
----
 ## インストール方法
 
 インストールは REPL の pkg モードで add するだけです。
