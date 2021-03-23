@@ -11,6 +11,7 @@ The website_* must be defined for the RSS to work
 @def author = "Kei Hanafusa"
 
 @def mintoclevel = 2
+@def maxtoclevel = 3
 
 @def hasmermaid = false
 @def isblog = false
@@ -46,10 +47,8 @@ For instance:
 \newcommand{\mermaid}[1]{~~~ <div style="text-align:center" class="mermaid"> #1 </div>~~~}
 \newcommand{\backtotop}{~~~ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> ~~~}
 \newcommand{\mytoc}{
-@@mytoc
-目次
-\toc @@
-
+\center{目次}
+\toc
 }
 \newcommand{\html}[1]{~~~#1~~~}
 \newenvironment{center}{
