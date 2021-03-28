@@ -1,14 +1,16 @@
 @def title = "about"
 
-# Welcome
+# Welcome to my website
 
 ## About me
-
-- Born in 1983 at [Okayama](https://www.google.com/search?q=大都会岡山), well-known metropolitancity. 
-- Programming: julia, python, html, css, javascript, C, java, and Fortran.
-- Expertise: physical chemistry, innorganic chemisctry, electrochemistry and superconductivity.
-- Likes: muscle workout, piano and alcohol beverages.
-- Daddy of two daughters.
-- Working for a company near [USJ](https://www.usj.co.jp/web/ja/jp) as an engineer from 2009.
+- 1983年生まれ
+- 出身地：[岡山](https://www.google.com/search?q=大都会岡山)
+- 2009年からUSJ近くの会社で勤務。
+- 化学系エンジニア
+- 専門: 物理化学、無機化学、電気化学、超伝導（超電導）。
+- プログラミング: julia、python、html、css、javascript、C、java、Fortran。
+- スキル: 3次元モデリング（Fusion360）。 
+- 好き: 数学、筋トレ、ピアノ、お酒全般。
+- 二女の父
 
 \backtotop
