@@ -20,7 +20,7 @@ jobs:
     # packages such as PyPlot.
     # - run: pip install matplotlib
     - name: Install GR
-    - run: apt install libxt6 libxrender1 libxext6 libgl1-mesa-glx libqt5widgets5
+    - run: sudo apt install libxt6 libxrender1 libxext6 libgl1-mesa-glx libqt5widgets5
     - name: Install Julia
       uses: julia-actions/setup-julia@v1
       with:
