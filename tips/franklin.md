@@ -106,7 +106,7 @@ println("Hello Franklin")
 
 次のように書いてやればグラフも出力できます。
 
-````markdown
+`````markdown
 ```julia:plot
 using Plots
 p = plot(x->sin(x),xlabel="x",ylabel="y")
@@ -114,7 +114,7 @@ savefig(p,joinpath(@OUTPUT,"figplot.svg"))
 ```
 
 \fig{figplot}
-````
+`````
 
 ```julia:plot
 using Plots
