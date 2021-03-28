@@ -7,10 +7,11 @@
 # 静的サイトジェネレーター Franklin.jl を使った話
 \titleimage{https://franklinjl.org/assets/infra/logoF2.svg}
 \share{tips/franklin}{静的サイトジェネレーター Franklin.jl}
-[Franklin.jl](https://github.com/tlienart/Franklin.jl)は julia 言語で作られた静的サイト作成パッケージです。
-このサイトは Franklin.jl で作成しました。
-ブログの選択肢としては、WordPress、はてなブログ、Qiita など色々あるでしょうが、
-julia 言語が好きで、julia や数式も使ったブログを書きたいなら、Franklin.jl は有力な選択肢だと思います。
+[Franklin.jl](https://github.com/tlienart/Franklin.jl)はjulia言語で作られた静的サイト作成パッケージです。
+このサイトはFranklin.jlを利用して作成しました。
+ブログの選択肢としては、WordPress、はてなブログ、Qiitaなど色々あります。
+julia言語が好きで、juliaのコードや数式を使ったブログを書きたくて、
+まだブログサイトを持っていなければ、Franklin.jlは悪くない選択肢だと思います。
 
 本サイトの作成にあたって参考にしたサイトはこちらです。
 
@@ -24,7 +25,7 @@ julia 言語が好きで、julia や数式も使ったブログを書きたい�
 
 ### インストール方法
 
-まず REPL のパッケージモードから Franklin をインストールします。
+まずREPLのパッケージモードからFranklinをインストールします。
 
 ```julia
 julia>]
@@ -34,7 +35,7 @@ julia>]
 ### デモサイトを作ってみる。
 
 以下のコードを実行すると、デモサイト作成後にローカルサーバーが立ち上がり、
-http://localhost:8000/　でサイトを確認することができます。
+http://localhost:8000/でサイトを確認することができます。
 
 ```julia
 using Franklin
@@ -85,7 +86,7 @@ $$ \int_{a}^{b} f(x) = F(b) - F(a)$$
 
 $$ \int_{a}^{b} f(x) = F(b) - F(a)$$
 
-### julia のコードを書いてみる。
+### juliaのコードを書いてみる。
 
 マークダウンの中で次のようなコードを実行したとします。
 
@@ -104,7 +105,7 @@ println("Hello Franklin")
 
 \show{test}
 
-次のように書いてやればグラフも出力できます。
+次のように書いてやればグラフを出力できます。
 
 `````markdown
 ```julia:plot
@@ -210,9 +211,9 @@ Franklin の場合は、
 リモートレポジトリへpushしたときに処理が実行されます。
 deploy.ymlの中身を見れば雰囲気がわかると思いますが、処理の流れをざっくり説明すると
 
-1. GitHub 上で OS を立ち上げて、julia やら何やら必要なものをインストール
-1. Franklin を実行して、サイト（__siteフォルダー以下）を作る
-1. gh-pages ブランチにできたサイトをぶちこむ
+1. GitHub上でOSを立ち上げて、juliaやら何やら必要なものをインストール
+1. Franklinを実行して、サイト（__siteフォルダー以下）を作る
+1. gh-pagesブランチにできたサイトをぶちこむ
    ということになります。
 
 個別の状況によりますが、このdeploy.ymlは修正する必要があります。
