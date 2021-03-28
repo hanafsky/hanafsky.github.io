@@ -45,7 +45,7 @@ println&#40;&#41;
 Closest candidates are:
   first(::AbstractArray) at abstractarray.jl:323
   first(!Matched::AbstractString, ::Integer) at strings/basic.jl:633
-  first(!Matched::DataFrames.AbstractDataFrame, ::Integer) at /home/runner/.julia/packages/DataFrames/oQ5c7/src/abstractdataframe/abstractdataframe.jl:463
+  first(!Matched::DataFrames.AbstractDataFrame, ::Integer) at /home/runner/.julia/packages/DataFrames/zXEKU/src/abstractdataframe/abstractdataframe.jl:463
   ...
 </code></pre></div>
 <div class=warning ><div class=title >😕 Warning&#33;</div>
@@ -64,9 +64,9 @@ println&#40;first&#40;testdf&#41;&#41;</code></pre>
 <pre><code class=language-julia >@time testdf&#91;:,&#91;&quot;a&#37;&quot;,&quot;b&#40;m/s&#41;&quot;&#93;&#93;
 println&#40;&#41;
 @time testdf&#91;&#33;,&#91;&quot;a&#37;&quot;,&quot;b&#40;m/s&#41;&quot;&#93;&#93;</code></pre>
-<div class=code-output ><pre><code class=plaintext >  0.013536 seconds (17.67 k allocations: 2.526 MiB)
+<div class=code-output ><pre><code class=plaintext >  0.015695 seconds (17.67 k allocations: 2.526 MiB)
 
-  0.000014 seconds (22 allocations: 2.172 KiB)
+  0.000038 seconds (22 allocations: 2.172 KiB)
 </code></pre></div></div></div>
 <h4 id="select_関数"><a href="#select_関数" class=header-anchor >select 関数</a></h4>
 <p>列を抽出するには、select 関数も利用できます。</p>
@@ -152,7 +152,7 @@ end</code></pre>
 <div class=code-output ></div>
 
   <div class=prev-next-link >
-  <a class=next-link  href=" /tips/preprocess2">
+  <a class=next-link  href="https://hanafsky.com//tips/preprocess2">
     <p class=prev-next-label >次の記事</p>
     <p>
        Awesome な前処理2
@@ -163,7 +163,7 @@ end</code></pre>
  <button onclick="topFunction()" id=myBtn  title="Go to top">Top</button> 
 <div class=page-foot >
   <div class=copyright >
-    &copy; Kei Hanafusa. Last modified: March 23, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: March 28, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div>
@@ -179,7 +179,7 @@ end</code></pre>
           <ul class=social-icons >
             <li><strong>Follow:</strong>
             <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden=true ></i> Twitter</a>
-            <li><a href="https://github.com/lethal8723" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i> GitHub</a>
+            <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i> GitHub</a>
           </ul>
         </div>
         <div class=page__footer-copyright >&copy; Kei Hanafusa. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel=nofollow >Minimal Mistakes</a>.</div>
