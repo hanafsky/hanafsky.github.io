@@ -17,6 +17,10 @@
   font-weight: normal;
   src: url('/assets/yozakura.woff') format('woff');
   }
+@font-face {
+  font-family: icomoon;
+  src: url('/assets/icomoon.woff') format('woff');
+  }
 
 .mfp-bg {
   top: 0;

@@ -3,8 +3,10 @@
 
 # Julia Tips
 
-julia 言語に関するトピックを書いていきます。
+2018年ごろから、データの解析やシミュレーションにjulia言語のお世話になっています。
+julia言語に関するトピックを書いていきます。
 
+\share{tips/}{julia言語に関するトピックまとめ}
 ## トピック
 
 @@cards
@@ -15,3 +17,5 @@ julia 言語に関するトピックを書いていきます。
 @@column \card{/assets/tips/1415596_s.jpg}{julia 起動時の初期設定 - startup.jl}{/tips/startup} @@
 @@
 @@
+
+\share{tips/}{julia言語に関するトピックまとめ}

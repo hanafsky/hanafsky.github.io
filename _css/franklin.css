@@ -556,3 +556,64 @@ code {
     text-align: right;
   }
 }
+
+
+.sns-container{display:table;width:100%;table-layout:fixed}
+.sns-container.top{padding:1em 10%}
+@media (max-width:600px){
+  .sns-container.top{padding:1em 6%}
+}
+.sns-box{
+  -webkit-transition:all .1s ease-in-out;
+  -moz-transition:all .1s ease-in-out;
+  -ms-transition:all .1s ease-in-out;
+  -o-transition:all .1s ease-in-out;
+  transition:all .1s ease-in-out;
+  display:table-cell;
+  backface-visibility:hidden
+}
+.sns-box:hover{opacity:.8}
+.sns-box span.name{font-size:.6em}
+.sns-box a{
+  display:block;
+  color:#fff;
+  padding:.3em 0 .2em;
+  text-align:center;
+  font-size:1.3em
+}
+.sns-box a:hover{
+  color:#fff;
+  text-decoration:none
+}
+.sns-box a span{padding:0}
+.b-twitter{background:#55acee}
+.b-facebook{background:#3b5998}
+.b-hatena{background:#008fde}
+.b-pocket{background:#d3505a}
+.b-feedly{background:#2bb24c}
+.b-line{background:rgb(5,199,86)}
+
+
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-line:before {
+	content: "\e009";
+}
+.icon-hatena:before {
+	content: "\e00a";
+}
+.icon-feedly:before {
+	content: "\e007";
+}

@@ -141,3 +141,28 @@ For instance:
 \newcommand{\yozakura}[1]{
   ~~~<p style="font-family:yozakura;font-size:xx-large">#1</p>~~~
 }
+
+\newcommand{\share}[2]{
+~~~
+<div class="sns-container top">
+  <div class="sns-box b-twitter">
+    <a href="https://twitter.com/share?url=https://hanafsky.com/!#1&text=!#2&via=HanafusaKei&related=HanafusaKei"
+    target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
+  <div class="sns-box b-facebook">
+    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/!#1" 
+    target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+  <div class="sns-box b-hatena">
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=!#1&title=!#2"
+    target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
+  <div class="sns-box b-pocket">
+    <a href="http://getpocket.com/edit?url=!#1&title=!#2"
+    rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
+  <div class="sns-box b-feedly">
+    <a href='https://feedly.com/i/subscription/!#1'
+    target='blank' rel="nofollow"><span class="icon-feedly"></span></a></div>
+  <div class="sns-box b-line">
+    <a href='https://social-plugins.line.me/lineit/share?url=!#1'
+    target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
+</div>
+~~~
+}
