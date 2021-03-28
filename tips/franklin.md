@@ -9,9 +9,9 @@
 \share{tips/franklin}{静的サイトジェネレーター Franklin.jl}
 [Franklin.jl](https://github.com/tlienart/Franklin.jl)はjulia言語で作られた静的サイト作成パッケージです。
 このサイトはFranklin.jlを利用して作成しました。
-ブログの選択肢としては、WordPress、はてなブログ、Qiitaなど色々あります。
-julia言語が好きで、juliaのコードや数式を使ったブログを書きたくて、
-まだブログサイトを持っていなければ、Franklin.jlは悪くない選択肢だと思います。
+技術系のブログの選択肢としては、WordPress、はてなブログ、Qiitaなど色々あります。
+julia言語が好きで、juliaのコードや数式を使ったブログを書きたいが、
+まだブログサイトを持っていない人にとっては、Franklin.jlは悪くない選択肢だと思います。
 
 本サイトの作成にあたって参考にしたサイトはこちらです。
 
