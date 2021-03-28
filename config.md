@@ -157,16 +157,16 @@ For instance:
     <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/!#1" 
     target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
   <div class="sns-box b-hatena">
-    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=!#1&title=!#2"
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/!#1&title=!#2"
     target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
   <div class="sns-box b-pocket">
-    <a href="http://getpocket.com/edit?url=!#1&title=!#2"
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/!#1&title=!#2"
     rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
   <div class="sns-box b-feedly">
-    <a href='https://feedly.com/i/subscription/!#1'
+    <a href='https://feedly.com/i/subscription/feed/https://hanafsky.com/!#1'
     target='blank' rel="nofollow"><span class="icon-feedly"></span></a></div>
   <div class="sns-box b-line">
-    <a href='https://social-plugins.line.me/lineit/share?url=!#1'
+    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/!#1'
     target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
 </div>
 ~~~
