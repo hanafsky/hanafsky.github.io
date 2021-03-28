@@ -37,8 +37,7 @@ Tom Kwong さんのブログには、DataFrames.jlのチートシートがおい
 データは
 [前処理大全のサポートページのデータ](https://github.com/ghmagazine/awesomebook)を利用しました。
 
-\mytoc
----
+\toc
 ## ファイルを読み込む
 
 CSV ファイルの読み込みでは、以下の方法をよく使います。
