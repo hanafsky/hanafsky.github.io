@@ -21,8 +21,8 @@ jobs:
     # - run: pip install matplotlib
     - name: Install GR
       run: |
-        sudo apt update
-        sudo apt -y install \ 
+        sudo apt-get update
+        sudo apt-get -y install \ 
           libxt6 \
           libxrender1 \
           libxext6 \
