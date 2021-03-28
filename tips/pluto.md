@@ -3,14 +3,21 @@
 @def tags=["thirdparty"]
 @def isjulia =true
 
-# Pluto.jl とは
+# リアクティブなノートブック Pluto.jl
+\titleimage{/assets/tips/pluto-5962694_640.jpg}
+\share{tips/pluto/}{リアクティブなノートブック Pluto.jl}
 
-文章や数式と共にコードとその実行結果を記述することをLiterate Programmingと呼びます。
+文章や数式などのドキュメントと共にコードを記述することをLiterate Programmingと呼びます。
+（厳密には違うかもしれませんが）
+
 Literate Programmingの定番はJupyter Notebook(IJulia.jl)ですが、
 julia独自のPluto Notebook(Pluto.jl)というものもあります。
 pythonへの依存関係もないので、インストールに苦労することも少ないでしょう。
+
 教育への適用が狙いの1つであるようで、julia開発者の1人であるMITの Alan Edelman 先生の
 [Computational Thinking](https://computationalthinking.mit.edu/) の授業でも、大いに活用されています。
+
+ちなみに、Plutoはjupyterに対応する名前だと思うので、画像のPlutoは多分関係ありません。
 
 \toc
 ## インストール方法
@@ -128,4 +135,6 @@ jupyterと同じ感覚で使おうとするとミスります。
 - 重い処理や、ドメイン固有言語が発達したパッケージの利用には要注意。
 \right{めでたしめでたし}
 
+\share{tips/pluto/}{リアクティブなノートブック Pluto.jl}
+\prevnext{tips/pluto/}{リアクティブなノートブック Pluto.jl}{tips/savgol}{ノイズを含むデータの微分 - Savitzky-Golay filter}
 \backtotop

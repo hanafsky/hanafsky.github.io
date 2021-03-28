@@ -56,14 +56,19 @@ For instance:
 }{
 \html{</div>}
 }
-\newcommand{\luminous}[1]{
-
-```
+\newcommand{\titleimage}[1]{
+~~~
 <div style="text-align:center">
-<a href="#1" class="zoom"><img src="#1" alt=""></a>
+<img src="!#1" alt="" height="200px">
 </div>
-```
-
+~~~
+}
+\newcommand{\luminous}[1]{
+~~~
+<div style="text-align:center" >
+<a href="!#1" class="zoom"><img src="!#1" alt=""></a>
+</div>
+~~~
 }
 \newcommand{\card}[3]{
 @@card
@@ -99,13 +104,13 @@ For instance:
 \newcommand{\prevnext}[4]{
 ~~~
   <div class="prev-next-link">
-  <a class="prev-link" href="#1">
+  <a class="prev-link" href="https://hanafsky.com/!#1">
     <p class="prev-next-label">前の記事</p>
     <p>
       #2
     </p>
   </a>
-  <a class="next-link" href="#3">
+  <a class="next-link" href="https://hanafsky.com/!#3">
     <p class="prev-next-label">次の記事</p>
     <p>
       #4
@@ -117,7 +122,7 @@ For instance:
 \newcommand{\next}[2]{
   ~~~
   <div class="prev-next-link">
-  <a class="next-link" href="#1">
+  <a class="next-link" href="https://hanafsky.com/!#1">
     <p class="prev-next-label">次の記事</p>
     <p>
       #2
@@ -129,8 +134,8 @@ For instance:
 \newcommand{\prev}[2]{
   ~~~
   <div class="prev-next-link">
-  <a class="prev-link" href="#1">
-    <p class="prev-next-label">次の記事</p>
+  <a class="prev-link" href="https://hanafsky.com/!#1">
+    <p class="prev-next-label">前の記事</p>
     <p>
       #2
     </p>

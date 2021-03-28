@@ -5,7 +5,8 @@
 @def isjulia =true
 
 # 静的サイトジェネレーター Franklin.jl を使った話
-
+\titleimage{https://franklinjl.org/assets/infra/logoF2.svg}
+\share{tips/franklin}{静的サイトジェネレーター Franklin.jl}
 [Franklin.jl](https://github.com/tlienart/Franklin.jl)は julia 言語で作られた静的サイト作成パッケージです。
 このサイトは Franklin.jl で作成しました。
 ブログの選択肢としては、WordPress、はてなブログ、Qiita など色々あるでしょうが、
@@ -14,7 +15,7 @@ julia 言語が好きで、julia や数式も使ったブログを書きたい�
 本サイトの作成にあたって参考にしたサイトはこちらです。
 
 - [本家](http://franklin.org)
-- [MathSeminar.jl](http://terasakisatoshi.github.io/MathSeminar.jl) 今のところ唯一の日本語ソース
+- [MathSeminar.jl](http://terasakisatoshi.github.io/MathSeminar.jl) 今のところ唯一？の日本語ソース
 
 \toc
 
@@ -310,5 +311,9 @@ code {
 - GitHubにプッシュして簡単にホームページが作れる。
   - GitHub-pagesを使うときは、deploy.yml、Project.toml、ソースブランチの設定に注意。
 - cssやjavascriptをいじって自分で拡張できる。
-  \right{めでたしめでたし}
-  \backtotop
+
+\right{めでたしめでたし}
+
+\share{tips/franklin}{静的サイトジェネレーター Franklin.jl}
+\prevnext{tips/startup}{julia 起動時の初期設定 - startup.jl}{tips/pluto/}{リアクティブなノートブック Pluto.jl}
+\backtotop
