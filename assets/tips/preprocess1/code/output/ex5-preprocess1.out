@@ -1,6 +1,3 @@
-MethodError: no method matching first(::Array{String,1}, ::Int64)
-Closest candidates are:
-  first(::AbstractArray) at abstractarray.jl:323
-  first(!Matched::AbstractString, ::Integer) at strings/basic.jl:633
-  first(!Matched::DataFrames.AbstractDataFrame, ::Integer) at /home/runner/.julia/packages/DataFrames/zXEKU/src/abstractdataframe/abstractdataframe.jl:463
-  ...
+reserve_df.reserve_id[1:5] = ["r1", "r2", "r3", "r4", "r5"]
+
+typeof(reserve_df.reserve_id) = Vector{String}
