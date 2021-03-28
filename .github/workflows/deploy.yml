@@ -19,8 +19,8 @@ jobs:
     # NOTE: Here you can install dependencies such as matplotlib if you use
     # packages such as PyPlot.
     # - run: pip install matplotlib
-    - name: Install GR
-    - run: sudo apt install libxt6 libxrender1 libxext6 libgl1-mesa-glx libqt5widgets5
+    # - name: Install GR
+    # - run: sudo apt install libxt6 libxrender1 libxext6 libgl1-mesa-glx libqt5widgets5
     - name: Install Julia
       uses: julia-actions/setup-julia@v1
       with:
