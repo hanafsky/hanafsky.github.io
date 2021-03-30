@@ -10,8 +10,8 @@
 [Franklin.jl](https://github.com/tlienart/Franklin.jl)はjulia言語で作られた静的サイト作成パッケージです。
 このサイトはFranklin.jlを利用して作成しました。
 技術系のブログの選択肢としては、WordPress、はてなブログ、Qiitaなど色々あります。
-julia言語が好きで、juliaのコードや数式を使ったブログを書きたいが、
-まだブログサイトを持っていない人にとっては、Franklin.jlは悪くない選択肢だと思います。
+julia言語が好きで、juliaのコードや数式を使ったブログを書きたいけど、
+まだブログサイトを持っていない私のような人にとって、Franklin.jlは悪くない選択肢だと思います。
 
 本サイトの作成にあたって参考にしたサイトはこちらです。
 
@@ -279,12 +279,12 @@ htmlやcssに関する知識が多少あれば、テンプレートファイル�
 
 ### コードのフォントには juliamono を使おう
 
-[juliamono](https://github.com/cormullion/juliamono)フォントを使えば、julia のコードを洗練された見栄えに変更できます。
+[juliamono](https://github.com/cormullion/juliamono)フォントを使えば、juliaのコードを洗練された見栄えに変更できます。
 ->が`->`になったり、|>が`|>`になるので、パイプ演算子や無名関数を多用する人は、気に入るのではないでしょうか？
-[Cormullion のブログ](https://cormullion.github.io/pages/2020-07-26-JuliaMono/)(このサイトも Franklin で作られている。)にインストール方法は載っています。
+[Cormullion のブログ](https://cormullion.github.io/pages/2020-07-26-JuliaMono/)(このサイトもFranklinで作られている。)にインストール方法は載っています。
 
-css で web フォントとして使うのも簡単で[こちら](https://cormullion.github.io/pages/2020-07-26-JuliaMono/#how_can_i_use_the_web_fonts_for_my_blog)にやり方が載っています。
-少し改変したものが以下になります。まず、css ファイルに
+cssでwebフォントとして使うのも簡単で[こちら](https://cormullion.github.io/pages/2020-07-26-JuliaMono/#how_can_i_use_the_web_fonts_for_my_blog)にやり方が載っています。
+少し改変したものが以下になります。まず、cssファイルに
 
 ```css
 @font-face {
@@ -293,7 +293,7 @@ css で web フォントとして使うのも簡単で[こちら](https://cormul
 }
 ```
 
-と書いて、次に css セレクタのなかで、code を探して、
+と書いて、次にcssセレクターのなかで、codeを探して、
 
 ```css
 code {
@@ -302,7 +302,7 @@ code {
 }
 ```
 
-としておけば良いです。(font-family の一番左に書くことが重要)
+としておけば良いです。（font-familyの一番左に書くことが重要）
 
 ## まとめ
 
@@ -313,7 +313,7 @@ code {
   - GitHub-pagesを使うときは、deploy.yml、Project.toml、ソースブランチの設定に注意。
 - cssやjavascriptをいじって自分で拡張できる。
 
-\right{めでたしめでたし}
+\right{ね、簡単でしょう？}
 
 \share{tips/franklin}{静的サイトジェネレーター Franklin.jl}
 \prevnext{tips/startup}{julia 起動時の初期設定 - startup.jl}{tips/pluto/}{リアクティブなノートブック Pluto.jl}

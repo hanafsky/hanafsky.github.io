@@ -70,9 +70,9 @@ using Revise # パッケージ開発時に利用する。
 (つまり、v1.4 -> v1.5のようなversion変更を行ったとき。 v1.5.2 -> v1.5.3のような
 マイナーチェンジの時は起こりません。)
 
-新バージョンのjuliaをインストールしたときは、startup.jlのusing文を一旦コメントアウトしておく必要があります。
+新バージョンのjuliaをインストールしたときは、startup.jlのusing文の行をいったんコメントアウトしておく必要があります。
 
-\right{めでたしめでたし}
+\right{ね、簡単でしょう？}
 \share{tips/startup}{julia 起動時の初期設定 - startup.jl}
 
 \next{tips/franklin}{静的サイトジェネレーター Franklin.jl}
