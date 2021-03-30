@@ -313,7 +313,7 @@ code {
   - GitHub-pagesを使うときは、deploy.yml、Project.toml、ソースブランチの設定に注意。
 - cssやjavascriptをいじって自分で拡張できる。
 
-\right{ね、簡単でしょう？}
+\right{めでたしめでたし}
 
 \share{tips/franklin}{静的サイトジェネレーター Franklin.jl}
 \prevnext{tips/startup}{julia 起動時の初期設定 - startup.jl}{tips/pluto/}{リアクティブなノートブック Pluto.jl}

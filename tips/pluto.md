@@ -133,7 +133,7 @@ jupyterと同じ感覚で使おうとするとミスります。
 - マークダウンやhtmlとの連携など、基本的な機能を備えている。
 - GUIを実装しやすく、教育用のコンテンツとしても優秀。
 - 重い処理や、ドメイン固有言語が発達したパッケージの利用には要注意。
-\right{ね、簡単でしょう？}
+\right{めでたしめでたし}
 
 \share{tips/pluto/}{リアクティブなノートブック Pluto.jl}
 \prevnext{tips/pluto/}{リアクティブなノートブック Pluto.jl}{tips/savgol}{ノイズを含むデータの微分 - Savitzky-Golay filter}

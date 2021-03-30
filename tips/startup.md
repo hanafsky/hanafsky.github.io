@@ -72,7 +72,7 @@ using Revise # パッケージ開発時に利用する。
 
 新バージョンのjuliaをインストールしたときは、startup.jlのusing文の行をいったんコメントアウトしておく必要があります。
 
-\right{ね、簡単でしょう？}
+\right{めでたしめでたし}
 \share{tips/startup}{julia 起動時の初期設定 - startup.jl}
 
 \next{tips/franklin}{静的サイトジェネレーター Franklin.jl}
