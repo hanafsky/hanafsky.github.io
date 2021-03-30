@@ -5,7 +5,7 @@
 @def isjulia =true 
 # Juliaの文法
 
-\mytoc
+\toc
 
 ## リテラル
 リテラルとは組み込み型の定数を表すものです。いくつか列挙します。
