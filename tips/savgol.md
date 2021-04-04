@@ -125,24 +125,26 @@ $$
 ざっくりと流れを確認してみます。
 
 \begin{mermaid}
+~~~
 graph TD
-  id1[何階微分するのかを決める]
-  id2[窓関数のデータ点数を決める]
-  id3[窓関数を作る]
-  id4[元のデータの端点のデータを水増し]
-  id5[窓関数を元のデータに畳込む]
-  id6[水増しした端点データを除去する]
-  id1-->id2
-  id2-->id3
-  id3-->id4
-  id4-->id5
-  id5-->id6
+    id1[何階微分するのかを決める]
+    id2[窓関数のデータ点数を決める]
+    id3[窓関数を作る]
+    id4[元のデータの端点のデータを水増し]
+    id5[窓関数を元のデータに畳込む]
+    id6[水増しした端点データを除去する]
+    id1-->id2
+    id2-->id3
+    id3-->id4
+    id4-->id5
+    id5-->id6
+~~~
 \end{mermaid}
 
 
 ```julia:pre
 # hideall
-using Plot,Plots.PlotMeasures
+using Plots,Plots.PlotMeasures
 Plots.reset_defaults()
 default(
     left_margin = 30px,
@@ -165,7 +167,7 @@ SG関数は、窓関数の長さの半分と微分階数を引数にしていて
 (1列目はスムージング用、2列目は1階微分用、3列目は2階微分用）
 ```julia:savgol
 using SavGol
-sg1 = SavGol.SG(5,2)
+sg1 = SavGol.SG(5,3)
 p0=scatter(sg1[:,1],label="window for smoothing")
 scatter!(sg1[:,2], label="window for 1st order derivative")
 scatter!(sg1[:,3], label="window for 2nd order derivative")
