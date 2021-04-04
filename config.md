@@ -44,7 +44,7 @@ For instance:
 \newcommand{\compat}[1]{@@compat @@title 😐 Compatible @@ @@content #1 @@ @@}
 \newcommand{\right}[1]{~~~ <p style="text-align:right"> #1 </p>~~~}
 \newcommand{\center}[1]{~~~ <div style="text-align:center"> #1 </div>~~~}
-\newcommand{\mermaid}[1]{~~~ <div style="text-align:center" class="mermaid"> #1 </div>~~~}
+\newenvironment{mermaid}{~~~ <div style="text-align:center" class="mermaid">~~~}{~~~</div>~~~}
 \newcommand{\backtotop}{~~~ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> ~~~}
 \newcommand{\mytoc}{
 \center{目次}
