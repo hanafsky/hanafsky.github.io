@@ -125,7 +125,6 @@ $$
 ざっくりと流れを確認してみます。
 
 \begin{mermaid}
-~~~
 graph TD
   id1[何階微分するのかを決める]
   id2[窓関数のデータ点数を決める]
@@ -138,8 +137,8 @@ graph TD
   id3-->id4
   id4-->id5
   id5-->id6
-~~~
 \end{mermaid}
+
 
 ```julia:pre
 # hideall
@@ -150,11 +149,14 @@ default(
     bottom_margin = 30px
 )
 ```
+
+\output{pre}
+
 Vincentさんのブログのコードそのままは古くて動かなかったので、[野良パッケージSavGol.jl](https://github.com/hanafsky/SavGol.jl.git)を作成しました。40行程度の簡単なコードです。
 インストール方法はjuliaのREPLを立ち上げて、以下のようにタイプするだけです。
 ```julia
-julia>]
-(pkg)>add https://github.com/hanafsky/SavGol.jl.git
+julia>] # ]キーでパッケージモードに移動
+(pkg)>add https://github.com/hanafsky/SavGol.jl.git # バックスペースでjuliaモードに戻る
 julia>using SavGol
 ```
 
