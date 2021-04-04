@@ -1,11 +1,159 @@
-<!doctype html> <!-- Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes Free for personal and commercial use under the MIT license https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE --> <html lang=ja > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/katex/katex.min.css"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/minimal-mistakes.css"> <link rel=stylesheet  href="/css/adjust.css"> <link rel=stylesheet  href="/css/luminous-basic.min.css"> <link rel=icon  href="/assets/favicon.ico"> <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel=stylesheet > <!--[if IE ]> <style> /* old IE unsupported flexbox fixes */ .greedy-nav .site-title { padding-right: 3em; } .greedy-nav button { position: absolute; top: 0; right: 0; height: 100%; } </style> <![endif]--> <title>Franklin.jl を使った話</title> <body class=layout--single > <div class=masthead > <div class=masthead__inner-wrap > <div class=masthead__menu > <nav id=site-nav  class=greedy-nav > <a class=site-title  href="/">Hanafsky.com</a> <ul class=visible-links > <li class=masthead__menu-item ><a href="/tips/" >Julia-tips</a> <li class=masthead__menu-item ><a href="/blog/" >Blog</a> <li class=masthead__menu-item ><a href="/project/" >Projects</a> <li class=masthead__menu-item ><a href="/about/">About</a> </ul> <button class="greedy-nav__toggle hidden" type=button > <span class=visually-hidden >Toggle menu</span> <div class=navicon ></div> </button> <ul class="hidden-links hidden"></ul> </nav> </div> </div> </div> <div class=initial-content > <div id=main  role=main > <div class="sidebar sticky"> <div itemscope itemtype="https://schema.org/Person"> <div class=author__avatar > <img src="/assets/design/author3.png" alt=Dio  itemprop=image > </div> <div class=author__content > <h3 class=author__name  itemprop=name >Kei Hanafusa</h3> <p class=author__bio  itemprop=description >Chemical Engineer, <br> living in Osaka, 🗾</p> </div> <div class=author__urls-wrapper > <button class="btn btn--inverse">Follow</button> <ul class="author__urls social-icons"> <li itemprop=homeLocation  itemscope itemtype="https://schema.org/Place"> <i class="fas fa-fw fa-map-marker-alt" aria-hidden=true ></i> <span itemprop=name >Osaka, Japan</span> <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden=true ></i> Twitter</a> <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i> GitHub</a> </ul> </div> <div class=author__urls-wrapper > <button class="btn btn--inverse">Tag</button> <ul class="author__urls social-icons"> <li>タグ <li> <li><a href="/tag/setting/">設定</a> <li><a href="/tag/thirdparty/">サードパーティライブラリ</a> <li><a href="/tag/recipe">レシピ</a> </ul> </div> </div> </div> <div class=franklin-content ><h1 id="静的サイトジェネレーター_franklinjl_を使った話"><a href="#静的サイトジェネレーター_franklinjl_を使った話" class=header-anchor >静的サイトジェネレーター Franklin.jl を使った話</a></h1> <p> <div style="text-align:center"> <img src="https://franklinjl.org/assets/infra/logoF2.svg" alt="" height=200px > </div> <div class="sns-container top"> <div class="sns-box b-twitter"> <a href="https://twitter.com/share?url=https://hanafsky.com/tips/franklin&text=静的サイトジェネレーター Franklin.jl&via=HanafusaKei&related=HanafusaKei" target=_blank  rel=nofollow ><i class="fab fa-twitter"></i></a></div> <div class="sns-box b-facebook"> <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/franklin" target=_blank  rel=nofollow ><i class="fab fa-facebook"></i></a></div> <div class="sns-box b-hatena"> <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/franklin&title=静的サイトジェネレーター Franklin.jl" target=_blank  rel=nofollow ><span class=icon-hatena ></span></a></div> <div class="sns-box b-pocket"> <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/franklin&title=静的サイトジェネレーター Franklin.jl" rel=nofollow  target=_blank ><i class="fab fa-get-pocket"></i></a></div> <div class="sns-box b-feedly"> <a href='https://feedly.com/i/subscription/feed/https://hanafsky.com/tips/franklin' target='blank' rel=nofollow ><span class=icon-feedly ></span></a></div> <div class="sns-box b-line"> <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/franklin' target='blank' rel=nofollow ><span class=icon-line ></span></a></div> </div> <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>はjulia言語で作られた静的サイト作成パッケージです。 このサイトはFranklin.jlを利用して作成しました。 技術系のブログの選択肢としては、WordPress、はてなブログ、Qiitaなど色々あります。 julia言語が好きで、juliaのコードや数式を使ったブログを書きたいけど、 まだブログサイトを持っていない私のような人にとって、Franklin.jlは悪くない選択肢だと思います。</p> <p>本サイトの作成にあたって参考にしたサイトはこちらです。</p> <ul> <li><p><a href="http://franklin.org">本家</a></p> <li><p><a href="http://terasakisatoshi.github.io/MathSeminar.jl">MathSeminar.jl</a> 今のところ唯一？の日本語ソース</p> </ul> <div class=franklin-toc ><ol><li><a href="#使ってみる">使ってみる</a><ol><li><a href="#インストール方法">インストール方法</a><li><a href="#デモサイトを作ってみる">デモサイトを作ってみる。</a><li><a href="#基本的な文法">基本的な文法</a><li><a href="#juliaのコードを書いてみる">juliaのコードを書いてみる。</a></ol><li><a href="#注意したいポイント">注意したいポイント</a><ol><li><a href="#記号に気を付けよう"><code>\</code>記号に気を付けよう</a><li><a href="#juliaコード内の変数のスコープ">juliaコード内の変数のスコープ</a><li><a href="#github_actions_の罠">github actions の罠</a><li><a href="#プロットのxylabelが切れる">プロットのxylabelが切れる</a></ol><li><a href="#せっかくなので拡張してみる">せっかくなので、拡張してみる。</a><ol><li><a href="#コードのフォントには_juliamono_を使おう">コードのフォントには juliamono を使おう</a></ol><li><a href="#まとめ">まとめ</a></ol></div> <h2 id="使ってみる"><a href="#使ってみる" class=header-anchor >使ってみる</a></h2> <h3 id="インストール方法"><a href="#インストール方法" class=header-anchor >インストール方法</a></h3> <p>まずREPLのパッケージモードからFranklinをインストールします。</p> <pre><code class=language-julia >julia&gt;&#93;
-&#40;pkg&#41;&gt;add Franklin</code></pre> <h3 id="デモサイトを作ってみる"><a href="#デモサイトを作ってみる" class=header-anchor >デモサイトを作ってみる。</a></h3> <p>以下のコードを実行すると、デモサイト作成後にローカルサーバーが立ち上がり、 http://localhost:8000/でサイトを確認することができます。</p> <pre><code class=language-julia >using Franklin
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+   <link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="/css/franklin.css">
+<link rel="stylesheet" href="/css/minimal-mistakes.css">
+<link rel="stylesheet" href="/css/adjust.css">
+<link rel="stylesheet" href="/css/luminous-basic.min.css">
+<link rel="icon" href="/assets/favicon.ico">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<!--[if IE ]>
+<style>
+  /* old IE unsupported flexbox fixes */
+  .greedy-nav .site-title {
+    padding-right: 3em;
+  }
+  .greedy-nav button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+</style>
+<![endif]-->
+
+   <title>Franklin.jl を使った話</title>  
+  <!-- end custom head snippets -->
+</head>
+<body class="layout--single">
+  <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Hanafsky.com</a>
+        <ul class="visible-links">
+          <li class="masthead__menu-item"><a href="/tips/" >Julia-tips</a></li>
+          <li class="masthead__menu-item"><a href="/blog/" >Blog</a></li>
+          <li class="masthead__menu-item"><a href="/project/" >Projects</a></li>
+          <li class="masthead__menu-item"><a href="/about/">About</a></li>
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+  <div class="initial-content">
+    <div id="main" role="main">
+      <div class="sidebar sticky">
+        <div itemscope itemtype="https://schema.org/Person">
+          <div class="author__avatar">
+            <img src="/assets/design/author3.png" alt="Dio" itemprop="image">
+          </div>
+          <div class="author__content">
+            <h3 class="author__name" itemprop="name">Kei Hanafusa</h3>
+            <p class="author__bio" itemprop="description">Chemical Engineer, <br> living in Osaka, 🗾</p>
+          </div>
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Follow</button>
+            <ul class="author__urls social-icons">
+              <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+                <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Osaka, Japan</span></li>
+              <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+              <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+            </ul>
+          </div>
+
+          
+          
+              
+
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Tag</button>
+            <ul class="author__urls social-icons">
+              <li>タグ</li>
+              <li></li>
+              <li><a href="/tag/setting/">設定</a></li>
+              <li><a href="/tag/thirdparty/">サードパーティライブラリ</a></li>
+              <li><a href="/tag/recipe">レシピ</a></li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+
+
+<!-- Content appended here -->
+<div class="franklin-content"><h1 id="静的サイトジェネレーター_franklinjl_を使った話"><a href="#静的サイトジェネレーター_franklinjl_を使った話" class="header-anchor">静的サイトジェネレーター Franklin.jl を使った話</a></h1>
+<p>
+<div style="text-align:center">
+<img src="https://franklinjl.org/assets/infra/logoF2.svg" alt="" height="200px">
+</div>
+ 
+<div class="sns-container top">
+  <div class="sns-box b-twitter">
+    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/franklin&text=静的サイトジェネレーター Franklin.jl&via=HanafusaKei&related=HanafusaKei"
+    target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
+  <div class="sns-box b-facebook">
+    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/franklin" 
+    target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+  <div class="sns-box b-hatena">
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/franklin&title=静的サイトジェネレーター Franklin.jl"
+    target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
+  <div class="sns-box b-pocket">
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/franklin&title=静的サイトジェネレーター Franklin.jl"
+    rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
+  <div class="sns-box b-feedly">
+    <a href='https://feedly.com/i/subscription/feed/https://hanafsky.com/tips/franklin'
+    target='blank' rel="nofollow"><span class="icon-feedly"></span></a></div>
+  <div class="sns-box b-line">
+    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/franklin'
+    target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
+</div>
+ <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>はjulia言語で作られた静的サイト作成パッケージです。 このサイトはFranklin.jlを利用して作成しました。 技術系のブログの選択肢としては、WordPress、はてなブログ、Qiitaなど色々あります。 julia言語が好きで、juliaのコードや数式を使ったブログを書きたいけど、 まだブログサイトを持っていない私のような人にとって、Franklin.jlは悪くない選択肢だと思います。</p>
+<p>本サイトの作成にあたって参考にしたサイトはこちらです。</p>
+<ul>
+<li><p><a href="http://franklin.org">本家</a></p>
+</li>
+<li><p><a href="http://terasakisatoshi.github.io/MathSeminar.jl">MathSeminar.jl</a> 今のところ唯一？の日本語ソース</p>
+</li>
+</ul>
+<div class="franklin-toc"><ol><li><a href="#使ってみる">使ってみる</a><ol><li><a href="#インストール方法">インストール方法</a></li><li><a href="#デモサイトを作ってみる">デモサイトを作ってみる。</a></li><li><a href="#基本的な文法">基本的な文法</a></li><li><a href="#juliaのコードを書いてみる">juliaのコードを書いてみる。</a></li></ol></li><li><a href="#注意したいポイント">注意したいポイント</a><ol><li><a href="#記号に気を付けよう"><code>\</code>記号に気を付けよう</a></li><li><a href="#juliaコード内の変数のスコープ">juliaコード内の変数のスコープ</a></li><li><a href="#github_actions_の罠">github actions の罠</a></li><li><a href="#プロットのxylabelが切れる">プロットのxylabelが切れる</a></li></ol></li><li><a href="#せっかくなので拡張してみる">せっかくなので、拡張してみる。</a><ol><li><a href="#コードのフォントには_juliamono_を使おう">コードのフォントには juliamono を使おう</a></li></ol></li><li><a href="#まとめ">まとめ</a></li></ol></div>
+<h2 id="使ってみる"><a href="#使ってみる" class="header-anchor">使ってみる</a></h2>
+<h3 id="インストール方法"><a href="#インストール方法" class="header-anchor">インストール方法</a></h3>
+<p>まずREPLのパッケージモードからFranklinをインストールします。</p>
+<pre><code class="language-julia">julia&gt;&#93;
+&#40;pkg&#41;&gt;add Franklin</code></pre>
+<h3 id="デモサイトを作ってみる"><a href="#デモサイトを作ってみる" class="header-anchor">デモサイトを作ってみる。</a></h3>
+<p>以下のコードを実行すると、デモサイト作成後にローカルサーバーが立ち上がり、 http://localhost:8000/でサイトを確認することができます。</p>
+<pre><code class="language-julia">using Franklin
 newsite&#40;&quot;mySite&quot;,template&#61;&quot;vela&quot;&#41;
-serve&#40;&#41;</code></pre> <p>テンプレートは<a href="https://tlienart.github.io/FranklinTemplates.jl/">ここ</a>で確認できます。</p> <p>mySiteフォルダー以下にマークダウンファイルや素材が入っています。 テンプレートファイルをいじりながら使って行くことになります。 ライブレンダリングによって編集後の結果をすぐに確認できるので、 初心者でも使いやすいと思います。 サーバー停止後にもう一度起動する時は、mySiteフォルダーでREPLを立ち上げて、</p> <pre><code class=language-julia >using Franklin;serve&#40;&#41;</code></pre>
+serve&#40;&#41;</code></pre>
+<p>テンプレートは<a href="https://tlienart.github.io/FranklinTemplates.jl/">ここ</a>で確認できます。</p>
+<p>mySiteフォルダー以下にマークダウンファイルや素材が入っています。 テンプレートファイルをいじりながら使って行くことになります。 ライブレンダリングによって編集後の結果をすぐに確認できるので、 初心者でも使いやすいと思います。 サーバー停止後にもう一度起動する時は、mySiteフォルダーでREPLを立ち上げて、</p>
+<pre><code class="language-julia">using Franklin;serve&#40;&#41;</code></pre>
 <p>とタイプします。</p>
-<h3 id="基本的な文法"><a href="#基本的な文法" class=header-anchor >基本的な文法</a></h3>
+<h3 id="基本的な文法"><a href="#基本的な文法" class="header-anchor">基本的な文法</a></h3>
 <p>マークダウンの記法にしたがって文章を書きます。</p>
-<pre><code class=language-markdown ># h1タグ
+<pre><code class="language-markdown"># h1タグ
 ## h2タグ
 ### h3タグ
 
@@ -19,34 +167,34 @@ serve&#40;&#41;</code></pre> <p>テンプレートは<a href="https://tlienart.g
 
 &#91;リンク名&#93;&#40;リンク先&#41;</code></pre>
 <p>また、Katexによる数式レンダリングを標準でサポートしています。 数式入力も楽々です。</p>
-<pre><code class=language-julia >&#36;&#36; \int_&#123;a&#125;^&#123;b&#125; f&#40;x&#41; &#61; F&#40;b&#41; - F&#40;a&#41;&#36;&#36;</code></pre>
-<span class=katex-display ><span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML" display=block ><semantics><mrow><msubsup><mo>∫</mo><mi>a</mi><mi>b</mi></msubsup><mi>f</mi><mo stretchy=false >(</mo><mi>x</mi><mo stretchy=false >)</mo><mo>=</mo><mi>F</mi><mo stretchy=false >(</mo><mi>b</mi><mo stretchy=false >)</mo><mo>−</mo><mi>F</mi><mo stretchy=false >(</mo><mi>a</mi><mo stretchy=false >)</mo></mrow><annotation encoding="application/x-tex"> \int_{a}^{b} f(x) = F(b) - F(a)</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:2.5109580000000005em;vertical-align:-0.9119499999999999em;"></span><span class=mop ><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011249999999999316em;">∫</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:1.5990080000000004em;"><span style="top:-1.7880500000000001em;margin-left:-0.44445em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3.812900000000001em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.9119499999999999em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class=mopen >(</span><span class="mord mathnormal">x</span><span class=mclose >)</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >=</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class=mopen >(</span><span class="mord mathnormal">b</span><span class=mclose >)</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >−</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class=mopen >(</span><span class="mord mathnormal">a</span><span class=mclose >)</span></span></span></span></span>
-<h3 id="juliaのコードを書いてみる"><a href="#juliaのコードを書いてみる" class=header-anchor >juliaのコードを書いてみる。</a></h3>
+<pre><code class="language-julia">&#36;&#36; \int_&#123;a&#125;^&#123;b&#125; f&#40;x&#41; &#61; F&#40;b&#41; - F&#40;a&#41;&#36;&#36;</code></pre>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mo>∫</mo><mi>a</mi><mi>b</mi></msubsup><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>F</mi><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo><mo>−</mo><mi>F</mi><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex"> \int_{a}^{b} f(x) = F(b) - F(a)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.5109580000000005em;vertical-align:-0.9119499999999999em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011249999999999316em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5990080000000004em;"><span style="top:-1.7880500000000001em;margin-left:-0.44445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3.812900000000001em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9119499999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mclose">)</span></span></span></span></span>
+<h3 id="juliaのコードを書いてみる"><a href="#juliaのコードを書いてみる" class="header-anchor">juliaのコードを書いてみる。</a></h3>
 <p>マークダウンの中で次のようなコードを実行したとします。</p>
-<pre><code class=language-markdown >&#96;&#96;&#96;julia:test
+<pre><code class="language-markdown">&#96;&#96;&#96;julia:test
 println&#40;&quot;Hello Franklin&quot;&#41;
 &#96;&#96;&#96;
 \show&#123;test&#125;</code></pre>
 <p>するとこのコードが実行された結果を出力できます。</p>
-<pre><code class=language-julia >println&#40;&quot;Hello Franklin&quot;&#41;</code></pre>
-<pre><code class=plaintext >Hello Franklin
+<pre><code class="language-julia">println&#40;&quot;Hello Franklin&quot;&#41;</code></pre>
+<pre><code class="plaintext">Hello Franklin
 </code></pre>
 <p>次のように書いてやればグラフを出力できます。</p>
-<pre><code class=language-markdown >&#96;&#96;&#96;julia:plot
+<pre><code class="language-markdown">&#96;&#96;&#96;julia:plot
 using Plots
 p &#61; plot&#40;x-&gt;sin&#40;x&#41;,xlabel&#61;&quot;x&quot;,ylabel&#61;&quot;y&quot;&#41;
 savefig&#40;p,joinpath&#40;@OUTPUT,&quot;figplot.svg&quot;&#41;&#41;
 &#96;&#96;&#96;
 
 \fig&#123;figplot&#125;</code></pre>
-<pre><code class=language-julia >using Plots
+<pre><code class="language-julia">using Plots
 p &#61; plot&#40;x-&gt;sin&#40;x&#41;,xlabel&#61;&quot;x&quot;,ylabel&#61;&quot;y&quot;&#41;
 savefig&#40;p,joinpath&#40;@OUTPUT,&quot;figplot.svg&quot;&#41;&#41;</code></pre>
 <img src="/assets/tips/franklin/code/output/figplot.svg" alt="">
-<h2 id="注意したいポイント"><a href="#注意したいポイント" class=header-anchor >注意したいポイント</a></h2>
-<h3 id="記号に気を付けよう"><a href="#記号に気を付けよう" class=header-anchor ><code>\</code>記号に気を付けよう</a></h3>
+<h2 id="注意したいポイント"><a href="#注意したいポイント" class="header-anchor">注意したいポイント</a></h2>
+<h3 id="記号に気を付けよう"><a href="#記号に気を付けよう" class="header-anchor"><code>\</code>記号に気を付けよう</a></h3>
 <p><code>\</code>の記号をMarkdownの中で使うときは注意が必要です。 FranklinはMarkdownのなかで拡張されたコマンドを使うことができます。 たとえば、こんな具合です。</p>
-<pre><code class=language-html >&lt;&#33;-- コマンドの定義 --&gt;
+<pre><code class="language-html">&lt;&#33;-- コマンドの定義 --&gt;
 \newcommand&#123;\bolditaliccenter&#125;&#91;1&#93;&#123; ~~~
 &lt;div
   style&#61;&quot;font-size:xx-large;text-align:center;font-style:italic; font-weight:bold&quot;
@@ -58,162 +206,168 @@ savefig&#40;p,joinpath&#40;@OUTPUT,&quot;figplot.svg&quot;&#41;&#41;</code></pre
 \bolditaliccenter&#123;無駄！&#125;</code></pre>
 <div style="font-size:xx-large; text-align:center;font-style:italic; font-weight:bold"> 無駄！</div>
 <p>Franklinは、<code>\</code>が付くところをコマンドだとみなすので、下手に<code>\</code>を使おう ものなら<code>\newcommand</code>で定義されていないコマンドとみなされ、 サーバーが落ちてライブレンダリングできなくなります。 通常のマークダウンを書いているときは、ミスをしにくいと思いますが、 Literate.jlと連携してドキュメントを書いているときは、ミスに気づきにくいので注意が必要です。</p>
-<h3 id="juliaコード内の変数のスコープ"><a href="#juliaコード内の変数のスコープ" class=header-anchor >juliaコード内の変数のスコープ</a></h3>
+<h3 id="juliaコード内の変数のスコープ"><a href="#juliaコード内の変数のスコープ" class="header-anchor">juliaコード内の変数のスコープ</a></h3>
 <p>juliaを使うときは、ループや関数内部からグローバル変数を何の断りもなく参照するのは アウトだと知っている人も多いと思います。この罠は、REPLやjupyterを使ってプロトタイピングを しているときには気にしなくてもよいですが、端末上で<code>julia hoge.jl</code>とするときは アウトになります。 Franklinでjuliaのコードを実行するときは後者の状況になるようで、実際に試してみると</p>
-<pre><code class=language-julia >a &#61; 1
+<pre><code class="language-julia">a &#61; 1
 for i in 1:2
     a &#43;&#61; 1
 end</code></pre>
-<p><pre><code class=plaintext >UndefVarError: a not defined
+<p><pre><code class="plaintext">UndefVarError: a not defined
 </code></pre> となってしまいます。 これを防ぐには、let環境に入れ込んでしまうか、</p>
-<pre><code class=language-julia >let
+<pre><code class="language-julia">let
 a &#61; 1
 for i in 1:2
     a &#43;&#61; 1
 end
 a
 end</code></pre>
-<pre><code class=plaintext >3</code></pre>
-<p>コントロールの中でグローバル変数であることを明記する必要があります。<sup id="fnref:2"><a href="#fndef:2" class=fnref >[1]</a></sup></p>
-<pre><code class=language-julia >a &#61; 1
+<pre><code class="plaintext">3</code></pre>
+<p>コントロールの中でグローバル変数であることを明記する必要があります。<sup id="fnref:2"><a href="#fndef:2" class="fnref">[1]</a></sup></p>
+<pre><code class="language-julia">a &#61; 1
 for i in 1:2
     global a &#43;&#61; 1
 end
 a</code></pre>
-<pre><code class=plaintext >3</code></pre>
-<table class=fndef  id="fndef:2">
+<pre><code class="plaintext">3</code></pre>
+<table class="fndef" id="fndef:2">
     <tr>
-        <td class=fndef-backref ><a href="#fnref:2">[1]</a>
-        <td class=fndef-content ><code>global a #hide</code>のように書けば、コードを隠すこともできます。
-    
+        <td class="fndef-backref"><a href="#fnref:2">[1]</a></td>
+        <td class="fndef-content"><code>global a #hide</code>のように書けば、コードを隠すこともできます。</td>
+    </tr>
 </table>
 
-<h3 id="github_actions_の罠"><a href="#github_actions_の罠" class=header-anchor >github actions の罠</a></h3>
+<h3 id="github_actions_の罠"><a href="#github_actions_の罠" class="header-anchor">github actions の罠</a></h3>
 <p>GitHub pagesを使えば、無料でホームページを作ることができます。Franklin.jlでは GitHub actions（GitHubのレポジトリの中で自動的に実行される処理）を利用して、 サイトを構成することが推奨されています。</p>
 <p>Franklin の場合は、 <code>.github\workflows\deploy.yml</code>にコードが記載されていて、 リモートレポジトリへpushしたときに処理が実行されます。 deploy.ymlの中身を見れば雰囲気がわかると思いますが、処理の流れをざっくり説明すると</p>
 <ol>
 <li><p>GitHub上でOSを立ち上げて、juliaやら何やら必要なものをインストール</p>
-
+</li>
 <li><p>Franklinを実行して、サイト（__siteフォルダー以下）を作る</p>
-
+</li>
 <li><p>gh-pagesブランチにできたサイトをぶちこむ ということになります。</p>
-
+</li>
 </ol>
 <p>個別の状況によりますが、このdeploy.ymlは修正する必要があります。 私がハマった点を書いておきます。</p>
-<h4 id=master_or_main ><a href="#master_or_main" class=header-anchor >master or main?</a></h4>
-<div class=warning ><div class=title >😕 Warning&#33;</div>
-<div class=content >2020年の米国の騒動が原因で、GitHubのデフォルトブランチ名がmasterからmainに変更されました。 これに伴って、Franklinでもdeploy.ymlには、mainブランチにプッシュされると 動作するようになっています。当たり前ですが、この状態でmasterブランチにプッシュしても 何も起こりません。deploy.ymlのブランチ名を実際のブランチ名と合わせる必要があります。</div></div>
-<h4 id="gh-pages_の設定をしておくこと"><a href="#gh-pages_の設定をしておくこと" class=header-anchor >gh-pages の設定をしておくこと</a></h4>
-<div class=warning ><div class=title >😕 Warning&#33;</div>
-<div class=content >レポジトリのページの Settings タブの下の方に GitHub Pages の欄があります。 ソースのブランチに gh-pages を選択しておく必要があります。</div></div>
-<h4 id="どのレポジトリにプッシュするか"><a href="#どのレポジトリにプッシュするか" class=header-anchor >どのレポジトリにプッシュするか</a></h4>
-<div class=warning ><div class=title >😕 Warning&#33;</div>
-<div class=content >username.github.io<strong>以外</strong>のレポジトリにプッシュするときは、deploy.yml の中に書いてあるoptimize&#40;&#41;を optimize&#40;;prepath&#61;&quot;レポジトリ名&quot;&#41;にしておく必要があります。そうしないと、リンク切れを起こしてしまいます。</div></div>
-<h4 id="projecttoml_を入れておこう"><a href="#projecttoml_を入れておこう" class=header-anchor >Project.toml を入れておこう。</a></h4>
+<h4 id="master_or_main"><a href="#master_or_main" class="header-anchor">master or main?</a></h4>
+<div class="warning"><div class="title">😕 Warning&#33;</div>
+<div class="content">2020年の米国の騒動が原因で、GitHubのデフォルトブランチ名がmasterからmainに変更されました。 これに伴って、Franklinでもdeploy.ymlには、mainブランチにプッシュされると 動作するようになっています。当たり前ですが、この状態でmasterブランチにプッシュしても 何も起こりません。deploy.ymlのブランチ名を実際のブランチ名と合わせる必要があります。</div></div>
+<h4 id="gh-pages_の設定をしておくこと"><a href="#gh-pages_の設定をしておくこと" class="header-anchor">gh-pages の設定をしておくこと</a></h4>
+<div class="warning"><div class="title">😕 Warning&#33;</div>
+<div class="content">レポジトリのページの Settings タブの下の方に GitHub Pages の欄があります。 ソースのブランチに gh-pages を選択しておく必要があります。</div></div>
+<h4 id="どのレポジトリにプッシュするか"><a href="#どのレポジトリにプッシュするか" class="header-anchor">どのレポジトリにプッシュするか</a></h4>
+<div class="warning"><div class="title">😕 Warning&#33;</div>
+<div class="content">username.github.io<strong>以外</strong>のレポジトリにプッシュするときは、deploy.yml の中に書いてあるoptimize&#40;&#41;を optimize&#40;;prepath&#61;&quot;レポジトリ名&quot;&#41;にしておく必要があります。そうしないと、リンク切れを起こしてしまいます。</div></div>
+<h4 id="projecttoml_を入れておこう"><a href="#projecttoml_を入れておこう" class="header-anchor">Project.toml を入れておこう。</a></h4>
 <p>GitHub actionsでのデプロイ時には、juliaコードの中で使用したパッケージがわかるように、 教えてやる必要があります。ローカルレポジトリで、以下のように処理しておくと、</p>
-<pre><code class=language-julia >julia&gt;&#93;
+<pre><code class="language-julia">julia&gt;&#93;
 &#40;pkg&#41;&gt;activate .
 &#40;pkg&#41;&gt;add Plots # 使用したパッケージ</code></pre>
 <p>Project.toml が作成されるので、deploy.yml のなかでいちいち Pkg.add&#40;～～&#41;する必要はなくなります。</p>
-<h3 id="プロットのxylabelが切れる"><a href="#プロットのxylabelが切れる" class=header-anchor >プロットのxylabelが切れる</a></h3>
+<h3 id="プロットのxylabelが切れる"><a href="#プロットのxylabelが切れる" class="header-anchor">プロットのxylabelが切れる</a></h3>
 <p>localサーバー上では問題なくプロットを表示できるのですが、 gh-pagesで表示を確認すると、グラフのマージン設定を上手くできない場合があります。 以下のようなコードを書いてマージンを設定しておけば解決することができました。</p>
-<pre><code class=language-julia >using Plots.PlotMeasures
+<pre><code class="language-julia">using Plots.PlotMeasures
 Plots.reset_defaults&#40;&#41;
 default&#40;
     left_margin &#61; 30px,
     bottom_margin &#61; 30px
 &#41;</code></pre>
-<h2 id="せっかくなので拡張してみる"><a href="#せっかくなので拡張してみる" class=header-anchor >せっかくなので、拡張してみる。</a></h2>
-<p>htmlやcssに関する知識が多少あれば、テンプレートファイルをいじって機能を拡張<a href="#footnote-1" class=footnote >[1]</a>することが可能です。 私はadomonitionの設定、トップに戻るボタン、mermaid.jsによるフローチャート描画の機能を追加してみました。 フォントを追加した例を書いておきます。</p>
-<h3 id="コードのフォントには_juliamono_を使おう"><a href="#コードのフォントには_juliamono_を使おう" class=header-anchor >コードのフォントには juliamono を使おう</a></h3>
+<h2 id="せっかくなので拡張してみる"><a href="#せっかくなので拡張してみる" class="header-anchor">せっかくなので、拡張してみる。</a></h2>
+<p>htmlやcssに関する知識が多少あれば、テンプレートファイルをいじって機能を拡張<a href="#footnote-1" class="footnote">[1]</a>することが可能です。 私はadomonitionの設定、トップに戻るボタン、mermaid.jsによるフローチャート描画の機能を追加してみました。 フォントを追加した例を書いておきます。</p>
+<h3 id="コードのフォントには_juliamono_を使おう"><a href="#コードのフォントには_juliamono_を使おう" class="header-anchor">コードのフォントには juliamono を使おう</a></h3>
 <p><a href="https://github.com/cormullion/juliamono">juliamono</a>フォントを使えば、juliaのコードを洗練された見栄えに変更できます。 -&gt;が<code>-&gt;</code>になったり、|&gt;が<code>|&gt;</code>になるので、パイプ演算子や無名関数を多用する人は、気に入るのではないでしょうか？ <a href="https://cormullion.github.io/pages/2020-07-26-JuliaMono/">Cormullion のブログ</a>&#40;このサイトもFranklinで作られている。&#41;にインストール方法は載っています。</p>
 <p>cssでwebフォントとして使うのも簡単で<a href="https://cormullion.github.io/pages/2020-07-26-JuliaMono/#how_can_i_use_the_web_fonts_for_my_blog">こちら</a>にやり方が載っています。 少し改変したものが以下になります。まず、cssファイルに</p>
-<pre><code class=language-css >@font-face &#123;
+<pre><code class="language-css">@font-face &#123;
   font-family: JuliaMono-Regular;
   src: url&#40;&quot;https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Regular.woff2&quot;&#41;;
 &#125;</code></pre>
 <p>と書いて、次にcssセレクターのなかで、codeを探して、</p>
-<pre><code class=language-css >code &#123;
+<pre><code class="language-css">code &#123;
   font-family: &quot;JuliaMono-Regular&quot;, Monaco, Consolas, &quot;Lucida Console&quot;,
     monospace;
 &#125;</code></pre>
 <p>としておけば良いです。（font-familyの一番左に書くことが重要）</p>
-<h2 id="まとめ"><a href="#まとめ" class=header-anchor >まとめ</a></h2>
+<h2 id="まとめ"><a href="#まとめ" class="header-anchor">まとめ</a></h2>
 <ul>
 <li><p>Franklin.jl を使えば、テンプレートサイトをいじって簡単に自分だけのサイトが作れる。</p>
-
+</li>
 <li><p>自分だけのコマンドを作れるが、<code>\</code>の記号には注意が必要。</p>
-
+</li>
 <li><p>julia コードを実行するときは変数のスコープに注意する。</p>
-
+</li>
 <li><p>GitHubにプッシュして簡単にホームページが作れる。</p>
 <ul>
 <li><p>GitHub-pagesを使うときは、deploy.yml、Project.toml、ソースブランチの設定に注意。</p>
-
+</li>
 </ul>
-
+</li>
 <li><p>cssやjavascriptをいじって自分で拡張できる。</p>
-
+</li>
 </ul>
  <p style="text-align:right">  めでたしめでたし </p>
 <p>
 <div class="sns-container top">
   <div class="sns-box b-twitter">
-    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/franklin&text=静的サイトジェネレーター Franklin.jl&via=HanafusaKei&related=HanafusaKei" target=_blank  rel=nofollow ><i class="fab fa-twitter"></i></a></div>
+    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/franklin&text=静的サイトジェネレーター Franklin.jl&via=HanafusaKei&related=HanafusaKei"
+    target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
   <div class="sns-box b-facebook">
-    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/franklin" target=_blank  rel=nofollow ><i class="fab fa-facebook"></i></a></div>
+    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/franklin" 
+    target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
   <div class="sns-box b-hatena">
-    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/franklin&title=静的サイトジェネレーター Franklin.jl" target=_blank  rel=nofollow ><span class=icon-hatena ></span></a></div>
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/franklin&title=静的サイトジェネレーター Franklin.jl"
+    target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
   <div class="sns-box b-pocket">
-    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/franklin&title=静的サイトジェネレーター Franklin.jl" rel=nofollow  target=_blank ><i class="fab fa-get-pocket"></i></a></div>
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/franklin&title=静的サイトジェネレーター Franklin.jl"
+    rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
   <div class="sns-box b-feedly">
-    <a href='https://feedly.com/i/subscription/feed/https://hanafsky.com/tips/franklin' target='blank' rel=nofollow ><span class=icon-feedly ></span></a></div>
+    <a href='https://feedly.com/i/subscription/feed/https://hanafsky.com/tips/franklin'
+    target='blank' rel="nofollow"><span class="icon-feedly"></span></a></div>
   <div class="sns-box b-line">
-    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/franklin' target='blank' rel=nofollow ><span class=icon-line ></span></a></div>
+    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/franklin'
+    target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
 </div>
  
-  <div class=prev-next-link >
-  <a class=prev-link  href="https://hanafsky.com/tips/startup">
-    <p class=prev-next-label >前の記事</p>
+  <div class="prev-next-link">
+  <a class="prev-link" href="https://hanafsky.com/tips/startup">
+    <p class="prev-next-label">前の記事</p>
     <p>
        julia 起動時の初期設定 - startup.jl
     </p>
   </a>
-  <a class=next-link  href="https://hanafsky.com/tips/pluto/">
-    <p class=prev-next-label >次の記事</p>
+  <a class="next-link" href="https://hanafsky.com/tips/pluto/">
+    <p class="prev-next-label">次の記事</p>
     <p>
        リアクティブなノートブック Pluto.jl
     </p>
   </a>
 </div>
-  <button onclick="topFunction()" id=myBtn  title="Go to top">Top</button> </p>
-<div class=page-foot >
-  <div class=copyright >
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> </p>
+<div class="page-foot">
+  <div class="copyright">
     &copy; Kei Hanafusa. Last modified: April 04, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
-</div>
+</div><!-- CONTENT ENDS HERE -->
 
-      </div> 
-    </div>   
+      </div> <!-- closure of main -->
+    </div>   <!-- closure of class initial--content -->
 
-    <div class=page__footer >
+    <div class="page__footer">
       <footer>
-        
-        
-        <div class=page__footer-follow >
-          <ul class=social-icons >
-            <li><strong>Follow:</strong>
-            <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden=true ></i> Twitter</a>
-            <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i> GitHub</a>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+          <ul class="social-icons">
+            <li><strong>Follow:</strong></li>
+            <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+            <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
           </ul>
         </div>
-        <div class=page__footer-copyright >&copy; Kei Hanafusa. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel=nofollow >Minimal Mistakes</a>.</div>
+        <div class="page__footer-copyright">&copy; Kei Hanafusa. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
       </footer>
     </div>
 
     <script src="/libs/minimal-mistakes/main.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin=anonymous ></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
     <script src="/libs/myBtn/myBtn.js"></script>
     <script src="/libs/luminous/Luminous.min.js"></script>
 
@@ -242,3 +396,5 @@ function myToc() {
     }
   } 
 </script>
+  </body>
+</html>

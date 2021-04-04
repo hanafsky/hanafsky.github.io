@@ -1,4 +1,111 @@
-<!doctype html> <!-- Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes Free for personal and commercial use under the MIT license https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE --> <html lang=ja > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/minimal-mistakes.css"> <link rel=stylesheet  href="/css/adjust.css"> <link rel=stylesheet  href="/css/luminous-basic.min.css"> <link rel=icon  href="/assets/favicon.ico"> <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel=stylesheet > <!--[if IE ]> <style> /* old IE unsupported flexbox fixes */ .greedy-nav .site-title { padding-right: 3em; } .greedy-nav button { position: absolute; top: 0; right: 0; height: 100%; } </style> <![endif]--> <title>juliaの文法</title> <body class=layout--single > <div class=masthead > <div class=masthead__inner-wrap > <div class=masthead__menu > <nav id=site-nav  class=greedy-nav > <a class=site-title  href="/">Hanafsky.com</a> <ul class=visible-links > <li class=masthead__menu-item ><a href="/tips/" >Julia-tips</a> <li class=masthead__menu-item ><a href="/blog/" >Blog</a> <li class=masthead__menu-item ><a href="/project/" >Projects</a> <li class=masthead__menu-item ><a href="/about/">About</a> </ul> <button class="greedy-nav__toggle hidden" type=button > <span class=visually-hidden >Toggle menu</span> <div class=navicon ></div> </button> <ul class="hidden-links hidden"></ul> </nav> </div> </div> </div> <div class=initial-content > <div id=main  role=main > <div class="sidebar sticky"> <div itemscope itemtype="https://schema.org/Person"> <div class=author__avatar > <img src="/assets/design/author3.png" alt=Dio  itemprop=image > </div> <div class=author__content > <h3 class=author__name  itemprop=name >Kei Hanafusa</h3> <p class=author__bio  itemprop=description >Chemical Engineer, <br> living in Osaka, 🗾</p> </div> <div class=author__urls-wrapper > <button class="btn btn--inverse">Follow</button> <ul class="author__urls social-icons"> <li itemprop=homeLocation  itemscope itemtype="https://schema.org/Place"> <i class="fas fa-fw fa-map-marker-alt" aria-hidden=true ></i> <span itemprop=name >Osaka, Japan</span> <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden=true ></i> Twitter</a> <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i> GitHub</a> </ul> </div> <div class=author__urls-wrapper > <button class="btn btn--inverse">Tag</button> <ul class="author__urls social-icons"> <li>タグ <li> <li><a href="/tag/setting/">設定</a> <li><a href="/tag/thirdparty/">サードパーティライブラリ</a> <li><a href="/tag/recipe">レシピ</a> </ul> </div> </div> </div> <div class=franklin-content ><h1 id="juliaの文法"><a href="#juliaの文法" class=header-anchor >Juliaの文法</a></h1> <div class=franklin-toc ><ol><li><a href="#リテラル">リテラル</a><li><a href="#演算子">演算子</a><li><a href="#変数と定数">変数と定数</a><li><a href="#代入">代入</a><li><a href="#文の区切り">文の区切り</a><li><a href="#コメント">コメント</a><li><a href="#真偽値と条件分岐">真偽値と条件分岐</a><li><a href="#繰り返し">繰り返し</a><li><a href="#メソッド呼び出し">メソッド呼び出し</a><li><a href="#ブロック">ブロック</a><li><a href="#関数定義">関数定義</a><ol><li><a href="#無名関数">無名関数</a></ol><li><a href="#複合型の定義">複合型の定義</a><ol><li><a href="#可変な複合型">可変な複合型</a><li><a href="#初期値付きの複合型">初期値付きの複合型</a></ol><li><a href="#モジュール定義">モジュール定義</a><ol><li><a href="#別のソースファイルをインポートしたい">別のソースファイルをインポートしたい</a><li><a href="#モジュールを定義する">モジュールを定義する。</a><li><a href="#パッケージ">パッケージ</a></ol><li><a href="#特異メソッド">特異メソッド</a><li><a href="#例外処理">例外処理</a><li><a href="#aliasとundef">aliasとundef?</a><li><a href="#予約語">予約語</a></ol></div> <h2 id="リテラル"><a href="#リテラル" class=header-anchor >リテラル</a></h2> <p>リテラルとは組み込み型の定数を表すものです。いくつか列挙します。</p> <pre><code class=language-julia >#数値リテラル
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="/css/franklin.css">
+<link rel="stylesheet" href="/css/minimal-mistakes.css">
+<link rel="stylesheet" href="/css/adjust.css">
+<link rel="stylesheet" href="/css/luminous-basic.min.css">
+<link rel="icon" href="/assets/favicon.ico">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<!--[if IE ]>
+<style>
+  /* old IE unsupported flexbox fixes */
+  .greedy-nav .site-title {
+    padding-right: 3em;
+  }
+  .greedy-nav button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+</style>
+<![endif]-->
+
+   <title>juliaの文法</title>  
+  <!-- end custom head snippets -->
+</head>
+<body class="layout--single">
+  <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Hanafsky.com</a>
+        <ul class="visible-links">
+          <li class="masthead__menu-item"><a href="/tips/" >Julia-tips</a></li>
+          <li class="masthead__menu-item"><a href="/blog/" >Blog</a></li>
+          <li class="masthead__menu-item"><a href="/project/" >Projects</a></li>
+          <li class="masthead__menu-item"><a href="/about/">About</a></li>
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+  <div class="initial-content">
+    <div id="main" role="main">
+      <div class="sidebar sticky">
+        <div itemscope itemtype="https://schema.org/Person">
+          <div class="author__avatar">
+            <img src="/assets/design/author3.png" alt="Dio" itemprop="image">
+          </div>
+          <div class="author__content">
+            <h3 class="author__name" itemprop="name">Kei Hanafusa</h3>
+            <p class="author__bio" itemprop="description">Chemical Engineer, <br> living in Osaka, 🗾</p>
+          </div>
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Follow</button>
+            <ul class="author__urls social-icons">
+              <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+                <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Osaka, Japan</span></li>
+              <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+              <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+            </ul>
+          </div>
+
+          
+          
+              
+
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Tag</button>
+            <ul class="author__urls social-icons">
+              <li>タグ</li>
+              <li></li>
+              <li><a href="/tag/setting/">設定</a></li>
+              <li><a href="/tag/thirdparty/">サードパーティライブラリ</a></li>
+              <li><a href="/tag/recipe">レシピ</a></li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+
+
+<!-- Content appended here -->
+<div class="franklin-content"><h1 id="juliaの文法"><a href="#juliaの文法" class="header-anchor">Juliaの文法</a></h1>
+<div class="franklin-toc"><ol><li><a href="#リテラル">リテラル</a></li><li><a href="#演算子">演算子</a></li><li><a href="#変数と定数">変数と定数</a></li><li><a href="#代入">代入</a></li><li><a href="#文の区切り">文の区切り</a></li><li><a href="#コメント">コメント</a></li><li><a href="#真偽値と条件分岐">真偽値と条件分岐</a></li><li><a href="#繰り返し">繰り返し</a></li><li><a href="#メソッド呼び出し">メソッド呼び出し</a></li><li><a href="#ブロック">ブロック</a></li><li><a href="#関数定義">関数定義</a><ol><li><a href="#無名関数">無名関数</a></li></ol></li><li><a href="#複合型の定義">複合型の定義</a><ol><li><a href="#可変な複合型">可変な複合型</a></li><li><a href="#初期値付きの複合型">初期値付きの複合型</a></li></ol></li><li><a href="#モジュール定義">モジュール定義</a><ol><li><a href="#別のソースファイルをインポートしたい">別のソースファイルをインポートしたい</a></li><li><a href="#モジュールを定義する">モジュールを定義する。</a></li><li><a href="#パッケージ">パッケージ</a></li></ol></li><li><a href="#特異メソッド">特異メソッド</a></li><li><a href="#例外処理">例外処理</a></li><li><a href="#aliasとundef">aliasとundef?</a></li><li><a href="#予約語">予約語</a></li></ol></div>
+<h2 id="リテラル"><a href="#リテラル" class="header-anchor">リテラル</a></h2>
+<p>リテラルとは組み込み型の定数を表すものです。いくつか列挙します。</p>
+<pre><code class="language-julia">#数値リテラル
 @show typeof&#40;1&#41;
 @show typeof&#40;1.0&#41;
 @show typeof&#40;1.0f0&#41;
@@ -12,7 +119,8 @@
 @show typeof&#40;&#91;1,2,3&#93;&#41;
 @show typeof&#40;&#40;1,2,3&#41;&#41;
 @show typeof&#40;&#40;a&#61;1,b&#61;3&#41;&#41;;
-@show typeof&#40;Dict&#40;&quot;a&quot;&#61;&gt;1,&quot;b&quot;&#61;&gt;2&#41;&#41;</code></pre> <p><div class=code-output ><pre><code class=plaintext >typeof(1) = Int64
+@show typeof&#40;Dict&#40;&quot;a&quot;&#61;&gt;1,&quot;b&quot;&#61;&gt;2&#41;&#41;</code></pre>
+<p><div class="code-output"><pre><code class="plaintext">typeof(1) = Int64
 typeof(1.0) = Float64
 typeof(1.0f0) = Float32
 typeof(1 + 1im) = Complex{Int64}
@@ -24,26 +132,32 @@ typeof([1, 2, 3]) = Vector{Int64}
 typeof((1, 2, 3)) = Tuple{Int64, Int64, Int64}
 typeof((a = 1, b = 3)) = NamedTuple{(:a, :b), Tuple{Int64, Int64}}
 typeof(Dict("a" => 1, "b" => 2)) = Dict{String, Int64}
-</code></pre></div> 組み込み型は他にもいっぱいあります。</p> <h2 id="演算子"><a href="#演算子" class=header-anchor >演算子</a></h2> <h2 id="変数と定数"><a href="#変数と定数" class=header-anchor >変数と定数</a></h2> <h2 id="代入"><a href="#代入" class=header-anchor >代入</a></h2> <h2 id="文の区切り"><a href="#文の区切り" class=header-anchor >文の区切り</a></h2> <p>文の区切りもpythonと同じく<code>;</code>です。 ただし、<code>;</code>には評価結果を出力しないという意味もあります。</p> <pre><code class=language-julia >x&#61;1;y&#61;2;</code></pre>
+</code></pre></div> 組み込み型は他にもいっぱいあります。</p>
+<h2 id="演算子"><a href="#演算子" class="header-anchor">演算子</a></h2>
+<h2 id="変数と定数"><a href="#変数と定数" class="header-anchor">変数と定数</a></h2>
+<h2 id="代入"><a href="#代入" class="header-anchor">代入</a></h2>
+<h2 id="文の区切り"><a href="#文の区切り" class="header-anchor">文の区切り</a></h2>
+<p>文の区切りもpythonと同じく<code>;</code>です。 ただし、<code>;</code>には評価結果を出力しないという意味もあります。</p>
+<pre><code class="language-julia">x&#61;1;y&#61;2;</code></pre>
 <p>また、括弧が閉じていないときは自動的に複数行扱いになります。 文末をパイプ演算子にしても複数行扱いにできます。</p>
-<pre><code class=language-julia >a &#61; &#91;1,
+<pre><code class="language-julia">a &#61; &#91;1,
     2,
     3&#93;
 a .|&gt; sqrt |&gt;
      println</code></pre>
-<div class=code-output ><pre><code class=plaintext >[1.0, 1.4142135623730951, 1.7320508075688772]
+<div class="code-output"><pre><code class="plaintext">[1.0, 1.4142135623730951, 1.7320508075688772]
 </code></pre></div>
-<h2 id="コメント"><a href="#コメント" class=header-anchor >コメント</a></h2>
+<h2 id="コメント"><a href="#コメント" class="header-anchor">コメント</a></h2>
 <p>コメントの書き方はpythonと同じです。</p>
-<pre><code class=language-julia ># コメント1
+<pre><code class="language-julia"># コメント1
 a&#61;1 # コメント2</code></pre>
 <p>複数行にわたるコメントは<code>&quot;&quot;&quot;</code>で囲まれた環境で表します。</p>
-<pre><code class=language-julia >&quot;&quot;&quot;
+<pre><code class="language-julia">&quot;&quot;&quot;
 ここはコメントです。
 &quot;&quot;&quot;</code></pre>
-<h2 id="真偽値と条件分岐"><a href="#真偽値と条件分岐" class=header-anchor >真偽値と条件分岐</a></h2>
+<h2 id="真偽値と条件分岐"><a href="#真偽値と条件分岐" class="header-anchor">真偽値と条件分岐</a></h2>
 <p>if文の使い方は以下の通りです。</p>
-<pre><code class=language-julia >if condition1
+<pre><code class="language-julia">if condition1
     process1
 elseif condition2
     process2
@@ -52,18 +166,18 @@ else
 end</code></pre>
 <p><code>condition</code>の部分には<code>true</code>または<code>false</code>の真偽値を返すような 条件式が入ります。</p>
 <p>ある条件を満たしたときの処理を書ければ良いだけならば、次の短絡評価が便利です。</p>
-<pre><code class=language-julia >a &#61; 1
+<pre><code class="language-julia">a &#61; 1
 a &#61;&#61; 1 &amp;&amp; println&#40;a&#41; # aが1なら, aを出力
 a &#61;&#61; 2 || println&#40;a&#41; # aが2でないなら、aを出力</code></pre>
-<div class=code-output ><pre><code class=plaintext >1
+<div class="code-output"><pre><code class="plaintext">1
 1
 </code></pre></div>
-<h2 id="繰り返し"><a href="#繰り返し" class=header-anchor >繰り返し</a></h2>
-<h2 id="メソッド呼び出し"><a href="#メソッド呼び出し" class=header-anchor >メソッド呼び出し</a></h2>
-<h2 id="ブロック"><a href="#ブロック" class=header-anchor >ブロック</a></h2>
-<h2 id="関数定義"><a href="#関数定義" class=header-anchor >関数定義</a></h2>
+<h2 id="繰り返し"><a href="#繰り返し" class="header-anchor">繰り返し</a></h2>
+<h2 id="メソッド呼び出し"><a href="#メソッド呼び出し" class="header-anchor">メソッド呼び出し</a></h2>
+<h2 id="ブロック"><a href="#ブロック" class="header-anchor">ブロック</a></h2>
+<h2 id="関数定義"><a href="#関数定義" class="header-anchor">関数定義</a></h2>
 <p>関数の定義にはfunction文を使います。 戻り値はreturnの後に書くか、最後に書いた行の値になります。 また、戻り値の型や引数の型を指定することもできます。</p>
-<pre><code class=language-julia >function add&#40;a::Number,b::Number&#41;::Number
+<pre><code class="language-julia">function add&#40;a::Number,b::Number&#41;::Number
     a&#43;b
 end
 
@@ -73,21 +187,21 @@ end
 
 println&#40;add&#40;1,2&#41;&#41;
 println&#40;add&#40;&quot;abc&quot;,&quot;def&quot;&#41;&#41;</code></pre>
-<div class=code-output ><pre><code class=plaintext >3
+<div class="code-output"><pre><code class="plaintext">3
 abcdef
 </code></pre></div>
-<div class=note ><div class=title >😲 Note</div>
-<div class=content ><p>同じ名前の関数でも、引数の型を変えて定義することが可能です。 これが<strong>多重ディスパッチ</strong>というjuliaの重要な機能のひとつです。</p>
+<div class="note"><div class="title">😲 Note</div>
+<div class="content"><p>同じ名前の関数でも、引数の型を変えて定義することが可能です。 これが<strong>多重ディスパッチ</strong>というjuliaの重要な機能のひとつです。</p>
 <p><strong>自分で定義した複合型を、既存の関数でも使えるように再定義する</strong> というのが、よくある使い方です。</p></div></div>
-<div class=warning ><div class=title >😕 Warning&#33;</div>
-<div class=content >型を<code>Float64</code>のようにガチガチに固めてしまうと、 融通が効かなくなるので、juliaが上手く型推論できる程度に緩くしておくのが、 吉です。</div></div>
-<h3 id="無名関数"><a href="#無名関数" class=header-anchor >無名関数</a></h3>
+<div class="warning"><div class="title">😕 Warning&#33;</div>
+<div class="content">型を<code>Float64</code>のようにガチガチに固めてしまうと、 融通が効かなくなるので、juliaが上手く型推論できる程度に緩くしておくのが、 吉です。</div></div>
+<h3 id="無名関数"><a href="#無名関数" class="header-anchor">無名関数</a></h3>
 <p>無名関数も使えます。（引数）-&gt;（処理）の形式で使います。</p>
-<pre><code class=language-julia >f &#61; x-&gt;x^2
+<pre><code class="language-julia">f &#61; x-&gt;x^2
 @show f&#40;2&#41;
 @show &#40;x-&gt;x^2&#41;&#40;2&#41;
 @show &#40;&#40;x,y&#41;-&gt;x&#43;y&#41;&#40;1,2&#41;</code></pre>
-<div class=code-output ><pre><code class=plaintext >f(2) = 4
+<div class="code-output"><pre><code class="plaintext">f(2) = 4
 ((x->begin
         #= none:1 =#
         x ^ 2
@@ -98,13 +212,13 @@ abcdef
     end))(1, 2) = 3
 </code></pre></div>
 <p>例えば、filter関数のように、&quot;関数を引数にできる関数&quot;で良く利用します。</p>
-<pre><code class=language-julia >filter&#40;r-&gt;r&#37;3&#61;&#61;0, 1:10&#41; |&gt; println</code></pre>
-<div class=code-output ><pre><code class=plaintext >[3, 6, 9]
+<pre><code class="language-julia">filter&#40;r-&gt;r&#37;3&#61;&#61;0, 1:10&#41; |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext">[3, 6, 9]
 </code></pre></div>
-<h2 id="複合型の定義"><a href="#複合型の定義" class=header-anchor >複合型の定義</a></h2>
+<h2 id="複合型の定義"><a href="#複合型の定義" class="header-anchor">複合型の定義</a></h2>
 <p>この項目はもともとはクラス定義でしたが、juliaにはクラスがありません。 オブジェクト指向でいうクラスの属性が複合型に相当します。 メソッドがない点は、多重ディスパッチで補うことができます。</p>
 <p>複合型は、複数の型をセットにしたものです。 型の定義にはstruct文を使います。具体例を見てみましょう。</p>
-<pre><code class=language-julia >struct Baz
+<pre><code class="language-julia">struct Baz
     a
     b::Int
 end
@@ -112,14 +226,14 @@ end
 baz &#61; Baz&#40;&quot;a&quot;,4&#41;
 @show baz.a
 @show baz.b</code></pre>
-<div class=code-output ><pre><code class=plaintext >baz.a = "a"
+<div class="code-output"><pre><code class="plaintext">baz.a = "a"
 baz.b = 4
 </code></pre></div>
 <p>このように複合型のインスタンスを生成すると、<code>インスタンス名.要素名</code>で 要素を呼び出すことができます。</p>
 <p>struct文では、要素について型を指定することができます。</p>
-<h3 id="可変な複合型"><a href="#可変な複合型" class=header-anchor >可変な複合型</a></h3>
+<h3 id="可変な複合型"><a href="#可変な複合型" class="header-anchor">可変な複合型</a></h3>
 <p>複合型のインスタンスは基本的に値が固定されてしまいます。 要素の値を変動させたいときには、<code>mutable struct</code>文を使います。</p>
-<pre><code class=language-julia >mutable struct mBaz
+<pre><code class="language-julia">mutable struct mBaz
     a
     b
 end
@@ -128,13 +242,13 @@ mbaz&#61;mBaz&#40;1,2&#41;
 @show mbaz.a
 mbaz.a &#61; 2
 @show mbaz.a</code></pre>
-<div class=code-output ><pre><code class=plaintext >mbaz.a = 1
+<div class="code-output"><pre><code class="plaintext">mbaz.a = 1
 mbaz.a = 2
 </code></pre></div>
-<h3 id="初期値付きの複合型"><a href="#初期値付きの複合型" class=header-anchor >初期値付きの複合型</a></h3>
+<h3 id="初期値付きの複合型"><a href="#初期値付きの複合型" class="header-anchor">初期値付きの複合型</a></h3>
 <p>複合型を定義した時点で、初期値を設定しておきたいこともあります。 そんな時は、Baseモジュールの@kwdefマクロが使えます。 ヘルプを読んでみましょう。</p>
-<pre><code class=language-julia >println&#40;@doc Base.@kwdef&#41;</code></pre>
-<div class=code-output ><pre><code class=plaintext >```
+<pre><code class="language-julia">println&#40;@doc Base.@kwdef&#41;</code></pre>
+<div class="code-output"><pre><code class="plaintext">```
 @kwdef typedef
 ```
 
@@ -165,19 +279,19 @@ Stacktrace:
 ```
 
 </code></pre></div>
-<div class=note ><div class=title >😲 Note</div>
-<div class=content >REPLで?関数名,とタイプしてもヘルプを読むことができます。　     @docマクロでヘルプを文字列として取り出すことができます。</div></div>
-<div class=note ><div class=title >😲 Note</div>
-<div class=content >同様の機能は, Parameters.jlでも実装可能です。 Parameters.jlは複合型の中身を簡単にまとめたり、吐き出すマクロがあるので、 私はこちらの方をよく使います。</div></div>
-<h2 id="モジュール定義"><a href="#モジュール定義" class=header-anchor >モジュール定義</a></h2>
+<div class="note"><div class="title">😲 Note</div>
+<div class="content">REPLで?関数名,とタイプしてもヘルプを読むことができます。　     @docマクロでヘルプを文字列として取り出すことができます。</div></div>
+<div class="note"><div class="title">😲 Note</div>
+<div class="content">同様の機能は, Parameters.jlでも実装可能です。 Parameters.jlは複合型の中身を簡単にまとめたり、吐き出すマクロがあるので、 私はこちらの方をよく使います。</div></div>
+<h2 id="モジュール定義"><a href="#モジュール定義" class="header-anchor">モジュール定義</a></h2>
 <p>juliaのモジュールとpythonのモジュールはちょっと違います。 &#40;pythonでいうモジュールは、juliaでいうpackageに相当します。&#41;</p>
 <p>用途に応じて書き分けたいと思います。</p>
-<h3 id="別のソースファイルをインポートしたい"><a href="#別のソースファイルをインポートしたい" class=header-anchor >別のソースファイルをインポートしたい</a></h3>
+<h3 id="別のソースファイルをインポートしたい"><a href="#別のソースファイルをインポートしたい" class="header-anchor">別のソースファイルをインポートしたい</a></h3>
 <p>source_a.jlのコードを読み込みたいとしましょう。 その場合は、次のようにinclude関数にソースファイルのパスを渡せばOKです。</p>
-<pre><code class=language-julia >include&#40;&quot;source_a.jl&quot;&#41;</code></pre>
-<h3 id="モジュールを定義する"><a href="#モジュールを定義する" class=header-anchor >モジュールを定義する。</a></h3>
+<pre><code class="language-julia">include&#40;&quot;source_a.jl&quot;&#41;</code></pre>
+<h3 id="モジュールを定義する"><a href="#モジュールを定義する" class="header-anchor">モジュールを定義する。</a></h3>
 <p>juliaにおけるモジュールは、以下のように<code>module end</code>で囲まれた環境のことをさします。</p>
-<pre><code class=language-julia >module A
+<pre><code class="language-julia">module A
 
 struct bar
     x
@@ -194,18 +308,18 @@ BAR &#61; A.bar&#40;1,2&#41;
 println&#40;BAR.x&#41;
 
 A.foo&#40;&#41;</code></pre>
-<p><div class=code-output ><pre><code class=plaintext >1
+<p><div class="code-output"><pre><code class="plaintext">1
 foo
-</code></pre></div> モジュール環境の中に書かれた関数や複合型は、他のモジュールの中に 同名の関数があっても<code>A.foo&#40;&#41;</code>のように呼び出す限りは名前の衝突を 避けることができます。 <div class=note ><div class=title >😲 Note</div>
-<div class=content >実は、REPLでコードを叩いているときは、Mainモジュールの中で関数の定義や 複合型を定義しています。このため、一度定義した複合型を書き換えると 怒られてしまうのですが、モジュール内で複合型を定義しておけば、 名前空間が異なるので、コードを試しながら複合型を変更することが可能です。</div></div></p>
-<h3 id="パッケージ"><a href="#パッケージ" class=header-anchor >パッケージ</a></h3>
-<p>juliaを使っているときに、<code>using DelimitedFiles</code>のように、 using文でパッケージをインポートします。 <div class=note ><div class=title >😲 Note</div>
-<div class=content >import文も使えます。</div></div></p>
+</code></pre></div> モジュール環境の中に書かれた関数や複合型は、他のモジュールの中に 同名の関数があっても<code>A.foo&#40;&#41;</code>のように呼び出す限りは名前の衝突を 避けることができます。 <div class="note"><div class="title">😲 Note</div>
+<div class="content">実は、REPLでコードを叩いているときは、Mainモジュールの中で関数の定義や 複合型を定義しています。このため、一度定義した複合型を書き換えると 怒られてしまうのですが、モジュール内で複合型を定義しておけば、 名前空間が異なるので、コードを試しながら複合型を変更することが可能です。</div></div></p>
+<h3 id="パッケージ"><a href="#パッケージ" class="header-anchor">パッケージ</a></h3>
+<p>juliaを使っているときに、<code>using DelimitedFiles</code>のように、 using文でパッケージをインポートします。 <div class="note"><div class="title">😲 Note</div>
+<div class="content">import文も使えます。</div></div></p>
 <p>これは、モジュールをインポートしていることになりますが、 こうしたモジュールはパッケージと呼ばれています。</p>
 <p>モジュールとパッケージの違いは何かというと難しいですが、 モジュール&#40;ソース&#41;とドキュメントとテスト結果がまとまっているものが、 パッケージというべきでしょうか。 パッケージの作り方は<a href="https://zlatanvasovic.github.io/blog/2020/06/make-your-julia-package/">zlatanのブログ</a>が分かりやすいです。</p>
-<h2 id="特異メソッド"><a href="#特異メソッド" class=header-anchor >特異メソッド</a></h2>
+<h2 id="特異メソッド"><a href="#特異メソッド" class="header-anchor">特異メソッド</a></h2>
 <p>そもそもjuliaはオブジェクト指向ではないので、特異メソッドはありません。 以下のように、複合型のインスタンスに対して関数を定義しようとすると、 helloというフィールドがFooの中にないので、アウトです。 &#40;逆にhelloというフィールドがあれば定義できる。でも何もうれしくない&#41;</p>
-<pre><code class=language-julia >struct Foo
+<pre><code class="language-julia">struct Foo
     x
 end
 
@@ -215,7 +329,7 @@ function test.hello&#40;&#41;
     println&#40;&quot;hello&quot;&#41;
 end</code></pre>
 <p>なお、複合型に対して、関数を定義することはfunction-like objectの機能を利用して実装可能です。</p>
-<pre><code class=language-julia >struct FLO
+<pre><code class="language-julia">struct FLO
     a
     b
     c
@@ -227,40 +341,40 @@ end
 
 f&#61;FLO&#40;1,2,3&#41;
 @show f&#40;2&#41;</code></pre>
-<div class=code-output ><pre><code class=plaintext >f(2) = 11
+<div class="code-output"><pre><code class="plaintext">f(2) = 11
 </code></pre></div>
 <p>インスタンスごとに別の関数を割り当てることはできません。</p>
-<h2 id="例外処理"><a href="#例外処理" class=header-anchor >例外処理</a></h2>
-<h2 id="aliasとundef"><a href="#aliasとundef" class=header-anchor >aliasとundef?</a></h2>
-<h2 id="予約語"><a href="#予約語" class=header-anchor >予約語</a></h2>
- <button onclick="topFunction()" id=myBtn  title="Go to top">Top</button> 
-<div class=page-foot >
-  <div class=copyright >
+<h2 id="例外処理"><a href="#例外処理" class="header-anchor">例外処理</a></h2>
+<h2 id="aliasとundef"><a href="#aliasとundef" class="header-anchor">aliasとundef?</a></h2>
+<h2 id="予約語"><a href="#予約語" class="header-anchor">予約語</a></h2>
+ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+<div class="page-foot">
+  <div class="copyright">
     &copy; Kei Hanafusa. Last modified: April 04, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
-</div>
+</div><!-- CONTENT ENDS HERE -->
 
-      </div> 
-    </div>   
+      </div> <!-- closure of main -->
+    </div>   <!-- closure of class initial--content -->
 
-    <div class=page__footer >
+    <div class="page__footer">
       <footer>
-        
-        
-        <div class=page__footer-follow >
-          <ul class=social-icons >
-            <li><strong>Follow:</strong>
-            <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden=true ></i> Twitter</a>
-            <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden=true ></i> GitHub</a>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+          <ul class="social-icons">
+            <li><strong>Follow:</strong></li>
+            <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+            <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
           </ul>
         </div>
-        <div class=page__footer-copyright >&copy; Kei Hanafusa. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel=nofollow >Minimal Mistakes</a>.</div>
+        <div class="page__footer-copyright">&copy; Kei Hanafusa. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
       </footer>
     </div>
 
     <script src="/libs/minimal-mistakes/main.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin=anonymous ></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
     <script src="/libs/myBtn/myBtn.js"></script>
     <script src="/libs/luminous/Luminous.min.js"></script>
 
@@ -284,3 +398,5 @@ function myToc() {
     }
   } 
 </script>
+  </body>
+</html>
