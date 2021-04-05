@@ -298,7 +298,8 @@ code {
   width: 95%;
   margin-left:auto;
   margin-right:auto;
-  background-color:  #b8dffa;
+  /* background-color:  #b8dffa; */
+  background-color:  rgba(210,204,230,0.5);
   color:rgba(0, 0, 0, 0.7);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -319,7 +320,8 @@ code {
   padding-top: 2px;
   padding-bottom: 2px;
   color: white;
-  background: #209cee;
+  /* background: #209cee; */
+  background: rgb(210,204,230);
 }
 
  /* admonition success */
@@ -328,7 +330,8 @@ code {
   width: 95%;
   margin-left:auto;
   margin-right:auto;
-  background-color:  #9beeb8;
+  /* background-color:  #9beeb8; */
+  background-color: rgba(193,220,141,0.5);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -347,7 +350,8 @@ code {
   padding-top: 2px;
   padding-bottom: 2px;
   color: white;
-  background: #22c35b;
+  /* background: #22c35b; */
+  background: rgb(193,220,141);
 }
  /* admonition warning */
 .warning {
@@ -355,7 +359,8 @@ code {
   width: 95%;
   margin-left:auto;
   margin-right:auto;
-  background-color: #fff3c5;
+  /* background-color: #fff3c5; */
+  background-color: rgba(255,238,125,0.5);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -373,8 +378,9 @@ code {
   padding-left: 7px;
   padding-top: 2px;
   padding-bottom: 2px;
-  color: white;
-  background: #ffdd57;
+  color: rgb(163,163,162);
+  /* background: #ffdd57; */
+  background: rgb(255,238,125);
 }
  /* admonition danger*/
 .danger {
@@ -382,7 +388,8 @@ code {
   width: 95%;
   margin-left:auto;
   margin-right:auto;
-  background-color: #ff857e;
+  /* background-color: #ff857e; */
+  background-color: rgba(236,177,207,0.5);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -401,7 +408,8 @@ code {
   padding-top: 2px;
   padding-bottom: 2px;
   color: white;
-  background: #da0b00;
+  background: rgb(236,177,207);
+  /* background: #da0b00; */
 }
  /* admonition compat*/
 .compat {
@@ -409,7 +417,8 @@ code {
   width: 95%;
   margin-left:auto;
   margin-right:auto;
-  background-color: #99e6f0;
+  /* background-color: #99e6f0; */
+  background-color: rgba(153,205,141,0.5);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -428,7 +437,8 @@ code {
   padding-top: 2px;
   padding-bottom: 2px;
   color: white;
-  background: #1db5c9;
+  /* background: #1db5c9; */
+  background: rgb(153,205,141);
 }
 
 /* myBtn */
@@ -516,7 +526,7 @@ code {
 
   /* supports question 3 */
 .code-output code.plaintext.hljs {
-  background-color: rgba(227,235,152,0.7);
+  background-color: rgba(236,243,207,0.7);
   /* color:rgba(233, 209, 280) */
 }
 
@@ -525,7 +535,7 @@ code {
 }
 .prev-next-link a {
   border-bottom: 1px #ddd solid;
-  display: block;
+  display: block; 
   text-decoration: none;
   padding: 14px 40px;
   color: #0bd;

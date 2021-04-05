@@ -117,9 +117,6 @@
   <div class="sns-box b-pocket">
     <a href="http://getpocket.com/edit?url=https://hanafsky.com/blog&title=ブログ"
     rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
-  <div class="sns-box b-feedly">
-    <a href='https://feedly.com/i/subscription/feed/https://hanafsky.com/blog'
-    target='blank' rel="nofollow"><span class="icon-feedly"></span></a></div>
   <div class="sns-box b-line">
     <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/blog'
     target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
@@ -132,7 +129,7 @@
   </p></div></div></div></div></div>
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: April 04, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: April 05, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -168,6 +165,24 @@
     
     
         <script src="/libs/mermaid/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    theme: 'neutral',
+    themeCSS: '.node rect,\
+               .node circle,\
+               .node ellipse,\
+               .node polygon\
+               {fill:rgba(253,237,228,0.5);\
+                stroke: rgb(246,189,192)};\
+               .arrowheadPath {fill:rgb(246,189,192);}\
+               .edgePath .path {stroke:rgb(246,189,192);};\
+               ',
+    // themeCSS: '.node rect {fill:rgba(253,237,228,0.5); stroke: rgb(250,219,218)};',
+    // logLevel: 3,
+    // securityLevel: 'loose',
+    // flowchart: { curve: 'basis' }
+  });
+</script>
     
     <script>
     new Luminous(document.querySelectorAll('.zoom'));
