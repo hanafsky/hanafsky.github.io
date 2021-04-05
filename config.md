@@ -162,9 +162,6 @@ For instance:
   <div class="sns-box b-pocket">
     <a href="http://getpocket.com/edit?url=https://hanafsky.com/!#1&title=!#2"
     rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
-  <div class="sns-box b-feedly">
-    <a href='https://feedly.com/i/subscription/feed/https://hanafsky.com/!#1'
-    target='blank' rel="nofollow"><span class="icon-feedly"></span></a></div>
   <div class="sns-box b-line">
     <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/!#1'
     target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
