@@ -1,6 +1,10 @@
 
-@def title="ノイズを含むデータの微分"
-@def rss=""
+@def title="ノイズを含むデータの微分 - Savitzky-Golay filter"
+@def rss_pupdate=Date(2021,4,5)
+@def published="4 April 2021"
+
+
+="Kei Hanafusa"
 @def tags=["recipe"]
 @def hascode=true
 @def hasmath=true
@@ -96,10 +100,13 @@ $$\rm{P}^{\delta} = \rm{D}(\rm{V}^\mathsf{T}\rm{V})^{-1}\rm{V}^\mathsf{T}\bm{y}$
 となって、微分係数を求めることができます。
 
 \note{
-VincentさんはVをQR分解して、さらに整理しています。
+VincentさんはVをQR分解して、式(5)をさらに整理しています。
 ちなみにjuliaでは連立一次方程式の解法はQR分解を利用しています。
-REPLで``?\　``とたたけば分かります。
+REPLで``?\　``とたたけば分かります。なので、自分でQR分解しても意味がないこともあります。
+
+
 }
+
 ## 相互相関関数
 $\rm{D}(\rm{V}^\mathsf{T}\rm{V})^{-1}\rm{V}^\mathsf{T}$は$(1+d) \times (2n+1)$行列です。$j$行$(n+i+1)$列目の成分を$f_{j}[n+i+1](i\in \{-n,-n+1,\dots,n\})$と書くことにすれば、
 $x=x_k$における$j$階微分は
@@ -122,14 +129,22 @@ $$
 ここまでくれば、あとはコードを実装するだけです。
 ## 実装してみる。
 
-ざっくりと流れを確認してみます。
+Vincentさんのブログのコードは、そのままは古くて動かなかったので、[野良パッケージSavGol.jl](https://github.com/hanafsky/SavGol.jl.git)を作成しました。40行程度の簡単なコードです。
+インストール方法はjuliaのREPLを立ち上げて、以下のようにタイプするだけです。
+```julia
+julia>] # ]キーでパッケージモードに移動
+(pkg)>add https://github.com/hanafsky/SavGol.jl.git # バックスペースでjuliaモードに戻る
+julia>using SavGol
+```
+
+コードの流れをざっくり確認してみます。
 
 \begin{mermaid}
 ~~~
 graph TD
-    id1[何階微分するのかを決める]
+    id1[多項式の次数を決める]
     id2[窓関数のデータ点数を決める]
-    id3[窓関数を作る]
+    id3[求めたい微分階数の窓関数を作る]
     id4[元のデータの端点のデータを水増し]
     id5[窓関数を元のデータに畳込む]
     id6[水増しした端点データを除去する]
@@ -152,14 +167,6 @@ default(
 ```
 
 \output{pre}
-
-Vincentさんのブログのコードそのままは古くて動かなかったので、[野良パッケージSavGol.jl](https://github.com/hanafsky/SavGol.jl.git)を作成しました。40行程度の簡単なコードです。
-インストール方法はjuliaのREPLを立ち上げて、以下のようにタイプするだけです。
-```julia
-julia>] # ]キーでパッケージモードに移動
-(pkg)>add https://github.com/hanafsky/SavGol.jl.git # バックスペースでjuliaモードに戻る
-julia>using SavGol
-```
 
 2回微分まで求めるとして、長さが10の場合の窓関数をプロットしてみます。
 SG関数は、窓関数の長さの半分と微分階数を引数にしていて、窓関数を行列で返してくれます。
