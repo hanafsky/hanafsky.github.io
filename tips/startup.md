@@ -77,3 +77,5 @@ using Revise # パッケージ開発時に利用する。
 
 \next{tips/franklin}{静的サイトジェネレーター Franklin.jl}
 \backtotop
+
+{{ addcomments }}

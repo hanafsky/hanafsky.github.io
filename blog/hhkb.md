@@ -166,3 +166,5 @@ HHKBのWEBサイトにあるウッドパームレストが欲しかったので�
 \share{blog/hhkb}{HHKBの話}
 <!-- \next{/blog/EIZO}{HHKB 購入から一年後<br>再び清水の舞台から飛び降りる<br>EIZO EV3895} -->
 \backtotop
+
+{{ addcomments }}

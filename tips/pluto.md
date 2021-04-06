@@ -138,3 +138,5 @@ jupyterと同じ感覚で使おうとするとミスります。
 \share{tips/pluto/}{リアクティブなノートブック Pluto.jl}
 \prevnext{tips/pluto/}{リアクティブなノートブック Pluto.jl}{tips/savgol}{ノイズを含むデータの微分 - Savitzky-Golay filter}
 \backtotop
+
+{{ addcomments }}

@@ -267,3 +267,4 @@ DirectConvolution.jlにはこのほかにも2次元のSavitzky-Golayフィルタ
 \prev{tips/pluto}{リアクティブなノートブック Pluto.jl}
 \backtotop
 
+{{ addcomments }}
