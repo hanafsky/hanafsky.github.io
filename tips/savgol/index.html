@@ -102,8 +102,7 @@
 
 
 <!-- Content appended here -->
-<div class="franklin-content"><p>&#61;&quot;Kei Hanafusa&quot;</p>
-<h1 id="ノイズを含むデータの微分_-_savitzky-golay_filter"><a href="#ノイズを含むデータの微分_-_savitzky-golay_filter" class="header-anchor">ノイズを含むデータの微分 - Savitzky-Golay filter</a></h1>
+<div class="franklin-content"><h1 id="ノイズを含むデータの微分_-_savitzky-golay_filter"><a href="#ノイズを含むデータの微分_-_savitzky-golay_filter" class="header-anchor">ノイズを含むデータの微分 - Savitzky-Golay filter</a></h1>
 <p>
 <div style="text-align:center">
 <img src="/assets/tips/smooth-3221868_640.jpg" alt="" height="200px">
@@ -122,6 +121,9 @@
   <div class="sns-box b-pocket">
     <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/savgol/&title=ノイズを含むデータの微分 - Savitzky-Golay filter"
     rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
+  <div class="sns-box b-feedly">
+    <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
+    rel="nofollow" target="_blank"><span class="icon-feedly"></i></a></div>
   <div class="sns-box b-line">
     <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/savgol/'
     target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
@@ -283,8 +285,8 @@ scatter&#33;&#40;p_3,x,deriv1_2,label&#61;&quot;smoothed 1st order derivative&qu
 sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
 @btime apply_SG_filter&#40;y,sg3,derivativeOrder&#61;0&#41; # 直接畳み込み
 @btime apply_filter&#40;sg1&#91;:,2&#93;,y&#41; # FFT畳み込み</code></pre>
-<p><div class="code-output"><pre><code class="plaintext">  1.080 μs (1 allocation: 736 bytes)
-  29.000 μs (86 allocations: 10.55 KiB)
+<p><div class="code-output"><pre><code class="plaintext">  860.577 ns (1 allocation: 736 bytes)
+  24.500 μs (86 allocations: 10.55 KiB)
 </code></pre></div> 結果は直接畳み込みの圧勝で、Vincentさんのブログに書いてあるとおりでした。 DirectConvolution.jlにはこのほかにも2次元のSavitzky-Golayフィルターなど実装されているので、 いろいろ遊んでみたいと思います。</p>
 <p> <p style="text-align:right">  めでたしめでたし </p> 
 <div class="sns-container top">
@@ -300,6 +302,9 @@ sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
   <div class="sns-box b-pocket">
     <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/savgol/&title=ノイズを含むデータの微分 - Savitzky-Golay filter"
     rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
+  <div class="sns-box b-feedly">
+    <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
+    rel="nofollow" target="_blank"><span class="icon-feedly"></i></a></div>
   <div class="sns-box b-line">
     <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/savgol/'
     target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
@@ -325,7 +330,7 @@ sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: April 06, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: April 07, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
