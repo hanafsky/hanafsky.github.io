@@ -8,7 +8,7 @@
   <item>
     <title><![CDATA[ノイズを含むデータの微分 - Savitzky-Golay filter]]></title>
     <link>https://hanafsky.github.io/tips/savgol/</link>
-    <description><![CDATA[Savitzky-Golayフィルターの説明をします。
+    <description><![CDATA[<img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。
 <br><a href="https://hanafsky.github.io/tips/savgol/">Read more</a>]]></description>
     
     <category>julia</category>

@@ -8,7 +8,7 @@
   <item>
     <title><![CDATA[ノイズを含むデータの微分 - Savitzky-Golay filter]]></title>
     <link>https://hanafsky.github.io/tips/savgol/</link>
-    <description><![CDATA[Savitzky-Golayフィルターの説明をします。
+    <description><![CDATA[<img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。
 <br><a href="https://hanafsky.github.io/tips/savgol/">Read more</a>]]></description>
     
     <category>julia</category>
@@ -18,7 +18,7 @@
   <item>
     <title><![CDATA[HHKBの話]]></title>
     <link>https://hanafsky.github.io/blog/hhkb/</link>
-    <description><![CDATA[高級キーボードHHKBの話
+    <description><![CDATA[<img src="https://www.pfu.fujitsu.com/direct/hhkb/images/detail_pd-kb800bs-1.jpg" alt="titleimage" />高級キーボードHHKBの話
 <br><a href="https://hanafsky.github.io/blog/hhkb/">Read more</a>]]></description>
     
     <category>blog</category>
@@ -28,7 +28,7 @@
   <item>
     <title><![CDATA[リアクティブなノートブック Pluto.jl]]></title>
     <link>https://hanafsky.github.io/tips/pluto/</link>
-    <description><![CDATA[PlutoでLiterate Programmingする方法を説明します。
+    <description><![CDATA[<img src="https://hanafsky.github.io/assets/tips/pluto-5962694_640.jpg" alt="titleimage" />PlutoでLiterate Programmingする方法を説明します。
 <br><a href="https://hanafsky.github.io/tips/pluto/">Read more</a>]]></description>
     
     <category>julia</category>
@@ -38,7 +38,7 @@
   <item>
     <title><![CDATA[静的サイトジェネレーター Franklin.jl]]></title>
     <link>https://hanafsky.github.io/tips/franklin/</link>
-    <description><![CDATA[Franklin.jlでホームページを作るときの注意などを説明します。
+    <description><![CDATA[<img src="https://franklinjl.org/assets/infra/logoF2.svg" alt="titleimage" />Franklin.jlでホームページを作るときの注意などを説明します。
 <br><a href="https://hanafsky.github.io/tips/franklin/">Read more</a>]]></description>
     
     <category>julia</category>
@@ -48,7 +48,7 @@
   <item>
     <title><![CDATA[julia起動時の初期設定 - startup.jl]]></title>
     <link>https://hanafsky.github.io/tips/startup/</link>
-    <description><![CDATA[startup.jlによるjulia起動時の初期設定方法を説明します。
+    <description><![CDATA[<img src="https://hanafsky.github.io/assets/tips/1415596_s.jpg" alt="titleimage" />startup.jlによるjulia起動時の初期設定方法を説明します。
 <br><a href="https://hanafsky.github.io/tips/startup/">Read more</a>]]></description>
     
     <category>julia</category>

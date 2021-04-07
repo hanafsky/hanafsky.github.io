@@ -285,8 +285,8 @@ scatter&#33;&#40;p_3,x,deriv1_2,label&#61;&quot;smoothed 1st order derivative&qu
 sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
 @btime apply_SG_filter&#40;y,sg3,derivativeOrder&#61;0&#41; # 直接畳み込み
 @btime apply_filter&#40;sg1&#91;:,2&#93;,y&#41; # FFT畳み込み</code></pre>
-<p><div class="code-output"><pre><code class="plaintext">  860.577 ns (1 allocation: 736 bytes)
-  24.500 μs (86 allocations: 10.55 KiB)
+<p><div class="code-output"><pre><code class="plaintext">  938.462 ns (1 allocation: 736 bytes)
+  35.900 μs (86 allocations: 10.55 KiB)
 </code></pre></div> 結果は直接畳み込みの圧勝で、Vincentさんのブログに書いてあるとおりでした。 DirectConvolution.jlにはこのほかにも2次元のSavitzky-Golayフィルターなど実装されているので、 いろいろ遊んでみたいと思います。</p>
 <p> <p style="text-align:right">  めでたしめでたし </p> 
 <div class="sns-container top">
