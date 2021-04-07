@@ -1,2 +1,2 @@
-  938.462 ns (1 allocation: 736 bytes)
-  35.900 μs (86 allocations: 10.55 KiB)
+  1.086 μs (1 allocation: 736 bytes)
+  28.902 μs (86 allocations: 10.55 KiB)
