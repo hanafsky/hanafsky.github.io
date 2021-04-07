@@ -1,5 +1,5 @@
 @def title="リアクティブなノートブック Pluto.jl"
-@def rss_description="PlutoでLiterate Programmingする方法を説明します。"
+@def rss_description="![titleimage](/assets/tips/pluto-5962694_640.jpg)PlutoでLiterate Programmingする方法を説明します。"
 @def rss_pubdate=Date(2021, 4, 3)
 @def published="3 April 2021"
 @def rss_category="julia"

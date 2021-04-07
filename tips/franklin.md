@@ -1,5 +1,5 @@
 @def title="静的サイトジェネレーター Franklin.jl"
-@def rss_description="Franklin.jlでホームページを作るときの注意などを説明します。"
+@def rss_description="![titleimage](https://franklinjl.org/assets/infra/logoF2.svg)Franklin.jlでホームページを作るときの注意などを説明します。"
 @def rss_pubdate=Date(2021, 4, 2)
 @def published="2 April 2021"
 @def rss_category="julia"

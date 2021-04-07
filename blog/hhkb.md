@@ -1,5 +1,5 @@
 @def title="HHKBの話"
-@def rss_description="高級キーボードHHKBの話"
+@def rss_description="![titleimage](https://www.pfu.fujitsu.com/direct/hhkb/images/detail_pd-kb800bs-1.jpg)高級キーボードHHKBの話"
 @def rss_pubdate=Date(2021, 4, 6)
 @def published="6 April 2021"
 @def rss_category="blog"
