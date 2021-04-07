@@ -10,6 +10,7 @@ The website_* must be defined for the RSS to work
 
 @def author = "Kei Hanafusa"
 
+
 @def mintoclevel = 2
 @def maxtoclevel = 3
 
@@ -162,6 +163,9 @@ For instance:
   <div class="sns-box b-pocket">
     <a href="http://getpocket.com/edit?url=https://hanafsky.com/!#1&title=!#2"
     rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
+  <div class="sns-box b-feedly">
+    <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
+    rel="nofollow" target="_blank"><span class="icon-feedly"></i></a></div>
   <div class="sns-box b-line">
     <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/!#1'
     target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
