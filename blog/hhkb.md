@@ -1,7 +1,11 @@
-@def title="HHKB の話"
-@def rss=""
-@def tags=["gadget"]
+@def title="HHKBの話"
+@def rss_description="高級キーボードHHKBの話"
+@def rss_pubdate=Date(2021, 4, 6)
+@def published="6 April 2021"
+@def rss_category="blog"
+
 @def hascode=true
+@def tags=["gadget"]
 @def isblog=true
 
 # HHKBの話

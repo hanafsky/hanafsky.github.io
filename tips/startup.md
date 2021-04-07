@@ -1,4 +1,9 @@
 @def title="julia起動時の初期設定 - startup.jl"
+@def rss_description="startup.jlによるjulia起動時の初期設定方法を説明します。"
+@def rss_pubdate=Date(2021, 4, 1)
+@def published="1 April 2021"
+@def rss_category="julia"
+
 @def hascode=true
 @def tags=["setting"]
 @def isjulia =true

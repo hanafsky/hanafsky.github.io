@@ -1,10 +1,14 @@
-@def title="Franklin.jl を使った話"
-@def tags=["thirdparty","setting"]
+@def title="静的サイトジェネレーター Franklin.jl"
+@def rss_description="Franklin.jlでホームページを作るときの注意などを説明します。"
+@def rss_pubdate=Date(2021, 4, 2)
+@def published="2 April 2021"
+@def rss_category="julia"
+
 @def hascode=true
-@def hasmath=true
+@def tags=["thirdparty","setting"]
 @def isjulia =true
 
-# 静的サイトジェネレーター Franklin.jl を使った話
+# 静的サイトジェネレーター Franklin.jl
 \titleimage{https://franklinjl.org/assets/infra/logoF2.svg}
 \share{tips/franklin}{静的サイトジェネレーター Franklin.jl}
 [Franklin.jl](https://github.com/tlienart/Franklin.jl)はjulia言語で作られた静的サイト作成パッケージです。

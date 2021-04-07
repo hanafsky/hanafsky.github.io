@@ -1,4 +1,9 @@
-@def title="Pluto.jl でレポートを作る。"
+@def title="リアクティブなノートブック Pluto.jl"
+@def rss_description="PlutoでLiterate Programmingする方法を説明します。"
+@def rss_pubdate=Date(2021, 4, 3)
+@def published="3 April 2021"
+@def rss_category="julia"
+
 @def hascode=true
 @def tags=["thirdparty"]
 @def isjulia =true

@@ -1,15 +1,13 @@
-
 @def title="ノイズを含むデータの微分 - Savitzky-Golay filter"
+@def rss_description="Savitzky-Golayフィルターの説明をします。"
 @def rss_pupdate=Date(2021,4,5)
-@def published="4 April 2021"
+@def published="5 April 2021"
+@def rss_category="julia"
 
-
-="Kei Hanafusa"
-@def tags=["recipe"]
 @def hascode=true
-@def hasmath=true
-@def hasmermaid=true
+@def tags=["recipe"]
 @def isjulia =true 
+@def hasmermaid=true
 
 # ノイズを含むデータの微分 - Savitzky-Golay filter
 
