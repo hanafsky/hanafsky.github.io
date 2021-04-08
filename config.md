@@ -172,3 +172,7 @@ For instance:
 </div>
 ~~~
 }
+
+\newcommand{\marker}[1]{
+  ~~~<span class="marker">#1</span>~~~
+}

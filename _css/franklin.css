@@ -627,3 +627,8 @@ code {
 .icon-feedly:before {
 	content: "\e007";
 }
+
+
+.marker {
+background: linear-gradient(transparent 60%, rgb(253,237,228) 0%);
+}
