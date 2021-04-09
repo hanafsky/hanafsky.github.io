@@ -71,14 +71,19 @@ For instance:
 </div>
 ~~~
 }
-\newcommand{\card}[3]{
+\newcommand{\card}[4]{
 @@card
 
-~~~<p style="text-align:center"><img src="#1" alt="No Image"></p>~~~
+~~~<p style="text-align:center"><img src="!#1" alt="No Image"></p>~~~
   @@container
+  @@title
   \center{#2}
+  @@
+  @@discription
+  \center{#3}
+  @@
   ~~~
-  <p><button class="button" onclick="location.href='#3'">読む</button></p>
+  <p><button class="button" onclick="location.href='!#4'">読む</button></p>
   ~~~
   @@
 @@
@@ -86,7 +91,7 @@ For instance:
 \newcommand{\textcard}[3]{
 @@card
   @@container
-~~~<div style="font-family:yozakura; font-size:200%; text-align:center;padding-top:30pt;padding-bottom:15pt">#1</div>~~~
+~~~<div style="font-family:yozakura; font-size:150%; text-align:center;padding-top:30pt;padding-bottom:15pt">#1</div>~~~
   @@title
   \center{#2}
   @@

@@ -11,7 +11,7 @@ julia言語以外のことを書いていきます。主に散財した話とか
 ## トピック
 @@cards
 @@row
-@@column \card{https://www.pfu.fujitsu.com/direct/hhkb/images/detail_pd-kb800bs-1.jpg}{HHKBの話}{/blog/hhkb} @@
-<!-- @@column \card{https://www.eizo.co.jp/products/lcd/ev3895/product_photo_01.png}{EIZOの話}{/blog/EIZO} @@ -->
+@@column \card{https://www.pfu.fujitsu.com/direct/hhkb/images/detail_pd-kb800bs-1.jpg}{HHKBの話}{高級キーボードのカスタマイズ}{/blog/hhkb} @@
+<!-- @@column \card{https://www.eizo.co.jp/products/lcd/ev3895/product_photo_01.png}{EIZOの話}{常識を曲げる曲面モニター}{/blog/EIZO} @@ -->
 @@
 @@

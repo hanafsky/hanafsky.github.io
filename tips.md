@@ -11,10 +11,10 @@
 
 @@cards
 @@row
-@@column \card{/assets/tips/smooth-3221868_640.jpg}{ノイジーなデータの微分 Sav-Gol filter}{/tips/savgol} @@
-@@column \card{/assets/tips/pluto-5962694_640.jpg}{リアクティブなノートブック Pluto.jl}{/tips/pluto} @@
-@@column \card{https://franklinjl.org/assets/infra/logoF2.svg}{静的サイトジェネレーター Franklin.jl}{/tips/franklin} @@
-@@column \card{/assets/tips/1415596_s.jpg}{julia 起動時の初期設定 - startup.jl}{/tips/startup} @@
+@@column \card{/assets/tips/smooth-3221868_640.jpg}{Savitzky Golay}{ノイジーなデータの微分}{/tips/savgol} @@
+@@column \card{/assets/tips/pluto-5962694_640.jpg}{Pluto.jl}{リアクティブなノートブック}{/tips/pluto} @@
+@@column \card{https://franklinjl.org/assets/infra/logoF2.svg}{Franklin.jl}{静的サイトジェネレーター}{/tips/franklin} @@
+@@column \card{/assets/tips/1415596_s.jpg}{startup.jl}{julia 起動時の初期設定}{/tips/startup} @@
 @@
 @@
 
