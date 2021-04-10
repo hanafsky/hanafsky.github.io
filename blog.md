@@ -5,7 +5,7 @@
 @def isblog = true
 # Blog 
 
-julia言語以外のことを書いていきます。主に散財した話とか。
+julia言語以外のことを書いていきます。
 
 \share{blog}{ブログ}
 ## トピック
