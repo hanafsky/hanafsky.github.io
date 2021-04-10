@@ -1,5 +1,0 @@
-DataFrameRow
- Row │ hotel_id  rsv_cnt  cus_cnt
-     │ String    Int64    Int64
-─────┼────────────────────────────
-   1 │ h_75           12       12

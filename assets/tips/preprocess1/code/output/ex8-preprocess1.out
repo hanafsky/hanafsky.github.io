@@ -1,5 +1,0 @@
-DataFrameRow
- Row │ reserve_id  hotel_id
-     │ String      String
-─────┼──────────────────────
-   1 │ r1          h_75

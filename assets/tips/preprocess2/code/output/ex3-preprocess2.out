@@ -1,5 +1,0 @@
-DataFrameRow
- Row │ hotel_id  people_num  price_sum
-     │ String    Int64       Int64
-─────┼─────────────────────────────────
-   1 │ h_75               4     421200
