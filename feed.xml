@@ -1,59 +1,128 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-<channel>
-  <title><![CDATA[Hanafsky.com]]></title>
-  <description><![CDATA[a web site to share information mainly about julia-lang
-]]></description>
-  <link>https://hanafsky.github.io/</link>
-  <atom:link href="https://hanafsky.github.io/feed.xml" rel="self" type="application/rss+xml" />
-  <item>
-    <title><![CDATA[ノイズを含むデータの微分 - Savitzky-Golay filter]]></title>
-    <link>https://hanafsky.github.io/tips/savgol/</link>
-    <description><![CDATA[<img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。
-<br><a href="https://hanafsky.github.io/tips/savgol/">Read more</a>]]></description>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:georss="http://www.georss.org/georss">
+
+  <channel>
+    <title>
+      <![CDATA[  Hanafsky.com  ]]>
+    </title>
+    <link> https://hanafsky.github.io/ </link>
+    <description>
+      <![CDATA[  a web site to share information mainly about julia-lang  ]]>
+    </description>
+    <atom:link
+      href="https://hanafsky.github.io/feed.xml"
+      rel="self"
+      type="application/rss+xml" />
+
+
+<item>
+  <title>
+    <![CDATA[  ノイズを含むデータの微分 - Savitzky-Golay filter  ]]>
+  </title>
+  <link> https://hanafsky.github.io/tips/savgol/index.html </link>
+  <guid> https://hanafsky.github.io/tips/savgol/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。  ]]>
+  </description>  
     
-    <category>julia</category>
-    <guid>https://hanafsky.github.io/tips/savgol/</guid>
-    <pubDate>Sat, 10 Apr 2021 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[HHKBの話]]></title>
-    <link>https://hanafsky.github.io/blog/hhkb/</link>
-    <description><![CDATA[<img src="https://www.pfu.fujitsu.com/direct/hhkb/images/detail_pd-kb800bs-1.jpg" alt="titleimage" />高級キーボードHHKBの話
-<br><a href="https://hanafsky.github.io/blog/hhkb/">Read more</a>]]></description>
+  <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
     
-    <category>blog</category>
-    <guid>https://hanafsky.github.io/blog/hhkb/</guid>
-    <pubDate>Tue, 6 Apr 2021 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[リアクティブなノートブック Pluto.jl]]></title>
-    <link>https://hanafsky.github.io/tips/pluto/</link>
-    <description><![CDATA[<img src="https://hanafsky.github.io/assets/tips/pluto-5962694_640.jpg" alt="titleimage" />PlutoでLiterate Programmingする方法を説明します。
-<br><a href="https://hanafsky.github.io/tips/pluto/">Read more</a>]]></description>
+  <category> julia </category>
+      
+</item>
+
+<item>
+  <title>
+    <![CDATA[  HHKBの話  ]]>
+  </title>
+  <link> https://hanafsky.github.io/blog/hhkb/index.html </link>
+  <guid> https://hanafsky.github.io/blog/hhkb/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://www.pfu.fujitsu.com/direct/hhkb/images/detail_pd-kb800bs-1.jpg" alt="titleimage" />高級キーボードHHKBの話  ]]>
+  </description>  
     
-    <category>julia</category>
-    <guid>https://hanafsky.github.io/tips/pluto/</guid>
-    <pubDate>Sat, 3 Apr 2021 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[静的サイトジェネレーター Franklin.jl]]></title>
-    <link>https://hanafsky.github.io/tips/franklin/</link>
-    <description><![CDATA[<img src="https://franklinjl.org/assets/infra/logoF2.svg" alt="titleimage" />Franklin.jlでホームページを作るときの注意などを説明します。
-<br><a href="https://hanafsky.github.io/tips/franklin/">Read more</a>]]></description>
+  <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
     
-    <category>julia</category>
-    <guid>https://hanafsky.github.io/tips/franklin/</guid>
-    <pubDate>Fri, 2 Apr 2021 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[julia起動時の初期設定 - startup.jl]]></title>
-    <link>https://hanafsky.github.io/tips/startup/</link>
-    <description><![CDATA[<img src="https://hanafsky.github.io/assets/tips/1415596_s.jpg" alt="titleimage" />startup.jlによるjulia起動時の初期設定方法を説明します。
-<br><a href="https://hanafsky.github.io/tips/startup/">Read more</a>]]></description>
+  <category> blog </category>
+      
+</item>
+
+<item>
+  <title>
+    <![CDATA[  リアクティブなノートブック Pluto.jl  ]]>
+  </title>
+  <link> https://hanafsky.github.io/tips/pluto/index.html </link>
+  <guid> https://hanafsky.github.io/tips/pluto/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/pluto-5962694_640.jpg" alt="titleimage" />PlutoでLiterate Programmingする方法を説明します。  ]]>
+  </description>  
     
-    <category>julia</category>
-    <guid>https://hanafsky.github.io/tips/startup/</guid>
-    <pubDate>Thu, 1 Apr 2021 00:00:00 UT</pubDate>
-  </item>
-</channel>
-</rss>
+  <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
+    
+  <category> julia </category>
+      
+</item>
+
+<item>
+  <title>
+    <![CDATA[  静的サイトジェネレーター Franklin.jl  ]]>
+  </title>
+  <link> https://hanafsky.github.io/tips/franklin/index.html </link>
+  <guid> https://hanafsky.github.io/tips/franklin/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://franklinjl.org/assets/infra/logoF2.svg" alt="titleimage" />Franklin.jlでホームページを作るときの注意などを説明します。  ]]>
+  </description>  
+    
+  <pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
+    
+  <category> julia </category>
+      
+</item>
+
+<item>
+  <title>
+    <![CDATA[  julia起動時の初期設定 - startup.jl  ]]>
+  </title>
+  <link> https://hanafsky.github.io/tips/startup/index.html </link>
+  <guid> https://hanafsky.github.io/tips/startup/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/1415596_s.jpg" alt="titleimage" />startup.jlによるjulia起動時の初期設定方法を説明します。  ]]>
+  </description>  
+    
+  <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
+    
+  <category> julia </category>
+      
+</item>
+</channel></rss>
