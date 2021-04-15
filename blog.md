@@ -6,7 +6,6 @@
 # Blog 
 
 julia言語以外のことを書いていきます。
-
 \share{blog}{ブログ}
 ## トピック
 @@cards

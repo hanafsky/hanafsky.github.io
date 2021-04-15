@@ -149,10 +149,12 @@ For instance:
 </div>
 ~~~
 }
+
 \newcommand{\yozakura}[1]{
   ~~~<p style="font-family:yozakura;font-size:xx-large">#1</p>~~~
 }
 
+<!-- シェアボタン -->
 \newcommand{\share}[2]{
 ~~~
 <div class="sns-container top">
@@ -178,6 +180,15 @@ For instance:
 ~~~
 }
 
+<!-- ピンクのマーカー -->
 \newcommand{\marker}[1]{
   ~~~<span class="marker">#1</span>~~~
+}
+
+<!-- クリップボードにコピー -->
+\newcommand{\copy}[1]{
+  ~~~
+  <input type="text" value="!#1" id="copytoclipboard">
+  <button onclick="CopyToClipboard()" onmouseout="outFunc">コピーする</button>
+  ~~~
 }
