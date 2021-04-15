@@ -110,7 +110,7 @@
  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: April 13, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: April 15, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -153,6 +153,22 @@ function myToc() {
       x.style.display = "none";
     }
   } 
+</script>
+    <script>
+  function CopyToClipboard() {
+  /* Get the text field */
+  var copyText = document.getElementById("copytoclipboard");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
 </script>
   </body>
 </html>

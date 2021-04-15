@@ -102,8 +102,7 @@
 
 <!-- Content appended here -->
 <div class="franklin-content"><h1 id="blog"><a href="#blog" class="header-anchor">Blog </a></h1>
-<p>julia言語以外のことを書いていきます。</p>
-
+<p>julia言語以外のことを書いていきます。 
 <div class="sns-container top">
   <div class="sns-box b-twitter">
     <a href="https://twitter.com/share?url=https://hanafsky.com/blog&text=ブログ&via=HanafusaKei&related=HanafusaKei"
@@ -124,7 +123,7 @@
     <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/blog'
     target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
 </div>
-
+</p>
 <h2 id="トピック"><a href="#トピック" class="header-anchor">トピック</a></h2>
 <div class="cards"><div class="row"><div class="column"><div class="card"><p style="text-align:center"><img src="https://www.pfu.fujitsu.com/direct/hhkb/images/detail_pd-kb800bs-1.jpg" alt="No Image"></p>
 <div class="container"><div class="title"><div style="text-align:center">  HHKBの話 </div></div>
@@ -133,7 +132,7 @@
   <p><button class="button" onclick="location.href='/blog/hhkb'">読む</button></p></div></div></div></div></div>
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: April 13, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: April 15, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -200,6 +199,22 @@ function myToc() {
       x.style.display = "none";
     }
   } 
+</script>
+    <script>
+  function CopyToClipboard() {
+  /* Get the text field */
+  var copyText = document.getElementById("copytoclipboard");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
 </script>
   </body>
 </html>
