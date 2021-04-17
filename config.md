@@ -58,11 +58,11 @@ For instance:
 \html{</div>}
 }
 \newcommand{\titleimage}[1]{
+@@titleimage
 ~~~
-<div style="text-align:center">
-<img src="!#1" alt="" height="200px">
-</div>
+<img src="!#1" alt="" >
 ~~~
+@@
 }
 \newcommand{\luminous}[1]{
 ~~~
@@ -110,13 +110,13 @@ For instance:
 \newcommand{\prevnext}[4]{
 ~~~
   <div class="prev-next-link">
-  <a class="prev-link" href="https://hanafsky.com/!#1">
+  <a class="prev-link" href="!#1">
     <p class="prev-next-label">前の記事</p>
     <p>
       #2
     </p>
   </a>
-  <a class="next-link" href="https://hanafsky.com/!#3">
+  <a class="next-link" href="!#3">
     <p class="prev-next-label">次の記事</p>
     <p>
       #4
@@ -128,7 +128,7 @@ For instance:
 \newcommand{\next}[2]{
   ~~~
   <div class="prev-next-link">
-  <a class="next-link" href="https://hanafsky.com/!#1">
+  <a class="next-link" href="!#1">
     <p class="prev-next-label">次の記事</p>
     <p>
       #2
@@ -140,7 +140,7 @@ For instance:
 \newcommand{\prev}[2]{
   ~~~
   <div class="prev-next-link">
-  <a class="prev-link" href="https://hanafsky.com/!#1">
+  <a class="prev-link" href="!#1">
     <p class="prev-next-label">前の記事</p>
     <p>
       #2
