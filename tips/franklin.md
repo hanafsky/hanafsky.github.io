@@ -320,7 +320,7 @@ code {
 \right{めでたしめでたし}
 
 \share{tips/franklin}{静的サイトジェネレーター Franklin.jl}
-\prevnext{tips/startup}{julia 起動時の初期設定 - startup.jl}{tips/pluto/}{リアクティブなノートブック Pluto.jl}
+\prevnext{/tips/startup}{julia 起動時の初期設定 - startup.jl}{/tips/pluto/}{リアクティブなノートブック Pluto.jl}
 \backtotop
 
 {{ addcomments }}

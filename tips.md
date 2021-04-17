@@ -28,7 +28,7 @@ juliaのインストールは、[公式サイト](https://julialang.org/download
 @@column \card{/assets/tips/smooth-3221868_640.jpg}{Savitzky Golay}{ノイジーなデータの微分}{/tips/savgol} @@
 @@column \card{/assets/tips/pluto-5962694_640.jpg}{Pluto.jl}{リアクティブなノートブック}{/tips/pluto} @@
 @@column \card{https://franklinjl.org/assets/infra/logoF2.svg}{Franklin.jl}{静的サイトジェネレーター}{/tips/franklin} @@
-@@column \card{/assets/tips/1415596_s.jpg}{startup.jl}{julia 起動時の初期設定}{/tips/startup} @@
+@@column \card{/assets/tips/startup.jpg}{startup.jl}{julia 起動時の初期設定}{/tips/startup} @@
 @@
 @@
 
