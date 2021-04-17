@@ -10,6 +10,7 @@ julia言語以外のことを書いていきます。
 ## トピック
 @@cards
 @@row
+@@column \card{/assets/blog/mermaid.jpg}{mermaid.js}{フローチャートの書き方メモ}{/blog/mermaid} @@
 @@column \card{https://www.pfu.fujitsu.com/direct/hhkb/images/detail_pd-kb800bs-1.jpg}{HHKBの話}{高級キーボードのカスタマイズ}{/blog/hhkb} @@
 <!-- @@column \card{https://www.eizo.co.jp/products/lcd/ev3895/product_photo_01.png}{EIZOの話}{常識を曲げる曲面モニター}{/blog/EIZO} @@ -->
 @@
