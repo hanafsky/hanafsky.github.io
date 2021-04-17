@@ -499,7 +499,8 @@ code {
   .card img {
     padding-left:0;
     padding-top:10px;
-    height: 80px;}
+    height: 100px;
+    text-align: center;}
   .container { padding: 0 16px; }
   .container::after, .row::after{
     content: "";
@@ -639,3 +640,7 @@ code {
 background: linear-gradient(transparent 60%, rgb(253,237,228) 0%);
 }
 
+.titleimage img {
+    padding-left: 0;
+    width: 100%;
+    }
