@@ -9,19 +9,33 @@
 @def tags=["gadget"]
 @def isblog=true
 
-# mermaid.js　フローチャートの書き方メモ
+# フローチャートの書き方メモ mermaid.js
 
 \titleimage{/assets/blog/mermaid.jpg}
 \share{blog/mermaid}{mermaid.js フローチャートの書き方メモ}
 
 
+
 \toc
 ## はじめに
-フローチャートを書きたいときには、皆どんなツールを使うのでしょうか。
+フローチャートを書きたいときには、どんなツールを使うのが良いのでしょうか。
 
-以前の私はパワーポイントで一生懸命作っていましたが、マークダウンエディターで文書を書くようになってからは、[mermaid](https://mermaid-js.github.io/mermaid/#/)[^1]というjavascriptで書かれた描画ツールを使っています。
+以前の私はパワーポイントで一生懸命作っていましたが、時短を意識してマークダウンエディターで文書を書くようになってからは、[mermaid](https://mermaid-js.github.io/mermaid/#/)というjavascriptで書かれた描画ツールをよく利用しています。[^1]
 
-百聞は一見に如かず。何ができるのか簡単な例をみてみましょう。
+mermaidを使うメリットをまとめてみました。
+- \marker{ユーザーは図の論理構造だけを考えれば良い。}
+- フローチャート以外の図も充実。（ガントチャート、UML図など）
+- テキスト形式なのでgitで変更差分を管理できる。
+- cssやjavascriptの知識があれば、デザインを調整可能。[^2]
+
+
+それでは、実際に使ってみましょう。
+
+### 使ってみる
+
+簡単な例をみてみましょう。Fig.1はジャンケンの関係を表すフローチャートです。
+
+フローチャート記号もジャンケンのシンボルに似たデザインで合わせてみました。
 
 \begin{mermaid}
 ~~~
@@ -34,8 +48,11 @@ graph LR
   id3-->id1
 ~~~
 \end{mermaid}
-~~~<p style="text-align:center">Fig.1 簡単なフローチャート</p>~~~
-[live editor](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0NocmlzdG1hc10gLS0-fEdldCBtb25leXwgQihHbyBzaG9wcGluZylcbiAgICBCIC0tPiBDe0xldCBtZSB0aGlua31cbiAgICBDIC0tPnxPbmV8IERbTGFwdG9wXVxuICAgIEMgLS0-fFR3b3wgRVtpUGhvbmVdXG4gICAgQyAtLT58VGhyZWV8IEZbZmE6ZmEtY2FyIENhcl0iLCJtZXJtYWlkIjp7fSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)もしくは、typoraやVSCODEなどのマークダウンプレビューが可能なエディターに以下のコードを書くと、Fig.1のようなグラフを得ることができます。
+~~~<p style="text-align:center">Fig.1 簡単なフローチャートの例</p>~~~
+
+[live editor](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0NocmlzdG1hc10gLS0-fEdldCBtb25leXwgQihHbyBzaG9wcGluZylcbiAgICBCIC0tPiBDe0xldCBtZSB0aGlua31cbiAgICBDIC0tPnxPbmV8IERbTGFwdG9wXVxuICAgIEMgLS0-fFR3b3wgRVtpUGhvbmVdXG4gICAgQyAtLT58VGhyZWV8IEZbZmE6ZmEtY2FyIENhcl0iLCJtZXJtYWlkIjp7fSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
+もしくは、typoraやVisual Studio Codeなどのマークダウンプレビューが可能なエディターを立ち上げて以下のコードを書いてプレビューします。
+するとFig.1のようなグラフを描画できます。live editorでは画像ファイルとしてダウンロードも可能です。
 
 `````markdown
 ```mermaid
@@ -49,19 +66,61 @@ graph LR
 ```
 `````
 
+#### 簡単な説明
+まず、フローチャートであることを明示するために``graph``と書きます。その右に書いた
+``LR``は"左から右"という意味です。``TD``もしくは``TB``と書くと、上から下へのフローチャートになります。
 
-私の考えるmermaidを使うメリットは以下のとおりです。
+``id+数字``で書かれたところはフローチャートの要素の名前です。その右側に書いているのが、端子の形と端子の中に書く文字列です。
+``id1([グー])``は中にグーと書いた丸端子です。
 
-- ユーザーは図の論理構造だけを考えれば良い。（**ここ重要**）
-- フローチャート以外の図も充実している。（ガントチャートやUML図など）
-- テキスト形式なのでgitで変更差分を管理できる。
-- デフォルトデザインでも結構きれい。
-- cssやjavascriptの知識があれば、デザインをカスタマイズ可能。[^2]
 
-[^1]: 2019年に[オープンソース賞](https://osawards.com/javascript/2019)を受賞したとのこと。
-[^2]: 本サイトでは、javascriptをいじって色を変えています。
 
-### チートシート
+
+
+### HTMLに埋め込む
+このサイトのようにHTMLの中でdiv要素の中にコードを記述して直接ウェブページにフローチャートを書くこともできます。
+
+ただし、最後にmermaidのjavascriptを読み込む必要があります。
+
+javascriptファイルは[こちら](https://unpkg.com/browse/mermaid/)からダウンロードできます。
+
+
+
+```html
+
+ <div style="text-align:center" class="mermaid"> 
+graph LR
+  id1([グー])
+  id2>チョキ]
+  id3{パー}
+  id1-->id2
+  id2-->id3
+  id3-->id1
+ </div>
+
+ <script src="mermaid.min.js"></script>
+```
+\warning{
+  Franklin.jlでmermaildを使うときに以下のことに注意する必要がありました。
+  deploy.ymlの中に、optimize()という関数を呼び出す場所で、以下のようにオプションを指定する必要があります。
+  ```julia
+  optimize(;minify=false)
+  ```
+  簡単に説明すると、デフォルトでは余計な改行を省いてhtmlのファイルサイズを小さくする処理が入っているのですが、
+  改行によって図の構造を表すmermaidとは相性が悪いので、無効化しているということです。
+}
+
+
+
+
+## チートシート
+フローチャートの記号にはそれぞれ意味があるようです。丸端子は始点終点、◇は分岐といった具合です。
+
+フローチャートの記号の意味と、記号の出力方法の両方を知っていないとmermaidでフローチャートを作ることはできません。
+
+そこで、JIS規格っぽい感じのフローチャートを書くためのチートシート（Fig.2）を作りました。
+
+
 \begin{mermaid}
 ~~~
 graph TD
@@ -95,6 +154,11 @@ graph TD
   end
 ~~~
 \end{mermaid}
+~~~<p style="text-align:center">Fig.2 フローチャートのチートシート</p>~~~
+
+フローチャート記号の中に括弧も一緒に記載したので、記号の記述を忘れてもすぐに理解できます。
+
+実際のコードは以下のとおりです。
 
 ```
 graph TD
@@ -128,7 +192,18 @@ graph TD
   end
 ```
 
+## まとめ
+コードで管理可能なmermaid.jsを用いたフローチャートの書き方、HTMLへの導入方法、チートシートを書いてしました。
+
+mermaid.jsにはフローチャート以外にもUML図やガントチャート、円グラフを書く機能も用意されています。
+
+機会があれば、こうした機能もブログで使ってみたいと思います。
+
 \right{めでたしめでたし}
+
+[^1]: 2019年に[オープンソース賞](https://osawards.com/javascript/2019)を受賞したとのこと。
+[^2]: 本サイトでは、javascriptをいじって色を変えています。
+
 \share{blog/mermaid}{mermaid.jsのフローチャートメモ}
 \prev{/blog/hhkb}{HHKBの話}
 \backtotop
