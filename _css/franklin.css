@@ -524,6 +524,7 @@ code {
   .title { 
     color: rgba(0,0,0,0.56);
     font-weight: bolder;
+    font-size: smaller;
    }
   .vitae { margin-top: 0.5em; }
   .discription {
