@@ -23,12 +23,12 @@
 
 <item>
   <title>
-    <![CDATA[  ノイズを含むデータの微分 - Savitzky-Golay filter  ]]>
+    <![CDATA[  mermaid.jsのフローチャートメモ  ]]>
   </title>
-  <link> https://hanafsky.github.io/tips/savgol/index.html </link>
-  <guid> https://hanafsky.github.io/tips/savgol/index.html </guid>
+  <link> https://hanafsky.github.io/blog/mermaid/index.html </link>
+  <guid> https://hanafsky.github.io/blog/mermaid/index.html </guid>
   <description>
-    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。  ]]>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/blog/mermaid.jpg" alt="titleimage" />mermaid.js　フローチャートの書き方メモ  ]]>
   </description>  
     
   <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>  
@@ -38,7 +38,7 @@
     <atom:name>Kei Hanafusa</atom:name>
   </atom:author>
     
-  <category> julia </category>
+  <category> blog </category>
       
 </item>
 </channel></rss>

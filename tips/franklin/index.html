@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="/css/luminous-basic.min.css">
 <link rel="icon" href="/assets/favicon.ico">
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
 <!--[if IE ]>
@@ -103,11 +104,7 @@
 
 <!-- Content appended here -->
 <div class="franklin-content"><h1 id="静的サイトジェネレーター_franklinjl"><a href="#静的サイトジェネレーター_franklinjl" class="header-anchor">静的サイトジェネレーター Franklin.jl</a></h1>
-<p>
-<div style="text-align:center">
-<img src="https://franklinjl.org/assets/infra/logoF2.svg" alt="" height="200px">
-</div>
- 
+<p><div class="titleimage"><img src="https://franklinjl.org/assets/infra/logoF2.svg" alt="" ></div> 
 <div class="sns-container top">
   <div class="sns-box b-twitter">
     <a href="https://twitter.com/share?url=https://hanafsky.com/tips/franklin&text=静的サイトジェネレーター Franklin.jl&via=HanafusaKei&related=HanafusaKei"
@@ -136,7 +133,7 @@
 <li><p><a href="http://terasakisatoshi.github.io/MathSeminar.jl">MathSeminar.jl</a> 今のところ唯一？の日本語ソース</p>
 </li>
 </ul>
-<div class="franklin-toc"><ol><li><a href="#使ってみる">使ってみる</a><ol><li><a href="#インストール方法">インストール方法</a></li><li><a href="#デモサイトを作ってみる">デモサイトを作ってみる。</a></li><li><a href="#基本的な文法">基本的な文法</a></li><li><a href="#juliaのコードを書いてみる">juliaのコードを書いてみる。</a></li></ol></li><li><a href="#注意したいポイント">注意したいポイント</a><ol><li><a href="#記号に気を付けよう"><code>\</code>記号に気を付けよう</a></li><li><a href="#juliaコード内の変数のスコープ">juliaコード内の変数のスコープ</a></li><li><a href="#github_actions_の罠">github actions の罠</a></li><li><a href="#プロットのxylabelが切れる">プロットのxylabelが切れる</a></li></ol></li><li><a href="#せっかくなので拡張してみる">せっかくなので、拡張してみる。</a><ol><li><a href="#コードのフォントには_juliamono_を使おう">コードのフォントには juliamono を使おう</a></li></ol></li><li><a href="#まとめ">まとめ</a></li></ol></div>
+<div class="franklin-toc"><ol><li><a href="#使ってみる">使ってみる</a><ol><li><a href="#インストール方法">インストール方法</a></li><li><a href="#デモサイトを作ってみる">デモサイトを作ってみる。</a></li><li><a href="#基本的な文法">基本的な文法</a></li><li><a href="#juliaのコードを書いてみる">juliaのコードを書いてみる。</a></li></ol></li><li><a href="#注意したいポイント">注意したいポイント</a><ol><li><a href="#記号に気を付けよう"><code>\</code>記号に気を付けよう</a></li><li><a href="#juliaコード内の変数のスコープ">juliaコード内の変数のスコープ</a></li><li><a href="#github_actions_の罠">GitHub actions の罠</a></li><li><a href="#プロットのxylabelが切れる">プロットのxylabelが切れる</a></li></ol></li><li><a href="#せっかくなので拡張してみる">せっかくなので、拡張してみる。</a><ol><li><a href="#コードのフォントには_juliamono_を使おう">コードのフォントには juliamono を使おう</a></li></ol></li><li><a href="#まとめ">まとめ</a></li></ol></div>
 <h2 id="使ってみる"><a href="#使ってみる" class="header-anchor">使ってみる</a></h2>
 <h3 id="インストール方法"><a href="#インストール方法" class="header-anchor">インストール方法</a></h3>
 <p>まずREPLのパッケージモードからFranklinをインストールします。</p>
@@ -236,7 +233,7 @@ a</code></pre>
     </tr>
 </table>
 
-<h3 id="github_actions_の罠"><a href="#github_actions_の罠" class="header-anchor">github actions の罠</a></h3>
+<h3 id="github_actions_の罠"><a href="#github_actions_の罠" class="header-anchor">GitHub actions の罠</a></h3>
 <p>GitHub pagesを使えば、無料でホームページを作ることができます。Franklin.jlでは GitHub actions（GitHubのレポジトリの中で自動的に実行される処理）を利用して、 サイトを構成することが推奨されています。</p>
 <p>Franklin の場合は、 <code>.github\workflows\deploy.yml</code>にコードが記載されていて、 リモートレポジトリへpushしたときに処理が実行されます。 deploy.ymlの中身を見れば雰囲気がわかると思いますが、処理の流れをざっくり説明すると</p>
 <ol>
@@ -327,13 +324,13 @@ default&#40;
 </div>
  
   <div class="prev-next-link">
-  <a class="prev-link" href="https://hanafsky.com/tips/startup">
+  <a class="prev-link" href="/tips/startup">
     <p class="prev-next-label">前の記事</p>
     <p>
        julia 起動時の初期設定 - startup.jl
     </p>
   </a>
-  <a class="next-link" href="https://hanafsky.com/tips/pluto/">
+  <a class="next-link" href="/tips/pluto/">
     <p class="prev-next-label">次の記事</p>
     <p>
        リアクティブなノートブック Pluto.jl
@@ -352,7 +349,7 @@ default&#40;
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: April 15, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: April 18, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

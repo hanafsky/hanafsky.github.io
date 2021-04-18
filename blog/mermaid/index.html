@@ -1,0 +1,404 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="/css/franklin.css">
+<link rel="stylesheet" href="/css/minimal-mistakes.css">
+<link rel="stylesheet" href="/css/adjust.css">
+<link rel="stylesheet" href="/css/luminous-basic.min.css">
+<link rel="icon" href="/assets/favicon.ico">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<!--[if IE ]>
+<style>
+  /* old IE unsupported flexbox fixes */
+  .greedy-nav .site-title {
+    padding-right: 3em;
+  }
+  .greedy-nav button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+</style>
+<![endif]-->
+
+   <title>mermaid.jsのフローチャートメモ</title>  
+  <!-- end custom head snippets -->
+</head>
+<body class="layout--single">
+  <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Hanafsky.com</a>
+        <ul class="visible-links">
+          <li class="masthead__menu-item"><a href="/tips/" >Julia-tips</a></li>
+          <li class="masthead__menu-item"><a href="/blog/" >Blog</a></li>
+          <li class="masthead__menu-item"><a href="/project/" >Projects</a></li>
+          <li class="masthead__menu-item"><a href="/about/">About</a></li>
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+  <div class="initial-content">
+    <div id="main" role="main">
+      <div class="sidebar sticky">
+        <div itemscope itemtype="https://schema.org/Person">
+          <div class="author__avatar">
+            <img src="/assets/design/author3.png" alt="Dio" itemprop="image">
+          </div>
+          <div class="author__content">
+            <h3 class="author__name" itemprop="name">Kei Hanafusa</h3>
+            <p class="author__bio" itemprop="description">Chemical Engineer, <br> living in Osaka, 🗾</p>
+          </div>
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Follow</button>
+            <ul class="author__urls social-icons">
+              <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+                <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Osaka, Japan</span></li>
+              <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+              <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+            </ul>
+          </div>
+
+          
+              
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Tag</button>
+            <ul class="author__urls social-icons">
+              <li>タグ</li>
+              <li></li>
+              <li><a href="/tag/gadget/">ガジェット</a></li>
+              <li><a href="/tag/health/">健康</a></li>
+              <li><a href="/tag/memo">メモ</a></li>
+              <li><a href="/tag/research">自由研究</a></li>
+            </ul>
+          </div>
+          
+          
+        </div>
+      </div>
+
+
+<!-- Content appended here -->
+<div class="franklin-content"><h1 id="フローチャートの書き方メモ_mermaidjs"><a href="#フローチャートの書き方メモ_mermaidjs" class="header-anchor">フローチャートの書き方メモ mermaid.js</a></h1>
+<p><div class="titleimage"><img src="/assets/blog/mermaid.jpg" alt="" ></div> 
+<div class="sns-container top">
+  <div class="sns-box b-twitter">
+    <a href="https://twitter.com/share?url=https://hanafsky.com/blog/mermaid&text=mermaid.js フローチャートの書き方メモ&via=HanafusaKei&related=HanafusaKei"
+    target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
+  <div class="sns-box b-facebook">
+    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/blog/mermaid" 
+    target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+  <div class="sns-box b-hatena">
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/blog/mermaid&title=mermaid.js フローチャートの書き方メモ"
+    target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
+  <div class="sns-box b-pocket">
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/blog/mermaid&title=mermaid.js フローチャートの書き方メモ"
+    rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
+  <div class="sns-box b-feedly">
+    <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
+    rel="nofollow" target="_blank"><span class="icon-feedly"></i></a></div>
+  <div class="sns-box b-line">
+    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/blog/mermaid'
+    target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
+</div>
+</p>
+<div class="franklin-toc"><ol><li><a href="#はじめに">はじめに</a><ol><li><a href="#使ってみる">使ってみる</a></li><li><a href="#htmlに埋め込む">HTMLに埋め込む</a></li></ol></li><li><a href="#チートシート">チートシート</a></li><li><a href="#まとめ">まとめ</a></li></ol></div>
+<h2 id="はじめに"><a href="#はじめに" class="header-anchor">はじめに</a></h2>
+<p>フローチャートを書きたいときには、どんなツールを使うのが良いのでしょうか。</p>
+<p>以前の私はパワーポイントもしくはイラストレーターで一生懸命作っていましたが、 時短を意識してマークダウンエディターで文書を書くようになってからは、<a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a>というjavascriptで書かれた描画ツールをよく利用しています。<sup id="fnref:1"><a href="#fndef:1" class="fnref">[1]</a></sup></p>
+<p>mermaidを使うメリットをまとめてみました。</p>
+<ul>
+<li><p><span class="marker"> ユーザーは図の論理構造だけを考えれば良い。</span></p>
+</li>
+<li><p>フローチャート以外の図も充実。（ガントチャート、UML図など）</p>
+</li>
+<li><p>コードで記述するのでgitで変更差分を管理できる。</p>
+</li>
+<li><p>cssやjavascriptの知識があれば、デザインを調整可能。<sup id="fnref:2"><a href="#fndef:2" class="fnref">[2]</a></sup></p>
+</li>
+</ul>
+<p>それでは、実際に使ってみましょう。</p>
+<h3 id="使ってみる"><a href="#使ってみる" class="header-anchor">使ってみる</a></h3>
+<p>簡単な例をみてみましょう。Fig.1はジャンケンの関係を表すフローチャートです。</p>
+<p>フローチャート記号もジャンケンのシンボルに似たデザインで合わせてみました。</p>
+ <div style="text-align:center" class="mermaid"> 
+graph LR
+  id1([グー])
+  id2>チョキ]
+  id3{パー}
+  id1-->id2
+  id2-->id3
+  id3-->id1
+ </div>
+<p style="text-align:center">Fig.1 簡単なフローチャートの例</p>
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0NocmlzdG1hc10gLS0-fEdldCBtb25leXwgQihHbyBzaG9wcGluZylcbiAgICBCIC0tPiBDe0xldCBtZSB0aGlua31cbiAgICBDIC0tPnxPbmV8IERbTGFwdG9wXVxuICAgIEMgLS0-fFR3b3wgRVtpUGhvbmVdXG4gICAgQyAtLT58VGhyZWV8IEZbZmE6ZmEtY2FyIENhcl0iLCJtZXJtYWlkIjp7fSwidXBkYXRlRWRpdG9yIjpmYWxzZX0">live editor</a> もしくは、typoraやVisual Studio Codeなどのマークダウンプレビューが可能なエディターを立ち上げて以下のコードを書いてプレビューします。 するとFig.1のようなグラフを描画できます。live editorでは画像ファイルとしてダウンロードも可能です。</p>
+<pre><code class="language-markdown">&#96;&#96;&#96;mermaid
+graph LR 
+  id1&#40;&#91;グー&#93;&#41;
+  id2&gt;チョキ&#93;
+  id3&#123;パー&#125;
+  id1--&gt;id2
+  id2--&gt;id3
+  id3--&gt;id1
+&#96;&#96;&#96;</code></pre>
+<h4 id="簡単な説明"><a href="#簡単な説明" class="header-anchor">簡単な説明</a></h4>
+<p>まず、フローチャートであることを明示するために<code>graph</code>と書きます。その右に書いた <code>LR</code>は&quot;左から右&quot;という意味です。<code>TD</code>もしくは<code>TB</code>と書くと、上から下へのフローチャートになります。</p>
+<p><code>id&#43;数字</code>で書かれたところはフローチャートの要素の名前です。その右側に書いているのが、端子の形と端子の中に書く文字列です。 <code>id1&#40;&#91;グー&#93;&#41;</code>は中にグーと書いた丸端子です。</p>
+<h3 id="htmlに埋め込む"><a href="#htmlに埋め込む" class="header-anchor">HTMLに埋め込む</a></h3>
+<p>このサイトのようにHTMLの中でdiv要素の中にコードを記述して直接ウェブページにフローチャートを書くこともできます。</p>
+<p>ただし、最後にmermaidのjavascriptを読み込む必要があります。</p>
+<p>javascriptファイルは<a href="https://unpkg.com/browse/mermaid/">こちら</a>からダウンロードできます。</p>
+<pre><code class="language-html">&lt;div style&#61;&quot;text-align:center&quot; class&#61;&quot;mermaid&quot;&gt; 
+graph LR
+  id1&#40;&#91;グー&#93;&#41;
+  id2&gt;チョキ&#93;
+  id3&#123;パー&#125;
+  id1--&gt;id2
+  id2--&gt;id3
+  id3--&gt;id1
+ &lt;/div&gt;
+
+ &lt;script src&#61;&quot;mermaid.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+<div class="warning"><div class="title">😕 Warning&#33;</div>
+<div class="content"><p>Franklin.jlでmermaildを使うときに以下のことに注意する必要がありました。   deploy.ymlの中に、optimize&#40;&#41;という関数を呼び出す場所で、以下のようにオプションを指定する必要があります。</p>
+<pre><code class="language-julia">optimize&#40;;minify&#61;false&#41;</code></pre>
+<p>簡単に説明すると、デフォルトでは余計な改行を省いてhtmlのファイルサイズを小さくする処理が入っているのですが、   改行によって図の構造を表すmermaidとは相性が悪いので、無効化しているということです。</p></div></div>
+<h2 id="チートシート"><a href="#チートシート" class="header-anchor">チートシート</a></h2>
+<p>フローチャートの記号にはそれぞれ意味があるようです。丸端子は始点終点、◇は分岐といった具合です。</p>
+<p>フローチャートの記号の意味と、記号の出力方法の両方を知っていないとmermaidでフローチャートを作ることはできません。</p>
+<p>そこで、JIS規格っぽい感じのフローチャートを書くためのチートシート（Fig.2）を作りました。</p>
+ <div style="text-align:center" class="mermaid"> 
+graph TD
+  id1(["([はじめ])"])
+  id2("(家帰る)")
+  id3{"{運動したか？}"}
+  id4("(風呂に入る)")
+  id5[["[[筋トレ]]"]]
+  id6(("((ごはん食べる))"))
+  id7(["([寝る])"])
+  sub1[["[[筋トレ]]"]]
+  sub2[/"[/20回やる\]"\]
+  sub3[腕立て伏せ]
+  sub4[\"[\20回やる/]"/]
+  sub5[/"[/アプリで入力する/]"/]
+  sub6[("[(データベースに保存する)]")]
+  id1-->id2
+  id2-->id3
+  id3-->|yes|id4
+  id3-->|no|id5
+  id5-->id3
+  id4-->id6
+  id6-->id7
+  subgraph 腕立て伏せ20回3セットやる
+  sub1---sub2
+  sub2-.->sub3
+  sub3-.->sub4
+  sub4-->sub5
+  sub4==>|3セット|sub2
+  sub5-->sub6
+  end
+ </div>
+<p style="text-align:center">Fig.2 フローチャートのチートシート</p>
+<p>フローチャート記号の中に括弧も一緒に記載したので、記号の記述を忘れてもすぐに理解できます。</p>
+<p>実際のコードは以下のとおりです。</p>
+<pre><code class="language-julia">graph TD
+  id1&#40;&#91;&quot;&#40;&#91;はじめ&#93;&#41;&quot;&#93;&#41;
+  id2&#40;&quot;&#40;家帰る&#41;&quot;&#41;
+  id3&#123;&quot;&#123;運動したか？&#125;&quot;&#125;
+  id4&#40;&quot;&#40;風呂に入る&#41;&quot;&#41;
+  id5&#91;&#91;&quot;&#91;&#91;筋トレ&#93;&#93;&quot;&#93;&#93;
+  id6&#40;&#40;&quot;&#40;&#40;ごはん食べる&#41;&#41;&quot;&#41;&#41;
+  id7&#40;&#91;&quot;&#40;&#91;寝る&#93;&#41;&quot;&#93;&#41;
+  sub1&#91;&#91;&quot;&#91;&#91;筋トレ&#93;&#93;&quot;&#93;&#93;
+  sub2&#91;/&quot;&#91;/腕立て伏せ\&#93;&quot;\&#93;
+  sub3&#91;腕立て伏せ２０回&#93;
+  sub4&#91;\&quot;&#91;\腕立て伏せ/&#93;&quot;/&#93;
+  sub5&#91;/&quot;&#91;/アプリで入力する/&#93;&quot;/&#93;
+  sub6&#91;&#40;&quot;&#91;&#40;データベースに保存する&#41;&#93;&quot;&#41;&#93;
+  id1--&gt;id2
+  id2--&gt;id3
+  id3--&gt;|yes|id4
+  id3--&gt;|no|id5
+  id5--&gt;id3
+  id4--&gt;id6
+  id6--&gt;id7
+  subgraph 腕立て伏せ20回3セットやる
+  sub1---sub2
+  sub2-.-&gt;sub3
+  sub3-.-&gt;sub4
+  sub4--&gt;sub5
+  sub4&#61;&#61;&gt;|3セット|sub2
+  sub5--&gt;sub6
+  end</code></pre>
+<h2 id="まとめ"><a href="#まとめ" class="header-anchor">まとめ</a></h2>
+<p>コードで管理可能なmermaid.jsを用いたフローチャートの書き方、HTMLへの導入方法、チートシートを書いてしました。</p>
+<p>mermaid.jsにはフローチャート以外にもUML図やガントチャート、円グラフを書く機能も用意されています。</p>
+<p>機会があれば、こうした機能もブログで使ってみたいと思います。</p>
+ <p style="text-align:right">  めでたしめでたし </p>
+<p><table class="fndef" id="fndef:1">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:1">[1]</a></td>
+        <td class="fndef-content">2019年に<a href="https://osawards.com/javascript/2019">オープンソース賞</a>を受賞したとのこと。</td>
+    </tr>
+</table>
+<table class="fndef" id="fndef:2">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:2">[2]</a></td>
+        <td class="fndef-content">本サイトでは、javascriptをいじって色を変えています。このページのソースを見ると調整方法を確認できます。</td>
+    </tr>
+</table>
+ 
+<div class="sns-container top">
+  <div class="sns-box b-twitter">
+    <a href="https://twitter.com/share?url=https://hanafsky.com/blog/mermaid&text=mermaid.jsのフローチャートメモ&via=HanafusaKei&related=HanafusaKei"
+    target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
+  <div class="sns-box b-facebook">
+    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/blog/mermaid" 
+    target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+  <div class="sns-box b-hatena">
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/blog/mermaid&title=mermaid.jsのフローチャートメモ"
+    target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
+  <div class="sns-box b-pocket">
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/blog/mermaid&title=mermaid.jsのフローチャートメモ"
+    rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
+  <div class="sns-box b-feedly">
+    <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
+    rel="nofollow" target="_blank"><span class="icon-feedly"></i></a></div>
+  <div class="sns-box b-line">
+    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/blog/mermaid'
+    target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
+</div>
+ 
+  <div class="prev-next-link">
+  <a class="prev-link" href="/blog/hhkb">
+    <p class="prev-next-label">前の記事</p>
+    <p>
+       HHKBの話
+    </p>
+  </a>
+</div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> </p>
+    <script src="https://utteranc.es/client.js"
+        repo="hanafsky/blog_comments"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+<div class="page-foot">
+  <div class="copyright">
+    &copy; Kei Hanafusa. Last modified: April 18, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+  </div>
+</div>
+</div><!-- CONTENT ENDS HERE -->
+
+      </div> <!-- closure of main -->
+    </div>   <!-- closure of class initial--content -->
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+          <ul class="social-icons">
+            <li><strong>Follow:</strong></li>
+            <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+            <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          </ul>
+        </div>
+        <div class="page__footer-copyright">&copy; Kei Hanafusa. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="/libs/minimal-mistakes/main.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <script src="/libs/myBtn/myBtn.js"></script>
+    <script src="/libs/luminous/Luminous.min.js"></script>
+
+    
+    
+        <script src="/libs/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+
+    
+    
+        <script src="/libs/mermaid/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    theme: 'neutral',
+    themeCSS: '.node rect,\
+               .node circle,\
+               .node ellipse,\
+               .node path,\
+               .node polygon\
+               {fill:rgba(253,237,228,0.5);\
+                stroke: rgb(246,189,192)};\
+               .arrowheadPath {fill:rgb(246,189,192);}\
+               .edgePath .path {stroke:rgb(246,189,192);};\
+               .cluster rect\
+               {fill:rgba(255,249,177,0.3);\
+                stroke:rgb(246,189,192)};\
+               ',
+    // themeCSS: '.node rect {fill:rgba(253,237,228,0.5); stroke: rgb(250,219,218)};',
+    // logLevel: 3,
+    // securityLevel: 'loose',
+    // flowchart: { curve: 'basis' }
+  });
+</script>
+    
+    <script>
+    new Luminous(document.querySelectorAll('.zoom'));
+</script>
+    <script>
+function myToc() {
+    var x = document.getElementsByClassName("mytoc");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  } 
+</script>
+    <script>
+  function CopyToClipboard() {
+  /* Get the text field */
+  var copyText = document.getElementById("copytoclipboard");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+  </body>
+</html>

@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="/css/luminous-basic.min.css">
 <link rel="icon" href="/assets/favicon.ico">
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
 <!--[if IE ]>
@@ -125,14 +126,19 @@
 </div>
 </p>
 <h2 id="トピック"><a href="#トピック" class="header-anchor">トピック</a></h2>
-<div class="cards"><div class="row"><div class="column"><div class="card"><p style="text-align:center"><img src="https://www.pfu.fujitsu.com/direct/hhkb/images/detail_pd-kb800bs-1.jpg" alt="No Image"></p>
+<div class="cards"><div class="row"><div class="column"><div class="card"><p style="text-align:center"><img src="/assets/blog/mermaid.jpg" alt="No Image"></p>
+<div class="container"><div class="title"><div style="text-align:center">  mermaid.js </div></div>
+<div class="discription"><div style="text-align:center">  フローチャートの書き方メモ </div></div>
+
+  <p><button class="button" onclick="location.href='/blog/mermaid'">読む</button></p></div></div></div>
+<div class="column"><div class="card"><p style="text-align:center"><img src="https://www.pfu.fujitsu.com/direct/hhkb/images/detail_pd-kb800bs-1.jpg" alt="No Image"></p>
 <div class="container"><div class="title"><div style="text-align:center">  HHKBの話 </div></div>
 <div class="discription"><div style="text-align:center">  高級キーボードのカスタマイズ </div></div>
 
   <p><button class="button" onclick="location.href='/blog/hhkb'">読む</button></p></div></div></div></div></div>
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: April 15, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: April 18, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -174,11 +180,15 @@
     themeCSS: '.node rect,\
                .node circle,\
                .node ellipse,\
+               .node path,\
                .node polygon\
                {fill:rgba(253,237,228,0.5);\
                 stroke: rgb(246,189,192)};\
                .arrowheadPath {fill:rgb(246,189,192);}\
                .edgePath .path {stroke:rgb(246,189,192);};\
+               .cluster rect\
+               {fill:rgba(255,249,177,0.3);\
+                stroke:rgb(246,189,192)};\
                ',
     // themeCSS: '.node rect {fill:rgba(253,237,228,0.5); stroke: rgb(250,219,218)};',
     // logLevel: 3,

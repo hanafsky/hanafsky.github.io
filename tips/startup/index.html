@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="/css/luminous-basic.min.css">
 <link rel="icon" href="/assets/favicon.ico">
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
 <!--[if IE ]>
@@ -102,11 +103,7 @@
 
 <!-- Content appended here -->
 <div class="franklin-content"><h1 id="julia起動時の初期設定_-_startupjl"><a href="#julia起動時の初期設定_-_startupjl" class="header-anchor">julia起動時の初期設定 - startup.jl</a></h1>
-<p>
-<div style="text-align:center">
-<img src="/assets/tips/1415596_s.jpg" alt="" height="200px">
-</div>
- 
+<p><div class="titleimage"><img src="/assets/tips/startup.jpg" alt="" ></div> 
 <div class="sns-container top">
   <div class="sns-box b-twitter">
     <a href="https://twitter.com/share?url=https://hanafsky.com/tips/startup&text=julia 起動時の初期設定 - startup.jl&via=HanafusaKei&related=HanafusaKei"
@@ -139,10 +136,10 @@
 </li>
 </ul>
 <div class="warning"><div class="title">😕 Warning&#33;</div>
-<div class="content">configフォルダとファイルは自分で作る必要があります。</div></div>
+<div class="content">configフォルダーとファイルは自分で作る必要があります。</div></div>
 <h2 id="内容"><a href="#内容" class="header-anchor">内容</a></h2>
 <p>参考までに私のstartup.jlをさらしてみます。</p>
-<p>なお、proxyのアドレスやポートを直接知らなくても、自動構成スクリプト&#40;<code>***.pac</code>&#41;を 使っている場合、テキストエディタで開けば調べられる可能性があります。</p>
+<p>なお、proxyのアドレスやポートを直接知らなくても、自動構成スクリプト（<code>***.pac</code>）を 使っている場合、テキストエディターで開けば調べられる可能性があります。</p>
 <pre><code class="language-julia">&quot;&quot;&quot;
 Proxy 設定関連
 &quot;&quot;&quot;
@@ -175,7 +172,7 @@ using Revise # パッケージ開発時に利用する。</code></pre>
 <h2 id="注意事項"><a href="#注意事項" class="header-anchor">注意事項</a></h2>
 <div class="danger"><div class="title">😱 Danger&#33;</div>
 <div class="content">Windows環境下ではjuliaの新しいバージョンをインストールしてjuliaを実行すると、エラーが発生して、<strong>そもそもREPLが立ち上がらない</strong>問題が発生します。</div></div>
-<p>これはjuliaが参照するProject.tomlファイルが変更されたときに起こります。 &#40;つまり、v1.4 -&gt; v1.5のようなversion変更を行ったとき。 v1.5.2 -&gt; v1.5.3のような マイナーチェンジの時は起こりません。&#41;</p>
+<p>これはjuliaの参照するProject.tomlファイルが変更されたときに起こります。 &#40;つまり、v1.4 -&gt; v1.5のようなversion変更を行ったとき。 v1.5.2 -&gt; v1.5.3のような マイナーチェンジの時は起こりません。&#41;</p>
 <p>新バージョンのjuliaをインストールしたときは、startup.jlのusing文の行をいったんコメントアウトしておく必要があります。</p>
 <p> <p style="text-align:right">  めでたしめでたし </p> 
 <div class="sns-container top">
@@ -201,7 +198,7 @@ using Revise # パッケージ開発時に利用する。</code></pre>
 </p>
 <p>
   <div class="prev-next-link">
-  <a class="next-link" href="https://hanafsky.com/tips/franklin">
+  <a class="next-link" href="/tips/franklin">
     <p class="prev-next-label">次の記事</p>
     <p>
        静的サイトジェネレーター Franklin.jl
@@ -220,7 +217,7 @@ using Revise # パッケージ開発時に利用する。</code></pre>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: April 15, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: April 18, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

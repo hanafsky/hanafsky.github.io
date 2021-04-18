@@ -23,6 +23,27 @@
 
 <item>
   <title>
+    <![CDATA[  mermaid.jsのフローチャートメモ  ]]>
+  </title>
+  <link> https://hanafsky.github.io/blog/mermaid/index.html </link>
+  <guid> https://hanafsky.github.io/blog/mermaid/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/blog/mermaid.jpg" alt="titleimage" />mermaid.js　フローチャートの書き方メモ  ]]>
+  </description>  
+    
+  <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
+    
+  <category> blog </category>
+      
+</item>
+
+<item>
+  <title>
     <![CDATA[  ノイズを含むデータの微分 - Savitzky-Golay filter  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/savgol/index.html </link>
@@ -31,7 +52,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。  ]]>
   </description>  
     
-  <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -112,7 +133,7 @@
   <link> https://hanafsky.github.io/tips/startup/index.html </link>
   <guid> https://hanafsky.github.io/tips/startup/index.html </guid>
   <description>
-    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/1415596_s.jpg" alt="titleimage" />startup.jlによるjulia起動時の初期設定方法を説明します。  ]]>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/startup.jpg" alt="titleimage" />startup.jlによるjulia起動時の初期設定方法を説明します。  ]]>
   </description>  
     
   <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>  

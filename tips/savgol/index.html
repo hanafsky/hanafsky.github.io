@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="/css/luminous-basic.min.css">
 <link rel="icon" href="/assets/favicon.ico">
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
 <!--[if IE ]>
@@ -103,11 +104,7 @@
 
 <!-- Content appended here -->
 <div class="franklin-content"><h1 id="ノイズを含むデータの微分_-_savitzky-golay_filter"><a href="#ノイズを含むデータの微分_-_savitzky-golay_filter" class="header-anchor">ノイズを含むデータの微分 - Savitzky-Golay filter</a></h1>
-<p>
-<div style="text-align:center">
-<img src="/assets/tips/smooth-3221868_640.jpg" alt="" height="200px">
-</div>
- 
+<p><div class="titleimage"><img src="/assets/tips/smooth-3221868_640.jpg" alt="" ></div> 
 <div class="sns-container top">
   <div class="sns-box b-twitter">
     <a href="https://twitter.com/share?url=https://hanafsky.com/tips/savgol/&text=ノイズを含むデータの微分 - Savitzky-Golay filter&via=HanafusaKei&related=HanafusaKei"
@@ -285,8 +282,8 @@ scatter&#33;&#40;p_3,x,deriv1_2,label&#61;&quot;smoothed 1st order derivative&qu
 sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
 @btime apply_SG_filter&#40;y,sg3,derivativeOrder&#61;0&#41; # 直接畳み込み
 @btime apply_filter&#40;sg1&#91;:,2&#93;,y&#41; # FFT畳み込み</code></pre>
-<p><div class="code-output"><pre><code class="plaintext">  990.000 ns (1 allocation: 736 bytes)
-  25.901 μs (86 allocations: 10.55 KiB)
+<p><div class="code-output"><pre><code class="plaintext">  819.815 ns (1 allocation: 736 bytes)
+  23.002 μs (86 allocations: 10.55 KiB)
 </code></pre></div> 結果は直接畳み込みの圧勝で、Vincentさんのブログに書いてあるとおりでした。 DirectConvolution.jlにはこのほかにも2次元のSavitzky-Golayフィルターなど実装されているので、 いろいろ遊んでみたいと思います。</p>
 <p> <p style="text-align:right">  めでたしめでたし </p> 
 <div class="sns-container top">
@@ -311,7 +308,7 @@ sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
 </div>
  
   <div class="prev-next-link">
-  <a class="prev-link" href="https://hanafsky.com/tips/pluto">
+  <a class="prev-link" href="/tips/pluto">
     <p class="prev-next-label">前の記事</p>
     <p>
        リアクティブなノートブック Pluto.jl
@@ -330,7 +327,7 @@ sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: April 15, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: April 18, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -377,11 +374,15 @@ sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
     themeCSS: '.node rect,\
                .node circle,\
                .node ellipse,\
+               .node path,\
                .node polygon\
                {fill:rgba(253,237,228,0.5);\
                 stroke: rgb(246,189,192)};\
                .arrowheadPath {fill:rgb(246,189,192);}\
                .edgePath .path {stroke:rgb(246,189,192);};\
+               .cluster rect\
+               {fill:rgba(255,249,177,0.3);\
+                stroke:rgb(246,189,192)};\
                ',
     // themeCSS: '.node rect {fill:rgba(253,237,228,0.5); stroke: rgb(250,219,218)};',
     // logLevel: 3,
