@@ -125,6 +125,7 @@ html {
 }
 .franklin-content h4 {
     position: relative;
+    font-size: 20px;
     padding-left: 1.2em;/*アイコン分のスペース*/
     line-height: 1.4;}
 
@@ -133,7 +134,7 @@ html {
   content: "\f00c";/*アイコンのユニコード*/
   font-weight: 900;
   position: absolute;/*絶対位置*/
-  font-size: 1em;/*サイズ*/
+  /* font-size: 1em;サイズ */
   left: 0;/*アイコンの位置*/
   top: 0;/*アイコンの位置*/
   color: rgb(246,189,192); /*アイコン色*/
@@ -483,7 +484,8 @@ code {
 .franklin-toc:before{
     content: "Contents";
     font-size: 16px;
-    font-family: "Yozakura";
+    font-family: "Noto Sans JP";
+    font-weight: bolder;
     padding-left: 10px;
     /* padding-bottom: 0px; */
 }
