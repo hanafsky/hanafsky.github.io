@@ -192,3 +192,12 @@ For instance:
   <button onclick="CopyToClipboard()" onmouseout="outFunc">コピーする</button>
   ~~~
 }
+
+
+\newcommand{\iframe}[1]{
+  ~~~
+  <iframe src="!#1" width="100%" height="300px">
+  このページはiframe対応ブラウザでご覧ください。
+  </iframe>
+  ~~~
+}
