@@ -1,12 +1,12 @@
 
 @def title="mermaid.jsのフローチャートメモ"
 @def rss_description="![titleimage](/assets/blog/mermaid.jpg)mermaid.js　フローチャートの書き方メモ"
-@def rss_pubdate=Date(2021, 4, 16)
-@def published="16 April 2021"
+@def rss_pubdate=Date(2021, 4, 18)
+@def published="18 April 2021"
 @def rss_category="blog"
 @def hasmermaid=true
 @def hascode=true
-@def tags=["gadget"]
+@def tags=["memo"]
 @def isblog=true
 
 # フローチャートの書き方メモ mermaid.js
@@ -20,14 +20,14 @@
 ## はじめに
 フローチャートを書きたいときには、どんなツールを使うのが良いのでしょうか。
 
-以前の私はパワーポイントで一生懸命作っていましたが、時短を意識してマークダウンエディターで文書を書くようになってからは、[mermaid](https://mermaid-js.github.io/mermaid/#/)というjavascriptで書かれた描画ツールをよく利用しています。[^1]
+以前の私はパワーポイントもしくはイラストレーターで一生懸命作っていましたが、
+時短を意識してマークダウンエディターで文書を書くようになってからは、[mermaid](https://mermaid-js.github.io/mermaid/#/)というjavascriptで書かれた描画ツールをよく利用しています。[^1]
 
 mermaidを使うメリットをまとめてみました。
 - \marker{ユーザーは図の論理構造だけを考えれば良い。}
 - フローチャート以外の図も充実。（ガントチャート、UML図など）
-- テキスト形式なのでgitで変更差分を管理できる。
+- コードで記述するのでgitで変更差分を管理できる。
 - cssやjavascriptの知識があれば、デザインを調整可能。[^2]
-
 
 それでは、実際に使ってみましょう。
 
@@ -202,7 +202,7 @@ mermaid.jsにはフローチャート以外にもUML図やガントチャート�
 \right{めでたしめでたし}
 
 [^1]: 2019年に[オープンソース賞](https://osawards.com/javascript/2019)を受賞したとのこと。
-[^2]: 本サイトでは、javascriptをいじって色を変えています。
+[^2]: 本サイトでは、javascriptをいじって色を変えています。このページのソースを見ると調整方法を確認できます。
 
 \share{blog/mermaid}{mermaid.jsのフローチャートメモ}
 \prev{/blog/hhkb}{HHKBの話}
