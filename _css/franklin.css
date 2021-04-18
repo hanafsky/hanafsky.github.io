@@ -3,10 +3,11 @@
 ================================================================== */
 
 html {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size  : 17px;
+    font-family: 'Noto Sans JP',Helvetica, Arial, sans-serif;
+    font-size  : 16px;
     color: #1c1c1c;
 }
+
 /* ==================================================================
     BASIC GRID FOR PROFILE PIC
 ================================================================== */
@@ -56,6 +57,7 @@ html {
 ================================================================== */
 
 .franklin-content {
+    font-family: 'Noto Sans JP';
     position: relative;
     padding-left: 12.5%;
     padding-right: 12.5%;
@@ -82,8 +84,10 @@ html {
 
 .franklin-content h1 { 
     font-size: 24px;
-    font-family: 'Yozakura' ;}
-.franklin-content h2 { font-size: 22px; }
+    font-family: 'Yozakura', 'Noto Sans JP' ;}
+.franklin-content h2 { 
+    font-size: 22px;
+    font-family: 'Noto Sans JP'; }
 .franklin-content h3 { font-size: 20px; }
 
 .franklin-content h1, h2, h3, h4, h5, h6 {
@@ -468,16 +472,27 @@ code {
     border: true;
     border-radius: 10px;
     font-size: 12px;
+    font-weight: bold;
     display: inline-block;
-    padding-right: 30px;
+    padding-right: 50px;
     padding-left: 10px;
     padding-top: 10px;
-    margin: 0%;
+    /* width: 60%; */
+    margin: 0 0 0 0;
 }
-.franklin-toc li {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: bold;
+.franklin-toc:before{
+    content: "Contents";
+    font-size: 16px;
+    font-family: "Yozakura";
+    padding-left: 10px;
+    /* padding-bottom: 0px; */
+}
+.franklin-toc li ol{
+    border-style: soid;
+    /* margin-bottom: -1%; */
+    /* margin-top: -1%; */
+    margin: 0 0 0 2em;
+    padding: 0 ;
 }
 /* icard */
 .column {
@@ -644,3 +659,27 @@ background: linear-gradient(transparent 60%, rgb(253,237,228) 0%);
     padding-left: 0;
     width: 100%;
     }
+
+.franklin-content ul{
+  font-size: smaller;
+  font-weight: bolder;
+  /* width: 80%; */
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: rgba(255,249,177,0.3);
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px silver;
+  padding: 0.5em 0.5em 0.5em 2.5em
+
+}
+.franklin-content ul li{
+    list-style: none;
+}
+
+.franklin-content ul > li:before{
+    content: "\f0a6";
+    position: absolute;
+    color: rgb(240,145,153);
+    margin-left: -1.5em;
+    font-family: "Font Awesome 5 Free";
+}
