@@ -183,9 +183,8 @@ graph LR
 
  &lt;script src&#61;&quot;mermaid.min.js&quot;&gt;&lt;/script&gt;</code></pre>
 <div class="warning"><div class="title">😕 Warning&#33;</div>
-<div class="content"><p>Franklin.jlでmermaildを使うときに以下のことに注意する必要がありました。   deploy.ymlの中に、optimize&#40;&#41;という関数を呼び出す場所で、以下のようにオプションを指定する必要があります。</p>
-<pre><code class="language-julia">optimize&#40;;minify&#61;false&#41;</code></pre>
-<p>簡単に説明すると、デフォルトでは余計な改行を省いてhtmlのファイルサイズを小さくする処理が入っているのですが、   改行によって図の構造を表すmermaidとは相性が悪いので、無効化しているということです。</p></div></div>
+<div class="content"><p>Franklin.jlでmermaildを使うときにはデプロイ時の設定に注意しなければいけません。   簡単に説明すると、デフォルトでは余計な改行を省いてhtmlのファイルサイズを小さくする処理が入っているのですが、   改行によって図の構造を表すmermaidとは相性が悪いので、これを無効化する必要があるということです。   具体的にはdeploy.ymlの中のoptimize&#40;&#41;という関数を呼び出す場所で、以下のオプションを指定すればOKです。</p>
+<pre><code class="language-julia">optimize&#40;;minify&#61;false&#41;</code></pre></div></div>
 <h2 id="チートシート"><a href="#チートシート" class="header-anchor">チートシート</a></h2>
 <p>フローチャートの記号にはそれぞれ意味があるようです。丸端子は始点終点、◇は分岐といった具合です。</p>
 <p>フローチャートの記号の意味と、記号の出力方法の両方を知っていないとmermaidでフローチャートを作ることはできません。</p>
