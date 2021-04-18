@@ -204,7 +204,7 @@ a
 
 [^2]: `global a #hide `のように書けば、コードを隠すこともできます。
 
-### github actions の罠
+### GitHub actions の罠
 
 GitHub pagesを使えば、無料でホームページを作ることができます。Franklin.jlでは
 GitHub actions（GitHubのレポジトリの中で自動的に実行される処理）を利用して、
