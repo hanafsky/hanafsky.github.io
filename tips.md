@@ -4,8 +4,10 @@
 # Julia Tips
 
 julia言語は、コードを書くのが楽で、実行速度がC言語なみに高速なプログラミング言語です。
+
 データ解析やシミュレーションなどの科学技術計算には長年pythonを利用していましたが、
 実行速度に限界を感じ、2018年以降はjulia言語のお世話になっています。
+
 ここではjulia言語の利用中に得た気づきなどをシェアします。
 
 
@@ -27,7 +29,7 @@ juliaのインストールは、[公式サイト](https://julialang.org/download
 @@row
 @@column \card{/assets/tips/smooth-3221868_640.jpg}{Savitzky Golay}{ノイジーなデータの微分}{/tips/savgol} @@
 @@column \card{/assets/tips/pluto-5962694_640.jpg}{Pluto.jl}{リアクティブなノートブック}{/tips/pluto} @@
-@@column \card{https://franklinjl.org/assets/infra/logoF2.svg}{Franklin.jl}{静的サイトジェネレーター}{/tips/franklin} @@
+@@column \card{/assets/tips/money-franklin.jpg}{Franklin.jl}{静的サイトジェネレーター}{/tips/franklin} @@
 @@column \card{/assets/tips/startup.jpg}{startup.jl}{julia 起動時の初期設定}{/tips/startup} @@
 @@
 @@
