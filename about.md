@@ -1,9 +1,10 @@
 @def title = "about"
 
-# Welcome to my website
-
-## About me
+# ようこそ
+## 作ったひと
+- Kei Hanafusa
 - 1983年生まれ。
+- 連絡先：hanafsky [at] gmail dot com
 - 出身地：[岡山](https://www.google.com/search?q=大都会岡山)
 - 2009年からUSJ近くの会社で勤務。
 - 化学系エンジニア
@@ -11,5 +12,17 @@
 - プログラミング：julia、python、html、css、javascript、C、java、Fortran。
 - スキル：3次元モデリング（Fusion360）。
 - 好き：数学、筋トレ、ピアノ、お酒全般。
+
+## サイト名の由来
+制作者の名前を東欧っぽくした。[^1]
+
+本当はhanafskyではなくて、hanavskyにしようと思っていたが、
+そうするとプラハのレトナ公園にあるレストランの名前になってしまったのでやめた。
+
+[^1]: あとwhiskyっぽくしたかった。
+## ロゴ（ファビコン）
+
+julia logoの色で、自分のパッケージ用のロゴを作りたかった。デザインセンスが皆無のため、このような残念な結果になった。
+
 
 \backtotop
