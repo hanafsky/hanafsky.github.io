@@ -11,10 +11,10 @@
 
 # ノイズを含むデータの微分 - Savitzky-Golay filter
 
-\titleimage{/assets/tips/smooth-3221868_640.jpg}
+\titleimage{/assets/tips/smooth-3221868_640.jpg}{https://pixabay.com/photos/smooth-abstract-curve-desktop-3221868/}
 \share{tips/savgol/}{ノイズを含むデータの微分 - Savitzky-Golay filter}
 
-実験データを解析していると、傾きや変曲点を求めたくなる時があります。
+実験データを解析していると、傾きや変曲点を求めたくなる時があります。S
 典型的なのが、時系列データの解析で急激に変化し始めるポイントを特定したいときです。
 実際のデータの微分を求めようとすると、ノイズが入っているので難儀します。
 学生の頃は、scipyで実装されたsavitzky-golayフィルターをよく使っていたのですが、

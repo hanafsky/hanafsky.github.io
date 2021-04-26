@@ -57,10 +57,11 @@ For instance:
 }{
 \html{</div>}
 }
-\newcommand{\titleimage}[1]{
+\newcommand{\titleimage}[2]{
 @@titleimage
 ~~~
 <img src="!#1" alt="" >
+<div style="text-align:right; font-size:small; color:grey">(src=!#2)</div>
 ~~~
 @@
 }
@@ -199,5 +200,20 @@ For instance:
   <iframe src="!#1" width="100%" height="300px">
   このページはiframe対応ブラウザでご覧ください。
   </iframe>
+  ~~~
+}
+
+\newcommand{\author}[1]{
+  ~~~
+  <div class="balloon">
+    <div class="faceicon">
+    <img src="/assets/design/author3.png" alt="author">
+    </div>
+    <div class="chatting">
+      <div class="says">
+      <p>#1</p>
+      </div>
+    </div>
+  </div>
   ~~~
 }

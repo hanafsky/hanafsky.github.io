@@ -9,7 +9,7 @@
 @def isjulia =true
 # julia起動時の初期設定 - startup.jl
 
-\titleimage{/assets/tips/startup.jpg}
+\titleimage{/assets/tips/startup.jpg}{https://pixabay.com/photos/space-shuttle-rocket-lift-off-774/}
 \share{tips/startup}{julia 起動時の初期設定 - startup.jl}
 
 startup.jlは、juliaのREPL起動時に自動的に実行されるプログラムです。

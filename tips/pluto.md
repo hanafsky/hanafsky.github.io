@@ -9,7 +9,7 @@
 @def isjulia =true
 
 # リアクティブなノートブック Pluto.jl
-\titleimage{/assets/tips/pluto-5962694_640.jpg}
+\titleimage{/assets/tips/pluto-5962694_640.jpg}{https://pixabay.com/photos/pluto-mascot-disney-shanghai-5962694/}
 \share{tips/pluto/}{リアクティブなノートブック Pluto.jl}
 
 文章や数式などのドキュメントと共にコードを記述することをLiterate Programmingと呼びます。
