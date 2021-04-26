@@ -11,7 +11,7 @@
 
 # フローチャートの書き方メモ mermaid.js
 
-\titleimage{/assets/blog/mermaid.jpg}
+\titleimage{/assets/blog/mermaid.jpg}{https://pixabay.com/photos/mermaid-fantasy-mystical-nature-2456981/}
 \share{blog/mermaid}{mermaid.js フローチャートの書き方メモ}
 
 
@@ -74,17 +74,12 @@ graph LR
 ``id1([グー])``は中にグーと書いた丸端子です。
 
 
-
-
-
 ### HTMLに埋め込む
 このサイトのようにHTMLの中でdiv要素の中にコードを記述して直接ウェブページにフローチャートを書くこともできます。
 
 ただし、最後にmermaidのjavascriptを読み込む必要があります。
 
 javascriptファイルは[こちら](https://unpkg.com/browse/mermaid/)からダウンロードできます。
-
-
 
 ```html
 
@@ -100,14 +95,14 @@ graph LR
 
  <script src="mermaid.min.js"></script>
 ```
-\warning{
-  Franklin.jlでmermaildを使うときにはデプロイ時の設定に注意しなければいけません。
-  簡単に説明すると、デフォルトでは余計な改行を省いてhtmlのファイルサイズを小さくする処理が入っているのですが、
-  改行によって図の構造を表すmermaidとは相性が悪いので、これを無効化する必要があるということです。
+\note{
+  この記事のように、Franklin.jlでmermaildを使うには、デプロイ時の設定に注意しなければいけません。
   具体的にはdeploy.ymlの中のoptimize()という関数を呼び出す場所で、以下のオプションを指定すればOKです。
   ```julia
   optimize(;minify=false)
   ```
+  簡単に説明すると、デフォルトでは余計な改行を省いてhtmlのファイルサイズを小さくする処理が入っているのですが、
+  改行によって図の構造を表すmermaidとは相性が悪いので、これを無効化する必要があるということです。
 }
 
 ## チートシート
