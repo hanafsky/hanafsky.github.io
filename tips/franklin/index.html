@@ -104,7 +104,8 @@
 
 <!-- Content appended here -->
 <div class="franklin-content"><h1 id="静的サイトジェネレーター_franklinjl"><a href="#静的サイトジェネレーター_franklinjl" class="header-anchor">静的サイトジェネレーター Franklin.jl</a></h1>
-<p><div class="titleimage"><img src="https://franklinjl.org/assets/infra/logoF2.svg" alt="" ></div> 
+<p><div class="titleimage"><img src="/assets/tips/money-franklin.jpg" alt="" >
+<div style="text-align:right; font-size:small; color:grey">(src=https://pixabay.com/photos/money-benjamin-franklin-dollar-4806693/)</div></div> 
 <div class="sns-container top">
   <div class="sns-box b-twitter">
     <a href="https://twitter.com/share?url=https://hanafsky.com/tips/franklin&text=静的サイトジェネレーター Franklin.jl&via=HanafusaKei&related=HanafusaKei"
@@ -140,7 +141,7 @@
 <pre><code class="language-julia">julia&gt;&#93;
 &#40;pkg&#41;&gt;add Franklin</code></pre>
 <h3 id="デモサイトを作ってみる"><a href="#デモサイトを作ってみる" class="header-anchor">デモサイトを作ってみる。</a></h3>
-<p>以下のコードを実行すると、デモサイト作成後にローカルサーバーが立ち上がり、 http://localhost:8000/でサイトを確認することができます。</p>
+<p>以下のコードを実行すると、mySiteというフォルダー作成後にローカルサーバーが立ち上がり、 http://localhost:8000/にアクセスするとデモサイトを確認することができます。</p>
 <pre><code class="language-julia">using Franklin
 newsite&#40;&quot;mySite&quot;,template&#61;&quot;vela&quot;&#41;
 serve&#40;&#41;</code></pre>
@@ -163,7 +164,7 @@ serve&#40;&#41;</code></pre>
 - 番号なしリスト
 
 &#91;リンク名&#93;&#40;リンク先&#41;</code></pre>
-<p>また、Katexによる数式レンダリングを標準でサポートしています。 数式入力も楽々です。</p>
+<p>また、Katexによる数式レンダリングを標準でサポートしています。 TeXの記法に慣れた人には、数式入力も楽々です。</p>
 <pre><code class="language-julia">&#36;&#36; \int_&#123;a&#125;^&#123;b&#125; f&#40;x&#41; &#61; F&#40;b&#41; - F&#40;a&#41;&#36;&#36;</code></pre>
 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mo>∫</mo><mi>a</mi><mi>b</mi></msubsup><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>F</mi><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo><mo>−</mo><mi>F</mi><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex"> \int_{a}^{b} f(x) = F(b) - F(a)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.5109580000000005em;vertical-align:-0.9119499999999999em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011249999999999316em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5990080000000004em;"><span style="top:-1.7880500000000001em;margin-left:-0.44445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3.812900000000001em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9119499999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mclose">)</span></span></span></span></span>
 <h3 id="juliaのコードを書いてみる"><a href="#juliaのコードを書いてみる" class="header-anchor">juliaのコードを書いてみる。</a></h3>
@@ -202,9 +203,12 @@ savefig&#40;p,joinpath&#40;@OUTPUT,&quot;figplot.svg&quot;&#41;&#41;</code></pre
 &lt;&#33;-- コマンドの実行 --&gt;
 \bolditaliccenter&#123;無駄！&#125;</code></pre>
 <div style="font-size:xx-large; text-align:center;font-style:italic; font-weight:bold"> 無駄！</div>
-<p>Franklinは、<code>\</code>が付くところをコマンドだとみなすので、下手に<code>\</code>を使おう ものなら<code>\newcommand</code>で定義されていないコマンドとみなされ、 サーバーが落ちてライブレンダリングできなくなります。 通常のマークダウンを書いているときは、ミスをしにくいと思いますが、 Literate.jlと連携してドキュメントを書いているときは、ミスに気づきにくいので注意が必要です。</p>
+<p>Franklinは、<code>\</code>が付くところをコマンドだとみなすので、下手に<code>\</code>を使おう ものなら<code>\newcommand</code>で定義されていないコマンドとみなされ、 <span class="marker"> サーバーが落ちてライブレンダリングできなくなります</span>。</p>
+<p>通常のマークダウンを書いているときはミスをしにくいと思いますが、Literate.jlと連携してドキュメントを書いているときは、<span class="marker"> 文章がコメントアウトされてミスに気づきにくい</span>ので注意が必要です。</p>
 <h3 id="juliaコード内の変数のスコープ"><a href="#juliaコード内の変数のスコープ" class="header-anchor">juliaコード内の変数のスコープ</a></h3>
-<p>juliaを使うときは、ループや関数内部からグローバル変数を何の断りもなく参照するのは アウトだと知っている人も多いと思います。この罠は、REPLやjupyterを使ってプロトタイピングを しているときには気にしなくてもよいですが、端末上で<code>julia hoge.jl</code>とするときは アウトになります。 Franklinでjuliaのコードを実行するときは後者の状況になるようで、実際に試してみると</p>
+<p>juliaを使うときは、ループや関数内部からグローバル変数を何の断りもなく参照するのは アウトだと知っている人も多いと思います。</p>
+<p>この罠は、REPLやjupyterを使ってプロトタイピングをしているときには気にしなくてもよいですが、powershellなどで<code>julia hoge.jl</code>とするときはアウトになります。</p>
+<p>Franklinでjuliaのコードを実行するときは、この状況になるようで、実際に試してみると</p>
 <pre><code class="language-julia">a &#61; 1
 for i in 1:2
     a &#43;&#61; 1
@@ -246,14 +250,13 @@ a</code></pre>
 </ol>
 <p>個別の状況によりますが、このdeploy.ymlは修正する必要があります。 私がハマった点を書いておきます。</p>
 <h4 id="master_or_main"><a href="#master_or_main" class="header-anchor">master or main?</a></h4>
-<div class="warning"><div class="title">😕 Warning&#33;</div>
-<div class="content">2020年の米国の騒動が原因で、GitHubのデフォルトブランチ名がmasterからmainに変更されました。 これに伴って、Franklinでもdeploy.ymlには、mainブランチにプッシュされると 動作するようになっています。当たり前ですが、この状態でmasterブランチにプッシュしても 何も起こりません。deploy.ymlのブランチ名を実際のブランチ名と合わせる必要があります。</div></div>
+<p>2020年にGitHubのデフォルトブランチ名がmasterからmainに変更されました。 これに伴って、Franklinでもdeploy.ymlには、mainブランチにプッシュされると動作するようになっています。</p>
+<p>当たり前ですが、この状態でmasterブランチにプッシュしても何も起こりません。<span class="marker"> deploy.ymlのブランチ名を実際のブランチ名と合わせる必要があります。</span></p>
 <h4 id="gh-pages_の設定をしておくこと"><a href="#gh-pages_の設定をしておくこと" class="header-anchor">gh-pages の設定をしておくこと</a></h4>
-<div class="warning"><div class="title">😕 Warning&#33;</div>
-<div class="content">レポジトリのページの Settings タブの下の方に GitHub Pages の欄があります。 ソースのブランチに gh-pages を選択しておく必要があります。</div></div>
+<p>レポジトリのページのSettingsタブの下の方にGitHub Pages の欄があります。 <span class="marker"> ソースのブランチにgh-pagesを選択しておく必要があります。</span></p>
 <h4 id="どのレポジトリにプッシュするか"><a href="#どのレポジトリにプッシュするか" class="header-anchor">どのレポジトリにプッシュするか</a></h4>
-<div class="warning"><div class="title">😕 Warning&#33;</div>
-<div class="content">username.github.io<strong>以外</strong>のレポジトリにプッシュするときは、deploy.yml の中に書いてあるoptimize&#40;&#41;を optimize&#40;;prepath&#61;&quot;レポジトリ名&quot;&#41;にしておく必要があります。そうしないと、リンク切れを起こしてしまいます。</div></div>
+<p>username.github.io<strong>以外</strong>のレポジトリにプッシュするときは、deploy.yml の中に書いてあるoptimize&#40;&#41;を <span class="marker"> optimize(;prepath="レポジトリ名")にしておく必要があります。</span></p>
+<p>そうしないと、リンク切れを起こしてしまいます。</p>
 <h4 id="projecttoml_を入れておこう"><a href="#projecttoml_を入れておこう" class="header-anchor">Project.toml を入れておこう。</a></h4>
 <p>GitHub actionsでのデプロイ時には、juliaコードの中で使用したパッケージがわかるように、 教えてやる必要があります。ローカルレポジトリで、以下のように処理しておくと、</p>
 <pre><code class="language-julia">julia&gt;&#93;
@@ -269,7 +272,8 @@ default&#40;
     bottom_margin &#61; 30px
 &#41;</code></pre>
 <h2 id="せっかくなので拡張してみる"><a href="#せっかくなので拡張してみる" class="header-anchor">せっかくなので、拡張してみる。</a></h2>
-<p>htmlやcssに関する知識が多少あれば、テンプレートファイルをいじって機能を拡張<a href="#footnote-1" class="footnote">[1]</a>することが可能です。 私はadomonitionの設定、トップに戻るボタン、mermaid.jsによるフローチャート描画の機能を追加してみました。 フォントを追加した例を書いておきます。</p>
+<p>htmlやcssに関する知識が多少あれば、テンプレートファイルをいじって機能を拡張<a href="#footnote-1" class="footnote">[1]</a>することが可能です。 私はadomonitionの設定、トップに戻るボタン、mermaid.jsによるフローチャート描画の機能などを追加してみました。</p>
+<p>フォントを追加した例を書いておきます。</p>
 <h3 id="コードのフォントには_juliamono_を使おう"><a href="#コードのフォントには_juliamono_を使おう" class="header-anchor">コードのフォントには juliamono を使おう</a></h3>
 <p><a href="https://github.com/cormullion/juliamono">juliamono</a>フォントを使えば、juliaのコードを洗練された見栄えに変更できます。 -&gt;が<code>-&gt;</code>になったり、|&gt;が<code>|&gt;</code>になるので、パイプ演算子や無名関数を多用する人は、気に入るのではないでしょうか？ <a href="https://cormullion.github.io/pages/2020-07-26-JuliaMono/">Cormullion のブログ</a>&#40;このサイトもFranklinで作られている。&#41;にインストール方法は載っています。</p>
 <p>cssでwebフォントとして使うのも簡単で<a href="https://cormullion.github.io/pages/2020-07-26-JuliaMono/#how_can_i_use_the_web_fonts_for_my_blog">こちら</a>にやり方が載っています。 少し改変したものが以下になります。まず、cssファイルに</p>
@@ -282,7 +286,7 @@ default&#40;
   font-family: &quot;JuliaMono-Regular&quot;, Monaco, Consolas, &quot;Lucida Console&quot;,
     monospace;
 &#125;</code></pre>
-<p>としておけば良いです。（font-familyの一番左に書くことが重要）</p>
+<p>などとしておけば良いです。（font-familyの一番左に書くことが重要）</p>
 <h2 id="まとめ"><a href="#まとめ" class="header-anchor">まとめ</a></h2>
 <ul>
 <li><p>Franklin.jl を使えば、テンプレートサイトをいじって簡単に自分だけのサイトが作れる。</p>
@@ -291,11 +295,9 @@ default&#40;
 </li>
 <li><p>julia コードを実行するときは変数のスコープに注意する。</p>
 </li>
-<li><p>GitHubにプッシュして簡単にホームページが作れる。</p>
-<ul>
-<li><p>GitHub-pagesを使うときは、deploy.yml、Project.toml、ソースブランチの設定に注意。</p>
+<li><p>GitHub-pagesを利用して無料でホームページを作れる。</p>
 </li>
-</ul>
+<li><p>GitHub-pagesを使うときは、deploy.yml、Project.toml、ソースブランチの設定に注意。</p>
 </li>
 <li><p>cssやjavascriptをいじって自分で拡張できる。</p>
 </li>
@@ -349,7 +351,7 @@ default&#40;
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: April 18, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: April 28, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

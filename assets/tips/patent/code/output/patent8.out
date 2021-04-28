@@ -1,0 +1,14 @@
+`HTML(s)`: Create an object that renders `s` as html.
+
+```
+HTML("<div>foo</div>")
+```
+
+You can also use a stream for large amounts of data:
+
+```
+HTML() do io
+  println(io, "<div>foo</div>")
+end
+```
+

@@ -104,7 +104,8 @@
 
 <!-- Content appended here -->
 <div class="franklin-content"><h1 id="ノイズを含むデータの微分_-_savitzky-golay_filter"><a href="#ノイズを含むデータの微分_-_savitzky-golay_filter" class="header-anchor">ノイズを含むデータの微分 - Savitzky-Golay filter</a></h1>
-<p><div class="titleimage"><img src="/assets/tips/smooth-3221868_640.jpg" alt="" ></div> 
+<p><div class="titleimage"><img src="/assets/tips/smooth-3221868_640.jpg" alt="" >
+<div style="text-align:right; font-size:small; color:grey">(src=https://pixabay.com/photos/smooth-abstract-curve-desktop-3221868/)</div></div> 
 <div class="sns-container top">
   <div class="sns-box b-twitter">
     <a href="https://twitter.com/share?url=https://hanafsky.com/tips/savgol/&text=ノイズを含むデータの微分 - Savitzky-Golay filter&via=HanafusaKei&related=HanafusaKei"
@@ -126,7 +127,8 @@
     target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
 </div>
 </p>
-<p>実験データを解析していると、傾きや変曲点を求めたくなる時があります。 典型的なのが、時系列データの解析で急激に変化し始めるポイントを特定したいときです。 実際のデータの微分を求めようとすると、ノイズが入っているので難儀します。 学生の頃は、scipyで実装されたsavitzky-golayフィルターをよく使っていたのですが、 juliaでは公式パッケージで使えるものはなさそうです。<sup id="fnref:1"><a href="#fndef:1" class="fnref">[1]</a></sup></p>
+<p>実験データを解析していると、傾きや変曲点を求めたくなる時があります。 典型的なのが、時系列データの解析で急激に変化し始めるポイントを特定したいときです。 実際のデータの微分を求めようとすると、ノイズが入っているので難儀します。</p>
+<p>そんなときに役に立つのが、Savitzky-Golay法です。 学生の頃は、scipyで実装されたsavitzky-golayフィルターをよく使っていたのですが、 juliaの公式パッケージで使えるものはなさそうです。<sup id="fnref:1"><a href="#fndef:1" class="fnref">[1]</a></sup></p>
 <p>scipyをimportしても良いのですが、<a href="https://pixorblog.wordpress.com/2016/07/13/savitzky-golay-filters-julia/">Vincent Picaudさんがblogで公開している説明</a>がとても分かりやすいので、 それに参考にして日本語で原理をまとめたり、juliaでのテスト結果をまとめたいと思います。</p>
 <table class="fndef" id="fndef:1">
     <tr>
@@ -282,8 +284,8 @@ scatter&#33;&#40;p_3,x,deriv1_2,label&#61;&quot;smoothed 1st order derivative&qu
 sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
 @btime apply_SG_filter&#40;y,sg3,derivativeOrder&#61;0&#41; # 直接畳み込み
 @btime apply_filter&#40;sg1&#91;:,2&#93;,y&#41; # FFT畳み込み</code></pre>
-<p><div class="code-output"><pre><code class="plaintext">  806.667 ns (1 allocation: 736 bytes)
-  35.599 μs (86 allocations: 10.55 KiB)
+<p><div class="code-output"><pre><code class="plaintext">  813.580 ns (1 allocation: 736 bytes)
+  35.400 μs (86 allocations: 10.55 KiB)
 </code></pre></div> 結果は直接畳み込みの圧勝で、Vincentさんのブログに書いてあるとおりでした。 DirectConvolution.jlにはこのほかにも2次元のSavitzky-Golayフィルターなど実装されているので、 いろいろ遊んでみたいと思います。</p>
 <p> <p style="text-align:right">  めでたしめでたし </p> 
 <div class="sns-container top">
@@ -327,7 +329,7 @@ sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: April 18, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: April 28, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

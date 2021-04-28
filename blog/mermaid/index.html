@@ -103,7 +103,8 @@
 
 <!-- Content appended here -->
 <div class="franklin-content"><h1 id="フローチャートの書き方メモ_mermaidjs"><a href="#フローチャートの書き方メモ_mermaidjs" class="header-anchor">フローチャートの書き方メモ mermaid.js</a></h1>
-<p><div class="titleimage"><img src="/assets/blog/mermaid.jpg" alt="" ></div> 
+<p><div class="titleimage"><img src="/assets/blog/mermaid.jpg" alt="" >
+<div style="text-align:right; font-size:small; color:grey">(src=https://pixabay.com/photos/mermaid-fantasy-mystical-nature-2456981/)</div></div> 
 <div class="sns-container top">
   <div class="sns-box b-twitter">
     <a href="https://twitter.com/share?url=https://hanafsky.com/blog/mermaid&text=mermaid.js フローチャートの書き方メモ&via=HanafusaKei&related=HanafusaKei"
@@ -182,9 +183,10 @@ graph LR
  &lt;/div&gt;
 
  &lt;script src&#61;&quot;mermaid.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-<div class="warning"><div class="title">😕 Warning&#33;</div>
-<div class="content"><p>Franklin.jlでmermaildを使うときにはデプロイ時の設定に注意しなければいけません。   簡単に説明すると、デフォルトでは余計な改行を省いてhtmlのファイルサイズを小さくする処理が入っているのですが、   改行によって図の構造を表すmermaidとは相性が悪いので、これを無効化する必要があるということです。   具体的にはdeploy.ymlの中のoptimize&#40;&#41;という関数を呼び出す場所で、以下のオプションを指定すればOKです。</p>
-<pre><code class="language-julia">optimize&#40;;minify&#61;false&#41;</code></pre></div></div>
+<div class="note"><div class="title">😲 Note</div>
+<div class="content"><p>この記事のように、Franklin.jlでmermaildを使うには、デプロイ時の設定に注意しなければいけません。   具体的にはdeploy.ymlの中のoptimize&#40;&#41;という関数を呼び出す場所で、以下のオプションを指定すればOKです。</p>
+<pre><code class="language-julia">optimize&#40;;minify&#61;false&#41;</code></pre>
+<p>簡単に説明すると、デフォルトでは余計な改行を省いてhtmlのファイルサイズを小さくする処理が入っているのですが、   改行によって図の構造を表すmermaidとは相性が悪いので、これを無効化する必要があるということです。</p></div></div>
 <h2 id="チートシート"><a href="#チートシート" class="header-anchor">チートシート</a></h2>
 <p>フローチャートの記号にはそれぞれ意味があるようです。丸端子は始点終点、◇は分岐といった具合です。</p>
 <p>フローチャートの記号の意味と、記号の出力方法の両方を知っていないとmermaidでフローチャートを作ることはできません。</p>
@@ -311,7 +313,7 @@ graph TD
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: April 18, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: April 28, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

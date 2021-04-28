@@ -1,0 +1,429 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="/css/franklin.css">
+<link rel="stylesheet" href="/css/minimal-mistakes.css">
+<link rel="stylesheet" href="/css/adjust.css">
+<link rel="stylesheet" href="/css/luminous-basic.min.css">
+<link rel="icon" href="/assets/favicon.ico">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<!--[if IE ]>
+<style>
+  /* old IE unsupported flexbox fixes */
+  .greedy-nav .site-title {
+    padding-right: 3em;
+  }
+  .greedy-nav button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+</style>
+<![endif]-->
+
+   <title>Google Patentを翻訳してみる</title>  
+  <!-- end custom head snippets -->
+</head>
+<body class="layout--single">
+  <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Hanafsky.com</a>
+        <ul class="visible-links">
+          <li class="masthead__menu-item"><a href="/tips/" >Julia-tips</a></li>
+          <li class="masthead__menu-item"><a href="/blog/" >Blog</a></li>
+          <li class="masthead__menu-item"><a href="/project/" >Projects</a></li>
+          <li class="masthead__menu-item"><a href="/about/">About</a></li>
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+  <div class="initial-content">
+    <div id="main" role="main">
+      <div class="sidebar sticky">
+        <div itemscope itemtype="https://schema.org/Person">
+          <div class="author__avatar">
+            <img src="/assets/design/author3.png" alt="Dio" itemprop="image">
+          </div>
+          <div class="author__content">
+            <h3 class="author__name" itemprop="name">Kei Hanafusa</h3>
+            <p class="author__bio" itemprop="description">Chemical Engineer, <br> living in Osaka, 🗾</p>
+          </div>
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Follow</button>
+            <ul class="author__urls social-icons">
+              <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+                <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Osaka, Japan</span></li>
+              <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+              <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+            </ul>
+          </div>
+
+          
+          
+              
+
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Tag</button>
+            <ul class="author__urls social-icons">
+              <li>タグ</li>
+              <li></li>
+              <li><a href="/tag/setting/">設定</a></li>
+              <li><a href="/tag/thirdparty/">サードパーティライブラリ</a></li>
+              <li><a href="/tag/recipe">レシピ</a></li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+
+
+<!-- Content appended here -->
+<div class="franklin-content"><h1 id="google_patentを翻訳してみる"><a href="#google_patentを翻訳してみる" class="header-anchor">Google Patentを翻訳してみる。</a></h1>
+<p><div class="titleimage"><img src="/assets/tips/steam-locomotive-4275398_1280.jpg" alt="" >
+<div style="text-align:right; font-size:small; color:grey">(src=https://pixabay.com/illustrations/steam-locomotive-steam-car-4275398/)</div></div> 
+<div class="sns-container top">
+  <div class="sns-box b-twitter">
+    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/pluto/&text=Google Patentを翻訳してみる。&via=HanafusaKei&related=HanafusaKei"
+    target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
+  <div class="sns-box b-facebook">
+    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/pluto/" 
+    target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+  <div class="sns-box b-hatena">
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/pluto/&title=Google Patentを翻訳してみる。"
+    target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
+  <div class="sns-box b-pocket">
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/pluto/&title=Google Patentを翻訳してみる。"
+    rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
+  <div class="sns-box b-feedly">
+    <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
+    rel="nofollow" target="_blank"><span class="icon-feedly"></i></a></div>
+  <div class="sns-box b-line">
+    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/pluto/'
+    target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
+</div>
+</p>
+<p>企業で研究者をやっていると、特許調査と無縁ではいられません。<sup id="fnref:1"><a href="#fndef:1" class="fnref">[1]</a></sup></p>
+<p>日本語の特許なら良いのですが、外国語で書かれた特許を読む場合もあります。</p>
+<p>それも、外国語の特許を100件単位で読まなければならない事態になるとしたら、仮にその言語が得意であっても、大抵の人は嫌になると思います。</p>
+<p>そのような事態に巻き込まれた私は、pythonのbeautiful soupというライブラリで、Google Patentから請求項だけ抽出して翻訳する作業を以前から自動化していました。</p>
+<p>juliaでも同様のことができたので、やり方を紹介したいと思います。</p>
+<p>ちなみにGooglePatentをパースして、Google翻訳するというGoogle先生に完全におんぶにだっこのプログラムです。<sup id="fnref:2"><a href="#fndef:2" class="fnref">[2]</a></sup></p>
+<p><table class="fndef" id="fndef:1">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:1">[1]</a></td>
+        <td class="fndef-content">特許を書くこととも無縁ではいられません。</td>
+    </tr>
+</table>
+ <table class="fndef" id="fndef:2">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:2">[2]</a></td>
+        <td class="fndef-content">chromeの右クリックメニューで翻訳すればいいのに、という突っ込みは無視します。</td>
+    </tr>
+</table>
+</p>
+<h2 id="流れ"><a href="#流れ" class="header-anchor">流れ</a></h2>
+<p>プログラムの流れを図示すると、以下のようになります。</p>
+ <div style="text-align:center" class="mermaid"> 
+graph LR
+    id1("1. GooglePatentをパースする")
+    id2("2. 請求項だけを抜き出す")
+    id3("3. 翻訳する")
+    id4("4. Pluto.jlで体裁を整える")
+    id1-->id2
+    id2-->id3
+    id3-->id4
+ </div>
+<p>この順に見ていきます。</p>
+<h3 id="google_patentをパースする"><a href="#google_patentをパースする" class="header-anchor">Google Patentをパースする</a></h3>
+<p>ここでは<a href="https://www.eff.org/ja/deeplinks/2020/08/guitar-villain-ubisoft-patents-basic-teaching-techniques">Stupid Patent of the month</a>で紹介された特許例を使ってみます。</p>
+<p>最初にサードパーティライブラリのHTTP.jlで特許番号US9839852のURLにアクセスできることを確認します。</p>
+<a href="https://github.com/JuliaWeb/HTTP.jl"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/JuliaWeb/HTTP.jl.png" width="460px"></a>
+<pre><code class="language-julia">using HTTP
+patentURL&#61;&quot;https://patents.google.com/patent/US9839852&quot;
+r&#61;HTTP.request&#40;&quot;GET&quot;, patentURL&#41;
+@show r.status;</code></pre>
+<p><div class="code-output"><pre><code class="plaintext">r.status = 200
+</code></pre></div> ステータスが200と表示されたので、アクセスに成功したことがわかります。</p>
+<p>次にGumbo.jlを使ってHTMLをパースします。</p>
+
+<a href="https://github.com/JuliaWeb/Gumbo.jl"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/JuliaWeb/Gumbo.jl.png" width="460px"></a>
+
+<pre><code class="language-julia">using Gumbo
+h &#61; parsehtml&#40;String&#40;r.body&#41;&#41;</code></pre>
+<h2 id="請求項だけを抜き出す"><a href="#請求項だけを抜き出す" class="header-anchor">請求項だけを抜き出す</a></h2>
+<p>次にCSSセレクターを使って必要な部分を抽出します。 ここでは、Cascadia.jlを使います。</p>
+
+<a href="https://github.com/Algocircle/Cascadia.jl"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/Algocircle/Cascadia.jl.png" width="460px"></a>
+
+<p>たとえば、titleタグの中身を表示したければ以下のようにします。</p>
+<pre><code class="language-julia">using Cascadia
+s &#61; Selector&#40;&quot;title&quot;&#41;
+q &#61; eachmatch&#40;s, h.root&#41;
+q&#91;1&#93; |&gt; nodeText |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext">US9839852B2 - Interactive guitar game 
+        - Google Patents
+</code></pre></div>
+<p>タグに囲まれた文章ではなく、href属性を取得したければ以下のようにします。</p>
+<pre><code class="language-julia">qa &#61; eachmatch&#40;Selector&#40;&quot;a&quot;&#41;, h.root&#41;
+qa&#91;1&#93;.attributes&#91;&quot;href&quot;&#93; |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext">https://patentimages.storage.googleapis.com/ea/a3/cd/747072854dad30/US9839852.pdf
+</code></pre></div>
+<div class="note"><div class="title">😲 Note</div>
+<div class="content">Google Patentの最初のaタグはpdfのダウンロードリンクです。</div></div>
+<p>Cascadia.jlについては、ドキュメントがまだ充実していないので、気が向いたらまとめを作ってみたいと思います。 いよいよ請求項を抜き出します。</p>
+<h3 id="google_patentの請求項の構造を確認する"><a href="#google_patentの請求項の構造を確認する" class="header-anchor">Google Patentの請求項の構造を確認する</a></h3>
+<p>Google Patentのソースを見てみると、請求項は&quot;claims&quot;というクラスのブロック要素の中に記述されていることがわかります。</p>
+<p>独立クレームの場合は、その中の&quot;claim&quot;というクラスのブロック要素の中にある&quot;claim&quot;というクラスのブロック要素の中に記述されています。</p>
+<p>一方で従属クレームの場合は、&quot;claim-dependent&quot;というクラスのブロック要素の中にある&quot;claim&quot;というクラスのブロック要素の中に記述されています。</p>
+<p>クラス名が重複しているので、自分でも何を書いているのかよくわかりません。 図示してみるとわかりやすいです。</p>
+ <div style="text-align:center" class="mermaid"> 
+graph TD
+        id1("""div class='claims'""")
+        id2("""div class='claim'""")
+        id3("""div class='claim'""")
+        id4("""div class='claims'""")
+        id5("""div class='claim-dependent'""")
+        id6("""div class='claim'""")
+        subgraph 従属クレーム
+        id4-.-id5
+        id5---id6
+        end
+        subgraph 独立クレーム
+        id1-.-id2
+        id2---id3
+        end
+ </div>
+<p>独立請求項だけを抜き出したいときは、<code>Selector&#40;&quot;.claims .claim .claim&quot;&#41;</code>とすればOKです。 実際に最初の請求項を抽出します。</p>
+<pre><code class="language-julia">using Cascadia
+s_claim &#61; Selector&#40;&quot;.claims .claim .claim&quot;&#41;
+q_claim &#61; eachmatch&#40;s_claim, h.root&#41;
+claim1 &#61; q_claim&#91;1&#93; |&gt; nodeText 
+@show claim1</code></pre>
+<div class="code-output"><pre><code class="plaintext">claim1 = "1. A non-transitory computer readable storage medium with a computer program stored thereon, wherein the computer program is operable to present an interactive game for playing a song on a guitar, wherein the computer program instructs one or more processors to perform the steps of:\npresenting, on a display device, a plurality of fingering notations corresponding to the song to be played by a user;receiving, from a guitar input device, an analog or digital audio signal when the guitar is played by the user, wherein the received signal corresponds to the song played by the user;assessing a performance of the song as played by the user,based on the assessed performance, determining a portion of the performance that should be improved;based on the assessed performance and the determined portion of the performance that should be improved, selectively changing a difficulty level of at least a portion of the presented plurality of fingering notations corresponding to the song; and generating at least one mini-game different from the game for the song being played targeted to improving the user's skills associated with the performance of the determined portion."
+</code></pre></div>
+<h2 id="翻訳する"><a href="#翻訳する" class="header-anchor">翻訳する</a></h2>
+<p>親切なひとがGoogle翻訳のパッケージを作ってくれていました。</p>
+
+<a href="https://github.com/sonicrules1234/GoogleTrans.jl"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/sonicrules1234/GoogleTrans.jl.png" width="460px"></a>
+
+<p>READMEをみるとわかりますが、使用例の翻訳言語が&quot;ja&quot;になっていて、いかにも英語の苦手な日本人におあつらえ向きのパッケージです。 せっかくなので☆を差し上げておきました。試しに何か訳させてみましょう。</p>
+<pre><code class="language-julia">using GoogleTrans 
+GoogleTrans.translate&#40;&quot;おれは人間をやめるぞ&#33;ジョジョーッ&#33;&quot;,&quot;en&quot;&#41; |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext">I will stop human! Jojo!
+</code></pre></div>
+<p>うまく翻訳できたでしょうか？</p>
+<div class="note"><div class="title">😲 Note</div>
+<div class="content"><p>Google翻訳は優秀なのですが、図.をイチジクと訳すのは、本当にやめてほしいと思います。</p>
+<pre><code class="language-julia">GoogleTrans.translate&#40;&quot;Fig. 1 &quot;,&quot;ja&quot;&#41; |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext">イチジク。1
+</code></pre></div></div></div>
+<h2 id="plutojlでwebアプリにする"><a href="#plutojlでwebアプリにする" class="header-anchor">Pluto.jlでWebアプリにする。</a></h2>
+<p>Pluto.jlは<a href="/tips/pluto">こちら</a>で紹介したように、HTMLインプットを使って簡単にウェブアプリっぽいものを作ることができます。</p>
+<p>これまで紹介した機能をPluto.jlでまとめて、特許翻訳アプリっぽいものを作ってみました。<sup id="fnref:3"><a href="#fndef:3" class="fnref">[3]</a></sup></p>
+<p>見た目は下のiframeで表示した通りです。こちらはただの張りぼてですが、Plutoサーバーを起動して下記リンクを貼り付けて実行すれば、 リアクティブに動作することを確認できます。</p>
+<p>ただ翻訳するだけではつまらないので、特許のpdfのダウンロードリンク、特許に関するメモを自分で書いてダウンロードできる機能を追加しました。</p>
+
+  <input type="text" value="https://raw.githubusercontent.com/hanafsky/PlutoNotebook/main/patenttranslator.jl" id="copytoclipboard">
+  <button onclick="CopyToClipboard()" onmouseout="outFunc">コピーする</button>
+  
+<p><div class="blank"></div> 
+  <iframe src="/tips/patenttranslator" width="100%" height="300px">
+  このページはiframe対応ブラウザでご覧ください。
+  </iframe>
+  </p>
+<table class="fndef" id="fndef:3">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:3">[3]</a></td>
+        <td class="fndef-content">MITのComputationalthinkingの授業のPlutoノートブックを参考にしています。</td>
+    </tr>
+</table>
+
+<h3 id="plutojlでhtmlを生成する"><a href="#plutojlでhtmlを生成する" class="header-anchor">Pluto.jlでhtmlを生成する</a></h3>
+<p>このノートブックでは、請求項の原文と翻訳を表形式で並べて表示しました。 その際には、htmlでtableをjuliaに書かせる必要があって、少々躓きました。 &#40;<code>md&quot;a&#61;&#36;&#40;a&#41;&quot;</code>はできても<code>html&quot;a&#61;&#36;&#40;a&#41;&quot;</code>はできないのです。&#41;</p>
+<p>結果的には、PlutoUI.jlの<span class="marker"> HTML関数にdo構文を使ってテキストをぶち込むことで解決できた</span>ので、紹介しておきます。</p>
+<pre><code class="language-julia">using PlutoUI
+@doc&#40;HTML&#41; |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext">`HTML(s)`: Create an object that renders `s` as html.
+
+```
+HTML("<div>foo</div>")
+```
+
+You can also use a stream for large amounts of data:
+
+```
+HTML() do io
+  println(io, "<div>foo</div>")
+end
+```
+
+</code></pre></div>
+<p>do構文を使った例は、iframeの請求項の下で確認できます。</p>
+<h2 id="まとめ"><a href="#まとめ" class="header-anchor">まとめ</a></h2>
+<ul>
+<li><p>GooglePatentのページをパースする方法を紹介した。&#40;HTTP.jl Gumbo.jl Cascadia.jl&#41;</p>
+</li>
+<li><p>Google翻訳をjuliaで実行する方法を紹介した。&#40;GoogleTrans.jl&#41;</p>
+</li>
+<li><p>Plutoノートブック形式で翻訳アプリとしてまとめてみた。&#40;Pluto.jl PlutoUI.jl&#41;</p>
+</li>
+</ul>
+<p>今回は特許を翻訳するという事例での紹介ですが、要素技術は色々つぶしが効くと思います。誰かの参考になれば幸いです。</p>
+ <p style="text-align:right">  めでたしめでたし </p>
+
+<div class="sns-container top">
+  <div class="sns-box b-twitter">
+    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/pluto/&text=リアクティブなノートブック Pluto.jl&via=HanafusaKei&related=HanafusaKei"
+    target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
+  <div class="sns-box b-facebook">
+    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/pluto/" 
+    target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+  <div class="sns-box b-hatena">
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/pluto/&title=リアクティブなノートブック Pluto.jl"
+    target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
+  <div class="sns-box b-pocket">
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/pluto/&title=リアクティブなノートブック Pluto.jl"
+    rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
+  <div class="sns-box b-feedly">
+    <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
+    rel="nofollow" target="_blank"><span class="icon-feedly"></i></a></div>
+  <div class="sns-box b-line">
+    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/pluto/'
+    target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
+</div>
+
+<p>
+  <div class="prev-next-link">
+  <a class="prev-link" href="tips/savgol">
+    <p class="prev-next-label">前の記事</p>
+    <p>
+       ノイズを含むデータの微分 - Savitzky-Golay filter
+    </p>
+  </a>
+</div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> </p>
+    <script src="https://utteranc.es/client.js"
+        repo="hanafsky/blog_comments"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+<div class="page-foot">
+  <div class="copyright">
+    &copy; Kei Hanafusa. Last modified: April 28, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+  </div>
+</div>
+</div><!-- CONTENT ENDS HERE -->
+
+      </div> <!-- closure of main -->
+    </div>   <!-- closure of class initial--content -->
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+          <ul class="social-icons">
+            <li><strong>Follow:</strong></li>
+            <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+            <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          </ul>
+        </div>
+        <div class="page__footer-copyright">&copy; Kei Hanafusa. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="/libs/minimal-mistakes/main.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <script src="/libs/myBtn/myBtn.js"></script>
+    <script src="/libs/luminous/Luminous.min.js"></script>
+
+    
+    
+        <script src="/libs/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+
+    
+    
+        <script src="/libs/mermaid/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    theme: 'neutral',
+    themeCSS: '.node rect,\
+               .node circle,\
+               .node ellipse,\
+               .node path,\
+               .node polygon\
+               {fill:rgba(253,237,228,0.5);\
+                stroke: rgb(246,189,192)};\
+               .arrowheadPath {fill:rgb(246,189,192);}\
+               .edgePath .path {stroke:rgb(246,189,192);};\
+               .cluster rect\
+               {fill:rgba(255,249,177,0.3);\
+                stroke:rgb(246,189,192)};\
+               ',
+    // themeCSS: '.node rect {fill:rgba(253,237,228,0.5); stroke: rgb(250,219,218)};',
+    // logLevel: 3,
+    // securityLevel: 'loose',
+    // flowchart: { curve: 'basis' }
+  });
+</script>
+    
+    <script>
+    new Luminous(document.querySelectorAll('.zoom'));
+</script>
+    <script>
+function myToc() {
+    var x = document.getElementsByClassName("mytoc");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  } 
+</script>
+    <script>
+  function CopyToClipboard() {
+  /* Get the text field */
+  var copyText = document.getElementById("copytoclipboard");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+  </body>
+</html>

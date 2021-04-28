@@ -23,6 +23,48 @@
 
 <item>
   <title>
+    <![CDATA[  Google Patentを翻訳してみる  ]]>
+  </title>
+  <link> https://hanafsky.github.io/tips/patent/index.html </link>
+  <guid> https://hanafsky.github.io/tips/patent/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/steam-locomotive-4275398_1280.jpg" alt="titleimage" />Google Patentをスクレイプして翻訳する方法を解説します。  ]]>
+  </description>  
+    
+  <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
+    
+  <category> julia </category>
+      
+</item>
+
+<item>
+  <title>
+    <![CDATA[  ノイズを含むデータの微分 - Savitzky-Golay filter  ]]>
+  </title>
+  <link> https://hanafsky.github.io/tips/savgol/index.html </link>
+  <guid> https://hanafsky.github.io/tips/savgol/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。  ]]>
+  </description>  
+    
+  <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
+    
+  <category> julia </category>
+      
+</item>
+
+<item>
+  <title>
     <![CDATA[  mermaid.jsのフローチャートメモ  ]]>
   </title>
   <link> https://hanafsky.github.io/blog/mermaid/index.html </link>
@@ -39,27 +81,6 @@
   </atom:author>
     
   <category> blog </category>
-      
-</item>
-
-<item>
-  <title>
-    <![CDATA[  ノイズを含むデータの微分 - Savitzky-Golay filter  ]]>
-  </title>
-  <link> https://hanafsky.github.io/tips/savgol/index.html </link>
-  <guid> https://hanafsky.github.io/tips/savgol/index.html </guid>
-  <description>
-    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。  ]]>
-  </description>  
-    
-  <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Kei Hanafusa</atom:name>
-  </atom:author>
-    
-  <category> julia </category>
       
 </item>
 
@@ -112,7 +133,7 @@
   <link> https://hanafsky.github.io/tips/franklin/index.html </link>
   <guid> https://hanafsky.github.io/tips/franklin/index.html </guid>
   <description>
-    <![CDATA[  <img src="https://franklinjl.org/assets/infra/logoF2.svg" alt="titleimage" />Franklin.jlでホームページを作るときの注意などを説明します。  ]]>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/money-franklin.jpg" alt="titleimage" />Franklin.jlでホームページを作るときの注意などを説明します。  ]]>
   </description>  
     
   <pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate>  
