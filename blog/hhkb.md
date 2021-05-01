@@ -1,5 +1,5 @@
 @def title="HHKBの話"
-@def rss_description="![titleimage](https://www.pfu.fujitsu.com/direct/hhkb/images/detail_pd-kb800bs-1.jpg)高級キーボードHHKBの話"
+@def rss_description="![titleimage](/assets/blog/typewriter.jpg)高級キーボードHHKBの話"
 @def rss_pubdate=Date(2021, 4, 6)
 @def published="6 April 2021"
 @def rss_category="blog"
@@ -120,7 +120,7 @@ capsキーとinsertキーはトラブルしか経験したことがないので�
 
 ## パームレストはあった方が良い。
 
-HHKBはそこそこ高さがあるので、パームレストはあった方が手首が疲れにくいです。
+HHKBはそこそこ高さがあるので、パームレストはあった方が、手首が疲れにくいです。
 HHKBのWEBサイトにあるウッドパームレストが欲しかったのですが、
 ずっと売り切れ状態だったので、Filcoの漆塗りパームレストを使っています。
 パームレストも会社と家を往復しています。

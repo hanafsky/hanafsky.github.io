@@ -149,6 +149,7 @@ claim1 = q_claim[1] |> nodeText
 ```
 \prettyshow{patent5}
 
+（2021/5/1追記）\marker{すべての特許にこの構造が当てはまるわけではないようです。}
 
 ## 翻訳する
 
@@ -184,12 +185,18 @@ Pluto.jlは[こちら](/tips/pluto)で紹介したように、HTMLインプッ�
 
 これまで紹介した機能をPluto.jlでまとめて、特許翻訳アプリっぽいものを作ってみました。[^3]
 
-見た目は下のiframeで表示した通りです。こちらはただの張りぼてですが、Plutoサーバーを起動して下記リンクを貼り付けて実行すれば、
+\copy{https://raw.githubusercontent.com/hanafsky/PlutoNotebook/main/patenttranslator.jl}
+
+見た目は下のiframeで表示した通りです。こちらはただの張りぼてですが、Plutoサーバーを起動して、上記リンクを貼り付けて実行すれば、
 リアクティブに動作することを確認できます。
+
+\note{
+    Pluto.jl制作者のFonsさんが作ってくれた[pluto-on-binder](https://pluto-on-binder.glitch.me/)にリンクをコピペすれば、
+    Web上でPlutoの動作を確認できます。juliaの実行環境がない人も使えます。ちょっと時間がかかるのは
+}
 
 ただ翻訳するだけではつまらないので、特許のpdfのダウンロードリンク、特許に関するメモを自分で書いてダウンロードできる機能を追加しました。
 
-\copy{https://raw.githubusercontent.com/hanafsky/PlutoNotebook/main/patenttranslator.jl}
 
 \lineskip
 \iframe{/tips/patenttranslator}
