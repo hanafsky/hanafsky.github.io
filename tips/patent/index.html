@@ -254,7 +254,7 @@ GoogleTrans.translate&#40;&quot;おれは人間をやめるぞ&#33;ジョジョ�
   
 <p>見た目は下のiframeで表示した通りです。こちらはただの張りぼてですが、Plutoサーバーを起動して、上記リンクを貼り付けて実行すれば、 リアクティブに動作することを確認できます。</p>
 <div class="note"><div class="title">😲 Note</div>
-<div class="content">Pluto.jl制作者のFonsさんが作ってくれた<a href="https://pluto-on-binder.glitch.me/">pluto-on-binder</a>にリンクをコピペすれば、     Web上でPlutoの動作を確認できます。juliaの実行環境がない人も使えます。ちょっと時間がかかるのは</div></div>
+<div class="content">Pluto.jl制作者のFonsさんが作ってくれた<a href="https://pluto-on-binder.glitch.me/">pluto-on-binder</a>にリンクをコピペすれば、     Web上でPlutoの動作を確認できます。juliaの実行環境がない人も使えます。仕様上立ち上がりにちょっと時間がかかります。</div></div>
 <p>ただ翻訳するだけではつまらないので、特許のpdfのダウンロードリンク、特許に関するメモを自分で書いてダウンロードできる機能を追加しました。</p>
 <p><div class="blank"></div> 
   <iframe src="/tips/patenttranslator" width="100%" height="300px">
@@ -269,7 +269,7 @@ GoogleTrans.translate&#40;&quot;おれは人間をやめるぞ&#33;ジョジョ�
 </table>
 
 <h3 id="plutojlでhtmlを生成する"><a href="#plutojlでhtmlを生成する" class="header-anchor">Pluto.jlでhtmlを生成する</a></h3>
-<p>このノートブックでは、請求項の原文と翻訳を表形式で並べて表示しました。 その際には、htmlでtableをjuliaに書かせる必要があって、少々躓きました。 &#40;<code>md&quot;a&#61;&#36;&#40;a&#41;&quot;</code>はできても<code>html&quot;a&#61;&#36;&#40;a&#41;&quot;</code>はできないのです。&#41;</p>
+<p>このノートブックでは、請求項の原文と翻訳を表形式で並べて表示しました。 その際には、htmlをjuliaに書かせる必要があって、少々躓きました。 &#40;<code>md&quot;a&#61;&#36;&#40;a&#41;&quot;</code>はできても<code>html&quot;a&#61;&#36;&#40;a&#41;&quot;</code>はできないし、<code>md&quot;text1&quot;*md&quot;text2&quot;</code>もできない。&#41;</p>
 <p>結果的には、PlutoUI.jlの<span class="marker"> HTML関数にdo構文を使ってテキストをぶち込むことで解決できた</span>ので、紹介しておきます。</p>
 <pre><code class="language-julia">using PlutoUI
 @doc&#40;HTML&#41; |&gt; println</code></pre>
