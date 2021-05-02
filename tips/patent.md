@@ -1,6 +1,6 @@
 
-@def title="Google Patentを翻訳してみる"
-@def rss_description="![titleimage](/assets/tips/steam-locomotive-4275398_1280.jpg)Google Patentをスクレイプして翻訳する方法を解説します。"
+@def title="Google Patentsを翻訳してみる"
+@def rss_description="![titleimage](/assets/tips/steam-locomotive-4275398_1280.jpg)Google Patentsをスクレイプして翻訳する方法を解説します。"
 @def rss_pubdate=Date(2021, 4, 28)
 @def published="28 April 2021"
 @def rss_category="julia"
@@ -8,22 +8,22 @@
 @def tags=["thirdparty"]
 @def isjulia =true
 
-# Google Patentを翻訳してみる。
+# Google Patentsを翻訳してみる。
 
 \titleimage{/assets/tips/steam-locomotive-4275398_1280.jpg}{https://pixabay.com/illustrations/steam-locomotive-steam-car-4275398/}
-\share{tips/pluto/}{Google Patentを翻訳してみる。}
+\share{tips/pluto/}{Google Patentsを翻訳してみる。}
 
 企業で研究者をやっていると、特許調査と無縁ではいられません。[^1]
 
-日本語の特許なら良いのですが、外国語で書かれた特許を読む場合もあります。
+日本語の特許ならまだ良いのですが、外国語で書かれた特許を読む場合もあります。
 
-それも、外国語の特許を100件単位で読まなければならない事態になるとしたら、仮にその言語が得意であっても、大抵の人は嫌になると思います。
+それも、外国語の特許を100件単位でチェックしなければならない事態になるとしたら、仮にその言語が得意であっても、大抵の人は嫌になると思います。
 
-そのような事態に巻き込まれた私は、pythonのbeautiful soupというライブラリで、Google Patentから請求項だけ抽出して翻訳する作業を以前から自動化していました。
+実際に、そのような事態に巻き込まれた私は、時短のために特許の請求項だけ抽出して翻訳する作業をpythonで自動化していました。
 
 juliaでも同様のことができたので、やり方を紹介したいと思います。
 
-ちなみにGooglePatentをパースして、Google翻訳するというGoogle先生に完全におんぶにだっこのプログラムです。[^2]
+ちなみにGoogle Patentsをパースして、Google翻訳するというGoogle先生に完全におんぶにだっこのプログラムです。[^2]
 
 [^1]: 特許を書くこととも無縁ではいられません。
 
@@ -48,7 +48,7 @@ graph LR
 
 この順に見ていきます。
 
-### Google Patentをパースする
+### Google Patentsをパースする
 ここでは[Stupid Patent of the month](https://www.eff.org/ja/deeplinks/2020/08/guitar-villain-ubisoft-patents-basic-teaching-techniques)で紹介された特許例を使ってみます。
 
 最初にサードパーティライブラリのHTTP.jlで特許番号US9839852のURLにアクセスできることを確認します。
@@ -151,6 +151,12 @@ claim1 = q_claim[1] |> nodeText
 
 （2021/5/1追記）\marker{すべての特許にこの構造が当てはまるわけではないようです。}
 
+全請求項を抜き出したいときは、claimクラスのdivのidが"CLM-"で始まることに注目して、
+```julia:patent5
+eachmatch(Selector("""div[id^="CLM-"]"""), h.root)
+```
+とすればOKでした。
+
 ## 翻訳する
 
 親切なひとがGoogle翻訳のパッケージを作ってくれていました。
@@ -220,7 +226,7 @@ using PlutoUI
 do構文を使った例は、iframeの請求項の下で確認できます。
 
 ## まとめ
-- GooglePatentのページをパースする方法を紹介した。(HTTP.jl Gumbo.jl Cascadia.jl)
+- Google Patentsのページをパースする方法を紹介した。(HTTP.jl Gumbo.jl Cascadia.jl)
 - Google翻訳をjuliaで実行する方法を紹介した。(GoogleTrans.jl)
 - Plutoノートブック形式で翻訳アプリとしてまとめてみた。(Pluto.jl PlutoUI.jl)
 
@@ -228,8 +234,8 @@ do構文を使った例は、iframeの請求項の下で確認できます。
 
 \right{めでたしめでたし}
 
-\share{tips/pluto/}{リアクティブなノートブック Pluto.jl}
 
+\share{tips/pluto/}{Google Patentsを翻訳してみる。}
 
 \prev{tips/savgol}{ノイズを含むデータの微分 - Savitzky-Golay filter}
 \backtotop
