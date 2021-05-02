@@ -1,6 +1,2 @@
 # This file was generated, do not modify it. # hide
-using Cascadia
-s_claim = Selector(".claims .claim .claim")
-q_claim = eachmatch(s_claim, h.root)
-claim1 = q_claim[1] |> nodeText 
-@show claim1
+eachmatch(Selector("""div[id^="CLM-"]"""), h.root)

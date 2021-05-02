@@ -23,15 +23,15 @@
 
 <item>
   <title>
-    <![CDATA[  Google Patentを翻訳してみる  ]]>
+    <![CDATA[  ノイズを含むデータの微分 - Savitzky-Golay filter  ]]>
   </title>
-  <link> https://hanafsky.github.io/tips/patent/index.html </link>
-  <guid> https://hanafsky.github.io/tips/patent/index.html </guid>
+  <link> https://hanafsky.github.io/tips/savgol/index.html </link>
+  <guid> https://hanafsky.github.io/tips/savgol/index.html </guid>
   <description>
-    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/steam-locomotive-4275398_1280.jpg" alt="titleimage" />Google Patentをスクレイプして翻訳する方法を解説します。  ]]>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。  ]]>
   </description>  
     
-  <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -44,12 +44,12 @@
 
 <item>
   <title>
-    <![CDATA[  ノイズを含むデータの微分 - Savitzky-Golay filter  ]]>
+    <![CDATA[  Google Patentsを翻訳してみる  ]]>
   </title>
-  <link> https://hanafsky.github.io/tips/savgol/index.html </link>
-  <guid> https://hanafsky.github.io/tips/savgol/index.html </guid>
+  <link> https://hanafsky.github.io/tips/patent/index.html </link>
+  <guid> https://hanafsky.github.io/tips/patent/index.html </guid>
   <description>
-    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。  ]]>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/steam-locomotive-4275398_1280.jpg" alt="titleimage" />Google Patentsをスクレイプして翻訳する方法を解説します。  ]]>
   </description>  
     
   <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>  
@@ -91,7 +91,7 @@
   <link> https://hanafsky.github.io/blog/hhkb/index.html </link>
   <guid> https://hanafsky.github.io/blog/hhkb/index.html </guid>
   <description>
-    <![CDATA[  <img src="https://www.pfu.fujitsu.com/direct/hhkb/images/detail_pd-kb800bs-1.jpg" alt="titleimage" />高級キーボードHHKBの話  ]]>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/blog/typewriter.jpg" alt="titleimage" />高級キーボードHHKBの話  ]]>
   </description>  
     
   <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>  

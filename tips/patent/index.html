@@ -36,7 +36,7 @@
 </style>
 <![endif]-->
 
-   <title>Google Patentを翻訳してみる</title>  
+   <title>Google Patentsを翻訳してみる</title>  
   <!-- end custom head snippets -->
 </head>
 <body class="layout--single">
@@ -102,21 +102,21 @@
 
 
 <!-- Content appended here -->
-<div class="franklin-content"><h1 id="google_patentを翻訳してみる"><a href="#google_patentを翻訳してみる" class="header-anchor">Google Patentを翻訳してみる。</a></h1>
+<div class="franklin-content"><h1 id="google_patentsを翻訳してみる"><a href="#google_patentsを翻訳してみる" class="header-anchor">Google Patentsを翻訳してみる。</a></h1>
 <p><div class="titleimage"><img src="/assets/tips/steam-locomotive-4275398_1280.jpg" alt="" >
 <div style="text-align:right; font-size:small; color:grey">(src=https://pixabay.com/illustrations/steam-locomotive-steam-car-4275398/)</div></div> 
 <div class="sns-container top">
   <div class="sns-box b-twitter">
-    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/pluto/&text=Google Patentを翻訳してみる。&via=HanafusaKei&related=HanafusaKei"
+    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/pluto/&text=Google Patentsを翻訳してみる。&via=HanafusaKei&related=HanafusaKei"
     target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
   <div class="sns-box b-facebook">
     <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/pluto/" 
     target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
   <div class="sns-box b-hatena">
-    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/pluto/&title=Google Patentを翻訳してみる。"
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/pluto/&title=Google Patentsを翻訳してみる。"
     target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
   <div class="sns-box b-pocket">
-    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/pluto/&title=Google Patentを翻訳してみる。"
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/pluto/&title=Google Patentsを翻訳してみる。"
     rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
   <div class="sns-box b-feedly">
     <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
@@ -127,11 +127,11 @@
 </div>
 </p>
 <p>企業で研究者をやっていると、特許調査と無縁ではいられません。<sup id="fnref:1"><a href="#fndef:1" class="fnref">[1]</a></sup></p>
-<p>日本語の特許なら良いのですが、外国語で書かれた特許を読む場合もあります。</p>
-<p>それも、外国語の特許を100件単位で読まなければならない事態になるとしたら、仮にその言語が得意であっても、大抵の人は嫌になると思います。</p>
-<p>そのような事態に巻き込まれた私は、pythonのbeautiful soupというライブラリで、Google Patentから請求項だけ抽出して翻訳する作業を以前から自動化していました。</p>
+<p>日本語の特許ならまだ良いのですが、外国語で書かれた特許を読む場合もあります。</p>
+<p>それも、外国語の特許を100件単位でチェックしなければならない事態になるとしたら、仮にその言語が得意であっても、大抵の人は嫌になると思います。</p>
+<p>実際に、そのような事態に巻き込まれた私は、時短のために特許の請求項だけ抽出して翻訳する作業をpythonで自動化していました。</p>
 <p>juliaでも同様のことができたので、やり方を紹介したいと思います。</p>
-<p>ちなみにGooglePatentをパースして、Google翻訳するというGoogle先生に完全におんぶにだっこのプログラムです。<sup id="fnref:2"><a href="#fndef:2" class="fnref">[2]</a></sup></p>
+<p>ちなみにGoogle Patentsをパースして、Google翻訳するというGoogle先生に完全におんぶにだっこのプログラムです。<sup id="fnref:2"><a href="#fndef:2" class="fnref">[2]</a></sup></p>
 <p><table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref"><a href="#fnref:1">[1]</a></td>
@@ -158,7 +158,7 @@ graph LR
     id3-->id4
  </div>
 <p>この順に見ていきます。</p>
-<h3 id="google_patentをパースする"><a href="#google_patentをパースする" class="header-anchor">Google Patentをパースする</a></h3>
+<h3 id="google_patentsをパースする"><a href="#google_patentsをパースする" class="header-anchor">Google Patentsをパースする</a></h3>
 <p>ここでは<a href="https://www.eff.org/ja/deeplinks/2020/08/guitar-villain-ubisoft-patents-basic-teaching-techniques">Stupid Patent of the month</a>で紹介された特許例を使ってみます。</p>
 <p>最初にサードパーティライブラリのHTTP.jlで特許番号US9839852のURLにアクセスできることを確認します。</p>
 <a href="https://github.com/JuliaWeb/HTTP.jl"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/JuliaWeb/HTTP.jl.png" width="460px"></a>
@@ -225,6 +225,10 @@ claim1 &#61; q_claim&#91;1&#93; |&gt; nodeText
 @show claim1</code></pre>
 <div class="code-output"><pre><code class="plaintext">claim1 = "1. A non-transitory computer readable storage medium with a computer program stored thereon, wherein the computer program is operable to present an interactive game for playing a song on a guitar, wherein the computer program instructs one or more processors to perform the steps of:\npresenting, on a display device, a plurality of fingering notations corresponding to the song to be played by a user;receiving, from a guitar input device, an analog or digital audio signal when the guitar is played by the user, wherein the received signal corresponds to the song played by the user;assessing a performance of the song as played by the user,based on the assessed performance, determining a portion of the performance that should be improved;based on the assessed performance and the determined portion of the performance that should be improved, selectively changing a difficulty level of at least a portion of the presented plurality of fingering notations corresponding to the song; and generating at least one mini-game different from the game for the song being played targeted to improving the user's skills associated with the performance of the determined portion."
 </code></pre></div>
+<p>（2021/5/1追記）<span class="marker"> すべての特許にこの構造が当てはまるわけではないようです。</span></p>
+<p>全請求項を抜き出したいときは、claimクラスのdivのidが&quot;CLM-&quot;で始まることに注目して、</p>
+<pre><code class="language-julia">eachmatch&#40;Selector&#40;&quot;&quot;&quot;div&#91;id^&#61;&quot;CLM-&quot;&#93;&quot;&quot;&quot;&#41;, h.root&#41;</code></pre>
+<p>とすればOKでした。</p>
 <h2 id="翻訳する"><a href="#翻訳する" class="header-anchor">翻訳する</a></h2>
 <p>親切なひとがGoogle翻訳のパッケージを作ってくれていました。</p>
 
@@ -244,12 +248,14 @@ GoogleTrans.translate&#40;&quot;おれは人間をやめるぞ&#33;ジョジョ�
 <h2 id="plutojlでwebアプリにする"><a href="#plutojlでwebアプリにする" class="header-anchor">Pluto.jlでWebアプリにする。</a></h2>
 <p>Pluto.jlは<a href="/tips/pluto">こちら</a>で紹介したように、HTMLインプットを使って簡単にウェブアプリっぽいものを作ることができます。</p>
 <p>これまで紹介した機能をPluto.jlでまとめて、特許翻訳アプリっぽいものを作ってみました。<sup id="fnref:3"><a href="#fndef:3" class="fnref">[3]</a></sup></p>
-<p>見た目は下のiframeで表示した通りです。こちらはただの張りぼてですが、Plutoサーバーを起動して下記リンクを貼り付けて実行すれば、 リアクティブに動作することを確認できます。</p>
-<p>ただ翻訳するだけではつまらないので、特許のpdfのダウンロードリンク、特許に関するメモを自分で書いてダウンロードできる機能を追加しました。</p>
 
   <input type="text" value="https://raw.githubusercontent.com/hanafsky/PlutoNotebook/main/patenttranslator.jl" id="copytoclipboard">
   <button onclick="CopyToClipboard()" onmouseout="outFunc">コピーする</button>
   
+<p>見た目は下のiframeで表示した通りです。こちらはただの張りぼてですが、Plutoサーバーを起動して、上記リンクを貼り付けて実行すれば、 リアクティブに動作することを確認できます。</p>
+<div class="note"><div class="title">😲 Note</div>
+<div class="content">Pluto.jl制作者のFonsさんが作ってくれた<a href="https://pluto-on-binder.glitch.me/">pluto-on-binder</a>にリンクをコピペすれば、     Web上でPlutoの動作を確認できます。juliaの実行環境がない人も使えます。ちょっと時間がかかるのは</div></div>
+<p>ただ翻訳するだけではつまらないので、特許のpdfのダウンロードリンク、特許に関するメモを自分で書いてダウンロードできる機能を追加しました。</p>
 <p><div class="blank"></div> 
   <iframe src="/tips/patenttranslator" width="100%" height="300px">
   このページはiframe対応ブラウザでご覧ください。
@@ -285,7 +291,7 @@ end
 <p>do構文を使った例は、iframeの請求項の下で確認できます。</p>
 <h2 id="まとめ"><a href="#まとめ" class="header-anchor">まとめ</a></h2>
 <ul>
-<li><p>GooglePatentのページをパースする方法を紹介した。&#40;HTTP.jl Gumbo.jl Cascadia.jl&#41;</p>
+<li><p>Google Patentsのページをパースする方法を紹介した。&#40;HTTP.jl Gumbo.jl Cascadia.jl&#41;</p>
 </li>
 <li><p>Google翻訳をjuliaで実行する方法を紹介した。&#40;GoogleTrans.jl&#41;</p>
 </li>
@@ -297,16 +303,16 @@ end
 
 <div class="sns-container top">
   <div class="sns-box b-twitter">
-    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/pluto/&text=リアクティブなノートブック Pluto.jl&via=HanafusaKei&related=HanafusaKei"
+    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/pluto/&text=Google Patentsを翻訳してみる。&via=HanafusaKei&related=HanafusaKei"
     target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
   <div class="sns-box b-facebook">
     <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/pluto/" 
     target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
   <div class="sns-box b-hatena">
-    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/pluto/&title=リアクティブなノートブック Pluto.jl"
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/pluto/&title=Google Patentsを翻訳してみる。"
     target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
   <div class="sns-box b-pocket">
-    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/pluto/&title=リアクティブなノートブック Pluto.jl"
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/pluto/&title=Google Patentsを翻訳してみる。"
     rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
   <div class="sns-box b-feedly">
     <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
@@ -337,7 +343,7 @@ end
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: April 28, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: May 02, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
