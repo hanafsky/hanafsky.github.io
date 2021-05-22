@@ -145,7 +145,7 @@
         <td class="fndef-content">chromeの右クリックメニューで翻訳すればいいのに、という突っ込みは無視します。</td>
     </tr>
 </table>
-</p>
+ <div class="franklin-toc"><ol><li><a href="#流れ">流れ</a><ol><li><a href="#google_patentsをパースする">Google Patentsをパースする</a></li></ol></li><li><a href="#請求項だけを抜き出す">請求項だけを抜き出す</a><ol><li><a href="#google_patentの請求項の構造を確認する">Google Patentの請求項の構造を確認する</a></li></ol></li><li><a href="#翻訳する">翻訳する</a></li><li><a href="#plutojlでwebアプリ化">Pluto.jlでWebアプリ化</a><ol><li><a href="#plutojlでhtmlを生成する">Pluto.jlでhtmlを生成する</a></li></ol></li><li><a href="#まとめ">まとめ</a></li></ol></div></p>
 <h2 id="流れ"><a href="#流れ" class="header-anchor">流れ</a></h2>
 <p>プログラムの流れを図示すると、以下のようになります。</p>
  <div style="text-align:center" class="mermaid"> 
@@ -247,10 +247,10 @@ GoogleTrans.translate&#40;&quot;おれは人間をやめるぞ&#33;ジョジョ�
 <pre><code class="language-julia">GoogleTrans.translate&#40;&quot;Fig. 1 &quot;,&quot;ja&quot;&#41; |&gt; println</code></pre>
 <div class="code-output"><pre><code class="plaintext">イチジク。1
 </code></pre></div></div></div>
-<h2 id="plutojlでwebアプリにする"><a href="#plutojlでwebアプリにする" class="header-anchor">Pluto.jlでWebアプリにする。</a></h2>
+<h2 id="plutojlでwebアプリ化"><a href="#plutojlでwebアプリ化" class="header-anchor">Pluto.jlでWebアプリ化</a></h2>
 <p>Pluto.jlは<a href="/tips/pluto">こちら</a>で紹介したように、HTMLインプットを使って簡単にウェブアプリっぽいものを作ることができます。</p>
 <p>これまで紹介した機能をPluto.jlでまとめて、<a href="/PlutoNotebook/patenttranslator">特許翻訳アプリ</a>っぽいものを作ってみました。<sup id="fnref:3"><a href="#fndef:3" class="fnref">[3]</a></sup></p>
-<p>見た目は下のiframeで表示した通りです。そのままでは動きませんが、上記リンク先の右上にある<em>Edit or run this notebook</em> を押すとクラウド上で動かすことが可能です。仕様上立ち上がりにちょっと時間がかかります。 &#40;Pluto.jlが使える人は自分のPCで動かすこともできます。&#41;</p>
+<p>見た目は下のiframeで表示した通りです。そのままでは動きませんが、右上にある<strong>Edit or run this notebook</strong> を押すとクラウド上で動かすことが可能です。binderの仕様上、立ち上がりにはちょっと時間がかかります。 &#40;Pluto.jlが使える人は自分のPCで動かすこともできます。&#41;</p>
 <p>ただ翻訳するだけではつまらないので、特許のpdfのダウンロードリンク、特許に関するメモを自分で書いてダウンロードできる機能を追加しました。</p>
 <p><div class="blank"></div> 
   <iframe src="/PlutoNotebook/patenttranslator" width="100%" height="300px">
