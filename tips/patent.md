@@ -75,6 +75,7 @@ r=HTTP.request("GET", patentURL)
 using Gumbo
 h = parsehtml(String(r.body))
 ```
+\prettyshow{patent2}
 
 ## 請求項だけを抜き出す
 
@@ -189,31 +190,26 @@ GoogleTrans.translate("Fig. 1 ","ja") |> println
 ## Pluto.jlでWebアプリにする。
 Pluto.jlは[こちら](/tips/pluto)で紹介したように、HTMLインプットを使って簡単にウェブアプリっぽいものを作ることができます。
 
-これまで紹介した機能をPluto.jlでまとめて、特許翻訳アプリっぽいものを作ってみました。[^3]
+これまで紹介した機能をPluto.jlでまとめて、[特許翻訳アプリ](/PlutoNotebook/patenttranslator)っぽいものを作ってみました。[^3]
 
-\copy{https://raw.githubusercontent.com/hanafsky/PlutoNotebook/main/patenttranslator.jl}
 
-見た目は下のiframeで表示した通りです。こちらはただの張りぼてですが、Plutoサーバーを起動して、上記リンクを貼り付けて実行すれば、
-リアクティブに動作することを確認できます。
 
-\note{
-    Pluto.jl制作者のFonsさんが作ってくれた[pluto-on-binder](https://pluto-on-binder.glitch.me/)にリンクをコピペすれば、
-    Web上でPlutoの動作を確認できます。juliaの実行環境がない人も使えます。仕様上立ち上がりにちょっと時間がかかります。
-}
+見た目は下のiframeで表示した通りです。そのままでは動きませんが、上記リンク先の右上にある*Edit or run this notebook*
+を押すとクラウド上で動かすことが可能です。仕様上立ち上がりにちょっと時間がかかります。
+(Pluto.jlが使える人は自分のPCで動かすこともできます。)
 
 ただ翻訳するだけではつまらないので、特許のpdfのダウンロードリンク、特許に関するメモを自分で書いてダウンロードできる機能を追加しました。
 
-
 \lineskip
-\iframe{/tips/patenttranslator}
+\iframe{/PlutoNotebook/patenttranslator}
 
 
 [^3]: MITのComputationalthinkingの授業のPlutoノートブックを参考にしています。
 
 ### Pluto.jlでhtmlを生成する
 このノートブックでは、請求項の原文と翻訳を表形式で並べて表示しました。
-その際には、htmlをjuliaに書かせる必要があって、少々躓きました。
-(``md"a=$(a)"``はできても``html"a=$(a)"``はできないし、``md"text1"*md"text2"``もできない。)
+その際には、htmlをjuliaに書かせる必要があって、少々躓きました。[^4]
+
 
 結果的には、PlutoUI.jlの\marker{HTML関数にdo構文を使ってテキストをぶち込むことで解決できた}ので、紹介しておきます。
 
@@ -224,6 +220,8 @@ using PlutoUI
 \prettyshow{patent8}
 
 do構文を使った例は、iframeの請求項の下で確認できます。
+
+[^4]: ``md"a=$(a)"``はできても``html"a=$(a)"``はできないし、``md"text1"*md"text2"``もできない。ただし、HypertextLiteral.jlを使うと``@htl"$(a)"``ができるらしい。
 
 ## まとめ
 - Google Patentsのページをパースする方法を紹介した。(HTTP.jl Gumbo.jl Cascadia.jl)
