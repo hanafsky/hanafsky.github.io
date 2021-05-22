@@ -175,6 +175,7 @@ r&#61;HTTP.request&#40;&quot;GET&quot;, patentURL&#41;
 
 <pre><code class="language-julia">using Gumbo
 h &#61; parsehtml&#40;String&#40;r.body&#41;&#41;</code></pre>
+<div class="code-output"></div>
 <h2 id="請求項だけを抜き出す"><a href="#請求項だけを抜き出す" class="header-anchor">請求項だけを抜き出す</a></h2>
 <p>次にCSSセレクターを使って必要な部分を抽出します。 ここでは、Cascadia.jlを使います。</p>
 
@@ -248,17 +249,11 @@ GoogleTrans.translate&#40;&quot;おれは人間をやめるぞ&#33;ジョジョ�
 </code></pre></div></div></div>
 <h2 id="plutojlでwebアプリにする"><a href="#plutojlでwebアプリにする" class="header-anchor">Pluto.jlでWebアプリにする。</a></h2>
 <p>Pluto.jlは<a href="/tips/pluto">こちら</a>で紹介したように、HTMLインプットを使って簡単にウェブアプリっぽいものを作ることができます。</p>
-<p>これまで紹介した機能をPluto.jlでまとめて、特許翻訳アプリっぽいものを作ってみました。<sup id="fnref:3"><a href="#fndef:3" class="fnref">[3]</a></sup></p>
-
-  <input type="text" value="https://raw.githubusercontent.com/hanafsky/PlutoNotebook/main/patenttranslator.jl" id="copytoclipboard">
-  <button onclick="CopyToClipboard()" onmouseout="outFunc">コピーする</button>
-  
-<p>見た目は下のiframeで表示した通りです。こちらはただの張りぼてですが、Plutoサーバーを起動して、上記リンクを貼り付けて実行すれば、 リアクティブに動作することを確認できます。</p>
-<div class="note"><div class="title">😲 Note</div>
-<div class="content">Pluto.jl制作者のFonsさんが作ってくれた<a href="https://pluto-on-binder.glitch.me/">pluto-on-binder</a>にリンクをコピペすれば、     Web上でPlutoの動作を確認できます。juliaの実行環境がない人も使えます。仕様上立ち上がりにちょっと時間がかかります。</div></div>
+<p>これまで紹介した機能をPluto.jlでまとめて、<a href="/PlutoNotebook/patenttranslator">特許翻訳アプリ</a>っぽいものを作ってみました。<sup id="fnref:3"><a href="#fndef:3" class="fnref">[3]</a></sup></p>
+<p>見た目は下のiframeで表示した通りです。そのままでは動きませんが、上記リンク先の右上にある<em>Edit or run this notebook</em> を押すとクラウド上で動かすことが可能です。仕様上立ち上がりにちょっと時間がかかります。 &#40;Pluto.jlが使える人は自分のPCで動かすこともできます。&#41;</p>
 <p>ただ翻訳するだけではつまらないので、特許のpdfのダウンロードリンク、特許に関するメモを自分で書いてダウンロードできる機能を追加しました。</p>
 <p><div class="blank"></div> 
-  <iframe src="/tips/patenttranslator" width="100%" height="300px">
+  <iframe src="/PlutoNotebook/patenttranslator" width="100%" height="300px">
   このページはiframe対応ブラウザでご覧ください。
   </iframe>
   </p>
@@ -270,7 +265,7 @@ GoogleTrans.translate&#40;&quot;おれは人間をやめるぞ&#33;ジョジョ�
 </table>
 
 <h3 id="plutojlでhtmlを生成する"><a href="#plutojlでhtmlを生成する" class="header-anchor">Pluto.jlでhtmlを生成する</a></h3>
-<p>このノートブックでは、請求項の原文と翻訳を表形式で並べて表示しました。 その際には、htmlをjuliaに書かせる必要があって、少々躓きました。 &#40;<code>md&quot;a&#61;&#36;&#40;a&#41;&quot;</code>はできても<code>html&quot;a&#61;&#36;&#40;a&#41;&quot;</code>はできないし、<code>md&quot;text1&quot;*md&quot;text2&quot;</code>もできない。&#41;</p>
+<p>このノートブックでは、請求項の原文と翻訳を表形式で並べて表示しました。 その際には、htmlをjuliaに書かせる必要があって、少々躓きました。<sup id="fnref:4"><a href="#fndef:4" class="fnref">[4]</a></sup></p>
 <p>結果的には、PlutoUI.jlの<span class="marker"> HTML関数にdo構文を使ってテキストをぶち込むことで解決できた</span>ので、紹介しておきます。</p>
 <pre><code class="language-julia">using PlutoUI
 @doc&#40;HTML&#41; |&gt; println</code></pre>
@@ -290,6 +285,13 @@ end
 
 </code></pre></div>
 <p>do構文を使った例は、iframeの請求項の下で確認できます。</p>
+<table class="fndef" id="fndef:4">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:4">[4]</a></td>
+        <td class="fndef-content"><code>md&quot;a&#61;&#36;&#40;a&#41;&quot;</code>はできても<code>html&quot;a&#61;&#36;&#40;a&#41;&quot;</code>はできないし、<code>md&quot;text1&quot;*md&quot;text2&quot;</code>もできない。ただし、HypertextLiteral.jlを使うと<code>@htl&quot;&#36;&#40;a&#41;&quot;</code>ができるらしい。</td>
+    </tr>
+</table>
+
 <h2 id="まとめ"><a href="#まとめ" class="header-anchor">まとめ</a></h2>
 <ul>
 <li><p>Google Patentsのページをパースする方法を紹介した。&#40;HTTP.jl Gumbo.jl Cascadia.jl&#41;</p>
@@ -344,7 +346,7 @@ end
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: May 21, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: May 22, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
