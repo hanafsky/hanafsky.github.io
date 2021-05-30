@@ -27,6 +27,7 @@ juliaのインストールは、[公式サイト](https://julialang.org/download
 
 @@cards
 @@row
+@@column \card{/assets/tips/preprocess.jpg}{DataFrames.jl}{juliaで前処理大全}{/tips/preprocess} @@
 @@column \card{/assets/tips/steam-locomotive-4275398_1280.jpg}{GoogleTrans.jl}{Google Patentsを翻訳してみる}{/tips/patent} @@
 @@column \card{/assets/tips/smooth-3221868_640.jpg}{Savitzky Golay}{ノイジーなデータの微分}{/tips/savgol} @@
 @@column \card{/assets/tips/pluto-5962694_640.jpg}{Pluto.jl}{リアクティブなノートブック}{/tips/pluto} @@
