@@ -1,0 +1,1 @@
+names(reserve_df) = ["reserve_id", "hotel_id", "customer_id", "reserve_datetime", "checkin_date", "checkin_time", "checkout_date", "people_num", "total_price"]

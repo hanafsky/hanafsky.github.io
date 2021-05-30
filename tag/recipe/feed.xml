@@ -23,6 +23,69 @@
 
 <item>
   <title>
+    <![CDATA[  juliaで前処理大全2  ]]>
+  </title>
+  <link> https://hanafsky.github.io/tips/preprocess/aggregation/index.html </link>
+  <guid> https://hanafsky.github.io/tips/preprocess/aggregation/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
+  </description>  
+    
+  <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
+    
+  <category> julia </category>
+      
+</item>
+
+<item>
+  <title>
+    <![CDATA[  juliaで前処理大全0  ]]>
+  </title>
+  <link> https://hanafsky.github.io/tips/preprocess/index.html </link>
+  <guid> https://hanafsky.github.io/tips/preprocess/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
+  </description>  
+    
+  <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
+    
+  <category> julia </category>
+      
+</item>
+
+<item>
+  <title>
+    <![CDATA[  juliaで前処理大全1  ]]>
+  </title>
+  <link> https://hanafsky.github.io/tips/preprocess/extraction/index.html </link>
+  <guid> https://hanafsky.github.io/tips/preprocess/extraction/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
+  </description>  
+    
+  <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
+    
+  <category> julia </category>
+      
+</item>
+
+<item>
+  <title>
     <![CDATA[  ノイズを含むデータの微分 - Savitzky-Golay filter  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/savgol/index.html </link>
@@ -31,7 +94,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。  ]]>
   </description>  
     
-  <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
