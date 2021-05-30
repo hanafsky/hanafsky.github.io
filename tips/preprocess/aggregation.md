@@ -23,16 +23,9 @@
 
 活躍する関数は``groupby``と``combine``です。
 
-```julia
-@doc combine
-```
-とでもして、
-
-
-
 
 \toc
-## 3 集約
+## 集約
 準備としてホテルの予約データを読み込みます。
 
 ```julia:ex1-preprocess2
@@ -45,19 +38,19 @@ reserve_df = @chain reserve_url begin
 end
 println(first(reserve_df))
 ```
-### 3-1 データ数、種類数の算出
+### データ数、種類数の算出
 ホテルごとに予約数、顧客数の集計を行う練習です。
 ホテルごとにデータを分ける処理は、groupby関数で実施します。
 
 groupby関数は、``groupby(df::AbstractDataFrame,cols;kwargs...)``
-のようにデータフレームと列名を引数して、返り値は``GroupedDataFrame``となります。
+のようにデータフレームと列名を引数にもちます。
+返り値の型は``GroupedDataFrame``となります。
 
 グループ化したデータ毎に集計する処理はcombine関数で実施します。
 combine関数は、``GroupedDataFrame``を引数にして、さらに
 ``列名 => 関数 (=> 新しい列名)``のような書き方の可変長引数をとることができます。
 
 この問題は、@chainマクロを用いたパイプライン処理によって、以下のように、簡潔に記述できます。
-
 
 ```julia:ex2-preprocess2
 using Chain
@@ -78,8 +71,8 @@ first(df3_1) |> println
 unique関数とlength関数を組み合わせる書き方は前処理大全では推奨されていない書き方ですが、
 この例では可読性が十分高く、処理速度もおそらく問題にならないでしょうからAwesomeということにします。
 
-### 3-2 合計値の算出
-ホテルと宿泊人数毎に集計してみます。複数の列についてグループ分けして集計を行う場合は、`:hote_id`と`:people_num`をArrayとして、
+### 合計値の算出
+ホテルと宿泊人数毎に集計してみます。複数の列についてグループ分けして集計を行う場合は、列名をArrayとして、
 groupby関数の引数にすればOKです。
 また、グループごとに列の合計値を出力するには、sum関数を指定すればよいです。
 
@@ -93,7 +86,7 @@ first(df3_2) |> println
 
 \prettyshow{ex3-preprocess2}
 
-### 3-3 極値、代表値の算出
+### 極値、代表値の算出
 
 ホテル毎にtotal_price列の最大値、最小値、平均値、中央値、20%のパーセンタイルを出力します。
 平均値、中央値、パーセンタイルの出力には、新たな関数が必要なので、Statistics.jlを導入します。
@@ -114,7 +107,7 @@ end
 
 \prettyshow{ex4-preprocess2}
 
-### 3-4 ばらつき具合の算出
+### ばらつき具合の算出
 
 分散や標準偏差は、平均同様にStatistics.jlをusingすれば使えます。
 分散や標準偏差は、データ数が1つしかない場合にはNaN（Not a Number）を返します。
@@ -165,7 +158,7 @@ df .= ifelse.(isnan.(df),0,df) #ブロードキャスト演算
 \note{前処理大全の著者によれば、データはパートナーの心と同様に不安定でばらつきがあるものだそうです。
 分散値/標準偏差値とパートナーの気持ちを常々気にかけたいと思います。}
 
-### 3-5 最頻値の算出
+### 最頻値の算出
 
 ``:total_price``を100の位を四捨五入して、最頻値を求めます。
 四捨五入はround関数で実行できますが、丸める桁はキーワード引数digitsで指定する必要があります。
@@ -179,7 +172,7 @@ mode(round.(reserve_df.total_price, digits=-3)) |> println
 
 2万円くらいホテルにお金を落としている人が一番多いということですね。
 
-### 3-6 順位の算出
+### 順位の算出
 
 ホテルごとに予約日時順の番号付けをしてみます。
 そもそも予約日時がString型として認識されているので、まずはDateTime型にパースします。
@@ -235,5 +228,6 @@ end
 \prettyshow{ex11-preprocess2}
 
 
-\prevnext{/tips/preprocess1}{Awesome な前処理1}{/tips/preprocess3}{Awesome な前処理3}
+\share{tips/preprocess/}{juliaで前処理大全}
+\prev{/tips/preprocess/extraction}{juliaで前処理大全 抽出}
 \backtotop
