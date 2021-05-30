@@ -1,7 +1,6 @@
 # This file was generated, do not modify it. # hide
-@chain 1 begin
-  tan
-  @aside println(_)
-  cos
-  sin
-end
+@macroexpand(@chain reserve_url begin
+  Downloads.download(IOBuffer())
+  String(take!(_))
+  CSV.read(IOBuffer(_),DataFrame)
+end) |>Base.remove_linenums!

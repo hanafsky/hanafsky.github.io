@@ -144,7 +144,7 @@ df &#61; DataFrame&#40;load&#40;&quot;file.xlsx&quot;,&quot;Sheet1&quot;&#41;&#4
 
 df &#61; DataFrame&#40;readdlm&#40;&quot;file.dat&quot;&#41;&#41;</code></pre>
 <p>そのほかに、Rとpythonで共通なFeather形式を利用していたこともありましたが、 ほかの言語で処理することもなかったし、特段ファイルサイズが小さくなるわけでもありませんでした。</p>
-<p>早速サンプルのホテルの予約データ（reserve.csv）を読み込んでいきます。 いきなり@chainマクロを使ったパイプライン処理がでてきますが、これは次のセクションで解説します。</p>
+<p>さて、早速サンプルのホテルの予約データ（reserve.csv）を読み込んでいきます。 一行目のデータを表示してみましょう。</p>
 <pre><code class="language-julia">using DataFrames,CSV,Chain,Downloads
 
 reserve_url &#61; &quot;https://raw.githubusercontent.com/ghmagazine/awesomebook/master/data/reserve.csv&quot;
@@ -161,34 +161,36 @@ println&#40;first&#40;reserve_df&#41;&#41;</code></pre>
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
    1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
 </code></pre></div>
+<p>いきなり@chainマクロを使ったパイプライン処理がでてきますが、これは次のセクションで解説します。</p>
 <h2 id="パイプライン処理"><a href="#パイプライン処理" class="header-anchor">パイプライン処理</a></h2>
 <h3 id="julia標準のパイプライン処理"><a href="#julia標準のパイプライン処理" class="header-anchor">julia標準のパイプライン処理</a></h3>
-<p>ここではそもそもパイプライン処理とは何ぞやから解説したいと思います。 簡単な例として、次のような関数が入れ子になった計算をしたいとします。</p>
+<p><strong>「そもそもパイプライン処理とは何ぞや?」</strong>から解説したいと思います。 簡単な例として、次のような関数が入れ子になった計算をしたい場合を考えます。</p>
 <pre><code class="language-julia">sin&#40;cos&#40;tan&#40;1&#41;&#41;&#41;</code></pre>
-<p>関数名が短い場合は良いのですが、このような入れ子になった式は、一般的に可読性が高いとは言えません。 そこで、作用させる関数を後から追加できるように、juliaでは次のパイプ演算子<code>|&gt;</code>が用意されています。</p>
+<p>関数名が短い場合は良いのですが、このような入れ子になった式は、一般的に可読性が高いとは言えません。 そこで、作用させる関数を後から追加できるように、juliaでは次のパイプ演算子<code>|&gt;</code>が用意されています。 フォントの関係で右三角に見えますが、実際の入力は|&gt;です。</p>
 <pre><code class="language-julia">1 |&gt; tan |&gt; cos |&gt; sin</code></pre>
-<p>このような記法を採用するメリットは、可読性が高まるだけでなく、実行結果を確認しながら関数を追加できることです。</p>
+<p>このような記法を採用するメリットは、可読性が高まるだけでなく、実行結果を確認しながら後で関数を追加できることです。</p>
 <h3 id="引数が複数ある場合の対応"><a href="#引数が複数ある場合の対応" class="header-anchor">引数が複数ある場合の対応</a></h3>
-<p>ところが次のように、複数の引数をとる関数をパイプライン処理で実装したいときは、 そのままでは実行できないので、無名関数を使う必要がでてきます。</p>
+<p>ところが、複数の引数をとる関数をパイプライン処理で実装したいときは、 そのままでは実行できない問題が発生します。そこで、無名関数を使う必要がでてきます。</p>
 <pre><code class="language-julia">add&#40;a,b&#41; &#61; a&#43;b
 1 |&gt; &#40;x -&gt; add&#40;x,2&#41;&#41;</code></pre>
-<p>しかし、このような書き方をすると可読性が犠牲になります。この問題を解決するときに使うのが、パイプライン処理のパッケージです。</p>
+<p>ただし、このような書き方をすると可読性が犠牲になります。</p>
+<p>この問題を解決できるのがパイプライン処理のパッケージです。</p>
 <h3 id="chainjl_パッケージ"><a href="#chainjl_パッケージ" class="header-anchor">Chain.jl パッケージ</a></h3>
 <p>パイプライン処理のパッケージはいくつかありますが、ここではChain.jlを使うことにします。 使い方を簡単に解説します。 
 <a href="https://github.com/jkrumbiegel/Chain.jl"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/jkrumbiegel/Chain.jl.png" width="460px"></a>
 </p>
-<p>@chainマクロを使うと、そもそもパイプライン演算子<code>|&gt;</code>を記述する必要がなくなります。 最初の例は、次のように一行で書けます。</p>
+<p>@chainマクロを使うと、そもそもパイプ演算子<code>|&gt;</code>を記述する必要がなくなります。 最初の例は、次のように一行で書けます。</p>
 <pre><code class="language-julia">using Chain
 @chain 1 tan cos sin</code></pre>
 <p>２番目の例のように、複数の引数をとる関数がきても大丈夫です。</p>
 <pre><code class="language-julia">add&#40;a,b&#41; &#61; a&#43;b
-@chain 1 add&#40;2&#41; add&#40;3&#41;</code></pre>
-<p>左側の計算結果を次の関数の最初に引数として扱ってくれるからです。 この@chainマクロが何をしているか展開して確認してみましょう。</p>
+@chain 1 add&#40;2&#41; add&#40;3&#41;</code></pre><pre><code class="plaintext">6</code></pre>
+<p>左側の計算結果を、次の関数の最初に引数として扱ってくれるからです。 この@chainマクロが何をしているか展開して確認してみると</p>
 <pre><code class="language-julia">using Chain
 @macroexpand @chain 1 add&#40;2&#41; add&#40;3&#41; add&#40;4&#41;</code></pre><pre><code class="plaintext">:(let
-      var"##284" = add(1, 2)
-      var"##285" = add(var"##284", 3)
-      var"##286" = add(var"##285", 4)
+      var"##286" = add(1, 2)
+      var"##287" = add(var"##286", 3)
+      var"##288" = add(var"##287", 4)
   end)</code></pre>
 <h4 id="複数行で実行"><a href="#複数行で実行" class="header-anchor">複数行で実行</a></h4>
 <p>複数行で実行したい場合は、<code>begin-end</code>環境で囲います。 最初の例でやってみましょう。</p>
@@ -205,9 +207,9 @@ end</code></pre><pre><code class="plaintext">0.013387802193205699</code></pre>
   String&#40;take&#33;&#40;_&#41;&#41;
   CSV.read&#40;IOBuffer&#40;_&#41;,DataFrame&#41;
 end&#41; |&gt;Base.remove_linenums&#33;</code></pre><pre><code class="plaintext">:(let
-      var"##290" = Downloads.download(reserve_url, IOBuffer())
-      var"##291" = String(take!(var"##290"))
-      var"##292" = CSV.read(IOBuffer(var"##291"), DataFrame)
+      var"##292" = Downloads.download(reserve_url, IOBuffer())
+      var"##293" = String(take!(var"##292"))
+      var"##294" = CSV.read(IOBuffer(var"##293"), DataFrame)
   end)</code></pre>
 <p>日本語で流れを書くとこんな感じです。</p>
  <div style="text-align:center" class="mermaid"> 
@@ -220,7 +222,7 @@ graph TD
  </div>
 <p>使用させていただくデータを自分のレポジトリへ入れずに済ませたいので、ちょっとややこしいやり方となっています。</p>
 <h4 id="asideマクロ"><a href="#asideマクロ" class="header-anchor">@asideマクロ</a></h4>
-<p>パイプライン処理の途中の結果で何かをしたいときには、@asideマクロが使えます。</p>
+<p>パイプライン処理の途中の結果で何かをしたいときには、@asideマクロが使えます。 そのうち使うかもしれません。</p>
 <pre><code class="language-julia">@chain 1 begin
   tan
   @aside println&#40;_&#41;
@@ -283,7 +285,7 @@ println&#40;first&#40;testdf&#41;&#41;</code></pre>
 <pre><code class="language-julia">@time testdf&#91;:,&#91;&quot;a&#37;&quot;,&quot;b&#40;m/s&#41;&quot;&#93;&#93;
 println&#40;&#41;
 @time testdf&#91;&#33;,&#91;&quot;a&#37;&quot;,&quot;b&#40;m/s&#41;&quot;&#93;&#93;</code></pre>
-<div class="code-output"><pre><code class="plaintext">  0.017639 seconds (17.44 k allocations: 2.643 MiB, 93.42% compilation time)
+<div class="code-output"><pre><code class="plaintext">  0.013918 seconds (17.44 k allocations: 2.643 MiB, 91.42% compilation time)
 
   0.000029 seconds (25 allocations: 2.250 KiB)
 </code></pre></div></div></div>
@@ -359,7 +361,7 @@ println&#40;first&#40;sdf&#41;&#41;</code></pre>
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
      │ String      String    String       String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-   1 │ r3          h_179     c_1          2016-09-24 10:03:17  2016-10-19    09:00:00      2016-10-22              2        33600
+   1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
 </code></pre></div>
 <h3 id="2-4_集約idに基づくサンプリング"><a href="#2-4_集約idに基づくサンプリング" class="header-anchor">2-4 集約IDに基づくサンプリング</a></h3>
 <p>顧客IDを集約して、半分にサンプリングし、顧客IDによるデータの抽出を行います。 IDの重複をなくすにはunique関数が便利です。</p>

@@ -2881,17 +2881,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="Level" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
                     <meta content="331" itemprop="left"/>
-                    <meta content="1524" itemprop="top"/>
-                    <meta content="445" itemprop="right"/>
-                    <meta content="1678" itemprop="bottom"/>
-                  </span>
-                </li>
-                <li itemprop="callouts" itemscope="" repeat="">
-                  <meta content="17" itemprop="figurePage"/>
-                  <meta content="1" itemprop="id"/>
-                  <meta content="Level" itemprop="label"/>
-                  <span itemprop="bounds" itemscope="">
-                    <meta content="331" itemprop="left"/>
                     <meta content="1702" itemprop="top"/>
                     <meta content="445" itemprop="right"/>
                     <meta content="1774" itemprop="bottom"/>
@@ -2906,6 +2895,17 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     <meta content="1698" itemprop="top"/>
                     <meta content="1345" itemprop="right"/>
                     <meta content="1781" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="17" itemprop="figurePage"/>
+                  <meta content="1" itemprop="id"/>
+                  <meta content="Level" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="331" itemprop="left"/>
+                    <meta content="1524" itemprop="top"/>
+                    <meta content="445" itemprop="right"/>
+                    <meta content="1678" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
