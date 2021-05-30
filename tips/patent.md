@@ -61,7 +61,7 @@ graph LR
 using HTTP
 patentURL="https://patents.google.com/patent/US9839852"
 r=HTTP.request("GET", patentURL)
-@show r.status;
+@show r.status
 ```
 
 \prettyshow{patent1}
@@ -145,6 +145,7 @@ graph TD
 
 ```julia:patent5
 using Cascadia
+h = parsehtml(String(r.body)) # hide
 s_claim = Selector(".claims .claim .claim")
 q_claim = eachmatch(s_claim, h.root)
 claim1 = q_claim[1] |> nodeText 
@@ -155,7 +156,7 @@ claim1 = q_claim[1] |> nodeText
 （2021/5/1追記）\marker{すべての特許にこの構造が当てはまるわけではないようです。}
 
 全請求項を抜き出したいときは、claimクラスのdivのidが"CLM-"で始まることに注目して、
-```julia:patent5
+```julia
 eachmatch(Selector("""div[id^="CLM-"]"""), h.root)
 ```
 とすればOKでした。
@@ -237,7 +238,7 @@ do構文を使った例は、iframeの請求項の下で確認できます。
 
 \share{tips/pluto/}{Google Patentsを翻訳してみる。}
 
-\prev{tips/savgol}{ノイズを含むデータの微分 - Savitzky-Golay filter}
+\prevnext{/tips/savgol}{ノイズを含むデータの微分 - Savitzky-Golay filter}{/tips/preprocess}{juliaで前処理大全 - DataFrames.jl}
 \backtotop
 
 {{ addcomments }}

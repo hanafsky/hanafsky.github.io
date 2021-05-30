@@ -264,7 +264,7 @@ DirectConvolution.jlにはこのほかにも2次元のSavitzky-Golayフィルタ
 
 \right{めでたしめでたし}
 \share{tips/savgol/}{ノイズを含むデータの微分 - Savitzky-Golay filter}
-\prev{/tips/pluto}{リアクティブなノートブック Pluto.jl}
+\prevnext{/tips/pluto}{リアクティブなノートブック Pluto.jl}{/tips/patent/}{Google Patentsを翻訳してみる。}
 \backtotop
 
 {{ addcomments }}
