@@ -197,7 +197,7 @@ mermaid.jsにはフローチャート以外にもUML図やガントチャート�
 [^2]: 本サイトでは、javascriptをいじって色を変えています。このページのソースを見ると調整方法を確認できます。
 
 \share{blog/mermaid}{mermaid.jsのフローチャートメモ}
-\prev{/blog/hhkb}{HHKBの話}
+\prevnext{/blog/hhkb}{blog/jdla}{HHKBの話}{JDLA認定 G検定・E資格}
 \backtotop
 
 {{ addcomments }}
