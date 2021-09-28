@@ -62,11 +62,7 @@ using DataFrames,CSV,Chain,Downloads
 
 reserve_url = "https://raw.githubusercontent.com/ghmagazine/awesomebook/master/data/reserve.csv"
 
-reserve_df = @chain reserve_url begin
-  Downloads.download(IOBuffer())
-  String(take!(_))
-  CSV.read(IOBuffer(_),DataFrame)
-end
+reserve_df = @chain reserve_url Downloads.download CSV.File DataFrame
 println(first(reserve_df))
 ```
 
@@ -117,7 +113,7 @@ add(a,b) = a+b
 using Chain
 @chain 1 tan cos sin
 ```
-２番目の例のように、複数の引数をとる関数がきても大丈夫です。
+2番目の例のように、複数の引数をとる関数がきても大丈夫です。
 
 ```!
 add(a,b) = a+b
@@ -146,7 +142,6 @@ end
 引数の位置を明示したい場合は、``_``（アンダースコア）を用います。
 これは、ほかのパイプライン処理のパッケージでも同じ実装であることが多いです。
 
-CSVファイルをダウンロードして読み込む処理では、この方法を採用しています。
 マクロを展開すると``_``の位置がlocal変数で書き換えられていることがわかると思います。
 
 ```!
@@ -156,19 +151,6 @@ CSVファイルをダウンロードして読み込む処理では、この方�
   CSV.read(IOBuffer(_),DataFrame)
 end) |>Base.remove_linenums!
 ```
-日本語で流れを書くとこんな感じです。
-\begin{mermaid}
-~~~
-graph TD
-  id1("URLをIOバッファーにダウンロードする")
-  id2("IOバッファーのデータをStringのArrayに変換する。IOバッファーのデータはなくなる。")
-  id3("Stringのデータを再びIOバッファーに入れて、DataFrame型に変換する。")
-  id1-->id2
-  id2-->id3
-~~~
-\end{mermaid}
-
-使用させていただくデータを自分のレポジトリへ入れずに済ませたいので、ちょっとややこしいやり方となっています。
 
 #### @asideマクロ
 パイプライン処理の途中の結果で何かをしたいときには、@asideマクロが使えます。
