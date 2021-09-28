@@ -28,10 +28,6 @@ jobs:
     #       libxext6 \
     #       libgl1-mesa-glx \
     #       libqt5widgets5
-    - name: Install deps for TikzCD
-      run: |
-        sudo apt-get -qq update
-        sudo apt install -y pdf2svg texlive-latex-base texlive-binaries texlive-pictures texlive-latex-extra texlive-luatex
     - name: Install Julia
       uses: julia-actions/setup-julia@v1
       with:
