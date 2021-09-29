@@ -1,5 +1,6 @@
 :(let
-      var"##286" = add(1, 2)
-      var"##287" = add(var"##286", 3)
-      var"##288" = add(var"##287", 4)
+      var"##301" = add(1, 2)
+      var"##302" = add(var"##301", 3)
+      var"##303" = add(var"##302", 4)
+      var"##303"
   end)

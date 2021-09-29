@@ -167,7 +167,7 @@ graph LR
 patentURL&#61;&quot;https://patents.google.com/patent/US9839852&quot;
 r&#61;HTTP.request&#40;&quot;GET&quot;, patentURL&#41;
 @show r.status</code></pre>
-<p><div class="code-output"><pre><code class="plaintext">r.status = 200
+<p><div class="code-output"><pre><code class="plaintext code-output">r.status = 200
 </code></pre></div> ステータスが200と表示されたので、アクセスに成功したことがわかります。</p>
 <p>次にGumbo.jlを使ってHTMLをパースします。</p>
 
@@ -186,13 +186,13 @@ h &#61; parsehtml&#40;String&#40;r.body&#41;&#41;</code></pre>
 s &#61; Selector&#40;&quot;title&quot;&#41;
 q &#61; eachmatch&#40;s, h.root&#41;
 q&#91;1&#93; |&gt; nodeText |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext">US9839852B2 - Interactive guitar game 
+<div class="code-output"><pre><code class="plaintext code-output">US9839852B2 - Interactive guitar game 
         - Google Patents
 </code></pre></div>
 <p>タグに囲まれた文章ではなく、href属性を取得したければ以下のようにします。</p>
 <pre><code class="language-julia">qa &#61; eachmatch&#40;Selector&#40;&quot;a&quot;&#41;, h.root&#41;
 qa&#91;1&#93;.attributes&#91;&quot;href&quot;&#93; |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext">https://patentimages.storage.googleapis.com/ea/a3/cd/747072854dad30/US9839852.pdf
+<div class="code-output"><pre><code class="plaintext code-output">https://patentimages.storage.googleapis.com/ea/a3/cd/747072854dad30/US9839852.pdf
 </code></pre></div>
 <div class="note"><div class="title">😲 Note</div>
 <div class="content">Google Patentの最初のaタグはpdfのダウンロードリンクです。</div></div>
@@ -225,7 +225,7 @@ s_claim &#61; Selector&#40;&quot;.claims .claim .claim&quot;&#41;
 q_claim &#61; eachmatch&#40;s_claim, h.root&#41;
 claim1 &#61; q_claim&#91;1&#93; |&gt; nodeText 
 @show claim1</code></pre>
-<div class="code-output"><pre><code class="plaintext">BoundsError: attempt to access 0-element Vector{Gumbo.HTMLNode} at index [1]
+<div class="code-output"><pre><code class="plaintext code-output">BoundsError: attempt to access 0-element Vector{Gumbo.HTMLNode} at index [1]
 </code></pre></div>
 <p>（2021/5/1追記）<span class="marker"> すべての特許にこの構造が当てはまるわけではないようです。</span></p>
 <p>全請求項を抜き出したいときは、claimクラスのdivのidが&quot;CLM-&quot;で始まることに注目して、</p>
@@ -239,13 +239,21 @@ claim1 &#61; q_claim&#91;1&#93; |&gt; nodeText
 <p>READMEをみるとわかりますが、使用例の翻訳言語が&quot;ja&quot;になっていて、いかにも英語の苦手な日本人におあつらえ向きのパッケージです。 せっかくなので☆を差し上げておきました。試しに何か訳させてみましょう。</p>
 <pre><code class="language-julia">using GoogleTrans 
 GoogleTrans.translate&#40;&quot;おれは人間をやめるぞ&#33;ジョジョーッ&#33;&quot;,&quot;en&quot;&#41; |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext">I will stop human! Jojo!
+<div class="code-output"><pre><code class="plaintext code-output">Expected end of input
+Line: 0
+Around: ...902",15]]]...
+                    ^
+
 </code></pre></div>
 <p>うまく翻訳できたでしょうか？</p>
 <div class="note"><div class="title">😲 Note</div>
 <div class="content"><p>Google翻訳は優秀なのですが、図.をイチジクと訳すのは、本当にやめてほしいと思います。</p>
 <pre><code class="language-julia">GoogleTrans.translate&#40;&quot;Fig. 1 &quot;,&quot;ja&quot;&#41; |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext">イチジク。1
+<div class="code-output"><pre><code class="plaintext code-output">Expected end of input
+Line: 0
+Around: ...906",15]]]...
+                    ^
+
 </code></pre></div></div></div>
 <h2 id="plutojlでwebアプリ化"><a href="#plutojlでwebアプリ化" class="header-anchor">Pluto.jlでWebアプリ化</a></h2>
 <p>Pluto.jlは<a href="/tips/pluto">こちら</a>で紹介したように、HTMLインプットを使って簡単にウェブアプリっぽいものを作ることができます。</p>
@@ -269,7 +277,7 @@ GoogleTrans.translate&#40;&quot;おれは人間をやめるぞ&#33;ジョジョ�
 <p>結果的には、PlutoUI.jlの<span class="marker"> HTML関数にdo構文を使ってテキストをぶち込むことで解決できた</span>ので、紹介しておきます。</p>
 <pre><code class="language-julia">using PlutoUI
 @doc&#40;HTML&#41; |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext">`HTML(s)`: Create an object that renders `s` as html.
+<div class="code-output"><pre><code class="plaintext code-output">`HTML(s)`: Create an object that renders `s` as html.
 
 ```
 HTML("<div>foo</div>")
@@ -282,6 +290,10 @@ HTML() do io
   println(io, "<div>foo</div>")
 end
 ```
+
+!!! warning
+    `HTML` is currently exported to maintain backwards-compatibility, but is considered to be deprecated and should not be used.
+
 
 </code></pre></div>
 <p>do構文を使った例は、iframeの請求項の下で確認できます。</p>
@@ -352,7 +364,7 @@ end
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: May 30, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: September 29, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -390,9 +402,15 @@ end
     
         <script src="/libs/mermaid/mermaid.min.js"></script>
 <script>
+  var config
   mermaid.initialize({
     theme: 'neutral',
-    themeCSS: '.node rect,\
+    themeCSS: '\
+               .mermaid-main-font {font-family:"Noto Sans JP"};\
+               .section0, .section2{fill:#fadbda;opacity:0.3;};\
+               .task0, .task1, .task2, .task3 {fill:#fadbda; stroke:#f6bdc0; stroke-width:1};\
+               .grid {stroke:#666;stroke-width:0.5};\
+               .node rect,\
                .node circle,\
                .node ellipse,\
                .node path,\

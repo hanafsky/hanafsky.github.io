@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:georss="http://www.georss.org/georss">
+
+  <channel>
+    <title>
+      <![CDATA[  {{fd2rss website_title}}  ]]>
+    </title>
+    <link> {{website_url}} </link>
+    <description>
+      <![CDATA[  {{fd2rss website_description}}  ]]>
+    </description>
+    <atom:link
+      href="{{fd_rss_feed_url}}"
+      rel="self"
+      type="application/rss+xml" />
+
+
+<item>
+  <title>
+    <![CDATA[  JDLA認定G検定・E資格受験の話  ]]>
+  </title>
+  <link> https://hanafsky.github.io/blog/jdla/index.html </link>
+  <guid> https://hanafsky.github.io/blog/jdla/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/blog/cd040d37faa8fbf6efbfd87a00529edb.png" alt="titleimage" />JDLA認定G検定・E資格受験の話  ]]>
+  </description>  
+    
+  <pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
+    
+  <category> blog </category>
+      
+</item>
+</channel></rss>

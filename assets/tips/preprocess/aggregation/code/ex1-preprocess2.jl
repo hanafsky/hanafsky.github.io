@@ -6,4 +6,4 @@ reserve_df = @chain reserve_url begin
   String(take!(_))
   CSV.read(IOBuffer(_),DataFrame)
 end
-println(first(reserve_df))
+println(first(reserve_df));

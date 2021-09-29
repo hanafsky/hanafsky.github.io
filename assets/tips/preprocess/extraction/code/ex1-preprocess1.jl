@@ -3,9 +3,5 @@ using DataFrames,CSV,Chain,Downloads
 
 reserve_url = "https://raw.githubusercontent.com/ghmagazine/awesomebook/master/data/reserve.csv"
 
-reserve_df = @chain reserve_url begin
-  Downloads.download(IOBuffer())
-  String(take!(_))
-  CSV.read(IOBuffer(_),DataFrame)
-end
+reserve_df = @chain reserve_url Downloads.download CSV.File DataFrame
 println(first(reserve_df))

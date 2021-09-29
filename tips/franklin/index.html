@@ -176,7 +176,7 @@ println&#40;&quot;Hello Franklin&quot;&#41;
 \show&#123;test&#125;</code></pre>
 <p>するとこのコードが実行された結果を出力できます。</p>
 <pre><code class="language-julia">println&#40;&quot;Hello Franklin&quot;&#41;</code></pre>
-<pre><code class="plaintext">Hello Franklin
+<pre><code class="plaintext code-output">Hello Franklin
 </code></pre>
 <p>次のように書いてやればグラフを出力できます。</p>
 <pre><code class="language-markdown">&#96;&#96;&#96;julia:plot
@@ -214,7 +214,7 @@ savefig&#40;p,joinpath&#40;@OUTPUT,&quot;figplot.svg&quot;&#41;&#41;</code></pre
 for i in 1:2
     a &#43;&#61; 1
 end</code></pre>
-<p><pre><code class="plaintext">UndefVarError: a not defined
+<p><pre><code class="plaintext code-output">UndefVarError: a not defined
 </code></pre> となってしまいます。 これを防ぐには、let環境に入れ込んでしまうか、</p>
 <pre><code class="language-julia">let
 a &#61; 1
@@ -223,14 +223,14 @@ for i in 1:2
 end
 a
 end</code></pre>
-<pre><code class="plaintext">3</code></pre>
+<pre><code class="plaintext code-output">3</code></pre>
 <p>コントロールの中でグローバル変数であることを明記する必要があります。<sup id="fnref:2"><a href="#fndef:2" class="fnref">[1]</a></sup></p>
 <pre><code class="language-julia">a &#61; 1
 for i in 1:2
     global a &#43;&#61; 1
 end
 a</code></pre>
-<pre><code class="plaintext">3</code></pre>
+<pre><code class="plaintext code-output">3</code></pre>
 <table class="fndef" id="fndef:2">
     <tr>
         <td class="fndef-backref"><a href="#fnref:2">[1]</a></td>
@@ -352,7 +352,7 @@ default&#40;
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: May 30, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: September 29, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

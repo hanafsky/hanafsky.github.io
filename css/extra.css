@@ -389,16 +389,6 @@ background: linear-gradient(transparent 60%, rgb(253,237,228) 0%);
     font-family: "Font Awesome 5 Free";
 }
 
-/* tikzCD */
-.small-imgc {
-  text-align: center;
-}
-.small-imgc img {
-  margin:0;
-  padding:0;
-  width: 25%;
-}
-
 /* clipboard */
 pre {
 	position: relative;

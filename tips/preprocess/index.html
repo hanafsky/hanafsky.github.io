@@ -222,7 +222,7 @@
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: May 30, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: September 29, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -260,9 +260,15 @@
     
         <script src="/libs/mermaid/mermaid.min.js"></script>
 <script>
+  var config
   mermaid.initialize({
     theme: 'neutral',
-    themeCSS: '.node rect,\
+    themeCSS: '\
+               .mermaid-main-font {font-family:"Noto Sans JP"};\
+               .section0, .section2{fill:#fadbda;opacity:0.3;};\
+               .task0, .task1, .task2, .task3 {fill:#fadbda; stroke:#f6bdc0; stroke-width:1};\
+               .grid {stroke:#666;stroke-width:0.5};\
+               .node rect,\
                .node circle,\
                .node ellipse,\
                .node path,\

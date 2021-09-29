@@ -12,3 +12,7 @@ HTML() do io
 end
 ```
 
+!!! warning
+    `HTML` is currently exported to maintain backwards-compatibility, but is considered to be deprecated and should not be used.
+
+

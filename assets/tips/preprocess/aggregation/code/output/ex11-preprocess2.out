@@ -1,6 +1,6 @@
 10×3 DataFrame
  Row │ hotel_id  rsv_cnt  rsv_cnt_rank
-     │ String    Int64    Int64
+     │ String7…  Int64    Int64
 ─────┼─────────────────────────────────
    1 │ h_75           12           100
    2 │ h_219          13           127

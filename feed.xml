@@ -31,7 +31,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -52,7 +52,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -73,7 +73,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -94,7 +94,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。  ]]>
   </description>  
     
-  <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -102,6 +102,27 @@
   </atom:author>
     
   <category> julia </category>
+      
+</item>
+
+<item>
+  <title>
+    <![CDATA[  JDLA認定G検定・E資格受験の話  ]]>
+  </title>
+  <link> https://hanafsky.github.io/blog/jdla/index.html </link>
+  <guid> https://hanafsky.github.io/blog/jdla/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/blog/cd040d37faa8fbf6efbfd87a00529edb.png" alt="titleimage" />JDLA認定G検定・E資格受験の話  ]]>
+  </description>  
+    
+  <pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
+    
+  <category> blog </category>
       
 </item>
 

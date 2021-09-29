@@ -149,15 +149,11 @@ df &#61; DataFrame&#40;readdlm&#40;&quot;file.dat&quot;&#41;&#41;</code></pre>
 
 reserve_url &#61; &quot;https://raw.githubusercontent.com/ghmagazine/awesomebook/master/data/reserve.csv&quot;
 
-reserve_df &#61; @chain reserve_url begin
-  Downloads.download&#40;IOBuffer&#40;&#41;&#41;
-  String&#40;take&#33;&#40;_&#41;&#41;
-  CSV.read&#40;IOBuffer&#40;_&#41;,DataFrame&#41;
-end
+reserve_df &#61; @chain reserve_url Downloads.download CSV.File DataFrame
 println&#40;first&#40;reserve_df&#41;&#41;</code></pre>
-<div class="code-output"><pre><code class="plaintext">DataFrameRow
+<div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
-     │ String      String    String       String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+     │ String7…    String7…  String7…     String31…            Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
    1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
 </code></pre></div>
@@ -182,15 +178,16 @@ println&#40;first&#40;reserve_df&#41;&#41;</code></pre>
 <p>@chainマクロを使うと、そもそもパイプ演算子<code>|&gt;</code>を記述する必要がなくなります。 最初の例は、次のように一行で書けます。</p>
 <pre><code class="language-julia">using Chain
 @chain 1 tan cos sin</code></pre>
-<p>２番目の例のように、複数の引数をとる関数がきても大丈夫です。</p>
+<p>2番目の例のように、複数の引数をとる関数がきても大丈夫です。</p>
 <pre><code class="language-julia">add&#40;a,b&#41; &#61; a&#43;b
-@chain 1 add&#40;2&#41; add&#40;3&#41;</code></pre><pre><code class="plaintext">6</code></pre>
+@chain 1 add&#40;2&#41; add&#40;3&#41;</code></pre><pre><code class="plaintext code-output">6</code></pre>
 <p>左側の計算結果を、次の関数の最初に引数として扱ってくれるからです。 この@chainマクロが何をしているか展開して確認してみると</p>
 <pre><code class="language-julia">using Chain
-@macroexpand @chain 1 add&#40;2&#41; add&#40;3&#41; add&#40;4&#41;</code></pre><pre><code class="plaintext">:(let
-      var"##286" = add(1, 2)
-      var"##287" = add(var"##286", 3)
-      var"##288" = add(var"##287", 4)
+@macroexpand @chain 1 add&#40;2&#41; add&#40;3&#41; add&#40;4&#41;</code></pre><pre><code class="plaintext code-output">:(let
+      var"##301" = add(1, 2)
+      var"##302" = add(var"##301", 3)
+      var"##303" = add(var"##302", 4)
+      var"##303"
   end)</code></pre>
 <h4 id="複数行で実行"><a href="#複数行で実行" class="header-anchor">複数行で実行</a></h4>
 <p>複数行で実行したい場合は、<code>begin-end</code>環境で囲います。 最初の例でやってみましょう。</p>
@@ -198,29 +195,20 @@ println&#40;first&#40;reserve_df&#41;&#41;</code></pre>
   tan
   cos
   sin
-end</code></pre><pre><code class="plaintext">0.013387802193205699</code></pre>
+end</code></pre><pre><code class="plaintext code-output">0.013387802193205699</code></pre>
 <h4 id="引数の位置を明示"><a href="#引数の位置を明示" class="header-anchor">引数の位置を明示</a></h4>
 <p>引数の位置を明示したい場合は、<code>_</code>（アンダースコア）を用います。 これは、ほかのパイプライン処理のパッケージでも同じ実装であることが多いです。</p>
-<p>CSVファイルをダウンロードして読み込む処理では、この方法を採用しています。 マクロを展開すると<code>_</code>の位置がlocal変数で書き換えられていることがわかると思います。</p>
+<p>マクロを展開すると<code>_</code>の位置がlocal変数で書き換えられていることがわかると思います。</p>
 <pre><code class="language-julia">@macroexpand&#40;@chain reserve_url begin
   Downloads.download&#40;IOBuffer&#40;&#41;&#41;
   String&#40;take&#33;&#40;_&#41;&#41;
   CSV.read&#40;IOBuffer&#40;_&#41;,DataFrame&#41;
-end&#41; |&gt;Base.remove_linenums&#33;</code></pre><pre><code class="plaintext">:(let
-      var"##292" = Downloads.download(reserve_url, IOBuffer())
-      var"##293" = String(take!(var"##292"))
-      var"##294" = CSV.read(IOBuffer(var"##293"), DataFrame)
+end&#41; |&gt;Base.remove_linenums&#33;</code></pre><pre><code class="plaintext code-output">:(let
+      var"##307" = Downloads.download(reserve_url, IOBuffer())
+      var"##308" = String(take!(var"##307"))
+      var"##309" = CSV.read(IOBuffer(var"##308"), DataFrame)
+      var"##309"
   end)</code></pre>
-<p>日本語で流れを書くとこんな感じです。</p>
- <div style="text-align:center" class="mermaid"> 
-graph TD
-  id1("URLをIOバッファーにダウンロードする")
-  id2("IOバッファーのデータをStringのArrayに変換する。IOバッファーのデータはなくなる。")
-  id3("Stringのデータを再びIOバッファーに入れて、DataFrame型に変換する。")
-  id1-->id2
-  id2-->id3
- </div>
-<p>使用させていただくデータを自分のレポジトリへ入れずに済ませたいので、ちょっとややこしいやり方となっています。</p>
 <h4 id="asideマクロ"><a href="#asideマクロ" class="header-anchor">@asideマクロ</a></h4>
 <p>パイプライン処理の途中の結果で何かをしたいときには、@asideマクロが使えます。 そのうち使うかもしれません。</p>
 <pre><code class="language-julia">@chain 1 begin
@@ -228,22 +216,22 @@ graph TD
   @aside println&#40;_&#41;
   cos
   sin
-end</code></pre><pre><code class="plaintext">1.5574077246549023
+end</code></pre><pre><code class="plaintext code-output">1.5574077246549023
 0.013387802193205699</code></pre>
 <p>@chainマクロとDataFrames.jlは非常に相性が良いので、この先ガンガン使っていきます。</p>
 <h2 id="抽出"><a href="#抽出" class="header-anchor">抽出</a></h2>
 <h3 id="データ列の抽出"><a href="#データ列の抽出" class="header-anchor">データ列の抽出</a></h3>
 <p>前処理大全では、可読性を高めるために、データの列番号ではなく、ラベルによって列を抽出することが推奨されています。 まず、ラベル名を確認しておきます。</p>
 <pre><code class="language-julia">@show names&#40;reserve_df&#41;;</code></pre>
-<div class="code-output"><pre><code class="plaintext">names(reserve_df) = ["reserve_id", "hotel_id", "customer_id", "reserve_datetime", "checkin_date", "checkin_time", "checkout_date", "people_num", "total_price"]
+<div class="code-output"><pre><code class="plaintext code-output">names(reserve_df) = ["reserve_id", "hotel_id", "customer_id", "reserve_datetime", "checkin_date", "checkin_time", "checkout_date", "people_num", "total_price"]
 </code></pre></div>
 <p>試しに<code>reserve_id</code>と<code>hotel_id</code>の列を抽出してみます。</p>
 <h4 id="string_で指定"><a href="#string_で指定" class="header-anchor">String で指定</a></h4>
 <p>オーソドックスなのは、ラベル名をString型で指定する場合です。</p>
 <pre><code class="language-julia">reserve_df&#91;&#33;,&#91;&quot;reserve_id&quot;,&quot;hotel_id&quot;&#93;&#93; |&gt; first |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext">DataFrameRow
+<div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id
-     │ String      String
+     │ String7…    String7…
 ─────┼──────────────────────
    1 │ r1          h_75
 </code></pre></div>
@@ -252,9 +240,9 @@ end</code></pre><pre><code class="plaintext">1.5574077246549023
 <pre><code class="language-julia">reserve_df&#91;&#33;,&#91;:reserve_id,Symbol&#40;&quot;hotel_id&quot;&#41;&#93;&#93; |&gt; first |&gt; println
 println&#40;&#41;
 @show typeof&#40;:reserve_id&#41;</code></pre>
-<p><div class="code-output"><pre><code class="plaintext">DataFrameRow
+<p><div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id
-     │ String      String
+     │ String7…    String7…
 ─────┼──────────────────────
    1 │ r1          h_75
 
@@ -265,15 +253,15 @@ typeof(:reserve_id) = Symbol
 <pre><code class="language-julia">@show reserve_df.reserve_id&#91;1:5&#93;
 println&#40;&#41;
 @show typeof&#40;reserve_df.reserve_id&#41;</code></pre>
-<div class="code-output"><pre><code class="plaintext">reserve_df.reserve_id[1:5] = ["r1", "r2", "r3", "r4", "r5"]
+<div class="code-output"><pre><code class="plaintext code-output">reserve_df.reserve_id[1:5] = WeakRefStrings.String7["r1", "r2", "r3", "r4", "r5"]
 
-typeof(reserve_df.reserve_id) = Vector{String}
+typeof(reserve_df.reserve_id) = Vector{WeakRefStrings.String7}
 </code></pre></div>
 <div class="warning"><div class="title">😕 Warning&#33;</div>
 <div class="content"><p>いつでも<code>:reserve_id</code>のようにできるわけではありません。よくあるトラップが、 ラベル名に<code>&#37;</code>や<code>/</code>などの2項演算子が文字列に使われている時です。</p>
 <pre><code class="language-julia">testdf &#61; DataFrame&#40;&quot;a&#37;&quot;&#61;&gt;&quot;a&quot;, &quot;b&#40;m/s&#41;&quot;&#61;&gt;1:1e5&#41;
 println&#40;first&#40;testdf&#41;&#41;</code></pre>
-<div class="code-output"><pre><code class="plaintext">DataFrameRow
+<div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ a%      b(m/s)
      │ String  Float64
 ─────┼─────────────────
@@ -285,16 +273,16 @@ println&#40;first&#40;testdf&#41;&#41;</code></pre>
 <pre><code class="language-julia">@time testdf&#91;:,&#91;&quot;a&#37;&quot;,&quot;b&#40;m/s&#41;&quot;&#93;&#93;
 println&#40;&#41;
 @time testdf&#91;&#33;,&#91;&quot;a&#37;&quot;,&quot;b&#40;m/s&#41;&quot;&#93;&#93;</code></pre>
-<div class="code-output"><pre><code class="plaintext">  0.013918 seconds (17.44 k allocations: 2.643 MiB, 91.42% compilation time)
+<div class="code-output"><pre><code class="plaintext code-output">  0.010520 seconds (17.67 k allocations: 2.553 MiB, 96.29% compilation time)
 
-  0.000029 seconds (25 allocations: 2.250 KiB)
+  0.000025 seconds (22 allocations: 1.734 KiB)
 </code></pre></div></div></div>
 <h4 id="select_関数"><a href="#select_関数" class="header-anchor">select 関数</a></h4>
 <p>列を抽出するには、select 関数も利用できます。</p>
 <pre><code class="language-julia">select&#40;reserve_df,:reserve_id, :hotel_id&#41; |&gt; first |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext">DataFrameRow
+<div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id
-     │ String      String
+     │ String7…    String7…
 ─────┼──────────────────────
    1 │ r1          h_75
 </code></pre></div>
@@ -302,18 +290,18 @@ println&#40;&#41;
 <h4 id="not_や正規表現による抽出"><a href="#not_や正規表現による抽出" class="header-anchor">Not や正規表現による抽出</a></h4>
 <p>ラベルが<code>id</code>で終わる列を正規表現で抽出します。</p>
 <pre><code class="language-julia">reserve_df&#91;&#33;,r&quot;id&#36;&quot;&#93; |&gt; first |&gt; println</code></pre>
-<p><div class="code-output"><pre><code class="plaintext">DataFrameRow
+<p><div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id
-     │ String      String    String
+     │ String7…    String7…  String7…
 ─────┼───────────────────────────────────
    1 │ r1          h_75      c_1
 </code></pre></div> <div class="warning"><div class="title">😕 Warning&#33;</div>
 <div class="content">前処理大全では、ずっと使うコードにこのような抽出方法を採用することは避けるべきだとされています。</div></div></p>
 <p>ラベル名が<code>id</code>で終わらない列を抽出するには、Not に入れてしまうと楽です。 Not の中身は、直接ラベル名を指定することもできるので有用です。</p>
 <pre><code class="language-julia">reserve_df&#91;&#33;,Not&#40;r&quot;id&#36;&quot;&#41;&#93; |&gt; first |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext">DataFrameRow
+<div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
-     │ String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+     │ String31…            Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼─────────────────────────────────────────────────────────────────────────────────────────
    1 │ 2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
 </code></pre></div>
@@ -322,9 +310,9 @@ println&#40;&#41;
 <pre><code class="language-julia">using Dates: Date
 # filter&#40;:checkin_date &#61;&gt; row-&gt; Date&#40;2016,10,12&#41; &lt;&#61; row &lt;&#61; Date&#40;2016,10,13&#41;, reserve_df&#41; |&gt; println
 filter&#40;row-&gt; Date&#40;2016,10,12&#41; &lt;&#61; row.checkin_date &lt;&#61; Date&#40;2016,10,13&#41;, reserve_df&#41; |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext">8×9 DataFrame
+<div class="code-output"><pre><code class="plaintext code-output">8×9 DataFrame
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
-     │ String      String    String       String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+     │ String7…    String7…  String7…     String31…            Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
    1 │ r285        h_121     c_67         2016-09-27 06:13:19  2016-10-12    12:00:00      2016-10-14              4       184000
    2 │ r1933       h_113     c_477        2016-09-24 09:04:26  2016-10-12    11:30:00      2016-10-13              4        77200
@@ -357,9 +345,9 @@ sdf &#61; @chain reserve_df begin
   select&#33;&#40;Not&#40;:rand&#41;&#41;
 end
 println&#40;first&#40;sdf&#41;&#41;</code></pre>
-<div class="code-output"><pre><code class="plaintext">DataFrameRow
+<div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
-     │ String      String    String       String               Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+     │ String7…    String7…  String7…     String31…            Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
    1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
 </code></pre></div>
@@ -372,7 +360,7 @@ println&#40;first&#40;sdf&#41;&#41;</code></pre>
 end</code></pre>
 <div class="code-output"></div>
 <p>unique関数はデータフレーム全体に適用することも可能です。</p>
-<pre><code class="language-julia">DataFrame&#40;a&#61;&#91;1,1,2&#93;,b&#61;&#91;&quot;a&quot;,&quot;a&quot;,&quot;b&quot;&#93;&#41; |&gt; unique</code></pre><pre><code class="plaintext">2×2 DataFrame
+<pre><code class="language-julia">DataFrame&#40;a&#61;&#91;1,1,2&#93;,b&#61;&#91;&quot;a&quot;,&quot;a&quot;,&quot;b&quot;&#93;&#41; |&gt; unique</code></pre><pre><code class="plaintext code-output">2×2 DataFrame
  Row │ a      b
      │ Int64  String
 ─────┼───────────────
@@ -426,7 +414,7 @@ end</code></pre>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: May 30, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: September 29, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -464,9 +452,15 @@ end</code></pre>
     
         <script src="/libs/mermaid/mermaid.min.js"></script>
 <script>
+  var config
   mermaid.initialize({
     theme: 'neutral',
-    themeCSS: '.node rect,\
+    themeCSS: '\
+               .mermaid-main-font {font-family:"Noto Sans JP"};\
+               .section0, .section2{fill:#fadbda;opacity:0.3;};\
+               .task0, .task1, .task2, .task3 {fill:#fadbda; stroke:#f6bdc0; stroke-width:1};\
+               .grid {stroke:#666;stroke-width:0.5};\
+               .node rect,\
                .node circle,\
                .node ellipse,\
                .node path,\
