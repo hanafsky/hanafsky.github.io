@@ -228,9 +228,12 @@
   .title { 
     color: rgba(0,0,0,0.56);
     font-weight: bolder;
-    font-size: smaller;
    }
-  .vitae { margin-top: 0.5em; }
+  .vitae {
+    color: rgba(0,0,0,0.56);
+    font-size: smaller;
+    /* margin-top: 0.5em;  */
+  }
   .discription {
     font-size: smaller;
   }
@@ -414,4 +417,11 @@ pre {
 .copy-button:active {
 	outline: 0;
 	background-color: #eee9e6;
+}
+
+.date {
+    /* padding-top : -0.5em; */
+    color: rgba(0,0,0,0.56);
+    font-size: smaller;
+    text-align: right;
 }

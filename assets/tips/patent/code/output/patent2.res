@@ -6904,9 +6904,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/EP2206540A1/en">
+                  <a href="/patent/US20090075711A1/en">
                     <span itemprop="publicationNumber">
-                      EP2206540A1
+                      US20090075711A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -6919,15 +6919,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2007-06-14
                 </td>
                 <td itemprop="publicationDate">
-                  2010-07-14
+                  2009-03-19
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
+                    Eric Brosius
                   </span>
                 </td>
                 <td itemprop="title">
-                  System and method for simulating a rock band experience
+                  Systems and methods for providing a vocal experience for a player of a rhythm action game
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -6960,9 +6960,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2010059994A2/en">
+                  <a href="/patent/US9120016B2/en">
                     <span itemprop="publicationNumber">
-                      WO2010059994A2
+                      US9120016B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -6975,11 +6975,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2008-11-21
                 </td>
                 <td itemprop="publicationDate">
-                  2010-05-27
+                  2015-09-01
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Poptank Studios, Inc.
+                    Ubisoft Entertainment
                   </span>
                 </td>
                 <td itemprop="title">
@@ -7047,9 +7047,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20110294564A1/en">
+                  <a href="/patent/US20110294565A1/en">
                     <span itemprop="publicationNumber">
-                      US20110294564A1
+                      US20110294565A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7073,7 +7073,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                 </td>
                 <td itemprop="title">
-                  Animation for a productivity applications learning tool game
+                  Consolidated game flow for learning productivity applications
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -7140,9 +7140,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20110294565A1/en">
+                  <a href="/patent/US20110294564A1/en">
                     <span itemprop="publicationNumber">
-                      US20110294565A1
+                      US20110294564A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7166,7 +7166,35 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                 </td>
                 <td itemprop="title">
-                  Consolidated game flow for learning productivity applications
+                  Animation for a productivity applications learning tool game
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/USD757320S1/en">
+                    <span itemprop="publicationNumber">
+                      USD757320S1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2010-07-15
+                </td>
+                <td itemprop="publicationDate">
+                  2016-05-24
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    James BARTOS
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Illuminated fret board
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -7202,34 +7230,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/USD757320S1/en">
-                    <span itemprop="publicationNumber">
-                      USD757320S1
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2010-07-15
-                </td>
-                <td itemprop="publicationDate">
-                  2016-05-24
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    James BARTOS
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Illuminated fret board
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US8269094B2/en">
                     <span itemprop="publicationNumber">
                       US8269094B2
@@ -7240,6 +7240,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2009-07-20
@@ -7258,9 +7261,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2011030225A2/en">
+                  <a href="/patent/US9492756B2/en">
                     <span itemprop="publicationNumber">
-                      WO2011030225A2
+                      US9492756B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7273,15 +7276,43 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2009-09-14
                 </td>
                 <td itemprop="publicationDate">
-                  2011-03-17
+                  2016-11-15
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Joytunes, Ltd.
+                    Joytunes Ltd.
                   </span>
                 </td>
                 <td itemprop="title">
-                  System and method for improving musical education
+                  System and method for analyzing a digitalized musical performance
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/EP2494432B1/en">
+                    <span itemprop="publicationNumber">
+                      EP2494432B1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2009-10-27
+                </td>
+                <td itemprop="publicationDate">
+                  2019-05-29
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Gesture-based user interface
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -7314,9 +7345,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2011056657A2/en">
+                  <a href="/patent/US8636572B2/en">
                     <span itemprop="publicationNumber">
-                      WO2011056657A2
+                      US8636572B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7324,43 +7355,12 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2009-10-27
-                </td>
-                <td itemprop="publicationDate">
-                  2011-05-12
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Gesture-based user interface
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US8550908B2/en">
-                    <span itemprop="publicationNumber">
-                      US8550908B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2010-03-16
                 </td>
                 <td itemprop="publicationDate">
-                  2013-10-08
+                  2014-01-28
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -7665,9 +7665,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2012053371A1/en">
+                  <a href="/patent/US9601118B2/en">
                     <span itemprop="publicationNumber">
-                      WO2012053371A1
+                      US9601118B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7683,11 +7683,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2010-10-20
                 </td>
                 <td itemprop="publicationDate">
-                  2012-04-26
+                  2017-03-21
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    株式会社メガチップス
+                    Megachips Corporation
                   </span>
                 </td>
                 <td itemprop="title">
@@ -7706,9 +7706,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2011-04-26
@@ -7901,9 +7898,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/JP6441681B2/en">
+                  <a href="/patent/WO2014103336A1/en">
                     <span itemprop="publicationNumber">
-                      JP6441681B2
+                      WO2014103336A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7919,15 +7916,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2012-12-29
                 </td>
                 <td itemprop="publicationDate">
-                  2018-12-19
+                  2014-07-03
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    知英 角皆
+                    Tunogai Tomohide
                   </span>
                 </td>
                 <td itemprop="title">
-                  Guitar performance training data creation device, guitar performance training system, guitar performance training data creation method, and guitar performance training data creation program
+                  Guitar teaching data creation device, guitar teaching system, guitar teaching data creation method, and guitar teaching data creation program
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -7991,9 +7988,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/EP3623020A1/en">
+                  <a href="/patent/WO2015100429A1/en">
                     <span itemprop="publicationNumber">
-                      EP3623020A1
+                      WO2015100429A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8006,7 +8003,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2013-12-26
                 </td>
                 <td itemprop="publicationDate">
-                  2020-03-18
+                  2015-07-02
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -8047,9 +8044,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2015141260A1/en">
+                  <a href="/patent/US10725650B2/en">
                     <span itemprop="publicationNumber">
-                      WO2015141260A1
+                      US10725650B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8065,15 +8062,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2014-03-17
                 </td>
                 <td itemprop="publicationDate">
-                  2015-09-24
+                  2020-07-28
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    株式会社河合楽器製作所
+                    Kabushiki Kaisha Kawai Gakki Seisakusho
                   </span>
                 </td>
                 <td itemprop="title">
-                  Handwritten music notation recognition device and program
+                  Handwritten music sign recognition device and program
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -8140,9 +8137,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2015191445A1/en">
+                  <a href="/patent/CN106470739B/en">
                     <span itemprop="publicationNumber">
-                      WO2015191445A1
+                      CN106470739B
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8155,15 +8152,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2014-06-09
                 </td>
                 <td itemprop="publicationDate">
-                  2015-12-17
+                  2019-06-21
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Icon Health &amp; Fitness, Inc.
+                    爱康保健健身有限公司
                   </span>
                 </td>
                 <td itemprop="title">
-                  Cable system incorporated into a treadmill
+                  It is incorporated to the funicular system of treadmill
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -8255,34 +8252,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/JP6123066B2/en">
-                    <span itemprop="publicationNumber">
-                      JP6123066B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2015-03-31
-                </td>
-                <td itemprop="publicationDate">
-                  2017-05-10
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    株式会社コナミデジタルエンタテインメント
-                  </span>
-                </td>
-                <td itemprop="title">
-                  GAME DEVICE AND GAME PROGRAM
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/JP6123118B2/en">
                     <span itemprop="publicationNumber">
                       JP6123118B2
@@ -8314,9 +8283,37 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/EP3095494A1/en">
+                  <a href="/patent/JP6123066B2/en">
                     <span itemprop="publicationNumber">
-                      EP3095494A1
+                      JP6123066B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2015-03-31
+                </td>
+                <td itemprop="publicationDate">
+                  2017-05-10
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    株式会社コナミデジタルエンタテインメント
+                  </span>
+                </td>
+                <td itemprop="title">
+                  GAME DEVICE AND GAME PROGRAM
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US9842577B2/en">
+                    <span itemprop="publicationNumber">
+                      US9842577B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8329,7 +8326,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2015-05-19
                 </td>
                 <td itemprop="publicationDate">
-                  2016-11-23
+                  2017-12-12
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -8408,6 +8405,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2015-09-30
@@ -8457,9 +8457,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/USD789982S1/en">
+                  <a href="/patent/USD789981S1/en">
                     <span itemprop="publicationNumber">
-                      USD789982S1
+                      USD789981S1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8488,9 +8488,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/USD789981S1/en">
+                  <a href="/patent/USD789982S1/en">
                     <span itemprop="publicationNumber">
-                      USD789981S1
+                      USD789982S1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8550,6 +8550,37 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
+                  <a href="/patent/USD789416S1/en">
+                    <span itemprop="publicationNumber">
+                      USD789416S1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2016-02-04
+                </td>
+                <td itemprop="publicationDate">
+                  2017-06-13
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Lutron Electronics Co., Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Display screen or portion thereof with animated graphical user interface
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
                   <a href="/patent/US10856394B2/en">
                     <span itemprop="publicationNumber">
                       US10856394B2
@@ -8578,9 +8609,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/USD789416S1/en">
+                  <a href="/patent/US10625137B2/en">
                     <span itemprop="publicationNumber">
-                      USD789416S1
+                      US10625137B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8590,18 +8621,18 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </a>
                 </td>
                 <td itemprop="priorityDate">
-                  2016-02-04
+                  2016-03-18
                 </td>
                 <td itemprop="publicationDate">
-                  2017-06-13
+                  2020-04-21
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Lutron Electronics Co., Inc.
+                    Icon Health &amp; Fitness, Inc.
                   </span>
                 </td>
                 <td itemprop="title">
-                  Display screen or portion thereof with animated graphical user interface
+                  Coordinated displays in an exercise device
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -8662,34 +8693,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US10625137B2/en">
-                    <span itemprop="publicationNumber">
-                      US10625137B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2016-03-18
-                </td>
-                <td itemprop="publicationDate">
-                  2020-04-21
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Icon Health &amp; Fitness, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Coordinated displays in an exercise device
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US9805702B1/en">
                     <span itemprop="publicationNumber">
                       US9805702B1
@@ -8721,34 +8724,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/USD900864S1/en">
-                    <span itemprop="publicationNumber">
-                      USD900864S1
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2016-06-18
-                </td>
-                <td itemprop="publicationDate">
-                  2020-11-03
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Sunland Information Technology Co., Ltd.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Display screen of smart piano with transitional graphical user interface
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/USD901523S1/en">
                     <span itemprop="publicationNumber">
                       USD901523S1
@@ -8768,6 +8743,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="publicationDate">
                   2020-11-10
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Sunland Information Technology Co., Ltd.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Display screen of smart piano with transitional graphical user interface
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/USD900864S1/en">
+                    <span itemprop="publicationNumber">
+                      USD900864S1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2016-06-18
+                </td>
+                <td itemprop="publicationDate">
+                  2020-11-03
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -8870,34 +8873,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US10460709B2/en">
-                    <span itemprop="publicationNumber">
-                      US10460709B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2017-06-26
-                </td>
-                <td itemprop="publicationDate">
-                  2019-10-29
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    The Intellectual Property Network, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Enhanced system, method, and devices for utilizing inaudible tones with music
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US11030983B2/en">
                     <span itemprop="publicationNumber">
                       US11030983B2
@@ -8922,6 +8897,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Enhanced system, method, and devices for communicating inaudible tones associated with audio files
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US10460709B2/en">
+                    <span itemprop="publicationNumber">
+                      US10460709B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2017-06-26
+                </td>
+                <td itemprop="publicationDate">
+                  2019-10-29
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    The Intellectual Property Network, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Enhanced system, method, and devices for utilizing inaudible tones with music
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -8957,9 +8960,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/JP2021517978A/en">
+                  <a href="/patent/WO2019147112A1/en">
                     <span itemprop="publicationNumber">
-                      JP2021517978A
+                      WO2019147112A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8975,15 +8978,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2018-01-26
                 </td>
                 <td itemprop="publicationDate">
-                  2021-07-29
+                  2019-08-01
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    ナヴァ，エリク デーミアン アレラノ
+                    Arellano Nava Eric Damian
                   </span>
                 </td>
                 <td itemprop="title">
-                  Integrated visual learning system for electric guitars and similar instruments
+                  Integral visual learning system for the electric guitar and similar instruments
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -9511,34 +9514,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US5583308A/en">
-                    <span itemprop="publicationNumber">
-                      US5583308A
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  1993-10-14
-                </td>
-                <td itemprop="publicationDate">
-                  1996-12-10
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Maestromedia, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Musical effects apparatus and tone control process for a musical instrument
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US5585583A/en">
                     <span itemprop="publicationNumber">
                       US5585583A
@@ -9563,6 +9538,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Interactive musical instrument instruction system
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US5583308A/en">
+                    <span itemprop="publicationNumber">
+                      US5583308A
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  1993-10-14
+                </td>
+                <td itemprop="publicationDate">
+                  1996-12-10
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Maestromedia, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Musical effects apparatus and tone control process for a musical instrument
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -9896,9 +9899,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/AU2340599A/en">
+                  <a href="/patent/WO1999039316A1/en">
                     <span itemprop="publicationNumber">
-                      AU2340599A
+                      WO1999039316A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -9914,7 +9917,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   1998-01-28
                 </td>
                 <td itemprop="publicationDate">
-                  1999-08-16
+                  1999-08-05
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -10262,9 +10265,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/EP1216471B1/en">
+                  <a href="/patent/ES2545452T3/en">
                     <span itemprop="publicationNumber">
-                      EP1216471B1
+                      ES2545452T3
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -10277,7 +10280,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   1999-07-07
                 </td>
                 <td itemprop="publicationDate">
-                  2015-05-20
+                  2015-09-11
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -10285,7 +10288,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                 </td>
                 <td itemprop="title">
-                  Musical instrument digital recording device with interference
+                  Digital recording device for musical instruments with interference
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -10321,9 +10324,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/DE60023081D1/en">
+                  <a href="/patent/US7019205B1/en">
                     <span itemprop="publicationNumber">
-                      DE60023081D1
+                      US7019205B1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -10339,15 +10342,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   1999-10-14
                 </td>
                 <td itemprop="publicationDate">
-                  2005-11-17
+                  2006-03-28
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Sony Computer Entertainment Inc
+                    Sony Computer Entertainment Inc.
                   </span>
                 </td>
                 <td itemprop="title">
-                  Entertainment system, entertainment device, recording medium and program
+                  Entertainment system, entertainment apparatus, recording medium, and program
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -10529,9 +10532,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/JP2003536106A/en">
+                  <a href="/patent/AU4448901A/en">
                     <span itemprop="publicationNumber">
-                      JP2003536106A
+                      AU4448901A
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -10544,15 +10547,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2000-04-07
                 </td>
                 <td itemprop="publicationDate">
-                  2003-12-02
+                  2001-12-17
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    サーディス・ディヴェロプメンツ・リミテッド
+                    Thurdis Developments Ltd
                   </span>
                 </td>
                 <td itemprop="title">
-                  Interactive multimedia device
+                  Interactive multimedia apparatus
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -10706,9 +10709,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2002013002A2/en">
+                  <a href="/patent/JP2004506262A/en">
                     <span itemprop="publicationNumber">
-                      WO2002013002A2
+                      JP2004506262A
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -10721,15 +10724,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2000-08-04
                 </td>
                 <td itemprop="publicationDate">
-                  2002-02-14
+                  2004-02-26
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Intrinsic Graphics, Inc.
+                    イントリンジック　グラフィックス，　インコーポレイテッド
                   </span>
                 </td>
                 <td itemprop="title">
-                  Development of graphics hardware and software
+                  Graphic hardware and software development
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -10914,9 +10917,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20040158462A1/en">
+                  <a href="/patent/AU2001270365A1/en">
                     <span itemprop="publicationNumber">
-                      US20040158462A1
+                      AU2001270365A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -10929,11 +10932,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2001-06-11
                 </td>
                 <td itemprop="publicationDate">
-                  2004-08-12
+                  2002-12-23
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Rutledge Glen J.
+                    Ivl Technologies Ltd.
                   </span>
                 </td>
                 <td itemprop="title">
@@ -10942,9 +10945,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2002101687A1/en">
+                  <a href="/patent/US7030307B2/en">
                     <span itemprop="publicationNumber">
-                      WO2002101687A1
+                      US7030307B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -10957,7 +10960,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2001-06-12
                 </td>
                 <td itemprop="publicationDate">
-                  2002-12-19
+                  2006-04-18
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -11001,34 +11004,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US6969797B2/en">
-                    <span itemprop="publicationNumber">
-                      US6969797B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2001-11-21
-                </td>
-                <td itemprop="publicationDate">
-                  2005-11-29
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Line 6, Inc
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Interface device to couple a musical instrument to a computing device to allow a user to play a musical instrument in conjunction with a multimedia presentation
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US7020635B2/en">
                     <span itemprop="publicationNumber">
                       US7020635B2
@@ -11056,6 +11031,37 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   System and method of secure electronic commerce transactions including tracking and recording the distribution and usage of assets
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US7404202B2/en">
+                    <span itemprop="publicationNumber">
+                      US7404202B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2001-11-21
+                </td>
+                <td itemprop="publicationDate">
+                  2008-07-22
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Line 6, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  System, device, and method for providing secure electronic commerce transactions
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -11091,9 +11097,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US6740803B2/en">
+                  <a href="/patent/US6969797B2/en">
                     <span itemprop="publicationNumber">
-                      US6740803B2
+                      US6969797B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -11101,15 +11107,12 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2001-11-21
                 </td>
                 <td itemprop="publicationDate">
-                  2004-05-25
+                  2005-11-29
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -11117,7 +11120,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                 </td>
                 <td itemprop="title">
-                  Computing device to allow for the selection and display of a multimedia presentation of an audio file and to allow a user to play a musical instrument in conjunction with the multimedia presentation
+                  Interface device to couple a musical instrument to a computing device to allow a user to play a musical instrument in conjunction with a multimedia presentation
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -11153,9 +11156,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US7404202B2/en">
+                  <a href="/patent/US6740803B2/en">
                     <span itemprop="publicationNumber">
-                      US7404202B2
+                      US6740803B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -11171,15 +11174,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2001-11-21
                 </td>
                 <td itemprop="publicationDate">
-                  2008-07-22
+                  2004-05-25
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Line 6, Inc.
+                    Line 6, Inc
                   </span>
                 </td>
                 <td itemprop="title">
-                  System, device, and method for providing secure electronic commerce transactions
+                  Computing device to allow for the selection and display of a multimedia presentation of an audio file and to allow a user to play a musical instrument in conjunction with the multimedia presentation
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -11426,9 +11429,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/AU2003275089A1/en">
+                  <a href="/patent/WO2004027577A2/en">
                     <span itemprop="publicationNumber">
-                      AU2003275089A1
+                      WO2004027577A2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -11441,11 +11444,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2002-09-19
                 </td>
                 <td itemprop="publicationDate">
-                  2004-04-08
+                  2004-04-01
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    William B. Hudak
+                    Brian Reynolds
                   </span>
                 </td>
                 <td itemprop="title">
@@ -11454,9 +11457,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/JP4679503B2/en">
+                  <a href="/patent/EP1588347B1/en">
                     <span itemprop="publicationNumber">
-                      JP4679503B2
+                      EP1588347B1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -11472,15 +11475,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2003-01-09
                 </td>
                 <td itemprop="publicationDate">
-                  2011-04-27
+                  2009-04-08
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    エアリエル，インク．
+                    Aerielle Technologies, Inc.
                   </span>
                 </td>
                 <td itemprop="title">
-                  Circuit and method for providing audio device with auto-off and / or auto-off function
+                  Circuit and method for providing an auto-off and/or auto-on capability for an audio device
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -11743,9 +11746,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/GB2433349B/en">
+                  <a href="/patent/CA2581919A1/en">
                     <span itemprop="publicationNumber">
-                      GB2433349B
+                      CA2581919A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -11758,7 +11761,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2004-10-22
                 </td>
                 <td itemprop="publicationDate">
-                  2010-03-17
+                  2006-04-27
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -12138,9 +12141,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2006-01-13
@@ -12302,9 +12302,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2007124387A2/en">
+                  <a href="/patent/US7521619B2/en">
                     <span itemprop="publicationNumber">
-                      WO2007124387A2
+                      US7521619B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -12320,7 +12320,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2006-04-19
                 </td>
                 <td itemprop="publicationDate">
-                  2007-11-01
+                  2009-04-21
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -12328,7 +12328,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                 </td>
                 <td itemprop="title">
-                  System and method of instructing musical literacy and performance of a stringed instrument
+                  System and method of instructing musical notation for a stringed instrument
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -12523,9 +12523,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2006-12-04
@@ -12724,9 +12721,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2009052032A1/en">
+                  <a href="/patent/US7842875B2/en">
                     <span itemprop="publicationNumber">
-                      WO2009052032A1
+                      US7842875B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -12742,7 +12739,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2007-10-19
                 </td>
                 <td itemprop="publicationDate">
-                  2009-04-23
+                  2010-11-30
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -12755,9 +12752,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/JP2011509800A/en">
+                  <a href="/patent/AU2009206663A1/en">
                     <span itemprop="publicationNumber">
-                      JP2011509800A
+                      AU2009206663A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -12773,15 +12770,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2008-01-24
                 </td>
                 <td itemprop="publicationDate">
-                  2011-03-31
+                  2009-07-30
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    ７４５  エルエルシー
+                    745 Llc
                   </span>
                 </td>
                 <td itemprop="title">
-                  Method and apparatus for stringed controllers and / or musical instruments
+                  Method and apparatus for stringed controllers and/or instruments
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -12907,9 +12904,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2010059994A2/en">
+                  <a href="/patent/US9120016B2/en">
                     <span itemprop="publicationNumber">
-                      WO2010059994A2
+                      US9120016B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -12922,11 +12919,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2008-11-21
                 </td>
                 <td itemprop="publicationDate">
-                  2010-05-27
+                  2015-09-01
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Poptank Studios, Inc.
+                    Ubisoft Entertainment
                   </span>
                 </td>
                 <td itemprop="title">
@@ -12962,6 +12959,96 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   System and method for providing an edutainment interface for musical instruments
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US8080722B2/en">
+                    <span itemprop="publicationNumber">
+                      US8080722B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2009-05-29
+                </td>
+                <td itemprop="publicationDate">
+                  2011-12-20
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Preventing an unintentional deploy of a bonus in a video game
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US7982114B2/en">
+                    <span itemprop="publicationNumber">
+                      US7982114B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2009-05-29
+                </td>
+                <td itemprop="publicationDate">
+                  2011-07-19
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Displaying an input at multiple octaves
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US7935880B2/en">
+                    <span itemprop="publicationNumber">
+                      US7935880B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2009-05-29
+                </td>
+                <td itemprop="publicationDate">
+                  2011-05-03
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Dynamically displaying a pitch range
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -13028,93 +13115,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US7982114B2/en">
-                    <span itemprop="publicationNumber">
-                      US7982114B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  2009-05-29
-                </td>
-                <td itemprop="publicationDate">
-                  2011-07-19
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Displaying an input at multiple octaves
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US8080722B2/en">
-                    <span itemprop="publicationNumber">
-                      US8080722B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2009-05-29
-                </td>
-                <td itemprop="publicationDate">
-                  2011-12-20
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Preventing an unintentional deploy of a bonus in a video game
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US8076564B2/en">
-                    <span itemprop="publicationNumber">
-                      US8076564B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2009-05-29
-                </td>
-                <td itemprop="publicationDate">
-                  2011-12-13
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Scoring a musical performance after a period of ambiguity
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US8026435B2/en">
                     <span itemprop="publicationNumber">
                       US8026435B2
@@ -13143,9 +13143,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US7935880B2/en">
+                  <a href="/patent/US8076564B2/en">
                     <span itemprop="publicationNumber">
-                      US7935880B2
+                      US8076564B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -13153,15 +13153,12 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2009-05-29
                 </td>
                 <td itemprop="publicationDate">
-                  2011-05-03
+                  2011-12-13
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -13169,7 +13166,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                 </td>
                 <td itemprop="title">
-                  Dynamically displaying a pitch range
+                  Scoring a musical performance after a period of ambiguity
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -13420,9 +13417,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2010-06-30
@@ -13483,28 +13477,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     2009-11-20
                   </span>
                   <span itemprop="countryCode">
-                    WO
-                  </span>
-                  <span itemprop="applicationNumber">
-                    PCT/US2009/065413
-                  </span>
-                  <a href="/patent/WO2010059994A2/en">
-                    <span itemprop="documentId">
-                      patent/WO2010059994A2/en
-                    </span>
-                  </a>
-                  <span itemprop="legalStatusCat">
-                    active
-                  </span>
-                  <span itemprop="legalStatus">
-                    Application Filing
-                  </span>
-                </li>
-                <li itemprop="application" itemscope="" repeat="">
-                  <span itemprop="filingDate">
-                    2009-11-20
-                  </span>
-                  <span itemprop="countryCode">
                     US
                   </span>
                   <span itemprop="applicationNumber">
@@ -13520,6 +13492,28 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                   <span itemprop="legalStatus">
                     Active
+                  </span>
+                </li>
+                <li itemprop="application" itemscope="" repeat="">
+                  <span itemprop="filingDate">
+                    2009-11-20
+                  </span>
+                  <span itemprop="countryCode">
+                    WO
+                  </span>
+                  <span itemprop="applicationNumber">
+                    PCT/US2009/065413
+                  </span>
+                  <a href="/patent/WO2010059994A2/en">
+                    <span itemprop="documentId">
+                      patent/WO2010059994A2/en
+                    </span>
+                  </a>
+                  <span itemprop="legalStatusCat">
+                    active
+                  </span>
+                  <span itemprop="legalStatus">
+                    Application Filing
                   </span>
                 </li>
               </ul>
@@ -13970,6 +13964,23 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
             <tbody>
               <tr itemprop="docdbFamily" itemscope="" repeat="">
                 <td>
+                  <a href="/patent/US20100137049A1/en">
+                    <span itemprop="publicationNumber">
+                      US20100137049A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="publicationDate">
+                  2010-06-03
+                </td>
+              </tr>
+              <tr itemprop="docdbFamily" itemscope="" repeat="">
+                <td>
                   <a href="/patent/US9120016B2/en">
                     <span itemprop="publicationNumber">
                       US9120016B2
@@ -13983,23 +13994,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="publicationDate">
                   2015-09-01
-                </td>
-              </tr>
-              <tr itemprop="docdbFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/WO2010059994A3/en">
-                    <span itemprop="publicationNumber">
-                      WO2010059994A3
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="publicationDate">
-                  2010-09-02
                 </td>
               </tr>
               <tr itemprop="docdbFamily" itemscope="" repeat="">
@@ -14038,9 +14032,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="docdbFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20100137049A1/en">
+                  <a href="/patent/WO2010059994A2/en">
                     <span itemprop="publicationNumber">
-                      US20100137049A1
+                      WO2010059994A2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -14050,7 +14044,24 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </a>
                 </td>
                 <td itemprop="publicationDate">
-                  2010-06-03
+                  2010-05-27
+                </td>
+              </tr>
+              <tr itemprop="docdbFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/WO2010059994A3/en">
+                    <span itemprop="publicationNumber">
+                      WO2010059994A3
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="publicationDate">
+                  2010-09-02
                 </td>
               </tr>
               <tr itemprop="docdbFamily" itemscope="" repeat="">
@@ -14068,23 +14079,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="publicationDate">
                   2015-03-24
-                </td>
-              </tr>
-              <tr itemprop="docdbFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/WO2010059994A2/en">
-                    <span itemprop="publicationNumber">
-                      WO2010059994A2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="publicationDate">
-                  2010-05-27
                 </td>
               </tr>
             </tbody>

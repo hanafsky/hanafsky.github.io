@@ -253,9 +253,9 @@ typeof(:reserve_id) = Symbol
 <pre><code class="language-julia">@show reserve_df.reserve_id&#91;1:5&#93;
 println&#40;&#41;
 @show typeof&#40;reserve_df.reserve_id&#41;</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">reserve_df.reserve_id[1:5] = WeakRefStrings.String7["r1", "r2", "r3", "r4", "r5"]
+<div class="code-output"><pre><code class="plaintext code-output">reserve_df.reserve_id[1:5] = InlineStrings.String7["r1", "r2", "r3", "r4", "r5"]
 
-typeof(reserve_df.reserve_id) = Vector{WeakRefStrings.String7}
+typeof(reserve_df.reserve_id) = Vector{InlineStrings.String7}
 </code></pre></div>
 <div class="warning"><div class="title">😕 Warning&#33;</div>
 <div class="content"><p>いつでも<code>:reserve_id</code>のようにできるわけではありません。よくあるトラップが、 ラベル名に<code>&#37;</code>や<code>/</code>などの2項演算子が文字列に使われている時です。</p>
@@ -273,7 +273,7 @@ println&#40;first&#40;testdf&#41;&#41;</code></pre>
 <pre><code class="language-julia">@time testdf&#91;:,&#91;&quot;a&#37;&quot;,&quot;b&#40;m/s&#41;&quot;&#93;&#93;
 println&#40;&#41;
 @time testdf&#91;&#33;,&#91;&quot;a&#37;&quot;,&quot;b&#40;m/s&#41;&quot;&#93;&#93;</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">  0.011634 seconds (17.67 k allocations: 2.553 MiB, 96.83% compilation time)
+<div class="code-output"><pre><code class="plaintext code-output">  0.013488 seconds (17.67 k allocations: 2.553 MiB, 95.22% compilation time)
 
   0.000023 seconds (22 allocations: 1.734 KiB)
 </code></pre></div></div></div>
@@ -349,7 +349,7 @@ println&#40;first&#40;sdf&#41;&#41;</code></pre>
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
      │ String7…    String7…  String7…     String31…            Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-   1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
+   1 │ r5          h_16      c_1          2017-09-05 19:50:37  2017-09-22    10:30:00      2017-09-23              3        68100
 </code></pre></div>
 <h3 id="2-4_集約idに基づくサンプリング"><a href="#2-4_集約idに基づくサンプリング" class="header-anchor">2-4 集約IDに基づくサンプリング</a></h3>
 <p>顧客IDを集約して、半分にサンプリングし、顧客IDによるデータの抽出を行います。 IDの重複をなくすにはunique関数が便利です。</p>
@@ -414,7 +414,7 @@ end</code></pre>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: September 29, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: October 03, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

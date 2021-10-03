@@ -1,3 +1,3 @@
-reserve_df.reserve_id[1:5] = WeakRefStrings.String7["r1", "r2", "r3", "r4", "r5"]
+reserve_df.reserve_id[1:5] = InlineStrings.String7["r1", "r2", "r3", "r4", "r5"]
 
-typeof(reserve_df.reserve_id) = Vector{WeakRefStrings.String7}
+typeof(reserve_df.reserve_id) = Vector{InlineStrings.String7}
