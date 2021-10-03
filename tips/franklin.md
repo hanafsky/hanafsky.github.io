@@ -9,6 +9,10 @@
 @def isjulia =true
 
 # 静的サイトジェネレーター Franklin.jl
+@@date
+2 Apr 2021
+@@
+
 \titleimage{/assets/tips/money-franklin.jpg}{https://pixabay.com/photos/money-benjamin-franklin-dollar-4806693/}
 \share{tips/franklin}{静的サイトジェネレーター Franklin.jl}
 [Franklin.jl](https://github.com/tlienart/Franklin.jl)はjulia言語で作られた静的サイト作成パッケージです。

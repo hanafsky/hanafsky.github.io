@@ -27,12 +27,13 @@ juliaのインストールは、[公式サイト](https://julialang.org/download
 
 @@cards
 @@row
-@@column \card{/assets/tips/preprocess.jpg}{DataFrames.jl}{juliaで前処理大全}{/tips/preprocess} @@
-@@column \card{/assets/tips/steam-locomotive-4275398_1280.jpg}{GoogleTrans.jl}{Google Patentsを翻訳してみる}{/tips/patent} @@
-@@column \card{/assets/tips/smooth-3221868_640.jpg}{Savitzky Golay}{ノイジーなデータの微分}{/tips/savgol} @@
-@@column \card{/assets/tips/pluto-5962694_640.jpg}{Pluto.jl}{リアクティブなノートブック}{/tips/pluto} @@
-@@column \card{/assets/tips/money-franklin.jpg}{Franklin.jl}{静的サイトジェネレーター}{/tips/franklin} @@
-@@column \card{/assets/tips/startup.jpg}{startup.jl}{julia 起動時の初期設定}{/tips/startup} @@
+@@column \card{/assets/tips/agriculture.jpg}{Project.toml}{Project環境を作るメリット}{/tips/project}{3 Oct 2021} @@
+@@column \card{/assets/tips/preprocess.jpg}{DataFrames.jl}{juliaで前処理大全をやってみる}{/tips/preprocess}{30 May 2021} @@
+@@column \card{/assets/tips/steam-locomotive-4275398_1280.jpg}{GoogleTrans.jl}{Google Patentsを翻訳してみる}{/tips/patent}{28 Apr 2021} @@
+@@column \card{/assets/tips/smooth-3221868_640.jpg}{Savitzky Golay}{ノイジーなデータの微分}{/tips/savgol}{5 Apr 2021} @@
+@@column \card{/assets/tips/pluto-5962694_640.jpg}{Pluto.jl}{リアクティブなノートブック}{/tips/pluto}{3 Apr 2021} @@
+@@column \card{/assets/tips/money-franklin.jpg}{Franklin.jl}{静的サイトジェネレーター}{/tips/franklin}{2 Apr 2021} @@
+@@column \card{/assets/tips/startup.jpg}{startup.jl}{julia 起動時の初期設定}{/tips/startup}{1 Apr 2021} @@
 @@
 @@
 

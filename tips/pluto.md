@@ -9,6 +9,10 @@
 @def isjulia =true
 
 # リアクティブなノートブック Pluto.jl
+@@date
+3 Apr 2021
+@@
+
 \titleimage{/assets/tips/pluto-5962694_640.jpg}{https://pixabay.com/photos/pluto-mascot-disney-shanghai-5962694/}
 \share{tips/pluto/}{リアクティブなノートブック Pluto.jl}
 

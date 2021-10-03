@@ -8,6 +8,9 @@
 @def tags=["setting"]
 @def isjulia =true
 # julia起動時の初期設定 - startup.jl
+@@date
+1 Apr 2021
+@@
 
 \titleimage{/assets/tips/startup.jpg}{https://pixabay.com/photos/space-shuttle-rocket-lift-off-774/}
 \share{tips/startup}{julia 起動時の初期設定 - startup.jl}

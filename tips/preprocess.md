@@ -12,8 +12,10 @@
 @def tags=["recipe"]
 @def isjulia =true 
 @def hasmermaid=true
-# juliaで前処理大全
-
+# juliaで前処理大全をやってみる
+@@date
+30 May 2021
+@@
 \titleimage{/assets/tips/preprocess.jpg}{https://pixabay.com/photos/food-salad-raw-carrots-1209503/}
 \share{tips/preprocess/}{juliaで前処理大全}
 
@@ -36,6 +38,7 @@ SQL、R、pythonの3つの言語でAwesomeなコードの書き方を教えて�
 @@row
 @@column \textcard{Extraction}{2.抽出}{/tips/preprocess/extraction}@@
 @@column \textcard{Aggregation}{3.集約}{/tips/preprocess/aggregation}@@
+@@column \textcard{Join}{4.結合}{/tips/preprocess/join}@@
 @@
 @@
 

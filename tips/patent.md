@@ -9,6 +9,9 @@
 @def isjulia =true
 
 # Google Patentsを翻訳してみる。
+@@date
+28 Apr 2021
+@@
 
 \titleimage{/assets/tips/steam-locomotive-4275398_1280.jpg}{https://pixabay.com/illustrations/steam-locomotive-steam-car-4275398/}
 \share{tips/pluto/}{Google Patentsを翻訳してみる。}

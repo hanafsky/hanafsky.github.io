@@ -10,6 +10,9 @@
 @def hasmermaid=true
 
 # ノイズを含むデータの微分 - Savitzky-Golay filter
+@@date
+5 Apr 2021
+@@
 
 \titleimage{/assets/tips/smooth-3221868_640.jpg}{https://pixabay.com/photos/smooth-abstract-curve-desktop-3221868/}
 \share{tips/savgol/}{ノイズを含むデータの微分 - Savitzky-Golay filter}
