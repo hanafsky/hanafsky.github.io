@@ -72,13 +72,16 @@ For instance:
 </div>
 ~~~
 }
-\newcommand{\card}[4]{
+\newcommand{\card}[5]{
 @@card
 
 ~~~<p style="text-align:center"><img src="!#1" alt="No Image"></p>~~~
   @@container
   @@title
   \center{#2}
+  @@
+  @@vitae
+  \center{#5}
   @@
   @@discription
   \center{#3}

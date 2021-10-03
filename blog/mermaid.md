@@ -10,6 +10,9 @@
 @def isblog=true
 
 # フローチャートの書き方メモ mermaid.js
+@@date
+18 Apr 2021
+@@
 
 \titleimage{/assets/blog/mermaid.jpg}{https://pixabay.com/photos/mermaid-fantasy-mystical-nature-2456981/}
 \share{blog/mermaid}{mermaid.js フローチャートの書き方メモ}

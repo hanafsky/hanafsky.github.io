@@ -9,6 +9,9 @@
 @def isblog=true
 
 # HHKBの話
+@@date
+6 Apr 2021
+@@
 
 \titleimage{/assets/blog/typewriter.jpg}{https://pixabay.com/photos/typewriter-book-notes-paper-801921/}
 \share{blog/hhkb}{HHKBの話}

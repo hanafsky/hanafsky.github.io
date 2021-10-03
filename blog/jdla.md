@@ -11,6 +11,9 @@
 @def isblog=true
 
 # JDLA認定 G検定・E資格
+@@date
+20 Sep 2021
+@@
 
 \titleimage{/assets/blog/cd040d37faa8fbf6efbfd87a00529edb.png}{https://jdla.connpass.com/event/222590/}
 \share{blog/hhkb}{JDLA認定 G検定・E資格}
