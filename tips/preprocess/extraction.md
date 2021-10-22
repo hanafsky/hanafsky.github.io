@@ -60,7 +60,7 @@ df = DataFrame(readdlm("file.dat"))
 ```julia:ex1-preprocess1
 using DataFrames,CSV,Chain,Downloads
 
-reserve_url = "https://raw.githubusercontent.com/ghmagazine/awesomebook/master/data/reserve.csv"
+reserve_url = "https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/reserve.csv"
 
 reserve_df = @chain reserve_url Downloads.download CSV.File DataFrame
 println(first(reserve_df))
