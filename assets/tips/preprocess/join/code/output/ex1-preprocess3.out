@@ -1,0 +1,5 @@
+DataFrameRow
+ Row │ hotel_id  base_price  big_area_name  small_area_name  hotel_latitude  hotel_longitude  is_business
+     │ String7…  Int64       String1…       String3…         Float64         Float64          Bool
+─────┼────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ h_1            26100  D              D-2                     43.0646          141.511         true

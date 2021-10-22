@@ -132,7 +132,7 @@
 <h2 id="集約"><a href="#集約" class="header-anchor">集約</a></h2>
 <p>準備としてホテルの予約データを読み込みます。</p>
 <pre><code class="language-julia">using DataFrames,CSV,Chain,Downloads
-reserve_url &#61; &quot;https://raw.githubusercontent.com/ghmagazine/awesomebook/master/data/reserve.csv&quot;
+reserve_url &#61; &quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/reserve.csv&quot;
 reserve_df &#61; @chain reserve_url begin
   Downloads.download&#40;IOBuffer&#40;&#41;&#41;
   String&#40;take&#33;&#40;_&#41;&#41;
@@ -380,7 +380,7 @@ end</code></pre>
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> </p>
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: October 03, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: October 22, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

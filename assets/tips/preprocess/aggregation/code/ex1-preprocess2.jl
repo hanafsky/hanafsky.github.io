@@ -1,6 +1,6 @@
 # This file was generated, do not modify it. # hide
 using DataFrames,CSV,Chain,Downloads
-reserve_url = "https://raw.githubusercontent.com/ghmagazine/awesomebook/master/data/reserve.csv"
+reserve_url = "https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/reserve.csv"
 reserve_df = @chain reserve_url begin
   Downloads.download(IOBuffer())
   String(take!(_))
