@@ -240,7 +240,7 @@ end</code></pre>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: October 22, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: October 26, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -274,10 +274,72 @@ end</code></pre>
         <script src="/libs/highlight/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
 
+        <!-- http://tutsplus.github.io/clipboard/ -->
+
+<script>
+	(function(){
+	
+		// Get the elements.
+		// - the 'pre' element.
+		// - the 'div' with the 'paste-content' id.
+	
+		var pre = document.getElementsByTagName('pre');
+	
+		// Add a copy button in the 'pre' element.
+		// which only has the className of 'language-'.
+	
+		for (var i = 0; i < pre.length; i++) {
+			var isLanguage = pre[i].children[0].className.indexOf('language-');
+	
+			if ( isLanguage === 0 ) {
+				var button           = document.createElement('button');
+						button.className = 'copy-button';
+						button.textContent = 'Copy';
+	
+						pre[i].appendChild(button);
+			}
+		};
+	
+		// Run Clipboard
+	
+		var copyCode = new Clipboard('.copy-button', {
+			target: function(trigger) {
+				return trigger.previousElementSibling;
+		}
+		});
+	
+		// On success:
+		// - Change the "Copy" text to "Copied".
+		// - Swap it to "Copy" in 2s.
+		// - Lead user to the "contenteditable" area with Velocity scroll.
+	
+		copyCode.on('success', function(event) {
+			event.clearSelection();
+			event.trigger.textContent = 'Copied';
+			window.setTimeout(function() {
+				event.trigger.textContent = 'Copy';
+			}, 2000);
+	
+		});
+	
+		// On error (Safari):
+		// - Change the  "Press Ctrl+C to copy"
+		// - Swap it to "Copy" in 2s.
+	
+		copyCode.on('error', function(event) {
+			event.trigger.textContent = 'Press "Ctrl + C" to copy';
+			window.setTimeout(function() {
+				event.trigger.textContent = 'Copy';
+			}, 5000);
+		});
+	
+	})();
+	</script>
+        <!-- {{ insert foot_copy.html }} -->
     
     
     <script>
-    new Luminous(document.querySelectorAll('.zoom'));
+    new LuminousGallery(document.querySelectorAll('.zoom'));
 </script>
     <script>
 function myToc() {
@@ -288,83 +350,6 @@ function myToc() {
       x.style.display = "none";
     }
   } 
-</script>
-    <script>
-  function CopyToClipboard() {
-  /* Get the text field */
-  var copyText = document.getElementById("copytoclipboard");
-
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
-
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
-}
-</script>
-    <!-- http://tutsplus.github.io/clipboard/ -->
-
-<script>
-(function(){
-
-	// Get the elements.
-	// - the 'pre' element.
-	// - the 'div' with the 'paste-content' id.
-
-	var pre = document.getElementsByTagName('pre');
-
-	// Add a copy button in the 'pre' element.
-	// which only has the className of 'language-'.
-
-	for (var i = 0; i < pre.length; i++) {
-		var isLanguage = pre[i].children[0].className.indexOf('language-');
-
-		if ( isLanguage === 0 ) {
-			var button           = document.createElement('button');
-					button.className = 'copy-button';
-					button.textContent = 'Copy';
-
-					pre[i].appendChild(button);
-		}
-	};
-
-	// Run Clipboard
-
-	var copyCode = new Clipboard('.copy-button', {
-		target: function(trigger) {
-			return trigger.previousElementSibling;
-    }
-	});
-
-	// On success:
-	// - Change the "Copy" text to "Copied".
-	// - Swap it to "Copy" in 2s.
-	// - Lead user to the "contenteditable" area with Velocity scroll.
-
-	copyCode.on('success', function(event) {
-		event.clearSelection();
-		event.trigger.textContent = 'Copied';
-		window.setTimeout(function() {
-			event.trigger.textContent = 'Copy';
-		}, 2000);
-
-	});
-
-	// On error (Safari):
-	// - Change the  "Press Ctrl+C to copy"
-	// - Swap it to "Copy" in 2s.
-
-	copyCode.on('error', function(event) {
-		event.trigger.textContent = 'Press "Ctrl + C" to copy';
-		window.setTimeout(function() {
-			event.trigger.textContent = 'Copy';
-		}, 5000);
-	});
-
-})();
 </script>
   </body>
 </html>

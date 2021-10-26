@@ -286,8 +286,8 @@ scatter&#33;&#40;p_3,x,deriv1_2,label&#61;&quot;smoothed 1st order derivative&qu
 sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
 @btime apply_SG_filter&#40;y,sg3,derivativeOrder&#61;0&#41; # 直接畳み込み
 @btime apply_filter&#40;sg1&#91;:,2&#93;,y&#41; # FFT畳み込み</code></pre>
-<p><div class="code-output"><pre><code class="plaintext code-output">  803.488 ns (1 allocation: 736 bytes)
-  37.200 μs (86 allocations: 9.19 KiB)
+<p><div class="code-output"><pre><code class="plaintext code-output">  1.000 μs (1 allocation: 736 bytes)
+  26.502 μs (86 allocations: 9.19 KiB)
 </code></pre></div> 結果は直接畳み込みの圧勝で、Vincentさんのブログに書いてあるとおりでした。 DirectConvolution.jlにはこのほかにも2次元のSavitzky-Golayフィルターなど実装されているので、 いろいろ遊んでみたいと思います。</p>
 <p> <p style="text-align:right">  めでたしめでたし </p> 
 <div class="sns-container top">
@@ -337,7 +337,7 @@ sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: October 22, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: October 26, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -376,6 +376,68 @@ sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
         <script src="/libs/highlight/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
 
+        <!-- http://tutsplus.github.io/clipboard/ -->
+
+<script>
+	(function(){
+	
+		// Get the elements.
+		// - the 'pre' element.
+		// - the 'div' with the 'paste-content' id.
+	
+		var pre = document.getElementsByTagName('pre');
+	
+		// Add a copy button in the 'pre' element.
+		// which only has the className of 'language-'.
+	
+		for (var i = 0; i < pre.length; i++) {
+			var isLanguage = pre[i].children[0].className.indexOf('language-');
+	
+			if ( isLanguage === 0 ) {
+				var button           = document.createElement('button');
+						button.className = 'copy-button';
+						button.textContent = 'Copy';
+	
+						pre[i].appendChild(button);
+			}
+		};
+	
+		// Run Clipboard
+	
+		var copyCode = new Clipboard('.copy-button', {
+			target: function(trigger) {
+				return trigger.previousElementSibling;
+		}
+		});
+	
+		// On success:
+		// - Change the "Copy" text to "Copied".
+		// - Swap it to "Copy" in 2s.
+		// - Lead user to the "contenteditable" area with Velocity scroll.
+	
+		copyCode.on('success', function(event) {
+			event.clearSelection();
+			event.trigger.textContent = 'Copied';
+			window.setTimeout(function() {
+				event.trigger.textContent = 'Copy';
+			}, 2000);
+	
+		});
+	
+		// On error (Safari):
+		// - Change the  "Press Ctrl+C to copy"
+		// - Swap it to "Copy" in 2s.
+	
+		copyCode.on('error', function(event) {
+			event.trigger.textContent = 'Press "Ctrl + C" to copy';
+			window.setTimeout(function() {
+				event.trigger.textContent = 'Copy';
+			}, 5000);
+		});
+	
+	})();
+	</script>
+        <!-- {{ insert foot_copy.html }} -->
     
     
         <script src="/libs/mermaid/mermaid.min.js"></script>
@@ -409,7 +471,7 @@ sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
 </script>
     
     <script>
-    new Luminous(document.querySelectorAll('.zoom'));
+    new LuminousGallery(document.querySelectorAll('.zoom'));
 </script>
     <script>
 function myToc() {
@@ -420,83 +482,6 @@ function myToc() {
       x.style.display = "none";
     }
   } 
-</script>
-    <script>
-  function CopyToClipboard() {
-  /* Get the text field */
-  var copyText = document.getElementById("copytoclipboard");
-
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
-
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
-}
-</script>
-    <!-- http://tutsplus.github.io/clipboard/ -->
-
-<script>
-(function(){
-
-	// Get the elements.
-	// - the 'pre' element.
-	// - the 'div' with the 'paste-content' id.
-
-	var pre = document.getElementsByTagName('pre');
-
-	// Add a copy button in the 'pre' element.
-	// which only has the className of 'language-'.
-
-	for (var i = 0; i < pre.length; i++) {
-		var isLanguage = pre[i].children[0].className.indexOf('language-');
-
-		if ( isLanguage === 0 ) {
-			var button           = document.createElement('button');
-					button.className = 'copy-button';
-					button.textContent = 'Copy';
-
-					pre[i].appendChild(button);
-		}
-	};
-
-	// Run Clipboard
-
-	var copyCode = new Clipboard('.copy-button', {
-		target: function(trigger) {
-			return trigger.previousElementSibling;
-    }
-	});
-
-	// On success:
-	// - Change the "Copy" text to "Copied".
-	// - Swap it to "Copy" in 2s.
-	// - Lead user to the "contenteditable" area with Velocity scroll.
-
-	copyCode.on('success', function(event) {
-		event.clearSelection();
-		event.trigger.textContent = 'Copied';
-		window.setTimeout(function() {
-			event.trigger.textContent = 'Copy';
-		}, 2000);
-
-	});
-
-	// On error (Safari):
-	// - Change the  "Press Ctrl+C to copy"
-	// - Swap it to "Copy" in 2s.
-
-	copyCode.on('error', function(event) {
-		event.trigger.textContent = 'Press "Ctrl + C" to copy';
-		window.setTimeout(function() {
-			event.trigger.textContent = 'Copy';
-		}, 5000);
-	});
-
-})();
 </script>
   </body>
 </html>
