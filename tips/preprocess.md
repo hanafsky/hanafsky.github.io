@@ -39,6 +39,7 @@ SQL、R、pythonの3つの言語でAwesomeなコードの書き方を教えて�
 @@column \textcard{Extraction}{2.抽出}{/tips/preprocess/extraction}@@
 @@column \textcard{Aggregation}{3.集約}{/tips/preprocess/aggregation}@@
 @@column \textcard{Join}{4.結合}{/tips/preprocess/join}@@
+@@column \textcard{Split}{5.分割}{/tips/preprocess/split}@@
 @@
 @@
 
@@ -102,7 +103,7 @@ Tom Kwong さんのブログには、DataFrames.jlのチートシートがおい
 
 \right{つづく}
 \share{tips/preprocess}{juliaで前処理大全}
-\prev{/tips/patent}{Google Patents を翻訳してみる。}
+\prevnext{/tips/patent}{Google Patents を翻訳してみる。}{/tips/project}{Project環境を作るメリット}
 \backtotop
 
 {{ addcomments }}
