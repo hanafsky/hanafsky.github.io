@@ -37,7 +37,7 @@
 </style>
 <![endif]-->
 
-   <title>Blog</title>  
+   <title>juliaで前処理大全3</title>  
   <!-- end custom head snippets -->
 </head>
 <body class="layout--single">
@@ -84,67 +84,120 @@
           </div>
 
           
+          
               
+
           <div class="author__urls-wrapper">
             <button class="btn btn--inverse">Tag</button>
             <ul class="author__urls social-icons">
               <li>タグ</li>
               <li></li>
-              <li><a href="/tag/gadget/">ガジェット</a></li>
-              <li><a href="/tag/memo">メモ</a></li>
-              <li><a href="/tag/research">自由研究</a></li>
-              <li><a href="/tag/books">読書ノート</a></li>
+              <li><a href="/tag/setting/">設定</a></li>
+              <li><a href="/tag/thirdparty/">サードパーティライブラリ</a></li>
+              <li><a href="/tag/recipe">レシピ</a></li>
             </ul>
           </div>
-          
           
         </div>
       </div>
 
 
 <!-- Content appended here -->
-<div class="franklin-content"><h1 id="blog"><a href="#blog" class="header-anchor">Blog </a></h1>
-<p>julia言語以外のことを書いていきます。 
-<div class="sns-container top">
-  <div class="sns-box b-twitter">
-    <a href="https://twitter.com/share?url=https://hanafsky.com/blog&text=ブログ&via=HanafusaKei&related=HanafusaKei"
-    target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
-  <div class="sns-box b-facebook">
-    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/blog" 
-    target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
-  <div class="sns-box b-hatena">
-    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/blog&title=ブログ"
-    target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
-  <div class="sns-box b-pocket">
-    <a href="http://getpocket.com/edit?url=https://hanafsky.com/blog&title=ブログ"
-    rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
-  <div class="sns-box b-feedly">
-    <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
-    rel="nofollow" target="_blank"><span class="icon-feedly"></i></a></div>
-  <div class="sns-box b-line">
-    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/blog'
-    target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
+<div class="franklin-content"><h1 id="juliaで前処理大全_5分割"><a href="#juliaで前処理大全_5分割" class="header-anchor">juliaで前処理大全 5.分割</a></h1>
+<p>juliaで前処理大全その4です。今回は分割をテーマに扱います。</p>
+<div class="franklin-toc"><ol><li><a href="#準備">準備</a><ol><li><a href="#レコードデータにおけるモデル検証用のデータ分割">レコードデータにおけるモデル検証用のデータ分割</a></li><li><a href="#時系列データにおけるモデル検証用のデータ分割">時系列データにおけるモデル検証用のデータ分割</a></li></ol></li></ol></div>
+<h2 id="準備"><a href="#準備" class="header-anchor">準備</a></h2>
+<p>今回は製造レコード<code>production.csv</code>と月ごとの経営指標のデータ<code>monthly_index.csv</code>を読み込みます。</p>
+<pre><code class="language-julia">using DataFrames,CSV,Chain,Downloads,NaturalSort
+production_url &#61; &quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/production.csv&quot;
+monthly_index_url &#61; &quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/monthly_index.csv&quot;
+
+production_df &#61; @chain production_url Downloads.download CSV.File DataFrame
+monthly_index_df &#61; @chain monthly_index_url Downloads.download CSV.File DataFrame
+first&#40;production_df,10&#41; |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext code-output">10×4 DataFrame
+ Row │ type      length    thickness  fault_flg
+     │ String1…  Float64   Float64    Bool
+─────┼──────────────────────────────────────────
+   1 │ E         274.027    40.2411       false
+   2 │ D          86.3193   16.9067       false
+   3 │ E         123.94      1.01846      false
+   4 │ B         175.555    16.4149       false
+   5 │ B         244.935    29.0611       false
+   6 │ B         226.427    39.7638       false
+   7 │ C         331.638    16.8356       false
+   8 │ A         200.865    12.1843       false
+   9 │ C         276.387    29.8996       false
+  10 │ E         168.441     1.26592      false
+</code></pre></div>
+<h3 id="レコードデータにおけるモデル検証用のデータ分割"><a href="#レコードデータにおけるモデル検証用のデータ分割" class="header-anchor">レコードデータにおけるモデル検証用のデータ分割</a></h3>
+<h4 id="交差検証"><a href="#交差検証" class="header-anchor">交差検証</a></h4>
+<p>製造レコードのデータセットを用いて、データの分割を行います。 流れは以下のようになっています。</p>
+ <div style="text-align:center" class="mermaid"> 
+graph TD
+    id1("ホールドアウト検証用に20%のデータを確保")
+    id2(残りのデータを4分割して交差検証)
+    id1-->id2
+ </div>
+<p>データの分割そのものの実装は易しいのですが、コードの可読性とバグ削減の観点から、 有名なパッケージを使うのがAwesomeとされています。 PythonのScikitLearnはjuliaから容易にインポートできますが、 julia純正で何かないか探してみました。 MLDataUtils.jlを使ってみることにします。 データの分割は<code>splitobs</code>、データのシャッフルは<code>shuffleobs</code>、K-foldCVには<code>kfolds</code>を使います。</p>
+<pre><code class="language-julia">using MLDataUtils, Random
+Random.seed&#33;&#40;71&#41;#幸運を呼ぶ乱数シード71
+#ホールドアウト検証用のデータ分割。0.8は学習データの割合
+train_df,test_df &#61; @chain production_df shuffleobs splitobs&#40;at&#61;0.8&#41; 
+test_data&#61;test_df&#91;&#33;,Not&#40;:fault_flg&#41;&#93;
+test_target&#61;test_df&#91;&#33;,:fault_flg&#93;
+
+for train,val in kfolds&#40;train_df,k&#61;4&#41;
+    train_data&#61;train&#91;&#33;,Not&#40;:fault_flg&#41;&#93;
+    train_target&#61;train&#91;&#33;,:fault_flg&#93;
+    val_data &#61; val&#91;&#33;,Not&#40;:fault_flg&#41;&#93;
+    val_target &#61; val&#91;&#33;,:fault_flg&#93;
+    # trainを使って学習モデルを構築、valで検証
+end
+# 交差検証の結果をまとめる
+# test_dataを用いて学習モデルの推論を行い検証。</code></pre>
+<p><code>splitobs</code>と<code>kfolds</code>をDataFrameに対して適用すると、SubDataFrameがかえってきます。 SubDataFrameにはDataFrameに対して行った処理を同じように適用できます。 行番号を直す必要もなく、きわめてエレガントな処理と言えるでしょう。</p>
+<h3 id="時系列データにおけるモデル検証用のデータ分割"><a href="#時系列データにおけるモデル検証用のデータ分割" class="header-anchor">時系列データにおけるモデル検証用のデータ分割</a></h3>
+<h4 id="時系列データにおける学習検証データの準備"><a href="#時系列データにおける学習検証データの準備" class="header-anchor">時系列データにおける学習／検証データの準備</a></h4>
+<p>次は、時系列データの取り扱いです。時系列データの解析では、未来のデータを使って過去のデータを 予測すると不当に精度が高くなってしまうため、あくまで過去のデータから未来のデータを予測する必要があります。 この例題では、学習期間（24カ月）と検証期間（12カ月）を12カ月スライドさせながらデータを生成します。</p>
+<p>時系列データの解析に適した分割手法は、あまり汎用的なものが無さそうだったので、python版と同じくで実装することにしました。</p>
+<pre><code class="language-julia">let
+    train_window_start &#61; 1 # 学習データの開始行番号
+    train_window_end &#61; 24 # 学習データの終了行番号
+    horizon &#61; 12 # 検証データ数
+    skip &#61; 12 # スライドするデータ数
+
+    sort&#33;&#40;monthly_index_df,:year_month&#41; # 年月に基づいてデータを並べ替え
+    while true
+        test_window_end &#61; train_window_end &#43; horizon
+        train &#61;monthly_index_df&#91;train_window_start:train_window_end,:&#93;
+        test &#61; monthly_index_df&#91;&#40;train_window_end&#43;1&#41;:test_window_end,:&#93;
+        test_window_end ≥ size&#40;monthly_index_df&#41;&#91;1&#93; &amp;&amp; break
+        train_window_start &#43;&#61; skip #　学習データをスライド
+        train_window_end &#43;&#61; skip
+        # 検定の結果をまとめる。
+    end
+end</code></pre>
+
+  <div class="prev-next-link">
+  <a class="prev-link" href="/tips/preprocess/join">
+    <p class="prev-next-label">前の記事</p>
+    <p>
+       juliaで前処理大全 結合
+    </p>
+  </a>
 </div>
-</p>
-<h2 id="トピック"><a href="#トピック" class="header-anchor">トピック</a></h2>
-<div class="cards"><div class="row"><div class="column"><div class="card"><p style="text-align:center"><img src="/assets/blog/cd040d37faa8fbf6efbfd87a00529edb.png" alt="No Image"></p>
-<div class="container"><div class="title"><div style="text-align:center">  体験記 </div></div>
-<div class="vitae"><div style="text-align:center">  20 Sep 2021 </div></div>
-<div class="discription"><div style="text-align:center">  JDLA認定 G検定・E資格 </div></div>
 
-  <p><button class="button" onclick="location.href='/blog/jdla'">読む</button></p></div></div></div>
-<div class="column"><div class="card"><p style="text-align:center"><img src="/assets/blog/mermaid.jpg" alt="No Image"></p>
-<div class="container"><div class="title"><div style="text-align:center">  mermaid.js </div></div>
-<div class="vitae"><div style="text-align:center">  18 Apr 2021 </div></div>
-<div class="discription"><div style="text-align:center">  フローチャートの書き方メモ </div></div>
+ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+    <script src="https://utteranc.es/client.js"
+        repo="hanafsky/blog_comments"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
 
-  <p><button class="button" onclick="location.href='/blog/mermaid'">読む</button></p></div></div></div>
-<div class="column"><div class="card"><p style="text-align:center"><img src="/assets/blog/typewriter.jpg" alt="No Image"></p>
-<div class="container"><div class="title"><div style="text-align:center">  HHKBの話 </div></div>
-<div class="vitae"><div style="text-align:center">  6 Apr 2021 </div></div>
-<div class="discription"><div style="text-align:center">  高級キーボードのカスタマイズ </div></div>
-
-  <p><button class="button" onclick="location.href='/blog/hhkb'">読む</button></p></div></div></div></div></div>
 <div class="page-foot">
   <div class="copyright">
     &copy; Kei Hanafusa. Last modified: October 30, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
