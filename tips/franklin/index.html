@@ -186,11 +186,15 @@ p &#61; plot&#40;x-&gt;sin&#40;x&#41;,xlabel&#61;&quot;x&quot;,ylabel&#61;&quot;
 savefig&#40;p,joinpath&#40;@OUTPUT,&quot;figplot.svg&quot;&#41;&#41;
 &#96;&#96;&#96;
 
-\fig&#123;figplot&#125;</code></pre>
+\figpop&#123;figplot&#125;</code></pre>
 <pre><code class="language-julia">using Plots
 p &#61; plot&#40;x-&gt;sin&#40;x&#41;,xlabel&#61;&quot;x&quot;,ylabel&#61;&quot;y&quot;&#41;
 savefig&#40;p,joinpath&#40;@OUTPUT,&quot;figplot.svg&quot;&#41;&#41;</code></pre>
-<img src="/assets/tips/franklin/code/output/figplot.svg" alt="">
+
+<div style="text-align:center" >
+<a href="/assets/tips/franklin/code/output/figplot.svg" class="zoom"><img src="/assets/tips/franklin/code/output/figplot.svg" alt="" style="padding:0"></a>
+</div>
+
 <h2 id="注意したいポイント"><a href="#注意したいポイント" class="header-anchor">注意したいポイント</a></h2>
 <h3 id="記号に気を付けよう"><a href="#記号に気を付けよう" class="header-anchor"><code>\</code>記号に気を付けよう</a></h3>
 <p><code>\</code>の記号をMarkdownの中で使うときは注意が必要です。 FranklinはMarkdownのなかで拡張されたコマンドを使うことができます。 たとえば、こんな具合です。</p>

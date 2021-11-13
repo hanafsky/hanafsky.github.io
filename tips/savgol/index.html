@@ -242,14 +242,18 @@ sg1 &#61; SavGol.SG&#40;5,3&#41;
 p0&#61;scatter&#40;sg1&#91;:,1&#93;,label&#61;&quot;window for smoothing&quot;&#41;
 scatter&#33;&#40;sg1&#91;:,2&#93;, label&#61;&quot;window for 1st order derivative&quot;&#41;
 scatter&#33;&#40;sg1&#91;:,3&#93;, label&#61;&quot;window for 2nd order derivative&quot;&#41;</code></pre>
-<img src="/assets/tips/savgol/code/output/savgol.svg" alt="">
+
+<div style="text-align:center" >
+<a href="/assets/tips/savgol/code/output/savgol.svg" class="zoom"><img src="/assets/tips/savgol/code/output/savgol.svg" alt="" style="padding:0"></a>
+</div>
+
 <p>なお、Vincentさん曰く、畳み込む列が小さい時は、直接畳込みを実行した方が速いそうです。 VincentさんのDirectConvolution.jlをforkして使えるように修正したので、 最後に実行時間の比較をしてみたいと思います。</p>
 <h2 id="実際に微分してみる"><a href="#実際に微分してみる" class="header-anchor">実際に微分してみる。</a></h2>
 <p>シグモイド関数の変曲点を求めてみたいと思います。</p>
 \[ f(x) = \dfrac{1}{1+\exp(-x+1)}\]
 <p>一階微分は次のように書けます。</p>
 \[ \dfrac{\rm{d}f(x)}{dx} = \dfrac{\exp(-x+1)}{(1+\exp(-x+1))^2}\]
-<p>この例では、\(x＝1\)で傾きが最大になります。ノイズを加えたデータを生成してプロットしてみます。</p>
+<p>この例では、\(x=1\)で傾きが最大になります。ノイズを加えたデータを生成してプロットしてみます。</p>
 <pre><code class="language-julia">using Plots, Random
 Random.seed&#33;&#40;123&#41;
 sigmoid&#40;x&#41; &#61; 1/&#40;1&#43;exp&#40;-x&#43;1&#41;&#41;
@@ -258,14 +262,22 @@ p_1&#61;plot&#40;sigmoid,xlabel&#61;&quot;x&quot;,ylabel&#61;&quot;y&quot;,label
 x &#61; -4:0.1:4
 y &#61; sigmoid.&#40;x&#41; &#43; 0.01randn&#40;length&#40;x&#41;&#41;
 scatter&#33;&#40;p_1,x,y,label&#61;&quot;observed&quot;&#41;</code></pre>
-<img src="/assets/tips/savgol/code/output/savgol1.svg" alt="">
+
+<div style="text-align:center" >
+<a href="/assets/tips/savgol/code/output/savgol1.svg" class="zoom"><img src="/assets/tips/savgol/code/output/savgol1.svg" alt="" style="padding:0"></a>
+</div>
+
 <h3 id="fftを使ったフィルタリング"><a href="#fftを使ったフィルタリング" class="header-anchor">FFTを使ったフィルタリング</a></h3>
 <p>では、フィルターをかけて微分を求めてみます。 実際の微分値に合わせるため、返り値をデータの刻み幅（0.1）で割っていることに注意してください。</p>
 <pre><code class="language-julia">deriv1_1 &#61; apply_filter&#40;sg1&#91;:,2&#93;,y&#41;/0.1
 println&#40;deriv1_1&#41;
 p_2 &#61; plot&#40;sigmoid_d,label&#61;&quot;theoretical 1st order derivative&quot;,legend&#61;:topleft&#41;
 scatter&#33;&#40;p_2,x,deriv1_1,label&#61;&quot;smoothed 1st order derivative&quot;&#41;</code></pre>
-<img src="/assets/tips/savgol/code/output/savgol2.svg" alt="">
+
+<div style="text-align:center" >
+<a href="/assets/tips/savgol/code/output/savgol2.svg" class="zoom"><img src="/assets/tips/savgol/code/output/savgol2.svg" alt="" style="padding:0"></a>
+</div>
+
 <p>荒っぽいですが、真の微分係数に近い値が得られています。</p>
 <h3 id="直接畳み込みの場合"><a href="#直接畳み込みの場合" class="header-anchor">直接畳み込みの場合</a></h3>
 <p>同じことをDirectConvolution.jlで実行してみます。 DirectConvolution.jlではその名の通り、FFTを使わずに直接畳み込みを実行します。 私のGitHubレポジトリにあるDirectConvolution.jlをREPLのpkgモードでaddしてインストールします。</p>
@@ -278,7 +290,11 @@ sg2 &#61; SG_Filter&#40;Float64,halfWidth&#61;10,degree&#61;2&#41;
 deriv1_2 &#61; apply_SG_filter&#40;y,sg2,derivativeOrder&#61;1&#41;/0.1
 p_3 &#61; plot&#40;sigmoid_d,label&#61;&quot;theoretical 1st order derivative&quot;,legend&#61;:topleft&#41;
 scatter&#33;&#40;p_3,x,deriv1_2,label&#61;&quot;smoothed 1st order derivative&quot;&#41;</code></pre>
-<img src="/assets/tips/savgol/code/output/savgol3.svg" alt="">
+
+<div style="text-align:center" >
+<a href="/assets/tips/savgol/code/output/savgol3.svg" class="zoom"><img src="/assets/tips/savgol/code/output/savgol3.svg" alt="" style="padding:0"></a>
+</div>
+
 <p>ピーク値がやや下がりましたが、より滑らかなデータを得ることができました。</p>
 <h3 id="ベンチマーク"><a href="#ベンチマーク" class="header-anchor">ベンチマーク</a></h3>
 <p>最後に直接畳み込みとFFT畳み込みで速度の比較をしてみたいと思います。 公平のために窓関数の大きさを同じにしておきます。</p>
@@ -286,8 +302,8 @@ scatter&#33;&#40;p_3,x,deriv1_2,label&#61;&quot;smoothed 1st order derivative&qu
 sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
 @btime apply_SG_filter&#40;y,sg3,derivativeOrder&#61;0&#41; # 直接畳み込み
 @btime apply_filter&#40;sg1&#91;:,2&#93;,y&#41; # FFT畳み込み</code></pre>
-<p><div class="code-output"><pre><code class="plaintext code-output">  1.210 μs (1 allocation: 736 bytes)
-  30.902 μs (86 allocations: 9.19 KiB)
+<p><div class="code-output"><pre><code class="plaintext code-output">  933.333 ns (1 allocation: 736 bytes)
+  36.102 μs (86 allocations: 9.19 KiB)
 </code></pre></div> 結果は直接畳み込みの圧勝で、Vincentさんのブログに書いてあるとおりでした。 DirectConvolution.jlにはこのほかにも2次元のSavitzky-Golayフィルターなど実装されているので、 いろいろ遊んでみたいと思います。</p>
 <p> <p style="text-align:right">  めでたしめでたし </p> 
 <div class="sns-container top">
