@@ -1892,10 +1892,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="140" itemprop="id"/>
                   <meta content="network" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1555" itemprop="left"/>
-                    <meta content="984" itemprop="top"/>
+                    <meta content="1546" itemprop="left"/>
+                    <meta content="995" itemprop="top"/>
                     <meta content="1625" itemprop="right"/>
-                    <meta content="1052" itemprop="bottom"/>
+                    <meta content="1039" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -1903,10 +1903,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="140" itemprop="id"/>
                   <meta content="network" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1546" itemprop="left"/>
-                    <meta content="995" itemprop="top"/>
+                    <meta content="1555" itemprop="left"/>
+                    <meta content="984" itemprop="top"/>
                     <meta content="1625" itemprop="right"/>
-                    <meta content="1039" itemprop="bottom"/>
+                    <meta content="1052" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
