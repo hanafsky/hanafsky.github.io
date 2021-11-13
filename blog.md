@@ -6,7 +6,7 @@
 # Blog 
 
 julia言語以外のことを書いていきます。
-\share{blog}{ブログ}
+\share{blog/}{ブログ}
 ## トピック
 @@cards
 @@row
@@ -16,3 +16,6 @@ julia言語以外のことを書いていきます。
 <!-- @@column \card{https://www.eizo.co.jp/products/lcd/ev3895/product_photo_01.png}{EIZOの話}{常識を曲げる曲面モニター}{/blog/EIZO} @@ -->
 @@
 @@
+
+\share{blog/}{ブログ}
+\backtotop
