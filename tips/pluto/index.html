@@ -135,14 +135,14 @@
 <div class="franklin-toc"><ol><li><a href="#インストール方法">インストール方法</a></li><li><a href="#特徴">特徴</a><ol><li><a href="#リアクティブであること">リアクティブであること</a></li><li><a href="#スライドモードも実装できる">スライドモードも実装できる。</a></li><li><a href="#ただのjulia_fileである">ただのjulia fileである。</a></li><li><a href="#コードや実行結果を隠すことができる">コードや実行結果を隠すことができる。</a></li></ol></li><li><a href="#欠点">欠点</a><ol><li><a href="#重い処理に向いていない">重い処理に向いていない</a></li><li><a href="#マクロが使えないことがある">マクロが使えないことがある。</a></li><li><a href="#複数行のコード">複数行のコード</a></li></ol></li><li><a href="#plutojl_のまとめ">Pluto.jl のまとめ</a></li></ol></div>
 <h2 id="インストール方法"><a href="#インストール方法" class="header-anchor">インストール方法</a></h2>
 <p>インストールは REPL の pkg モードで add するだけです。</p>
-<pre><code class="language-julia">julia&gt;&#93;
-&#40;pkg&#41;&gt;add Pluto</code></pre>
+<pre><code class="julia hljs">julia&gt;]
+(pkg)&gt;add Pluto</code></pre>
 <p>julia モードで以下のようにタイプすれば、サーバーが立ち上がります。</p>
-<pre><code class="language-julia">julia&gt; using Pluto; Pluto.run&#40;&#41;
+<pre><code class="julia hljs">julia&gt; <span class="hljs-keyword">using</span> Pluto; Pluto.run()
 
-Opening http://localhost:1234/?secret&#61;X5qmVqFH in your default browser... ~ have fun&#33;
+Opening http://localhost:<span class="hljs-number">1234</span>/?secret=X5qmVqFH <span class="hljs-keyword">in</span> your default browser... ~ have fun!
 
-Press Ctrl&#43;C in this terminal to
+Press Ctrl+C <span class="hljs-keyword">in</span> this terminal to
 stop Pluto</code></pre>
 <h2 id="特徴"><a href="#特徴" class="header-anchor">特徴</a></h2>
 <p><a href="https://github.com/fonsp/Pluto.jl">github</a>のgif画像やjuliacon2020の動画をみれば、イメージをつかめると思います。</p>
@@ -155,7 +155,7 @@ stop Pluto</code></pre>
 <h3 id="スライドモードも実装できる"><a href="#スライドモードも実装できる" class="header-anchor">スライドモードも実装できる。</a></h3>
 <p>javascript を利用して、プレゼンテーションモードを試すことができます。 ブラウザのjavascriptコンソールでpresent&#40;&#41;とタイプすると、 プレゼンテーションモードになります。</p>
 <p>また、以下のコードを書いたセルを実行すると、ボタンでプレゼンテーションモードと通常モードを切り替えられます。</p>
-<pre><code class="language-julia">html&quot;&lt;button onclick&#61;present&#40;&#41;&gt;Present&lt;/button&gt;&quot;</code></pre>
+<pre><code class="julia hljs"><span class="hljs-string">html&quot;&lt;button onclick=present()&gt;Present&lt;/button&gt;&quot;</span></code></pre>
 <p>プレゼンテーションモードで pdf に変換すると、スライド毎にページが変わることも確認できます。</p>
 <h3 id="ただのjulia_fileである"><a href="#ただのjulia_fileである" class="header-anchor">ただのjulia fileである。</a></h3>
 <p>Pluto-notebookはただのテキストファイルなので、 gitで変更差分を管理可能です。 Jupyter Notebookの場合は、gitでの変更差分管理が難しくなります。 &#40;gitでipynbを管理するのが大変というのが、Literate.jlの生まれた理由でもあるそうです。&#41;</p>
@@ -168,17 +168,17 @@ stop Pluto</code></pre>
 <p>また、リアクティブなので、ある変数の値を変更すると、その変数を使った別のセルの内容も自動的に実行されます。 実行する計算内容が軽いものなら大丈夫ですが、実行に時間がかかるセルの内容が変更された場合は、 しばらく身動きがとれなくなります。 こうした点では、実行結果をセル毎に保存しておける Jupyter Notebook の方がある意味安全です。</p>
 <h3 id="マクロが使えないことがある"><a href="#マクロが使えないことがある" class="header-anchor">マクロが使えないことがある。</a></h3>
 <p>Plutoでは実行できないマクロがあります。 私の場合は、微分方程式のマクロである ParameterizedFunctions.jlを使おうとして、errorがでたことで気づきました。</p>
-<pre><code class="language-julia">f &#61; @ode_def LotkaVolterra begin
-  dx &#61; a*x - b*x*y
-  dy &#61; -c*y &#43; d*x*y
-end a b c d</code></pre>
+<pre><code class="julia hljs">f = <span class="hljs-meta">@ode_def</span> LotkaVolterra <span class="hljs-keyword">begin</span>
+  dx = a*x - b*x*y
+  dy = -c*y + d*x*y
+<span class="hljs-keyword">end</span> a b c d</code></pre>
 <p><a href="https://github.com/fonsp/Pluto.jl/issues/196">issue</a>で詳しく議論されています。 何か抜け道があるのかもしれませんが、 ドメイン固有言語が発達したパッケージの利用には苦労すると思われます。</p>
 <h3 id="複数行のコード"><a href="#複数行のコード" class="header-anchor">複数行のコード</a></h3>
 <p>1つのセルに複数行を入力して実行するためには、<code>begin</code>-<code>end</code>環境に入れてやる必要があります。</p>
-<pre><code class="language-julia">begin
-  a &#61; 1
-  println&#40;a&#41;
-end</code></pre>
+<pre><code class="julia hljs"><span class="hljs-keyword">begin</span>
+  a = <span class="hljs-number">1</span>
+  println(a)
+<span class="hljs-keyword">end</span></code></pre>
 <p>jupyterと同じ感覚で使おうとするとミスります。</p>
 <h2 id="plutojl_のまとめ"><a href="#plutojl_のまとめ" class="header-anchor">Pluto.jl のまとめ</a></h2>
 <ul>
@@ -240,7 +240,7 @@ end</code></pre>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: October 30, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: November 13, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -271,8 +271,8 @@ end</code></pre>
 
     
     
-        <script src="/libs/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+        
+
 
         <!-- http://tutsplus.github.io/clipboard/ -->
 
@@ -302,7 +302,7 @@ end</code></pre>
 	
 		// Run Clipboard
 	
-		var copyCode = new Clipboard('.copy-button', {
+		var copyCode = new ClipboardJS('.copy-button', {
 			target: function(trigger) {
 				return trigger.previousElementSibling;
 		}

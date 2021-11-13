@@ -149,15 +149,15 @@
 
 <h2 id="project環境の作り方"><a href="#project環境の作り方" class="header-anchor">Project環境の作り方</a></h2>
 <p>メリットについて述べる前にProject環境の作り方を整理しておきます。 たとえば、<code>plots</code>というディレクトリで作業しているとします。 以下のようなコードを実行すると、Plots.jlをインストールしたプロジェクト環境を作成できます。</p>
-<pre><code class="language-julia">PS~~~\plots&gt; julia 
-julia&gt;&#93;
-&#40;@v1.7&#41; pkg&gt; activate .
-&#40;plots&#41; pkg&gt; add Plots</code></pre>
+<pre><code class="julia hljs">PS~~~\plots&gt; julia 
+julia&gt;]
+(<span class="hljs-meta">@v1</span><span class="hljs-number">.7</span>) pkg&gt; activate .
+(plots) pkg&gt; add Plots</code></pre>
 <p>juliaのreplを立ち上げて、パッケージモードに移行します。 <code>activate .</code>と打つと現在のディレクトリをプロジェクト環境として参照します。 ここはプロジェクトファイルをおいてあるディレクトリを直接書いてもかまいません。 <code>activate</code>した後に、必要なパッケージを<code>add</code>するとproject.tomlとmanifest.tomlが自動生成されます。</p>
 <p>一度プロジェクトファイルを作ったあとであれば、<code>--project</code>オプションをつけて、repl起動時にプロジェクト環境を指定することもできます。</p>
-<pre><code class="language-julia">PS~~~\plots&gt;julia --project&#61;.
-julia&gt;&#93;
-&#40;plots&#41; pkg&gt;</code></pre>
+<pre><code class="julia hljs">PS~~~\plots&gt;julia --project=.
+julia&gt;]
+(plots) pkg&gt;</code></pre>
 <h3 id="パッケージダウングレード問題を解消"><a href="#パッケージダウングレード問題を解消" class="header-anchor">パッケージダウングレード問題を解消</a></h3>
 <p>
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/Julia%E8%A8%80%E8%AA%9E?src=hash&amp;ref_src=twsrc%5Etfw">#Julia言語</a> 解決策：任意の作業用ディレクトリで以下を実行して、そこに作成したProject.tomlを使えばよい。<br><br>julia&gt; ]<br>pkg&gt; activate .<br> Activating new project at `/work/proj`<br><br>pkg&gt; add ～<br>～<br> Updating `/work/proj/Project.toml`<br>～<br> Updating `/work/proj/Manifest.toml`</p>&mdash; 黒木玄 Gen Kuroki (@genkuroki) <a href="https://twitter.com/genkuroki/status/1439036962854240260?ref_src=twsrc%5Etfw">September 18, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -165,9 +165,9 @@ julia&gt;&#93;
 <p>個別にプロジェクト環境を作って、<span class="marker"> 必要最小限のパッケージだけを使う</span>ようにしておけば、パッケージのダウングレードのリスクを最小化できます。</p>
 <h3 id="他人のパッケージ環境をコピーできる"><a href="#他人のパッケージ環境をコピーできる" class="header-anchor">他人のパッケージ環境をコピーできる。</a></h3>
 <p>juliaの色々なパッケージのチュートリアル等で、以下のようなコマンドを求められることもあるでしょう。</p>
-<pre><code class="language-julia">julia&gt;import Pkg
-julia&gt;Pkg.activate&#40;&quot;.&quot;&#41;
-julia&gt;Pkg.instantiate&#40;&#41;</code></pre>
+<pre><code class="julia hljs">julia&gt;<span class="hljs-keyword">import</span> Pkg
+julia&gt;Pkg.activate(<span class="hljs-string">&quot;.&quot;</span>)
+julia&gt;Pkg.instantiate()</code></pre>
 <p>これをすると、現在ディレクトリのプロジェクト環境を参照して、そこに記載されているバージョンのパッケージをインストールできます。 チュートリアルを作った人と同じバージョンのパッケージを使用できるので、コードを実行できないリスクが低くなります。</p>
 <h2 id="visual_studio_codevs_codeでのメリット"><a href="#visual_studio_codevs_codeでのメリット" class="header-anchor">Visual Studio Code&#40;VS Code&#41;でのメリット</a></h2>
 <p>次はVS Codeで個別のプロジェクト環境を準備するメリットをまとめておきます。 VS Codeでjuliaのreplを立ち上げると、プロジェクトファイルがある場合には自動的にそのファイルを認識するようになっています。</p>
@@ -196,12 +196,12 @@ julia&gt;Pkg.instantiate&#40;&#41;</code></pre>
 <h4 id="ttfptime_to_first_plot"><a href="#ttfptime_to_first_plot" class="header-anchor">TTFP&#40;time to first plot&#41;</a></h4>
 <p>ここでは、TTFP&#40;time to first plot&#41;というjulia界隈でよく使われるベンチマークをやってみます。 Plots.jlというのは、比較的よく使われる可視化パッケージですが、usingにかかる時間は非常に長いことで知られています。</p>
 <p>最初にシステムイメージを読み込まない状態で、Plots.jlをインポートして適当なプロットを実行します。</p>
-<pre><code class="language-julia">PS C:\folder&gt; julia --project -e &#39;@time using Plots;plot&#40;rand&#40;10&#41;&#41;&#39;
-  4.123728 seconds &#40;8.06 M allocations: 564.466 MiB, 3.64&#37; gc time, 0.23&#37; compilation time&#41;</code></pre>
+<pre><code class="julia hljs">PS C:\folder&gt; julia --project -e &#x27;<span class="hljs-meta">@time</span> <span class="hljs-keyword">using</span> Plots;plot(rand(<span class="hljs-number">10</span>))&#x27;
+  <span class="hljs-number">4.123728</span> seconds (<span class="hljs-number">8.06</span> M allocations: <span class="hljs-number">564.466</span> MiB, <span class="hljs-number">3.64</span>% gc time, <span class="hljs-number">0.23</span>% compilation time)</code></pre>
 <p>このときの実行時間はおよそ4秒です。以前に比べればかなり早くなった方ですが、 まだ秒単位で時間がかかります。&#40;以前は数十秒かかっていた。&#41;</p>
 <p>システムイメージを読み込んだreplを起動するには<code>-J</code>オプションを使います。</p>
-<pre><code class="language-julia">PS C:\folder&gt; julia -J JuliaSysimage.dll --project -e &#39;@time using Plots;plot&#40;rand&#40;10&#41;&#41;&#39;  
-  0.007352 seconds &#40;1.33 k allocations: 86.109 KiB, 38.49&#37; compilation time&#41;</code></pre>
+<pre><code class="julia hljs">PS C:\folder&gt; julia -J JuliaSysimage.dll --project -e &#x27;<span class="hljs-meta">@time</span> <span class="hljs-keyword">using</span> Plots;plot(rand(<span class="hljs-number">10</span>))&#x27;  
+  <span class="hljs-number">0.007352</span> seconds (<span class="hljs-number">1.33</span> k allocations: <span class="hljs-number">86.109</span> KiB, <span class="hljs-number">38.49</span>% compilation time)</code></pre>
 <p>読み込み時間がm秒オーダーになりました。これでいわゆるTTFPのストレスは改善されます。</p>
 <p>このシステムイメージを構築する方式の欠点は、</p>
 <ul>
@@ -266,7 +266,7 @@ julia&gt;Pkg.instantiate&#40;&#41;</code></pre>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: October 30, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: November 13, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -297,8 +297,8 @@ julia&gt;Pkg.instantiate&#40;&#41;</code></pre>
 
     
     
-        <script src="/libs/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+        
+
 
         <!-- http://tutsplus.github.io/clipboard/ -->
 
@@ -328,7 +328,7 @@ julia&gt;Pkg.instantiate&#40;&#41;</code></pre>
 	
 		// Run Clipboard
 	
-		var copyCode = new Clipboard('.copy-button', {
+		var copyCode = new ClipboardJS('.copy-button', {
 			target: function(trigger) {
 				return trigger.previousElementSibling;
 		}

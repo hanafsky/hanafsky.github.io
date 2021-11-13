@@ -143,35 +143,35 @@
 <h2 id="内容"><a href="#内容" class="header-anchor">内容</a></h2>
 <p>参考までに私のstartup.jlをさらしてみます。</p>
 <p>なお、proxyのアドレスやポートを直接知らなくても、自動構成スクリプト（<code>***.pac</code>）を 使っている場合、テキストエディターで開けば調べられる可能性があります。</p>
-<pre><code class="language-julia">&quot;&quot;&quot;
+<pre><code class="julia hljs"><span class="hljs-string">&quot;&quot;&quot;
 Proxy 設定関連
-&quot;&quot;&quot;
-import  Pkg
-Pkg.setprotocol&#33;&#40;protocol&#61;&quot;https&quot;&#41; # gitではなくhttps経由でダウンロード
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">import</span>  Pkg
+Pkg.setprotocol!(protocol=<span class="hljs-string">&quot;https&quot;</span>) <span class="hljs-comment"># gitではなくhttps経由でダウンロード</span>
 
-# 認証付きプロキシの場合
-username &#61; &quot;xxxxxxxx&quot;
-pw&#61; &quot;xxxxxxxx&quot;
-proxy &#61; &quot;123.123.123.123&quot; 
-port &#61; &quot;8000&quot;
-ENV&#91;&quot;BINARYPROVIDER_DOWNLOAD_ENGINE&quot;&#93; &#61; &quot;curl&quot;
-ENV&#91;&quot;HTTP_PROXY&quot;&#93; &#61; &quot;http://&#36;&#40;username&#41;:&#36;&#40;pw&#41;@&#36;&#40;proxy&#41;:&#36;&#40;port&#41;&quot;
-ENV&#91;&quot;HTTPS_PROXY&quot;&#93; &#61; ENV&#91;&quot;HTTP_PROXY&quot;&#93;
+<span class="hljs-comment"># 認証付きプロキシの場合</span>
+username = <span class="hljs-string">&quot;xxxxxxxx&quot;</span>
+pw= <span class="hljs-string">&quot;xxxxxxxx&quot;</span>
+proxy = <span class="hljs-string">&quot;123.123.123.123&quot;</span> 
+port = <span class="hljs-string">&quot;8000&quot;</span>
+<span class="hljs-literal">ENV</span>[<span class="hljs-string">&quot;BINARYPROVIDER_DOWNLOAD_ENGINE&quot;</span>] = <span class="hljs-string">&quot;curl&quot;</span>
+<span class="hljs-literal">ENV</span>[<span class="hljs-string">&quot;HTTP_PROXY&quot;</span>] = <span class="hljs-string">&quot;http://<span class="hljs-subst">$(username)</span>:<span class="hljs-subst">$(pw)</span>@<span class="hljs-subst">$(proxy)</span>:<span class="hljs-subst">$(port)</span>&quot;</span>
+<span class="hljs-literal">ENV</span>[<span class="hljs-string">&quot;HTTPS_PROXY&quot;</span>] = <span class="hljs-literal">ENV</span>[<span class="hljs-string">&quot;HTTP_PROXY&quot;</span>]
 
-# 認証無しなら
-# ENV&#91;&quot;HTTP_PROXY&quot;&#93; &#61; &quot;http://&#36;&#40;proxy&#41;:&#36;&#40;port&#41;&quot;
+<span class="hljs-comment"># 認証無しなら</span>
+<span class="hljs-comment"># ENV[&quot;HTTP_PROXY&quot;] = &quot;http://$(proxy):$(port)&quot;</span>
 
-# PythonとJupyterをインストール済みの場合の環境変数設定
-ENV&#91;&quot;PYTHON&quot;&#93; &#61; Sys.which&#40;&quot;python&quot;&#41;
-ENV&#91;&quot;PYTHON3&quot;&#93; &#61; Sys.which&#40;&quot;python&quot;&#41;
-ENV&#91;&quot;JUPYTER&quot;&#93; &#61; Sys.which&#40;&quot;jupyter&quot;&#41;
+<span class="hljs-comment"># PythonとJupyterをインストール済みの場合の環境変数設定</span>
+<span class="hljs-literal">ENV</span>[<span class="hljs-string">&quot;PYTHON&quot;</span>] = Sys.which(<span class="hljs-string">&quot;python&quot;</span>)
+<span class="hljs-literal">ENV</span>[<span class="hljs-string">&quot;PYTHON3&quot;</span>] = Sys.which(<span class="hljs-string">&quot;python&quot;</span>)
+<span class="hljs-literal">ENV</span>[<span class="hljs-string">&quot;JUPYTER&quot;</span>] = Sys.which(<span class="hljs-string">&quot;jupyter&quot;</span>)
 
-&quot;&quot;&quot;
+<span class="hljs-string">&quot;&quot;&quot;
 よく使うパッケージ
-&quot;&quot;&quot;
+&quot;&quot;&quot;</span>
 
-using OhMyREPL # REPLで分かりやすく色付けをしてくれる。
-using Revise # パッケージ開発時に利用する。</code></pre>
+<span class="hljs-keyword">using</span> OhMyREPL <span class="hljs-comment"># REPLで分かりやすく色付けをしてくれる。</span>
+<span class="hljs-keyword">using</span> Revise <span class="hljs-comment"># パッケージ開発時に利用する。</span></code></pre>
 <h2 id="注意事項"><a href="#注意事項" class="header-anchor">注意事項</a></h2>
 <div class="danger"><div class="title">😱 Danger&#33;</div>
 <div class="content">Windows環境下ではjuliaの新しいバージョンをインストールしてjuliaを実行すると、エラーが発生して、<strong>そもそもREPLが立ち上がらない</strong>問題が発生します。</div></div>
@@ -220,7 +220,7 @@ using Revise # パッケージ開発時に利用する。</code></pre>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: October 30, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: November 13, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -251,8 +251,8 @@ using Revise # パッケージ開発時に利用する。</code></pre>
 
     
     
-        <script src="/libs/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+        
+
 
         <!-- http://tutsplus.github.io/clipboard/ -->
 
@@ -282,7 +282,7 @@ using Revise # パッケージ開発時に利用する。</code></pre>
 	
 		// Run Clipboard
 	
-		var copyCode = new Clipboard('.copy-button', {
+		var copyCode = new ClipboardJS('.copy-button', {
 			target: function(trigger) {
 				return trigger.previousElementSibling;
 		}

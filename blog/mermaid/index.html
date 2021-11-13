@@ -158,15 +158,15 @@ graph LR
  </div>
 <p style="text-align:center">Fig.1 簡単なフローチャートの例</p>
 <p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0NocmlzdG1hc10gLS0-fEdldCBtb25leXwgQihHbyBzaG9wcGluZylcbiAgICBCIC0tPiBDe0xldCBtZSB0aGlua31cbiAgICBDIC0tPnxPbmV8IERbTGFwdG9wXVxuICAgIEMgLS0-fFR3b3wgRVtpUGhvbmVdXG4gICAgQyAtLT58VGhyZWV8IEZbZmE6ZmEtY2FyIENhcl0iLCJtZXJtYWlkIjp7fSwidXBkYXRlRWRpdG9yIjpmYWxzZX0">live editor</a> もしくは、typoraやVisual Studio Codeなどのマークダウンプレビューが可能なエディターを立ち上げて以下のコードを書いてプレビューします。 するとFig.1のようなグラフを描画できます。live editorでは画像ファイルとしてダウンロードも可能です。</p>
-<pre><code class="language-markdown">&#96;&#96;&#96;mermaid
+<pre><code class="markdown hljs"><span class="hljs-code">```mermaid
 graph LR 
-  id1&#40;&#91;グー&#93;&#41;
-  id2&gt;チョキ&#93;
-  id3&#123;パー&#125;
+  id1([グー])
+  id2&gt;チョキ]
+  id3{パー}
   id1--&gt;id2
   id2--&gt;id3
   id3--&gt;id1
-&#96;&#96;&#96;</code></pre>
+```</span></code></pre>
 <h4 id="簡単な説明"><a href="#簡単な説明" class="header-anchor">簡単な説明</a></h4>
 <p>まず、フローチャートであることを明示するために<code>graph</code>と書きます。その右に書いた <code>LR</code>は&quot;左から右&quot;という意味です。<code>TD</code>もしくは<code>TB</code>と書くと、上から下へのフローチャートになります。</p>
 <p><code>id&#43;数字</code>で書かれたところはフローチャートの要素の名前です。その右側に書いているのが、端子の形と端子の中に書く文字列です。 <code>id1&#40;&#91;グー&#93;&#41;</code>は中にグーと書いた丸端子です。</p>
@@ -174,20 +174,20 @@ graph LR
 <p>このサイトのようにHTMLの中でdiv要素の中にコードを記述して直接ウェブページにフローチャートを書くこともできます。</p>
 <p>ただし、最後にmermaidのjavascriptを読み込む必要があります。</p>
 <p>javascriptファイルは<a href="https://unpkg.com/browse/mermaid/">こちら</a>からダウンロードできます。</p>
-<pre><code class="language-html">&lt;div style&#61;&quot;text-align:center&quot; class&#61;&quot;mermaid&quot;&gt; 
+<pre><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align:center&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mermaid&quot;</span>&gt;</span> 
 graph LR
-  id1&#40;&#91;グー&#93;&#41;
-  id2&gt;チョキ&#93;
-  id3&#123;パー&#125;
+  id1([グー])
+  id2&gt;チョキ]
+  id3{パー}
   id1--&gt;id2
   id2--&gt;id3
   id3--&gt;id1
- &lt;/div&gt;
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
- &lt;script src&#61;&quot;mermaid.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+ <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;mermaid.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 <div class="note"><div class="title">😲 Note</div>
 <div class="content"><p>この記事のように、Franklin.jlでmermaildを使うには、デプロイ時の設定に注意しなければいけません。   具体的にはdeploy.ymlの中のoptimize&#40;&#41;という関数を呼び出す場所で、以下のオプションを指定すればOKです。</p>
-<pre><code class="language-julia">optimize&#40;;minify&#61;false&#41;</code></pre>
+<pre><code class="julia hljs">optimize(;minify=<span class="hljs-literal">false</span>)</code></pre>
 <p>簡単に説明すると、デフォルトでは余計な改行を省いてhtmlのファイルサイズを小さくする処理が入っているのですが、   改行によって図の構造を表すmermaidとは相性が悪いので、これを無効化する必要があるということです。</p></div></div>
 <h2 id="チートシート"><a href="#チートシート" class="header-anchor">チートシート</a></h2>
 <p>フローチャートの記号にはそれぞれ意味があるようです。丸端子は始点終点、◇は分岐といった具合です。</p>
@@ -227,20 +227,20 @@ graph TD
 <p style="text-align:center">Fig.2 フローチャートのチートシート</p>
 <p>フローチャート記号の中に括弧も一緒に記載したので、記号の記述を忘れてもすぐに理解できます。</p>
 <p>実際のコードは以下のとおりです。</p>
-<pre><code class="language-julia">graph TD
-  id1&#40;&#91;&quot;&#40;&#91;はじめ&#93;&#41;&quot;&#93;&#41;
-  id2&#40;&quot;&#40;家帰る&#41;&quot;&#41;
-  id3&#123;&quot;&#123;運動したか？&#125;&quot;&#125;
-  id4&#40;&quot;&#40;風呂に入る&#41;&quot;&#41;
-  id5&#91;&#91;&quot;&#91;&#91;筋トレ&#93;&#93;&quot;&#93;&#93;
-  id6&#40;&#40;&quot;&#40;&#40;ごはん食べる&#41;&#41;&quot;&#41;&#41;
-  id7&#40;&#91;&quot;&#40;&#91;寝る&#93;&#41;&quot;&#93;&#41;
-  sub1&#91;&#91;&quot;&#91;&#91;筋トレ&#93;&#93;&quot;&#93;&#93;
-  sub2&#91;/&quot;&#91;/腕立て伏せ\&#93;&quot;\&#93;
-  sub3&#91;腕立て伏せ２０回&#93;
-  sub4&#91;\&quot;&#91;\腕立て伏せ/&#93;&quot;/&#93;
-  sub5&#91;/&quot;&#91;/アプリで入力する/&#93;&quot;/&#93;
-  sub6&#91;&#40;&quot;&#91;&#40;データベースに保存する&#41;&#93;&quot;&#41;&#93;
+<pre><code class="julia hljs">graph TD
+  id1([<span class="hljs-string">&quot;([はじめ])&quot;</span>])
+  id2(<span class="hljs-string">&quot;(家帰る)&quot;</span>)
+  id3{<span class="hljs-string">&quot;{運動したか？}&quot;</span>}
+  id4(<span class="hljs-string">&quot;(風呂に入る)&quot;</span>)
+  id5[[<span class="hljs-string">&quot;[[筋トレ]]&quot;</span>]]
+  id6((<span class="hljs-string">&quot;((ごはん食べる))&quot;</span>))
+  id7([<span class="hljs-string">&quot;([寝る])&quot;</span>])
+  sub1[[<span class="hljs-string">&quot;[[筋トレ]]&quot;</span>]]
+  sub2[/<span class="hljs-string">&quot;[/腕立て伏せ\]&quot;</span>\]
+  sub3[腕立て伏せ２０回]
+  sub4[\<span class="hljs-string">&quot;[\腕立て伏せ/]&quot;</span>/]
+  sub5[/<span class="hljs-string">&quot;[/アプリで入力する/]&quot;</span>/]
+  sub6[(<span class="hljs-string">&quot;[(データベースに保存する)]&quot;</span>)]
   id1--&gt;id2
   id2--&gt;id3
   id3--&gt;|yes|id4
@@ -248,14 +248,14 @@ graph TD
   id5--&gt;id3
   id4--&gt;id6
   id6--&gt;id7
-  subgraph 腕立て伏せ20回3セットやる
+  subgraph 腕立て伏せ<span class="hljs-number">20</span>回<span class="hljs-number">3</span>セットやる
   sub1---sub2
   sub2-.-&gt;sub3
   sub3-.-&gt;sub4
   sub4--&gt;sub5
-  sub4&#61;&#61;&gt;|3セット|sub2
+  sub4==&gt;|<span class="hljs-number">3</span>セット|sub2
   sub5--&gt;sub6
-  end</code></pre>
+  <span class="hljs-keyword">end</span></code></pre>
 <h2 id="まとめ"><a href="#まとめ" class="header-anchor">まとめ</a></h2>
 <p>コードで管理可能なmermaid.jsを用いたフローチャートの書き方、HTMLへの導入方法、チートシートを書いてみました。</p>
 <p>mermaid.jsにはフローチャート以外にもUML図やガントチャート、円グラフを書く機能も用意されています。</p>
@@ -321,7 +321,7 @@ graph TD
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: October 30, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: November 13, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -352,8 +352,8 @@ graph TD
 
     
     
-        <script src="/libs/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+        
+
 
         <!-- http://tutsplus.github.io/clipboard/ -->
 
@@ -383,7 +383,7 @@ graph TD
 	
 		// Run Clipboard
 	
-		var copyCode = new Clipboard('.copy-button', {
+		var copyCode = new ClipboardJS('.copy-button', {
 			target: function(trigger) {
 				return trigger.previousElementSibling;
 		}
