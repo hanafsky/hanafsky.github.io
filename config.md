@@ -68,7 +68,7 @@ For instance:
 \newcommand{\luminous}[1]{
 ~~~
 <div style="text-align:center" >
-<a href="!#1" class="zoom"><img src="!#1" alt=""></a>
+<a href="!#1" class="zoom"><img src="!#1" alt="" style="padding:0"></a>
 </div>
 ~~~
 }

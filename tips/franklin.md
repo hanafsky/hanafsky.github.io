@@ -121,7 +121,7 @@ p = plot(x->sin(x),xlabel="x",ylabel="y")
 savefig(p,joinpath(@OUTPUT,"figplot.svg"))
 ```
 
-\fig{figplot}
+\figpop{figplot}
 `````
 
 ```julia:plot
@@ -130,7 +130,7 @@ p = plot(x->sin(x),xlabel="x",ylabel="y")
 savefig(p,joinpath(@OUTPUT,"figplot.svg"))
 ```
 
-\fig{figplot}
+\figpop{figplot}
 
 ## 注意したいポイント
 

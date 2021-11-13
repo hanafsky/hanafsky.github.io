@@ -196,7 +196,7 @@ xticks!([1:11;],xlabel)
 savefig(p,joinpath(@OUTPUT,"hist.svg"))
 ```
 
-\fig{hist}
+\figpop{hist}
 
 2020年の2回目はやたらと人数が多いのですが、
 これはコロナ自粛期間に受験料を半額としたからのようです。
@@ -330,7 +330,7 @@ xticks!([1:6;],xlabel)
 savefig(p,joinpath(@OUTPUT,"hist2.svg"))
 ```
 
-\fig{hist2}
+\figpop{hist2}
 
 業種別の割合を見てみると、G検定とあまり割合は変わりませんが、
 金融・保険業、不動産業の割合がG検定よりも下がっているのが目につきました。

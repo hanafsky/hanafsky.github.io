@@ -182,7 +182,7 @@ scatter!(sg1[:,2], label="window for 1st order derivative")
 scatter!(sg1[:,3], label="window for 2nd order derivative")
 savefig(p0,joinpath(@OUTPUT,"savgol.svg")) # hide
 ```
-\fig{savgol}
+\figpop{savgol}
 
 なお、Vincentさん曰く、畳み込む列が小さい時は、直接畳込みを実行した方が速いそうです。
 VincentさんのDirectConvolution.jlをforkして使えるように修正したので、
@@ -197,7 +197,7 @@ $$ f(x) = \dfrac{1}{1+\exp(-x+1)}$$
 一階微分は次のように書けます。
 $$ \dfrac{\rm{d}f(x)}{dx} = \dfrac{\exp(-x+1)}{(1+\exp(-x+1))^2}$$
 
-この例では、$x＝1$で傾きが最大になります。ノイズを加えたデータを生成してプロットしてみます。
+この例では、$x=1$で傾きが最大になります。ノイズを加えたデータを生成してプロットしてみます。
 
 ```julia:savgol1
 using Plots, Random
@@ -210,7 +210,7 @@ y = sigmoid.(x) + 0.01randn(length(x))
 scatter!(p_1,x,y,label="observed") 
 savefig(p_1,joinpath(@OUTPUT,"savgol1.svg")) # hide
 ```
-\fig{savgol1}
+\figpop{savgol1}
 
 ### FFTを使ったフィルタリング
 
@@ -224,7 +224,7 @@ p_2 = plot(sigmoid_d,label="theoretical 1st order derivative",legend=:topleft)
 scatter!(p_2,x,deriv1_1,label="smoothed 1st order derivative")
 savefig(p_2,joinpath(@OUTPUT,"savgol2.svg")) # hide
 ```
-\fig{savgol2}
+\figpop{savgol2}
 
 荒っぽいですが、真の微分係数に近い値が得られています。
 ### 直接畳み込みの場合
@@ -248,7 +248,7 @@ scatter!(p_3,x,deriv1_2,label="smoothed 1st order derivative")
 savefig(p_3,joinpath(@OUTPUT,"savgol3.svg")) # hide
 ```
 
-\fig{savgol3}
+\figpop{savgol3}
 
 ピーク値がやや下がりましたが、より滑らかなデータを得ることができました。
 ### ベンチマーク
