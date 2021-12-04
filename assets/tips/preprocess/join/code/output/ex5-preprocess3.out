@@ -1,6 +1,6 @@
 15×4 DataFrame
  Row │ customer_id  reserve_datetime     total_price  price_sum
-     │ String7…     Dates.DateTime       Int64        Float64?
+     │ String7      Dates.DateTime       Int64        Float64?
 ─────┼──────────────────────────────────────────────────────────
    1 │ c_1          2016-03-06T13:09:42        97200  missing
    2 │ c_1          2016-07-16T23:39:55        20600  missing

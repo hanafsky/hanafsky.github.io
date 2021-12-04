@@ -1,6 +1,6 @@
 10×2 DataFrame
  Row │ hotel_id  rec_hotel_id
-     │ String7…  String7…
+     │ String7   String7
 ─────┼────────────────────────
    1 │ h_14      h_1
    2 │ h_22      h_1

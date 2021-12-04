@@ -1,6 +1,6 @@
 10×3 DataFrame
  Row │ customer_id  year_month  price_sum
-     │ String7…     Dates.Date  Int64?
+     │ String7      Dates.Date  Int64?
 ─────┼────────────────────────────────────
    1 │ c_1          2017-01-01          0
    2 │ c_1          2017-02-01          0

@@ -1,6 +1,6 @@
 8×9 DataFrame
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
-     │ String7…    String7…  String7…     String31…            Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+     │ String7     String7   String7      String31             Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
    1 │ r285        h_121     c_67         2016-09-27 06:13:19  2016-10-12    12:00:00      2016-10-14              4       184000
    2 │ r1933       h_113     c_477        2016-09-24 09:04:26  2016-10-12    11:30:00      2016-10-13              4        77200

@@ -1,6 +1,6 @@
 10×6 DataFrame
  Row │ hotel_id  price_max  price_min  price_mean      price_medeian  price_20per
-     │ String7…  Int64      Int64      Float64         Float64        Float64
+     │ String7   Int64      Int64      Float64         Float64        Float64
 ─────┼────────────────────────────────────────────────────────────────────────────
    1 │ h_75          97200      16200   49950.0              36450.0      24300.0
    2 │ h_219         92700      10300   46746.2              30900.0      20600.0

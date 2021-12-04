@@ -153,7 +153,7 @@ reserve_df &#61; @chain reserve_url Downloads.download CSV.File DataFrame
 println&#40;first&#40;reserve_df&#41;&#41;</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
-     │ String7…    String7…  String7…     String31…            Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+     │ String7     String7   String7      String31             Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
    1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
 </code></pre></div>
@@ -231,7 +231,7 @@ end</code></pre><pre><code class="plaintext code-output">1.5574077246549023
 <pre><code class="language-julia">reserve_df&#91;&#33;,&#91;&quot;reserve_id&quot;,&quot;hotel_id&quot;&#93;&#93; |&gt; first |&gt; println</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id
-     │ String7…    String7…
+     │ String7     String7
 ─────┼──────────────────────
    1 │ r1          h_75
 </code></pre></div>
@@ -242,7 +242,7 @@ println&#40;&#41;
 @show typeof&#40;:reserve_id&#41;</code></pre>
 <p><div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id
-     │ String7…    String7…
+     │ String7     String7
 ─────┼──────────────────────
    1 │ r1          h_75
 
@@ -273,16 +273,16 @@ println&#40;first&#40;testdf&#41;&#41;</code></pre>
 <pre><code class="language-julia">@time testdf&#91;:,&#91;&quot;a&#37;&quot;,&quot;b&#40;m/s&#41;&quot;&#93;&#93;
 println&#40;&#41;
 @time testdf&#91;&#33;,&#91;&quot;a&#37;&quot;,&quot;b&#40;m/s&#41;&quot;&#93;&#93;</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">  0.013080 seconds (17.70 k allocations: 2.554 MiB, 97.08% compilation time)
+<div class="code-output"><pre><code class="plaintext code-output">  0.010138 seconds (18.20 k allocations: 2.578 MiB, 96.82% compilation time)
 
-  0.000040 seconds (22 allocations: 1.734 KiB)
+  0.000033 seconds (22 allocations: 1.734 KiB)
 </code></pre></div></div></div>
 <h4 id="select_関数"><a href="#select_関数" class="header-anchor">select 関数</a></h4>
 <p>列を抽出するには、select 関数も利用できます。</p>
 <pre><code class="language-julia">select&#40;reserve_df,:reserve_id, :hotel_id&#41; |&gt; first |&gt; println</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id
-     │ String7…    String7…
+     │ String7     String7
 ─────┼──────────────────────
    1 │ r1          h_75
 </code></pre></div>
@@ -292,7 +292,7 @@ println&#40;&#41;
 <pre><code class="language-julia">reserve_df&#91;&#33;,r&quot;id&#36;&quot;&#93; |&gt; first |&gt; println</code></pre>
 <p><div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id
-     │ String7…    String7…  String7…
+     │ String7     String7   String7
 ─────┼───────────────────────────────────
    1 │ r1          h_75      c_1
 </code></pre></div> <div class="warning"><div class="title">😕 Warning&#33;</div>
@@ -301,7 +301,7 @@ println&#40;&#41;
 <pre><code class="language-julia">reserve_df&#91;&#33;,Not&#40;r&quot;id&#36;&quot;&#41;&#93; |&gt; first |&gt; println</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
-     │ String31…            Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+     │ String31             Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼─────────────────────────────────────────────────────────────────────────────────────────
    1 │ 2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
 </code></pre></div>
@@ -312,7 +312,7 @@ println&#40;&#41;
 filter&#40;row-&gt; Date&#40;2016,10,12&#41; &lt;&#61; row.checkin_date &lt;&#61; Date&#40;2016,10,13&#41;, reserve_df&#41; |&gt; println</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">8×9 DataFrame
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
-     │ String7…    String7…  String7…     String31…            Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+     │ String7     String7   String7      String31             Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
    1 │ r285        h_121     c_67         2016-09-27 06:13:19  2016-10-12    12:00:00      2016-10-14              4       184000
    2 │ r1933       h_113     c_477        2016-09-24 09:04:26  2016-10-12    11:30:00      2016-10-13              4        77200
@@ -347,9 +347,9 @@ end
 println&#40;first&#40;sdf&#41;&#41;</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
-     │ String7…    String7…  String7…     String31…            Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+     │ String7     String7   String7      String31             Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-   1 │ r2          h_219     c_1          2016-07-16 23:39:55  2016-07-20    11:30:00      2016-07-21              2        20600
+   1 │ r3          h_179     c_1          2016-09-24 10:03:17  2016-10-19    09:00:00      2016-10-22              2        33600
 </code></pre></div>
 <h3 id="2-4_集約idに基づくサンプリング"><a href="#2-4_集約idに基づくサンプリング" class="header-anchor">2-4 集約IDに基づくサンプリング</a></h3>
 <p>顧客IDを集約して、半分にサンプリングし、顧客IDによるデータの抽出を行います。 IDの重複をなくすにはunique関数が便利です。</p>
@@ -414,7 +414,7 @@ end</code></pre>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: November 13, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: December 04, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

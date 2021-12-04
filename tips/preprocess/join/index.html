@@ -121,7 +121,7 @@ reserve_df.reserve_datetime &#61; DateTime.&#40;reserve_df.reserve_datetime, dat
 first&#40;hotel_df&#41; |&gt; println</code></pre>
 <p><div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ hotel_id  base_price  big_area_name  small_area_name  hotel_latitude  hotel_longitude  is_business
-     │ String7…  Int64       String1…       String3…         Float64         Float64          Bool
+     │ String7   Int64       String1        String3          Float64         Float64          Bool
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────
    1 │ h_1            26100  D              D-2                     43.0646          141.511         true
 </code></pre></div> <div class="note"><div class="title">😲 Note</div>
@@ -149,7 +149,7 @@ c_3</code></pre>
           on&#61;:hotel_id&#41; |&gt; first |&gt; println</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price  base_price  big_area_name  small_area_name  hotel_latitude  hotel_longitude  is_business
-     │ String7…    String7…  String7…     Dates.DateTime       Dates.Date    Dates.Time    Dates.Date     Int64       Int64        Int64       String1…       String3…         Float64         Float64          Bool
+     │ String7     String7   String7      Dates.DateTime       Dates.Date    Dates.Time    Dates.Date     Int64       Int64        Int64       String1        String3          Float64         Float64          Bool
 ─────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
    1 │ r7          h_256     c_1          2017-12-29T10:38:36  2018-01-25    10:30:00      2018-01-28              1       103500       34500  C              C-1                     38.2373          140.696         true
 </code></pre></div>
@@ -180,7 +180,7 @@ end
 first&#40;base_hotel_mst,10&#41; |&gt; println</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">10×2 DataFrame
  Row │ hotel_id  rec_hotel_id
-     │ String7…  String7…
+     │ String7   String7
 ─────┼────────────────────────
    1 │ h_14      h_1
    2 │ h_22      h_1
@@ -220,7 +220,7 @@ graph TD
 end</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">15×4 DataFrame
  Row │ customer_id  reserve_datetime     total_price  before_price
-     │ String7…     Dates.DateTime       Int64        Int64?
+     │ String7      Dates.DateTime       Int64        Int64?
 ─────┼─────────────────────────────────────────────────────────────
    1 │ c_1          2016-03-06T13:09:42        97200       missing
    2 │ c_1          2016-07-16T23:39:55        20600       missing
@@ -272,7 +272,7 @@ roll_sum&#40;&#91;1,2,3,4,5&#93;,3&#41;</code></pre><pre><code class="plaintext 
 end</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">15×4 DataFrame
  Row │ customer_id  reserve_datetime     total_price  price_sum
-     │ String7…     Dates.DateTime       Int64        Float64?
+     │ String7      Dates.DateTime       Int64        Float64?
 ─────┼──────────────────────────────────────────────────────────
    1 │ c_1          2016-03-06T13:09:42        97200  missing
    2 │ c_1          2016-07-16T23:39:55        20600  missing
@@ -325,7 +325,7 @@ price_avg&#40;&#91;1,2,3,4,5&#93;,3&#41;</code></pre><pre><code class="plaintext
 end</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">15×4 DataFrame
  Row │ customer_id  reserve_datetime     total_price  price_avg
-     │ String7…     Dates.DateTime       Int64        Float64?
+     │ String7      Dates.DateTime       Int64        Float64?
 ─────┼──────────────────────────────────────────────────────────
    1 │ c_1          2016-03-06T13:09:42        97200  missing
    2 │ c_1          2016-07-16T23:39:55        20600    97200.0
@@ -368,7 +368,7 @@ end
 end</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">15×4 DataFrame
  Row │ customer_id  reserve_datetime     total_price  total_price_90d
-     │ String7…     Dates.DateTime       Int64        Int64
+     │ String7      Dates.DateTime       Int64        Int64
 ─────┼────────────────────────────────────────────────────────────────
    1 │ c_1          2016-03-06T13:09:42        97200                0
    2 │ c_1          2016-07-16T23:39:55        20600                0
@@ -429,7 +429,7 @@ replace&#33;&#40;summary_result.price_sum,missing&#61;&gt;0&#41;
 first&#40;summary_result,10&#41; |&gt; println</code></pre>
 <p><div class="code-output"><pre><code class="plaintext code-output">10×3 DataFrame
  Row │ customer_id  year_month  price_sum
-     │ String7…     Dates.Date  Int64?
+     │ String7      Dates.Date  Int64?
 ─────┼────────────────────────────────────
    1 │ c_1          2017-01-01          0
    2 │ c_1          2017-02-01          0
@@ -455,7 +455,7 @@ first&#40;summary_result,10&#41; |&gt; println</code></pre>
  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: November 13, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: December 04, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

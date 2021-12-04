@@ -141,7 +141,7 @@ end
 println&#40;first&#40;reserve_df&#41;&#41;;</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
-     │ String7…    String7…  String7…     String31…            Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+     │ String7     String7   String7      String31             Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
    1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
 </code></pre></div>
@@ -159,7 +159,7 @@ end
 first&#40;df3_1&#41; |&gt; println</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ hotel_id  rsv_cnt  cus_cnt
-     │ String7…  Int64    Int64
+     │ String7   Int64    Int64
 ─────┼────────────────────────────
    1 │ h_75           12       12
 </code></pre></div>
@@ -174,7 +174,7 @@ end
 first&#40;df3_2&#41; |&gt; println</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ hotel_id  people_num  price_sum
-     │ String7…  Int64       Int64
+     │ String7   Int64       Int64
 ─────┼─────────────────────────────────
    1 │ h_75               1     113400
 </code></pre></div>
@@ -193,7 +193,7 @@ first&#40;df3_2&#41; |&gt; println</code></pre>
 end</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">10×6 DataFrame
  Row │ hotel_id  price_max  price_min  price_mean      price_medeian  price_20per
-     │ String7…  Int64      Int64      Float64         Float64        Float64
+     │ String7   Int64      Int64      Float64         Float64        Float64
 ─────┼────────────────────────────────────────────────────────────────────────────
    1 │ h_75          97200      16200   49950.0              36450.0      24300.0
    2 │ h_219         92700      10300   46746.2              30900.0      20600.0
@@ -257,7 +257,7 @@ df .&#61; ifelse.&#40;isnan.&#40;df&#41;,0,df&#41; #ブロードキャスト演�
 @show first&#40;df3_4,10&#41;</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">first(df3_4, 10) = 10×3 DataFrame
  Row │ hotel_id  total_price_var  total_price_std
-     │ String7…  Float64          Float64
+     │ String7   Float64          Float64
 ─────┼────────────────────────────────────────────
    1 │ h_75           1.09549e9     33098.2
    2 │ h_219          8.59601e8     29319.0
@@ -286,7 +286,7 @@ reserve_df.reserve_datetime &#61; DateTime.&#40;reserve_df.reserve_datetime,date
 reserve_df |&gt; first |&gt; println</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
-     │ String7…    String7…  String7…     Dates.DateTime       Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+     │ String7     String7   String7      Dates.DateTime       Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
    1 │ r1          h_75      c_1          2016-03-06T13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
 </code></pre></div>
@@ -304,7 +304,7 @@ reserve_df |&gt; first |&gt; println</code></pre>
 end</code></pre>
 <p><div class="code-output"><pre><code class="plaintext code-output">10×10 DataFrame
  Row │ hotel_id  reserve_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price  log_no
-     │ String7…  String7…    String7…     Dates.DateTime       Dates.Date    Dates.Time    Dates.Date     Int64       Int64        Int64
+     │ String7   String7     String7      Dates.DateTime       Dates.Date    Dates.Time    Dates.Date     Int64       Int64        Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
    1 │ h_75      r1          c_1          2016-03-06T13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200       3
    2 │ h_219     r2          c_1          2016-07-16T23:39:55  2016-07-20    11:30:00      2016-07-21              2        20600       4
@@ -328,7 +328,7 @@ end</code></pre>
 end</code></pre>
 <div class="code-output"><pre><code class="plaintext code-output">10×3 DataFrame
  Row │ hotel_id  rsv_cnt  rsv_cnt_rank
-     │ String7…  Int64    Int64
+     │ String7   Int64    Int64
 ─────┼─────────────────────────────────
    1 │ h_75           12           100
    2 │ h_219          13           127
@@ -380,7 +380,7 @@ end</code></pre>
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> </p>
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: November 13, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: December 04, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
