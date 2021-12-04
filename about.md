@@ -24,5 +24,9 @@
 
 julia logoの色で、自分のパッケージ用のロゴを作りたかった。デザインセンスが皆無のため、このような残念な結果になった。
 
+## Tweet
+~~~
+<a class="twitter-timeline" data-width="600" data-lang="en" data-height="600" href="https://twitter.com/HanafusaKei?ref_src=twsrc%5Etfw">Tweets by HanafusaKei</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+~~~
 
 \backtotop
