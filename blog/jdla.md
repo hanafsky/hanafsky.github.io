@@ -383,7 +383,7 @@ G検定・E資格に受かったので、いずれ深層学習を活用した記
 
 \right{めでたしめでたし}
 \share{blog/jdla}{JDLA認定 G検定・E資格}
-\prev{/blog/mermaid}{mermaid.jsでフローチャートを書く。}
+\prevnext{/blog/mermaid}{/blog/ipadpro}{mermaid.jsでフローチャートを書く。}{iPad proを導入}
 \backtotop
 
 {{ addcomments }}
