@@ -302,8 +302,8 @@ scatter&#33;&#40;p_3,x,deriv1_2,label&#61;&quot;smoothed 1st order derivative&qu
 sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
 @btime apply_SG_filter&#40;y,sg3,derivativeOrder&#61;0&#41; # 直接畳み込み
 @btime apply_filter&#40;sg1&#91;:,2&#93;,y&#41; # FFT畳み込み</code></pre>
-<p><div class="code-output"><pre><code class="plaintext code-output">  844.836 ns (1 allocation: 736 bytes)
-  22.101 μs (86 allocations: 9.19 KiB)
+<p><div class="code-output"><pre><code class="plaintext code-output">  847.841 ns (1 allocation: 736 bytes)
+  22.400 μs (86 allocations: 9.19 KiB)
 </code></pre></div> 結果は直接畳み込みの圧勝で、Vincentさんのブログに書いてあるとおりでした。 DirectConvolution.jlにはこのほかにも2次元のSavitzky-Golayフィルターなど実装されているので、 いろいろ遊んでみたいと思います。</p>
 <p> <p style="text-align:right">  めでたしめでたし </p> 
 <div class="sns-container top">
@@ -353,7 +353,7 @@ sg3 &#61; SG_Filter&#40;Float64,halfWidth&#61;5,degree&#61;2&#41;
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: December 04, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: December 05, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

@@ -31,7 +31,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -52,7 +52,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -73,7 +73,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -94,7 +94,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -115,7 +115,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -136,7 +136,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/agriculture.jpg" alt="titleimage" />Project環境を作るメリット  ]]>
   </description>  
     
-  <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -157,7 +157,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。  ]]>
   </description>  
     
-  <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -165,6 +165,27 @@
   </atom:author>
     
   <category> julia </category>
+      
+</item>
+
+<item>
+  <title>
+    <![CDATA[  iPad proを導入  ]]>
+  </title>
+  <link> https://hanafsky.github.io/blog/ipadpro/index.html </link>
+  <guid> https://hanafsky.github.io/blog/ipadpro/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/blog/DSC00952.JPG" alt="titleimage" />iPad proを導入  ]]>
+  </description>  
+    
+  <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
+    
+  <category> blog </category>
       
 </item>
 
