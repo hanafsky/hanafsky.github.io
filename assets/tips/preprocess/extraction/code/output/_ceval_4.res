@@ -1,6 +1,7 @@
 :(let
-      var"##372" = Downloads.download(reserve_url, IOBuffer())
-      var"##373" = String(take!(var"##372"))
-      var"##374" = CSV.read(IOBuffer(var"##373"), DataFrame)
-      var"##374"
+      var"##396" = reserve_url
+      var"##397" = Downloads.download(var"##396", IOBuffer())
+      var"##398" = String(take!(var"##397"))
+      var"##399" = CSV.read(IOBuffer(var"##398"), DataFrame)
+      var"##399"
   end)

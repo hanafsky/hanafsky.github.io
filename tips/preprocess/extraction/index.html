@@ -184,10 +184,11 @@ println&#40;first&#40;reserve_df&#41;&#41;</code></pre>
 <p>左側の計算結果を、次の関数の最初に引数として扱ってくれるからです。 この@chainマクロが何をしているか展開して確認してみると</p>
 <pre><code class="language-julia">using Chain
 @macroexpand @chain 1 add&#40;2&#41; add&#40;3&#41; add&#40;4&#41;</code></pre><pre><code class="plaintext code-output">:(let
-      var"##366" = add(1, 2)
-      var"##367" = add(var"##366", 3)
-      var"##368" = add(var"##367", 4)
-      var"##368"
+      var"##388" = 1
+      var"##389" = add(var"##388", 2)
+      var"##390" = add(var"##389", 3)
+      var"##391" = add(var"##390", 4)
+      var"##391"
   end)</code></pre>
 <h4 id="複数行で実行"><a href="#複数行で実行" class="header-anchor">複数行で実行</a></h4>
 <p>複数行で実行したい場合は、<code>begin-end</code>環境で囲います。 最初の例でやってみましょう。</p>
@@ -204,10 +205,11 @@ end</code></pre><pre><code class="plaintext code-output">0.013387802193205699</c
   String&#40;take&#33;&#40;_&#41;&#41;
   CSV.read&#40;IOBuffer&#40;_&#41;,DataFrame&#41;
 end&#41; |&gt;Base.remove_linenums&#33;</code></pre><pre><code class="plaintext code-output">:(let
-      var"##372" = Downloads.download(reserve_url, IOBuffer())
-      var"##373" = String(take!(var"##372"))
-      var"##374" = CSV.read(IOBuffer(var"##373"), DataFrame)
-      var"##374"
+      var"##396" = reserve_url
+      var"##397" = Downloads.download(var"##396", IOBuffer())
+      var"##398" = String(take!(var"##397"))
+      var"##399" = CSV.read(IOBuffer(var"##398"), DataFrame)
+      var"##399"
   end)</code></pre>
 <h4 id="asideマクロ"><a href="#asideマクロ" class="header-anchor">@asideマクロ</a></h4>
 <p>パイプライン処理の途中の結果で何かをしたいときには、@asideマクロが使えます。 そのうち使うかもしれません。</p>
@@ -273,9 +275,9 @@ println&#40;first&#40;testdf&#41;&#41;</code></pre>
 <pre><code class="language-julia">@time testdf&#91;:,&#91;&quot;a&#37;&quot;,&quot;b&#40;m/s&#41;&quot;&#93;&#93;
 println&#40;&#41;
 @time testdf&#91;&#33;,&#91;&quot;a&#37;&quot;,&quot;b&#40;m/s&#41;&quot;&#93;&#93;</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">  0.012968 seconds (18.20 k allocations: 2.578 MiB, 97.03% compilation time)
+<div class="code-output"><pre><code class="plaintext code-output">  0.013682 seconds (18.20 k allocations: 2.578 MiB, 97.09% compilation time)
 
-  0.000058 seconds (22 allocations: 1.734 KiB)
+  0.000051 seconds (22 allocations: 1.734 KiB)
 </code></pre></div></div></div>
 <h4 id="select_関数"><a href="#select_関数" class="header-anchor">select 関数</a></h4>
 <p>列を抽出するには、select 関数も利用できます。</p>
@@ -349,7 +351,7 @@ println&#40;first&#40;sdf&#41;&#41;</code></pre>
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
      │ String7     String7   String7      String31             Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-   1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
+   1 │ r2          h_219     c_1          2016-07-16 23:39:55  2016-07-20    11:30:00      2016-07-21              2        20600
 </code></pre></div>
 <h3 id="2-4_集約idに基づくサンプリング"><a href="#2-4_集約idに基づくサンプリング" class="header-anchor">2-4 集約IDに基づくサンプリング</a></h3>
 <p>顧客IDを集約して、半分にサンプリングし、顧客IDによるデータの抽出を行います。 IDの重複をなくすにはunique関数が便利です。</p>
@@ -414,7 +416,7 @@ end</code></pre>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: December 05, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: December 08, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
