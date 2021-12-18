@@ -1,19 +1,18 @@
-@def title="HHKBの話"
-@def rss_description="![titleimage](/assets/blog/typewriter.jpg)高級キーボードHHKBの話"
-@def rss_pubdate=Date(2021, 4, 6)
-@def published="6 April 2021"
-@def rss_category="blog"
++++
+title="HHKBの話"
+description="高級キーボードのカスタマイズ"
+titleimage="/assets/blog/typewriter.jpg"
+imgsrc="https://pixabay.com/photos/typewriter-book-notes-paper-801921/"
+rss_description="![titleimage](/assets/blog/typewriter.jpg)高級キーボードHHKBの話"
+rss_pubdate=Date(2021, 4, 6)
+published="6 April 2021"
+rss_category="blog"
+hascode=true
+tags=["gadget"]
+isblog=true
++++
+{{inserttitle blog hhkb.md}}
 
-@def hascode=true
-@def tags=["gadget"]
-@def isblog=true
-
-# HHKBの話
-@@date
-6 Apr 2021
-@@
-
-\titleimage{/assets/blog/typewriter.jpg}{https://pixabay.com/photos/typewriter-book-notes-paper-801921/}
 \share{blog/hhkb}{HHKBの話}
 
 \toc

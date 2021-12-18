@@ -1,23 +1,21 @@
++++
+title="mermaid.js"
+description="フローチャートの書き方メモ"
+titleimage="/assets/blog/mermaid.jpg"
+imgsrc="https://pixabay.com/photos/mermaid-fantasy-mystical-nature-2456981/"
+rss_description="![titleimage](/assets/blog/mermaid.jpg)mermaid.js　フローチャートの書き方メモ"
+rss_pubdate=Date(2021, 4, 18)
+published="18 April 2021"
+rss_category="blog"
+hasmermaid=true
+hascode=true
+tags=["memo"]
+isblog=true
++++
 
-@def title="mermaid.jsのフローチャートメモ"
-@def rss_description="![titleimage](/assets/blog/mermaid.jpg)mermaid.js　フローチャートの書き方メモ"
-@def rss_pubdate=Date(2021, 4, 18)
-@def published="18 April 2021"
-@def rss_category="blog"
-@def hasmermaid=true
-@def hascode=true
-@def tags=["memo"]
-@def isblog=true
+{{inserttitle blog mermaid.md}}
 
-# フローチャートの書き方メモ mermaid.js
-@@date
-18 Apr 2021
-@@
-
-\titleimage{/assets/blog/mermaid.jpg}{https://pixabay.com/photos/mermaid-fantasy-mystical-nature-2456981/}
 \share{blog/mermaid}{mermaid.js フローチャートの書き方メモ}
-
-
 
 \toc
 ## はじめに
@@ -200,7 +198,7 @@ mermaid.jsにはフローチャート以外にもUML図やガントチャート�
 [^2]: 本サイトでは、javascriptをいじって色を変えています。このページのソースを見ると調整方法を確認できます。
 
 \share{blog/mermaid}{mermaid.jsのフローチャートメモ}
-\prevnext{/blog/hhkb}{blog/jdla}{HHKBの話}{JDLA認定 G検定・E資格}
+\prevnext{/blog/hhkb}{HHKBの話}{/blog/jdla}{JDLA認定 G検定・E資格}
 \backtotop
 
 {{ addcomments }}

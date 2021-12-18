@@ -1,22 +1,23 @@
++++
+title="体験記"
+description="JDLA認定G検定・E資格"
+titleimage="/assets/blog/cd040d37faa8fbf6efbfd87a00529edb.png"
+imgsrc="https://jdla.connpass.com/event/222590/"
+rss_description="![titleimage](/assets/blog/cd040d37faa8fbf6efbfd87a00529edb.png)JDLA認定G検定・E資格受験の話"
+rss_pubdate=Date(2021, 9, 20)
+published="20 September 2021"
+rss_category="blog"
 
-@def title="JDLA認定G検定・E資格受験の話"
-@def rss_description="![titleimage](/assets/blog/cd040d37faa8fbf6efbfd87a00529edb.png)JDLA認定G検定・E資格受験の話"
-@def rss_pubdate=Date(2021, 9, 20)
-@def published="20 September 2021"
-@def rss_category="blog"
+hasmermaid=true
+hascode=true
+tags=["qualification"]
+isblog=true
++++
 
-@def hasmermaid=true
-@def hascode=true
-@def tags=["qualification"]
-@def isblog=true
+{{inserttitle blog jdla.md}}
 
-# JDLA認定 G検定・E資格
-@@date
-20 Sep 2021
-@@
-
-\titleimage{/assets/blog/cd040d37faa8fbf6efbfd87a00529edb.png}{https://jdla.connpass.com/event/222590/}
 \share{blog/hhkb}{JDLA認定 G検定・E資格}
+
 
 \toc
 ## はじめに

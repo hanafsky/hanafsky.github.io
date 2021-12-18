@@ -1,3 +1,5 @@
+using Dates
+
 function hfun_bar(vname)
   val = Meta.parse(vname[1])
   return round(sqrt(val), digits=2)
@@ -113,4 +115,66 @@ function env_cap(com, _)
   content = Franklin.content(com)
   output = replace(content, option => uppercase(option))
   return "~~~<b>~~~$output~~~</b>~~~"
+end
+
+"""
+    {{blogposts}}
+Plug in the list of blog posts contained in the `/blog/` folder.
+"""
+function hfun_blogposts(params)# paramsはblogなどのディレクトリ
+    io = IOBuffer()
+    write(io,"\n @@cards @@row \n")
+    path=params[1]
+    posts = filter!(p->endswith(p,".md"), readdir(path))
+    days = Vector{Date}(undef, length(posts))
+    lines = Vector{String}(undef,length(posts))
+    for (i, post) ∈ enumerate(posts)
+        ps = split(post)[1]
+        url = "/$path/$ps"
+        lurl = split(url,".")[1]
+        surl = strip(url, '/')
+        title = pagevar(surl, :title)
+        title === nothing && (title = "Untitled")
+        img = pagevar(surl,:titleimage)
+        img === nothing && (img = "/assets/blank.jpg")
+        description = pagevar(surl, :description)
+        pubdate = pagevar(surl, :published)
+        if isnothing(pubdate)
+            date = Date(2021,04,01)
+        else
+            date = Date(pubdate, dateformat"d U Y")
+        end
+        days[i] = date
+        lines[i] = """\n @@column @@card @@container
+                         ~~~<p style="text-align:center"><img src="$img" alt="No image"></p> ~~~ 
+                         @@title $title @@
+                         @@vitae $(Dates.format(date,"d u Y")) @@ 
+                         @@description $(description) @@ 
+                       ~~~<p><button class="button" onclick="location.href='$lurl'">読む</button></p> ~~~ @@ @@ @@ \n
+                   """ 
+    end
+    foreach(line -> write(io, line), lines[sortperm(days, rev=true)])
+    write(io,"\n @@ @@\n")
+    r = Franklin.fd2html(String(take!(io)), internal=true)
+    return r
+end
+
+function hfun_inserttitle(params)
+    path=joinpath(params...)
+    title = pagevar(path,:title)
+    description=pagevar(path,:description)
+    img = pagevar(path,:titleimage)
+    imgsrc = pagevar(path,:imagesrc)
+    imgsrc === nothing && (imgsrc ="original")
+    date = pagevar(path,:published)
+    date === nothing && (date = "01 January 2025")
+    date = Dates.format(Date(date,dateformat"d U Y"), "d u Y") 
+    io = IOBuffer()
+    write(io,"\n # $description - $title \n")
+    write(io,"\n @@date $date @@\n")
+    write(io,"\n @@titleimage ~~~<img src=$img alt=''>
+              <div style='text-align:right; font-size:small; color:grey'>(src=$imgsrc)</div> 
+              ~~~@@ \n")
+    r = Franklin.fd2html(String(take!(io)), internal=true)
+    return r
 end

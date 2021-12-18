@@ -8,6 +8,7 @@ The website_* must be defined for the RSS to work
 @def website_descr = "a web site to share information mainly about julia-lang"
 @def website_url = "https://hanafsky.github.io/"
 
+@def description=""
 @def author = "Kei Hanafusa"
 
 
@@ -83,7 +84,7 @@ For instance:
   @@vitae
   \center{#5}
   @@
-  @@discription
+  @@description
   \center{#3}
   @@
   ~~~

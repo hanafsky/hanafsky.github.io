@@ -1,19 +1,16 @@
-@def title="iPad proを導入"
-@def rss_description="![titleimage](/assets/blog/DSC00952.JPG)iPad proを導入"
-@def rss_pubdate=Date(2021, 12, 05)
-@def published="5 December 2021"
-@def rss_category="blog"
++++
+title="iPad debut"
+description="iPad proを導入してみた"
+titleimage="/assets/blog/DSC00952.JPG"
+rss_description="![titleimage](/assets/blog/DSC00952.JPG)iPad proを導入"
+rss_pubdate=Date(2021, 12, 05)
+published="5 December 2021"
+rss_category="blog"
+hasmermaid=true
+tags=["gadget"]
+isblog=true
++++
 
-@def hasmermaid=true
-@def tags=["gadget"]
-@def isblog=true
-
-# iPad Proを導入
-@@date
-5 Dec 2021
-@@
-
-\titleimage{/assets/blog/DSC00952.JPG}{original}
 \share{blog/ipadpro}{iPad proを導入}
 
 \toc
@@ -70,7 +67,7 @@ Udemyでお絵描きの講座も買ったので、そのうちにイラストと
 ページ切り替えの応答の遅さにイラつくこともしばしば。
 iOSでは、そもそもIMSLPがアプリ化されており、楽譜の見やすさ、検索のしやすさ、ファイル管理まで至れり尽くせりでした。
 ### Flat 
-\luminous{/assets/blog/flat.png}
+\luminous{/assets/blog/Flat.png}
 
 自分で楽譜を書いたり、midiに起こしたりするソフトも探してみました。
 finaleやSibeliusも候補にあったのですが、どう考えてもプロ用なので、
