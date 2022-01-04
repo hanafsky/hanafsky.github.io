@@ -228,14 +228,17 @@
   .title { 
     color: rgba(0,0,0,0.56);
     font-weight: bolder;
+    text-align: center;
    }
   .vitae {
     color: rgba(0,0,0,0.56);
     font-size: smaller;
+    text-align: center;
     /* margin-top: 0.5em;  */
   }
-  .discription {
-    font-size: smaller;
+  .description {
+    font-size: small;
+    text-align: center;
   }
   .email {
     font-family: courier;

@@ -31,7 +31,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -44,15 +44,15 @@
 
 <item>
   <title>
-    <![CDATA[  juliaで前処理大全0  ]]>
+    <![CDATA[  DataFrames.jl  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/preprocess/index.html </link>
   <guid> https://hanafsky.github.io/tips/preprocess/index.html </guid>
   <description>
-    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -73,7 +73,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -94,7 +94,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -115,7 +115,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -128,7 +128,7 @@
 
 <item>
   <title>
-    <![CDATA[  Project環境を作るメリット  ]]>
+    <![CDATA[  Project.toml  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/project/index.html </link>
   <guid> https://hanafsky.github.io/tips/project/index.html </guid>
@@ -136,7 +136,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/agriculture.jpg" alt="titleimage" />Project環境を作るメリット  ]]>
   </description>  
     
-  <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -149,7 +149,7 @@
 
 <item>
   <title>
-    <![CDATA[  ノイズを含むデータの微分 - Savitzky-Golay filter  ]]>
+    <![CDATA[  Savitzky-Golay  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/savgol/index.html </link>
   <guid> https://hanafsky.github.io/tips/savgol/index.html </guid>
@@ -157,7 +157,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。  ]]>
   </description>  
     
-  <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>

@@ -23,7 +23,7 @@
 
 <item>
   <title>
-    <![CDATA[  Google Patentsを翻訳してみる  ]]>
+    <![CDATA[  GoogleTrans.jl  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/patent/index.html </link>
   <guid> https://hanafsky.github.io/tips/patent/index.html </guid>
@@ -44,7 +44,7 @@
 
 <item>
   <title>
-    <![CDATA[  リアクティブなノートブック Pluto.jl  ]]>
+    <![CDATA[  Pluto.jl  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/pluto/index.html </link>
   <guid> https://hanafsky.github.io/tips/pluto/index.html </guid>
@@ -65,7 +65,7 @@
 
 <item>
   <title>
-    <![CDATA[  静的サイトジェネレーター Franklin.jl  ]]>
+    <![CDATA[  Franklin.jl  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/franklin/index.html </link>
   <guid> https://hanafsky.github.io/tips/franklin/index.html </guid>

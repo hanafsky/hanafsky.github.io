@@ -37,7 +37,7 @@
 </style>
 <![endif]-->
 
-   <title>Project環境を作るメリット</title>  
+   <title>Project.toml</title>  
   <!-- end custom head snippets -->
 </head>
 <body class="layout--single">
@@ -172,7 +172,7 @@ julia&gt;Pkg.instantiate()</code></pre>
 <h2 id="visual_studio_codevs_codeでのメリット"><a href="#visual_studio_codevs_codeでのメリット" class="header-anchor">Visual Studio Code&#40;VS Code&#41;でのメリット</a></h2>
 <p>次はVS Codeで個別のプロジェクト環境を準備するメリットをまとめておきます。 VS Codeでjuliaのreplを立ち上げると、プロジェクトファイルがある場合には自動的にそのファイルを認識するようになっています。</p>
 <h3 id="language_server_protocollspのindexingが早くなる"><a href="#language_server_protocollspのindexingが早くなる" class="header-anchor">Language Server Protocol&#40;LSP&#41;のIndexingが早くなる。</a></h3>
-<p>VS Codeでコードを書くときは、コードの補完機能が非常に役に立ちます。 ただし、このコードを補完機能を使うには、LSPがプロジェクト環境にあるパッケージを読み込んで、 補完機能を使えるようにIndexingをしているようです。 デフォルトのプロジェクト環境にたくさんのパッケージを入れているとこの<a href="https://discourse.julialang.org/t/vs-code-julia-language-server-indexing/41576">Indexingの時間が何時間かかっても終わらない</a>事態になってしまいます。VS Codeを快適に使うには、<span class="marker"> 個別のプロジェクト環境を作るのは大前提</span>と言っても良いかもしれません。</p>
+<p>VS Codeでコードを書くときは、コードの補完機能が非常に役に立ちます。 ただし、このコードを補完機能を使うには、LSPがプロジェクト環境にあるパッケージを読み込んで、 補完機能を使えるようにIndexingをしているようです。 デフォルトのプロジェクト環境にたくさんのパッケージを入れているとこの<a href="https://discourse.julialang.org/t/vs-code-julia-language-server-indexing/41576">Indexingの行程が何時間かかっても終わらない</a>事態になってしまいます。VS Codeを快適に使うには、<span class="marker"> 個別のプロジェクト環境を作るのは大前提</span>と言っても良いかもしれません。</p>
 <h3 id="system_imageを作ることができる"><a href="#system_imageを作ることができる" class="header-anchor">System imageを作ることができる。</a></h3>
 <p>VS Codeでは<code>Ctrl&#43;Shift&#43;B</code> &#43; <code>Enter</code>コマンドを打つとプロジェクトファイルにあるパッケージのコンパイル済みイメージを作ることができます。<sup id="fnref:2"><a href="#fndef:2" class="fnref">[2]</a></sup></p>
 <p>
@@ -266,7 +266,7 @@ julia&gt;Pkg.instantiate()</code></pre>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: December 08, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: January 04, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

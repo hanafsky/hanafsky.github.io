@@ -550,1279 +550,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
             </a>
           </li>
         </ul>
-        <ul itemprop="concept" itemscope="">
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000002452
-            </span>
-            <span itemprop="name">
-              interceptive
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              title
-            </span>
-            <span itemprop="sections" repeat="">
-              claims
-            </span>
-            <span itemprop="sections" repeat="">
-              abstract
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              19
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000005236
-            </span>
-            <span itemprop="name">
-              sound signal
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              claims
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              9
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000004590
-            </span>
-            <span itemprop="name">
-              computer program
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              claims
-            </span>
-            <span itemprop="count">
-              14
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000000875
-            </span>
-            <span itemprop="name">
-              corresponding
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              claims
-            </span>
-            <span itemprop="count">
-              7
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000013016
-            </span>
-            <span itemprop="name">
-              learning
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              abstract
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              14
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000031836
-            </span>
-            <span itemprop="name">
-              visual learning
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              abstract
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000036545
-            </span>
-            <span itemprop="name">
-              exercise
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              17
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000003607
-            </span>
-            <span itemprop="name">
-              modifier
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              14
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000033764
-            </span>
-            <span itemprop="name">
-              rhythmic process
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              11
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000000034
-            </span>
-            <span itemprop="name">
-              method
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              10
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000000007
-            </span>
-            <span itemprop="name">
-              visual effect
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              8
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              101700050571
-            </span>
-            <span itemprop="name">
-              SUOX
-            </span>
-            <span itemprop="domain">
-              Proteins
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              5
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000004048
-            </span>
-            <span itemprop="name">
-              modification
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              5
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000006011
-            </span>
-            <span itemprop="name">
-              modification reaction
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              5
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000002131
-            </span>
-            <span itemprop="name">
-              composite material
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              3
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000003247
-            </span>
-            <span itemprop="name">
-              decreasing
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              3
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000007710
-            </span>
-            <span itemprop="name">
-              freezing
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              3
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000000670
-            </span>
-            <span itemprop="name">
-              limiting
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              3
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000015654
-            </span>
-            <span itemprop="name">
-              memory
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              3
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000003068
-            </span>
-            <span itemprop="name">
-              static
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              3
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              206010010219
-            </span>
-            <span itemprop="name">
-              Compulsions
-            </span>
-            <span itemprop="domain">
-              Diseases
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000010009
-            </span>
-            <span itemprop="name">
-              beating
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000015556
-            </span>
-            <span itemprop="name">
-              catabolic process
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000003086
-            </span>
-            <span itemprop="name">
-              colorant
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000010586
-            </span>
-            <span itemprop="name">
-              diagram
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000002996
-            </span>
-            <span itemprop="name">
-              emotional
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000000463
-            </span>
-            <span itemprop="name">
-              material
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000002250
-            </span>
-            <span itemprop="name">
-              progressing
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000011435
-            </span>
-            <span itemprop="name">
-              rock
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              101710026100
-            </span>
-            <span itemprop="name">
-              Act57B
-            </span>
-            <span itemprop="domain">
-              Proteins
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              102100003170
-            </span>
-            <span itemprop="name">
-              CCL4
-            </span>
-            <span itemprop="domain">
-              Human genes
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              101700040051
-            </span>
-            <span itemprop="name">
-              CCL4
-            </span>
-            <span itemprop="domain">
-              Proteins
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              241001342895
-            </span>
-            <span itemprop="name">
-              Chorus
-            </span>
-            <span itemprop="domain">
-              Species
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              241000410367
-            </span>
-            <span itemprop="name">
-              Clerodendrum thomsoniae
-            </span>
-            <span itemprop="domain">
-              Species
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              HEFNNWSXXWATRW-UHFFFAOYSA-N
-            </span>
-            <span itemprop="name">
-              Ibuprofen
-            </span>
-            <span itemprop="domain">
-              Chemical compound
-            </span>
-            <span itemprop="svg_large">
-              data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8c3ZnIHZlcnNpb249JzEuMScgYmFzZVByb2ZpbGU9J2Z1bGwnCiAgICAgICAgICAgICAgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJwogICAgICAgICAgICAgICAgICAgICAgeG1sbnM6cmRraXQ9J2h0dHA6Ly93d3cucmRraXQub3JnL3htbCcKICAgICAgICAgICAgICAgICAgICAgIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJwogICAgICAgICAgICAgICAgICB4bWw6c3BhY2U9J3ByZXNlcnZlJwp3aWR0aD0nMzAwcHgnIGhlaWdodD0nMzAwcHgnIHZpZXdCb3g9JzAgMCAzMDAgMzAwJz4KPCEtLSBFTkQgT0YgSEVBREVSIC0tPgo8cmVjdCBzdHlsZT0nb3BhY2l0eToxLjA7ZmlsbDojRkZGRkZGO3N0cm9rZTpub25lJyB3aWR0aD0nMzAwJyBoZWlnaHQ9JzMwMCcgeD0nMCcgeT0nMCc+IDwvcmVjdD4KPHBhdGggY2xhc3M9J2JvbmQtMCcgZD0nTSAxMy42MzY0LDE0NS44NiBMIDUwLjU5NDEsMTQzLjU5Micgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMScgZD0nTSA1MC41OTQxLDE0My41OTIgTCA2Ny4xMDgyLDExMC40NTEnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjIuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTInIGQ9J00gNTAuNTk0MSwxNDMuNTkyIEwgNzEuMDM3NywxNzQuNDY0JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoyLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0zJyBkPSdNIDcxLjAzNzcsMTc0LjQ2NCBMIDEwNy45OTUsMTcyLjE5NScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtNCcgZD0nTSAxMDcuOTk1LDE3Mi4xOTUgTCAxMjQuNTEsMTM5LjA1NCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtNCcgZD0nTSAxMTcuMTAxLDE3MC41MjcgTCAxMjguNjYxLDE0Ny4zMjgnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjIuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTE0JyBkPSdNIDEwNy45OTUsMTcyLjE5NSBMIDEyOC40MzksMjAzLjA2Nycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtNScgZD0nTSAxMjQuNTEsMTM5LjA1NCBMIDE2MS40NjcsMTM2Ljc4Nicgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtNicgZD0nTSAxNjEuNDY3LDEzNi43ODYgTCAxODEuOTExLDE2Ny42NTgnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjIuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTYnIGQ9J00gMTU4LjM1OSwxNDUuNTA1IEwgMTcyLjY3LDE2Ny4xMTYnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjIuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTcnIGQ9J00gMTgxLjkxMSwxNjcuNjU4IEwgMjE4Ljg2OSwxNjUuMzg5JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoyLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0xMicgZD0nTSAxODEuOTExLDE2Ny42NTggTCAxNjUuMzk3LDIwMC43OTgnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjIuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTgnIGQ9J00gMjE4Ljg2OSwxNjUuMzg5IEwgMjM5LjMxMiwxOTYuMjYxJyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoyLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC05JyBkPSdNIDIxOC44NjksMTY1LjM4OSBMIDIzNS4zODMsMTMyLjI0OCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTAnIGQ9J00gMjM1LjM4MywxMzIuMjQ4IEwgMjQ3LjQ4MSwxMzEuNTA2JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoyLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0xMCcgZD0nTSAyNDcuNDgxLDEzMS41MDYgTCAyNTkuNTgsMTMwLjc2Mycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0U4NDIzNTtzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTEnIGQ9J00gMjM4LjQ3LDEzMC4yMDQgTCAyMzIuOTc3LDEyMS45MDknIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjIuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTExJyBkPSdNIDIzMi45NzcsMTIxLjkwOSBMIDIyNy40ODQsMTEzLjYxNCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0U4NDIzNTtzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTEnIGQ9J00gMjMyLjI5NiwxMzQuMjkzIEwgMjI2LjgwMywxMjUuOTk4JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoyLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0xMScgZD0nTSAyMjYuODAzLDEyNS45OTggTCAyMjEuMzEsMTE3LjcwMycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0U4NDIzNTtzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTMnIGQ9J00gMTY1LjM5NywyMDAuNzk4IEwgMTI4LjQzOSwyMDMuMDY3JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoyLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0xMycgZD0nTSAxNTkuMzk5LDE5My43NDcgTCAxMzMuNTI5LDE5NS4zMzUnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjIuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+Cjx0ZXh0IHg9JzI2Ny44OTcnIHk9JzEzNy4zODUnIGNsYXNzPSdhdG9tLTExJyBzdHlsZT0nZm9udC1zaXplOjE0cHg7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lO2ZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7dGV4dC1hbmNob3I6c3RhcnQ7ZmlsbDojRTg0MjM1JyA+TzwvdGV4dD4KPHRleHQgeD0nMjc4LjExNycgeT0nMTM3LjM4NScgY2xhc3M9J2F0b20tMTEnIHN0eWxlPSdmb250LXNpemU6MTRweDtmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOm5vbmU7Zm9udC1mYW1pbHk6c2Fucy1zZXJpZjt0ZXh0LWFuY2hvcjpzdGFydDtmaWxsOiNFODQyMzUnID5IPC90ZXh0Pgo8dGV4dCB4PScyMTAuNDk2JyB5PScxMDguNzgyJyBjbGFzcz0nYXRvbS0xMicgc3R5bGU9J2ZvbnQtc2l6ZToxNHB4O2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtmb250LWZhbWlseTpzYW5zLXNlcmlmO3RleHQtYW5jaG9yOnN0YXJ0O2ZpbGw6I0U4NDIzNScgPk88L3RleHQ+Cjwvc3ZnPgo=
-            </span>
-            <span itemprop="svg_small">
-              data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8c3ZnIHZlcnNpb249JzEuMScgYmFzZVByb2ZpbGU9J2Z1bGwnCiAgICAgICAgICAgICAgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJwogICAgICAgICAgICAgICAgICAgICAgeG1sbnM6cmRraXQ9J2h0dHA6Ly93d3cucmRraXQub3JnL3htbCcKICAgICAgICAgICAgICAgICAgICAgIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJwogICAgICAgICAgICAgICAgICB4bWw6c3BhY2U9J3ByZXNlcnZlJwp3aWR0aD0nODVweCcgaGVpZ2h0PSc4NXB4JyB2aWV3Qm94PScwIDAgODUgODUnPgo8IS0tIEVORCBPRiBIRUFERVIgLS0+CjxyZWN0IHN0eWxlPSdvcGFjaXR5OjEuMDtmaWxsOiNGRkZGRkY7c3Ryb2tlOm5vbmUnIHdpZHRoPSc4NScgaGVpZ2h0PSc4NScgeD0nMCcgeT0nMCc+IDwvcmVjdD4KPHBhdGggY2xhc3M9J2JvbmQtMCcgZD0nTSAzLjM2MzY0LDQxLjA0MTIgTCAxMy42Njc5LDQwLjQwODcnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTEnIGQ9J00gMTMuNjY3OSw0MC40MDg3IEwgMTguMjcyMiwzMS4xNjg2JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoxLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0yJyBkPSdNIDEzLjY2NzksNDAuNDA4NyBMIDE5LjM2NzgsNDkuMDE2MScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMycgZD0nTSAxOS4zNjc4LDQ5LjAxNjEgTCAyOS42NzIxLDQ4LjM4MzYnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTQnIGQ9J00gMjkuNjcyMSw0OC4zODM2IEwgMzQuMjc2NCwzOS4xNDM2JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoxLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC00JyBkPSdNIDMyLjIxMDcsNDcuOTE4NSBMIDM1LjQzMzgsNDEuNDUwNCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTQnIGQ9J00gMjkuNjcyMSw0OC4zODM2IEwgMzUuMzcyLDU2Ljk5MTEnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTUnIGQ9J00gMzQuMjc2NCwzOS4xNDM2IEwgNDQuNTgwNywzOC41MTEnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTYnIGQ9J00gNDQuNTgwNywzOC41MTEgTCA1MC4yODA2LDQ3LjExODUnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTYnIGQ9J00gNDMuNzE0Miw0MC45NDIxIEwgNDcuNzA0MSw0Ni45Njc0JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoxLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC03JyBkPSdNIDUwLjI4MDYsNDcuMTE4NSBMIDYwLjU4NDksNDYuNDg2JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoxLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0xMicgZD0nTSA1MC4yODA2LDQ3LjExODUgTCA0NS42NzYzLDU2LjM1ODUnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTgnIGQ9J00gNjAuNTg0OSw0Ni40ODYgTCA2Ni4yODQ4LDU1LjA5MzQnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTknIGQ9J00gNjAuNTg0OSw0Ni40ODYgTCA2NS4xODkyLDM3LjI0NTknIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTEwJyBkPSdNIDY1LjE4OTIsMzcuMjQ1OSBMIDY5LjMxMjMsMzYuOTkyOCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTAnIGQ9J00gNjkuMzEyMywzNi45OTI4IEwgNzMuNDM1NCwzNi43Mzk3JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRTg0MjM1O3N0cm9rZS13aWR0aDoxLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0xMScgZD0nTSA2Ni4wNSwzNi42NzU5IEwgNjQuMjI5LDMzLjkyNjInIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTExJyBkPSdNIDY0LjIyOSwzMy45MjYyIEwgNjIuNDA4MSwzMS4xNzY0JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRTg0MjM1O3N0cm9rZS13aWR0aDoxLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0xMScgZD0nTSA2NC4zMjg1LDM3LjgxNTkgTCA2Mi41MDc1LDM1LjA2NjInIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTExJyBkPSdNIDYyLjUwNzUsMzUuMDY2MiBMIDYwLjY4NjYsMzIuMzE2NCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0U4NDIzNTtzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTMnIGQ9J00gNDUuNjc2Myw1Ni4zNTg1IEwgMzUuMzcyLDU2Ljk5MTEnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTEzJyBkPSdNIDQ0LjAwNDEsNTQuMzkyNiBMIDM2Ljc5MTEsNTQuODM1Mycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHRleHQgeD0nNzMuNjkzNScgeT0nMzkuNjEzNCcgY2xhc3M9J2F0b20tMTEnIHN0eWxlPSdmb250LXNpemU6NnB4O2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtmb250LWZhbWlseTpzYW5zLXNlcmlmO3RleHQtYW5jaG9yOnN0YXJ0O2ZpbGw6I0U4NDIzNScgPk88L3RleHQ+Cjx0ZXh0IHg9Jzc3LjgzMzUnIHk9JzM5LjYxMzQnIGNsYXNzPSdhdG9tLTExJyBzdHlsZT0nZm9udC1zaXplOjZweDtmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOm5vbmU7Zm9udC1mYW1pbHk6c2Fucy1zZXJpZjt0ZXh0LWFuY2hvcjpzdGFydDtmaWxsOiNFODQyMzUnID5IPC90ZXh0Pgo8dGV4dCB4PSc1Ny42ODkzJyB5PSczMS42Mzg1JyBjbGFzcz0nYXRvbS0xMicgc3R5bGU9J2ZvbnQtc2l6ZTo2cHg7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lO2ZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7dGV4dC1hbmNob3I6c3RhcnQ7ZmlsbDojRTg0MjM1JyA+TzwvdGV4dD4KPC9zdmc+Cg==
-            </span>
-            <span itemprop="smiles">
-              CC(C)CC1=CC=C(C(C)C(O)=O)C=C1
-            </span>
-            <span itemprop="inchi_key">
-              HEFNNWSXXWATRW-UHFFFAOYSA-N
-            </span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              101710026102
-            </span>
-            <span itemprop="name">
-              MIC-ACT-2
-            </span>
-            <span itemprop="domain">
-              Proteins
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000001174
-            </span>
-            <span itemprop="name">
-              ascending
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000005540
-            </span>
-            <span itemprop="name">
-              biological transmission
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000006227
-            </span>
-            <span itemprop="name">
-              byproduct
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000001514
-            </span>
-            <span itemprop="name">
-              detection method
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000003814
-            </span>
-            <span itemprop="name">
-              drug
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              229940079593
-            </span>
-            <span itemprop="name">
-              drugs
-            </span>
-            <span itemprop="domain">
-              Drugs
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000000694
-            </span>
-            <span itemprop="name">
-              effects
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000009432
-            </span>
-            <span itemprop="name">
-              framing
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000010437
-            </span>
-            <span itemprop="name">
-              gem
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000010348
-            </span>
-            <span itemprop="name">
-              incorporation
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000003278
-            </span>
-            <span itemprop="name">
-              mimic
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000000203
-            </span>
-            <span itemprop="name">
-              mixture
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000036961
-            </span>
-            <span itemprop="name">
-              partial
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000003014
-            </span>
-            <span itemprop="name">
-              reinforcing
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000005070
-            </span>
-            <span itemprop="name">
-              sampling
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000003442
-            </span>
-            <span itemprop="name">
-              weekly
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-        </ul>
         <section>
           <h2>
             Images
@@ -2884,6 +1611,17 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="Level" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
                     <meta content="331" itemprop="left"/>
+                    <meta content="1524" itemprop="top"/>
+                    <meta content="445" itemprop="right"/>
+                    <meta content="1678" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="17" itemprop="figurePage"/>
+                  <meta content="1" itemprop="id"/>
+                  <meta content="Level" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="331" itemprop="left"/>
                     <meta content="1702" itemprop="top"/>
                     <meta content="445" itemprop="right"/>
                     <meta content="1774" itemprop="bottom"/>
@@ -2898,17 +1636,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     <meta content="1698" itemprop="top"/>
                     <meta content="1345" itemprop="right"/>
                     <meta content="1781" itemprop="bottom"/>
-                  </span>
-                </li>
-                <li itemprop="callouts" itemscope="" repeat="">
-                  <meta content="17" itemprop="figurePage"/>
-                  <meta content="1" itemprop="id"/>
-                  <meta content="Level" itemprop="label"/>
-                  <span itemprop="bounds" itemscope="">
-                    <meta content="331" itemprop="left"/>
-                    <meta content="1524" itemprop="top"/>
-                    <meta content="445" itemprop="right"/>
-                    <meta content="1678" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -6705,9 +5432,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
             <tbody>
               <tr itemprop="forwardReferencesOrig" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20180366096A1/en">
+                  <a href="/patent/WO2018231315A1/en">
                     <span itemprop="publicationNumber">
-                      US20180366096A1
+                      WO2018231315A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -6727,7 +5454,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Mark Glembin
+                    Glembin Mark
                   </span>
                 </td>
                 <td itemprop="title">
@@ -6877,34 +5604,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US8678896B2/en">
-                    <span itemprop="publicationNumber">
-                      US8678896B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2007-06-14
-                </td>
-                <td itemprop="publicationDate">
-                  2014-03-25
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Systems and methods for asynchronous band interaction in a rhythm action game
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/EP2206540A1/en">
                     <span itemprop="publicationNumber">
                       EP2206540A1
@@ -6929,6 +5628,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   System and method for simulating a rock band experience
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US8678896B2/en">
+                    <span itemprop="publicationNumber">
+                      US8678896B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2007-06-14
+                </td>
+                <td itemprop="publicationDate">
+                  2014-03-25
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Systems and methods for asynchronous band interaction in a rhythm action game
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -6961,9 +5688,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US9120016B2/en">
+                  <a href="/patent/WO2010059994A2/en">
                     <span itemprop="publicationNumber">
-                      US9120016B2
+                      WO2010059994A2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -6976,11 +5703,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2008-11-21
                 </td>
                 <td itemprop="publicationDate">
-                  2015-09-01
+                  2010-05-27
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Ubisoft Entertainment
+                    Poptank Studios, Inc.
                   </span>
                 </td>
                 <td itemprop="title">
@@ -7110,6 +5837,37 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
+                  <a href="/patent/US20100331075A1/en">
+                    <span itemprop="publicationNumber">
+                      US20100331075A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2009-06-26
+                </td>
+                <td itemprop="publicationDate">
+                  2010-12-30
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Microsoft Corporation
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Using game elements to motivate learning
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
                   <a href="/patent/US8979538B2/en">
                     <span itemprop="publicationNumber">
                       US8979538B2
@@ -7141,9 +5899,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20100331075A1/en">
+                  <a href="/patent/USD757320S1/en">
                     <span itemprop="publicationNumber">
-                      US20100331075A1
+                      USD757320S1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7151,23 +5909,20 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
-                  2009-06-26
+                  2010-07-15
                 </td>
                 <td itemprop="publicationDate">
-                  2010-12-30
+                  2016-05-24
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Microsoft Corporation
+                    James BARTOS
                   </span>
                 </td>
                 <td itemprop="title">
-                  Using game elements to motivate learning
+                  Illuminated fret board
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -7203,34 +5958,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/USD757320S1/en">
-                    <span itemprop="publicationNumber">
-                      USD757320S1
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2010-07-15
-                </td>
-                <td itemprop="publicationDate">
-                  2016-05-24
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    James BARTOS
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Illuminated fret board
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US8269094B2/en">
                     <span itemprop="publicationNumber">
                       US8269094B2
@@ -7241,9 +5968,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2009-07-20
@@ -7318,9 +6042,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/EP2494432B1/en">
+                  <a href="/patent/US10357714B2/en">
                     <span itemprop="publicationNumber">
-                      EP2494432B1
+                      US10357714B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7333,7 +6057,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2009-10-27
                 </td>
                 <td itemprop="publicationDate">
-                  2019-05-29
+                  2019-07-23
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -7341,14 +6065,14 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                 </td>
                 <td itemprop="title">
-                  Gesture-based user interface
+                  Gesture-based user interface for navigating a menu
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US8568234B2/en">
+                  <a href="/patent/US8550908B2/en">
                     <span itemprop="publicationNumber">
-                      US8568234B2
+                      US8550908B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7356,12 +6080,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2010-03-16
                 </td>
                 <td itemprop="publicationDate">
-                  2013-10-29
+                  2013-10-08
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -7464,6 +6191,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
+                  <a href="/patent/EP2579955B1/en">
+                    <span itemprop="publicationNumber">
+                      EP2579955B1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2010-06-11
+                </td>
+                <td itemprop="publicationDate">
+                  2020-07-08
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Dance game and tutorial
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
                   <a href="/patent/US8562403B2/en">
                     <span itemprop="publicationNumber">
                       US8562403B2
@@ -7488,34 +6243,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Prompting a player of a dance game
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US8702485B2/en">
-                    <span itemprop="publicationNumber">
-                      US8702485B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2010-06-11
-                </td>
-                <td itemprop="publicationDate">
-                  2014-04-22
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Dance game and tutorial
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -7666,9 +6393,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2012053371A1/en">
+                  <a href="/patent/US9601118B2/en">
                     <span itemprop="publicationNumber">
-                      WO2012053371A1
+                      US9601118B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7684,11 +6411,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2010-10-20
                 </td>
                 <td itemprop="publicationDate">
-                  2012-04-26
+                  2017-03-21
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    株式会社メガチップス
+                    Megachips Corporation
                   </span>
                 </td>
                 <td itemprop="title">
@@ -7902,9 +6629,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/JP6441681B2/en">
+                  <a href="/patent/WO2014103336A1/en">
                     <span itemprop="publicationNumber">
-                      JP6441681B2
+                      WO2014103336A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7920,15 +6647,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2012-12-29
                 </td>
                 <td itemprop="publicationDate">
-                  2018-12-19
+                  2014-07-03
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    知英 角皆
+                    Tunogai Tomohide
                   </span>
                 </td>
                 <td itemprop="title">
-                  Guitar performance training data creation device, guitar performance training system, guitar performance training data creation method, and guitar performance training data creation program
+                  Guitar teaching data creation device, guitar teaching system, guitar teaching data creation method, and guitar teaching data creation program
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -7964,9 +6691,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/CN104884133B/en">
+                  <a href="/patent/WO2014153158A1/en">
                     <span itemprop="publicationNumber">
-                      CN104884133B
+                      WO2014153158A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7979,22 +6706,22 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2013-03-14
                 </td>
                 <td itemprop="publicationDate">
-                  2018-02-23
+                  2014-09-25
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    艾肯运动与健康公司
+                    Icon Health &amp; Fitness, Inc.
                   </span>
                 </td>
                 <td itemprop="title">
-                  Force exercise equipment with flywheel
+                  Strength training apparatus with flywheel and related methods
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/EP3086865B1/en">
+                  <a href="/patent/WO2015100429A1/en">
                     <span itemprop="publicationNumber">
-                      EP3086865B1
+                      WO2015100429A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8007,7 +6734,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2013-12-26
                 </td>
                 <td itemprop="publicationDate">
-                  2020-01-22
+                  2015-07-02
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -8048,9 +6775,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2015141260A1/en">
+                  <a href="/patent/US10725650B2/en">
                     <span itemprop="publicationNumber">
-                      WO2015141260A1
+                      US10725650B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8066,15 +6793,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2014-03-17
                 </td>
                 <td itemprop="publicationDate">
-                  2015-09-24
+                  2020-07-28
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    株式会社河合楽器製作所
+                    Kabushiki Kaisha Kawai Gakki Seisakusho
                   </span>
                 </td>
                 <td itemprop="title">
-                  Handwritten music notation recognition device and program
+                  Handwritten music sign recognition device and program
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -8315,9 +7042,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/EP3095494A1/en">
+                  <a href="/patent/US9842577B2/en">
                     <span itemprop="publicationNumber">
-                      EP3095494A1
+                      US9842577B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8330,7 +7057,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2015-05-19
                 </td>
                 <td itemprop="publicationDate">
-                  2016-11-23
+                  2017-12-12
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -8339,34 +7066,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Improvised guitar simulation
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US9799314B2/en">
-                    <span itemprop="publicationNumber">
-                      US9799314B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2015-09-28
-                </td>
-                <td itemprop="publicationDate">
-                  2017-10-24
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Dynamic improvisational fill feature
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -8395,6 +7094,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Vocal improvisation
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US9799314B2/en">
+                    <span itemprop="publicationNumber">
+                      US9799314B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2015-09-28
+                </td>
+                <td itemprop="publicationDate">
+                  2017-10-24
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Dynamic improvisational fill feature
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -8461,9 +7188,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/USD789981S1/en">
+                  <a href="/patent/USD789982S1/en">
                     <span itemprop="publicationNumber">
-                      USD789981S1
+                      USD789982S1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8492,9 +7219,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/USD789982S1/en">
+                  <a href="/patent/USD789981S1/en">
                     <span itemprop="publicationNumber">
-                      USD789982S1
+                      USD789981S1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8554,34 +7281,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/USD789416S1/en">
-                    <span itemprop="publicationNumber">
-                      USD789416S1
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2016-02-04
-                </td>
-                <td itemprop="publicationDate">
-                  2017-06-13
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Lutron Electronics Co., Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Display screen or portion thereof with animated graphical user interface
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US10856394B2/en">
                     <span itemprop="publicationNumber">
                       US10856394B2
@@ -8606,6 +7305,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Configuring a load control system
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/USD789416S1/en">
+                    <span itemprop="publicationNumber">
+                      USD789416S1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2016-02-04
+                </td>
+                <td itemprop="publicationDate">
+                  2017-06-13
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Lutron Electronics Co., Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Display screen or portion thereof with animated graphical user interface
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -8812,9 +7539,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/CN109791740B/en">
+                  <a href="/patent/WO2018068203A1/en">
                     <span itemprop="publicationNumber">
-                      CN109791740B
+                      WO2018068203A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8830,15 +7557,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2016-10-11
                 </td>
                 <td itemprop="publicationDate">
-                  2021-05-07
+                  2018-04-19
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    森兰信息科技（上海）有限公司
+                    Sunland Information Technology Co., Ltd.
                   </span>
                 </td>
                 <td itemprop="title">
-                  Intelligent detection and feedback system for intelligent piano
+                  A smart detecting and feedback system for smart piano
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -8874,34 +7601,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US10460709B2/en">
-                    <span itemprop="publicationNumber">
-                      US10460709B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2017-06-26
-                </td>
-                <td itemprop="publicationDate">
-                  2019-10-29
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    The Intellectual Property Network, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Enhanced system, method, and devices for utilizing inaudible tones with music
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US11030983B2/en">
                     <span itemprop="publicationNumber">
                       US11030983B2
@@ -8926,6 +7625,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Enhanced system, method, and devices for communicating inaudible tones associated with audio files
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US10460709B2/en">
+                    <span itemprop="publicationNumber">
+                      US10460709B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2017-06-26
+                </td>
+                <td itemprop="publicationDate">
+                  2019-10-29
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    The Intellectual Property Network, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Enhanced system, method, and devices for utilizing inaudible tones with music
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -8961,9 +7688,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20210049926A1/en">
+                  <a href="/patent/CN111684508A/en">
                     <span itemprop="publicationNumber">
-                      US20210049926A1
+                      CN111684508A
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8979,15 +7706,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2018-01-26
                 </td>
                 <td itemprop="publicationDate">
-                  2021-02-18
+                  2020-09-18
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Eric Damián ARELLANO NAVA
+                    埃里克·达米安·阿雷拉诺·纳瓦
                   </span>
                 </td>
                 <td itemprop="title">
-                  Integral visual learning system for the electric guitar and similar instruments
+                  Integrated visual learning system for learning electric guitars and similar musical instruments
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -9395,6 +8122,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1978-11-22
@@ -9454,6 +8184,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1987-08-26
@@ -9482,6 +8215,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1989-10-10
@@ -9510,6 +8246,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1991-01-15
@@ -9625,6 +8364,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1994-06-06
@@ -9712,6 +8454,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1995-10-16
@@ -9740,6 +8485,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1995-10-16
@@ -9789,34 +8537,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US6369313B2/en">
-                    <span itemprop="publicationNumber">
-                      US6369313B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2000-01-13
-                </td>
-                <td itemprop="publicationDate">
-                  2002-04-09
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    John R. Devecka
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Method and apparatus for simulating a jam session and instructing a user in how to play the drums
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US5739457A/en">
                     <span itemprop="publicationNumber">
                       US5739457A
@@ -9827,6 +8547,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1996-09-26
@@ -9837,6 +8560,37 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <td>
                   <span itemprop="assigneeOriginal">
                     Devecka; John R.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Method and apparatus for simulating a jam session and instructing a user in how to play the drums
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US6369313B2/en">
+                    <span itemprop="publicationNumber">
+                      US6369313B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2000-01-13
+                </td>
+                <td itemprop="publicationDate">
+                  2002-04-09
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    John R. Devecka
                   </span>
                 </td>
                 <td itemprop="title">
@@ -9929,9 +8683,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US6066791A/en">
+                  <a href="/patent/AU2340599A/en">
                     <span itemprop="publicationNumber">
-                      US6066791A
+                      AU2340599A
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -9939,16 +8693,19 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1998-01-28
                 </td>
                 <td itemprop="publicationDate">
-                  2000-05-23
+                  1999-08-16
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Renarco, Inc.
+                    Renarco Inc.
                   </span>
                 </td>
                 <td itemprop="title">
@@ -9967,6 +8724,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1998-01-29
@@ -9995,6 +8755,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1998-04-24
@@ -10051,6 +8814,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1998-07-24
@@ -10110,6 +8876,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1998-10-30
@@ -10138,6 +8907,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1998-11-26
@@ -10184,9 +8956,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/EP1183678B1/en">
+                  <a href="/patent/WO2000065571A1/en">
                     <span itemprop="publicationNumber">
-                      EP1183678B1
+                      WO2000065571A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -10194,12 +8966,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1999-04-26
                 </td>
                 <td itemprop="publicationDate">
-                  2014-04-16
+                  2000-11-02
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -10207,7 +8982,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                 </td>
                 <td itemprop="title">
-                  Musical instrument with stereo headphone out
+                  Universal audio communications and control system and method
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -10253,6 +9028,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1999-06-30
@@ -10309,6 +9087,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1999-10-05
@@ -10337,6 +9118,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1999-10-14
@@ -10365,6 +9149,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1999-11-01
@@ -10393,6 +9180,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1999-12-10
@@ -10449,6 +9239,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2000-02-22
@@ -10523,9 +9316,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/EP1272913A2/en">
+                  <a href="/patent/WO2001095052A2/en">
                     <span itemprop="publicationNumber">
-                      EP1272913A2
+                      WO2001095052A2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -10538,7 +9331,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2000-04-07
                 </td>
                 <td itemprop="publicationDate">
-                  2003-01-08
+                  2001-12-13
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -10679,6 +9472,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2000-08-03
@@ -10763,6 +9559,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2000-12-29
@@ -10791,6 +9590,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2001-03-23
@@ -10819,6 +9621,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2001-05-04
@@ -10896,9 +9701,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20040158462A1/en">
+                  <a href="/patent/WO2002101717A2/en">
                     <span itemprop="publicationNumber">
-                      US20040158462A1
+                      WO2002101717A2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -10911,11 +9716,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2001-06-11
                 </td>
                 <td itemprop="publicationDate">
-                  2004-08-12
+                  2002-12-19
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Rutledge Glen J.
+                    Ivl Technologies Ltd.
                   </span>
                 </td>
                 <td itemprop="title">
@@ -10983,90 +9788,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US6638135B2/en">
-                    <span itemprop="publicationNumber">
-                      US6638135B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2001-11-21
-                </td>
-                <td itemprop="publicationDate">
-                  2003-10-28
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Peter Sui Lun Fong
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Animated display
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US6969797B2/en">
-                    <span itemprop="publicationNumber">
-                      US6969797B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2001-11-21
-                </td>
-                <td itemprop="publicationDate">
-                  2005-11-29
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Line 6, Inc
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Interface device to couple a musical instrument to a computing device to allow a user to play a musical instrument in conjunction with a multimedia presentation
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US7020635B2/en">
-                    <span itemprop="publicationNumber">
-                      US7020635B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2001-11-21
-                </td>
-                <td itemprop="publicationDate">
-                  2006-03-28
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Line 6, Inc
-                  </span>
-                </td>
-                <td itemprop="title">
-                  System and method of secure electronic commerce transactions including tracking and recording the distribution and usage of assets
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US7404202B2/en">
                     <span itemprop="publicationNumber">
                       US7404202B2
@@ -11077,6 +9798,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2001-11-21
@@ -11105,6 +9829,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2001-11-21
@@ -11123,6 +9850,68 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
+                  <a href="/patent/US7020635B2/en">
+                    <span itemprop="publicationNumber">
+                      US7020635B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2001-11-21
+                </td>
+                <td itemprop="publicationDate">
+                  2006-03-28
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Line 6, Inc
+                  </span>
+                </td>
+                <td itemprop="title">
+                  System and method of secure electronic commerce transactions including tracking and recording the distribution and usage of assets
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US6638135B2/en">
+                    <span itemprop="publicationNumber">
+                      US6638135B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2001-11-21
+                </td>
+                <td itemprop="publicationDate">
+                  2003-10-28
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Peter Sui Lun Fong
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Animated display
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
                   <a href="/patent/US6740803B2/en">
                     <span itemprop="publicationNumber">
                       US6740803B2
@@ -11133,6 +9922,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2001-11-21
@@ -11147,6 +9939,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Computing device to allow for the selection and display of a multimedia presentation of an audio file and to allow a user to play a musical instrument in conjunction with the multimedia presentation
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US6969797B2/en">
+                    <span itemprop="publicationNumber">
+                      US6969797B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2001-11-21
+                </td>
+                <td itemprop="publicationDate">
+                  2005-11-29
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Line 6, Inc
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Interface device to couple a musical instrument to a computing device to allow a user to play a musical instrument in conjunction with a multimedia presentation
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -11189,6 +10009,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2002-04-01
@@ -11217,6 +10040,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2002-04-15
@@ -11245,6 +10071,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2002-04-16
@@ -11332,6 +10161,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2002-08-07
@@ -11360,6 +10192,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2002-09-04
@@ -11378,9 +10213,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/AU2003275089A1/en">
+                  <a href="/patent/WO2004027577A2/en">
                     <span itemprop="publicationNumber">
-                      AU2003275089A1
+                      WO2004027577A2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -11393,11 +10228,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2002-09-19
                 </td>
                 <td itemprop="publicationDate">
-                  2004-04-08
+                  2004-04-01
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    William B. Hudak
+                    Brian Reynolds
                   </span>
                 </td>
                 <td itemprop="title">
@@ -11406,9 +10241,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/JP4679503B2/en">
+                  <a href="/patent/CN100474759C/en">
                     <span itemprop="publicationNumber">
-                      JP4679503B2
+                      CN100474759C
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -11416,20 +10251,23 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2003-01-09
                 </td>
                 <td itemprop="publicationDate">
-                  2011-04-27
+                  2009-04-01
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    エアリエル，インク．
+                    埃里耶勒技术公司
                   </span>
                 </td>
                 <td itemprop="title">
-                  Circuit and method for providing audio device with auto-off and / or auto-off function
+                  Circuit and method for providing an auto-off and/or auto-on capability for an audio device
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -11528,6 +10366,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2003-10-03
@@ -11668,6 +10509,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2004-07-08
@@ -11724,6 +10568,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2004-12-20
@@ -11880,7 +10727,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                 </td>
                 <td itemprop="title">
-                  Device for taking its serious and acute stereo phones, triphonic, quadriphonic or more, for acoustic instruments with cords, ethnic or percussion
+                  DEVICE FOR TAKING ITS SERIOUS AND ACUTE STEREO PHONES, TRIPHONIC, QUADRIPHONIC OR MORE, FOR ACOUSTIC INSTRUMENTS WITH CORDS, ETHNIC OR PERCUSSION
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -11895,6 +10742,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2005-06-06
@@ -11923,6 +10773,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2005-06-06
@@ -11982,6 +10835,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2005-09-20
@@ -12010,6 +10866,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2005-12-19
@@ -12024,34 +10883,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Systems and methods for generating video game content
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US7462772B2/en">
-                    <span itemprop="publicationNumber">
-                      US7462772B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2006-01-13
-                </td>
-                <td itemprop="publicationDate">
-                  2008-12-09
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Salter Hal C
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Music composition system and method
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -12080,6 +10911,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   System and method for network communication of music data
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US7462772B2/en">
+                    <span itemprop="publicationNumber">
+                      US7462772B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2006-01-13
+                </td>
+                <td itemprop="publicationDate">
+                  2008-12-09
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Salter Hal C
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Music composition system and method
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -12115,34 +10974,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US8003872B2/en">
-                    <span itemprop="publicationNumber">
-                      US8003872B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2006-03-29
-                </td>
-                <td itemprop="publicationDate">
-                  2011-08-23
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Facilitating interaction with a music-based video game
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US7459624B2/en">
                     <span itemprop="publicationNumber">
                       US7459624B2
@@ -12167,6 +10998,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Game controller simulating a musical instrument
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US8003872B2/en">
+                    <span itemprop="publicationNumber">
+                      US8003872B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2006-03-29
+                </td>
+                <td itemprop="publicationDate">
+                  2011-08-23
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Facilitating interaction with a music-based video game
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -12237,6 +11096,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2006-04-19
@@ -12321,6 +11183,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2007-02-05
@@ -12377,6 +11242,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2006-11-16
@@ -12395,9 +11263,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US8471892B2/en">
+                  <a href="/patent/WO2008066742A1/en">
                     <span itemprop="publicationNumber">
-                      US8471892B2
+                      WO2008066742A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -12405,16 +11273,19 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
-                  2006-11-23
+                  2006-11-22
                 </td>
                 <td itemprop="publicationDate">
-                  2013-06-25
+                  2008-06-05
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Z. Jason Geng
+                    Geng Z Jason
                   </span>
                 </td>
                 <td itemprop="title">
@@ -12433,6 +11304,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2006-12-04
@@ -12461,6 +11335,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2007-01-11
@@ -12576,6 +11453,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2007-08-10
@@ -12604,6 +11484,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2007-09-07
@@ -12622,9 +11505,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US7842875B2/en">
+                  <a href="/patent/WO2009052032A1/en">
                     <span itemprop="publicationNumber">
-                      US7842875B2
+                      WO2009052032A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -12632,12 +11515,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2007-10-19
                 </td>
                 <td itemprop="publicationDate">
-                  2010-11-30
+                  2009-04-23
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -12660,6 +11546,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2008-01-24
@@ -12716,6 +11605,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2008-07-08
@@ -12744,6 +11636,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2008-07-17
@@ -12772,6 +11667,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2008-10-07
@@ -12790,9 +11688,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US9120016B2/en">
+                  <a href="/patent/WO2010059994A2/en">
                     <span itemprop="publicationNumber">
-                      US9120016B2
+                      WO2010059994A2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -12805,11 +11703,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2008-11-21
                 </td>
                 <td itemprop="publicationDate">
-                  2015-09-01
+                  2010-05-27
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Ubisoft Entertainment
+                    Poptank Studios, Inc.
                   </span>
                 </td>
                 <td itemprop="title">
@@ -12828,6 +11726,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2008-12-03
@@ -12842,34 +11743,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   System and method for providing an edutainment interface for musical instruments
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US8465366B2/en">
-                    <span itemprop="publicationNumber">
-                      US8465366B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2009-05-29
-                </td>
-                <td itemprop="publicationDate">
-                  2013-06-18
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Biasing a musical performance input to a part
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -12912,6 +11785,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2009-05-29
@@ -12958,6 +11834,68 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
+                  <a href="/patent/US8465366B2/en">
+                    <span itemprop="publicationNumber">
+                      US8465366B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2009-05-29
+                </td>
+                <td itemprop="publicationDate">
+                  2013-06-18
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Biasing a musical performance input to a part
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US7982114B2/en">
+                    <span itemprop="publicationNumber">
+                      US7982114B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2009-05-29
+                </td>
+                <td itemprop="publicationDate">
+                  2011-07-19
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Displaying an input at multiple octaves
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
                   <a href="/patent/US8076564B2/en">
                     <span itemprop="publicationNumber">
                       US8076564B2
@@ -12986,34 +11924,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US7982114B2/en">
-                    <span itemprop="publicationNumber">
-                      US7982114B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2009-05-29
-                </td>
-                <td itemprop="publicationDate">
-                  2011-07-19
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Displaying an input at multiple octaves
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US7935880B2/en">
                     <span itemprop="publicationNumber">
                       US7935880B2
@@ -13024,6 +11934,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2009-05-29
@@ -13042,9 +11955,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20120266738A1/en">
+                  <a href="/patent/AU2010256339A1/en">
                     <span itemprop="publicationNumber">
-                      US20120266738A1
+                      AU2010256339A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -13057,7 +11970,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2009-06-01
                 </td>
                 <td itemprop="publicationDate">
-                  2012-10-25
+                  2012-01-19
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -13080,6 +11993,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2009-06-10
@@ -13108,6 +12024,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2009-07-02
@@ -13136,6 +12055,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2009-08-03
@@ -13220,6 +12142,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2010-04-20
@@ -13276,6 +12201,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2010-06-30
@@ -13336,28 +12264,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     2009-11-20
                   </span>
                   <span itemprop="countryCode">
-                    US
-                  </span>
-                  <span itemprop="applicationNumber">
-                    US12/623,368
-                  </span>
-                  <a href="/patent/US9120016B2/en">
-                    <span itemprop="documentId">
-                      patent/US9120016B2/en
-                    </span>
-                  </a>
-                  <span itemprop="legalStatusCat">
-                    active
-                  </span>
-                  <span itemprop="legalStatus">
-                    Active
-                  </span>
-                </li>
-                <li itemprop="application" itemscope="" repeat="">
-                  <span itemprop="filingDate">
-                    2009-11-20
-                  </span>
-                  <span itemprop="countryCode">
                     WO
                   </span>
                   <span itemprop="applicationNumber">
@@ -13373,6 +12279,28 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                   <span itemprop="legalStatus">
                     Application Filing
+                  </span>
+                </li>
+                <li itemprop="application" itemscope="" repeat="">
+                  <span itemprop="filingDate">
+                    2009-11-20
+                  </span>
+                  <span itemprop="countryCode">
+                    US
+                  </span>
+                  <span itemprop="applicationNumber">
+                    US12/623,368
+                  </span>
+                  <a href="/patent/US9120016B2/en">
+                    <span itemprop="documentId">
+                      patent/US9120016B2/en
+                    </span>
+                  </a>
+                  <span itemprop="legalStatusCat">
+                    active
+                  </span>
+                  <span itemprop="legalStatus">
+                    Active
                   </span>
                 </li>
               </ul>
@@ -13715,37 +12643,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
           <tbody>
             <tr itemprop="forwardReferences" itemscope="" repeat="">
               <td>
-                <a href="/patent/US20180366096A1/en">
-                  <span itemprop="publicationNumber">
-                    US20180366096A1
-                  </span>
-                  (
-                  <span itemprop="primaryLanguage">
-                    en
-                  </span>
-                  )
-                </a>
-                <span itemprop="examinerCited">
-                  *
-                </span>
-              </td>
-              <td itemprop="priorityDate">
-                2017-06-15
-              </td>
-              <td itemprop="publicationDate">
-                2018-12-20
-              </td>
-              <td>
-                <span itemprop="assigneeOriginal">
-                  Mark Glembin
-                </span>
-              </td>
-              <td itemprop="title">
-                System for music transcription
-              </td>
-            </tr>
-            <tr itemprop="forwardReferences" itemscope="" repeat="">
-              <td>
                 <a href="/patent/WO2018231315A1/en">
                   <span itemprop="publicationNumber">
                     WO2018231315A1
@@ -13769,6 +12666,37 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               <td>
                 <span itemprop="assigneeOriginal">
                   Glembin Mark
+                </span>
+              </td>
+              <td itemprop="title">
+                System for music transcription
+              </td>
+            </tr>
+            <tr itemprop="forwardReferences" itemscope="" repeat="">
+              <td>
+                <a href="/patent/US20180366096A1/en">
+                  <span itemprop="publicationNumber">
+                    US20180366096A1
+                  </span>
+                  (
+                  <span itemprop="primaryLanguage">
+                    en
+                  </span>
+                  )
+                </a>
+                <span itemprop="examinerCited">
+                  *
+                </span>
+              </td>
+              <td itemprop="priorityDate">
+                2017-06-15
+              </td>
+              <td itemprop="publicationDate">
+                2018-12-20
+              </td>
+              <td>
+                <span itemprop="assigneeOriginal">
+                  Mark Glembin
                 </span>
               </td>
               <td itemprop="title">
@@ -13823,23 +12751,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
             <tbody>
               <tr itemprop="docdbFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20120165087A1/en">
-                    <span itemprop="publicationNumber">
-                      US20120165087A1
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="publicationDate">
-                  2012-06-28
-                </td>
-              </tr>
-              <tr itemprop="docdbFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US20100137049A1/en">
                     <span itemprop="publicationNumber">
                       US20100137049A1
@@ -13857,6 +12768,23 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="docdbFamily" itemscope="" repeat="">
                 <td>
+                  <a href="/patent/US20120165087A1/en">
+                    <span itemprop="publicationNumber">
+                      US20120165087A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="publicationDate">
+                  2012-06-28
+                </td>
+              </tr>
+              <tr itemprop="docdbFamily" itemscope="" repeat="">
+                <td>
                   <a href="/patent/WO2010059994A3/en">
                     <span itemprop="publicationNumber">
                       WO2010059994A3
@@ -13870,23 +12798,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="publicationDate">
                   2010-09-02
-                </td>
-              </tr>
-              <tr itemprop="docdbFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/WO2010059994A2/en">
-                    <span itemprop="publicationNumber">
-                      WO2010059994A2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="publicationDate">
-                  2010-05-27
                 </td>
               </tr>
               <tr itemprop="docdbFamily" itemscope="" repeat="">
@@ -13938,6 +12849,23 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="publicationDate">
                   2015-09-01
+                </td>
+              </tr>
+              <tr itemprop="docdbFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/WO2010059994A2/en">
+                    <span itemprop="publicationNumber">
+                      WO2010059994A2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="publicationDate">
+                  2010-05-27
                 </td>
               </tr>
             </tbody>
@@ -14121,6 +13049,29 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="similarDocuments" itemscope="" repeat="">
                 <td>
+                  <meta content="true" itemprop="isPatent"/>
+                  <a href="/patent/US7462104B2/en">
+                    <span itemprop="publicationNumber">
+                      US7462104B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td>
+                  <time datetime="2008-12-09" itemprop="publicationDate">
+                    2008-12-09
+                  </time>
+                </td>
+                <td itemprop="title">
+                  Method of conducting an interactive competition
+                </td>
+              </tr>
+              <tr itemprop="similarDocuments" itemscope="" repeat="">
+                <td>
                   <meta content="true" itemprop="isScholar"/>
                   <meta content="10638640631156620516" itemprop="scholarID"/>
                   <a href="/scholar/10638640631156620516">
@@ -14136,29 +13087,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Music theory in music games
-                </td>
-              </tr>
-              <tr itemprop="similarDocuments" itemscope="" repeat="">
-                <td>
-                  <meta content="true" itemprop="isPatent"/>
-                  <a href="/patent/US20050020336A1/en">
-                    <span itemprop="publicationNumber">
-                      US20050020336A1
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td>
-                  <time datetime="2005-01-27" itemprop="publicationDate">
-                    2005-01-27
-                  </time>
-                </td>
-                <td itemprop="title">
-                  Method of conducting an interactive competition
                 </td>
               </tr>
               <tr itemprop="similarDocuments" itemscope="" repeat="">
@@ -14209,6 +13137,29 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="similarDocuments" itemscope="" repeat="">
                 <td>
+                  <meta content="true" itemprop="isPatent"/>
+                  <a href="/patent/WO2005114648A1/en">
+                    <span itemprop="publicationNumber">
+                      WO2005114648A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td>
+                  <time datetime="2005-12-01" itemprop="publicationDate">
+                    2005-12-01
+                  </time>
+                </td>
+                <td itemprop="title">
+                  System and method for synchronizing a live musical performance with a reference performance
+                </td>
+              </tr>
+              <tr itemprop="similarDocuments" itemscope="" repeat="">
+                <td>
                   <meta content="true" itemprop="isScholar"/>
                   <meta content="7866591645484422977" itemprop="scholarID"/>
                   <a href="/scholar/7866591645484422977">
@@ -14251,25 +13202,21 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="similarDocuments" itemscope="" repeat="">
                 <td>
-                  <meta content="true" itemprop="isPatent"/>
-                  <a href="/patent/JP2001096061A/en">
-                    <span itemprop="publicationNumber">
-                      JP2001096061A
+                  <meta content="true" itemprop="isScholar"/>
+                  <meta content="963958909237274801" itemprop="scholarID"/>
+                  <a href="/scholar/963958909237274801">
+                    <span itemprop="scholarAuthors">
+                      Percival et al.
                     </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
                   </a>
                 </td>
                 <td>
-                  <time datetime="2001-04-10" itemprop="publicationDate">
-                    2001-04-10
+                  <time datetime="2007" itemprop="publicationDate">
+                    2007
                   </time>
                 </td>
                 <td itemprop="title">
-                  Machine and method of rhythm game, readable recording medium and operation device
+                  Effective use of multimedia for computer-assisted musical instrument tutoring
                 </td>
               </tr>
               <tr itemprop="similarDocuments" itemscope="" repeat="">
@@ -14293,29 +13240,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Music game system and method of providing same
-                </td>
-              </tr>
-              <tr itemprop="similarDocuments" itemscope="" repeat="">
-                <td>
-                  <meta content="true" itemprop="isPatent"/>
-                  <a href="/patent/JP2001293246A/en">
-                    <span itemprop="publicationNumber">
-                      JP2001293246A
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td>
-                  <time datetime="2001-10-23" itemprop="publicationDate">
-                    2001-10-23
-                  </time>
-                </td>
-                <td itemprop="title">
-                  Rhythm game apparatus, rhythm game method, readable recording medium and operating device
                 </td>
               </tr>
               <tr itemprop="similarDocuments" itemscope="" repeat="">

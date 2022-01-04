@@ -31,7 +31,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -44,15 +44,15 @@
 
 <item>
   <title>
-    <![CDATA[  juliaで前処理大全0  ]]>
+    <![CDATA[  DataFrames.jl  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/preprocess/index.html </link>
   <guid> https://hanafsky.github.io/tips/preprocess/index.html </guid>
   <description>
-    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -73,7 +73,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -94,7 +94,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -115,7 +115,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -128,7 +128,7 @@
 
 <item>
   <title>
-    <![CDATA[  Project環境を作るメリット  ]]>
+    <![CDATA[  Project.toml  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/project/index.html </link>
   <guid> https://hanafsky.github.io/tips/project/index.html </guid>
@@ -136,7 +136,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/agriculture.jpg" alt="titleimage" />Project環境を作るメリット  ]]>
   </description>  
     
-  <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -149,7 +149,7 @@
 
 <item>
   <title>
-    <![CDATA[  ノイズを含むデータの微分 - Savitzky-Golay filter  ]]>
+    <![CDATA[  Savitzky-Golay  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/savgol/index.html </link>
   <guid> https://hanafsky.github.io/tips/savgol/index.html </guid>
@@ -157,7 +157,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。  ]]>
   </description>  
     
-  <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -170,7 +170,7 @@
 
 <item>
   <title>
-    <![CDATA[  iPad proを導入  ]]>
+    <![CDATA[  iPad debut  ]]>
   </title>
   <link> https://hanafsky.github.io/blog/ipadpro/index.html </link>
   <guid> https://hanafsky.github.io/blog/ipadpro/index.html </guid>
@@ -191,7 +191,7 @@
 
 <item>
   <title>
-    <![CDATA[  JDLA認定G検定・E資格受験の話  ]]>
+    <![CDATA[  体験記  ]]>
   </title>
   <link> https://hanafsky.github.io/blog/jdla/index.html </link>
   <guid> https://hanafsky.github.io/blog/jdla/index.html </guid>
@@ -212,7 +212,7 @@
 
 <item>
   <title>
-    <![CDATA[  Google Patentsを翻訳してみる  ]]>
+    <![CDATA[  GoogleTrans.jl  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/patent/index.html </link>
   <guid> https://hanafsky.github.io/tips/patent/index.html </guid>
@@ -233,7 +233,7 @@
 
 <item>
   <title>
-    <![CDATA[  mermaid.jsのフローチャートメモ  ]]>
+    <![CDATA[  mermaid.js  ]]>
   </title>
   <link> https://hanafsky.github.io/blog/mermaid/index.html </link>
   <guid> https://hanafsky.github.io/blog/mermaid/index.html </guid>
@@ -275,7 +275,7 @@
 
 <item>
   <title>
-    <![CDATA[  リアクティブなノートブック Pluto.jl  ]]>
+    <![CDATA[  Pluto.jl  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/pluto/index.html </link>
   <guid> https://hanafsky.github.io/tips/pluto/index.html </guid>
@@ -296,7 +296,7 @@
 
 <item>
   <title>
-    <![CDATA[  静的サイトジェネレーター Franklin.jl  ]]>
+    <![CDATA[  Franklin.jl  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/franklin/index.html </link>
   <guid> https://hanafsky.github.io/tips/franklin/index.html </guid>
@@ -317,7 +317,7 @@
 
 <item>
   <title>
-    <![CDATA[  julia起動時の初期設定 - startup.jl  ]]>
+    <![CDATA[  startup.jl  ]]>
   </title>
   <link> https://hanafsky.github.io/tips/startup/index.html </link>
   <guid> https://hanafsky.github.io/tips/startup/index.html </guid>
