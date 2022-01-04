@@ -1,9 +1,11 @@
-@def title="juliaで前処理大全0"
+@def title="DataFrames.jl"
+@def description="juliaで前処理大全"
+@def titleimage="/assets/tips/preprocess.jpg"
 @def hascode=true
 @def tags=["thirdparty"]
 @def isjulia =true
 
-@def rss_description="![titleimage](/assets/tips/preprocess1.jpg) juliaで前処理大全をやっています。"
+@def rss_description="![titleimage](/assets/tips/preprocess.jpg) juliaで前処理大全をやっています。"
 @def rss_pupdate=Date(2021,5,30)
 @def published="30 May 2021"
 @def rss_category="julia"
@@ -40,6 +42,7 @@ SQL、R、pythonの3つの言語でAwesomeなコードの書き方を教えて�
 @@column \textcard{Aggregation}{3.集約}{/tips/preprocess/aggregation}@@
 @@column \textcard{Join}{4.結合}{/tips/preprocess/join}@@
 @@column \textcard{Split}{5.分割}{/tips/preprocess/split}@@
+@@column \textcard{Generation}{6.生成}{/tips/preprocess/generation}@@
 @@
 @@
 

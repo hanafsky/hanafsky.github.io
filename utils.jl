@@ -178,3 +178,24 @@ function hfun_inserttitle(params)
     r = Franklin.fd2html(String(take!(io)), internal=true)
     return r
 end
+
+function hfun_insertfoot(params) # ex) params=["blog", "test.md"]
+    path=joinpath(params[1:end-1]...)
+    posts=filter!(r->endswith(r,".md"), readdir(path))
+    title = pagevar(path,:title)
+    description=pagevar(path,:description)
+    img = pagevar(path,:titleimage)
+    imgsrc = pagevar(path,:imagesrc)
+    imgsrc === nothing && (imgsrc ="original")
+    date = pagevar(path,:published)
+    date === nothing && (date = "01 January 2025")
+    date = Dates.format(Date(date,dateformat"d U Y"), "d u Y") 
+    io = IOBuffer()
+    write(io,"\n # $description - $title \n")
+    write(io,"\n @@date $date @@\n")
+    write(io,"\n @@titleimage ~~~<img src=$img alt=''>
+              <div style='text-align:right; font-size:small; color:grey'>(src=$imgsrc)</div> 
+              ~~~@@ \n")
+    r = Franklin.fd2html(String(take!(io)), internal=true)
+    return r
+end

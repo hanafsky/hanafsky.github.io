@@ -15,6 +15,7 @@ isblog=true
 
 \share{blog/hhkb}{HHKBの話}
 
+
 \toc
 ## はじめに
 2020年1月からキーボードをHHKBに替えました。（知る人ぞ知る高級キーボード）

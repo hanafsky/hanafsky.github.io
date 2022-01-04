@@ -1,5 +1,6 @@
-
-@def title="Project環境を作るメリット"
+@def title="Project.toml"
+@def description="Project環境を作るメリット"
+@def titleimage="/assets/tips/agriculture.jpg"
 @def rss_description="![titleimage](/assets/tips/agriculture.jpg)Project環境を作るメリット"
 @def rss_pupdate=Date(2021,10,3)
 @def published="3 October 2021"
@@ -9,7 +10,6 @@
 @def tags=["recipe"]
 @def isjulia =true 
 @def hasmermaid=true
-
 
 # Project環境を作るメリット
 @@date
@@ -90,7 +90,7 @@ VS Codeでjuliaのreplを立ち上げると、プロジェクトファイルが�
 VS Codeでコードを書くときは、コードの補完機能が非常に役に立ちます。
 ただし、このコードを補完機能を使うには、LSPがプロジェクト環境にあるパッケージを読み込んで、
 補完機能を使えるようにIndexingをしているようです。
-デフォルトのプロジェクト環境にたくさんのパッケージを入れているとこの[Indexingの時間が何時間かかっても終わらない](https://discourse.julialang.org/t/vs-code-julia-language-server-indexing/41576)事態になってしまいます。VS Codeを快適に使うには、\marker{個別のプロジェクト環境を作るのは大前提}と言っても良いかもしれません。
+デフォルトのプロジェクト環境にたくさんのパッケージを入れているとこの[Indexingの行程が何時間かかっても終わらない](https://discourse.julialang.org/t/vs-code-julia-language-server-indexing/41576)事態になってしまいます。VS Codeを快適に使うには、\marker{個別のプロジェクト環境を作るのは大前提}と言っても良いかもしれません。
 
 ### System imageを作ることができる。
 VS Codeでは``Ctrl+Shift+B`` + ``Enter``コマンドを打つとプロジェクトファイルにあるパッケージのコンパイル済みイメージを作ることができます。[^2]

@@ -1,4 +1,6 @@
-@def title="ノイズを含むデータの微分 - Savitzky-Golay filter"
+@def title="Savitzky-Golay"
+@def description="ノイジーなデータの微分"
+@def titleimage="/assets/tips/smooth-3221868_640.jpg"
 @def rss_description="![titleimage](/assets/tips/smooth-3221868_640.jpg)Savitzky-Golayフィルターの説明をします。"
 @def rss_pupdate=Date(2021,4,5)
 @def published="5 April 2021"

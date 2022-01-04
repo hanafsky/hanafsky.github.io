@@ -7,7 +7,6 @@ rss_description="![titleimage](/assets/blog/cd040d37faa8fbf6efbfd87a00529edb.png
 rss_pubdate=Date(2021, 9, 20)
 published="20 September 2021"
 rss_category="blog"
-
 hasmermaid=true
 hascode=true
 tags=["qualification"]
@@ -17,7 +16,6 @@ isblog=true
 {{inserttitle blog jdla.md}}
 
 \share{blog/hhkb}{JDLA認定 G検定・E資格}
-
 
 \toc
 ## はじめに
@@ -384,7 +382,7 @@ G検定・E資格に受かったので、いずれ深層学習を活用した記
 
 \right{めでたしめでたし}
 \share{blog/jdla}{JDLA認定 G検定・E資格}
-\prevnext{/blog/mermaid}{/blog/ipadpro}{mermaid.jsでフローチャートを書く。}{iPad proを導入}
+\prevnext{/blog/mermaid}{mermaid.jsでフローチャートを書く。}{/blog/ipadpro}{iPad proを導入}
 \backtotop
 
 {{ addcomments }}

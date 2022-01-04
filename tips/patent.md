@@ -1,5 +1,6 @@
-
-@def title="Google Patentsを翻訳してみる"
+@def title="GoogleTrans.jl"
+@def description="Google Patentsを翻訳"
+@def titleimage="/assets/tips/steam-locomotive-4275398_1280.jpg"
 @def rss_description="![titleimage](/assets/tips/steam-locomotive-4275398_1280.jpg)Google Patentsをスクレイプして翻訳する方法を解説します。"
 @def rss_pubdate=Date(2021, 4, 28)
 @def published="28 April 2021"
