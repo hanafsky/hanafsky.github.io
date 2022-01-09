@@ -121,7 +121,7 @@ end
     {{blogposts}}
 Plug in the list of blog posts contained in the `/blog/` folder.
 """
-function hfun_blogposts(params)# paramsはblogなどのディレクトリ
+@delay function hfun_blogposts(params)# paramsはblogなどのディレクトリ
     io = IOBuffer()
     write(io,"\n @@cards @@row \n")
     path=params[1]
@@ -159,7 +159,7 @@ function hfun_blogposts(params)# paramsはblogなどのディレクトリ
     return r
 end
 
-function hfun_inserttitle(params)
+@delay function hfun_inserttitle(params)
     path=joinpath(params...)
     title = pagevar(path,:title)
     description=pagevar(path,:description)
@@ -179,7 +179,7 @@ function hfun_inserttitle(params)
     return r
 end
 
-function hfun_insertfoot(params) # ex) params=["blog", "test.md"]
+@delay function hfun_insertfoot(params) # ex) params=["blog", "test.md"]
     path=joinpath(params[1:end-1]...)
     posts=filter!(r->endswith(r,".md"), readdir(path))
     title = pagevar(path,:title)
