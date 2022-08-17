@@ -108,18 +108,18 @@
 <div class="franklin-toc"><ol><li><a href="#準備">準備</a></li><li><a href="#結合">結合</a><ol><li><a href="#マスターテーブルの結合">マスターテーブルの結合</a></li><li><a href="#条件に応じた結合テーブルの切り替え">条件に応じた結合テーブルの切り替え</a></li><li><a href="#過去データの結合">過去データの結合</a></li><li><a href="#全結合">全結合</a></li></ol></li></ol></div>
 <h2 id="準備"><a href="#準備" class="header-anchor">準備</a></h2>
 <p>まずは、ホテルの予約データ<code>reserve.csv</code>を読み込みます。 <code>hotel.csv</code>と<code>customer.csv</code>も結合処理に利用するので、一緒に読み込みます。 予約日時の列（:reserve_datetime）がStringで読み込まれているので、DateTime型に変更します。</p>
-<pre><code class="language-julia">using DataFrames,CSV,Chain,Downloads,NaturalSort
-reserve_url &#61; &quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/reserve.csv&quot;
-hotel_url &#61; &quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/hotel.csv&quot;
-customer_url &#61; &quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/customer.csv&quot;
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> DataFrames,CSV,Chain,Downloads,NaturalSort
+reserve_url = <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/reserve.csv&quot;</span>
+hotel_url = <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/hotel.csv&quot;</span>
+customer_url = <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/customer.csv&quot;</span>
 
-reserve_df &#61; @chain reserve_url Downloads.download CSV.File DataFrame
-hotel_df &#61; @chain hotel_url Downloads.download CSV.File DataFrame
-customer_df &#61; @chain customer_url Downloads.download CSV.File DataFrame
-using Dates
-reserve_df.reserve_datetime &#61; DateTime.&#40;reserve_df.reserve_datetime, dateformat&quot;yyyy-mm-dd HH:MM:SS&quot;&#41;
-first&#40;hotel_df&#41; |&gt; println</code></pre>
-<p><div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
+reserve_df = <span class="hljs-meta">@chain</span> reserve_url Downloads.download CSV.File DataFrame
+hotel_df = <span class="hljs-meta">@chain</span> hotel_url Downloads.download CSV.File DataFrame
+customer_df = <span class="hljs-meta">@chain</span> customer_url Downloads.download CSV.File DataFrame
+<span class="hljs-keyword">using</span> Dates
+reserve_df.reserve_datetime = DateTime.(reserve_df.reserve_datetime, <span class="hljs-string">dateformat&quot;yyyy-mm-dd HH:MM:SS&quot;</span>)
+first(hotel_df) |&gt; println</code></pre>
+<p><div class="code-output"><pre><code class="plaintext hljs">DataFrameRow
  Row │ hotel_id  base_price  big_area_name  small_area_name  hotel_latitude  hotel_longitude  is_business
      │ String7   Int64       String1        String3          Float64         Float64          Bool
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -129,13 +129,13 @@ first&#40;hotel_df&#41; |&gt; println</code></pre>
 
 <a href="https://github.com/JuliaStrings/NaturalSort.jl"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/JuliaStrings/NaturalSort.jl.png" width="460px"></a>
 
-<pre><code class="language-julia">sort&#40;df,:customer_id,lt&#61;natural&#41;</code></pre>
+<pre><code class="julia hljs">sort(df,:customer_id,lt=natural)</code></pre>
 <p>のように使っています。 普通にソートするとこのようになってしまいますが、</p>
-<pre><code class="language-julia">c_1
+<pre><code class="julia hljs">c_1
 c_10
 c_100</code></pre>
 <p>NaturalSort.jlを使うと、</p>
-<pre><code class="language-julia">c_1
+<pre><code class="julia hljs">c_1
 c_2
 c_3</code></pre>
 <p>のように、適切に並べ替えてくれます。</p></div></div></p>
@@ -144,10 +144,10 @@ c_3</code></pre>
 <p><code>reserve_df</code>と<code>hotel_df</code>を<code>:hotel_id</code>が等しいデータ同士で結合します。 ただし、宿泊人数が1かつビジネスホテルであるという条件付きです。</p>
 <p>ポイントとなるのは、結合処理を行う前にフィルター処理を行って、 結合するデータのサイズをなるべく小さくすることらしいです。</p>
 <p>結合処理には、&quot;双方に存在するデータ&quot;同士での統合なので、内部結合の関数<code>innerjoin</code>を利用します。 今回は一度フィルターをかけるだけなので、@chainマクロによるパイプライン処理は使っていません。</p>
-<pre><code class="language-julia">innerjoin&#40;filter&#40;:people_num&#61;&gt;&#61;&#61;&#40;1&#41;,reserve_df&#41;,
-          filter&#40;:is_business&#61;&gt;&#61;&#61;&#40;true&#41;,hotel_df&#41;,
-          on&#61;:hotel_id&#41; |&gt; first |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
+<pre><code class="julia hljs">innerjoin(filter(:people_num=&gt;==(<span class="hljs-number">1</span>),reserve_df),
+          filter(:is_business=&gt;==(<span class="hljs-literal">true</span>),hotel_df),
+          on=:hotel_id) |&gt; first |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price  base_price  big_area_name  small_area_name  hotel_latitude  hotel_longitude  is_business
      │ String7     String7   String7      Dates.DateTime       Dates.Date    Dates.Time    Dates.Date     Int64       Int64        Int64       String1        String3          Float64         Float64          Bool
 ─────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -157,28 +157,28 @@ c_3</code></pre>
 <p>あるホテルと同じ地域にあるホテルを推薦リストを作る例題です。 複数のマスターテーブルをつくる必要があるため、なかなか複雑です。 前処理大全とは順番を変えて、先にレコメンド候補のテーブルを作っておくことにします。 こうすると、あとは1回のパイプラインで処理をまとめることが可能になります。</p>
 <p>複数列を1つの列にまとめる作業をstack関数で実施できますし、かなりAwesomeな書き方だと思います。</p>
 <p>ただし、処理が複雑なので、すっきり書いてもわかりにくいです。</p>
-<pre><code class="language-julia">using Chain
-recommend_hotel_mst &#61; @chain hotel_df begin
-  select&#40;:hotel_id,:big_area_name,:small_area_name&#41;
-  stack&#40;&#91;:big_area_name,:small_area_name&#93;,value_name&#61;:join_area_id&#41;
-  select&#40;:hotel_id&#61;&gt;:rec_hotel_id,:join_area_id&#41;
-end
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Chain
+recommend_hotel_mst = <span class="hljs-meta">@chain</span> hotel_df <span class="hljs-keyword">begin</span>
+  select(:hotel_id,:big_area_name,:small_area_name)
+  stack([:big_area_name,:small_area_name],value_name=:join_area_id)
+  select(:hotel_id=&gt;:rec_hotel_id,:join_area_id)
+<span class="hljs-keyword">end</span>
 
-base_hotel_mst &#61; @chain hotel_df begin
-  groupby&#40;&#91;:big_area_name,:small_area_name&#93;&#41; # big_area,small_area毎にグループ分け
-  combine&#40;:hotel_id&#61;&gt;&#40;r-&gt;length&#40;r&#41;-1&#41;&#61;&gt;:hotel_cnt&#41; # hotel_idの数をカウント&#40;自分をのぞく&#41;
-  transform&#40;&#91;:hotel_cnt,:big_area_name,:small_area_name&#93;&#61;&gt;
-            &#40;&#40;a,b,c&#41;-&gt;ifelse.&#40;a.&gt;20,c,b&#41;&#41;&#61;&gt;:join_area_id&#41; # カウント数が20以下ならbig_areaをjoin_area_idに設定
-  select&#40;:small_area_name,:join_area_id&#41; 
-  innerjoin&#40;hotel_df,_,on&#61;:small_area_name&#41; # hotel_dfと:small_area_nameで内部結合する。
-  select&#40;:hotel_id,:join_area_id&#41; 
-  innerjoin&#40;_,recommend_hotel_mst, on&#61;:join_area_id&#41; # レコメンド候補を結合する。
-  filter&#40;&#91;:hotel_id,:rec_hotel_id&#93;&#61;&gt;&#40;&#40;a,b&#41;-&gt;a .&#33;&#61; b&#41; ,_&#41; # 自分ホテルをのぞく
-  select&#40;:hotel_id,:rec_hotel_id&#41;
-end
+base_hotel_mst = <span class="hljs-meta">@chain</span> hotel_df <span class="hljs-keyword">begin</span>
+  groupby([:big_area_name,:small_area_name]) <span class="hljs-comment"># big_area,small_area毎にグループ分け</span>
+  combine(:hotel_id=&gt;(r-&gt;length(r)-<span class="hljs-number">1</span>)=&gt;:hotel_cnt) <span class="hljs-comment"># hotel_idの数をカウント(自分をのぞく)</span>
+  transform([:hotel_cnt,:big_area_name,:small_area_name]=&gt;
+            ((a,b,c)-&gt;ifelse.(a.&gt;<span class="hljs-number">20</span>,c,b))=&gt;:join_area_id) <span class="hljs-comment"># カウント数が20以下ならbig_areaをjoin_area_idに設定</span>
+  select(:small_area_name,:join_area_id) 
+  innerjoin(hotel_df,_,on=:small_area_name) <span class="hljs-comment"># hotel_dfと:small_area_nameで内部結合する。</span>
+  select(:hotel_id,:join_area_id) 
+  innerjoin(_,recommend_hotel_mst, on=:join_area_id) <span class="hljs-comment"># レコメンド候補を結合する。</span>
+  filter([:hotel_id,:rec_hotel_id]=&gt;((a,b)-&gt;a .!= b) ,_) <span class="hljs-comment"># 自分ホテルをのぞく</span>
+  select(:hotel_id,:rec_hotel_id)
+<span class="hljs-keyword">end</span>
 
-first&#40;base_hotel_mst,10&#41; |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">10×2 DataFrame
+first(base_hotel_mst,<span class="hljs-number">10</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×2 DataFrame
  Row │ hotel_id  rec_hotel_id
      │ String7   String7
 ─────┼────────────────────────
@@ -207,18 +207,18 @@ graph TD
  </div>
 <p>前処理大全と順番が違うのは、sortをGroupedDataFrameに対して直接適用できないからです。</p>
 <p>まず、lag関数を使うために、ShiftedArrays.jlを読み込みます。 transform関数は新たな列を作れる機能がselect関数と似ていますが、 select関数と異なり、選択していない列も保存されます。 GroupedDataFrameにtransform関数を作用させると、ただのDataFrame型に戻るようです。</p>
-<pre><code class="language-julia">using Chain, ShiftedArrays
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Chain, ShiftedArrays
 
-@chain reserve_df begin
-  sort&#40;:reserve_datetime&#41;
-  sort&#40;:customer_id,lt&#61;natural&#41;
-  groupby&#40;:customer_id&#41;
-  transform&#40;:total_price&#61;&gt;&#40;r-&gt;lag&#40;r,2&#41;&#41;&#61;&gt;:before_price&#41;
-  select&#40;:customer_id,:reserve_datetime,:total_price,:before_price&#41; # 表示する列を選択
-  first&#40;_,15&#41; # 15件目のレコードまで選択
+<span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+  sort(:reserve_datetime)
+  sort(:customer_id,lt=natural)
+  groupby(:customer_id)
+  transform(:total_price=&gt;(r-&gt;lag(r,<span class="hljs-number">2</span>))=&gt;:before_price)
+  select(:customer_id,:reserve_datetime,:total_price,:before_price) <span class="hljs-comment"># 表示する列を選択</span>
+  first(_,<span class="hljs-number">15</span>) <span class="hljs-comment"># 15件目のレコードまで選択</span>
   println
-end</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">15×4 DataFrame
+<span class="hljs-keyword">end</span></code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">15×4 DataFrame
  Row │ customer_id  reserve_datetime     total_price  before_price
      │ String7      Dates.DateTime       Int64        Int64?
 ─────┼─────────────────────────────────────────────────────────────
@@ -241,36 +241,36 @@ end</code></pre>
 <p>初回と2回目の予約レコードについては、前々回の支払金額がmissingとして追加されていることがわかります。</p>
 <h4 id="q_過去n件の合計値"><a href="#q_過去n件の合計値" class="header-anchor">Q 過去n件の合計値</a></h4>
 <p>今度は同一顧客の過去3件の予約金額の合計値を出力する例題です。 Rのrun_sum関数に相当するものとしては、RollingFunctions.jlが使えそうです。 <code>rolling&#40;f::Function, v::Vector, window::Int64&#41;</code>の形式で呼び出してみます。</p>
-<pre><code class="language-julia">using RollingFunctions
-rolling&#40;sum, &#91;1,2,3,4,5&#93;,3&#41;</code></pre><pre><code class="plaintext code-output">3-element Vector{Float64}:
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> RollingFunctions
+rolling(sum, [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>],<span class="hljs-number">3</span>)</code></pre><pre><code class="plaintext hljs">3-element Vector{Float64}:
   6.0
   9.0
  12.0</code></pre>
 <p>もとの配列と同じ長さで、3つ毎に足した和が得られているはずです。 ただし、最初と2つ目のデータは、3つ分のデータはありませんから、missingに置き換えたいです。 また、そもそもデータ数が窓幅より少ない場合もmissingを返したいですね。</p>
 <p>このような関数をroll_sumとして実装してみましょう。</p>
-<pre><code class="language-julia">function roll_sum&#40;v,window&#61;3&#41;
-  length&#40;v&#41; &lt; window ? Vector&#123;Missing&#125;&#40;undef,length&#40;v&#41;&#41; : 
-                       vcat&#40;Vector&#123;Missing&#125;&#40;undef,window-1&#41;,rolling&#40;sum,v,window&#41;&#41;
-end
-roll_sum&#40;&#91;1,2,3,4,5&#93;,3&#41;</code></pre><pre><code class="plaintext code-output">5-element Vector{Union{Missing, Float64}}:
+<pre><code class="julia hljs"><span class="hljs-keyword">function</span> roll_sum(v,window=<span class="hljs-number">3</span>)
+  length(v) &lt; window ? <span class="hljs-built_in">Vector</span>{<span class="hljs-built_in">Missing</span>}(<span class="hljs-literal">undef</span>,length(v)) : 
+                       vcat(<span class="hljs-built_in">Vector</span>{<span class="hljs-built_in">Missing</span>}(<span class="hljs-literal">undef</span>,window-<span class="hljs-number">1</span>),rolling(sum,v,window))
+<span class="hljs-keyword">end</span>
+roll_sum([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>],<span class="hljs-number">3</span>)</code></pre><pre><code class="plaintext hljs">5-element Vector{Union{Missing, Float64}}:
    missing
    missing
   6.0
   9.0
  12.0</code></pre>
 <p>前の例のlag関数をroll<em>sumで置き換えて、新たに:price</em>sumの列を作ります。 DataFrames.jlでは、適当に作った関数を用いて、すっきりした処理を記載することができました。 <span class="marker"> 対応する処理が既存のライブラリになければ、作ってしまえばよい</span>のです。 これは処理が高速なjuliaならでは強みだと思います。</p>
-<pre><code class="language-julia">using Chain, ShiftedArrays
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Chain, ShiftedArrays
 
-@chain reserve_df begin
-  sort&#40;:reserve_datetime&#41;
-  sort&#40;:customer_id,lt&#61;natural&#41;
-  groupby&#40;:customer_id&#41;
-  transform&#40;:total_price&#61;&gt;roll_sum&#61;&gt;:price_sum&#41;
-  select&#40;:customer_id,:reserve_datetime,:total_price,:price_sum&#41; # 表示する列を選択
-  first&#40;_,15&#41; # 15件目のレコードまで選択
+<span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+  sort(:reserve_datetime)
+  sort(:customer_id,lt=natural)
+  groupby(:customer_id)
+  transform(:total_price=&gt;roll_sum=&gt;:price_sum)
+  select(:customer_id,:reserve_datetime,:total_price,:price_sum) <span class="hljs-comment"># 表示する列を選択</span>
+  first(_,<span class="hljs-number">15</span>) <span class="hljs-comment"># 15件目のレコードまで選択</span>
   println
-end</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">15×4 DataFrame
+<span class="hljs-keyword">end</span></code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">15×4 DataFrame
  Row │ customer_id  reserve_datetime     total_price  price_sum
      │ String7      Dates.DateTime       Int64        Float64?
 ─────┼──────────────────────────────────────────────────────────
@@ -293,37 +293,37 @@ end</code></pre>
 <h4 id="q_過去n件の平均値"><a href="#q_過去n件の平均値" class="header-anchor">Q 過去n件の平均値</a></h4>
 <p>この例題では、</p>
 <p>平均値を出す関数としては、runmean関数が使えそうです。</p>
-<pre><code class="language-julia">using RollingFunctions
-runmean&#40;&#91;1,2,3,4,5&#93;,3&#41;</code></pre><pre><code class="plaintext code-output">5-element Vector{Float64}:
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> RollingFunctions
+runmean([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>],<span class="hljs-number">3</span>)</code></pre><pre><code class="plaintext hljs">5-element Vector{Float64}:
  1.0
  1.5
  2.0
  3.0
  4.0</code></pre>
 <p>ただし、自身の行を含めない平均予約金額であり、 過去に予約がない場合はmissingを割り当てたいので、 以下のような関数を作ることにします。</p>
-<pre><code class="language-julia">function price_avg&#40;v,window&#61;3&#41;
-  length&#40;v&#41; &lt; window ? vcat&#40;missing,runmean&#40;v,length&#40;v&#41;&#41;&#91;begin:end-1&#93;&#41; :
-                       vcat&#40;missing,runmean&#40;v,window&#41;&#91;begin:end-1&#93;&#41;
-end
-price_avg&#40;&#91;1,2,3,4,5&#93;,3&#41;</code></pre><pre><code class="plaintext code-output">5-element Vector{Union{Missing, Float64}}:
+<pre><code class="julia hljs"><span class="hljs-keyword">function</span> price_avg(v,window=<span class="hljs-number">3</span>)
+  length(v) &lt; window ? vcat(<span class="hljs-literal">missing</span>,runmean(v,length(v))[<span class="hljs-keyword">begin</span>:<span class="hljs-keyword">end</span>-<span class="hljs-number">1</span>]) :
+                       vcat(<span class="hljs-literal">missing</span>,runmean(v,window)[<span class="hljs-keyword">begin</span>:<span class="hljs-keyword">end</span>-<span class="hljs-number">1</span>])
+<span class="hljs-keyword">end</span>
+price_avg([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>],<span class="hljs-number">3</span>)</code></pre><pre><code class="plaintext hljs">5-element Vector{Union{Missing, Float64}}:
   missing
  1.0
  1.5
  2.0
  3.0</code></pre>
 <p>うまく動作することを確認できました。</p>
-<pre><code class="language-julia">using Chain, ShiftedArrays
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Chain, ShiftedArrays
 
-@chain reserve_df begin
-  sort&#40;:reserve_datetime&#41;
-  sort&#40;:customer_id,lt&#61;natural&#41;
-  groupby&#40;:customer_id&#41;
-  transform&#40;:total_price&#61;&gt;price_avg&#61;&gt;:price_avg&#41;
-  select&#40;:customer_id,:reserve_datetime,:total_price,:price_avg&#41; # 表示する列を選択
-  first&#40;_,15&#41; # 15件目のレコードまで選択
+<span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+  sort(:reserve_datetime)
+  sort(:customer_id,lt=natural)
+  groupby(:customer_id)
+  transform(:total_price=&gt;price_avg=&gt;:price_avg)
+  select(:customer_id,:reserve_datetime,:total_price,:price_avg) <span class="hljs-comment"># 表示する列を選択</span>
+  first(_,<span class="hljs-number">15</span>) <span class="hljs-comment"># 15件目のレコードまで選択</span>
   println
-end</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">15×4 DataFrame
+<span class="hljs-keyword">end</span></code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">15×4 DataFrame
  Row │ customer_id  reserve_datetime     total_price  price_avg
      │ String7      Dates.DateTime       Int64        Float64?
 ─────┼──────────────────────────────────────────────────────────
@@ -346,27 +346,27 @@ end</code></pre>
 <h4 id="q_過去n日の合計値"><a href="#q_過去n日の合計値" class="header-anchor">Q 過去n日の合計値</a></h4>
 <p>予約テーブルのすべてのデータ行にたいして、自身の行を含めずに同じ顧客の過去90日間の合計予約金額を付与するという問題です。 &#40;予約がない場合は0&#41; 問題もだんだん難しくなってきており、RにもpythonもAwesomeな回答はありませんでした。</p>
 <p>顧客ごとにグループ化するのは前の問題と共通していますので、過去の予約合計金額を計算する関数<code>total_price_history</code>を作ることにしました。 各予約日毎に自身の行を含めず、過去90日分の予約日をフィルターした日付を抽出します。 フィルターされた日付に含まれる場合について、予約金額の合計の和をとって ただし、フィルターされた列が空の場合は、0を返すことにします。 &#40;<code>enumerate</code>関数を多用しているので、ちょっとわかりにくいかもしれません。&#41;</p>
-<pre><code class="language-julia">using Dates
-function total_price_history&#40;reserve_dates,prices;day&#61;Day&#40;90&#41;&#41;
-  tp &#61; similar&#40;prices&#41;
-  for &#40;index,date&#41; in enumerate&#40;reserve_dates&#41;
-    filtered_date &#61; filter&#40;&#40;&#40;d&#41;-&gt;date-day ≤ d &lt; date&#41;, reserve_dates&#41;
-    tp&#91;index&#93; &#61; filtered_date&#61;&#61;DateTime&#91;&#93; ? 0 :
-                sum&#40;prices&#91;i&#93; for &#40;i,d&#41; in enumerate&#40;reserve_dates&#41; if d in filtered_date&#41;
-  end
-  return tp
-end
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Dates
+<span class="hljs-keyword">function</span> total_price_history(reserve_dates,prices;day=Day(<span class="hljs-number">90</span>))
+  tp = similar(prices)
+  <span class="hljs-keyword">for</span> (index,date) <span class="hljs-keyword">in</span> enumerate(reserve_dates)
+    filtered_date = filter(((d)-&gt;date-day ≤ d &lt; date), reserve_dates)
+    tp[index] = filtered_date==DateTime[] ? <span class="hljs-number">0</span> :
+                sum(prices[i] <span class="hljs-keyword">for</span> (i,d) <span class="hljs-keyword">in</span> enumerate(reserve_dates) <span class="hljs-keyword">if</span> d <span class="hljs-keyword">in</span> filtered_date)
+  <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">return</span> tp
+<span class="hljs-keyword">end</span>
 
-@chain reserve_df begin
-  sort&#40;&#91;:customer_id,:reserve_datetime&#93;&#41;
-  groupby&#40;:customer_id&#41;
-  transform&#40;&#91;:reserve_datetime,:total_price&#93;&#61;&gt;total_price_history&#61;&gt;:total_price_90d&#41;
-  select&#40;:customer_id,:reserve_datetime,:total_price,:total_price_90d&#41; # 表示する列を選択
-  sort&#40;:customer_id,lt&#61;natural&#41;
-  first&#40;_,15&#41; # 15件目のレコードまで選択
+<span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+  sort([:customer_id,:reserve_datetime])
+  groupby(:customer_id)
+  transform([:reserve_datetime,:total_price]=&gt;total_price_history=&gt;:total_price_90d)
+  select(:customer_id,:reserve_datetime,:total_price,:total_price_90d) <span class="hljs-comment"># 表示する列を選択</span>
+  sort(:customer_id,lt=natural)
+  first(_,<span class="hljs-number">15</span>) <span class="hljs-comment"># 15件目のレコードまで選択</span>
   println
-end</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">15×4 DataFrame
+<span class="hljs-keyword">end</span></code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">15×4 DataFrame
  Row │ customer_id  reserve_datetime     total_price  total_price_90d
      │ String7      Dates.DateTime       Int64        Int64
 ─────┼────────────────────────────────────────────────────────────────
@@ -409,25 +409,25 @@ graph TD
   id5-->id6
  </div>
 <p>コード化したものがこちらです。</p>
-<pre><code class="language-julia"># 年月マスタの生成
-month_mst &#61; DataFrame&#40;:year_month&#61;&gt;&#91;Date&#40;&quot;2017-01-01&quot;&#41;&#43;Month&#40;m&#41; for m in 0:2&#93;&#41; 
-customer_mst &#61; crossjoin&#40;customer_df,month_mst&#41;
+<pre><code class="julia hljs"><span class="hljs-comment"># 年月マスタの生成</span>
+month_mst = DataFrame(:year_month=&gt;[Date(<span class="hljs-string">&quot;2017-01-01&quot;</span>)+Month(m) <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>:<span class="hljs-number">2</span>]) 
+customer_mst = crossjoin(customer_df,month_mst)
 
-summary_result &#61; @chain reserve_df begin
-  select&#40;:customer_id,
-         :checkin_date&#61;&gt;ByRow&#40;r-&gt;Date&#40;Year&#40;r&#41;,Month&#40;r&#41;&#41;&#41;&#61;&gt;:year_month,
-         :total_price&#41;
-  # customer_mstに対して結合したいのでleftjoinではなくrightjoinを使う。
-  rightjoin&#40;customer_mst,on&#61;&#91;:customer_id,:year_month&#93;&#41; 
-  groupby&#40;&#91;:customer_id,:year_month&#93;&#41;
-  combine&#40;:total_price&#61;&gt;sum&#61;&gt;:price_sum&#41;
-  sort&#40;:year_month&#41;
-  sort&#40;:customer_id,lt&#61;natural&#41;
-end
-replace&#33;&#40;summary_result.price_sum,missing&#61;&gt;0&#41;
+summary_result = <span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+  select(:customer_id,
+         :checkin_date=&gt;ByRow(r-&gt;Date(Year(r),Month(r)))=&gt;:year_month,
+         :total_price)
+  <span class="hljs-comment"># customer_mstに対して結合したいのでleftjoinではなくrightjoinを使う。</span>
+  rightjoin(customer_mst,on=[:customer_id,:year_month]) 
+  groupby([:customer_id,:year_month])
+  combine(:total_price=&gt;sum=&gt;:price_sum)
+  sort(:year_month)
+  sort(:customer_id,lt=natural)
+<span class="hljs-keyword">end</span>
+replace!(summary_result.price_sum,<span class="hljs-literal">missing</span>=&gt;<span class="hljs-number">0</span>)
 
-first&#40;summary_result,10&#41; |&gt; println</code></pre>
-<p><div class="code-output"><pre><code class="plaintext code-output">10×3 DataFrame
+first(summary_result,<span class="hljs-number">10</span>) |&gt; println</code></pre>
+<p><div class="code-output"><pre><code class="plaintext hljs">10×3 DataFrame
  Row │ customer_id  year_month  price_sum
      │ String7      Dates.Date  Int64?
 ─────┼────────────────────────────────────
@@ -450,12 +450,18 @@ first&#40;summary_result,10&#41; |&gt; println</code></pre>
        juliaで前処理大全 集約
     </p>
   </a>
+  <a class="next-link" href="/tips/preprocess/split">
+    <p class="prev-next-label">次の記事</p>
+    <p>
+       juliaで前処理大全 分割
+    </p>
+  </a>
 </div>
 </p>
  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: January 09, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: August 17, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -486,8 +492,8 @@ first&#40;summary_result,10&#41; |&gt; println</code></pre>
 
     
     
-        <script src="/libs/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+        
+
 
         <!-- http://tutsplus.github.io/clipboard/ -->
 

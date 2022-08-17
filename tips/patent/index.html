@@ -164,18 +164,18 @@ graph LR
 <p>ここでは<a href="https://www.eff.org/ja/deeplinks/2020/08/guitar-villain-ubisoft-patents-basic-teaching-techniques">Stupid Patent of the month</a>で紹介された特許例を使ってみます。</p>
 <p>最初にサードパーティライブラリのHTTP.jlで特許番号US9839852のURLにアクセスできることを確認します。</p>
 <a href="https://github.com/JuliaWeb/HTTP.jl"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/JuliaWeb/HTTP.jl.png" width="460px"></a>
-<pre><code class="language-julia">using HTTP
-patentURL&#61;&quot;https://patents.google.com/patent/US9839852&quot;
-r&#61;HTTP.request&#40;&quot;GET&quot;, patentURL&#41;
-@show r.status</code></pre>
-<p><div class="code-output"><pre><code class="plaintext code-output">r.status = 200
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> HTTP
+patentURL=<span class="hljs-string">&quot;https://patents.google.com/patent/US9839852&quot;</span>
+r=HTTP.request(<span class="hljs-string">&quot;GET&quot;</span>, patentURL)
+<span class="hljs-meta">@show</span> r.status</code></pre>
+<p><div class="code-output"><pre><code class="plaintext hljs">r.status = 200
 </code></pre></div> ステータスが200と表示されたので、アクセスに成功したことがわかります。</p>
 <p>次にGumbo.jlを使ってHTMLをパースします。</p>
 
 <a href="https://github.com/JuliaWeb/Gumbo.jl"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/JuliaWeb/Gumbo.jl.png" width="460px"></a>
 
-<pre><code class="language-julia">using Gumbo
-h &#61; parsehtml&#40;String&#40;r.body&#41;&#41;</code></pre>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Gumbo
+h = parsehtml(<span class="hljs-built_in">String</span>(r.body))</code></pre>
 <div class="code-output"></div>
 <h2 id="請求項だけを抜き出す"><a href="#請求項だけを抜き出す" class="header-anchor">請求項だけを抜き出す</a></h2>
 <p>次にCSSセレクターを使って必要な部分を抽出します。 ここでは、Cascadia.jlを使います。</p>
@@ -183,17 +183,17 @@ h &#61; parsehtml&#40;String&#40;r.body&#41;&#41;</code></pre>
 <a href="https://github.com/Algocircle/Cascadia.jl"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/Algocircle/Cascadia.jl.png" width="460px"></a>
 
 <p>たとえば、titleタグの中身を表示したければ以下のようにします。</p>
-<pre><code class="language-julia">using Cascadia
-s &#61; Selector&#40;&quot;title&quot;&#41;
-q &#61; eachmatch&#40;s, h.root&#41;
-q&#91;1&#93; |&gt; nodeText |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">US9839852B2 - Interactive guitar game 
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Cascadia
+s = Selector(<span class="hljs-string">&quot;title&quot;</span>)
+q = eachmatch(s, h.root)
+q[<span class="hljs-number">1</span>] |&gt; nodeText |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">US9839852B2 - Interactive guitar game 
         - Google Patents
 </code></pre></div>
 <p>タグに囲まれた文章ではなく、href属性を取得したければ以下のようにします。</p>
-<pre><code class="language-julia">qa &#61; eachmatch&#40;Selector&#40;&quot;a&quot;&#41;, h.root&#41;
-qa&#91;1&#93;.attributes&#91;&quot;href&quot;&#93; |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">https://patentimages.storage.googleapis.com/ea/a3/cd/747072854dad30/US9839852.pdf
+<pre><code class="julia hljs">qa = eachmatch(Selector(<span class="hljs-string">&quot;a&quot;</span>), h.root)
+qa[<span class="hljs-number">1</span>].attributes[<span class="hljs-string">&quot;href&quot;</span>] |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">https://patentimages.storage.googleapis.com/ea/a3/cd/747072854dad30/US9839852.pdf
 </code></pre></div>
 <div class="note"><div class="title">😲 Note</div>
 <div class="content">Google Patentの最初のaタグはpdfのダウンロードリンクです。</div></div>
@@ -221,16 +221,16 @@ graph TD
         end
  </div>
 <p>独立請求項だけを抜き出したいときは、<code>Selector&#40;&quot;.claims .claim .claim&quot;&#41;</code>とすればOKです。 実際に最初の請求項を抽出します。</p>
-<pre><code class="language-julia">using Cascadia
-s_claim &#61; Selector&#40;&quot;.claims .claim .claim&quot;&#41;
-q_claim &#61; eachmatch&#40;s_claim, h.root&#41;
-claim1 &#61; q_claim&#91;1&#93; |&gt; nodeText 
-@show claim1</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">BoundsError: attempt to access 0-element Vector{Gumbo.HTMLNode} at index [1]
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Cascadia
+s_claim = Selector(<span class="hljs-string">&quot;.claims .claim .claim&quot;</span>)
+q_claim = eachmatch(s_claim, h.root)
+claim1 = q_claim[<span class="hljs-number">1</span>] |&gt; nodeText 
+<span class="hljs-meta">@show</span> claim1</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">BoundsError: attempt to access 0-element Vector{Gumbo.HTMLNode} at index [1]
 </code></pre></div>
 <p>（2021/5/1追記）<span class="marker"> すべての特許にこの構造が当てはまるわけではないようです。</span></p>
 <p>全請求項を抜き出したいときは、claimクラスのdivのidが&quot;CLM-&quot;で始まることに注目して、</p>
-<pre><code class="language-julia">eachmatch&#40;Selector&#40;&quot;&quot;&quot;div&#91;id^&#61;&quot;CLM-&quot;&#93;&quot;&quot;&quot;&#41;, h.root&#41;</code></pre>
+<pre><code class="julia hljs">eachmatch(Selector(<span class="hljs-string">&quot;&quot;&quot;div[id^=&quot;CLM-&quot;]&quot;&quot;&quot;</span>), h.root)</code></pre>
 <p>とすればOKでした。</p>
 <h2 id="翻訳する"><a href="#翻訳する" class="header-anchor">翻訳する</a></h2>
 <p>親切なひとがGoogle翻訳のパッケージを作ってくれていました。</p>
@@ -238,21 +238,21 @@ claim1 &#61; q_claim&#91;1&#93; |&gt; nodeText
 <a href="https://github.com/sonicrules1234/GoogleTrans.jl"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/sonicrules1234/GoogleTrans.jl.png" width="460px"></a>
 
 <p>READMEをみるとわかりますが、使用例の翻訳言語が&quot;ja&quot;になっていて、いかにも英語の苦手な日本人におあつらえ向きのパッケージです。 せっかくなので☆を差し上げておきました。試しに何か訳させてみましょう。</p>
-<pre><code class="language-julia">using GoogleTrans 
-GoogleTrans.translate&#40;&quot;おれは人間をやめるぞ&#33;ジョジョーッ&#33;&quot;,&quot;en&quot;&#41; |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">Expected end of input
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> GoogleTrans 
+GoogleTrans.translate(<span class="hljs-string">&quot;おれは人間をやめるぞ!ジョジョーッ!&quot;</span>,<span class="hljs-string">&quot;en&quot;</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">Expected end of input
 Line: 0
-Around: ...4475",9]]]...
+Around: ...9154&quot;,7]]]...
                     ^
 
 </code></pre></div>
 <p>うまく翻訳できたでしょうか？</p>
 <div class="note"><div class="title">😲 Note</div>
 <div class="content"><p>Google翻訳は優秀なのですが、図.をイチジクと訳すのは、本当にやめてほしいと思います。</p>
-<pre><code class="language-julia">GoogleTrans.translate&#40;&quot;Fig. 1 &quot;,&quot;ja&quot;&#41; |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">Expected end of input
+<pre><code class="julia hljs">GoogleTrans.translate(<span class="hljs-string">&quot;Fig. 1 &quot;</span>,<span class="hljs-string">&quot;ja&quot;</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">Expected end of input
 Line: 0
-Around: ...8540",9]]]...
+Around: ...5225&quot;,7]]]...
                     ^
 
 </code></pre></div></div></div>
@@ -276,19 +276,19 @@ Around: ...8540",9]]]...
 <h3 id="plutojlでhtmlを生成する"><a href="#plutojlでhtmlを生成する" class="header-anchor">Pluto.jlでhtmlを生成する</a></h3>
 <p>このノートブックでは、請求項の原文と翻訳を表形式で並べて表示しました。 その際には、htmlをjuliaに書かせる必要があって、少々躓きました。<sup id="fnref:4"><a href="#fndef:4" class="fnref">[4]</a></sup></p>
 <p>結果的には、PlutoUI.jlの<span class="marker"> HTML関数にdo構文を使ってテキストをぶち込むことで解決できた</span>ので、紹介しておきます。</p>
-<pre><code class="language-julia">using PlutoUI
-@doc&#40;HTML&#41; |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">`HTML(s)`: Create an object that renders `s` as html.
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> PlutoUI
+<span class="hljs-meta">@doc</span>(<span class="hljs-built_in">HTML</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">`HTML(s)`: Create an object that renders `s` as html.
 
 ```
-HTML("<div>foo</div>")
+HTML(&quot;&lt;div&gt;foo&lt;/div&gt;&quot;)
 ```
 
 You can also use a stream for large amounts of data:
 
 ```
 HTML() do io
-  println(io, "<div>foo</div>")
+  println(io, &quot;&lt;div&gt;foo&lt;/div&gt;&quot;)
 end
 ```
 
@@ -365,7 +365,7 @@ end
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: January 09, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: August 17, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -396,8 +396,8 @@ end
 
     
     
-        <script src="/libs/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+        
+
 
         <!-- http://tutsplus.github.io/clipboard/ -->
 

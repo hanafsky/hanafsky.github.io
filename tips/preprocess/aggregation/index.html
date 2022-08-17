@@ -131,15 +131,15 @@
 <div class="franklin-toc"><ol><li><a href="#集約">集約</a><ol><li><a href="#データ数種類数の算出">データ数、種類数の算出</a></li><li><a href="#合計値の算出">合計値の算出</a></li><li><a href="#極値代表値の算出">極値、代表値の算出</a></li><li><a href="#ばらつき具合の算出">ばらつき具合の算出</a></li><li><a href="#最頻値の算出">最頻値の算出</a></li><li><a href="#順位の算出">順位の算出</a></li><li><a href="#q_ランキング">Q ランキング</a></li></ol></li></ol></div>
 <h2 id="集約"><a href="#集約" class="header-anchor">集約</a></h2>
 <p>準備としてホテルの予約データを読み込みます。</p>
-<pre><code class="language-julia">using DataFrames,CSV,Chain,Downloads
-reserve_url &#61; &quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/reserve.csv&quot;
-reserve_df &#61; @chain reserve_url begin
-  Downloads.download&#40;IOBuffer&#40;&#41;&#41;
-  String&#40;take&#33;&#40;_&#41;&#41;
-  CSV.read&#40;IOBuffer&#40;_&#41;,DataFrame&#41;
-end
-println&#40;first&#40;reserve_df&#41;&#41;;</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> DataFrames,CSV,Chain,Downloads
+reserve_url = <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/reserve.csv&quot;</span>
+reserve_df = <span class="hljs-meta">@chain</span> reserve_url <span class="hljs-keyword">begin</span>
+  Downloads.download(<span class="hljs-built_in">IOBuffer</span>())
+  <span class="hljs-built_in">String</span>(take!(_))
+  CSV.read(<span class="hljs-built_in">IOBuffer</span>(_),DataFrame)
+<span class="hljs-keyword">end</span>
+println(first(reserve_df));</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
      │ String7     String7   String7      String31             Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -150,14 +150,14 @@ println&#40;first&#40;reserve_df&#41;&#41;;</code></pre>
 <p>groupby関数は、<code>groupby&#40;df::AbstractDataFrame,cols;kwargs...&#41;</code> のようにデータフレームと列名を引数にもちます。 返り値の型は<code>GroupedDataFrame</code>となります。</p>
 <p>グループ化したデータ毎に集計する処理はcombine関数で実施します。 combine関数は、<code>GroupedDataFrame</code>を引数にして、さらに <code>列名 &#61;&gt; 関数 &#40;&#61;&gt; 新しい列名&#41;</code>のような書き方の可変長引数をとることができます。</p>
 <p>この問題は、@chainマクロを用いたパイプライン処理によって、以下のように、簡潔に記述できます。 一行目のデータを確認してみましょう。</p>
-<pre><code class="language-julia">using Chain
-df3_1&#61; @chain reserve_df begin
-  groupby&#40;:hotel_id&#41;
-  combine&#40;:reserve_id  &#61;&gt; length        &#61;&gt; :rsv_cnt,
-          :customer_id &#61;&gt; length∘unique &#61;&gt; :cus_cnt&#41;
-end
-first&#40;df3_1&#41; |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Chain
+df3_1= <span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+  groupby(:hotel_id)
+  combine(:reserve_id  =&gt; length        =&gt; :rsv_cnt,
+          :customer_id =&gt; length∘unique =&gt; :cus_cnt)
+<span class="hljs-keyword">end</span>
+first(df3_1) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">DataFrameRow
  Row │ hotel_id  rsv_cnt  cus_cnt
      │ String7   Int64    Int64
 ─────┼────────────────────────────
@@ -167,12 +167,12 @@ first&#40;df3_1&#41; |&gt; println</code></pre>
 <p>unique関数とlength関数を組み合わせる書き方は前処理大全では推奨されていない書き方ですが、 この例では可読性が十分高く、処理速度もおそらく問題にならないでしょうからAwesomeということにします。</p>
 <h3 id="合計値の算出"><a href="#合計値の算出" class="header-anchor">合計値の算出</a></h3>
 <p>ホテルと宿泊人数毎に集計してみます。複数の列についてグループ分けして集計を行う場合は、列名をArrayとして、 groupby関数の引数にすればOKです。 また、グループごとに列の合計値を出力するには、sum関数を指定すればよいです。</p>
-<pre><code class="language-julia">df3_2 &#61; @chain reserve_df begin
-  groupby&#40;&#91;:hotel_id,:people_num&#93;&#41;
-  combine&#40;:total_price&#61;&gt; sum &#61;&gt;:price_sum&#41;
-end
-first&#40;df3_2&#41; |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
+<pre><code class="julia hljs">df3_2 = <span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+  groupby([:hotel_id,:people_num])
+  combine(:total_price=&gt; sum =&gt;:price_sum)
+<span class="hljs-keyword">end</span>
+first(df3_2) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">DataFrameRow
  Row │ hotel_id  people_num  price_sum
      │ String7   Int64       Int64
 ─────┼─────────────────────────────────
@@ -180,18 +180,18 @@ first&#40;df3_2&#41; |&gt; println</code></pre>
 </code></pre></div>
 <h3 id="極値代表値の算出"><a href="#極値代表値の算出" class="header-anchor">極値、代表値の算出</a></h3>
 <p>ホテル毎にtotal_price列の最大値、最小値、平均値、中央値、20&#37;のパーセンタイルを出力します。 平均値、中央値、パーセンタイルの出力には、新たな関数が必要なので、Statistics.jlを導入します。 パーセンタイルは、無名関数を使用するため、やや冗長な書き方となっています。</p>
-<pre><code class="language-julia">using Statistics
-@chain reserve_df begin
-  groupby&#40;:hotel_id&#41;
-  combine&#40;:total_price&#61;&gt;maximum&#61;&gt;:price_max,
-          :total_price&#61;&gt;minimum&#61;&gt;:price_min,
-          :total_price&#61;&gt;mean&#61;&gt;:price_mean, 
-          :total_price&#61;&gt;median&#61;&gt;:price_medeian,
-          :total_price&#61;&gt;&#40;r-&gt;quantile&#40;r,0.2&#41;&#41;&#61;&gt;:price_20per&#41; 
-  first&#40;10&#41;
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Statistics
+<span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+  groupby(:hotel_id)
+  combine(:total_price=&gt;maximum=&gt;:price_max,
+          :total_price=&gt;minimum=&gt;:price_min,
+          :total_price=&gt;mean=&gt;:price_mean, 
+          :total_price=&gt;median=&gt;:price_medeian,
+          :total_price=&gt;(r-&gt;quantile(r,<span class="hljs-number">0.2</span>))=&gt;:price_20per) 
+  first(<span class="hljs-number">10</span>)
   println
-end</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">10×6 DataFrame
+<span class="hljs-keyword">end</span></code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×6 DataFrame
  Row │ hotel_id  price_max  price_min  price_mean      price_medeian  price_20per
      │ String7   Int64      Int64      Float64         Float64        Float64
 ─────┼────────────────────────────────────────────────────────────────────────────
@@ -208,31 +208,31 @@ end</code></pre>
 </code></pre></div>
 <h3 id="ばらつき具合の算出"><a href="#ばらつき具合の算出" class="header-anchor">ばらつき具合の算出</a></h3>
 <p>分散や標準偏差は、平均同様にStatistics.jlをusingすれば使えます。 分散や標準偏差は、データ数が1つしかない場合にはNaN（Not a Number）を返します。</p>
-<pre><code class="language-julia">using Statistics
-@show var&#40;&#91;1,5,9&#93;&#41; # 分散
-@show std&#40;&#91;1,5,9&#93;&#41; # 標準偏差
-@show var&#40;&#91;1&#93;&#41;
-@show std&#40;&#91;1&#93;&#41;</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">var([1, 5, 9]) = 16.0
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Statistics
+<span class="hljs-meta">@show</span> var([<span class="hljs-number">1</span>,<span class="hljs-number">5</span>,<span class="hljs-number">9</span>]) <span class="hljs-comment"># 分散</span>
+<span class="hljs-meta">@show</span> std([<span class="hljs-number">1</span>,<span class="hljs-number">5</span>,<span class="hljs-number">9</span>]) <span class="hljs-comment"># 標準偏差</span>
+<span class="hljs-meta">@show</span> var([<span class="hljs-number">1</span>])
+<span class="hljs-meta">@show</span> std([<span class="hljs-number">1</span>])</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">var([1, 5, 9]) = 16.0
 std([1, 5, 9]) = 4.0
 var([1]) = NaN
 std([1]) = NaN
 </code></pre></div>
 <p>varとstdについてNaNを0に変更する方法を調査しました。いくつか方法はありましたが、 <code>ifelse&#40;isnan&#40;x&#41;,0,x&#41;</code>という関数を使うのが一番短く書けそうです。 &#40;R版の回答にあるcoalesce関数はjuliaにもありますが、機能が異なるようです。&#41;</p>
 <p>NaNを0に置き換える処理はパイプライン処理の中で無名関数を使って実装することもできますが、 可読性は低いので、新しく関数を作るか、ブロードキャスト演算で最後にまとめて処理するのがAwesomeでしょう。</p>
-<pre><code class="language-julia">using Chain,Statistics,DataFrames
-df3_4&#61;@chain DataFrame&#40;a&#61;&#91;&quot;あ&quot;,&quot;あ&quot;,&quot;い&quot;&#93;,b&#61;&#91;1,2,3&#93;&#41; begin
-  groupby&#40;:a&#41;
-  combine&#40;:b&#61;&gt;sum,
-          :b&#61;&gt;&#40;r-&gt;ifelse&#40;isnan&#40;var&#40;r&#41;&#41;,0,var&#40;r&#41;&#41;&#41; &#61;&gt;:b_var,
-          :b&#61;&gt;std&#41;
-end
-@show df3_4
-df &#61; df3_4&#91;&#33;,2:end&#93; #２列目以降のviewを作成。１列目にisnanを適用するとエラーがかえって来ます。
-df .&#61; ifelse.&#40;isnan.&#40;df&#41;,0,df&#41; #ブロードキャスト演算
-println&#40;&#41;
-@show df3_4</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">df3_4 = 2×4 DataFrame
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Chain,Statistics,DataFrames
+df3_4=<span class="hljs-meta">@chain</span> DataFrame(a=[<span class="hljs-string">&quot;あ&quot;</span>,<span class="hljs-string">&quot;あ&quot;</span>,<span class="hljs-string">&quot;い&quot;</span>],b=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]) <span class="hljs-keyword">begin</span>
+  groupby(:a)
+  combine(:b=&gt;sum,
+          :b=&gt;(r-&gt;ifelse(isnan(var(r)),<span class="hljs-number">0</span>,var(r))) =&gt;:b_var,
+          :b=&gt;std)
+<span class="hljs-keyword">end</span>
+<span class="hljs-meta">@show</span> df3_4
+df = df3_4[!,<span class="hljs-number">2</span>:<span class="hljs-keyword">end</span>] <span class="hljs-comment">#２列目以降のviewを作成。１列目にisnanを適用するとエラーがかえって来ます。</span>
+df .= ifelse.(isnan.(df),<span class="hljs-number">0</span>,df) <span class="hljs-comment">#ブロードキャスト演算</span>
+println()
+<span class="hljs-meta">@show</span> df3_4</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">df3_4 = 2×4 DataFrame
  Row │ a       b_sum  b_var    b_std
      │ String  Int64  Float64  Float64
 ─────┼────────────────────────────────────
@@ -247,15 +247,15 @@ df3_4 = 2×4 DataFrame
    2 │ い          3      0.0  0.0
 </code></pre></div>
 <p>この方法を例題に適用すると以下のようになります。</p>
-<pre><code class="language-julia">df3_4&#61;@chain reserve_df begin 
-  groupby&#40;:hotel_id&#41;
-  combine&#40;:total_price&#61;&gt;var,
-          :total_price&#61;&gt;std&#41;
-end
-df &#61; df3_4&#91;&#33;,2:end&#93; #２列目以降のviewを作成。１列目にisnanを適用するとエラーがかえって来ます。
-df .&#61; ifelse.&#40;isnan.&#40;df&#41;,0,df&#41; #ブロードキャスト演算
-@show first&#40;df3_4,10&#41;</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">first(df3_4, 10) = 10×3 DataFrame
+<pre><code class="julia hljs">df3_4=<span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span> 
+  groupby(:hotel_id)
+  combine(:total_price=&gt;var,
+          :total_price=&gt;std)
+<span class="hljs-keyword">end</span>
+df = df3_4[!,<span class="hljs-number">2</span>:<span class="hljs-keyword">end</span>] <span class="hljs-comment">#２列目以降のviewを作成。１列目にisnanを適用するとエラーがかえって来ます。</span>
+df .= ifelse.(isnan.(df),<span class="hljs-number">0</span>,df) <span class="hljs-comment">#ブロードキャスト演算</span>
+<span class="hljs-meta">@show</span> first(df3_4,<span class="hljs-number">10</span>)</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">first(df3_4, 10) = 10×3 DataFrame
  Row │ hotel_id  total_price_var  total_price_std
      │ String7   Float64          Float64
 ─────┼────────────────────────────────────────────
@@ -274,17 +274,17 @@ df .&#61; ifelse.&#40;isnan.&#40;df&#41;,0,df&#41; #ブロードキャスト演�
 <div class="content">前処理大全の著者によれば、データはパートナーの心と同様に不安定でばらつきがあるものだそうです。 分散値/標準偏差値とパートナーの気持ちを常々気にかけたいと思います。</div></div>
 <h3 id="最頻値の算出"><a href="#最頻値の算出" class="header-anchor">最頻値の算出</a></h3>
 <p><code>:total_price</code>を100の位を四捨五入して、最頻値を求めます。 四捨五入はround関数で実行できますが、丸める桁はキーワード引数digitsで指定する必要があります。 最頻値については、StatsBase.jlをインポートしておけば、pythonと同じくmode関数で求めることが可能です。</p>
-<pre><code class="language-julia">using StatsBase
-mode&#40;round.&#40;reserve_df.total_price, digits&#61;-3&#41;&#41; |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">20000.0
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> StatsBase
+mode(round.(reserve_df.total_price, digits=-<span class="hljs-number">3</span>)) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">20000.0
 </code></pre></div>
 <p>2万円くらいホテルにお金を落としている人が一番多いということですね。</p>
 <h3 id="順位の算出"><a href="#順位の算出" class="header-anchor">順位の算出</a></h3>
 <p>ホテルごとに予約日時順の番号付けをしてみます。 そもそも予約日時がString型として認識されているので、まずはDateTime型にパースします。</p>
-<pre><code class="language-julia">using Dates
-reserve_df.reserve_datetime &#61; DateTime.&#40;reserve_df.reserve_datetime,dateformat&quot;y-m-d HH:MM:SS&quot;&#41;
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Dates
+reserve_df.reserve_datetime = DateTime.(reserve_df.reserve_datetime,<span class="hljs-string">dateformat&quot;y-m-d HH:MM:SS&quot;</span>)
 reserve_df |&gt; first |&gt; println</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">DataFrameRow
+<div class="code-output"><pre><code class="plaintext hljs">DataFrameRow
  Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
      │ String7     String7   String7      Dates.DateTime       Dates.Date    Dates.Time    Dates.Date     Int64       Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -295,14 +295,14 @@ reserve_df |&gt; first |&gt; println</code></pre>
 <p>ランキング方法にもいくつか種類がありますが、日時が完全に一致することはないでしょうから、 ここでは<code>ordinalrank</code>を利用します。</p>
 <p>前処理の手順としては、groupby関数でhotel_id毎にデータを分けて、select関数で必要な列を選びます。</p>
 <p>select関数の引数は<code>:列名 &#61;&gt; 処理 &#61;&gt; :新しい列名</code>というようにcombine関数と同じような与え方が可能です。 ではやってみます。</p>
-<pre><code class="language-julia">using StatsBase
-@chain reserve_df begin
-  groupby&#40;:hotel_id&#41;
-  select&#40;:,:reserve_datetime &#61;&gt; ordinalrank &#61;&gt;:log_no&#41;
-  first&#40;10&#41;
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> StatsBase
+<span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+  groupby(:hotel_id)
+  select(:,:reserve_datetime =&gt; ordinalrank =&gt;:log_no)
+  first(<span class="hljs-number">10</span>)
   println
-end</code></pre>
-<p><div class="code-output"><pre><code class="plaintext code-output">10×10 DataFrame
+<span class="hljs-keyword">end</span></code></pre>
+<p><div class="code-output"><pre><code class="plaintext hljs">10×10 DataFrame
  Row │ hotel_id  reserve_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price  log_no
      │ String7   String7     String7      Dates.DateTime       Dates.Date    Dates.Time    Dates.Date     Int64       Int64        Int64
 ─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -319,14 +319,14 @@ end</code></pre>
 </code></pre></div> 一番右の列に<code>:log_no</code>の列が追加されていることが確認できます。</p>
 <h3 id="q_ランキング"><a href="#q_ランキング" class="header-anchor">Q ランキング</a></h3>
 <p>ホテル毎に予約数を集計して、ランキング付けを行います。同じ予約数の場合は、 最小の順位を付けることになっているので、ordinalrankではなくて、competerankを利用します。</p>
-<pre><code class="language-julia">@chain reserve_df begin
-  groupby&#40;:hotel_id&#41;
-  combine&#40;:reserve_id &#61;&gt; length &#61;&gt; :rsv_cnt&#41;
-  select&#40;:,:rsv_cnt &#61;&gt; competerank &#61;&gt;:rsv_cnt_rank&#41;
-  first&#40;10&#41;
+<pre><code class="julia hljs"><span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+  groupby(:hotel_id)
+  combine(:reserve_id =&gt; length =&gt; :rsv_cnt)
+  select(:,:rsv_cnt =&gt; competerank =&gt;:rsv_cnt_rank)
+  first(<span class="hljs-number">10</span>)
   println
-end</code></pre>
-<div class="code-output"><pre><code class="plaintext code-output">10×3 DataFrame
+<span class="hljs-keyword">end</span></code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×3 DataFrame
  Row │ hotel_id  rsv_cnt  rsv_cnt_rank
      │ String7   Int64    Int64
 ─────┼─────────────────────────────────
@@ -380,7 +380,7 @@ end</code></pre>
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> </p>
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: January 09, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: August 17, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -411,8 +411,8 @@ end</code></pre>
 
     
     
-        <script src="/libs/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+        
+
 
         <!-- http://tutsplus.github.io/clipboard/ -->
 
