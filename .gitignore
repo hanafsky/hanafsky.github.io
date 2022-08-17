@@ -5,3 +5,4 @@ franklin.pub
 node_modules/
 Manifest.toml
 blog/blog_template.md
+tips/tips_template.md
