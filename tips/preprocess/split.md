@@ -50,11 +50,11 @@ graph TD
 有名なパッケージを使うのがAwesomeとされています。
 PythonのScikitLearnはjuliaから容易にインポートできますが、
 julia純正で何かないか探してみました。
-MLDataUtils.jlを使ってみることにします。
+MLUtils.jlを使ってみることにします。
 データの分割は``splitobs``、データのシャッフルは``shuffleobs``、K-foldCVには``kfolds``を使います。
 
 ```julia
-using MLDataUtils, Random
+using MLUtils, Random
 Random.seed!(71)#幸運を呼ぶ乱数シード71
 #ホールドアウト検証用のデータ分割。0.8は学習データの割合
 train_df,test_df = @chain production_df shuffleobs splitobs(at=0.8) 
@@ -104,7 +104,7 @@ let
 end    
 ```
 
-\prev{/tips/preprocess/join}{juliaで前処理大全 結合}
+\prevnext{/tips/preprocess/join}{juliaで前処理大全 結合}{/tips/preprocess/generation}{juliaで前処理大全 生成}
 
 \backtotop
 

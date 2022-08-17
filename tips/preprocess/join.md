@@ -331,6 +331,6 @@ first(summary_result,10) |> println
 
 この章の問題はかなり難しいため、問題を理解するのもコードを考えるのも、かなり骨が折れました。
 しかし、自前で関数を用意する考えや、DataFrames.jlとChain.jlのおかげで、本のコードに勝るとも劣らない非常に\marker{Awesome}な処理ができたのではないかと思います。
-\prev{/tips/preprocess/aggregation}{juliaで前処理大全 集約}
+\prevnext{/tips/preprocess/aggregation}{juliaで前処理大全 集約}{/tips/preprocess/split}{juliaで前処理大全 分割}
 
 \backtotop
