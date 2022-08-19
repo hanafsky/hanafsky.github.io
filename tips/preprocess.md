@@ -43,6 +43,8 @@ SQL、R、pythonの3つの言語でAwesomeなコードの書き方を教えて�
 @@column \textcard{Join}{4.結合}{/tips/preprocess/join}@@
 @@column \textcard{Split}{5.分割}{/tips/preprocess/split}@@
 @@column \textcard{Generation}{6.生成}{/tips/preprocess/generation}@@
+@@column \textcard{Unfold}{7. 展開}{/tips/preprocess/unfold}@@
+@@column \textcard{Numerical}{8. 数値型}{/tips/preprocess/numerical}@@
 @@
 @@
 
