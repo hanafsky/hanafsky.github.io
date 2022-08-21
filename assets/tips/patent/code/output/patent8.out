@@ -13,6 +13,6 @@ end
 ```
 
 !!! warning
-    `HTML` is currently exported to maintain backwards-compatibility, but is considered to be deprecated and should not be used.
+    `HTML` is currently exported to maintain backwards compatibility, but this export is deprecated. It is recommended to use this type as `Docs.HTML` or to explicitly import it from `Docs`.
 
 

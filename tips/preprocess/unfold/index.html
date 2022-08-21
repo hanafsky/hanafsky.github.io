@@ -1,0 +1,418 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="/css/franklin.css">
+<link rel="stylesheet" href="/css/extra.css">
+<link rel="stylesheet" href="/css/minimal-mistakes.css">
+<link rel="stylesheet" href="/css/adjust.css">
+<link rel="stylesheet" href="/css/luminous-basic.min.css">
+<link rel="icon" href="/assets/favicon.ico">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<!--[if IE ]>
+<style>
+  /* old IE unsupported flexbox fixes */
+  .greedy-nav .site-title {
+    padding-right: 3em;
+  }
+  .greedy-nav button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+</style>
+<![endif]-->
+
+   <title>juliaで前処理大全6</title>  
+  <!-- end custom head snippets -->
+</head>
+<body class="layout--single">
+  <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Hanafsky.com</a>
+        <ul class="visible-links">
+          <li class="masthead__menu-item"><a href="/tips/" >Julia-tips</a></li>
+          <li class="masthead__menu-item"><a href="/blog/" >Blog</a></li>
+          <li class="masthead__menu-item"><a href="/project/" >Projects</a></li>
+          <li class="masthead__menu-item"><a href="/about/">About</a></li>
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+  <div class="initial-content">
+    <div id="main" role="main">
+      <div class="sidebar sticky">
+        <div itemscope itemtype="https://schema.org/Person">
+          <div class="author__avatar">
+            <img src="/assets/design/author3.png" alt="Dio" itemprop="image">
+          </div>
+          <div class="author__content">
+            <h3 class="author__name" itemprop="name">Kei Hanafusa</h3>
+            <p class="author__bio" itemprop="description">Chemical Engineer, <br> living in Osaka, 🗾</p>
+          </div>
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Follow</button>
+            <ul class="author__urls social-icons">
+              <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+                <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Osaka, Japan</span></li>
+              <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+              <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+            </ul>
+          </div>
+
+          
+          
+              
+
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Tag</button>
+            <ul class="author__urls social-icons">
+              <li>タグ</li>
+              <li></li>
+              <li><a href="/tag/setting/">設定</a></li>
+              <li><a href="/tag/thirdparty/">サードパーティライブラリ</a></li>
+              <li><a href="/tag/recipe">レシピ</a></li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+
+
+<!-- Content appended here -->
+<div class="franklin-content"><h1 id="juliaで前処理大全_7展開"><a href="#juliaで前処理大全_7展開" class="header-anchor">juliaで前処理大全 7.展開</a></h1>
+<p>juliaで前処理大全その6です。今回は展開をテーマに扱います。</p>
+<div class="franklin-toc"><ol><li><a href="#準備">準備</a></li><li><a href="#横持ちへの変換">横持ちへの変換</a><ol><li><a href="#q_横持ち変換">Q 横持ち変換</a></li></ol></li><li><a href="#スパースマトリックスへの変換">スパースマトリックスへの変換</a><ol><li><a href="#q_スパースマトリックス">Q スパースマトリックス</a></li></ol></li></ol></div>
+<h2 id="準備"><a href="#準備" class="header-anchor">準備</a></h2>
+<p>今回は準備としてホテルの予約レコード<code>reserve.csv</code>を読み込みます。</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> DataFrames,CSV,Chain,Downloads
+reserve_url = <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/reserve.csv&quot;</span>
+
+reserve_df = <span class="hljs-meta">@chain</span> reserve_url Downloads.download CSV.File DataFrame
+first(reserve_df,<span class="hljs-number">10</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×9 DataFrame
+ Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price
+     │ String7     String7   String7      String31             Dates.Date    Dates.Time    Dates.Date     Int64       Int64
+─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200
+   2 │ r2          h_219     c_1          2016-07-16 23:39:55  2016-07-20    11:30:00      2016-07-21              2        20600
+   3 │ r3          h_179     c_1          2016-09-24 10:03:17  2016-10-19    09:00:00      2016-10-22              2        33600
+   4 │ r4          h_214     c_1          2017-03-08 03:20:10  2017-03-29    11:00:00      2017-03-30              4       194400
+   5 │ r5          h_16      c_1          2017-09-05 19:50:37  2017-09-22    10:30:00      2017-09-23              3        68100
+   6 │ r6          h_241     c_1          2017-11-27 18:47:05  2017-12-04    12:00:00      2017-12-06              3        36000
+   7 │ r7          h_256     c_1          2017-12-29 10:38:36  2018-01-25    10:30:00      2018-01-28              1       103500
+   8 │ r8          h_241     c_1          2018-05-26 08:42:51  2018-06-08    10:00:00      2018-06-09              1         6000
+   9 │ r9          h_217     c_2          2016-03-05 13:31:06  2016-03-25    09:30:00      2016-03-27              3        68400
+  10 │ r10         h_240     c_2          2016-06-25 09:12:22  2016-07-14    11:00:00      2016-07-17              4       320400
+</code></pre></div>
+<h2 id="横持ちへの変換"><a href="#横持ちへの変換" class="header-anchor">横持ちへの変換</a></h2>
+<h3 id="q_横持ち変換"><a href="#q_横持ち変換" class="header-anchor">Q 横持ち変換</a></h3>
+<p>結合の章では複数の列をまとめるのに<code>stack</code>関数を用いました。 ここでは1つの列を複数の列に展開するため、<code>unstack</code>関数を用います。</p>
+<div class="note"><div class="title">😲 Note</div>
+<div class="content"><p>unstackを利用するには、データフレーム以外に以下のようにさらに二つの引数を指定する必要があります。</p>
+<pre><code class="julia hljs">unstack(df::DataFrame, :新しい列名,:展開するデータ)</code></pre>
+<p>ここでは、新しい列名のカラムとして<code>:people_num</code>、値として<code>:rsv_cnt</code>を指定しました。</p></div></div>
+<p>実際に適用してみましょう。</p>
+<pre><code class="julia hljs">unfold_df = <span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+    groupby([:customer_id,:people_num]) 
+    combine(nrow=&gt;:rsv_cnt)
+    unstack(:people_num,:rsv_cnt; fill=<span class="hljs-number">0</span>)
+    select([<span class="hljs-string">&quot;customer_id&quot;</span>,<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>])
+<span class="hljs-keyword">end</span>
+
+first(unfold_df,<span class="hljs-number">10</span>) |&gt; println</code></pre>
+<p><div class="code-output"><pre><code class="plaintext hljs">10×5 DataFrame
+ Row │ customer_id  1      2      3      4
+     │ String7      Int64  Int64  Int64  Int64
+─────┼─────────────────────────────────────────
+   1 │ c_1              2      2      2      2
+   2 │ c_2              2      2      1      3
+   3 │ c_3              2      2      2      2
+   4 │ c_4              3      2      0      3
+   5 │ c_5              2      0      0      2
+   6 │ c_6              0      0      1      1
+   7 │ c_7              2      3      2      0
+   8 │ c_8              2      0      4      2
+   9 │ c_9              0      3      1      1
+  10 │ c_10             0      2      2      2
+</code></pre></div> 処理の流れを解説すると以下のようになります。</p>
+<ol>
+<li><p><code>:customer_id</code>と<code>:people_num</code>毎に場合分け</p>
+</li>
+<li><p><code>nrow</code>関数でグループの数を数え、<code>:rsv_cnt</code>に格納</p>
+</li>
+<li><p><code>unstack</code>関数で<code>:people_num</code>の値毎に<code>:rsv_cnt</code>の値を格納。missing値は0で埋める。</p>
+</li>
+<li><p><code>select</code>関数で並べ替え</p>
+</li>
+</ol>
+<h2 id="スパースマトリックスへの変換"><a href="#スパースマトリックスへの変換" class="header-anchor">スパースマトリックスへの変換</a></h2>
+<p>上の例のようにデータを展開すると<code>missing</code>データができるので、メモリの節約のために スパース行列にデータを格納しようというのが、この節のお題です。</p>
+<p>juliaではビルトインモジュールの<code>SparseArrays.jl</code>の<code>sparse</code>を使えば、スパース行列を利用することが可能です。 利用方法を確認してみましょう。</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> SparseArrays
+print(<span class="hljs-meta">@doc</span> sparse)</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">```
+sparse(A)
+```
+
+Convert an AbstractMatrix `A` into a sparse matrix.
+
+# Examples
+
+```jldoctest
+julia&gt; A = Matrix(1.0I, 3, 3)
+3×3 Matrix{Float64}:
+ 1.0  0.0  0.0
+ 0.0  1.0  0.0
+ 0.0  0.0  1.0
+
+julia&gt; sparse(A)
+3×3 SparseMatrixCSC{Float64, Int64} with 3 stored entries:
+ 1.0   ⋅    ⋅
+  ⋅   1.0   ⋅
+  ⋅    ⋅   1.0
+```
+
+```
+sparse(I, J, V,[ m, n, combine])
+```
+
+Create a sparse matrix `S` of dimensions `m x n` such that `S[I[k], J[k]] = V[k]`. The `combine` function is used to combine duplicates. If `m` and `n` are not specified, they are set to `maximum(I)` and `maximum(J)` respectively. If the `combine` function is not supplied, `combine` defaults to `+` unless the elements of `V` are Booleans in which case `combine` defaults to `|`. All elements of `I` must satisfy `1 &lt;= I[k] &lt;= m`, and all elements of `J` must satisfy `1 &lt;= J[k] &lt;= n`. Numerical zeros in (`I`, `J`, `V`) are retained as structural nonzeros; to drop numerical zeros, use [`dropzeros!`](@ref).
+
+For additional documentation and an expert driver, see `SparseArrays.sparse!`.
+
+# Examples
+
+```jldoctest
+julia&gt; Is = [1; 2; 3];
+
+julia&gt; Js = [1; 2; 3];
+
+julia&gt; Vs = [1; 2; 3];
+
+julia&gt; sparse(Is, Js, Vs)
+3×3 SparseMatrixCSC{Int64, Int64} with 3 stored entries:
+ 1  ⋅  ⋅
+ ⋅  2  ⋅
+ ⋅  ⋅  3
+```
+</code></pre></div>
+<p>最後の例を見るに、</p>
+<pre><code class="julia hljs">sparse(行インデックス, 列インデックス, データ, 行数, 列数)</code></pre>
+<p>のように入力すれば使えそうです。<sup id="fnref:1"><a href="#fndef:1" class="fnref">[1]</a></sup></p>
+<table class="fndef" id="fndef:1">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:1">[1]</a></td>
+        <td class="fndef-content">scipyのcsc_matrixとはデータの指定順が異なります。</td>
+    </tr>
+</table>
+
+<h3 id="q_スパースマトリックス"><a href="#q_スパースマトリックス" class="header-anchor">Q スパースマトリックス</a></h3>
+<p>ここで問題になるのが、データが文字列の場合のインデックス取得です。 本では<code>:customer_id</code>などをカテゴリーデータへ変換した後に、そのままcsc_matrixなどの関数にそのまま代入しています。 juliaではCategoricalArrays.jlでカテゴリーデータへの変換が可能ですが、<code>sparse</code>へそのまま代入することはできませんでした。 したがって、カテゴリーデータに対して、行番号を割り当ててやる必要があります。 とりあえず、CategoricalArray型のrefsを参照をInt型に変換して、新たに<code>id</code>というデータとして格納し、これを行番号として割り当てることにしました。</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> CategoricalArrays
+cnt_df = <span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+    groupby([:customer_id,:people_num]) 
+    combine(nrow=&gt;:rsv_cnt)
+    transform(:customer_id=&gt;categorical=&gt;:customer_id)
+    <span class="hljs-meta">@aside</span> id = <span class="hljs-built_in">Int</span>.(_.customer_id.refs)
+    hcat(_, DataFrame(:id=&gt;id))
+<span class="hljs-keyword">end</span>
+sp_data=sparse(cnt_df.id, cnt_df.people_num, cnt_df.rsv_cnt,length(levels(cnt_df.customer_id)),length(levels(cnt_df.people_num)))
+<span class="hljs-built_in">Matrix</span>(sp_data) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">[2 2 2 2; 0 2 2 2; 2 1 2 0; 1 0 0 1; 2 1 1 1; 0 1 0 0; 3 1 2 2; 0 0 1 1; 0 1 1 0; 2 1 2 0; 3 0 1 1; 4 3 1 0; 0 1 1 1; 1 2 1 4; 0 1 1 0; 0 1 0 0; 1 2 1 2; 0 0 0 1; 1 3 2 2; 3 0 2 1; 1 1 2 4; 1 1 1 0; 2 2 3 1; 1 0 0 1; 4 1 1 0; 2 4 1 1; 0 0 0 2; 2 0 2 0; 0 3 1 3; 2 1 1 1; 3 1 2 1; 0 1 0 1; 1 1 1 1; 0 0 1 2; 0 0 0 1; 0 1 2 1; 1 3 1 3; 1 1 0 0; 0 1 1 0; 0 0 0 1; 1 2 2 2; 1 2 0 1; 0 1 2 2; 1 2 0 1; 1 3 1 3; 0 2 2 2; 1 0 0 1; 0 2 2 1; 2 1 3 2; 2 1 0 0; 1 0 3 0; 3 0 2 0; 0 2 2 4; 2 1 5 0; 0 0 3 0; 3 1 1 3; 2 0 0 3; 1 1 0 1; 0 4 0 0; 2 0 0 1; 2 1 2 1; 2 0 3 2; 0 0 2 2; 0 2 1 2; 0 2 1 0; 1 2 2 2; 0 1 1 1; 4 0 1 1; 3 0 3 1; 0 0 2 2; 1 0 0 0; 1 3 1 2; 2 2 2 1; 4 0 2 2; 2 1 3 1; 0 0 0 1; 0 2 2 2; 2 1 5 0; 0 2 1 1; 0 0 2 2; 1 0 0 0; 1 1 0 0; 1 0 0 2; 0 0 1 2; 1 0 0 0; 1 3 2 1; 0 1 3 0; 3 0 2 3; 1 1 1 1; 0 0 0 1; 3 0 0 2; 3 0 2 2; 0 1 1 1; 0 1 0 0; 1 0 1 1; 2 2 1 3; 3 1 4 0; 2 1 1 3; 0 2 1 0; 2 3 0 2; 1 3 0 2; 1 1 1 4; 0 0 0 1; 2 1 0 0; 0 1 2 0; 1 0 3 1; 3 0 2 1; 0 0 0 1; 0 1 2 1; 0 1 2 4; 3 0 1 1; 1 2 1 3; 1 1 0 3; 0 1 2 0; 1 0 0 1; 2 0 1 2; 2 3 2 1; 3 2 1 0; 1 0 0 2; 0 0 1 1; 0 4 2 1; 0 1 0 1; 0 2 1 1; 1 2 1 0; 0 0 2 0; 1 1 0 0; 0 0 1 0; 0 1 0 3; 1 0 0 0; 2 1 1 3; 1 1 2 0; 1 2 0 1; 1 2 2 1; 0 1 4 2; 0 2 0 2; 1 0 4 2; 2 1 0 1; 1 2 2 2; 1 0 0 1; 1 1 2 4; 0 0 1 1; 0 0 1 0; 2 4 1 1; 0 1 1 0; 3 2 0 1; 1 1 0 1; 1 0 0 1; 0 2 0 1; 0 3 3 2; 1 2 2 1; 3 0 0 3; 0 2 1 1; 0 1 0 0; 2 1 2 3; 0 0 0 1; 1 2 4 1; 0 0 1 2; 0 2 1 3; 3 3 1 0; 0 1 0 0; 1 4 3 0; 2 2 2 2; 2 3 3 0; 1 0 1 1; 2 3 2 0; 2 1 0 1; 1 3 2 1; 2 0 2 1; 2 3 1 2; 0 0 1 0; 1 1 2 1; 0 1 1 0; 0 1 0 1; 2 2 1 3; 1 0 0 2; 1 4 2 1; 1 1 0 0; 2 1 2 3; 0 3 2 0; 1 2 2 1; 0 1 1 1; 1 3 0 4; 2 1 3 1; 2 0 1 0; 1 0 3 1; 0 0 0 1; 0 1 2 3; 1 0 4 0; 2 0 1 1; 1 0 2 0; 3 2 0 0; 0 1 1 0; 2 2 2 2; 1 0 0 0; 0 4 1 2; 4 0 2 1; 0 1 0 5; 4 0 0 3; 2 1 0 3; 1 0 1 1; 0 1 1 1; 2 1 2 0; 0 0 0 1; 3 2 1 1; 3 0 1 2; 0 1 2 3; 0 0 0 1; 1 1 1 2; 1 0 2 0; 2 2 1 0; 1 1 4 1; 1 0 3 1; 0 0 0 1; 0 1 0 1; 3 0 1 1; 1 0 0 1; 1 1 3 2; 1 3 0 1; 5 1 0 2; 2 0 2 1; 2 1 2 1; 0 0 1 0; 0 0 0 2; 0 1 0 0; 1 1 0 0; 3 0 1 1; 0 0 1 1; 0 1 0 0; 0 2 2 1; 1 4 3 0; 1 2 2 3; 0 2 0 1; 0 3 1 0; 1 2 3 1; 1 2 3 2; 2 0 3 1; 2 1 2 1; 4 0 0 2; 0 1 0 0; 2 1 0 0; 1 2 2 2; 1 2 1 0; 1 1 1 1; 1 1 1 2; 0 3 2 2; 1 2 0 0; 1 3 0 2; 0 2 0 0; 1 1 0 1; 0 0 0 1; 3 0 0 0; 2 1 0 3; 1 3 1 2; 1 0 0 0; 0 0 1 3; 0 2 0 2; 1 2 1 1; 2 1 1 0; 3 2 0 3; 0 0 1 0; 0 2 0 1; 2 2 0 3; 1 2 0 0; 1 4 2 1; 2 1 0 2; 0 2 0 2; 1 1 2 2; 3 1 2 1; 1 2 1 1; 1 2 0 1; 1 1 2 3; 0 0 0 1; 4 2 1 0; 0 1 0 1; 1 1 3 1; 1 0 0 0; 0 1 1 3; 0 2 2 0; 1 0 1 1; 3 2 0 1; 1 1 1 0; 1 2 2 0; 2 1 0 2; 1 0 5 1; 0 1 1 0; 1 2 2 3; 0 0 1 1; 1 1 1 1; 2 0 0 0; 1 0 0 1; 1 1 0 2; 3 2 0 3; 1 1 0 0; 0 1 0 1; 2 2 1 1; 0 2 0 0; 0 1 0 0; 3 1 1 1; 2 3 0 2; 4 0 1 1; 1 1 2 3; 0 4 3 1; 3 1 1 1; 0 0 0 1; 2 1 1 0; 0 1 0 0; 2 3 1 0; 1 0 2 3; 0 0 0 3; 0 0 2 2; 0 1 1 1; 1 0 3 3; 1 2 1 0; 2 0 0 0; 1 0 4 2; 0 1 2 2; 3 3 1 1; 1 2 2 1; 1 2 1 2; 0 0 0 1; 1 2 0 0; 0 0 1 0; 0 1 3 1; 2 0 0 2; 0 0 1 0; 0 0 1 1; 2 0 0 0; 0 2 1 4; 0 1 0 1; 1 0 1 0; 2 2 2 0; 2 2 1 3; 2 1 1 4; 1 0 0 0; 0 0 0 2; 1 1 0 1; 2 3 2 1; 0 0 0 2; 2 2 2 2; 3 1 2 2; 1 2 0 0; 0 1 0 1; 0 0 3 1; 1 0 4 1; 1 1 3 1; 0 1 2 1; 0 4 2 2; 0 0 2 1; 0 0 1 1; 1 2 1 0; 1 1 1 1; 3 1 1 0; 1 1 3 1; 0 0 1 0; 2 1 1 1; 3 0 0 2; 1 0 2 2; 3 1 1 3; 0 3 1 0; 2 0 0 1; 1 3 1 1; 3 1 0 0; 1 0 0 0; 1 1 1 0; 2 0 0 3; 2 1 0 1; 2 2 3 1; 2 1 0 0; 0 1 1 1; 1 1 0 1; 0 1 1 0; 2 1 3 0; 3 1 2 2; 2 1 2 2; 0 1 0 1; 2 0 0 1; 2 0 0 0; 2 2 2 2; 1 0 0 2; 0 3 1 2; 1 0 0 0; 1 0 1 0; 0 0 1 1; 1 1 0 3; 2 1 1 0; 2 0 0 2; 2 2 1 0; 0 0 2 0; 1 4 0 3; 0 0 1 1; 0 1 1 1; 2 2 1 1; 1 0 1 2; 0 1 1 0; 0 3 3 1; 0 1 0 0; 0 1 0 0; 1 1 1 5; 1 1 1 1; 0 3 1 1; 1 2 0 2; 1 2 2 0; 2 2 1 3; 1 4 0 1; 0 1 2 3; 0 1 3 0; 3 3 2 0; 3 0 0 2; 1 2 0 3; 1 3 3 1; 1 3 3 1; 0 4 3 1; 2 0 2 1; 2 1 2 0; 1 1 1 3; 1 2 2 2; 1 2 2 2; 0 1 0 0; 1 1 0 1; 1 0 1 1; 1 1 1 2; 2 2 1 1; 0 2 0 0; 2 0 1 0; 0 0 2 2; 4 0 0 1; 0 1 1 1; 2 0 4 1; 2 0 2 3; 2 1 2 2; 0 1 0 0; 2 0 1 1; 0 0 1 0; 1 0 1 1; 1 1 1 0; 2 0 3 3; 2 1 0 3; 0 0 0 1; 0 0 0 1; 2 1 1 1; 0 3 0 3; 0 0 1 2; 0 0 1 0; 1 2 0 3; 1 0 0 0; 3 0 0 1; 0 0 0 1; 0 2 1 0; 0 1 0 0; 2 1 0 1; 0 3 2 2; 2 0 2 1; 1 2 2 1; 3 2 0 0; 1 0 4 0; 1 1 0 0; 0 0 0 1; 0 2 0 1; 1 1 0 1; 0 1 0 1; 0 0 2 0; 1 1 3 1; 1 1 1 5; 2 3 2 1; 0 1 0 1; 1 2 2 0; 0 0 3 2; 3 1 2 1; 1 4 2 0; 3 1 1 0; 2 1 0 0; 1 0 1 0; 3 0 2 1; 0 1 0 0; 0 0 0 1; 0 1 2 3; 1 0 0 2; 1 0 1 1; 2 1 0 0; 1 0 3 1; 1 5 0 1; 1 1 0 0; 0 1 0 1; 0 0 1 0; 0 1 0 2; 0 1 3 0; 2 4 1 1; 0 0 1 1; 1 0 0 1; 2 1 1 2; 3 3 2 0; 0 1 3 4; 1 2 2 1; 2 1 4 1; 2 2 2 1; 1 2 3 1; 4 1 1 2; 1 0 0 1; 0 1 0 0; 1 3 0 3; 1 0 1 0; 0 0 0 2; 1 1 2 1; 0 1 0 0; 2 0 1 2; 2 1 1 0; 0 0 1 0; 0 1 3 0; 0 2 1 0; 1 2 1 0; 1 2 1 4; 0 1 1 1; 1 2 2 1; 1 3 1 0; 0 1 2 2; 1 1 1 1; 1 0 0 0; 2 1 2 2; 1 0 1 1; 1 0 1 0; 1 0 1 0; 1 2 1 2; 2 1 2 2; 2 3 2 0; 0 0 0 1; 0 0 0 2; 2 1 3 2; 2 1 3 1; 0 1 3 2; 0 0 1 0; 0 4 2 1; 2 1 0 0; 2 1 2 1; 1 1 2 3; 2 1 3 2; 3 0 0 3; 0 1 2 0; 2 2 0 0; 1 0 1 4; 0 1 0 0; 3 2 0 3; 2 1 0 1; 3 1 0 1; 1 1 0 0; 0 0 2 0; 0 1 0 0; 0 0 0 1; 2 1 1 2; 2 0 1 1; 0 0 1 0; 1 2 0 0; 2 3 1 0; 0 0 0 2; 2 2 2 1; 0 1 0 0; 1 2 0 0; 1 0 2 3; 1 0 1 0; 1 1 2 1; 2 1 1 2; 1 1 0 2; 0 1 2 3; 0 1 1 1; 0 2 1 0; 1 1 0 0; 2 1 1 1; 1 1 1 0; 1 2 1 0; 3 2 1 2; 0 1 5 1; 1 0 0 0; 0 1 1 3; 0 1 2 0; 0 0 2 0; 0 3 2 1; 1 0 0 1; 1 3 1 3; 1 0 4 1; 1 0 0 2; 1 1 1 4; 1 2 2 1; 0 0 0 2; 0 1 2 2; 1 0 1 0; 1 0 2 1; 2 1 2 1; 2 3 2 0; 0 0 2 1; 1 1 3 0; 1 1 1 2; 1 1 2 2; 1 0 2 0; 1 0 2 1; 1 1 0 1; 0 5 0 2; 1 1 5 1; 1 0 0 1; 2 2 0 2; 1 0 2 1; 0 1 1 0; 2 0 1 3; 0 0 2 0; 0 1 0 1; 2 1 0 1; 4 0 1 0; 0 0 0 2; 2 1 0 2; 0 0 1 0; 0 2 2 0; 3 0 1 2; 2 1 0 2; 0 3 1 2; 1 1 3 3; 2 4 1 0; 1 1 2 1; 2 0 1 0; 1 3 0 1; 0 0 0 1; 4 1 1 1; 3 2 1 1; 2 1 0 5; 0 1 0 1; 0 1 1 1; 1 0 1 1; 0 0 0 1; 2 1 1 1; 1 0 2 2; 0 0 1 0; 0 0 1 0; 0 1 2 0; 1 1 3 2; 0 1 3 1; 0 0 0 2; 3 2 1 2; 2 2 1 3; 0 0 0 1; 1 1 1 5; 1 2 0 4; 1 0 2 1; 0 0 0 1; 3 1 2 0; 0 2 1 0; 0 0 1 1; 3 0 0 1; 1 0 1 1; 0 2 0 2; 1 0 1 1; 0 2 4 2; 0 0 2 2; 4 1 1 0; 0 0 1 0; 1 2 0 2; 2 3 0 0; 1 4 2 1; 4 3 0 1; 1 1 0 1; 2 1 2 2; 1 3 0 1; 1 0 2 1; 2 2 2 1; 0 1 1 1; 1 3 0 0; 2 1 2 3; 2 1 2 3; 0 1 1 3; 1 1 1 1; 0 1 0 0; 1 0 1 1; 0 2 0 0; 1 0 1 1; 3 3 2 0; 1 1 2 1; 2 1 2 1; 0 0 2 0; 3 0 1 2; 1 0 0 0; 1 0 1 1; 0 1 1 0; 5 0 2 1; 2 0 0 1; 5 2 0 1; 2 1 0 1; 3 1 1 3; 3 1 0 1; 0 0 2 0; 4 1 2 1; 2 0 4 2; 0 0 2 0; 2 1 1 1; 0 2 0 1; 0 2 2 2; 2 1 1 0; 1 0 3 0; 1 3 4 0; 2 0 3 1; 0 0 4 2; 0 1 0 1; 3 0 1 3; 1 0 0 1; 0 0 3 1; 0 1 0 2; 1 0 1 0; 0 2 1 2; 1 1 0 0; 0 1 1 1; 1 3 2 2; 2 3 2 1; 0 0 1 2; 1 1 0 2; 2 1 2 1; 0 4 0 2; 0 1 3 2; 1 2 1 1; 2 4 0 0; 1 1 1 5; 1 1 0 1; 3 2 1 0; 0 1 3 4; 1 1 2 1; 0 2 1 4; 0 2 2 0; 1 2 2 2; 0 1 0 2; 2 2 2 2; 3 1 2 2; 1 0 0 0; 1 0 1 3; 0 0 2 2; 2 1 0 0; 1 1 1 2; 1 0 1 1; 1 0 2 3; 2 0 0 3; 1 1 1 3; 1 1 3 3; 0 1 0 0; 1 0 0 1; 1 0 2 1; 1 1 1 2; 0 4 0 1; 0 1 1 1; 2 1 2 1; 0 0 3 3; 0 1 0 1; 1 0 2 1; 1 0 0 2; 0 0 1 2; 0 1 0 1; 3 1 2 1; 1 1 1 1; 0 1 1 0; 0 0 0 2; 3 1 0 0; 1 2 2 3; 4 1 1 0; 0 2 1 0; 3 0 0 3; 3 1 0 4; 2 1 1 0; 2 2 1 3; 0 1 1 1; 1 3 2 2; 2 2 1 1; 0 0 5 3; 0 1 0 0; 0 0 2 1; 0 4 0 1; 2 2 0 1; 3 3 0 1; 1 0 1 0; 0 1 0 0; 3 0 3 2; 4 1 1 1; 2 5 1 0; 4 1 0 3; 0 1 0 1; 1 1 4 1; 1 2 4 1; 0 0 0 1; 0 0 3 1; 3 2 0 2; 1 0 0 2; 1 1 1 1; 0 2 1 1; 0 0 1 0; 1 1 1 1; 0 0 0 1; 0 2 1 0; 0 3 1 1; 0 1 1 1; 0 5 1 1; 0 0 2 2; 0 0 1 1; 3 3 0 2; 1 0 1 2; 3 1 1 2; 1 1 2 4; 0 1 0 0; 1 0 1 0; 1 4 1 2; 0 1 1 1; 2 1 2 2; 2 0 1 0; 1 1 1 0; 0 0 0 1; 0 0 1 0; 1 2 0 4; 1 0 1 0; 1 1 2 2; 1 0 0 5; 4 1 1 2; 1 1 1 1; 0 1 0 0; 0 0 1 2; 0 1 0 0; 3 2 1 0; 0 0 1 0; 2 0 1 2; 3 0 2 3; 2 2 1 3; 0 1 0 1; 0 1 3 2; 5 1 0 1; 1 2 0 0; 0 0 1 0; 0 0 6 1; 1 0 1 2; 1 1 3 2; 0 0 2 1; 1 0 0 1; 4 0 3 0; 0 2 2 0; 0 0 2 1; 1 2 1 2; 3 0 1 1; 0 1 0 0; 0 3 2 3; 0 3 0 3; 1 0 5 2; 1 0 2 1; 0 1 2 1; 0 0 0 1; 3 0 3 2; 1 1 0 2; 0 1 4 3; 1 3 2 1; 2 1 0 2; 0 1 2 0; 2 3 2 0; 3 2 2 1; 4 0 3 1; 0 1 0 0; 0 1 0 1; 2 1 1 1; 0 2 1 0; 0 1 2 0; 2 2 0 2; 0 0 0 1; 0 2 2 3; 0 1 4 3; 1 1 0 0; 1 1 3 0; 0 2 0 1; 1 0 5 1; 3 0 1 1; 0 1 0 0; 0 0 0 1; 1 2 3 1; 2 2 0 1; 0 0 3 3; 1 2 0 2; 0 3 2 1; 3 1 2 0; 0 2 0 0; 2 2 2 0; 1 0 3 1; 0 2 2 2; 2 1 4 1; 0 0 1 1; 1 1 2 4; 1 0 0 2; 2 0 1 3; 2 2 3 0; 1 0 0 0; 2 2 1 3; 0 4 3 0; 0 1 1 0; 1 3 1 1]
+</code></pre></div>
+<p>少々冗長な書き方になってしまいました。私がCategoricalArrays.jlの使い方に習熟していないせいかもしれませんが、このあたりはまだjuliaの未成熟な領域かと思われます。</p>
+
+  <div class="prev-next-link">
+  <a class="prev-link" href="/tips/preprocess/generation">
+    <p class="prev-next-label">前の記事</p>
+    <p>
+       juliaで前処理大全 生成
+    </p>
+  </a>
+  <a class="next-link" href="/tips/preprocess/numeric">
+    <p class="prev-next-label">次の記事</p>
+    <p>
+       juliaで前処理大全 数値型
+    </p>
+  </a>
+</div>
+
+ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+    <script src="https://utteranc.es/client.js"
+        repo="hanafsky/blog_comments"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+<div class="page-foot">
+  <div class="copyright">
+    &copy; Kei Hanafusa. Last modified: August 21, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+  </div>
+</div>
+</div><!-- CONTENT ENDS HERE -->
+
+      </div> <!-- closure of main -->
+    </div>   <!-- closure of class initial--content -->
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+          <ul class="social-icons">
+            <li><strong>Follow:</strong></li>
+            <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+            <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          </ul>
+        </div>
+        <div class="page__footer-copyright">&copy; Kei Hanafusa. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="/libs/minimal-mistakes/main.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <script src="/libs/myBtn/myBtn.js"></script>
+    <script src="/libs/luminous/Luminous.min.js"></script>
+    <script src="/libs/clipboard.min.js"></script>
+
+    
+    
+        
+
+
+        <!-- http://tutsplus.github.io/clipboard/ -->
+
+<script>
+	(function(){
+	
+		// Get the elements.
+		// - the 'pre' element.
+		// - the 'div' with the 'paste-content' id.
+	
+		var pre = document.getElementsByTagName('pre');
+	
+		// Add a copy button in the 'pre' element.
+		// which only has the className of 'language-'.
+	
+		for (var i = 0; i < pre.length; i++) {
+			var isLanguage = pre[i].children[0].className.indexOf('language-');
+	
+			if ( isLanguage === 0 ) {
+				var button           = document.createElement('button');
+						button.className = 'copy-button';
+						button.textContent = 'Copy';
+	
+						pre[i].appendChild(button);
+			}
+		};
+	
+		// Run Clipboard
+	
+		var copyCode = new ClipboardJS('.copy-button', {
+			target: function(trigger) {
+				return trigger.previousElementSibling;
+		}
+		});
+	
+		// On success:
+		// - Change the "Copy" text to "Copied".
+		// - Swap it to "Copy" in 2s.
+		// - Lead user to the "contenteditable" area with Velocity scroll.
+	
+		copyCode.on('success', function(event) {
+			event.clearSelection();
+			event.trigger.textContent = 'Copied';
+			window.setTimeout(function() {
+				event.trigger.textContent = 'Copy';
+			}, 2000);
+	
+		});
+	
+		// On error (Safari):
+		// - Change the  "Press Ctrl+C to copy"
+		// - Swap it to "Copy" in 2s.
+	
+		copyCode.on('error', function(event) {
+			event.trigger.textContent = 'Press "Ctrl + C" to copy';
+			window.setTimeout(function() {
+				event.trigger.textContent = 'Copy';
+			}, 5000);
+		});
+	
+	})();
+	</script>
+        <!-- {{ insert foot_copy.html }} -->
+    
+    
+        <script src="/libs/mermaid/mermaid.min.js"></script>
+<script>
+  var config
+  mermaid.initialize({
+    theme: 'neutral',
+    themeCSS: '\
+               .mermaid-main-font {font-family:"Noto Sans JP"};\
+               .section0, .section2{fill:#fadbda;opacity:0.3;};\
+               .task0, .task1, .task2, .task3 {fill:#fadbda; stroke:#f6bdc0; stroke-width:1};\
+               .grid {stroke:#666;stroke-width:0.5};\
+               .node rect,\
+               .node circle,\
+               .node ellipse,\
+               .node path,\
+               .node polygon\
+               {fill:rgba(253,237,228,0.5);\
+                stroke: rgb(246,189,192)};\
+               .arrowheadPath {fill:rgb(246,189,192);}\
+               .edgePath .path {stroke:rgb(246,189,192);};\
+               .cluster rect\
+               {fill:rgba(255,249,177,0.3);\
+                stroke:rgb(246,189,192)};\
+               ',
+    // themeCSS: '.node rect {fill:rgba(253,237,228,0.5); stroke: rgb(250,219,218)};',
+    // logLevel: 3,
+    // securityLevel: 'loose',
+    // flowchart: { curve: 'basis' }
+  });
+</script>
+    
+    <script>
+    new LuminousGallery(document.querySelectorAll('.zoom'));
+</script>
+    <script>
+function myToc() {
+    var x = document.getElementsByClassName("mytoc");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  } 
+</script>
+  </body>
+</html>

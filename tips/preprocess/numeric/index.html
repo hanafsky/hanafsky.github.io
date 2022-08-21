@@ -1,0 +1,565 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+   <link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="/css/franklin.css">
+<link rel="stylesheet" href="/css/extra.css">
+<link rel="stylesheet" href="/css/minimal-mistakes.css">
+<link rel="stylesheet" href="/css/adjust.css">
+<link rel="stylesheet" href="/css/luminous-basic.min.css">
+<link rel="icon" href="/assets/favicon.ico">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<!--[if IE ]>
+<style>
+  /* old IE unsupported flexbox fixes */
+  .greedy-nav .site-title {
+    padding-right: 3em;
+  }
+  .greedy-nav button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+</style>
+<![endif]-->
+
+   <title>juliaで前処理大全7</title>  
+  <!-- end custom head snippets -->
+</head>
+<body class="layout--single">
+  <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Hanafsky.com</a>
+        <ul class="visible-links">
+          <li class="masthead__menu-item"><a href="/tips/" >Julia-tips</a></li>
+          <li class="masthead__menu-item"><a href="/blog/" >Blog</a></li>
+          <li class="masthead__menu-item"><a href="/project/" >Projects</a></li>
+          <li class="masthead__menu-item"><a href="/about/">About</a></li>
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+  <div class="initial-content">
+    <div id="main" role="main">
+      <div class="sidebar sticky">
+        <div itemscope itemtype="https://schema.org/Person">
+          <div class="author__avatar">
+            <img src="/assets/design/author3.png" alt="Dio" itemprop="image">
+          </div>
+          <div class="author__content">
+            <h3 class="author__name" itemprop="name">Kei Hanafusa</h3>
+            <p class="author__bio" itemprop="description">Chemical Engineer, <br> living in Osaka, 🗾</p>
+          </div>
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Follow</button>
+            <ul class="author__urls social-icons">
+              <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+                <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Osaka, Japan</span></li>
+              <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+              <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+            </ul>
+          </div>
+
+          
+          
+              
+
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Tag</button>
+            <ul class="author__urls social-icons">
+              <li>タグ</li>
+              <li></li>
+              <li><a href="/tag/setting/">設定</a></li>
+              <li><a href="/tag/thirdparty/">サードパーティライブラリ</a></li>
+              <li><a href="/tag/recipe">レシピ</a></li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+
+
+<!-- Content appended here -->
+<div class="franklin-content"><h1 id="juliaで前処理大全_8数値型"><a href="#juliaで前処理大全_8数値型" class="header-anchor">juliaで前処理大全 8.数値型</a></h1>
+<p>juliaで前処理大全その7です。今回は数値型を取り扱います。</p>
+<div class="franklin-toc"><ol><li><a href="#数値型への変換">数値型への変換</a><ol><li><a href="#q_様々な数値型の変換">Q 様々な数値型の変換</a></li></ol></li><li><a href="#対数化による非線形な変換">対数化による非線形な変換</a><ol><li><a href="#q_対数化">Q 対数化</a></li></ol></li><li><a href="#カテゴリ化による非線形な変換">カテゴリ化による非線形な変換</a><ol><li><a href="#q_数値型のカテゴリ化">Q 数値型のカテゴリ化</a></li></ol></li><li><a href="#正規化">正規化</a><ol><li><a href="#q_正規化">Q 正規化</a></li></ol></li><li><a href="#外れ値の除去">外れ値の除去</a><ol><li><a href="#q_標準偏差基準の外れ値の除去">Q 標準偏差基準の外れ値の除去</a></li></ol></li><li><a href="#主成分分析による次元圧縮">主成分分析による次元圧縮</a><ol><li><a href="#q_主成分分析による次元圧縮">Q 主成分分析による次元圧縮</a></li></ol></li><li><a href="#数値の補完">数値の補完</a><ol><li><a href="#q_欠損レコードの削除">Q 欠損レコードの削除</a></li><li><a href="#q_定数補完">Q 定数補完</a></li><li><a href="#q_平均値補完">Q 平均値補完</a></li><li><a href="#q_pmmによる多重代入">Q PMMによる多重代入</a></li></ol></li></ol></div>
+<h2 id="数値型への変換"><a href="#数値型への変換" class="header-anchor">数値型への変換</a></h2>
+<h3 id="q_様々な数値型の変換"><a href="#q_様々な数値型の変換" class="header-anchor">Q 様々な数値型の変換</a></h3>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40000</mn><mi mathvariant="normal">/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">40000 / 3 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">4</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">/</span><span class="mord">3</span></span></span></span>をさまざまな数値のデータ型に変換するというお題です。</p>
+<h4 id="型の確認"><a href="#型の確認" class="header-anchor">型の確認</a></h4>
+<pre><code class="julia hljs">typeof(<span class="hljs-number">40000</span>/<span class="hljs-number">3</span>)</code></pre><pre><code class="plaintext hljs">Float64</code></pre>
+<p>デフォルトの型を確認すると<code>Float64</code>であることがわかります。</p>
+<h4 id="整数型へ変換"><a href="#整数型へ変換" class="header-anchor">整数型へ変換</a></h4>
+<p>整数型に変換するには<code>round</code>関数、あるいは<code>floor</code>関数を用います。</p>
+<pre><code class="julia hljs">round(<span class="hljs-built_in">Int</span>, <span class="hljs-number">40000</span>/<span class="hljs-number">3</span>)</code></pre><pre><code class="plaintext hljs">13333</code></pre>
+<pre><code class="julia hljs">floor(<span class="hljs-built_in">Int</span>, <span class="hljs-number">40000</span>/<span class="hljs-number">3</span>)</code></pre><pre><code class="plaintext hljs">13333</code></pre>
+<div class="note"><div class="title">😲 Note</div>
+<div class="content"><p>この2つの関数はとくに違いが無さそうですが、負の数に適用する場合、注意が必要です。</p>
+<pre><code class="julia hljs">round(<span class="hljs-built_in">Int</span>, -<span class="hljs-number">2.1</span>),floor(<span class="hljs-built_in">Int</span>, -<span class="hljs-number">2.1</span>)</code></pre><pre><code class="plaintext hljs">(-2, -3)</code></pre></div></div>
+<h2 id="対数化による非線形な変換"><a href="#対数化による非線形な変換" class="header-anchor">対数化による非線形な変換</a></h2>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>log</mi><mo>⁡</mo><mo stretchy="false">(</mo><mtext>年齢</mtext><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mtext>対数化した年齢</mtext><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">
+\log (年齢 + 1) = (対数化した年齢)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mopen">(</span><span class="mord cjk_fallback">年</span><span class="mord cjk_fallback">齢</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord cjk_fallback">対</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">化</span><span class="mord cjk_fallback">し</span><span class="mord cjk_fallback">た</span><span class="mord cjk_fallback">年</span><span class="mord cjk_fallback">齢</span><span class="mclose">)</span></span></span></span></span>
+<p>のような対数変換を行うと値が大きくなるほど値の差の意味をなくす効果があります。 また、回帰分析などを行うときに目的変数が負の値をとるとまずい場合に、対数変換を適用することがあります。 この場合、対数スケールで見たときに誤差の分散が等しい仮定をすることになりますが、細かく意識している人っているのか偶に疑問を抱きます。</p>
+<h3 id="q_対数化"><a href="#q_対数化" class="header-anchor">Q 対数化</a></h3>
+<p>ホテルの予約レコードのtotal_priceを1000で割って1を足して、底10で対数化するというお題です。</p>
+<p>transform関数とByRowと無名関数を使って難なく実現できます。</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> DataFrames,CSV,Chain,Downloads
+reserve_url = <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/reserve.csv&quot;</span>
+
+reserve_df = <span class="hljs-meta">@chain</span> reserve_url <span class="hljs-keyword">begin</span> 
+                    Downloads.download 
+                    CSV.File 
+                    DataFrame
+                    transform(:total_price=&gt;ByRow(c-&gt;log10(c/<span class="hljs-number">1000</span> + <span class="hljs-number">1</span>))=&gt;:total_price_log)
+                    <span class="hljs-keyword">end</span>
+
+first(reserve_df,<span class="hljs-number">10</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×10 DataFrame
+ Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price  total_price_log
+     │ String7     String7   String7      String31             Dates.Date    Dates.Time    Dates.Date     Int64       Int64        Float64
+─────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200         1.99211
+   2 │ r2          h_219     c_1          2016-07-16 23:39:55  2016-07-20    11:30:00      2016-07-21              2        20600         1.33445
+   3 │ r3          h_179     c_1          2016-09-24 10:03:17  2016-10-19    09:00:00      2016-10-22              2        33600         1.53908
+   4 │ r4          h_214     c_1          2017-03-08 03:20:10  2017-03-29    11:00:00      2017-03-30              4       194400         2.29092
+   5 │ r5          h_16      c_1          2017-09-05 19:50:37  2017-09-22    10:30:00      2017-09-23              3        68100         1.83948
+   6 │ r6          h_241     c_1          2017-11-27 18:47:05  2017-12-04    12:00:00      2017-12-06              3        36000         1.5682
+   7 │ r7          h_256     c_1          2017-12-29 10:38:36  2018-01-25    10:30:00      2018-01-28              1       103500         2.01912
+   8 │ r8          h_241     c_1          2018-05-26 08:42:51  2018-06-08    10:00:00      2018-06-09              1         6000         0.845098
+   9 │ r9          h_217     c_2          2016-03-05 13:31:06  2016-03-25    09:30:00      2016-03-27              3        68400         1.84136
+  10 │ r10         h_240     c_2          2016-06-25 09:12:22  2016-07-14    11:00:00      2016-07-17              4       320400         2.50705
+</code></pre></div>
+<h2 id="カテゴリ化による非線形な変換"><a href="#カテゴリ化による非線形な変換" class="header-anchor">カテゴリ化による非線形な変換</a></h2>
+<h3 id="q_数値型のカテゴリ化"><a href="#q_数値型のカテゴリ化" class="header-anchor">Q 数値型のカテゴリ化</a></h3>
+<p>ホテルの予約レコードの顧客テーブルの年齢を10刻みのカテゴリー型として追加するというお題です。 行ごとの処理と列全体を分けて行っているので、本のpythonコードなどと比べるとやや冗長な書き方になっています。</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> CategoricalArrays
+customer_url = <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/customer.csv&quot;</span>
+customer_df = <span class="hljs-meta">@chain</span> customer_url Downloads.download CSV.File DataFrame
+transform!(customer_df, :age=&gt;ByRow(c-&gt;<span class="hljs-number">10</span>floor(<span class="hljs-built_in">Int</span>,c/<span class="hljs-number">10</span>))=&gt;:age_rank)
+transform!(customer_df, :age_rank=&gt;categorical=&gt;:age_rank)
+
+first(customer_df,<span class="hljs-number">10</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×6 DataFrame
+ Row │ customer_id  age    sex      home_latitude  home_longitude  age_rank
+     │ String7      Int64  String7  Float64        Float64         Cat…
+─────┼──────────────────────────────────────────────────────────────────────
+   1 │ c_1             41  man            35.0922         136.512  40
+   2 │ c_2             38  man            35.3251         139.411  30
+   3 │ c_3             49  woman          35.1205         136.511  40
+   4 │ c_4             43  man            43.0349         141.24   40
+   5 │ c_5             31  man            35.1027         136.524  30
+   6 │ c_6             52  man            34.4408         135.39   50
+   7 │ c_7             50  man            43.0158         141.231  50
+   8 │ c_8             65  woman          38.2013         140.466  60
+   9 │ c_9             36  woman          33.3228         130.331  30
+  10 │ c_10            34  woman          34.2904         132.303  30
+</code></pre></div>
+<h2 id="正規化"><a href="#正規化" class="header-anchor">正規化</a></h2>
+<p>正規化処理にもいくつか種類があります。</p>
+<ul>
+<li><p>中心化: 平均値が0になるようにする。</p>
+</li>
+<li><p>標準化: 平均値が0、かつ標準偏差が1になるようにする。</p>
+</li>
+<li></li>
+</ul>
+<h3 id="q_正規化"><a href="#q_正規化" class="header-anchor">Q 正規化</a></h3>
+<p>ホテルの予約レコードの予約人数と合計金額を平均0、標準偏差1になるように正規化するというお題です。 この正規化には<code>StatsBase.jl</code>の<code>zscore</code>が使えます。</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> StatsBase
+transform!(reserve_df,:people_num=&gt;zscore, :total_price=&gt;zscore)
+first(reserve_df,<span class="hljs-number">10</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×12 DataFrame
+ Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price  total_price_log  people_num_zscore  total_price_zscore
+     │ String7     String7   String7      String31             Dates.Date    Dates.Time    Dates.Date     Int64       Int64        Float64          Float64            Float64
+─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200         1.99211            1.30055          -0.0531874
+   2 │ r2          h_219     c_1          2016-07-16 23:39:55  2016-07-20    11:30:00      2016-07-21              2        20600         1.33445           -0.483693         -0.74773
+   3 │ r3          h_179     c_1          2016-09-24 10:03:17  2016-10-19    09:00:00      2016-10-22              2        33600         1.53908           -0.483693         -0.629857
+   4 │ r4          h_214     c_1          2017-03-08 03:20:10  2017-03-29    11:00:00      2017-03-30              4       194400         2.29092            1.30055           0.828138
+   5 │ r5          h_16      c_1          2017-09-05 19:50:37  2017-09-22    10:30:00      2017-09-23              3        68100         1.83948            0.408427         -0.317041
+   6 │ r6          h_241     c_1          2017-11-27 18:47:05  2017-12-04    12:00:00      2017-12-06              3        36000         1.5682             0.408427         -0.608096
+   7 │ r7          h_256     c_1          2017-12-29 10:38:36  2018-01-25    10:30:00      2018-01-28              1       103500         2.01912           -1.37581           0.00393554
+   8 │ r8          h_241     c_1          2018-05-26 08:42:51  2018-06-08    10:00:00      2018-06-09              1         6000         0.845098          -1.37581          -0.88011
+   9 │ r9          h_217     c_2          2016-03-05 13:31:06  2016-03-25    09:30:00      2016-03-27              3        68400         1.84136            0.408427         -0.314321
+  10 │ r10         h_240     c_2          2016-06-25 09:12:22  2016-07-14    11:00:00      2016-07-17              4       320400         2.50705            1.30055           1.9706
+</code></pre></div>
+<p>なお、zscoreでは標本標準偏差が適用されることに意識しておく必要があります。 また、 <div class="note"><div class="title">😲 Note</div>
+<div class="content"><p>全ての列に適用するときはmapcolsあるいはmapcols&#33;が使えます。</p>
+<pre><code class="julia hljs">mapcols(zscore,df)</code></pre></div></div></p>
+<p>また、最小値0、最大値1でスケーリングするにはStatsBase.jlにUnitRangeTransormが用意されています。</p>
+<pre><code class="julia hljs">standardize(UnitRangeTransform, [<span class="hljs-number">0.0</span> -<span class="hljs-number">0.5</span> <span class="hljs-number">0.5</span>; <span class="hljs-number">0.0</span> <span class="hljs-number">1.0</span> <span class="hljs-number">2.0</span>], dims=<span class="hljs-number">2</span>)</code></pre><pre><code class="plaintext hljs">2×3 Matrix{Float64}:
+ 0.5  0.0  1.0
+ 0.0  0.5  1.0</code></pre>
+<p>ただ、DataFrameには適用できないようなので、もしやりたいなら次のように適当な関数を作って適用したほうがいいでしょう。</p>
+<pre><code class="julia hljs">unitrangetransform(v)=(v-minimum(v))/(maximum(v)-minimum(v))
+transform(df, :colname=&gt;unitrangetransform)</code></pre>
+<h2 id="外れ値の除去"><a href="#外れ値の除去" class="header-anchor">外れ値の除去</a></h2>
+<p>標準化後に絶対値が3を超えないデータだけを採用します。</p>
+<h3 id="q_標準偏差基準の外れ値の除去"><a href="#q_標準偏差基準の外れ値の除去" class="header-anchor">Q 標準偏差基準の外れ値の除去</a></h3>
+<p>zscoreを適用した列に対して、絶対値が3以下のデータをフィルターしています。</p>
+<pre><code class="julia hljs">reserve_df2 = <span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+      transform(:total_price=&gt;zscore)
+      filter(:total_price_zscore=&gt;(c-&gt;abs(c)≤<span class="hljs-number">3</span>),_)
+<span class="hljs-keyword">end</span>
+
+first(reserve_df2,<span class="hljs-number">10</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×12 DataFrame
+ Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price  total_price_log  people_num_zscore  total_price_zscore
+     │ String7     String7   String7      String31             Dates.Date    Dates.Time    Dates.Date     Int64       Int64        Float64          Float64            Float64
+─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ r1          h_75      c_1          2016-03-06 13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200         1.99211            1.30055          -0.0531874
+   2 │ r2          h_219     c_1          2016-07-16 23:39:55  2016-07-20    11:30:00      2016-07-21              2        20600         1.33445           -0.483693         -0.74773
+   3 │ r3          h_179     c_1          2016-09-24 10:03:17  2016-10-19    09:00:00      2016-10-22              2        33600         1.53908           -0.483693         -0.629857
+   4 │ r4          h_214     c_1          2017-03-08 03:20:10  2017-03-29    11:00:00      2017-03-30              4       194400         2.29092            1.30055           0.828138
+   5 │ r5          h_16      c_1          2017-09-05 19:50:37  2017-09-22    10:30:00      2017-09-23              3        68100         1.83948            0.408427         -0.317041
+   6 │ r6          h_241     c_1          2017-11-27 18:47:05  2017-12-04    12:00:00      2017-12-06              3        36000         1.5682             0.408427         -0.608096
+   7 │ r7          h_256     c_1          2017-12-29 10:38:36  2018-01-25    10:30:00      2018-01-28              1       103500         2.01912           -1.37581           0.00393554
+   8 │ r8          h_241     c_1          2018-05-26 08:42:51  2018-06-08    10:00:00      2018-06-09              1         6000         0.845098          -1.37581          -0.88011
+   9 │ r9          h_217     c_2          2016-03-05 13:31:06  2016-03-25    09:30:00      2016-03-27              3        68400         1.84136            0.408427         -0.314321
+  10 │ r10         h_240     c_2          2016-06-25 09:12:22  2016-07-14    11:00:00      2016-07-17              4       320400         2.50705            1.30055           1.9706
+</code></pre></div>
+<h2 id="主成分分析による次元圧縮"><a href="#主成分分析による次元圧縮" class="header-anchor">主成分分析による次元圧縮</a></h2>
+<p>主成分分析によって、データの次元を圧縮するお題です。</p>
+<h3 id="q_主成分分析による次元圧縮"><a href="#q_主成分分析による次元圧縮" class="header-anchor">Q 主成分分析による次元圧縮</a></h3>
+<p>PCAはMultivariateStats.jlで実装されています。 注意点は、データ行列を転置して渡す必要があることです。</p>
+<pre><code class="julia hljs">production_url = <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/production.csv&quot;</span>
+production_df = <span class="hljs-meta">@chain</span> production_url Downloads.download CSV.File DataFrame
+<span class="hljs-keyword">import</span> MultivariateStats
+X = <span class="hljs-meta">@chain</span> production_df <span class="hljs-keyword">begin</span>
+    select(:length,:thickness)
+    <span class="hljs-built_in">Matrix</span>
+    transpose
+<span class="hljs-keyword">end</span>
+M = MultivariateStats.fit(MultivariateStats.PCA, X)
+MultivariateStats.predict(M, X)</code></pre>
+<h2 id="数値の補完"><a href="#数値の補完" class="header-anchor">数値の補完</a></h2>
+<p>この節は欠損値の取り扱いに関してまとめています。 欠損にはいくつか種類があるようです。</p>
+<ul>
+<li><p>MCAR: 完全にランダムな欠損</p>
+</li>
+<li><p>MAR: ほかの項目に依存した欠損</p>
+</li>
+<li><p>MNAR: 欠損したデータに依存した欠損</p>
+</li>
+</ul>
+<p>一番簡単な対処方法は欠損値を削除してしまうことです。 その他の対処方法としては、定数による補完、集計値（平均値・中央値など）による補完、欠損していないデータに基づく予測値によって補完、時系列の関係から補完などがあるようです。</p>
+<h3 id="q_欠損レコードの削除"><a href="#q_欠損レコードの削除" class="header-anchor">Q 欠損レコードの削除</a></h3>
+<p>対象レコードはthicknessに欠損が存在する製造レコードです。 まずデータを読み込む際に、欠損値を表す文字列をしているようにキーワード引数を指定します。 欠損値の除去は<code>dropmissing</code>関数で簡単に行えます。</p>
+<pre><code class="julia hljs">production_missing_url = <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/production_missing_num.csv&quot;</span>
+production_missing_df = <span class="hljs-meta">@chain</span> production_missing_url <span class="hljs-keyword">begin</span>
+    Downloads.download 
+    CSV.File(;missingstring=<span class="hljs-string">&quot;None&quot;</span>) 
+    DataFrame
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-meta">@chain</span> dropmissing(production_missing_df)  first(<span class="hljs-number">10</span>) println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×4 DataFrame
+ Row │ type     length    thickness  fault_flg
+     │ String1  Float64   Float64    Bool
+─────┼─────────────────────────────────────────
+   1 │ E        274.027    40.2411       false
+   2 │ D         86.3193   16.9067       false
+   3 │ E        123.94      1.01846      false
+   4 │ B        175.555    16.4149       false
+   5 │ B        244.935    29.0611       false
+   6 │ B        226.427    39.7638       false
+   7 │ C        331.638    16.8356       false
+   8 │ A        200.865    12.1843       false
+   9 │ C        276.387    29.8996       false
+  10 │ E        168.441     1.26592      false
+</code></pre></div>
+<h3 id="q_定数補完"><a href="#q_定数補完" class="header-anchor">Q 定数補完</a></h3>
+<p>欠損値を1に置き換えます。 missingを置き換えるには、SQLの例と同じく<code>coalesce</code>が利用可能です。</p>
+<pre><code class="julia hljs"><span class="hljs-meta">@chain</span> production_missing_df <span class="hljs-keyword">begin</span>
+    transform(:thickness=&gt;ByRow(c-&gt;coalesce(c,<span class="hljs-number">1</span>))=&gt;:thickness)
+    first(<span class="hljs-number">30</span>) 
+    println
+<span class="hljs-keyword">end</span></code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">30×4 DataFrame
+ Row │ type     length    thickness  fault_flg
+     │ String1  Float64   Real       Bool
+─────┼─────────────────────────────────────────
+   1 │ E        274.027   40.2411        false
+   2 │ D         86.3193  16.9067        false
+   3 │ E        123.94     1.01846       false
+   4 │ B        175.555   16.4149        false
+   5 │ B        244.935   29.0611        false
+   6 │ B        226.427   39.7638        false
+   7 │ C        331.638   16.8356        false
+   8 │ A        200.865   12.1843        false
+   9 │ C        276.387   29.8996        false
+  10 │ E        168.441    1.26592       false
+  11 │ D        218.139   33.1354        false
+  12 │ E        215.179   41.7599        false
+  13 │ D        218.038   11.8363        false
+  14 │ E        218.31    39.5786        false
+  15 │ D        207.823   38.7026        false
+  16 │ E        286.537    5.3755        false
+  17 │ C        239.284   18.9418        false
+  18 │ C        373.655   11.2548        false
+  19 │ E        200.112   17.9743        false
+  20 │ C        326.175   44.3079        false
+  21 │ B        157.573    0.409495      false
+  22 │ B        150.217    8.68243       false
+  23 │ C        358.605   25.7004        false
+  24 │ C        269.006   16.9575        false
+  25 │ B        202.549    1             false
+  26 │ D        223.806   19.6508        false
+  27 │ B        263.844   34.6643        false
+  28 │ B        169.691    1             false
+  29 │ A        131.849    4.7216         true
+  30 │ E        128.99    16.5232        false
+</code></pre></div>
+<h3 id="q_平均値補完"><a href="#q_平均値補完" class="header-anchor">Q 平均値補完</a></h3>
+<p>欠損値に平均値を代入するお題です。 平均を<code>mean</code>関数で計算するにはビルトインモジュールの<code>Statistics.jl</code>をインポートする必要があります。 しかし、欠損値を含んだままで平均を計算すると、計算結果も<code>missing</code>になってしまいます。 各種統計量をまとめて計算可能な<code>describe</code>関数を利用すれば、欠損値があっても平均値を計算可能なので、これを利用することにします。</p>
+<p>平均値を計算した後は、定数補完と同様の処理が可能です。 今回は<code>Chain.jl</code>の<code>@aside</code>マクロを使って、平均値の計算をパイプライン処理の中に入れてました。</p>
+<pre><code class="julia hljs"><span class="hljs-meta">@chain</span> production_missing_df <span class="hljs-keyword">begin</span>
+    <span class="hljs-meta">@aside</span> M = describe(_, :mean,cols=:thickness) <span class="hljs-comment"># 平均値を計算</span>
+    <span class="hljs-meta">@aside</span> thickness_mean = M[!,:mean][<span class="hljs-number">1</span>] <span class="hljs-comment"># データフレームから平均値を取り出す</span>
+    transform(:thickness=&gt;ByRow(c-&gt;coalesce(c,thickness_mean))=&gt;:thickness) <span class="hljs-comment"># 欠損値を平均値で置き換え</span>
+    first(<span class="hljs-number">30</span>) 
+    println
+<span class="hljs-keyword">end</span></code></pre>
+<p><div class="code-output"><pre><code class="plaintext hljs">30×4 DataFrame
+ Row │ type     length    thickness  fault_flg
+     │ String1  Float64   Float64    Bool
+─────┼─────────────────────────────────────────
+   1 │ E        274.027   40.2411        false
+   2 │ D         86.3193  16.9067        false
+   3 │ E        123.94     1.01846       false
+   4 │ B        175.555   16.4149        false
+   5 │ B        244.935   29.0611        false
+   6 │ B        226.427   39.7638        false
+   7 │ C        331.638   16.8356        false
+   8 │ A        200.865   12.1843        false
+   9 │ C        276.387   29.8996        false
+  10 │ E        168.441    1.26592       false
+  11 │ D        218.139   33.1354        false
+  12 │ E        215.179   41.7599        false
+  13 │ D        218.038   11.8363        false
+  14 │ E        218.31    39.5786        false
+  15 │ D        207.823   38.7026        false
+  16 │ E        286.537    5.3755        false
+  17 │ C        239.284   18.9418        false
+  18 │ C        373.655   11.2548        false
+  19 │ E        200.112   17.9743        false
+  20 │ C        326.175   44.3079        false
+  21 │ B        157.573    0.409495      false
+  22 │ B        150.217    8.68243       false
+  23 │ C        358.605   25.7004        false
+  24 │ C        269.006   16.9575        false
+  25 │ B        202.549   19.4704        false
+  26 │ D        223.806   19.6508        false
+  27 │ B        263.844   34.6643        false
+  28 │ B        169.691   19.4704        false
+  29 │ A        131.849    4.7216         true
+  30 │ E        128.99    16.5232        false
+</code></pre></div> 19.4704というのが平均値です。</p>
+<p>公式パッケージには次の多重代入法に関連する<code>Impute.jl</code>というパッケージがあって、こちらを使うともう少しエレガントに処理が可能です。</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Impute
+<span class="hljs-meta">@chain</span> production_missing_df <span class="hljs-keyword">begin</span>
+    Impute.substitute(;statistic=Impute.mean)
+<span class="hljs-keyword">end</span></code></pre>
+<h3 id="q_pmmによる多重代入"><a href="#q_pmmによる多重代入" class="header-anchor">Q PMMによる多重代入</a></h3>
+<p>PMM&#40;Predictive Mean Matching&#41;は、残念ながら<code>Impute.jl</code>では実装されていないようです。<sup id="fnref:1"><a href="#fndef:1" class="fnref">[1]</a></sup> （逆に実装するチャンスともいえます。） おとなしく、RCallやPyCallで処理を呼び出すか、<code>Impute.jl</code>の別の補完法を使うのが良さそうです。</p>
+<p><table class="fndef" id="fndef:1">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:1">[1]</a></td>
+        <td class="fndef-content">他のパッケージもあるにはあるのですが、RCallでwrapしたもののようです。</td>
+    </tr>
+</table>
+ 
+  <div class="prev-next-link">
+  <a class="prev-link" href="/tips/preprocess/unfold">
+    <p class="prev-next-label">前の記事</p>
+    <p>
+       juliaで前処理大全 展開
+    </p>
+  </a>
+</div>
+</p>
+ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+    <script src="https://utteranc.es/client.js"
+        repo="hanafsky/blog_comments"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+<div class="page-foot">
+  <div class="copyright">
+    &copy; Kei Hanafusa. Last modified: August 21, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+  </div>
+</div>
+</div><!-- CONTENT ENDS HERE -->
+
+      </div> <!-- closure of main -->
+    </div>   <!-- closure of class initial--content -->
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+          <ul class="social-icons">
+            <li><strong>Follow:</strong></li>
+            <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+            <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          </ul>
+        </div>
+        <div class="page__footer-copyright">&copy; Kei Hanafusa. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="/libs/minimal-mistakes/main.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <script src="/libs/myBtn/myBtn.js"></script>
+    <script src="/libs/luminous/Luminous.min.js"></script>
+    <script src="/libs/clipboard.min.js"></script>
+
+    
+        
+
+
+
+    
+    
+        
+
+
+        <!-- http://tutsplus.github.io/clipboard/ -->
+
+<script>
+	(function(){
+	
+		// Get the elements.
+		// - the 'pre' element.
+		// - the 'div' with the 'paste-content' id.
+	
+		var pre = document.getElementsByTagName('pre');
+	
+		// Add a copy button in the 'pre' element.
+		// which only has the className of 'language-'.
+	
+		for (var i = 0; i < pre.length; i++) {
+			var isLanguage = pre[i].children[0].className.indexOf('language-');
+	
+			if ( isLanguage === 0 ) {
+				var button           = document.createElement('button');
+						button.className = 'copy-button';
+						button.textContent = 'Copy';
+	
+						pre[i].appendChild(button);
+			}
+		};
+	
+		// Run Clipboard
+	
+		var copyCode = new ClipboardJS('.copy-button', {
+			target: function(trigger) {
+				return trigger.previousElementSibling;
+		}
+		});
+	
+		// On success:
+		// - Change the "Copy" text to "Copied".
+		// - Swap it to "Copy" in 2s.
+		// - Lead user to the "contenteditable" area with Velocity scroll.
+	
+		copyCode.on('success', function(event) {
+			event.clearSelection();
+			event.trigger.textContent = 'Copied';
+			window.setTimeout(function() {
+				event.trigger.textContent = 'Copy';
+			}, 2000);
+	
+		});
+	
+		// On error (Safari):
+		// - Change the  "Press Ctrl+C to copy"
+		// - Swap it to "Copy" in 2s.
+	
+		copyCode.on('error', function(event) {
+			event.trigger.textContent = 'Press "Ctrl + C" to copy';
+			window.setTimeout(function() {
+				event.trigger.textContent = 'Copy';
+			}, 5000);
+		});
+	
+	})();
+	</script>
+        <!-- {{ insert foot_copy.html }} -->
+    
+    
+        <script src="/libs/mermaid/mermaid.min.js"></script>
+<script>
+  var config
+  mermaid.initialize({
+    theme: 'neutral',
+    themeCSS: '\
+               .mermaid-main-font {font-family:"Noto Sans JP"};\
+               .section0, .section2{fill:#fadbda;opacity:0.3;};\
+               .task0, .task1, .task2, .task3 {fill:#fadbda; stroke:#f6bdc0; stroke-width:1};\
+               .grid {stroke:#666;stroke-width:0.5};\
+               .node rect,\
+               .node circle,\
+               .node ellipse,\
+               .node path,\
+               .node polygon\
+               {fill:rgba(253,237,228,0.5);\
+                stroke: rgb(246,189,192)};\
+               .arrowheadPath {fill:rgb(246,189,192);}\
+               .edgePath .path {stroke:rgb(246,189,192);};\
+               .cluster rect\
+               {fill:rgba(255,249,177,0.3);\
+                stroke:rgb(246,189,192)};\
+               ',
+    // themeCSS: '.node rect {fill:rgba(253,237,228,0.5); stroke: rgb(250,219,218)};',
+    // logLevel: 3,
+    // securityLevel: 'loose',
+    // flowchart: { curve: 'basis' }
+  });
+</script>
+    
+    <script>
+    new LuminousGallery(document.querySelectorAll('.zoom'));
+</script>
+    <script>
+function myToc() {
+    var x = document.getElementsByClassName("mytoc");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  } 
+</script>
+  </body>
+</html>
