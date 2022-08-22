@@ -14,6 +14,8 @@
 @def hasmermaid=true
 
 # juliaで前処理大全 4.結合
+\titleimage{/assets/tips/preprocess.jpg}{https://pixabay.com/photos/food-salad-raw-carrots-1209503/}
+\share{tips/preprocess/}{juliaで前処理大全}
 
 juliaで前処理大全その3です。今回は結合を扱います。
 
@@ -331,6 +333,8 @@ first(summary_result,10) |> println
 
 この章の問題はかなり難しいため、問題を理解するのもコードを考えるのも、かなり骨が折れました。
 しかし、自前で関数を用意する考えや、DataFrames.jlとChain.jlのおかげで、本のコードに勝るとも劣らない非常に\marker{Awesome}な処理ができたのではないかと思います。
+\right{つづく}
+\share{tips/preprocess/}{juliaで前処理大全}
 \prevnext{/tips/preprocess/aggregation}{juliaで前処理大全 集約}{/tips/preprocess/split}{juliaで前処理大全 分割}
 
 \backtotop

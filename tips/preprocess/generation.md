@@ -14,6 +14,8 @@
 @def hasmermaid=true
 
 # juliaで前処理大全 6.生成
+\titleimage{/assets/tips/preprocess.jpg}{https://pixabay.com/photos/food-salad-raw-carrots-1209503/}
+\share{tips/preprocess/}{juliaで前処理大全}
 
 juliaで前処理大全その5です。今回は生成をテーマに扱います。
 章のテーマとしては不均衡なデータを取り扱う手法について述べています。
@@ -115,6 +117,8 @@ savefig(p2, joinpath(@OUTPUT,"5-2.svg")) # hide
 
 
 
+\right{つづく}
+\share{tips/preprocess/}{juliaで前処理大全}
 \prev{/tips/preprocess/split}{juliaで前処理大全 分割}
 
 \backtotop

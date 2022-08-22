@@ -362,7 +362,7 @@ DataFrame(a=[1,1,2],b=["a","a","b"]) |> unique
 ```
 
 \right{つづく}
-\share{tips/savgol/}{ノイズを含むデータの微分 - Savitzky-Golay filter}
+\share{tips/preprocess/}{juliaで前処理大全}
 \prevnext{/tips/preprocess}{juliaで前処理大全}{/tips/preprocess/aggregation}{juliaで前処理大全 集約}
 \backtotop
 

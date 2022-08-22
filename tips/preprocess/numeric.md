@@ -14,6 +14,8 @@
 @def hasmermaid=true
 
 # juliaで前処理大全 8.数値型
+\titleimage{/assets/tips/preprocess.jpg}{https://pixabay.com/photos/food-salad-raw-carrots-1209503/}
+\share{tips/preprocess/}{juliaで前処理大全}
 
 juliaで前処理大全その7です。今回は数値型を取り扱います。
 
@@ -219,7 +221,9 @@ PMM(Predictive Mean Matching)は、残念ながら``Impute.jl``では実装さ�
 
 [^1]: 他のパッケージもあるにはあるのですが、RCallでwrapしたもののようです。
 
-\prev{/tips/preprocess/unfold}{juliaで前処理大全 展開}
+\right{つづく}
+\share{tips/preprocess/}{juliaで前処理大全}
+\prevnext{/tips/preprocess/unfold}{juliaで前処理大全 展開}{/tips/preprocess/category}{juliaで前処理大全 カテゴリ型}
 
 \backtotop
 

@@ -227,6 +227,7 @@ end
 \prettyshow{ex11-preprocess2}
 
 
+\right{つづく}
 \share{tips/preprocess/}{juliaで前処理大全}
 \prevnext{/tips/preprocess/extraction}{juliaで前処理大全 抽出}{/tips/preprocess/join}{juliaで前処理大全 結合}
 \backtotop

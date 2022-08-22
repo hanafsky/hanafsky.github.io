@@ -15,6 +15,8 @@
 @def hasmermaid=true
 
 # juliaで前処理大全 7.展開
+\titleimage{/assets/tips/preprocess.jpg}{https://pixabay.com/photos/food-salad-raw-carrots-1209503/}
+\share{tips/preprocess/}{juliaで前処理大全}
 
 juliaで前処理大全その6です。今回は展開をテーマに扱います。
 
@@ -109,6 +111,8 @@ Matrix(sp_data) |> println
 
 少々冗長な書き方になってしまいました。私がCategoricalArrays.jlの使い方に習熟していないせいかもしれませんが、このあたりはまだjuliaの未成熟な領域かと思われます。
 
+\right{つづく}
+\share{tips/preprocess/}{juliaで前処理大全}
 \prevnext{/tips/preprocess/generation}{juliaで前処理大全 生成}{/tips/preprocess/numeric}{juliaで前処理大全 数値型}
 
 \backtotop

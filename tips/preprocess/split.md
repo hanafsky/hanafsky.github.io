@@ -15,6 +15,8 @@
 @def hasmermaid=true
 
 # juliaで前処理大全 5.分割
+\titleimage{/assets/tips/preprocess.jpg}{https://pixabay.com/photos/food-salad-raw-carrots-1209503/}
+\share{tips/preprocess/}{juliaで前処理大全}
 
 juliaで前処理大全その4です。今回は分割をテーマに扱います。
 
@@ -104,6 +106,8 @@ let
 end    
 ```
 
+\right{つづく}
+\share{tips/preprocess/}{juliaで前処理大全}
 \prevnext{/tips/preprocess/join}{juliaで前処理大全 結合}{/tips/preprocess/generation}{juliaで前処理大全 生成}
 
 \backtotop
