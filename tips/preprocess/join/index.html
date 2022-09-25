@@ -104,6 +104,29 @@
 
 <!-- Content appended here -->
 <div class="franklin-content"><h1 id="juliaで前処理大全_4結合"><a href="#juliaで前処理大全_4結合" class="header-anchor">juliaで前処理大全 4.結合</a></h1>
+<p><div class="titleimage"><img src="/assets/tips/preprocess.jpg" alt="" >
+<div style="text-align:right; font-size:small; color:grey">(src=https://pixabay.com/photos/food-salad-raw-carrots-1209503/)</div></div> 
+<div class="sns-container top">
+  <div class="sns-box b-twitter">
+    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/preprocess/&text=juliaで前処理大全&via=HanafusaKei&related=HanafusaKei"
+    target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
+  <div class="sns-box b-facebook">
+    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/preprocess/" 
+    target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+  <div class="sns-box b-hatena">
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/preprocess/&title=juliaで前処理大全"
+    target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
+  <div class="sns-box b-pocket">
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/preprocess/&title=juliaで前処理大全"
+    rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
+  <div class="sns-box b-feedly">
+    <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
+    rel="nofollow" target="_blank"><span class="icon-feedly"></i></a></div>
+  <div class="sns-box b-line">
+    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/preprocess/'
+    target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
+</div>
+</p>
 <p>juliaで前処理大全その3です。今回は結合を扱います。</p>
 <div class="franklin-toc"><ol><li><a href="#準備">準備</a></li><li><a href="#結合">結合</a><ol><li><a href="#マスターテーブルの結合">マスターテーブルの結合</a></li><li><a href="#条件に応じた結合テーブルの切り替え">条件に応じた結合テーブルの切り替え</a></li><li><a href="#過去データの結合">過去データの結合</a></li><li><a href="#全結合">全結合</a></li></ol></li></ol></div>
 <h2 id="準備"><a href="#準備" class="header-anchor">準備</a></h2>
@@ -218,25 +241,7 @@ graph TD
   first(_,<span class="hljs-number">15</span>) <span class="hljs-comment"># 15件目のレコードまで選択</span>
   println
 <span class="hljs-keyword">end</span></code></pre>
-<div class="code-output"><pre><code class="plaintext hljs">15×4 DataFrame
- Row │ customer_id  reserve_datetime     total_price  before_price
-     │ String7      Dates.DateTime       Int64        Int64?
-─────┼─────────────────────────────────────────────────────────────
-   1 │ c_1          2016-03-06T13:09:42        97200       missing
-   2 │ c_1          2016-07-16T23:39:55        20600       missing
-   3 │ c_1          2016-09-24T10:03:17        33600         97200
-   4 │ c_1          2017-03-08T03:20:10       194400         20600
-   5 │ c_1          2017-09-05T19:50:37        68100         33600
-   6 │ c_1          2017-11-27T18:47:05        36000        194400
-   7 │ c_1          2017-12-29T10:38:36       103500         68100
-   8 │ c_1          2018-05-26T08:42:51         6000         36000
-   9 │ c_2          2016-03-05T13:31:06        68400       missing
-  10 │ c_2          2016-06-25T09:12:22       320400       missing
-  11 │ c_2          2016-11-19T12:49:10        29700         68400
-  12 │ c_2          2017-05-24T10:06:21        81600        320400
-  13 │ c_2          2017-10-19T03:03:30       137000         29700
-  14 │ c_2          2018-02-18T05:12:58        75600         81600
-  15 │ c_2          2018-04-19T11:25:00        68800        137000
+<div class="code-output"><pre><code class="plaintext hljs">UndefVarError: lag not defined
 </code></pre></div>
 <p>初回と2回目の予約レコードについては、前々回の支払金額がmissingとして追加されていることがわかります。</p>
 <h4 id="q_過去n件の合計値"><a href="#q_過去n件の合計値" class="header-anchor">Q 過去n件の合計値</a></h4>
@@ -442,7 +447,28 @@ first(summary_result,<span class="hljs-number">10</span>) |&gt; println</code></
    9 │ c_3          2017-03-01      18200
   10 │ c_4          2017-01-01          0
 </code></pre></div> 本の通りの答えが得られていると思います。</p>
-<p>この章の問題はかなり難しいため、問題を理解するのもコードを考えるのも、かなり骨が折れました。 しかし、自前で関数を用意する考えや、DataFrames.jlとChain.jlのおかげで、本のコードに勝るとも劣らない非常に<span class="marker"> Awesome</span>な処理ができたのではないかと思います。 
+<p>この章の問題はかなり難しいため、問題を理解するのもコードを考えるのも、かなり骨が折れました。 しかし、自前で関数を用意する考えや、DataFrames.jlとChain.jlのおかげで、本のコードに勝るとも劣らない非常に<span class="marker"> Awesome</span>な処理ができたのではないかと思います。  <p style="text-align:right">  つづく </p> 
+<div class="sns-container top">
+  <div class="sns-box b-twitter">
+    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/preprocess/&text=juliaで前処理大全&via=HanafusaKei&related=HanafusaKei"
+    target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
+  <div class="sns-box b-facebook">
+    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/preprocess/" 
+    target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+  <div class="sns-box b-hatena">
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/preprocess/&title=juliaで前処理大全"
+    target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
+  <div class="sns-box b-pocket">
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/preprocess/&title=juliaで前処理大全"
+    rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
+  <div class="sns-box b-feedly">
+    <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
+    rel="nofollow" target="_blank"><span class="icon-feedly"></i></a></div>
+  <div class="sns-box b-line">
+    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/preprocess/'
+    target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
+</div>
+ 
   <div class="prev-next-link">
   <a class="prev-link" href="/tips/preprocess/aggregation">
     <p class="prev-next-label">前の記事</p>
@@ -461,7 +487,7 @@ first(summary_result,<span class="hljs-number">10</span>) |&gt; println</code></
  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: August 21, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: September 25, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

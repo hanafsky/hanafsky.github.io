@@ -1,0 +1,14 @@
+10×3 DataFrame
+ Row │ age    sex      sex_and_age
+     │ Int64  String7  Cat…
+─────┼─────────────────────────────
+   1 │    41  man      40_man
+   2 │    38  man      30_man
+   3 │    49  woman    40_woman
+   4 │    43  man      40_man
+   5 │    31  man      30_man
+   6 │    52  man      50_man
+   7 │    50  man      50_man
+   8 │    65  woman    60_woman
+   9 │    36  woman    30_woman
+  10 │    34  woman    30_woman

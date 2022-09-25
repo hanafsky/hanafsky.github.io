@@ -1,0 +1,1 @@
+levels(customer_df.sex_c) = InlineStrings.String7["man", "woman"]

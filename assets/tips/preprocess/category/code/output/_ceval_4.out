@@ -1,0 +1,1 @@
+ArgumentError: CategoricalArray only supports AbstractString, AbstractChar and Number element types (got element type Any)

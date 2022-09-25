@@ -184,11 +184,11 @@ println(first(reserve_df))</code></pre>
 <p>左側の計算結果を、次の関数の最初に引数として扱ってくれるからです。 この@chainマクロが何をしているか展開して確認してみると</p>
 <pre><code class="julia hljs"><span class="hljs-keyword">using</span> Chain
 <span class="hljs-meta">@macroexpand</span> <span class="hljs-meta">@chain</span> <span class="hljs-number">1</span> add(<span class="hljs-number">2</span>) add(<span class="hljs-number">3</span>) add(<span class="hljs-number">4</span>)</code></pre><pre><code class="plaintext hljs">quote
-    local var&quot;##501&quot; = 1
-    local var&quot;##502&quot; = add(var&quot;##501&quot;, 2)
-    local var&quot;##503&quot; = add(var&quot;##502&quot;, 3)
-    local var&quot;##504&quot; = add(var&quot;##503&quot;, 4)
-    var&quot;##504&quot;
+    local var&quot;##529&quot; = 1
+    local var&quot;##530&quot; = add(var&quot;##529&quot;, 2)
+    local var&quot;##531&quot; = add(var&quot;##530&quot;, 3)
+    local var&quot;##532&quot; = add(var&quot;##531&quot;, 4)
+    var&quot;##532&quot;
 end</code></pre>
 <h4 id="複数行で実行"><a href="#複数行で実行" class="header-anchor">複数行で実行</a></h4>
 <p>複数行で実行したい場合は、<code>begin-end</code>環境で囲います。 最初の例でやってみましょう。</p>
@@ -205,11 +205,11 @@ end</code></pre>
   <span class="hljs-built_in">String</span>(take!(_))
   CSV.read(<span class="hljs-built_in">IOBuffer</span>(_),DataFrame)
 <span class="hljs-keyword">end</span>) |&gt;Base.remove_linenums!</code></pre><pre><code class="plaintext hljs">quote
-    local var&quot;##509&quot; = reserve_url
-    local var&quot;##510&quot; = Downloads.download(var&quot;##509&quot;, IOBuffer())
-    local var&quot;##511&quot; = String(take!(var&quot;##510&quot;))
-    local var&quot;##512&quot; = CSV.read(IOBuffer(var&quot;##511&quot;), DataFrame)
-    var&quot;##512&quot;
+    local var&quot;##537&quot; = reserve_url
+    local var&quot;##538&quot; = Downloads.download(var&quot;##537&quot;, IOBuffer())
+    local var&quot;##539&quot; = String(take!(var&quot;##538&quot;))
+    local var&quot;##540&quot; = CSV.read(IOBuffer(var&quot;##539&quot;), DataFrame)
+    var&quot;##540&quot;
 end</code></pre>
 <h4 id="asideマクロ"><a href="#asideマクロ" class="header-anchor">@asideマクロ</a></h4>
 <p>パイプライン処理の途中の結果で何かをしたいときには、@asideマクロが使えます。 そのうち使うかもしれません。</p>
@@ -275,9 +275,9 @@ println(first(testdf))</code></pre>
 <pre><code class="julia hljs"><span class="hljs-meta">@time</span> testdf[:,[<span class="hljs-string">&quot;a%&quot;</span>,<span class="hljs-string">&quot;b(m/s)&quot;</span>]]
 println()
 <span class="hljs-meta">@time</span> testdf[!,[<span class="hljs-string">&quot;a%&quot;</span>,<span class="hljs-string">&quot;b(m/s)&quot;</span>]]</code></pre>
-<div class="code-output"><pre><code class="plaintext hljs">  0.012607 seconds (10.64 k allocations: 2.098 MiB, 92.25% compilation time)
+<div class="code-output"><pre><code class="plaintext hljs">  0.012177 seconds (10.64 k allocations: 2.099 MiB, 92.08% compilation time)
 
-  0.000039 seconds (22 allocations: 1.734 KiB)
+  0.000034 seconds (22 allocations: 1.734 KiB)
 </code></pre></div></div></div>
 <h4 id="select_関数"><a href="#select_関数" class="header-anchor">select 関数</a></h4>
 <p>列を抽出するには、select 関数も利用できます。</p>
@@ -371,22 +371,22 @@ println(first(sdf))</code></pre>
 <p> <p style="text-align:right">  つづく </p> 
 <div class="sns-container top">
   <div class="sns-box b-twitter">
-    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/savgol/&text=ノイズを含むデータの微分 - Savitzky-Golay filter&via=HanafusaKei&related=HanafusaKei"
+    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/preprocess/&text=juliaで前処理大全&via=HanafusaKei&related=HanafusaKei"
     target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
   <div class="sns-box b-facebook">
-    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/savgol/" 
+    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/preprocess/" 
     target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
   <div class="sns-box b-hatena">
-    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/savgol/&title=ノイズを含むデータの微分 - Savitzky-Golay filter"
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/preprocess/&title=juliaで前処理大全"
     target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
   <div class="sns-box b-pocket">
-    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/savgol/&title=ノイズを含むデータの微分 - Savitzky-Golay filter"
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/preprocess/&title=juliaで前処理大全"
     rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
   <div class="sns-box b-feedly">
     <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
     rel="nofollow" target="_blank"><span class="icon-feedly"></i></a></div>
   <div class="sns-box b-line">
-    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/savgol/'
+    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/preprocess/'
     target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
 </div>
  
@@ -416,7 +416,7 @@ println(first(sdf))</code></pre>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: August 21, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: September 25, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

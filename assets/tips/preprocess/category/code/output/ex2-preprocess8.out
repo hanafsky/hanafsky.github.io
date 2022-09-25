@@ -1,0 +1,24 @@
+20×7 DataFrame
+ Row │ customer_id  age    sex      home_latitude  home_longitude  sex_c  age_rank
+     │ String7      Int64  String7  Float64        Float64         Cat…   Cat…
+─────┼─────────────────────────────────────────────────────────────────────────────
+   1 │ c_1             41  man            35.0922         136.512  man    40
+   2 │ c_2             38  man            35.3251         139.411  man    30
+   3 │ c_3             49  woman          35.1205         136.511  woman  40
+   4 │ c_4             43  man            43.0349         141.24   man    40
+   5 │ c_5             31  man            35.1027         136.524  man    30
+   6 │ c_6             52  man            34.4408         135.39   man    50
+   7 │ c_7             50  man            43.0158         141.231  man    50
+   8 │ c_8             65  woman          38.2013         140.466  woman  60
+   9 │ c_9             36  woman          33.3228         130.331  woman  30
+  10 │ c_10            34  woman          34.2904         132.303  woman  30
+  11 │ c_11            73  man            33.3056         130.301  man    60
+  12 │ c_12            46  man            34.3033         132.304  man    40
+  13 │ c_13            47  woman          43.0126         141.242  woman  40
+  14 │ c_14            79  woman          43.0146         141.225  woman  60
+  15 │ c_15            25  woman          43.0219         141.242  woman  20
+  16 │ c_16            63  woman          34.3132         132.281  woman  60
+  17 │ c_17            48  woman          35.0855         136.555  woman  40
+  18 │ c_18            72  man            43.0131         141.27   man    60
+  19 │ c_19            38  man            34.4756         135.364  man    30
+  20 │ c_20            43  woman          34.4411         135.393  woman  40

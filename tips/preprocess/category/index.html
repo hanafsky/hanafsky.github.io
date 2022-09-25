@@ -1,0 +1,510 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="/css/franklin.css">
+<link rel="stylesheet" href="/css/extra.css">
+<link rel="stylesheet" href="/css/minimal-mistakes.css">
+<link rel="stylesheet" href="/css/adjust.css">
+<link rel="stylesheet" href="/css/luminous-basic.min.css">
+<link rel="icon" href="/assets/favicon.ico">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<!--[if IE ]>
+<style>
+  /* old IE unsupported flexbox fixes */
+  .greedy-nav .site-title {
+    padding-right: 3em;
+  }
+  .greedy-nav button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+</style>
+<![endif]-->
+
+   <title>juliaで前処理大全8</title>  
+  <!-- end custom head snippets -->
+</head>
+<body class="layout--single">
+  <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Hanafsky.com</a>
+        <ul class="visible-links">
+          <li class="masthead__menu-item"><a href="/tips/" >Julia-tips</a></li>
+          <li class="masthead__menu-item"><a href="/blog/" >Blog</a></li>
+          <li class="masthead__menu-item"><a href="/project/" >Projects</a></li>
+          <li class="masthead__menu-item"><a href="/about/">About</a></li>
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+  <div class="initial-content">
+    <div id="main" role="main">
+      <div class="sidebar sticky">
+        <div itemscope itemtype="https://schema.org/Person">
+          <div class="author__avatar">
+            <img src="/assets/design/author3.png" alt="Dio" itemprop="image">
+          </div>
+          <div class="author__content">
+            <h3 class="author__name" itemprop="name">Kei Hanafusa</h3>
+            <p class="author__bio" itemprop="description">Chemical Engineer, <br> living in Osaka, 🗾</p>
+          </div>
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Follow</button>
+            <ul class="author__urls social-icons">
+              <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+                <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Osaka, Japan</span></li>
+              <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+              <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+            </ul>
+          </div>
+
+          
+          
+              
+
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Tag</button>
+            <ul class="author__urls social-icons">
+              <li>タグ</li>
+              <li></li>
+              <li><a href="/tag/setting/">設定</a></li>
+              <li><a href="/tag/thirdparty/">サードパーティライブラリ</a></li>
+              <li><a href="/tag/recipe">レシピ</a></li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+
+
+<!-- Content appended here -->
+<div class="franklin-content"><h1 id="juliaで前処理大全_9カテゴリ型"><a href="#juliaで前処理大全_9カテゴリ型" class="header-anchor">juliaで前処理大全 9.カテゴリ型</a></h1>
+<p>juliaで前処理大全その8です。今回はカテゴリ型を取り扱います。</p>
+<div class="franklin-toc"><ol><li><a href="#カテゴリ型への変換">カテゴリ型への変換</a><ol><li><a href="#q_カテゴリ型の変換">Q カテゴリ型の変換</a></li></ol></li><li><a href="#ダミー変数化">ダミー変数化</a><ol><li><a href="#q_ダミー変数化">Q ダミー変数化</a></li></ol></li><li><a href="#カテゴリ値の集約">カテゴリ値の集約</a><ol><li><a href="#q_カテゴリ値の集約">Q カテゴリ値の集約</a></li></ol></li><li><a href="#カテゴリ値の組み合わせ">カテゴリ値の組み合わせ</a><ol><li><a href="#q_カテゴリ値の組み合わせ">Q カテゴリ値の組み合わせ</a></li></ol></li><li><a href="#カテゴリ型の数値化">カテゴリ型の数値化</a><ol><li><a href="#q_カテゴリ型の数値化">Q カテゴリ型の数値化</a></li></ol></li><li><a href="#カテゴリ型の補完">カテゴリ型の補完</a><ol><li><a href="#q_knnによる補完">Q KNNによる補完</a></li></ol></li></ol></div>
+<h2 id="カテゴリ型への変換"><a href="#カテゴリ型への変換" class="header-anchor">カテゴリ型への変換</a></h2>
+<h3 id="q_カテゴリ型の変換"><a href="#q_カテゴリ型の変換" class="header-anchor">Q カテゴリ型の変換</a></h3>
+<p>CategoricalArrays.jlを使うとカテゴリ型に変換できます。</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> DataFrames,CSV,Chain,Downloads
+<span class="hljs-keyword">using</span> CategoricalArrays
+customer_url = <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/customer.csv&quot;</span>
+
+customer_df = <span class="hljs-meta">@chain</span> customer_url <span class="hljs-keyword">begin</span> 
+                    Downloads.download 
+                    CSV.File 
+                    DataFrame
+                    DataFrames.transform(:sex=&gt;categorical=&gt;:sex_c)
+                    <span class="hljs-keyword">end</span>
+first(customer_df,<span class="hljs-number">10</span>) |&gt; println</code></pre><pre><code class="plaintext hljs">10×6 DataFrame
+ Row │ customer_id  age    sex      home_latitude  home_longitude  sex_c
+     │ String7      Int64  String7  Float64        Float64         Cat…
+─────┼───────────────────────────────────────────────────────────────────
+   1 │ c_1             41  man            35.0922         136.512  man
+   2 │ c_2             38  man            35.3251         139.411  man
+   3 │ c_3             49  woman          35.1205         136.511  woman
+   4 │ c_4             43  man            43.0349         141.24   man
+   5 │ c_5             31  man            35.1027         136.524  man
+   6 │ c_6             52  man            34.4408         135.39   man
+   7 │ c_7             50  man            43.0158         141.231  man
+   8 │ c_8             65  woman          38.2013         140.466  woman
+   9 │ c_9             36  woman          33.3228         130.331  woman
+  10 │ c_10            34  woman          34.2904         132.303  woman
+</code></pre>
+<p>カテゴリ型のマスターデータには、Rの場合と同じく、levels関数でアクセスできます。</p>
+<pre><code class="julia hljs"><span class="hljs-meta">@show</span> levels(customer_df.sex_c)</code></pre><pre><code class="plaintext hljs">levels(customer_df.sex_c) = InlineStrings.String7[&quot;man&quot;, &quot;woman&quot;]
+</code></pre>
+<p>カテゴリ型のインデックスを取得するには<code>refs</code>というフィールドを取得すれば、閲覧可能です。 ただし、UInt型なので、Int型に変換して見やすくしています。</p>
+<pre><code class="julia hljs"><span class="hljs-meta">@show</span> customer_df.sex_c.refs .|&gt; <span class="hljs-built_in">Int</span></code></pre><pre><code class="plaintext hljs">customer_df.sex_c.refs .|&gt; Int = [1, 1, 2, 1, 1, 1, 1, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1, 1, 1, 2, 2, 1, 2, 2, 1, 1, 2, 2, 2, 1, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 2, 2, 2, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 2, 2, 2, 1, 1, 2, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 2, 1, 1, 2, 2, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 2, 2, 2, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 1, 2, 1, 2, 2, 2, 2, 2, 1, 1, 2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 2, 2, 1, 1, 1, 2, 1, 2, 2, 1, 2, 1, 2, 2, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 2, 1, 2, 1, 2, 2, 1, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 2, 2, 2, 1, 1, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 1, 1, 2, 1, 2, 2, 2, 2, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 1, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 2, 2, 2, 1, 1, 2, 1, 2, 2, 1, 1, 2, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2, 1, 1, 1, 2, 2, 2, 1, 1, 2, 2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 1, 1, 1, 1, 2, 2, 1, 1, 2, 2, 2, 2, 1, 1, 2, 1, 1, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 2, 2, 1, 2, 2, 2, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 2, 2, 2, 1, 1, 2, 1, 2, 2, 2, 2, 1, 1, 2, 2, 2, 1, 1, 2, 2, 2, 1, 2, 1, 1, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 2, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 2, 1, 1, 1, 2, 2, 2, 1, 2, 2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 1, 2, 1, 2, 2, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 2, 2, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1, 1, 1, 2, 2, 1, 2, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 2, 1, 1, 1, 2, 1, 2, 2, 1, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 1, 1, 2, 1, 2, 1, 1, 2, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 1, 2, 2, 2, 2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 1, 1, 2, 2, 1, 2, 1, 2, 1, 1, 2, 2, 1, 2, 1, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 2, 2, 2, 1, 1, 2, 2, 1, 2, 2, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 2, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 2, 1]
+</code></pre>
+<p>インデックスの順番を自分好みに変えることもできます。</p>
+<pre><code class="julia hljs">levels(customer_df.sex_c, [<span class="hljs-string">&quot;woman&quot;</span>,<span class="hljs-string">&quot;man&quot;</span>])</code></pre>
+<h2 id="ダミー変数化"><a href="#ダミー変数化" class="header-anchor">ダミー変数化</a></h2>
+<h3 id="q_ダミー変数化"><a href="#q_ダミー変数化" class="header-anchor">Q ダミー変数化</a></h3>
+<p>文字のカテゴリをダミー変数化します。いわゆる<code>One hot encoding</code>という処理です。 juliaではいくつかこの機能を備えたパッケージはありますが、 大して難しいコードでもないので、パイプライン処理の中に自分で書いてしまっても良さそうです。 <a href="https://discourse.julialang.org/t/all-the-ways-to-do-one-hot-encoding/64807/2">こちら</a>のdiscourseの議論を参考にしてみました。ski先生流の書き方ならこのようになります。</p>
+<pre><code class="julia hljs"><span class="hljs-meta">@chain</span> customer_df <span class="hljs-keyword">begin</span>
+    select(:sex, [:sex=&gt;ByRow(isequal(v))=&gt;<span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&quot;sex_is_&quot;</span>*v) <span class="hljs-keyword">for</span> v <span class="hljs-keyword">in</span> unique(customer_df.sex)])
+    first(<span class="hljs-number">10</span>)
+    println
+<span class="hljs-keyword">end</span></code></pre>
+<p><div class="code-output"><pre><code class="plaintext hljs">10×3 DataFrame
+ Row │ sex      sex_is_man  sex_is_woman
+     │ String7  Bool        Bool
+─────┼───────────────────────────────────
+   1 │ man            true         false
+   2 │ man            true         false
+   3 │ woman         false          true
+   4 │ man            true         false
+   5 │ man            true         false
+   6 │ man            true         false
+   7 │ man            true         false
+   8 │ woman         false          true
+   9 │ woman         false          true
+  10 │ woman         false          true
+</code></pre></div> パイプライン処理の中で行えるので、Awesomeだと思います。</p>
+<p>行列とブロードキャストを利用したエレガントな別解もあります。</p>
+<pre><code class="julia hljs">customer_df.sex .== permutedims(unique(customer_df.sex))</code></pre>
+<div class="note"><div class="title">😲 Note</div>
+<div class="content"><code>permutedims</code>はベクトルを1行のマトリックスに変換してくれるbuiltin関数です。</div></div>
+<h2 id="カテゴリ値の集約"><a href="#カテゴリ値の集約" class="header-anchor">カテゴリ値の集約</a></h2>
+<h3 id="q_カテゴリ値の集約"><a href="#q_カテゴリ値の集約" class="header-anchor">Q カテゴリ値の集約</a></h3>
+<p>60歳以上のカテゴリ値を1つに集約するお題です。 まず、数値型の例と同様にCategoricalArrays.jlを使ってカテゴリ型に変更します。 CategoricalArrayがAny型をサポートしていないため、<code>replace&#33;</code>関数で60歳以上のカテゴリを60に入れてしまうことにしました。</p>
+<pre><code class="julia hljs">transform!(customer_df, :age=&gt;ByRow(c-&gt;<span class="hljs-number">10</span>floor(<span class="hljs-built_in">Int</span>,c/<span class="hljs-number">10</span>))=&gt;:age_rank)
+transform!(customer_df, :age_rank=&gt;categorical=&gt;:age_rank)
+replace!(customer_df.age_rank,[<span class="hljs-number">70</span>,<span class="hljs-number">80</span>]=&gt;<span class="hljs-number">60</span>)
+first(customer_df,<span class="hljs-number">20</span>) |&gt; println</code></pre>
+<p><div class="code-output"><pre><code class="plaintext hljs">20×7 DataFrame
+ Row │ customer_id  age    sex      home_latitude  home_longitude  sex_c  age_rank
+     │ String7      Int64  String7  Float64        Float64         Cat…   Cat…
+─────┼─────────────────────────────────────────────────────────────────────────────
+   1 │ c_1             41  man            35.0922         136.512  man    40
+   2 │ c_2             38  man            35.3251         139.411  man    30
+   3 │ c_3             49  woman          35.1205         136.511  woman  40
+   4 │ c_4             43  man            43.0349         141.24   man    40
+   5 │ c_5             31  man            35.1027         136.524  man    30
+   6 │ c_6             52  man            34.4408         135.39   man    50
+   7 │ c_7             50  man            43.0158         141.231  man    50
+   8 │ c_8             65  woman          38.2013         140.466  woman  60
+   9 │ c_9             36  woman          33.3228         130.331  woman  30
+  10 │ c_10            34  woman          34.2904         132.303  woman  30
+  11 │ c_11            73  man            33.3056         130.301  man    60
+  12 │ c_12            46  man            34.3033         132.304  man    40
+  13 │ c_13            47  woman          43.0126         141.242  woman  40
+  14 │ c_14            79  woman          43.0146         141.225  woman  60
+  15 │ c_15            25  woman          43.0219         141.242  woman  20
+  16 │ c_16            63  woman          34.3132         132.281  woman  60
+  17 │ c_17            48  woman          35.0855         136.555  woman  40
+  18 │ c_18            72  man            43.0131         141.27   man    60
+  19 │ c_19            38  man            34.4756         135.364  man    30
+  20 │ c_20            43  woman          34.4411         135.393  woman  40
+</code></pre></div> <div class="warning"><div class="title">😕 Warning&#33;</div>
+<div class="content"><p>StringとNumberが混在するAny型の配列をCategoricalArrayに変換しようとするとエラーがでます。</p>
+<pre><code class="julia hljs">categorical([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-string">&quot;3&quot;</span>])</code></pre><pre><code class="plaintext hljs">ArgumentError: CategoricalArray only supports AbstractString, AbstractChar and Number element types (got element type Any)
+</code></pre></div></div></p>
+<h2 id="カテゴリ値の組み合わせ"><a href="#カテゴリ値の組み合わせ" class="header-anchor">カテゴリ値の組み合わせ</a></h2>
+<h3 id="q_カテゴリ値の組み合わせ"><a href="#q_カテゴリ値の組み合わせ" class="header-anchor">Q カテゴリ値の組み合わせ</a></h3>
+<p>年代と性別の組み合わせを使ってカテゴリ値を作るお題です。 <code>string</code>関数を使って簡単に実装できます。</p>
+<pre><code class="julia hljs"><span class="hljs-meta">@chain</span> customer_df <span class="hljs-keyword">begin</span>
+    select(:age,:sex, [:age,:sex]=&gt;ByRow((x,y)-&gt;string(floor(<span class="hljs-built_in">Int</span>,x/<span class="hljs-number">10</span>)*<span class="hljs-number">10</span>, <span class="hljs-string">&quot;_&quot;</span>, y))=&gt;:sex_and_age)
+    DataFrames.transform(:sex_and_age=&gt;categorical=&gt;:sex_and_age)
+    first(<span class="hljs-number">10</span>)
+    println
+<span class="hljs-keyword">end</span></code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×3 DataFrame
+ Row │ age    sex      sex_and_age
+     │ Int64  String7  Cat…
+─────┼─────────────────────────────
+   1 │    41  man      40_man
+   2 │    38  man      30_man
+   3 │    49  woman    40_woman
+   4 │    43  man      40_man
+   5 │    31  man      30_man
+   6 │    52  man      50_man
+   7 │    50  man      50_man
+   8 │    65  woman    60_woman
+   9 │    36  woman    30_woman
+  10 │    34  woman    30_woman
+</code></pre></div>
+<h2 id="カテゴリ型の数値化"><a href="#カテゴリ型の数値化" class="header-anchor">カテゴリ型の数値化</a></h2>
+<h3 id="q_カテゴリ型の数値化"><a href="#q_カテゴリ型の数値化" class="header-anchor">Q カテゴリ型の数値化</a></h3>
+<p>製造レコードから種別ごとに、平均障害率を計算するというお題です。 種別ごとに計算するのは<code>groupby</code>を使って実装できます。 自分自身のレコードを除かなければならないというのが少々曲者です。 今回は、ブロードキャスト演算子を使った無名関数で実装してみました。</p>
+<pre><code class="julia hljs">production_url = <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/production.csv&quot;</span>
+
+production_df = 
+    <span class="hljs-meta">@chain</span> production_url <span class="hljs-keyword">begin</span> 
+        Downloads.download 
+        CSV.File 
+        DataFrame
+        groupby(:type)
+        transform(:fault_flg=&gt;(c-&gt;(sum(c) .- c)/(length(c)-<span class="hljs-number">1</span>))=&gt;:fault_flg_per_type)
+    <span class="hljs-keyword">end</span>
+
+first(production_df,<span class="hljs-number">10</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×5 DataFrame
+ Row │ type     length    thickness  fault_flg  fault_flg_per_type
+     │ String1  Float64   Float64    Bool       Float64
+─────┼─────────────────────────────────────────────────────────────
+   1 │ E        274.027    40.2411       false           0.0612245
+   2 │ D         86.3193   16.9067       false           0.0327103
+   3 │ E        123.94      1.01846      false           0.0612245
+   4 │ B        175.555    16.4149       false           0.0344828
+   5 │ B        244.935    29.0611       false           0.0344828
+   6 │ B        226.427    39.7638       false           0.0344828
+   7 │ C        331.638    16.8356       false           0.0761905
+   8 │ A        200.865    12.1843       false           0.0547264
+   9 │ C        276.387    29.8996       false           0.0761905
+  10 │ E        168.441     1.26592      false           0.0612245
+</code></pre></div>
+<h2 id="カテゴリ型の補完"><a href="#カテゴリ型の補完" class="header-anchor">カテゴリ型の補完</a></h2>
+<h3 id="q_knnによる補完"><a href="#q_knnによる補完" class="header-anchor">Q KNNによる補完</a></h3>
+<p>まずデータを準備します。typeの列で欠損が発生しています。 欠損のないデータについてまずKNNで学習し、欠損のあるデータに適用するという流れです。 今回はjuliaにおけるScikitLearnのような存在であるMLJを利用してみたいと思います。<sup id="fnref:1"><a href="#fndef:1" class="fnref">[1]</a></sup></p>
+<p>いつも通り、データの読み込みを行いますが、KNNを適用する準備として、<code>:type</code>の列は<code>categorical</code>型に変換します。 また、学習に利用するデータとして<code>:length</code>、<code>:thickness</code>を選んでおきます。</p>
+<pre><code class="julia hljs">production_missc_url = <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/production_missing_category.csv&quot;</span>
+
+production_missc_df = 
+    <span class="hljs-meta">@chain</span> production_missc_url <span class="hljs-keyword">begin</span> 
+        Downloads.download 
+        CSV.File 
+        DataFrame
+        select(:type=&gt;categorical=&gt;:type,
+              :length,:thickness)
+    <span class="hljs-keyword">end</span>
+
+first(production_missc_df,<span class="hljs-number">10</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×3 DataFrame
+ Row │ type     length    thickness
+     │ Cat…?    Float64   Float64
+─────┼──────────────────────────────
+   1 │ E        274.027    40.2411
+   2 │ D         86.3193   16.9067
+   3 │ E        123.94      1.01846
+   4 │ B        175.555    16.4149
+   5 │ B        244.935    29.0611
+   6 │ B        226.427    39.7638
+   7 │ C        331.638    16.8356
+   8 │ A        200.865    12.1843
+   9 │ missing  276.387    29.8996
+  10 │ E        168.441     1.26592
+</code></pre></div>
+<p>さて、データを訓練データとテストデータに分け、KNNで学習するようにしてみます。 <span class="marker"> 出力を補完値にするために``predict``関数ではなく、``predict_mode``関数を使いました。</span> それなりにAwesomeにかけたのではないでしょうか。</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> MLJ
+KNNClassifier = <span class="hljs-meta">@load</span> KNNClassifier pkg=NearestNeighborModels verbosity=<span class="hljs-number">0</span>
+
+train = dropmissing(production_missc_df)
+test = filter(:type=&gt;ismissing, production_missc_df)
+y, X = unpack(train, ==(:type))
+test[!,:type] = <span class="hljs-meta">@chain</span> machine(KNNClassifier(K=<span class="hljs-number">3</span>), X, y) <span class="hljs-keyword">begin</span> 
+                    fit!
+                    predict_mode(test[!, Not(:type)])
+                <span class="hljs-keyword">end</span>
+first(test,<span class="hljs-number">10</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×3 DataFrame
+ Row │ type  length    thickness
+     │ Cat…  Float64   Float64
+─────┼───────────────────────────
+   1 │ E     276.387    29.8996
+   2 │ E     263.844    34.6643
+   3 │ E     129.365    21.3468
+   4 │ A     203.379    30.2865
+   5 │ E     157.463    11.1662
+   6 │ A     122.947     5.69413
+   7 │ D     123.976    11.1189
+   8 │ A     107.941    14.7408
+   9 │ A     189.611     1.41968
+  10 │ D      85.5865   16.9135
+</code></pre></div>
+<p><table class="fndef" id="fndef:1">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:1">[1]</a></td>
+        <td class="fndef-content">MLJについては、有名なパッケージではありますが、日本語での使い方をまとめた記事はあまりないので、そのうちにMLJのみを単独で取り上げてみたいと思います。</td>
+    </tr>
+</table>
+  <p style="text-align:right">  つづく </p> 
+<div class="sns-container top">
+  <div class="sns-box b-twitter">
+    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/preprocess/&text=juliaで前処理大全&via=HanafusaKei&related=HanafusaKei"
+    target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
+  <div class="sns-box b-facebook">
+    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/preprocess/" 
+    target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+  <div class="sns-box b-hatena">
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/preprocess/&title=juliaで前処理大全"
+    target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
+  <div class="sns-box b-pocket">
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/preprocess/&title=juliaで前処理大全"
+    rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
+  <div class="sns-box b-feedly">
+    <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
+    rel="nofollow" target="_blank"><span class="icon-feedly"></i></a></div>
+  <div class="sns-box b-line">
+    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/preprocess/'
+    target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
+</div>
+ 
+  <div class="prev-next-link">
+  <a class="prev-link" href="/tips/preprocess/numeric">
+    <p class="prev-next-label">前の記事</p>
+    <p>
+       juliaで前処理大全 数値型
+    </p>
+  </a>
+</div>
+</p>
+ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+    <script src="https://utteranc.es/client.js"
+        repo="hanafsky/blog_comments"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+<div class="page-foot">
+  <div class="copyright">
+    &copy; Kei Hanafusa. Last modified: September 25, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+  </div>
+</div>
+</div><!-- CONTENT ENDS HERE -->
+
+      </div> <!-- closure of main -->
+    </div>   <!-- closure of class initial--content -->
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+          <ul class="social-icons">
+            <li><strong>Follow:</strong></li>
+            <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+            <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          </ul>
+        </div>
+        <div class="page__footer-copyright">&copy; Kei Hanafusa. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="/libs/minimal-mistakes/main.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <script src="/libs/myBtn/myBtn.js"></script>
+    <script src="/libs/luminous/Luminous.min.js"></script>
+    <script src="/libs/clipboard.min.js"></script>
+
+    
+    
+        
+
+
+        <!-- http://tutsplus.github.io/clipboard/ -->
+
+<script>
+	(function(){
+	
+		// Get the elements.
+		// - the 'pre' element.
+		// - the 'div' with the 'paste-content' id.
+	
+		var pre = document.getElementsByTagName('pre');
+	
+		// Add a copy button in the 'pre' element.
+		// which only has the className of 'language-'.
+	
+		for (var i = 0; i < pre.length; i++) {
+			var isLanguage = pre[i].children[0].className.indexOf('language-');
+	
+			if ( isLanguage === 0 ) {
+				var button           = document.createElement('button');
+						button.className = 'copy-button';
+						button.textContent = 'Copy';
+	
+						pre[i].appendChild(button);
+			}
+		};
+	
+		// Run Clipboard
+	
+		var copyCode = new ClipboardJS('.copy-button', {
+			target: function(trigger) {
+				return trigger.previousElementSibling;
+		}
+		});
+	
+		// On success:
+		// - Change the "Copy" text to "Copied".
+		// - Swap it to "Copy" in 2s.
+		// - Lead user to the "contenteditable" area with Velocity scroll.
+	
+		copyCode.on('success', function(event) {
+			event.clearSelection();
+			event.trigger.textContent = 'Copied';
+			window.setTimeout(function() {
+				event.trigger.textContent = 'Copy';
+			}, 2000);
+	
+		});
+	
+		// On error (Safari):
+		// - Change the  "Press Ctrl+C to copy"
+		// - Swap it to "Copy" in 2s.
+	
+		copyCode.on('error', function(event) {
+			event.trigger.textContent = 'Press "Ctrl + C" to copy';
+			window.setTimeout(function() {
+				event.trigger.textContent = 'Copy';
+			}, 5000);
+		});
+	
+	})();
+	</script>
+        <!-- {{ insert foot_copy.html }} -->
+    
+    
+        <script src="/libs/mermaid/mermaid.min.js"></script>
+<script>
+  var config
+  mermaid.initialize({
+    theme: 'neutral',
+    themeCSS: '\
+               .mermaid-main-font {font-family:"Noto Sans JP"};\
+               .section0, .section2{fill:#fadbda;opacity:0.3;};\
+               .task0, .task1, .task2, .task3 {fill:#fadbda; stroke:#f6bdc0; stroke-width:1};\
+               .grid {stroke:#666;stroke-width:0.5};\
+               .node rect,\
+               .node circle,\
+               .node ellipse,\
+               .node path,\
+               .node polygon\
+               {fill:rgba(253,237,228,0.5);\
+                stroke: rgb(246,189,192)};\
+               .arrowheadPath {fill:rgb(246,189,192);}\
+               .edgePath .path {stroke:rgb(246,189,192);};\
+               .cluster rect\
+               {fill:rgba(255,249,177,0.3);\
+                stroke:rgb(246,189,192)};\
+               ',
+    // themeCSS: '.node rect {fill:rgba(253,237,228,0.5); stroke: rgb(250,219,218)};',
+    // logLevel: 3,
+    // securityLevel: 'loose',
+    // flowchart: { curve: 'basis' }
+  });
+</script>
+    
+    <script>
+    new LuminousGallery(document.querySelectorAll('.zoom'));
+</script>
+    <script>
+function myToc() {
+    var x = document.getElementsByClassName("mytoc");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  } 
+</script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+10×3 DataFrame
+ Row │ sex      sex_is_man  sex_is_woman
+     │ String7  Bool        Bool
+─────┼───────────────────────────────────
+   1 │ man            true         false
+   2 │ man            true         false
+   3 │ woman         false          true
+   4 │ man            true         false
+   5 │ man            true         false
+   6 │ man            true         false
+   7 │ man            true         false
+   8 │ woman         false          true
+   9 │ woman         false          true
+  10 │ woman         false          true
