@@ -46,6 +46,7 @@ SQL、R、pythonの3つの言語でAwesomeなコードの書き方を教えて�
 @@column \textcard{Unfold}{7. 展開}{/tips/preprocess/unfold}@@
 @@column \textcard{Numerical}{8. 数値型}{/tips/preprocess/numeric}@@
 @@column \textcard{Category}{9. カテゴリ型}{/tips/preprocess/category}@@
+@@column \textcard{Datatime}{10. 日時型}{/tips/preprocess/datetime}@@
 @@
 @@
 

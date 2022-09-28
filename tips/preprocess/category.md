@@ -176,7 +176,7 @@ first(test,10) |> println
 
 \right{つづく}
 \share{tips/preprocess/}{juliaで前処理大全}
-\prev{/tips/preprocess/numeric}{juliaで前処理大全 数値型}
+\prevnext{/tips/preprocess/numeric}{juliaで前処理大全 数値型}{/tips/preprocess/datetime}{juliaで前処理大全 日時型}
 
 \backtotop
 
