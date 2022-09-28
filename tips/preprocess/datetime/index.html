@@ -1,0 +1,494 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="/css/franklin.css">
+<link rel="stylesheet" href="/css/extra.css">
+<link rel="stylesheet" href="/css/minimal-mistakes.css">
+<link rel="stylesheet" href="/css/adjust.css">
+<link rel="stylesheet" href="/css/luminous-basic.min.css">
+<link rel="icon" href="/assets/favicon.ico">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<!--[if IE ]>
+<style>
+  /* old IE unsupported flexbox fixes */
+  .greedy-nav .site-title {
+    padding-right: 3em;
+  }
+  .greedy-nav button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+</style>
+<![endif]-->
+
+   <title>juliaで前処理大全9</title>  
+  <!-- end custom head snippets -->
+</head>
+<body class="layout--single">
+  <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Hanafsky.com</a>
+        <ul class="visible-links">
+          <li class="masthead__menu-item"><a href="/tips/" >Julia-tips</a></li>
+          <li class="masthead__menu-item"><a href="/blog/" >Blog</a></li>
+          <li class="masthead__menu-item"><a href="/project/" >Projects</a></li>
+          <li class="masthead__menu-item"><a href="/about/">About</a></li>
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+  <div class="initial-content">
+    <div id="main" role="main">
+      <div class="sidebar sticky">
+        <div itemscope itemtype="https://schema.org/Person">
+          <div class="author__avatar">
+            <img src="/assets/design/author3.png" alt="Dio" itemprop="image">
+          </div>
+          <div class="author__content">
+            <h3 class="author__name" itemprop="name">Kei Hanafusa</h3>
+            <p class="author__bio" itemprop="description">Chemical Engineer, <br> living in Osaka, 🗾</p>
+          </div>
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Follow</button>
+            <ul class="author__urls social-icons">
+              <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+                <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Osaka, Japan</span></li>
+              <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+              <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+            </ul>
+          </div>
+
+          
+          
+              
+
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Tag</button>
+            <ul class="author__urls social-icons">
+              <li>タグ</li>
+              <li></li>
+              <li><a href="/tag/setting/">設定</a></li>
+              <li><a href="/tag/thirdparty/">サードパーティライブラリ</a></li>
+              <li><a href="/tag/recipe">レシピ</a></li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+
+
+<!-- Content appended here -->
+<div class="franklin-content"><h1 id="juliaで前処理大全_10日時型"><a href="#juliaで前処理大全_10日時型" class="header-anchor">juliaで前処理大全 10.日時型</a></h1>
+<p>juliaで前処理大全その9です。今回は日時型を取り扱います。</p>
+<div class="franklin-toc"><ol><li><a href="#日時型日付型への変換">日時型、日付型への変換</a><ol><li><a href="#q_日時型日付型への変換">Q 日時型、日付型への変換</a></li></ol></li><li><a href="#年月日時刻分秒曜日への変換">年/月/日/時刻/分/秒/曜日への変換</a><ol><li><a href="#各日時要素の取り出し">各日時要素の取り出し</a></li></ol></li><li><a href="#日時差への変換">日時差への変換</a><ol><li><a href="#日時差の計算">日時差の計算</a></li></ol></li><li><a href="#日時型の増減">日時型の増減</a><ol><li><a href="#日時の増減処理">日時の増減処理</a></li></ol></li><li><a href="#季節への変換">季節への変換</a><ol><li><a href="#季節への変換__2">季節への変換</a></li></ol></li><li><a href="#時間帯への変換">時間帯への変換</a></li><li><a href="#平日休日への変換">平日/休日への変換</a><ol><li><a href="#休日フラグの付与">休日フラグの付与</a></li></ol></li></ol></div>
+<h2 id="日時型日付型への変換"><a href="#日時型日付型への変換" class="header-anchor">日時型、日付型への変換</a></h2>
+<h3 id="q_日時型日付型への変換"><a href="#q_日時型日付型への変換" class="header-anchor">Q 日時型、日付型への変換</a></h3>
+<p>ホテルの予約レコードから、予約日時の列を日時型、日付型へ変換する問題です。 標準パッケージの<code>Dates.jl</code>を用いることで簡単に実装できます。 一度、文字列を<code>DateTime</code>型に変換し、その後、<code>Date</code>型・<code>Time</code>型に変換を行います。 文字列を<code>DateTime</code>型に変換する際に、<span class="marker"> ``dateformat``を指定する</span>のがポイントでしょう。</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> DataFrames, CSV, Chain, Downloads, Dates
+reserve_url =  <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/reserve.csv&quot;</span>
+
+reserve_df = <span class="hljs-meta">@chain</span> reserve_url <span class="hljs-keyword">begin</span>
+                Downloads.download
+                CSV.File
+                DataFrame
+                transform(:reserve_datetime=&gt;ByRow(d-&gt;DateTime(d, <span class="hljs-string">dateformat&quot;yyyy-mm-dd H:M:S&quot;</span>))=&gt;:reserve_datetime)
+                transform(:reserve_datetime=&gt;ByRow(Date)=&gt;:reserve_date,
+                          :reserve_datetime=&gt;ByRow(Time)=&gt;:reserve_time)
+            <span class="hljs-keyword">end</span>
+first(reserve_df, <span class="hljs-number">10</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×11 DataFrame
+ Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price  reserve_date  reserve_time
+     │ String7     String7   String7      Dates.DateTime       Dates.Date    Dates.Time    Dates.Date     Int64       Int64        Dates.Date    Dates.Time
+─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ r1          h_75      c_1          2016-03-06T13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200  2016-03-06    13:09:42
+   2 │ r2          h_219     c_1          2016-07-16T23:39:55  2016-07-20    11:30:00      2016-07-21              2        20600  2016-07-16    23:39:55
+   3 │ r3          h_179     c_1          2016-09-24T10:03:17  2016-10-19    09:00:00      2016-10-22              2        33600  2016-09-24    10:03:17
+   4 │ r4          h_214     c_1          2017-03-08T03:20:10  2017-03-29    11:00:00      2017-03-30              4       194400  2017-03-08    03:20:10
+   5 │ r5          h_16      c_1          2017-09-05T19:50:37  2017-09-22    10:30:00      2017-09-23              3        68100  2017-09-05    19:50:37
+   6 │ r6          h_241     c_1          2017-11-27T18:47:05  2017-12-04    12:00:00      2017-12-06              3        36000  2017-11-27    18:47:05
+   7 │ r7          h_256     c_1          2017-12-29T10:38:36  2018-01-25    10:30:00      2018-01-28              1       103500  2017-12-29    10:38:36
+   8 │ r8          h_241     c_1          2018-05-26T08:42:51  2018-06-08    10:00:00      2018-06-09              1         6000  2018-05-26    08:42:51
+   9 │ r9          h_217     c_2          2016-03-05T13:31:06  2016-03-25    09:30:00      2016-03-27              3        68400  2016-03-05    13:31:06
+  10 │ r10         h_240     c_2          2016-06-25T09:12:22  2016-07-14    11:00:00      2016-07-17              4       320400  2016-06-25    09:12:22
+</code></pre></div>
+<h2 id="年月日時刻分秒曜日への変換"><a href="#年月日時刻分秒曜日への変換" class="header-anchor">年/月/日/時刻/分/秒/曜日への変換</a></h2>
+<h3 id="各日時要素の取り出し"><a href="#各日時要素の取り出し" class="header-anchor">各日時要素の取り出し</a></h3>
+<p><code>DateTime</code>型から各日時要素の取り出しも<code>Dates.jl</code>の関数で実装されています。 任意の文字列に変換するには<code>Dates.format</code>関数を利用する必要があります。&#40;exportされていないので、パッケージの指定が必要です。&#41;</p>
+<p>dayname関数はlocaleを指定できるようになっていますが、英語にしか対応していないようです。 公式ドキュメントを見るとフランス語バージョンが書いてあってので、必要な場合は勝手に拡張しろということなのでしょう。</p>
+<pre><code class="julia hljs"><span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+    select(:reserve_datetime=&gt;ByRow(year)=&gt;:year,
+           :reserve_datetime=&gt;ByRow(month)=&gt;:month,
+           :reserve_datetime=&gt;ByRow(day)=&gt;:wday,
+           :reserve_datetime=&gt;ByRow(d-&gt;dayname(d,locale=<span class="hljs-string">&quot;english&quot;</span>))=&gt;:weekday,
+           :reserve_datetime=&gt;ByRow(hour)=&gt;:hour,
+           :reserve_datetime=&gt;ByRow(minute)=&gt;:minute,
+           :reserve_datetime=&gt;ByRow(second)=&gt;:second,
+           :reserve_datetime=&gt;ByRow(d-&gt;Dates.format(d, <span class="hljs-string">&quot;yyyy-mm-ss H:M:S&quot;</span>))=&gt;:format_str,
+    )
+    first(<span class="hljs-number">10</span>)
+    println
+<span class="hljs-keyword">end</span></code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×8 DataFrame
+ Row │ year   month  wday   weekday    hour   minute  second  format_str
+     │ Int64  Int64  Int64  String     Int64  Int64   Int64   String
+─────┼────────────────────────────────────────────────────────────────────────────
+   1 │  2016      3      6  Sunday        13       9      42  2016-03-00 13:9:42
+   2 │  2016      7     16  Saturday      23      39      55  2016-07-00 23:39:55
+   3 │  2016      9     24  Saturday      10       3      17  2016-09-00 10:3:17
+   4 │  2017      3      8  Wednesday      3      20      10  2017-03-00 3:20:10
+   5 │  2017      9      5  Tuesday       19      50      37  2017-09-00 19:50:37
+   6 │  2017     11     27  Monday        18      47       5  2017-11-00 18:47:5
+   7 │  2017     12     29  Friday        10      38      36  2017-12-00 10:38:36
+   8 │  2018      5     26  Saturday       8      42      51  2018-05-00 8:42:51
+   9 │  2016      3      5  Saturday      13      31       6  2016-03-00 13:31:6
+  10 │  2016      6     25  Saturday       9      12      22  2016-06-00 9:12:22
+</code></pre></div>
+<h2 id="日時差への変換"><a href="#日時差への変換" class="header-anchor">日時差への変換</a></h2>
+<h3 id="日時差の計算"><a href="#日時差の計算" class="header-anchor">日時差の計算</a></h3>
+<p>予約日時とチェックイン日時の差を求め、それを年単位、月単位、日単位から秒単位まで差を求めるお題です。 年や月単位であれば、先に<code>DateTime</code>型から年や月を取得して変換することになります。 <code>DateTime</code>型の差分は<code>Millisecond</code>型になるため、日、時間、分、秒単位にするには少し工夫が必要です。</p>
+<pre><code class="julia hljs">t1 = DateTime(<span class="hljs-number">2022</span>, <span class="hljs-number">1</span>, <span class="hljs-number">12</span>, <span class="hljs-number">12</span>, <span class="hljs-number">23</span>, <span class="hljs-number">34</span>) 
+t2 = DateTime(<span class="hljs-number">2021</span>, <span class="hljs-number">12</span>, <span class="hljs-number">24</span>, <span class="hljs-number">23</span>, <span class="hljs-number">34</span>, <span class="hljs-number">45</span>)
+dt = t1 - t2
+println(dt)</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">1601329000 milliseconds
+</code></pre></div>
+<p>日単位であれば、<code>Dates.days</code>関数が単位変換に利用可能です。秒・分・時間に関しては自分で関数を作る必要があります。 <code>Dates.days</code>関数の実装を参考に秒・分・時間について変換する関数を作ってみました。</p>
+<pre><code class="julia hljs">tosecond(dt::Millisecond) = div(Dates.value(dt), <span class="hljs-number">1000</span>)
+tominute(dt::Millisecond) = div(Dates.value(dt), <span class="hljs-number">60000</span>)
+tohour(dt::Millisecond) = div(Dates.value(dt), <span class="hljs-number">3600000</span>)
+<span class="hljs-meta">@show</span> tohour(dt)</code></pre>
+<p><div class="code-output"><pre><code class="plaintext hljs">tohour(dt) = 444
+</code></pre></div> それではやってみます。</p>
+<pre><code class="julia hljs"><span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+    transform([:checkin_date, :checkin_time]=&gt;ByRow(+)=&gt;:checkin_datetime)
+    select(
+        [:checkin_datetime, :reserve_datetime]=&gt;ByRow((x, y)-&gt;year(x)-year(y))=&gt;:diff_year,
+        [:checkin_datetime, :reserve_datetime]=&gt;ByRow((x, y)-&gt;<span class="hljs-number">12</span>year(x)+month(x)-<span class="hljs-number">12</span>year(y)-month(y))=&gt;:diff_month,
+        [:checkin_datetime, :reserve_datetime]=&gt;ByRow((x, y)-&gt;Dates.days(x-y))=&gt;:diff_days,
+        [:checkin_datetime, :reserve_datetime]=&gt;ByRow((x, y)-&gt;tohour(x-y))=&gt;:diff_hours,
+        [:checkin_datetime, :reserve_datetime]=&gt;ByRow((x, y)-&gt;tominute(x-y))=&gt;:diff_minutes,
+        [:checkin_datetime, :reserve_datetime]=&gt;ByRow((x, y)-&gt;tosecond(x-y))=&gt;:diff_seconds,
+        )
+    first(<span class="hljs-number">10</span>)
+    println
+<span class="hljs-keyword">end</span></code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×6 DataFrame
+ Row │ diff_year  diff_month  diff_days  diff_hours  diff_minutes  diff_seconds
+     │ Int64      Int64       Int64      Int64       Int64         Int64
+─────┼──────────────────────────────────────────────────────────────────────────
+   1 │         0           0         19         476         28610       1716618
+   2 │         0           0          3          83          5030        301805
+   3 │         0           1         24         598         35936       2156203
+   4 │         0           0         21         511         30699       1841990
+   5 │         0           0         16         398         23919       1435163
+   6 │         0           1          6         161          9672        580375
+   7 │         1           1         26         647         38871       2332284
+   8 │         0           1         13         313         18797       1127829
+   9 │         0           0         19         475         28558       1713534
+  10 │         0           1         19         457         27467       1648058
+</code></pre></div>
+<h2 id="日時型の増減"><a href="#日時型の増減" class="header-anchor">日時型の増減</a></h2>
+<h3 id="日時の増減処理"><a href="#日時の増減処理" class="header-anchor">日時の増減処理</a></h3>
+<p>日時のデータを1日、1時間、1分、1秒増やすという問題です。 <code>DateTime</code>型の列のそれぞれの行について、<code>Period</code>型のデータを足すと実現可能です。 可読性も高く、Awesomeでしょう。</p>
+<pre><code class="julia hljs"><span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+    select(
+        :reserve_datetime =&gt; ByRow(d-&gt;d+Day(<span class="hljs-number">1</span>)) =&gt; :reserve_datetime_1d,
+        :reserve_date =&gt; ByRow(d-&gt;d+Day(<span class="hljs-number">1</span>)) =&gt; :reserve_date_1d,
+        :reserve_datetime =&gt; ByRow(d-&gt;d+Hour(<span class="hljs-number">1</span>)) =&gt; :reserve_datetime_1h,
+        :reserve_datetime =&gt; ByRow(d-&gt;d+Minute(<span class="hljs-number">1</span>)) =&gt; :reserve_datetime_1m,
+        :reserve_datetime =&gt; ByRow(d-&gt;d+Second(<span class="hljs-number">1</span>)) =&gt; :reserve_datetime_1s
+    )
+    first(<span class="hljs-number">10</span>)
+    println
+<span class="hljs-keyword">end</span></code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×5 DataFrame
+ Row │ reserve_datetime_1d  reserve_date_1d  reserve_datetime_1h  reserve_datetime_1m  reserve_datetime_1s
+     │ Dates.DateTime       Dates.Date       Dates.DateTime       Dates.DateTime       Dates.DateTime
+─────┼─────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ 2016-03-07T13:09:42  2016-03-07       2016-03-06T14:09:42  2016-03-06T13:10:42  2016-03-06T13:09:43
+   2 │ 2016-07-17T23:39:55  2016-07-17       2016-07-17T00:39:55  2016-07-16T23:40:55  2016-07-16T23:39:56
+   3 │ 2016-09-25T10:03:17  2016-09-25       2016-09-24T11:03:17  2016-09-24T10:04:17  2016-09-24T10:03:18
+   4 │ 2017-03-09T03:20:10  2017-03-09       2017-03-08T04:20:10  2017-03-08T03:21:10  2017-03-08T03:20:11
+   5 │ 2017-09-06T19:50:37  2017-09-06       2017-09-05T20:50:37  2017-09-05T19:51:37  2017-09-05T19:50:38
+   6 │ 2017-11-28T18:47:05  2017-11-28       2017-11-27T19:47:05  2017-11-27T18:48:05  2017-11-27T18:47:06
+   7 │ 2017-12-30T10:38:36  2017-12-30       2017-12-29T11:38:36  2017-12-29T10:39:36  2017-12-29T10:38:37
+   8 │ 2018-05-27T08:42:51  2018-05-27       2018-05-26T09:42:51  2018-05-26T08:43:51  2018-05-26T08:42:52
+   9 │ 2016-03-06T13:31:06  2016-03-06       2016-03-05T14:31:06  2016-03-05T13:32:06  2016-03-05T13:31:07
+  10 │ 2016-06-26T09:12:22  2016-06-26       2016-06-25T10:12:22  2016-06-25T09:13:22  2016-06-25T09:12:23
+</code></pre></div>
+<h2 id="季節への変換"><a href="#季節への変換" class="header-anchor">季節への変換</a></h2>
+<h3 id="季節への変換__2"><a href="#季節への変換__2" class="header-anchor">季節への変換</a></h3>
+<p>こちらはホテルの予約レコードから予約月を季節に変換する問題です。 数値から季節の文字コードに変換するのは、本と同じですが、合成関数を利用して、簡潔にかけたと思います。</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> CategoricalArrays
+
+<span class="hljs-keyword">function</span> to_season(m)
+    <span class="hljs-number">3</span>≤m&lt;<span class="hljs-number">6</span> ? <span class="hljs-string">&quot;spring&quot;</span> : 
+    <span class="hljs-number">6</span>≤m&lt;<span class="hljs-number">9</span> ? <span class="hljs-string">&quot;summer&quot;</span> : 
+    <span class="hljs-number">9</span>≤m&lt;<span class="hljs-number">12</span> ? <span class="hljs-string">&quot;autumn&quot;</span> : <span class="hljs-string">&quot;winter&quot;</span> 
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+    select(:reserve_datetime =&gt; ByRow(to_season∘month) =&gt; :reserve_datetime_season)
+    transform(:reserve_datetime_season =&gt; categorical =&gt; :reserve_datetime_season)
+    first(<span class="hljs-number">10</span>)
+    println
+<span class="hljs-keyword">end</span></code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×1 DataFrame
+ Row │ reserve_datetime_season
+     │ CategoricalValue…
+─────┼─────────────────────────
+   1 │ spring
+   2 │ summer
+   3 │ autumn
+   4 │ spring
+   5 │ autumn
+   6 │ autumn
+   7 │ winter
+   8 │ spring
+   9 │ spring
+  10 │ summer
+</code></pre></div>
+<h2 id="時間帯への変換"><a href="#時間帯への変換" class="header-anchor">時間帯への変換</a></h2>
+<p>時間帯への変換はコードが記載されていないので割愛します。</p>
+<h2 id="平日休日への変換"><a href="#平日休日への変換" class="header-anchor">平日/休日への変換</a></h2>
+<h3 id="休日フラグの付与"><a href="#休日フラグの付与" class="header-anchor">休日フラグの付与</a></h3>
+<p>こちらは、ホテルの予約レコードと休日のマスターレコードを内部結合するだけです。 技術的に新しいものはありません。</p>
+<pre><code class="julia hljs">holiday_url =  <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/holiday_mst.csv&quot;</span>
+
+holiday_mst = <span class="hljs-meta">@chain</span> holiday_url <span class="hljs-keyword">begin</span>
+                Downloads.download
+                CSV.File
+                DataFrame
+            <span class="hljs-keyword">end</span>
+
+<span class="hljs-meta">@chain</span> reserve_df <span class="hljs-keyword">begin</span>
+    innerjoin(holiday_mst, on=[:checkin_date =&gt; :target_day ])
+    first(<span class="hljs-number">10</span>)
+    println
+<span class="hljs-keyword">end</span></code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">10×13 DataFrame
+ Row │ reserve_id  hotel_id  customer_id  reserve_datetime     checkin_date  checkin_time  checkout_date  people_num  total_price  reserve_date  reserve_time  holidayday_flg  nextday_is_holiday_flg
+     │ String7     String7   String7      Dates.DateTime       Dates.Date    Dates.Time    Dates.Date     Int64       Int64        Dates.Date    Dates.Time    Bool            Bool
+─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ r1          h_75      c_1          2016-03-06T13:09:42  2016-03-26    10:00:00      2016-03-29              4        97200  2016-03-06    13:09:42                true                    true
+   2 │ r2          h_219     c_1          2016-07-16T23:39:55  2016-07-20    11:30:00      2016-07-21              2        20600  2016-07-16    23:39:55               false                   false
+   3 │ r3          h_179     c_1          2016-09-24T10:03:17  2016-10-19    09:00:00      2016-10-22              2        33600  2016-09-24    10:03:17               false                   false
+   4 │ r4          h_214     c_1          2017-03-08T03:20:10  2017-03-29    11:00:00      2017-03-30              4       194400  2017-03-08    03:20:10               false                   false
+   5 │ r5          h_16      c_1          2017-09-05T19:50:37  2017-09-22    10:30:00      2017-09-23              3        68100  2017-09-05    19:50:37               false                    true
+   6 │ r6          h_241     c_1          2017-11-27T18:47:05  2017-12-04    12:00:00      2017-12-06              3        36000  2017-11-27    18:47:05               false                   false
+   7 │ r7          h_256     c_1          2017-12-29T10:38:36  2018-01-25    10:30:00      2018-01-28              1       103500  2017-12-29    10:38:36               false                   false
+   8 │ r8          h_241     c_1          2018-05-26T08:42:51  2018-06-08    10:00:00      2018-06-09              1         6000  2018-05-26    08:42:51               false                    true
+   9 │ r9          h_217     c_2          2016-03-05T13:31:06  2016-03-25    09:30:00      2016-03-27              3        68400  2016-03-05    13:31:06               false                    true
+  10 │ r10         h_240     c_2          2016-06-25T09:12:22  2016-07-14    11:00:00      2016-07-17              4       320400  2016-06-25    09:12:22               false                   false
+</code></pre></div>
+<p> <p style="text-align:right">  つづく </p> 
+<div class="sns-container top">
+  <div class="sns-box b-twitter">
+    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/preprocess/&text=juliaで前処理大全&via=HanafusaKei&related=HanafusaKei"
+    target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
+  <div class="sns-box b-facebook">
+    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/preprocess/" 
+    target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+  <div class="sns-box b-hatena">
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/preprocess/&title=juliaで前処理大全"
+    target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
+  <div class="sns-box b-pocket">
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/preprocess/&title=juliaで前処理大全"
+    rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
+  <div class="sns-box b-feedly">
+    <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
+    rel="nofollow" target="_blank"><span class="icon-feedly"></i></a></div>
+  <div class="sns-box b-line">
+    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/preprocess/'
+    target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
+</div>
+ 
+  <div class="prev-next-link">
+  <a class="prev-link" href="/tips/preprocess/category">
+    <p class="prev-next-label">前の記事</p>
+    <p>
+       juliaで前処理大全 カテゴリー型
+    </p>
+  </a>
+</div>
+</p>
+ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+    <script src="https://utteranc.es/client.js"
+        repo="hanafsky/blog_comments"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+<div class="page-foot">
+  <div class="copyright">
+    &copy; Kei Hanafusa. Last modified: September 28, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+  </div>
+</div>
+</div><!-- CONTENT ENDS HERE -->
+
+      </div> <!-- closure of main -->
+    </div>   <!-- closure of class initial--content -->
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+          <ul class="social-icons">
+            <li><strong>Follow:</strong></li>
+            <li><a href="https://twitter.com/hanafusakei" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+            <li><a href="https://github.com/hanafsky" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          </ul>
+        </div>
+        <div class="page__footer-copyright">&copy; Kei Hanafusa. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="/libs/minimal-mistakes/main.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <script src="/libs/myBtn/myBtn.js"></script>
+    <script src="/libs/luminous/Luminous.min.js"></script>
+    <script src="/libs/clipboard.min.js"></script>
+
+    
+    
+        
+
+
+        <!-- http://tutsplus.github.io/clipboard/ -->
+
+<script>
+	(function(){
+	
+		// Get the elements.
+		// - the 'pre' element.
+		// - the 'div' with the 'paste-content' id.
+	
+		var pre = document.getElementsByTagName('pre');
+	
+		// Add a copy button in the 'pre' element.
+		// which only has the className of 'language-'.
+	
+		for (var i = 0; i < pre.length; i++) {
+			var isLanguage = pre[i].children[0].className.indexOf('language-');
+	
+			if ( isLanguage === 0 ) {
+				var button           = document.createElement('button');
+						button.className = 'copy-button';
+						button.textContent = 'Copy';
+	
+						pre[i].appendChild(button);
+			}
+		};
+	
+		// Run Clipboard
+	
+		var copyCode = new ClipboardJS('.copy-button', {
+			target: function(trigger) {
+				return trigger.previousElementSibling;
+		}
+		});
+	
+		// On success:
+		// - Change the "Copy" text to "Copied".
+		// - Swap it to "Copy" in 2s.
+		// - Lead user to the "contenteditable" area with Velocity scroll.
+	
+		copyCode.on('success', function(event) {
+			event.clearSelection();
+			event.trigger.textContent = 'Copied';
+			window.setTimeout(function() {
+				event.trigger.textContent = 'Copy';
+			}, 2000);
+	
+		});
+	
+		// On error (Safari):
+		// - Change the  "Press Ctrl+C to copy"
+		// - Swap it to "Copy" in 2s.
+	
+		copyCode.on('error', function(event) {
+			event.trigger.textContent = 'Press "Ctrl + C" to copy';
+			window.setTimeout(function() {
+				event.trigger.textContent = 'Copy';
+			}, 5000);
+		});
+	
+	})();
+	</script>
+        <!-- {{ insert foot_copy.html }} -->
+    
+    
+        <script src="/libs/mermaid/mermaid.min.js"></script>
+<script>
+  var config
+  mermaid.initialize({
+    theme: 'neutral',
+    themeCSS: '\
+               .mermaid-main-font {font-family:"Noto Sans JP"};\
+               .section0, .section2{fill:#fadbda;opacity:0.3;};\
+               .task0, .task1, .task2, .task3 {fill:#fadbda; stroke:#f6bdc0; stroke-width:1};\
+               .grid {stroke:#666;stroke-width:0.5};\
+               .node rect,\
+               .node circle,\
+               .node ellipse,\
+               .node path,\
+               .node polygon\
+               {fill:rgba(253,237,228,0.5);\
+                stroke: rgb(246,189,192)};\
+               .arrowheadPath {fill:rgb(246,189,192);}\
+               .edgePath .path {stroke:rgb(246,189,192);};\
+               .cluster rect\
+               {fill:rgba(255,249,177,0.3);\
+                stroke:rgb(246,189,192)};\
+               ',
+    // themeCSS: '.node rect {fill:rgba(253,237,228,0.5); stroke: rgb(250,219,218)};',
+    // logLevel: 3,
+    // securityLevel: 'loose',
+    // flowchart: { curve: 'basis' }
+  });
+</script>
+    
+    <script>
+    new LuminousGallery(document.querySelectorAll('.zoom'));
+</script>
+    <script>
+function myToc() {
+    var x = document.getElementsByClassName("mytoc");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  } 
+</script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+10×1 DataFrame
+ Row │ reserve_datetime_season
+     │ CategoricalValue…
+─────┼─────────────────────────
+   1 │ spring
+   2 │ summer
+   3 │ autumn
+   4 │ spring
+   5 │ autumn
+   6 │ autumn
+   7 │ winter
+   8 │ spring
+   9 │ spring
+  10 │ summer
