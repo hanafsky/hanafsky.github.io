@@ -35,12 +35,14 @@ first(meros, 10) |> println
 ```
 \prettyshow{ex1-preprocess10}
 
-```!
-using Awabi
-dic = Sys.iswindows() ? Dict("dicdir" => "C:\\Program Files (x86)\\MeCab\\dic\\ipadic") : nothing
 
-tokenize(Tokenizer(dic), "すもももももももものうち")
+```julia:ex2-preprocess10
+using Awabi
+tokenizer = Sys.iswindows() ? Tokenizer(Dict("dicdir" => "C:\\Program Files (x86)\\MeCab\\dic\\ipadic")) : Tokenizer()
+
+tokenize(tokenizer, "すもももももももものうち") |> println
 ```
+\prettyshow{ex2-preprocess10}
 
 ## 単語の集合データに変換
 ### bag of wordsの作成
