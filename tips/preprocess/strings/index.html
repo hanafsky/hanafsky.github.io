@@ -121,14 +121,11 @@ first(meros, <span class="hljs-number">10</span>) |&gt; println</code></pre>
 <div class="code-output"><pre><code class="plaintext hljs">メロスは激怒した。必
 </code></pre></div>
 <pre><code class="julia hljs"><span class="hljs-keyword">using</span> Awabi
-dic = Sys.iswindows() ? <span class="hljs-built_in">Dict</span>(<span class="hljs-string">&quot;dicdir&quot;</span> =&gt; <span class="hljs-string">&quot;C:\\Program Files (x86)\\MeCab\\dic\\ipadic&quot;</span>) : <span class="hljs-literal">nothing</span>
+tokenizer = Sys.iswindows() ? Tokenizer(<span class="hljs-built_in">Dict</span>(<span class="hljs-string">&quot;dicdir&quot;</span> =&gt; <span class="hljs-string">&quot;C:\\Program Files (x86)\\MeCab\\dic\\ipadic&quot;</span>)) : Tokenizer()
 
-tokenize(Tokenizer(dic), <span class="hljs-string">&quot;すもももももももものうち&quot;</span>)</code></pre><pre><code class="plaintext hljs">MethodError: no method matching Awabi.Tokenizer(::Nothing)
-Closest candidates are:
-  Awabi.Tokenizer() at ~/.julia/packages/Awabi/NqVsn/src/tokenizer.jl:56
-  Awabi.Tokenizer(!Matched::AbstractString) at ~/.julia/packages/Awabi/NqVsn/src/tokenizer.jl:52
-  Awabi.Tokenizer(!Matched::Dict{String, String}) at ~/.julia/packages/Awabi/NqVsn/src/tokenizer.jl:39
-</code></pre>
+tokenize(tokenizer, <span class="hljs-string">&quot;すもももももももものうち&quot;</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">[(&quot;すもも&quot;, &quot;名詞,一般,*,*,*,*,すもも,スモモ,スモモ&quot;), (&quot;も&quot;, &quot;助詞,係助詞,*,*,*,*,も,モ,モ&quot;), (&quot;もも&quot;, &quot;名詞,一般,*,*,*,*,もも,モモ,モモ&quot;), (&quot;も&quot;, &quot;助詞,係助詞,*,*,*,*,も,モ,モ&quot;), (&quot;もも&quot;, &quot;名詞,一般,*,*,*,*,もも,モモ,モモ&quot;), (&quot;の&quot;, &quot;助詞,連体化,*,*,*,*,の,ノ,ノ&quot;), (&quot;うち&quot;, &quot;名詞,非自立,副詞可能,*,*,*,うち,ウチ,ウチ&quot;)]
+</code></pre></div>
 <h2 id="単語の集合データに変換"><a href="#単語の集合データに変換" class="header-anchor">単語の集合データに変換</a></h2>
 <h3 id="bag_of_wordsの作成"><a href="#bag_of_wordsの作成" class="header-anchor">bag of wordsの作成</a></h3>
 <h2 id="tf-idfによる単語の重要度調整"><a href="#tf-idfによる単語の重要度調整" class="header-anchor">TF-IDFによる単語の重要度調整</a></h2>

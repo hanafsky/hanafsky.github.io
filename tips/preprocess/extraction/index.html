@@ -275,9 +275,9 @@ println(first(testdf))</code></pre>
 <pre><code class="julia hljs"><span class="hljs-meta">@time</span> testdf[:,[<span class="hljs-string">&quot;a%&quot;</span>,<span class="hljs-string">&quot;b(m/s)&quot;</span>]]
 println()
 <span class="hljs-meta">@time</span> testdf[!,[<span class="hljs-string">&quot;a%&quot;</span>,<span class="hljs-string">&quot;b(m/s)&quot;</span>]]</code></pre>
-<div class="code-output"><pre><code class="plaintext hljs">  0.014546 seconds (10.64 k allocations: 2.099 MiB, 92.15% compilation time)
+<div class="code-output"><pre><code class="plaintext hljs">  0.016450 seconds (10.64 k allocations: 2.099 MiB, 92.21% compilation time)
 
-  0.000047 seconds (22 allocations: 1.734 KiB)
+  0.000060 seconds (22 allocations: 1.734 KiB)
 </code></pre></div></div></div>
 <h4 id="select_関数"><a href="#select_関数" class="header-anchor">select 関数</a></h4>
 <p>列を抽出するには、select 関数も利用できます。</p>
