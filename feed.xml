@@ -31,7 +31,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -52,7 +52,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -73,7 +73,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -94,7 +94,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -115,7 +115,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -136,7 +136,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -157,7 +157,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -178,7 +178,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -199,7 +199,28 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Kei Hanafusa</atom:name>
+  </atom:author>
+    
+  <category> julia </category>
+      
+</item>
+
+<item>
+  <title>
+    <![CDATA[  juliaで前処理大全10  ]]>
+  </title>
+  <link> https://hanafsky.github.io/tips/preprocess/strings/index.html </link>
+  <guid> https://hanafsky.github.io/tips/preprocess/strings/index.html </guid>
+  <description>
+    <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
+  </description>  
+    
+  <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -220,7 +241,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/preprocess1.jpg" alt="titleimage" /> juliaで前処理大全をやっています。  ]]>
   </description>  
     
-  <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -241,7 +262,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/agriculture.jpg" alt="titleimage" />Project環境を作るメリット  ]]>
   </description>  
     
-  <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -262,7 +283,7 @@
     <![CDATA[  <img src="https://hanafsky.github.io/assets/tips/smooth-3221868_640.jpg" alt="titleimage" />Savitzky-Golayフィルターの説明をします。  ]]>
   </description>  
     
-  <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>

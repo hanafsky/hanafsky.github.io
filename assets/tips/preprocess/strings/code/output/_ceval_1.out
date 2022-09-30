@@ -1,0 +1,5 @@
+MethodError: no method matching Awabi.Tokenizer(::Nothing)
+Closest candidates are:
+  Awabi.Tokenizer() at ~/.julia/packages/Awabi/NqVsn/src/tokenizer.jl:56
+  Awabi.Tokenizer(!Matched::AbstractString) at ~/.julia/packages/Awabi/NqVsn/src/tokenizer.jl:52
+  Awabi.Tokenizer(!Matched::Dict{String, String}) at ~/.julia/packages/Awabi/NqVsn/src/tokenizer.jl:39

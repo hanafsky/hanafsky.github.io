@@ -37,7 +37,7 @@
 </style>
 <![endif]-->
 
-   <title>Projects</title>  
+   <title>juliaで前処理大全10</title>  
   <!-- end custom head snippets -->
 </head>
 <body class="layout--single">
@@ -85,13 +85,95 @@
 
           
           
+              
+
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Tag</button>
+            <ul class="author__urls social-icons">
+              <li>タグ</li>
+              <li></li>
+              <li><a href="/tag/setting/">設定</a></li>
+              <li><a href="/tag/thirdparty/">サードパーティライブラリ</a></li>
+              <li><a href="/tag/recipe">レシピ</a></li>
+            </ul>
+          </div>
+          
         </div>
       </div>
 
 
 <!-- Content appended here -->
-<div class="franklin-content"><h1 id="自前のパッケージなど"><a href="#自前のパッケージなど" class="header-anchor">自前のパッケージなど</a></h1>
-<h2 id="coming_soon"><a href="#coming_soon" class="header-anchor">Coming soon?</a></h2>
+<div class="franklin-content"><h1 id="juliaで前処理大全_11文字型"><a href="#juliaで前処理大全_11文字型" class="header-anchor">juliaで前処理大全 11.文字型</a></h1>
+<p>juliaで前処理大全その10です。今回は文字型を取り扱います。</p>
+<div class="franklin-toc"><ol><li><a href="#形態素解析による分解">形態素解析による分解</a><ol><li><a href="#q_名詞動詞の抽出">Q 名詞、動詞の抽出</a></li></ol></li><li><a href="#単語の集合データに変換">単語の集合データに変換</a><ol><li><a href="#bag_of_wordsの作成">bag of wordsの作成</a></li></ol></li><li><a href="#tf-idfによる単語の重要度調整">TF-IDFによる単語の重要度調整</a><ol><li><a href="#tf-idfを利用したbag_of_wordsの作成">TF-IDFを利用したbag of wordsの作成</a></li></ol></li></ol></div>
+<h2 id="形態素解析による分解"><a href="#形態素解析による分解" class="header-anchor">形態素解析による分解</a></h2>
+<h3 id="q_名詞動詞の抽出"><a href="#q_名詞動詞の抽出" class="header-anchor">Q 名詞、動詞の抽出</a></h3>
+<p>走れメロスのテキストデータをまず読み込んでみます。</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span>  Chain, Downloads
+meros_url =  <span class="hljs-string">&quot;https://raw.githubusercontent.com/hanafsky/awesomebook/master/data/txt/meros.txt&quot;</span>
+
+meros = <span class="hljs-meta">@chain</span> meros_url <span class="hljs-keyword">begin</span>
+                Downloads.download
+                read
+                <span class="hljs-built_in">String</span>
+            <span class="hljs-keyword">end</span>
+first(meros, <span class="hljs-number">10</span>) |&gt; println</code></pre>
+<div class="code-output"><pre><code class="plaintext hljs">メロスは激怒した。必
+</code></pre></div>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Awabi
+dic = Sys.iswindows() ? <span class="hljs-built_in">Dict</span>(<span class="hljs-string">&quot;dicdir&quot;</span> =&gt; <span class="hljs-string">&quot;C:\\Program Files (x86)\\MeCab\\dic\\ipadic&quot;</span>) : <span class="hljs-literal">nothing</span>
+
+tokenize(Tokenizer(dic), <span class="hljs-string">&quot;すもももももももものうち&quot;</span>)</code></pre><pre><code class="plaintext hljs">MethodError: no method matching Awabi.Tokenizer(::Nothing)
+Closest candidates are:
+  Awabi.Tokenizer() at ~/.julia/packages/Awabi/NqVsn/src/tokenizer.jl:56
+  Awabi.Tokenizer(!Matched::AbstractString) at ~/.julia/packages/Awabi/NqVsn/src/tokenizer.jl:52
+  Awabi.Tokenizer(!Matched::Dict{String, String}) at ~/.julia/packages/Awabi/NqVsn/src/tokenizer.jl:39
+</code></pre>
+<h2 id="単語の集合データに変換"><a href="#単語の集合データに変換" class="header-anchor">単語の集合データに変換</a></h2>
+<h3 id="bag_of_wordsの作成"><a href="#bag_of_wordsの作成" class="header-anchor">bag of wordsの作成</a></h3>
+<h2 id="tf-idfによる単語の重要度調整"><a href="#tf-idfによる単語の重要度調整" class="header-anchor">TF-IDFによる単語の重要度調整</a></h2>
+<h3 id="tf-idfを利用したbag_of_wordsの作成"><a href="#tf-idfを利用したbag_of_wordsの作成" class="header-anchor">TF-IDFを利用したbag of wordsの作成</a></h3>
+<p> <p style="text-align:right">  つづく </p> 
+<div class="sns-container top">
+  <div class="sns-box b-twitter">
+    <a href="https://twitter.com/share?url=https://hanafsky.com/tips/preprocess/&text=juliaで前処理大全&via=HanafusaKei&related=HanafusaKei"
+    target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></div>
+  <div class="sns-box b-facebook">
+    <a href="http://www.facebook.com/share.php?u=https://hanafsky.com/tips/preprocess/" 
+    target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+  <div class="sns-box b-hatena">
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://hanafsky.com/tips/preprocess/&title=juliaで前処理大全"
+    target="_blank" rel="nofollow"><span class="icon-hatena"></span></a></div>
+  <div class="sns-box b-pocket">
+    <a href="http://getpocket.com/edit?url=https://hanafsky.com/tips/preprocess/&title=juliaで前処理大全"
+    rel="nofollow" target="_blank"><i class="fab fa-get-pocket"></i></a></div>
+  <div class="sns-box b-feedly">
+    <a href="http://feedly.com/i/subscription/feed/https://hanafsky.com/feed"
+    rel="nofollow" target="_blank"><span class="icon-feedly"></i></a></div>
+  <div class="sns-box b-line">
+    <a href='https://social-plugins.line.me/lineit/share?url=https://hanafsky.com/tips/preprocess/'
+    target='blank' rel="nofollow"><span class="icon-line"></span></a></div>
+</div>
+ 
+  <div class="prev-next-link">
+  <a class="prev-link" href="/tips/preprocess/category">
+    <p class="prev-next-label">前の記事</p>
+    <p>
+       juliaで前処理大全 カテゴリー型
+    </p>
+  </a>
+</div>
+</p>
+ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+    <script src="https://utteranc.es/client.js"
+        repo="hanafsky/blog_comments"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+
 <div class="page-foot">
   <div class="copyright">
     &copy; Kei Hanafusa. Last modified: September 30, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
@@ -191,6 +273,36 @@
 	</script>
         <!-- {{ insert foot_copy.html }} -->
     
+    
+        <script src="/libs/mermaid/mermaid.min.js"></script>
+<script>
+  var config
+  mermaid.initialize({
+    theme: 'neutral',
+    themeCSS: '\
+               .mermaid-main-font {font-family:"Noto Sans JP"};\
+               .section0, .section2{fill:#fadbda;opacity:0.3;};\
+               .task0, .task1, .task2, .task3 {fill:#fadbda; stroke:#f6bdc0; stroke-width:1};\
+               .grid {stroke:#666;stroke-width:0.5};\
+               .node rect,\
+               .node circle,\
+               .node ellipse,\
+               .node path,\
+               .node polygon\
+               {fill:rgba(253,237,228,0.5);\
+                stroke: rgb(246,189,192)};\
+               .arrowheadPath {fill:rgb(246,189,192);}\
+               .edgePath .path {stroke:rgb(246,189,192);};\
+               .cluster rect\
+               {fill:rgba(255,249,177,0.3);\
+                stroke:rgb(246,189,192)};\
+               ',
+    // themeCSS: '.node rect {fill:rgba(253,237,228,0.5); stroke: rgb(250,219,218)};',
+    // logLevel: 3,
+    // securityLevel: 'loose',
+    // flowchart: { curve: 'basis' }
+  });
+</script>
     
     <script>
     new LuminousGallery(document.querySelectorAll('.zoom'));

@@ -302,8 +302,8 @@ scatter!(p_3,x,deriv1_2,label=<span class="hljs-string">&quot;smoothed 1st order
 sg3 = SG_Filter(<span class="hljs-built_in">Float64</span>,halfWidth=<span class="hljs-number">5</span>,degree=<span class="hljs-number">2</span>)
 <span class="hljs-meta">@btime</span> apply_SG_filter(y,sg3,derivativeOrder=<span class="hljs-number">0</span>) <span class="hljs-comment"># 直接畳み込み</span>
 <span class="hljs-meta">@btime</span> apply_filter(sg1[:,<span class="hljs-number">2</span>],y) <span class="hljs-comment"># FFT畳み込み</span></code></pre>
-<p><div class="code-output"><pre><code class="plaintext hljs">  1.040 μs (1 allocation: 736 bytes)
-  22.700 μs (69 allocations: 8.69 KiB)
+<p><div class="code-output"><pre><code class="plaintext hljs">  966.667 ns (1 allocation: 736 bytes)
+  22.401 μs (69 allocations: 8.69 KiB)
 </code></pre></div> 結果は直接畳み込みの圧勝で、Vincentさんのブログに書いてあるとおりでした。 DirectConvolution.jlにはこのほかにも2次元のSavitzky-Golayフィルターなど実装されているので、 いろいろ遊んでみたいと思います。</p>
 <p> <p style="text-align:right">  めでたしめでたし </p> 
 <div class="sns-container top">
@@ -353,7 +353,7 @@ sg3 = SG_Filter(<span class="hljs-built_in">Float64</span>,halfWidth=<span class
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: September 28, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: September 30, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
