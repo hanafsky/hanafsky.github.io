@@ -175,7 +175,7 @@ end
 
 \right{つづく}
 \share{tips/preprocess/}{juliaで前処理大全}
-\prev{/tips/preprocess/category}{juliaで前処理大全 カテゴリー型}
+\prevnext{/tips/preprocess/category}{juliaで前処理大全 カテゴリー型}{/tips/preprocess/strings}{juliaで前処理大全 文字型}
 
 \backtotop
 
