@@ -37,11 +37,12 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
     <meta content="US:20090098918:A1" name="DC.relation" scheme="references"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Product+Sans" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700" rel="stylesheet"/>
     <style>
       body { transition: none; }
         </style>
     <script>
-      window.version = 'patent-search.search_20220826_RC00';
+      window.version = 'patent-search.search_20240108_RC01';
 
       function sendFeedback() {
         userfeedback.api.startFeedback({
@@ -55,21 +56,22 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
       window.experiments.patentCountries = "ae,ag,al,am,ao,ap,ar,at,au,aw,az,ba,bb,bd,be,bf,bg,bh,bj,bn,bo,br,bw,bx,by,bz,ca,cf,cg,ch,ci,cl,cm,cn,co,cr,cs,cu,cy,cz,dd,de,dj,dk,dm,do,dz,ea,ec,ee,eg,em,ep,es,fi,fr,ga,gb,gc,gd,ge,gh,gm,gn,gq,gr,gt,gw,hk,hn,hr,hu,ib,id,ie,il,in,ir,is,it,jo,jp,ke,kg,kh,km,kn,kp,kr,kw,kz,la,lc,li,lk,lr,ls,lt,lu,lv,ly,ma,mc,md,me,mg,mk,ml,mn,mo,mr,mt,mw,mx,my,mz,na,ne,ng,ni,nl,no,nz,oa,om,pa,pe,pg,ph,pl,pt,py,qa,ro,rs,ru,rw,sa,sc,sd,se,sg,si,sk,sl,sm,sn,st,su,sv,sy,sz,td,tg,th,tj,tm,tn,tr,tt,tw,tz,ua,ug,us,uy,uz,vc,ve,vn,wo,yu,za,zm,zw";
       
       
+      window.experiments.keywordWizard = true;
       
       
       
-      
+      window.experiments.definitions = true;
 
       window.Polymer = {
         dom: 'shady',
         lazyRegister: true,
       };
         </script>
-    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20220826_RC00/scs/compiled_dir/webcomponentsjs/webcomponents-lite.min.js"></script>
-    <link href="//www.gstatic.com/patent-search/frontend/patent-search.search_20220826_RC00/scs/compiled_dir/search-app-vulcanized.html" rel="import"/>
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20240108_RC01/scs/compiled_dir/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link href="//www.gstatic.com/patent-search/frontend/patent-search.search_20240108_RC01/scs/compiled_dir/search-app-vulcanized.html" rel="import"/>
   </head>
   <body unresolved="">
-    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20220826_RC00/scs/compiled_dir/search-app-vulcanized.js"></script>
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20240108_RC01/scs/compiled_dir/search-app-vulcanized.js"></script>
     <search-app>
       <article class="result" itemscope="" itemtype="http://schema.org/ScholarlyArticle">
         <h1 itemprop="pageTitle">
@@ -256,11 +258,88 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
           <a href="https://patents.darts-ip.com/?family=42198835&amp;utm_source=google_patent&amp;utm_medium=platform_link&amp;utm_campaign=public_patent_search&amp;patent=US9839852%28B2%29" itemprop="litigationLink" rel="nofollow"></a>
         </dd>
         <dd itemprop="events" itemscope="" repeat="">
-          <time datetime="2008-11-21" itemprop="date">
-            2008-11-21
+          <time datetime="" itemprop="date"></time>
+          <span itemprop="title">
+            First worldwide family litigation filed
+          </span>
+          <span itemprop="type">
+            litigation
+          </span>
+          <span bool="" content="true" itemprop="critical">
+            Critical
+          </span>
+          <span itemprop="externalLink">
+            https://patents.darts-ip.com/?family=42198835&amp;utm_source=google_patent&amp;utm_medium=platform_link&amp;utm_campaign=public_patent_search&amp;patent=US9839852(B2)
+          </span>
+          <span itemprop="description" repeat="">
+            "Global patent litigation dataset” by Darts-ip is licensed under a Creative Commons Attribution 4.0 International License.
+          </span>
+        </dd>
+        <dd itemprop="events" itemscope="" repeat="">
+          <time datetime="" itemprop="date"></time>
+          <span itemprop="title">
+            US case filed in Court of Appeals for the Federal Circuit
+          </span>
+          <span itemprop="type">
+            litigation
+          </span>
+          <span itemprop="externalLink">
+            https://portal.unifiedpatents.com/litigation/Court%20of%20Appeals%20for%20the%20Federal%20Circuit/case/2019-2399
+          </span>
+          <span itemprop="description" repeat="">
+            Source: Court of Appeals for the Federal Circuit
+          </span>
+          <span itemprop="description" repeat="">
+            Jurisdiction: Court of Appeals for the Federal Circuit
+          </span>
+          <span itemprop="description" repeat="">
+            "Unified Patents Litigation Data" by Unified Patents is licensed under a Creative Commons Attribution 4.0 International License.
+          </span>
+        </dd>
+        <dd itemprop="events" itemscope="" repeat="">
+          <time datetime="" itemprop="date"></time>
+          <span itemprop="title">
+            US case filed in North Carolina Eastern District Court
+          </span>
+          <span itemprop="type">
+            litigation
+          </span>
+          <span itemprop="externalLink">
+            https://portal.unifiedpatents.com/litigation/North%20Carolina%20Eastern%20District%20Court/case/5%3A18-cv-00383
+          </span>
+          <span itemprop="description" repeat="">
+            Source: District Court
+          </span>
+          <span itemprop="description" repeat="">
+            Jurisdiction: North Carolina Eastern District Court
+          </span>
+          <span itemprop="description" repeat="">
+            "Unified Patents Litigation Data" by Unified Patents is licensed under a Creative Commons Attribution 4.0 International License.
+          </span>
+        </dd>
+        <dd itemprop="events" itemscope="" repeat="">
+          <time datetime="2015-08-31" itemprop="date">
+            2015-08-31
           </time>
           <span itemprop="title">
-            Priority to US11705308P
+            Application filed by Ubisoft Entertainment SA
+          </span>
+          <span itemprop="type">
+            filed
+          </span>
+          <span bool="" content="true" itemprop="critical">
+            Critical
+          </span>
+          <span itemprop="assigneeSearch">
+            Ubisoft Entertainment SA
+          </span>
+        </dd>
+        <dd itemprop="events" itemscope="" repeat="">
+          <time datetime="2015-08-31" itemprop="date">
+            2015-08-31
+          </time>
+          <span itemprop="title">
+            Priority to US14/840,634
           </span>
           <span itemprop="type">
             priority
@@ -268,19 +347,8 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
           <span bool="" content="true" itemprop="critical">
             Critical
           </span>
-        </dd>
-        <dd itemprop="events" itemscope="" repeat="">
-          <time datetime="2009-11-20" itemprop="date">
-            2009-11-20
-          </time>
-          <span itemprop="title">
-            Priority to US12/623,368
-          </span>
-          <span itemprop="type">
-            priority
-          </span>
           <span itemprop="documentId">
-            patent/US9120016B2/en
+            patent/US9839852B2/en
           </span>
         </dd>
         <dd itemprop="events" itemscope="" repeat="">
@@ -324,37 +392,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
           </span>
         </dd>
         <dd itemprop="events" itemscope="" repeat="">
-          <time datetime="2015-08-31" itemprop="date">
-            2015-08-31
-          </time>
-          <span itemprop="title">
-            Priority to US14/840,634
-          </span>
-          <span itemprop="type">
-            priority
-          </span>
-          <span itemprop="documentId">
-            patent/US9839852B2/en
-          </span>
-        </dd>
-        <dd itemprop="events" itemscope="" repeat="">
-          <time datetime="2015-08-31" itemprop="date">
-            2015-08-31
-          </time>
-          <span itemprop="title">
-            Application filed by Ubisoft Entertainment SA
-          </span>
-          <span itemprop="type">
-            filed
-          </span>
-          <span bool="" content="true" itemprop="critical">
-            Critical
-          </span>
-          <span itemprop="assigneeSearch">
-            Ubisoft Entertainment SA
-          </span>
-        </dd>
-        <dd itemprop="events" itemscope="" repeat="">
           <time datetime="2015-12-24" itemprop="date">
             2015-12-24
           </time>
@@ -376,23 +413,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
             2017-12-12
           </time>
           <span itemprop="title">
-            Publication of US9839852B2
-          </span>
-          <span itemprop="type">
-            publication
-          </span>
-          <span bool="" content="true" itemprop="critical">
-            Critical
-          </span>
-          <span itemprop="documentId">
-            patent/US9839852B2/en
-          </span>
-        </dd>
-        <dd itemprop="events" itemscope="" repeat="">
-          <time datetime="2017-12-12" itemprop="date">
-            2017-12-12
-          </time>
-          <span itemprop="title">
             Application granted
           </span>
           <span itemprop="type">
@@ -403,69 +423,20 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
           </span>
         </dd>
         <dd itemprop="events" itemscope="" repeat="">
-          <time datetime="2018-08-01" itemprop="date">
-            2018-08-01
+          <time datetime="2017-12-12" itemprop="date">
+            2017-12-12
           </time>
           <span itemprop="title">
-            First worldwide family litigation filed
+            Publication of US9839852B2
           </span>
           <span itemprop="type">
-            litigation
+            publication
           </span>
           <span bool="" content="true" itemprop="critical">
             Critical
           </span>
-          <span itemprop="externalLink">
-            https://patents.darts-ip.com/?family=42198835&amp;utm_source=google_patent&amp;utm_medium=platform_link&amp;utm_campaign=public_patent_search&amp;patent=US9839852(B2)
-          </span>
-          <span itemprop="description" repeat="">
-            "Global patent litigation dataset” by Darts-ip is licensed under a Creative Commons Attribution 4.0 International License.
-          </span>
-        </dd>
-        <dd itemprop="events" itemscope="" repeat="">
-          <time datetime="2018-08-01" itemprop="date">
-            2018-08-01
-          </time>
-          <span itemprop="title">
-            US case filed in North Carolina Eastern District Court
-          </span>
-          <span itemprop="type">
-            litigation
-          </span>
-          <span itemprop="externalLink">
-            https://portal.unifiedpatents.com/litigation/North%20Carolina%20Eastern%20District%20Court/case/5%3A18-cv-00383
-          </span>
-          <span itemprop="description" repeat="">
-            Source: District Court
-          </span>
-          <span itemprop="description" repeat="">
-            Jurisdiction: North Carolina Eastern District Court
-          </span>
-          <span itemprop="description" repeat="">
-            "Unified Patents Litigation Data" by Unified Patents is licensed under a Creative Commons Attribution 4.0 International License.
-          </span>
-        </dd>
-        <dd itemprop="events" itemscope="" repeat="">
-          <time datetime="2019-09-16" itemprop="date">
-            2019-09-16
-          </time>
-          <span itemprop="title">
-            US case filed in Court of Appeals for the Federal Circuit
-          </span>
-          <span itemprop="type">
-            litigation
-          </span>
-          <span itemprop="externalLink">
-            https://portal.unifiedpatents.com/litigation/Court%20of%20Appeals%20for%20the%20Federal%20Circuit/case/2019-2399
-          </span>
-          <span itemprop="description" repeat="">
-            Source: Court of Appeals for the Federal Circuit
-          </span>
-          <span itemprop="description" repeat="">
-            Jurisdiction: Court of Appeals for the Federal Circuit
-          </span>
-          <span itemprop="description" repeat="">
-            "Unified Patents Litigation Data" by Unified Patents is licensed under a Creative Commons Attribution 4.0 International License.
+          <span itemprop="documentId">
+            patent/US9839852B2/en
           </span>
         </dd>
         <dd itemprop="events" itemscope="" repeat="">
@@ -513,7 +484,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
           </li>
           <li itemprop="links" itemscope="" repeat="">
             <meta content="usptoPatentCenterLink" itemprop="id"/>
-            <a href="https://patentcenter.uspto.gov/#!/applications/14840634" itemprop="url" target="_blank">
+            <a href="https://patentcenter.uspto.gov/applications/14840634" itemprop="url" target="_blank">
               <span itemprop="text">
                 USPTO PatentCenter
               </span>
@@ -552,1279 +523,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
             </a>
           </li>
         </ul>
-        <ul itemprop="concept" itemscope="">
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000002452
-            </span>
-            <span itemprop="name">
-              interceptive
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              title
-            </span>
-            <span itemprop="sections" repeat="">
-              claims
-            </span>
-            <span itemprop="sections" repeat="">
-              abstract
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              19
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000005236
-            </span>
-            <span itemprop="name">
-              sound signal
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              claims
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              9
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000004590
-            </span>
-            <span itemprop="name">
-              computer program
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              claims
-            </span>
-            <span itemprop="count">
-              14
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000000875
-            </span>
-            <span itemprop="name">
-              corresponding
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              claims
-            </span>
-            <span itemprop="count">
-              7
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000013016
-            </span>
-            <span itemprop="name">
-              learning
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              abstract
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              14
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000031836
-            </span>
-            <span itemprop="name">
-              visual learning
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              abstract
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000036545
-            </span>
-            <span itemprop="name">
-              exercise
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              17
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000003607
-            </span>
-            <span itemprop="name">
-              modifier
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              14
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000033764
-            </span>
-            <span itemprop="name">
-              rhythmic process
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              11
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000000034
-            </span>
-            <span itemprop="name">
-              method
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              10
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000000007
-            </span>
-            <span itemprop="name">
-              visual effect
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              8
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              101700050571
-            </span>
-            <span itemprop="name">
-              SUOX
-            </span>
-            <span itemprop="domain">
-              Proteins
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              5
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000004048
-            </span>
-            <span itemprop="name">
-              modification
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              5
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000006011
-            </span>
-            <span itemprop="name">
-              modification reaction
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              5
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000002131
-            </span>
-            <span itemprop="name">
-              composite material
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              3
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000003247
-            </span>
-            <span itemprop="name">
-              decreasing
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              3
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000007710
-            </span>
-            <span itemprop="name">
-              freezing
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              3
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000000670
-            </span>
-            <span itemprop="name">
-              limiting
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              3
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000015654
-            </span>
-            <span itemprop="name">
-              memory
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              3
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000003068
-            </span>
-            <span itemprop="name">
-              static
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              3
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              206010010219
-            </span>
-            <span itemprop="name">
-              Compulsions
-            </span>
-            <span itemprop="domain">
-              Diseases
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000010009
-            </span>
-            <span itemprop="name">
-              beating
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000015556
-            </span>
-            <span itemprop="name">
-              catabolic process
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000003086
-            </span>
-            <span itemprop="name">
-              colorant
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000010586
-            </span>
-            <span itemprop="name">
-              diagram
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000002996
-            </span>
-            <span itemprop="name">
-              emotional
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000000463
-            </span>
-            <span itemprop="name">
-              material
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000002250
-            </span>
-            <span itemprop="name">
-              progressing
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000011435
-            </span>
-            <span itemprop="name">
-              rock
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              2
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              101710026100
-            </span>
-            <span itemprop="name">
-              Act57B
-            </span>
-            <span itemprop="domain">
-              Proteins
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              102100003170
-            </span>
-            <span itemprop="name">
-              CCL4
-            </span>
-            <span itemprop="domain">
-              Human genes
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              101700040051
-            </span>
-            <span itemprop="name">
-              CCL4
-            </span>
-            <span itemprop="domain">
-              Proteins
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              241001342895
-            </span>
-            <span itemprop="name">
-              Chorus
-            </span>
-            <span itemprop="domain">
-              Species
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              241000410367
-            </span>
-            <span itemprop="name">
-              Clerodendrum thomsoniae
-            </span>
-            <span itemprop="domain">
-              Species
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              HEFNNWSXXWATRW-UHFFFAOYSA-N
-            </span>
-            <span itemprop="name">
-              Ibuprofen
-            </span>
-            <span itemprop="domain">
-              Chemical compound
-            </span>
-            <span itemprop="svg_large">
-              data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8c3ZnIHZlcnNpb249JzEuMScgYmFzZVByb2ZpbGU9J2Z1bGwnCiAgICAgICAgICAgICAgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJwogICAgICAgICAgICAgICAgICAgICAgeG1sbnM6cmRraXQ9J2h0dHA6Ly93d3cucmRraXQub3JnL3htbCcKICAgICAgICAgICAgICAgICAgICAgIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJwogICAgICAgICAgICAgICAgICB4bWw6c3BhY2U9J3ByZXNlcnZlJwp3aWR0aD0nMzAwcHgnIGhlaWdodD0nMzAwcHgnIHZpZXdCb3g9JzAgMCAzMDAgMzAwJz4KPCEtLSBFTkQgT0YgSEVBREVSIC0tPgo8cmVjdCBzdHlsZT0nb3BhY2l0eToxLjA7ZmlsbDojRkZGRkZGO3N0cm9rZTpub25lJyB3aWR0aD0nMzAwLjAnIGhlaWdodD0nMzAwLjAnIHg9JzAuMCcgeT0nMC4wJz4gPC9yZWN0Pgo8cGF0aCBjbGFzcz0nYm9uZC0wIGF0b20tMCBhdG9tLTEnIGQ9J00gMTMuNiwxNDUuOSBMIDUwLjYsMTQzLjYnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjIuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTEgYXRvbS0xIGF0b20tMicgZD0nTSA1MC42LDE0My42IEwgNjcuMSwxMTAuNScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMiBhdG9tLTEgYXRvbS0zJyBkPSdNIDUwLjYsMTQzLjYgTCA3MS4wLDE3NC41JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoyLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0zIGF0b20tMyBhdG9tLTQnIGQ9J00gNzEuMCwxNzQuNSBMIDEwOC4wLDE3Mi4yJyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoyLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC00IGF0b20tNCBhdG9tLTUnIGQ9J00gMTA4LjAsMTcyLjIgTCAxMjQuNSwxMzkuMScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtNCBhdG9tLTQgYXRvbS01JyBkPSdNIDExNy4xLDE3MC41IEwgMTI4LjcsMTQ3LjMnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjIuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTE0IGF0b20tMTQgYXRvbS00JyBkPSdNIDEyOC40LDIwMy4xIEwgMTA4LjAsMTcyLjInIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjIuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTUgYXRvbS01IGF0b20tNicgZD0nTSAxMjQuNSwxMzkuMSBMIDE2MS41LDEzNi44JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoyLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC02IGF0b20tNiBhdG9tLTcnIGQ9J00gMTYxLjUsMTM2LjggTCAxODEuOSwxNjcuNycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtNiBhdG9tLTYgYXRvbS03JyBkPSdNIDE1OC40LDE0NS41IEwgMTcyLjcsMTY3LjEnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjIuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTcgYXRvbS03IGF0b20tOCcgZD0nTSAxODEuOSwxNjcuNyBMIDIxOC45LDE2NS40JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoyLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0xMiBhdG9tLTcgYXRvbS0xMycgZD0nTSAxODEuOSwxNjcuNyBMIDE2NS40LDIwMC44JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoyLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC04IGF0b20tOCBhdG9tLTknIGQ9J00gMjE4LjksMTY1LjQgTCAyMzkuMywxOTYuMycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtOSBhdG9tLTggYXRvbS0xMCcgZD0nTSAyMTguOSwxNjUuNCBMIDIzNS40LDEzMi4yJyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoyLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0xMCBhdG9tLTEwIGF0b20tMTEnIGQ9J00gMjM1LjQsMTMyLjIgTCAyNDcuNSwxMzEuNScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTAgYXRvbS0xMCBhdG9tLTExJyBkPSdNIDI0Ny41LDEzMS41IEwgMjU5LjYsMTMwLjgnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNFODQyMzU7c3Ryb2tlLXdpZHRoOjIuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTExIGF0b20tMTAgYXRvbS0xMicgZD0nTSAyMzguNSwxMzAuMiBMIDIzMy4wLDEyMS45JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoyLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0xMSBhdG9tLTEwIGF0b20tMTInIGQ9J00gMjMzLjAsMTIxLjkgTCAyMjcuNSwxMTMuNicgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0U4NDIzNTtzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTEgYXRvbS0xMCBhdG9tLTEyJyBkPSdNIDIzMi4zLDEzNC4zIEwgMjI2LjgsMTI2LjAnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjIuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTExIGF0b20tMTAgYXRvbS0xMicgZD0nTSAyMjYuOCwxMjYuMCBMIDIyMS4zLDExNy43JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRTg0MjM1O3N0cm9rZS13aWR0aDoyLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0xMyBhdG9tLTEzIGF0b20tMTQnIGQ9J00gMTY1LjQsMjAwLjggTCAxMjguNCwyMDMuMScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6Mi4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTMgYXRvbS0xMyBhdG9tLTE0JyBkPSdNIDE1OS40LDE5My43IEwgMTMzLjUsMTk1LjMnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjIuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+Cjx0ZXh0IHg9JzI2Ny45JyB5PScxMzcuNCcgY2xhc3M9J2F0b20tMTEnIHN0eWxlPSdmb250LXNpemU6MTRweDtmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOm5vbmU7Zm9udC1mYW1pbHk6c2Fucy1zZXJpZjt0ZXh0LWFuY2hvcjpzdGFydDtmaWxsOiNFODQyMzUnID5PPC90ZXh0Pgo8dGV4dCB4PScyNzguMScgeT0nMTM3LjQnIGNsYXNzPSdhdG9tLTExJyBzdHlsZT0nZm9udC1zaXplOjE0cHg7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lO2ZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7dGV4dC1hbmNob3I6c3RhcnQ7ZmlsbDojRTg0MjM1JyA+SDwvdGV4dD4KPHRleHQgeD0nMjEwLjUnIHk9JzEwOC44JyBjbGFzcz0nYXRvbS0xMicgc3R5bGU9J2ZvbnQtc2l6ZToxNHB4O2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtmb250LWZhbWlseTpzYW5zLXNlcmlmO3RleHQtYW5jaG9yOnN0YXJ0O2ZpbGw6I0U4NDIzNScgPk88L3RleHQ+Cjwvc3ZnPgo=
-            </span>
-            <span itemprop="svg_small">
-              data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8c3ZnIHZlcnNpb249JzEuMScgYmFzZVByb2ZpbGU9J2Z1bGwnCiAgICAgICAgICAgICAgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJwogICAgICAgICAgICAgICAgICAgICAgeG1sbnM6cmRraXQ9J2h0dHA6Ly93d3cucmRraXQub3JnL3htbCcKICAgICAgICAgICAgICAgICAgICAgIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJwogICAgICAgICAgICAgICAgICB4bWw6c3BhY2U9J3ByZXNlcnZlJwp3aWR0aD0nODVweCcgaGVpZ2h0PSc4NXB4JyB2aWV3Qm94PScwIDAgODUgODUnPgo8IS0tIEVORCBPRiBIRUFERVIgLS0+CjxyZWN0IHN0eWxlPSdvcGFjaXR5OjEuMDtmaWxsOiNGRkZGRkY7c3Ryb2tlOm5vbmUnIHdpZHRoPSc4NS4wJyBoZWlnaHQ9Jzg1LjAnIHg9JzAuMCcgeT0nMC4wJz4gPC9yZWN0Pgo8cGF0aCBjbGFzcz0nYm9uZC0wIGF0b20tMCBhdG9tLTEnIGQ9J00gMy40LDQxLjAgTCAxMy43LDQwLjQnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTEgYXRvbS0xIGF0b20tMicgZD0nTSAxMy43LDQwLjQgTCAxOC4zLDMxLjInIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTIgYXRvbS0xIGF0b20tMycgZD0nTSAxMy43LDQwLjQgTCAxOS40LDQ5LjAnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTMgYXRvbS0zIGF0b20tNCcgZD0nTSAxOS40LDQ5LjAgTCAyOS43LDQ4LjQnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTQgYXRvbS00IGF0b20tNScgZD0nTSAyOS43LDQ4LjQgTCAzNC4zLDM5LjEnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTQgYXRvbS00IGF0b20tNScgZD0nTSAzMi4yLDQ3LjkgTCAzNS40LDQxLjUnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiMzQjQxNDM7c3Ryb2tlLXdpZHRoOjEuMHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTE0IGF0b20tMTQgYXRvbS00JyBkPSdNIDM1LjQsNTcuMCBMIDI5LjcsNDguNCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtNSBhdG9tLTUgYXRvbS02JyBkPSdNIDM0LjMsMzkuMSBMIDQ0LjYsMzguNScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtNiBhdG9tLTYgYXRvbS03JyBkPSdNIDQ0LjYsMzguNSBMIDUwLjMsNDcuMScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtNiBhdG9tLTYgYXRvbS03JyBkPSdNIDQzLjcsNDAuOSBMIDQ3LjcsNDcuMCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtNyBhdG9tLTcgYXRvbS04JyBkPSdNIDUwLjMsNDcuMSBMIDYwLjYsNDYuNScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTIgYXRvbS03IGF0b20tMTMnIGQ9J00gNTAuMyw0Ny4xIEwgNDUuNyw1Ni40JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoxLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC04IGF0b20tOCBhdG9tLTknIGQ9J00gNjAuNiw0Ni41IEwgNjYuMyw1NS4xJyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojM0I0MTQzO3N0cm9rZS13aWR0aDoxLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC05IGF0b20tOCBhdG9tLTEwJyBkPSdNIDYwLjYsNDYuNSBMIDY1LjIsMzcuMicgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTAgYXRvbS0xMCBhdG9tLTExJyBkPSdNIDY1LjIsMzcuMiBMIDY5LjMsMzcuMCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTAgYXRvbS0xMCBhdG9tLTExJyBkPSdNIDY5LjMsMzcuMCBMIDczLjQsMzYuNycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0U4NDIzNTtzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTEgYXRvbS0xMCBhdG9tLTEyJyBkPSdNIDY2LjAsMzYuNyBMIDY0LjIsMzMuOScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTEgYXRvbS0xMCBhdG9tLTEyJyBkPSdNIDY0LjIsMzMuOSBMIDYyLjQsMzEuMicgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0U4NDIzNTtzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTEgYXRvbS0xMCBhdG9tLTEyJyBkPSdNIDY0LjMsMzcuOCBMIDYyLjUsMzUuMScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTEgYXRvbS0xMCBhdG9tLTEyJyBkPSdNIDYyLjUsMzUuMSBMIDYwLjcsMzIuMycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0U4NDIzNTtzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTMgYXRvbS0xMyBhdG9tLTE0JyBkPSdNIDQ1LjcsNTYuNCBMIDM1LjQsNTcuMCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTMgYXRvbS0xMyBhdG9tLTE0JyBkPSdNIDQ0LjAsNTQuNCBMIDM2LjgsNTQuOCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6IzNCNDE0MztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHRleHQgeD0nNzMuNycgeT0nMzkuNicgY2xhc3M9J2F0b20tMTEnIHN0eWxlPSdmb250LXNpemU6NnB4O2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtmb250LWZhbWlseTpzYW5zLXNlcmlmO3RleHQtYW5jaG9yOnN0YXJ0O2ZpbGw6I0U4NDIzNScgPk88L3RleHQ+Cjx0ZXh0IHg9Jzc3LjgnIHk9JzM5LjYnIGNsYXNzPSdhdG9tLTExJyBzdHlsZT0nZm9udC1zaXplOjZweDtmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOm5vbmU7Zm9udC1mYW1pbHk6c2Fucy1zZXJpZjt0ZXh0LWFuY2hvcjpzdGFydDtmaWxsOiNFODQyMzUnID5IPC90ZXh0Pgo8dGV4dCB4PSc1Ny43JyB5PSczMS42JyBjbGFzcz0nYXRvbS0xMicgc3R5bGU9J2ZvbnQtc2l6ZTo2cHg7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lO2ZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7dGV4dC1hbmNob3I6c3RhcnQ7ZmlsbDojRTg0MjM1JyA+TzwvdGV4dD4KPC9zdmc+Cg==
-            </span>
-            <span itemprop="smiles">
-              CC(C)CC1=CC=C(C(C)C(O)=O)C=C1
-            </span>
-            <span itemprop="inchi_key">
-              HEFNNWSXXWATRW-UHFFFAOYSA-N
-            </span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              101710026102
-            </span>
-            <span itemprop="name">
-              MIC-ACT-2
-            </span>
-            <span itemprop="domain">
-              Proteins
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000001174
-            </span>
-            <span itemprop="name">
-              ascending
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000005540
-            </span>
-            <span itemprop="name">
-              biological transmission
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000006227
-            </span>
-            <span itemprop="name">
-              byproduct
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000001514
-            </span>
-            <span itemprop="name">
-              detection method
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000003814
-            </span>
-            <span itemprop="name">
-              drug
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              229940079593
-            </span>
-            <span itemprop="name">
-              drugs
-            </span>
-            <span itemprop="domain">
-              Drugs
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000000694
-            </span>
-            <span itemprop="name">
-              effects
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000009432
-            </span>
-            <span itemprop="name">
-              framing
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000010437
-            </span>
-            <span itemprop="name">
-              gem
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000010348
-            </span>
-            <span itemprop="name">
-              incorporation
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000003278
-            </span>
-            <span itemprop="name">
-              mimic
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              239000000203
-            </span>
-            <span itemprop="name">
-              mixture
-            </span>
-            <span itemprop="domain">
-              Substances
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000036961
-            </span>
-            <span itemprop="name">
-              partial
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000003014
-            </span>
-            <span itemprop="name">
-              reinforcing
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              238000005070
-            </span>
-            <span itemprop="name">
-              sampling
-            </span>
-            <span itemprop="domain">
-              Methods
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-          <li itemprop="match" itemscope="" repeat="">
-            <span itemprop="id">
-              230000003442
-            </span>
-            <span itemprop="name">
-              weekly
-            </span>
-            <span itemprop="domain">
-              Effects
-            </span>
-            <span itemprop="svg_large"></span>
-            <span itemprop="svg_small"></span>
-            <span itemprop="smiles"></span>
-            <span itemprop="inchi_key"></span>
-            <span itemprop="similarity">
-              0.000
-            </span>
-            <span itemprop="sections" repeat="">
-              description
-            </span>
-            <span itemprop="count">
-              1
-            </span>
-          </li>
-        </ul>
         <section>
           <h2>
             Images
@@ -1839,10 +537,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="100" itemprop="id"/>
                   <meta content="platform" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1323" itemprop="left"/>
-                    <meta content="989" itemprop="top"/>
-                    <meta content="1399" itemprop="right"/>
-                    <meta content="1030" itemprop="bottom"/>
+                    <meta content="1331" itemprop="left"/>
+                    <meta content="992" itemprop="top"/>
+                    <meta content="1398" itemprop="right"/>
+                    <meta content="1024" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -1850,10 +548,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="110" itemprop="id"/>
                   <meta content="musical instrument" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="437" itemprop="left"/>
-                    <meta content="541" itemprop="top"/>
-                    <meta content="521" itemprop="right"/>
-                    <meta content="583" itemprop="bottom"/>
+                    <meta content="447" itemprop="left"/>
+                    <meta content="544" itemprop="top"/>
+                    <meta content="516" itemprop="right"/>
+                    <meta content="578" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -1861,10 +559,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="120" itemprop="id"/>
                   <meta content="game engine" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="793" itemprop="left"/>
-                    <meta content="1039" itemprop="top"/>
-                    <meta content="876" itemprop="right"/>
-                    <meta content="1081" itemprop="bottom"/>
+                    <meta content="803" itemprop="left"/>
+                    <meta content="1044" itemprop="top"/>
+                    <meta content="870" itemprop="right"/>
+                    <meta content="1075" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -1872,10 +570,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="121" itemprop="id"/>
                   <meta content="memory" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1074" itemprop="left"/>
-                    <meta content="1039" itemprop="top"/>
-                    <meta content="1145" itemprop="right"/>
-                    <meta content="1078" itemprop="bottom"/>
+                    <meta content="1083" itemprop="left"/>
+                    <meta content="1044" itemprop="top"/>
+                    <meta content="1143" itemprop="right"/>
+                    <meta content="1073" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -1883,10 +581,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="130" itemprop="id"/>
                   <meta content="musical instrument input" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="260" itemprop="left"/>
-                    <meta content="1001" itemprop="top"/>
-                    <meta content="336" itemprop="right"/>
-                    <meta content="1043" itemprop="bottom"/>
+                    <meta content="267" itemprop="left"/>
+                    <meta content="1005" itemprop="top"/>
+                    <meta content="335" itemprop="right"/>
+                    <meta content="1038" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -1894,21 +592,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="140" itemprop="id"/>
                   <meta content="network" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1546" itemprop="left"/>
-                    <meta content="995" itemprop="top"/>
-                    <meta content="1625" itemprop="right"/>
-                    <meta content="1039" itemprop="bottom"/>
-                  </span>
-                </li>
-                <li itemprop="callouts" itemscope="" repeat="">
-                  <meta content="0" itemprop="figurePage"/>
-                  <meta content="140" itemprop="id"/>
-                  <meta content="network" itemprop="label"/>
-                  <span itemprop="bounds" itemscope="">
-                    <meta content="1555" itemprop="left"/>
-                    <meta content="984" itemprop="top"/>
-                    <meta content="1625" itemprop="right"/>
-                    <meta content="1052" itemprop="bottom"/>
+                    <meta content="1556" itemprop="left"/>
+                    <meta content="999" itemprop="top"/>
+                    <meta content="1622" itemprop="right"/>
+                    <meta content="1030" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -1916,10 +603,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="150" itemprop="id"/>
                   <meta content="audio outputs" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1123" itemprop="left"/>
-                    <meta content="211" itemprop="top"/>
-                    <meta content="1213" itemprop="right"/>
-                    <meta content="253" itemprop="bottom"/>
+                    <meta content="1138" itemprop="left"/>
+                    <meta content="215" itemprop="top"/>
+                    <meta content="1205" itemprop="right"/>
+                    <meta content="247" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -1933,10 +620,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="100" itemprop="id"/>
                   <meta content="platform" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1400" itemprop="left"/>
-                    <meta content="1083" itemprop="top"/>
-                    <meta content="1476" itemprop="right"/>
-                    <meta content="1124" itemprop="bottom"/>
+                    <meta content="1408" itemprop="left"/>
+                    <meta content="1086" itemprop="top"/>
+                    <meta content="1475" itemprop="right"/>
+                    <meta content="1120" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -1944,10 +631,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="110" itemprop="id"/>
                   <meta content="musical instrument" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="514" itemprop="left"/>
-                    <meta content="635" itemprop="top"/>
-                    <meta content="589" itemprop="right"/>
-                    <meta content="677" itemprop="bottom"/>
+                    <meta content="523" itemprop="left"/>
+                    <meta content="639" itemprop="top"/>
+                    <meta content="590" itemprop="right"/>
+                    <meta content="672" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -1955,10 +642,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="120" itemprop="id"/>
                   <meta content="game engine" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="869" itemprop="left"/>
-                    <meta content="1132" itemprop="top"/>
-                    <meta content="953" itemprop="right"/>
-                    <meta content="1174" itemprop="bottom"/>
+                    <meta content="879" itemprop="left"/>
+                    <meta content="1138" itemprop="top"/>
+                    <meta content="945" itemprop="right"/>
+                    <meta content="1168" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -1966,10 +653,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="121" itemprop="id"/>
                   <meta content="memory" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1150" itemprop="left"/>
-                    <meta content="1132" itemprop="top"/>
+                    <meta content="1159" itemprop="left"/>
+                    <meta content="1136" itemprop="top"/>
                     <meta content="1220" itemprop="right"/>
-                    <meta content="1174" itemprop="bottom"/>
+                    <meta content="1168" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -1977,10 +664,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="130" itemprop="id"/>
                   <meta content="musical instrument input" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="333" itemprop="left"/>
-                    <meta content="1095" itemprop="top"/>
-                    <meta content="416" itemprop="right"/>
-                    <meta content="1136" itemprop="bottom"/>
+                    <meta content="343" itemprop="left"/>
+                    <meta content="1101" itemprop="top"/>
+                    <meta content="410" itemprop="right"/>
+                    <meta content="1131" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -1988,10 +675,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="140" itemprop="id"/>
                   <meta content="network" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1626" itemprop="left"/>
-                    <meta content="1089" itemprop="top"/>
-                    <meta content="1701" itemprop="right"/>
-                    <meta content="1131" itemprop="bottom"/>
+                    <meta content="1632" itemprop="left"/>
+                    <meta content="1094" itemprop="top"/>
+                    <meta content="1698" itemprop="right"/>
+                    <meta content="1125" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -1999,10 +686,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="150" itemprop="id"/>
                   <meta content="audio outputs" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1203" itemprop="left"/>
-                    <meta content="306" itemprop="top"/>
-                    <meta content="1289" itemprop="right"/>
-                    <meta content="349" itemprop="bottom"/>
+                    <meta content="1216" itemprop="left"/>
+                    <meta content="310" itemprop="top"/>
+                    <meta content="1280" itemprop="right"/>
+                    <meta content="342" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -2016,10 +703,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="201" itemprop="id"/>
                   <meta content="song library" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="150" itemprop="left"/>
-                    <meta content="674" itemprop="top"/>
-                    <meta content="253" itemprop="right"/>
-                    <meta content="746" itemprop="bottom"/>
+                    <meta content="163" itemprop="left"/>
+                    <meta content="678" itemprop="top"/>
+                    <meta content="247" itemprop="right"/>
+                    <meta content="739" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2027,10 +714,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="202" itemprop="id"/>
                   <meta content="song interpreter" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="147" itemprop="left"/>
-                    <meta content="1140" itemprop="top"/>
-                    <meta content="243" itemprop="right"/>
-                    <meta content="1206" itemprop="bottom"/>
+                    <meta content="163" itemprop="left"/>
+                    <meta content="1142" itemprop="top"/>
+                    <meta content="248" itemprop="right"/>
+                    <meta content="1195" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2038,10 +725,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="203" itemprop="id"/>
                   <meta content="song video" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="808" itemprop="left"/>
-                    <meta content="1600" itemprop="top"/>
+                    <meta content="820" itemprop="left"/>
+                    <meta content="1603" itemprop="top"/>
                     <meta content="905" itemprop="right"/>
-                    <meta content="1667" itemprop="bottom"/>
+                    <meta content="1657" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2049,10 +736,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="204" itemprop="id"/>
                   <meta content="audio output" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="156" itemprop="left"/>
-                    <meta content="1648" itemprop="top"/>
+                    <meta content="168" itemprop="left"/>
+                    <meta content="1651" itemprop="top"/>
                     <meta content="253" itemprop="right"/>
-                    <meta content="1716" itemprop="bottom"/>
+                    <meta content="1705" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2060,10 +747,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="205" itemprop="id"/>
                   <meta content="guitar" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="812" itemprop="left"/>
-                    <meta content="108" itemprop="top"/>
-                    <meta content="909" itemprop="right"/>
-                    <meta content="175" itemprop="bottom"/>
+                    <meta content="826" itemprop="left"/>
+                    <meta content="111" itemprop="top"/>
+                    <meta content="910" itemprop="right"/>
+                    <meta content="161" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2071,10 +758,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="206" itemprop="id"/>
                   <meta content="signal processing module" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1269" itemprop="left"/>
-                    <meta content="99" itemprop="top"/>
-                    <meta content="1366" itemprop="right"/>
-                    <meta content="166" itemprop="bottom"/>
+                    <meta content="1279" itemprop="left"/>
+                    <meta content="101" itemprop="top"/>
+                    <meta content="1365" itemprop="right"/>
+                    <meta content="157" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2082,10 +769,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="207" itemprop="id"/>
                   <meta content="computer" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1373" itemprop="left"/>
-                    <meta content="455" itemprop="top"/>
-                    <meta content="1474" itemprop="right"/>
-                    <meta content="544" itemprop="bottom"/>
+                    <meta content="1386" itemprop="left"/>
+                    <meta content="457" itemprop="top"/>
+                    <meta content="1473" itemprop="right"/>
+                    <meta content="529" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2093,10 +780,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="208" itemprop="id"/>
                   <meta content="game manager" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1988" itemprop="left"/>
-                    <meta content="535" itemprop="top"/>
-                    <meta content="2085" itemprop="right"/>
-                    <meta content="602" itemprop="bottom"/>
+                    <meta content="1985" itemprop="left"/>
+                    <meta content="540" itemprop="top"/>
+                    <meta content="2083" itemprop="right"/>
+                    <meta content="592" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2104,10 +791,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="209" itemprop="id"/>
                   <meta content="note manager" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1999" itemprop="left"/>
-                    <meta content="986" itemprop="top"/>
-                    <meta content="2097" itemprop="right"/>
-                    <meta content="1055" itemprop="bottom"/>
+                    <meta content="2011" itemprop="left"/>
+                    <meta content="993" itemprop="top"/>
+                    <meta content="2092" itemprop="right"/>
+                    <meta content="1042" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2115,10 +802,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="210" itemprop="id"/>
                   <meta content="notes" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1227" itemprop="left"/>
-                    <meta content="1261" itemprop="top"/>
-                    <meta content="1336" itemprop="right"/>
-                    <meta content="1334" itemprop="bottom"/>
+                    <meta content="1241" itemprop="left"/>
+                    <meta content="1267" itemprop="top"/>
+                    <meta content="1328" itemprop="right"/>
+                    <meta content="1324" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2126,10 +813,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="211" itemprop="id"/>
                   <meta content="graphics display" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1979" itemprop="left"/>
-                    <meta content="1481" itemprop="top"/>
-                    <meta content="2089" itemprop="right"/>
-                    <meta content="1555" itemprop="bottom"/>
+                    <meta content="2005" itemprop="left"/>
+                    <meta content="1486" itemprop="top"/>
+                    <meta content="2084" itemprop="right"/>
+                    <meta content="1538" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -2143,10 +830,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="303" itemprop="id"/>
                   <meta content="game configuration module" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1185" itemprop="left"/>
-                    <meta content="2023" itemprop="top"/>
-                    <meta content="1269" itemprop="right"/>
-                    <meta content="2130" itemprop="bottom"/>
+                    <meta content="1191" itemprop="left"/>
+                    <meta content="2025" itemprop="top"/>
+                    <meta content="1262" itemprop="right"/>
+                    <meta content="2134" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2154,10 +841,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="310" itemprop="id"/>
                   <meta content="mode" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="228" itemprop="left"/>
-                    <meta content="103" itemprop="top"/>
-                    <meta content="291" itemprop="right"/>
-                    <meta content="217" itemprop="bottom"/>
+                    <meta content="234" itemprop="left"/>
+                    <meta content="114" itemprop="top"/>
+                    <meta content="278" itemprop="right"/>
+                    <meta content="218" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2165,10 +852,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="320" itemprop="id"/>
                   <meta content="Story mode" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="586" itemprop="left"/>
-                    <meta content="123" itemprop="top"/>
-                    <meta content="644" itemprop="right"/>
-                    <meta content="241" itemprop="bottom"/>
+                    <meta content="593" itemprop="left"/>
+                    <meta content="134" itemprop="top"/>
+                    <meta content="637" itemprop="right"/>
+                    <meta content="237" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2176,10 +863,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="330" itemprop="id"/>
                   <meta content="mode" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1011" itemprop="left"/>
-                    <meta content="143" itemprop="top"/>
-                    <meta content="1090" itemprop="right"/>
-                    <meta content="346" itemprop="bottom"/>
+                    <meta content="1020" itemprop="left"/>
+                    <meta content="133" itemprop="top"/>
+                    <meta content="1066" itemprop="right"/>
+                    <meta content="237" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2187,9 +874,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="340" itemprop="id"/>
                   <meta content="mode" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1385" itemprop="left"/>
-                    <meta content="103" itemprop="top"/>
-                    <meta content="1447" itemprop="right"/>
+                    <meta content="1390" itemprop="left"/>
+                    <meta content="117" itemprop="top"/>
+                    <meta content="1439" itemprop="right"/>
                     <meta content="217" itemprop="bottom"/>
                   </span>
                 </li>
@@ -2201,13 +888,35 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               <ul>
                 <li itemprop="callouts" itemscope="" repeat="">
                   <meta content="4" itemprop="figurePage"/>
+                  <meta content="401" itemprop="id"/>
+                  <meta content="symbol" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="210" itemprop="left"/>
+                    <meta content="2416" itemprop="top"/>
+                    <meta content="283" itemprop="right"/>
+                    <meta content="2528" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="4" itemprop="figurePage"/>
+                  <meta content="402" itemprop="id"/>
+                  <meta content="area" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="969" itemprop="left"/>
+                    <meta content="1944" itemprop="top"/>
+                    <meta content="1043" itemprop="right"/>
+                    <meta content="2067" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="4" itemprop="figurePage"/>
                   <meta content="403" itemprop="id"/>
                   <meta content="upcoming notes" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="253" itemprop="left"/>
-                    <meta content="1542" itemprop="top"/>
-                    <meta content="345" itemprop="right"/>
-                    <meta content="1670" itemprop="bottom"/>
+                    <meta content="262" itemprop="left"/>
+                    <meta content="1546" itemprop="top"/>
+                    <meta content="339" itemprop="right"/>
+                    <meta content="1668" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -2218,24 +927,13 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               <ul>
                 <li itemprop="callouts" itemscope="" repeat="">
                   <meta content="5" itemprop="figurePage"/>
-                  <meta content="2" itemprop="id"/>
-                  <meta content="color indicating stage" itemprop="label"/>
-                  <span itemprop="bounds" itemscope="">
-                    <meta content="648" itemprop="left"/>
-                    <meta content="1180" itemprop="top"/>
-                    <meta content="699" itemprop="right"/>
-                    <meta content="1231" itemprop="bottom"/>
-                  </span>
-                </li>
-                <li itemprop="callouts" itemscope="" repeat="">
-                  <meta content="5" itemprop="figurePage"/>
                   <meta content="3" itemprop="id"/>
                   <meta content="stage" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="650" itemprop="left"/>
-                    <meta content="869" itemprop="top"/>
-                    <meta content="687" itemprop="right"/>
-                    <meta content="913" itemprop="bottom"/>
+                    <meta content="1261" itemprop="left"/>
+                    <meta content="1265" itemprop="top"/>
+                    <meta content="1296" itemprop="right"/>
+                    <meta content="1301" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2243,10 +941,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="501" itemprop="id"/>
                   <meta content="guitar" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1418" itemprop="left"/>
-                    <meta content="841" itemprop="top"/>
-                    <meta content="1487" itemprop="right"/>
-                    <meta content="879" itemprop="bottom"/>
+                    <meta content="1425" itemprop="left"/>
+                    <meta content="845" itemprop="top"/>
+                    <meta content="1483" itemprop="right"/>
+                    <meta content="872" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2254,10 +952,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="502" itemprop="id"/>
                   <meta content="notes" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="609" itemprop="left"/>
-                    <meta content="1341" itemprop="top"/>
-                    <meta content="682" itemprop="right"/>
-                    <meta content="1378" itemprop="bottom"/>
+                    <meta content="617" itemprop="left"/>
+                    <meta content="1342" itemprop="top"/>
+                    <meta content="676" itemprop="right"/>
+                    <meta content="1373" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2265,10 +963,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="503" itemprop="id"/>
                   <meta content="zone" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="499" itemprop="left"/>
-                    <meta content="825" itemprop="top"/>
-                    <meta content="563" itemprop="right"/>
-                    <meta content="861" itemprop="bottom"/>
+                    <meta content="505" itemprop="left"/>
+                    <meta content="827" itemprop="top"/>
+                    <meta content="564" itemprop="right"/>
+                    <meta content="855" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2276,10 +974,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="504" itemprop="id"/>
                   <meta content="chord" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="644" itemprop="left"/>
-                    <meta content="628" itemprop="top"/>
-                    <meta content="710" itemprop="right"/>
-                    <meta content="664" itemprop="bottom"/>
+                    <meta content="651" itemprop="left"/>
+                    <meta content="632" itemprop="top"/>
+                    <meta content="714" itemprop="right"/>
+                    <meta content="660" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2287,10 +985,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="506" itemprop="id"/>
                   <meta content="strum indicator" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="884" itemprop="left"/>
-                    <meta content="1324" itemprop="top"/>
-                    <meta content="959" itemprop="right"/>
-                    <meta content="1359" itemprop="bottom"/>
+                    <meta content="897" itemprop="left"/>
+                    <meta content="1329" itemprop="top"/>
+                    <meta content="957" itemprop="right"/>
+                    <meta content="1356" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2298,10 +996,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="507" itemprop="id"/>
                   <meta content="modifiers" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="329" itemprop="left"/>
-                    <meta content="954" itemprop="top"/>
-                    <meta content="399" itemprop="right"/>
-                    <meta content="990" itemprop="bottom"/>
+                    <meta content="336" itemprop="left"/>
+                    <meta content="957" itemprop="top"/>
+                    <meta content="398" itemprop="right"/>
+                    <meta content="986" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2309,10 +1007,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="508" itemprop="id"/>
                   <meta content="other feedback" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="348" itemprop="left"/>
-                    <meta content="195" itemprop="top"/>
-                    <meta content="419" itemprop="right"/>
-                    <meta content="232" itemprop="bottom"/>
+                    <meta content="359" itemprop="left"/>
+                    <meta content="199" itemprop="top"/>
+                    <meta content="420" itemprop="right"/>
+                    <meta content="226" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2320,10 +1018,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="510" itemprop="id"/>
                   <meta content="video" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1136" itemprop="left"/>
-                    <meta content="426" itemprop="top"/>
-                    <meta content="1211" itemprop="right"/>
-                    <meta content="461" itemprop="bottom"/>
+                    <meta content="1144" itemprop="left"/>
+                    <meta content="429" itemprop="top"/>
+                    <meta content="1204" itemprop="right"/>
+                    <meta content="456" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -2337,10 +1035,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="2" itemprop="id"/>
                   <meta content="color indicating stage" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="330" itemprop="left"/>
-                    <meta content="737" itemprop="top"/>
-                    <meta content="367" itemprop="right"/>
-                    <meta content="774" itemprop="bottom"/>
+                    <meta content="338" itemprop="left"/>
+                    <meta content="741" itemprop="top"/>
+                    <meta content="360" itemprop="right"/>
+                    <meta content="767" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2348,10 +1046,21 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="3" itemprop="id"/>
                   <meta content="stage" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="333" itemprop="left"/>
-                    <meta content="805" itemprop="top"/>
-                    <meta content="362" itemprop="right"/>
-                    <meta content="839" itemprop="bottom"/>
+                    <meta content="337" itemprop="left"/>
+                    <meta content="808" itemprop="top"/>
+                    <meta content="363" itemprop="right"/>
+                    <meta content="836" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="6" itemprop="figurePage"/>
+                  <meta content="3" itemprop="id"/>
+                  <meta content="stage" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="1249" itemprop="left"/>
+                    <meta content="1228" itemprop="top"/>
+                    <meta content="1281" itemprop="right"/>
+                    <meta content="1260" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2359,10 +1068,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="602" itemprop="id"/>
                   <meta content="qualitative indicator" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="863" itemprop="left"/>
-                    <meta content="591" itemprop="top"/>
+                    <meta content="871" itemprop="left"/>
+                    <meta content="597" itemprop="top"/>
                     <meta content="942" itemprop="right"/>
-                    <meta content="635" itemprop="bottom"/>
+                    <meta content="627" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2370,10 +1079,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="603" itemprop="id"/>
                   <meta content="chord" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="617" itemprop="left"/>
-                    <meta content="690" itemprop="top"/>
-                    <meta content="698" itemprop="right"/>
-                    <meta content="731" itemprop="bottom"/>
+                    <meta content="626" itemprop="left"/>
+                    <meta content="693" itemprop="top"/>
+                    <meta content="696" itemprop="right"/>
+                    <meta content="725" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -2384,13 +1093,24 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               <ul>
                 <li itemprop="callouts" itemscope="" repeat="">
                   <meta content="7" itemprop="figurePage"/>
+                  <meta content="3" itemprop="id"/>
+                  <meta content="stage" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="606" itemprop="left"/>
+                    <meta content="1354" itemprop="top"/>
+                    <meta content="647" itemprop="right"/>
+                    <meta content="1394" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="7" itemprop="figurePage"/>
                   <meta content="701" itemprop="id"/>
                   <meta content="right side" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1386" itemprop="left"/>
+                    <meta content="1390" itemprop="left"/>
                     <meta content="2304" itemprop="top"/>
-                    <meta content="1430" itemprop="right"/>
-                    <meta content="2366" itemprop="bottom"/>
+                    <meta content="1425" itemprop="right"/>
+                    <meta content="2373" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2398,10 +1118,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="702" itemprop="id"/>
                   <meta content="left side" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="784" itemprop="left"/>
-                    <meta content="174" itemprop="top"/>
-                    <meta content="829" itemprop="right"/>
-                    <meta content="248" itemprop="bottom"/>
+                    <meta content="788" itemprop="left"/>
+                    <meta content="176" itemprop="top"/>
+                    <meta content="822" itemprop="right"/>
+                    <meta content="249" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2409,9 +1129,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="703" itemprop="id"/>
                   <meta content="note bubble" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1068" itemprop="left"/>
-                    <meta content="1378" itemprop="top"/>
-                    <meta content="1112" itemprop="right"/>
+                    <meta content="1072" itemprop="left"/>
+                    <meta content="1375" itemprop="top"/>
+                    <meta content="1108" itemprop="right"/>
                     <meta content="1449" itemprop="bottom"/>
                   </span>
                 </li>
@@ -2420,10 +1140,21 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="705" itemprop="id"/>
                   <meta content="notes" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="932" itemprop="left"/>
+                    <meta content="940" itemprop="left"/>
                     <meta content="1030" itemprop="top"/>
-                    <meta content="981" itemprop="right"/>
-                    <meta content="1100" itemprop="bottom"/>
+                    <meta content="973" itemprop="right"/>
+                    <meta content="1103" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="7" itemprop="figurePage"/>
+                  <meta content="706" itemprop="id"/>
+                  <meta content="current note streak" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="1344" itemprop="left"/>
+                    <meta content="754" itemprop="top"/>
+                    <meta content="1378" itemprop="right"/>
+                    <meta content="825" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2431,9 +1162,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="707" itemprop="id"/>
                   <meta content="background" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="379" itemprop="left"/>
-                    <meta content="1350" itemprop="top"/>
-                    <meta content="427" itemprop="right"/>
+                    <meta content="384" itemprop="left"/>
+                    <meta content="1351" itemprop="top"/>
+                    <meta content="419" itemprop="right"/>
                     <meta content="1426" itemprop="bottom"/>
                   </span>
                 </li>
@@ -2442,21 +1173,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="708" itemprop="id"/>
                   <meta content="progress bar" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1492" itemprop="left"/>
-                    <meta content="1901" itemprop="top"/>
-                    <meta content="1536" itemprop="right"/>
-                    <meta content="1975" itemprop="bottom"/>
-                  </span>
-                </li>
-                <li itemprop="callouts" itemscope="" repeat="">
-                  <meta content="7" itemprop="figurePage"/>
-                  <meta content="902" itemprop="id"/>
-                  <meta content="names" itemprop="label"/>
-                  <span itemprop="bounds" itemscope="">
-                    <meta content="1339" itemprop="left"/>
-                    <meta content="742" itemprop="top"/>
-                    <meta content="1383" itemprop="right"/>
-                    <meta content="827" itemprop="bottom"/>
+                    <meta content="1499" itemprop="left"/>
+                    <meta content="1908" itemprop="top"/>
+                    <meta content="1532" itemprop="right"/>
+                    <meta content="1982" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -2467,12 +1187,56 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               <ul>
                 <li itemprop="callouts" itemscope="" repeat="">
                   <meta content="8" itemprop="figurePage"/>
+                  <meta content="1" itemprop="id"/>
+                  <meta content="Level" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="1476" itemprop="left"/>
+                    <meta content="714" itemprop="top"/>
+                    <meta content="1540" itemprop="right"/>
+                    <meta content="745" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="8" itemprop="figurePage"/>
+                  <meta content="2" itemprop="id"/>
+                  <meta content="color indicating stage" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="609" itemprop="left"/>
+                    <meta content="1736" itemprop="top"/>
+                    <meta content="627" itemprop="right"/>
+                    <meta content="1754" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="8" itemprop="figurePage"/>
+                  <meta content="3" itemprop="id"/>
+                  <meta content="stage" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="760" itemprop="left"/>
+                    <meta content="1263" itemprop="top"/>
+                    <meta content="808" itemprop="right"/>
+                    <meta content="1306" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="8" itemprop="figurePage"/>
+                  <meta content="3" itemprop="id"/>
+                  <meta content="stage" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="975" itemprop="left"/>
+                    <meta content="906" itemprop="top"/>
+                    <meta content="1024" itemprop="right"/>
+                    <meta content="953" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="8" itemprop="figurePage"/>
                   <meta content="800" itemprop="id"/>
                   <meta content="carousel" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="399" itemprop="left"/>
-                    <meta content="2262" itemprop="top"/>
-                    <meta content="441" itemprop="right"/>
+                    <meta content="403" itemprop="left"/>
+                    <meta content="2265" itemprop="top"/>
+                    <meta content="436" itemprop="right"/>
                     <meta content="2339" itemprop="bottom"/>
                   </span>
                 </li>
@@ -2481,10 +1245,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="802" itemprop="id"/>
                   <meta content="background" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="457" itemprop="left"/>
-                    <meta content="1309" itemprop="top"/>
-                    <meta content="502" itemprop="right"/>
-                    <meta content="1381" itemprop="bottom"/>
+                    <meta content="463" itemprop="left"/>
+                    <meta content="1310" itemprop="top"/>
+                    <meta content="495" itemprop="right"/>
+                    <meta content="1382" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2492,21 +1256,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="803" itemprop="id"/>
                   <meta content="foreground" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1348" itemprop="left"/>
-                    <meta content="1425" itemprop="top"/>
-                    <meta content="1392" itemprop="right"/>
-                    <meta content="1496" itemprop="bottom"/>
-                  </span>
-                </li>
-                <li itemprop="callouts" itemscope="" repeat="">
-                  <meta content="8" itemprop="figurePage"/>
-                  <meta content="804" itemprop="id"/>
-                  <meta content="hit zone" itemprop="label"/>
-                  <span itemprop="bounds" itemscope="">
-                    <meta content="1300" itemprop="left"/>
-                    <meta content="1954" itemprop="top"/>
-                    <meta content="1347" itemprop="right"/>
-                    <meta content="2030" itemprop="bottom"/>
+                    <meta content="1354" itemprop="left"/>
+                    <meta content="1424" itemprop="top"/>
+                    <meta content="1387" itemprop="right"/>
+                    <meta content="1499" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2514,10 +1267,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="805" itemprop="id"/>
                   <meta content="strings" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="540" itemprop="left"/>
-                    <meta content="1110" itemprop="top"/>
-                    <meta content="583" itemprop="right"/>
-                    <meta content="1182" itemprop="bottom"/>
+                    <meta content="543" itemprop="left"/>
+                    <meta content="1111" itemprop="top"/>
+                    <meta content="578" itemprop="right"/>
+                    <meta content="1184" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2525,10 +1278,21 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="806" itemprop="id"/>
                   <meta content="score box" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1325" itemprop="left"/>
-                    <meta content="748" itemprop="top"/>
-                    <meta content="1369" itemprop="right"/>
-                    <meta content="820" itemprop="bottom"/>
+                    <meta content="1331" itemprop="left"/>
+                    <meta content="751" itemprop="top"/>
+                    <meta content="1363" itemprop="right"/>
+                    <meta content="824" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="8" itemprop="figurePage"/>
+                  <meta content="807" itemprop="id"/>
+                  <meta content="video" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="1500" itemprop="left"/>
+                    <meta content="1447" itemprop="top"/>
+                    <meta content="1535" itemprop="right"/>
+                    <meta content="1523" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2536,9 +1300,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="808" itemprop="id"/>
                   <meta content="progress bar" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1494" itemprop="left"/>
-                    <meta content="2170" itemprop="top"/>
-                    <meta content="1538" itemprop="right"/>
+                    <meta content="1499" itemprop="left"/>
+                    <meta content="2169" itemprop="top"/>
+                    <meta content="1532" itemprop="right"/>
                     <meta content="2245" itemprop="bottom"/>
                   </span>
                 </li>
@@ -2550,13 +1314,57 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               <ul>
                 <li itemprop="callouts" itemscope="" repeat="">
                   <meta content="9" itemprop="figurePage"/>
+                  <meta content="1" itemprop="id"/>
+                  <meta content="Level" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="596" itemprop="left"/>
+                    <meta content="1960" itemprop="top"/>
+                    <meta content="656" itemprop="right"/>
+                    <meta content="1991" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="9" itemprop="figurePage"/>
+                  <meta content="2" itemprop="id"/>
+                  <meta content="color indicating stage" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="602" itemprop="left"/>
+                    <meta content="1663" itemprop="top"/>
+                    <meta content="655" itemprop="right"/>
+                    <meta content="1710" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="9" itemprop="figurePage"/>
+                  <meta content="3" itemprop="id"/>
+                  <meta content="stage" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="597" itemprop="left"/>
+                    <meta content="1396" itemprop="top"/>
+                    <meta content="654" itemprop="right"/>
+                    <meta content="1445" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="9" itemprop="figurePage"/>
+                  <meta content="3" itemprop="id"/>
+                  <meta content="stage" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="1582" itemprop="left"/>
+                    <meta content="324" itemprop="top"/>
+                    <meta content="1640" itemprop="right"/>
+                    <meta content="371" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="9" itemprop="figurePage"/>
                   <meta content="902" itemprop="id"/>
                   <meta content="names" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="467" itemprop="left"/>
-                    <meta content="2205" itemprop="top"/>
-                    <meta content="509" itemprop="right"/>
-                    <meta content="2267" itemprop="bottom"/>
+                    <meta content="473" itemprop="left"/>
+                    <meta content="2202" itemprop="top"/>
+                    <meta content="502" itemprop="right"/>
+                    <meta content="2273" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2564,10 +1372,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="903" itemprop="id"/>
                   <meta content="scorebox" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1449" itemprop="left"/>
-                    <meta content="626" itemprop="top"/>
-                    <meta content="1492" itemprop="right"/>
-                    <meta content="688" itemprop="bottom"/>
+                    <meta content="1453" itemprop="left"/>
+                    <meta content="623" itemprop="top"/>
+                    <meta content="1484" itemprop="right"/>
+                    <meta content="696" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2575,10 +1383,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="904" itemprop="id"/>
                   <meta content="fullscreen video" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="314" itemprop="left"/>
-                    <meta content="973" itemprop="top"/>
-                    <meta content="358" itemprop="right"/>
-                    <meta content="1037" itemprop="bottom"/>
+                    <meta content="322" itemprop="left"/>
+                    <meta content="972" itemprop="top"/>
+                    <meta content="352" itemprop="right"/>
+                    <meta content="1043" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -2597,10 +1405,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1101" itemprop="id"/>
                   <meta content="guitar" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="630" itemprop="left"/>
-                    <meta content="1995" itemprop="top"/>
-                    <meta content="701" itemprop="right"/>
-                    <meta content="2126" itemprop="bottom"/>
+                    <meta content="640" itemprop="left"/>
+                    <meta content="1996" itemprop="top"/>
+                    <meta content="689" itemprop="right"/>
+                    <meta content="2131" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2608,10 +1416,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1102" itemprop="id"/>
                   <meta content="zone" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="236" itemprop="left"/>
-                    <meta content="1013" itemprop="top"/>
-                    <meta content="304" itemprop="right"/>
-                    <meta content="1159" itemprop="bottom"/>
+                    <meta content="242" itemprop="left"/>
+                    <meta content="1018" itemprop="top"/>
+                    <meta content="291" itemprop="right"/>
+                    <meta content="1160" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2619,10 +1427,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1105" itemprop="id"/>
                   <meta content="chord name" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1124" itemprop="left"/>
-                    <meta content="749" itemprop="top"/>
-                    <meta content="1192" itemprop="right"/>
-                    <meta content="889" itemprop="bottom"/>
+                    <meta content="1131" itemprop="left"/>
+                    <meta content="748" itemprop="top"/>
+                    <meta content="1182" itemprop="right"/>
+                    <meta content="891" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2630,10 +1438,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1106" itemprop="id"/>
                   <meta content="strum direction" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="404" itemprop="left"/>
-                    <meta content="633" itemprop="top"/>
-                    <meta content="470" itemprop="right"/>
-                    <meta content="771" itemprop="bottom"/>
+                    <meta content="410" itemprop="left"/>
+                    <meta content="631" itemprop="top"/>
+                    <meta content="458" itemprop="right"/>
+                    <meta content="773" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -2647,10 +1455,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1201" itemprop="id"/>
                   <meta content="guitar neck" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1258" itemprop="left"/>
-                    <meta content="2093" itemprop="top"/>
-                    <meta content="1323" itemprop="right"/>
-                    <meta content="2237" itemprop="bottom"/>
+                    <meta content="1262" itemprop="left"/>
+                    <meta content="2101" itemprop="top"/>
+                    <meta content="1308" itemprop="right"/>
+                    <meta content="2230" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2658,10 +1466,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1202" itemprop="id"/>
                   <meta content="numbers" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="853" itemprop="left"/>
-                    <meta content="1692" itemprop="top"/>
-                    <meta content="920" itemprop="right"/>
-                    <meta content="1825" itemprop="bottom"/>
+                    <meta content="859" itemprop="left"/>
+                    <meta content="1693" itemprop="top"/>
+                    <meta content="906" itemprop="right"/>
+                    <meta content="1826" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2669,10 +1477,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1203" itemprop="id"/>
                   <meta content="hand position indicator" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="991" itemprop="left"/>
-                    <meta content="708" itemprop="top"/>
-                    <meta content="1052" itemprop="right"/>
-                    <meta content="845" itemprop="bottom"/>
+                    <meta content="996" itemprop="left"/>
+                    <meta content="711" itemprop="top"/>
+                    <meta content="1044" itemprop="right"/>
+                    <meta content="846" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -2686,21 +1494,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1300" itemprop="id"/>
                   <meta content="mode" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="234" itemprop="left"/>
-                    <meta content="1891" itemprop="top"/>
-                    <meta content="308" itemprop="right"/>
-                    <meta content="2009" itemprop="bottom"/>
-                  </span>
-                </li>
-                <li itemprop="callouts" itemscope="" repeat="">
-                  <meta content="13" itemprop="figurePage"/>
-                  <meta content="1301" itemprop="id"/>
-                  <meta content="song" itemprop="label"/>
-                  <span itemprop="bounds" itemscope="">
-                    <meta content="584" itemprop="left"/>
-                    <meta content="1909" itemprop="top"/>
-                    <meta content="659" itemprop="right"/>
-                    <meta content="2032" itemprop="bottom"/>
+                    <meta content="239" itemprop="left"/>
+                    <meta content="1889" itemprop="top"/>
+                    <meta content="300" itemprop="right"/>
+                    <meta content="2002" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2708,10 +1505,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1302" itemprop="id"/>
                   <meta content="song" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="874" itemprop="left"/>
-                    <meta content="1922" itemprop="top"/>
-                    <meta content="952" itemprop="right"/>
-                    <meta content="2043" itemprop="bottom"/>
+                    <meta content="878" itemprop="left"/>
+                    <meta content="1911" itemprop="top"/>
+                    <meta content="941" itemprop="right"/>
+                    <meta content="2035" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2719,10 +1516,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1303" itemprop="id"/>
                   <meta content="step" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1242" itemprop="left"/>
-                    <meta content="1921" itemprop="top"/>
-                    <meta content="1317" itemprop="right"/>
-                    <meta content="2041" itemprop="bottom"/>
+                    <meta content="1243" itemprop="left"/>
+                    <meta content="1914" itemprop="top"/>
+                    <meta content="1309" itemprop="right"/>
+                    <meta content="2034" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2730,10 +1527,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1304" itemprop="id"/>
                   <meta content="step" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1598" itemprop="left"/>
-                    <meta content="1922" itemprop="top"/>
-                    <meta content="1671" itemprop="right"/>
-                    <meta content="2035" itemprop="bottom"/>
+                    <meta content="1604" itemprop="left"/>
+                    <meta content="1923" itemprop="top"/>
+                    <meta content="1664" itemprop="right"/>
+                    <meta content="2036" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2741,10 +1538,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1305" itemprop="id"/>
                   <meta content="step" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1531" itemprop="left"/>
-                    <meta content="526" itemprop="top"/>
+                    <meta content="1534" itemprop="left"/>
+                    <meta content="529" itemprop="top"/>
                     <meta content="1582" itemprop="right"/>
-                    <meta content="641" itemprop="bottom"/>
+                    <meta content="633" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2752,9 +1549,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1306" itemprop="id"/>
                   <meta content="step" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1127" itemprop="left"/>
-                    <meta content="530" itemprop="top"/>
-                    <meta content="1176" itemprop="right"/>
+                    <meta content="1131" itemprop="left"/>
+                    <meta content="526" itemprop="top"/>
+                    <meta content="1167" itemprop="right"/>
                     <meta content="632" itemprop="bottom"/>
                   </span>
                 </li>
@@ -2763,10 +1560,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1307" itemprop="id"/>
                   <meta content="game" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="758" itemprop="left"/>
-                    <meta content="541" itemprop="top"/>
-                    <meta content="832" itemprop="right"/>
-                    <meta content="661" itemprop="bottom"/>
+                    <meta content="759" itemprop="left"/>
+                    <meta content="539" itemprop="top"/>
+                    <meta content="825" itemprop="right"/>
+                    <meta content="653" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2774,10 +1571,21 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1308" itemprop="id"/>
                   <meta content="main menu" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="195" itemprop="left"/>
+                    <meta content="202" itemprop="left"/>
                     <meta content="529" itemprop="top"/>
-                    <meta content="245" itemprop="right"/>
-                    <meta content="639" itemprop="bottom"/>
+                    <meta content="240" itemprop="right"/>
+                    <meta content="633" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="13" itemprop="figurePage"/>
+                  <meta content="1309" itemprop="id"/>
+                  <meta content="step" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="1423" itemprop="left"/>
+                    <meta content="176" itemprop="top"/>
+                    <meta content="1461" itemprop="right"/>
+                    <meta content="281" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -2788,13 +1596,24 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               <ul>
                 <li itemprop="callouts" itemscope="" repeat="">
                   <meta content="14" itemprop="figurePage"/>
+                  <meta content="1" itemprop="id"/>
+                  <meta content="Level" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="773" itemprop="left"/>
+                    <meta content="1231" itemprop="top"/>
+                    <meta content="802" itemprop="right"/>
+                    <meta content="1247" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="14" itemprop="figurePage"/>
                   <meta content="1401" itemprop="id"/>
                   <meta content="step" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="500" itemprop="left"/>
-                    <meta content="2110" itemprop="top"/>
-                    <meta content="544" itemprop="right"/>
-                    <meta content="2211" itemprop="bottom"/>
+                    <meta content="505" itemprop="left"/>
+                    <meta content="2103" itemprop="top"/>
+                    <meta content="537" itemprop="right"/>
+                    <meta content="2205" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2802,10 +1621,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1402" itemprop="id"/>
                   <meta content="step" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="874" itemprop="left"/>
-                    <meta content="2107" itemprop="top"/>
-                    <meta content="921" itemprop="right"/>
-                    <meta content="2211" itemprop="bottom"/>
+                    <meta content="881" itemprop="left"/>
+                    <meta content="2109" itemprop="top"/>
+                    <meta content="914" itemprop="right"/>
+                    <meta content="2206" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2813,10 +1632,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1403" itemprop="id"/>
                   <meta content="step" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="445" itemprop="left"/>
-                    <meta content="957" itemprop="top"/>
-                    <meta content="489" itemprop="right"/>
-                    <meta content="1058" itemprop="bottom"/>
+                    <meta content="449" itemprop="left"/>
+                    <meta content="956" itemprop="top"/>
+                    <meta content="483" itemprop="right"/>
+                    <meta content="1054" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2824,10 +1643,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1405" itemprop="id"/>
                   <meta content="step" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="993" itemprop="left"/>
-                    <meta content="975" itemprop="top"/>
-                    <meta content="1085" itemprop="right"/>
-                    <meta content="1085" itemprop="bottom"/>
+                    <meta content="999" itemprop="left"/>
+                    <meta content="977" itemprop="top"/>
+                    <meta content="1078" itemprop="right"/>
+                    <meta content="1080" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2835,10 +1654,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1408" itemprop="id"/>
                   <meta content="step" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1384" itemprop="left"/>
-                    <meta content="71" itemprop="top"/>
-                    <meta content="1430" itemprop="right"/>
-                    <meta content="169" itemprop="bottom"/>
+                    <meta content="1387" itemprop="left"/>
+                    <meta content="69" itemprop="top"/>
+                    <meta content="1424" itemprop="right"/>
+                    <meta content="168" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2846,10 +1665,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1410" itemprop="id"/>
                   <meta content="step" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1295" itemprop="left"/>
-                    <meta content="1986" itemprop="top"/>
-                    <meta content="1339" itemprop="right"/>
-                    <meta content="2087" itemprop="bottom"/>
+                    <meta content="1299" itemprop="left"/>
+                    <meta content="1984" itemprop="top"/>
+                    <meta content="1334" itemprop="right"/>
+                    <meta content="2082" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -2868,10 +1687,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1" itemprop="id"/>
                   <meta content="Level" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="302" itemprop="left"/>
-                    <meta content="2252" itemprop="top"/>
-                    <meta content="336" itemprop="right"/>
-                    <meta content="2305" itemprop="bottom"/>
+                    <meta content="313" itemprop="left"/>
+                    <meta content="2253" itemprop="top"/>
+                    <meta content="332" itemprop="right"/>
+                    <meta content="2296" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -2882,46 +1701,13 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               <ul>
                 <li itemprop="callouts" itemscope="" repeat="">
                   <meta content="17" itemprop="figurePage"/>
-                  <meta content="1" itemprop="id"/>
-                  <meta content="Level" itemprop="label"/>
-                  <span itemprop="bounds" itemscope="">
-                    <meta content="331" itemprop="left"/>
-                    <meta content="1524" itemprop="top"/>
-                    <meta content="445" itemprop="right"/>
-                    <meta content="1678" itemprop="bottom"/>
-                  </span>
-                </li>
-                <li itemprop="callouts" itemscope="" repeat="">
-                  <meta content="17" itemprop="figurePage"/>
-                  <meta content="1" itemprop="id"/>
-                  <meta content="Level" itemprop="label"/>
-                  <span itemprop="bounds" itemscope="">
-                    <meta content="331" itemprop="left"/>
-                    <meta content="1702" itemprop="top"/>
-                    <meta content="445" itemprop="right"/>
-                    <meta content="1774" itemprop="bottom"/>
-                  </span>
-                </li>
-                <li itemprop="callouts" itemscope="" repeat="">
-                  <meta content="17" itemprop="figurePage"/>
-                  <meta content="1" itemprop="id"/>
-                  <meta content="Level" itemprop="label"/>
-                  <span itemprop="bounds" itemscope="">
-                    <meta content="1216" itemprop="left"/>
-                    <meta content="1698" itemprop="top"/>
-                    <meta content="1345" itemprop="right"/>
-                    <meta content="1781" itemprop="bottom"/>
-                  </span>
-                </li>
-                <li itemprop="callouts" itemscope="" repeat="">
-                  <meta content="17" itemprop="figurePage"/>
                   <meta content="1602" itemprop="id"/>
                   <meta content="mini-boss level" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1523" itemprop="left"/>
-                    <meta content="1710" itemprop="top"/>
-                    <meta content="1583" itemprop="right"/>
-                    <meta content="1855" itemprop="bottom"/>
+                    <meta content="1530" itemprop="left"/>
+                    <meta content="1715" itemprop="top"/>
+                    <meta content="1575" itemprop="right"/>
+                    <meta content="1845" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2929,9 +1715,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1603" itemprop="id"/>
                   <meta content="sub-level boss" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1522" itemprop="left"/>
+                    <meta content="1531" itemprop="left"/>
                     <meta content="1425" itemprop="top"/>
-                    <meta content="1586" itemprop="right"/>
+                    <meta content="1576" itemprop="right"/>
                     <meta content="1555" itemprop="bottom"/>
                   </span>
                 </li>
@@ -2940,10 +1726,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1604" itemprop="id"/>
                   <meta content="various songs" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1164" itemprop="left"/>
-                    <meta content="2468" itemprop="top"/>
-                    <meta content="1262" itemprop="right"/>
-                    <meta content="2618" itemprop="bottom"/>
+                    <meta content="1173" itemprop="left"/>
+                    <meta content="2473" itemprop="top"/>
+                    <meta content="1254" itemprop="right"/>
+                    <meta content="2616" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2951,10 +1737,21 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1605" itemprop="id"/>
                   <meta content="various songs" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="739" itemprop="left"/>
+                    <meta content="751" itemprop="left"/>
+                    <meta content="2499" itemprop="top"/>
+                    <meta content="828" itemprop="right"/>
+                    <meta content="2643" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="17" itemprop="figurePage"/>
+                  <meta content="1606" itemprop="id"/>
+                  <meta content="various songs" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="329" itemprop="left"/>
                     <meta content="2507" itemprop="top"/>
-                    <meta content="845" itemprop="right"/>
-                    <meta content="2648" itemprop="bottom"/>
+                    <meta content="407" itemprop="right"/>
+                    <meta content="2651" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2962,10 +1759,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1607" itemprop="id"/>
                   <meta content="various songs" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="402" itemprop="left"/>
-                    <meta content="139" itemprop="top"/>
-                    <meta content="467" itemprop="right"/>
-                    <meta content="286" itemprop="bottom"/>
+                    <meta content="410" itemprop="left"/>
+                    <meta content="145" itemprop="top"/>
+                    <meta content="456" itemprop="right"/>
+                    <meta content="278" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2973,10 +1770,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1608" itemprop="id"/>
                   <meta content="various songs" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="810" itemprop="left"/>
-                    <meta content="133" itemprop="top"/>
-                    <meta content="870" itemprop="right"/>
-                    <meta content="269" itemprop="bottom"/>
+                    <meta content="815" itemprop="left"/>
+                    <meta content="136" itemprop="top"/>
+                    <meta content="862" itemprop="right"/>
+                    <meta content="302" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -2984,10 +1781,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1610" itemprop="id"/>
                   <meta content="level" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1087" itemprop="left"/>
-                    <meta content="365" itemprop="top"/>
-                    <meta content="1182" itemprop="right"/>
-                    <meta content="648" itemprop="bottom"/>
+                    <meta content="1100" itemprop="left"/>
+                    <meta content="374" itemprop="top"/>
+                    <meta content="1144" itemprop="right"/>
+                    <meta content="506" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -3001,10 +1798,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1" itemprop="id"/>
                   <meta content="Level" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1296" itemprop="left"/>
-                    <meta content="799" itemprop="top"/>
-                    <meta content="1341" itemprop="right"/>
-                    <meta content="898" itemprop="bottom"/>
+                    <meta content="1300" itemprop="left"/>
+                    <meta content="812" itemprop="top"/>
+                    <meta content="1327" itemprop="right"/>
+                    <meta content="879" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -3012,10 +1809,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1701" itemprop="id"/>
                   <meta content="level group" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="54" itemprop="left"/>
-                    <meta content="620" itemprop="top"/>
-                    <meta content="149" itemprop="right"/>
-                    <meta content="682" itemprop="bottom"/>
+                    <meta content="63" itemprop="left"/>
+                    <meta content="625" itemprop="top"/>
+                    <meta content="145" itemprop="right"/>
+                    <meta content="675" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -3023,10 +1820,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1702" itemprop="id"/>
                   <meta content="mark" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1437" itemprop="left"/>
-                    <meta content="773" itemprop="top"/>
-                    <meta content="1546" itemprop="right"/>
-                    <meta content="817" itemprop="bottom"/>
+                    <meta content="1450" itemprop="left"/>
+                    <meta content="779" itemprop="top"/>
+                    <meta content="1545" itemprop="right"/>
+                    <meta content="811" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -3034,10 +1831,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1707" itemprop="id"/>
                   <meta content="mark" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1469" itemprop="left"/>
-                    <meta content="1540" itemprop="top"/>
-                    <meta content="1559" itemprop="right"/>
-                    <meta content="1579" itemprop="bottom"/>
+                    <meta content="1481" itemprop="left"/>
+                    <meta content="1545" itemprop="top"/>
+                    <meta content="1563" itemprop="right"/>
+                    <meta content="1576" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -3045,10 +1842,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="2" itemprop="id"/>
                   <meta content="color indicating stage" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1326" itemprop="left"/>
-                    <meta content="1832" itemprop="top"/>
-                    <meta content="1372" itemprop="right"/>
-                    <meta content="1929" itemprop="bottom"/>
+                    <meta content="1322" itemprop="left"/>
+                    <meta content="1843" itemprop="top"/>
+                    <meta content="1370" itemprop="right"/>
+                    <meta content="1908" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -3062,10 +1859,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1801" itemprop="id"/>
                   <meta content="progress bar" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="980" itemprop="left"/>
-                    <meta content="602" itemprop="top"/>
-                    <meta content="1017" itemprop="right"/>
-                    <meta content="687" itemprop="bottom"/>
+                    <meta content="982" itemprop="left"/>
+                    <meta content="610" itemprop="top"/>
+                    <meta content="1012" itemprop="right"/>
+                    <meta content="688" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -3073,10 +1870,54 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1806" itemprop="id"/>
                   <meta content="user" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="323" itemprop="left"/>
-                    <meta content="1283" itemprop="top"/>
-                    <meta content="362" itemprop="right"/>
-                    <meta content="1370" itemprop="bottom"/>
+                    <meta content="329" itemprop="left"/>
+                    <meta content="1272" itemprop="top"/>
+                    <meta content="357" itemprop="right"/>
+                    <meta content="1365" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="19" itemprop="figurePage"/>
+                  <meta content="3" itemprop="id"/>
+                  <meta content="stage" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="493" itemprop="left"/>
+                    <meta content="1359" itemprop="top"/>
+                    <meta content="545" itemprop="right"/>
+                    <meta content="1409" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="19" itemprop="figurePage"/>
+                  <meta content="3" itemprop="id"/>
+                  <meta content="stage" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="720" itemprop="left"/>
+                    <meta content="1099" itemprop="top"/>
+                    <meta content="755" itemprop="right"/>
+                    <meta content="1134" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="19" itemprop="figurePage"/>
+                  <meta content="3" itemprop="id"/>
+                  <meta content="stage" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="1064" itemprop="left"/>
+                    <meta content="1367" itemprop="top"/>
+                    <meta content="1100" itemprop="right"/>
+                    <meta content="1399" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="19" itemprop="figurePage"/>
+                  <meta content="3" itemprop="id"/>
+                  <meta content="stage" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="1222" itemprop="left"/>
+                    <meta content="1102" itemprop="top"/>
+                    <meta content="1254" itemprop="right"/>
+                    <meta content="1134" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -3090,10 +1931,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1901" itemprop="id"/>
                   <meta content="step" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="266" itemprop="left"/>
-                    <meta content="2553" itemprop="top"/>
-                    <meta content="323" itemprop="right"/>
-                    <meta content="2671" itemprop="bottom"/>
+                    <meta content="271" itemprop="left"/>
+                    <meta content="2539" itemprop="top"/>
+                    <meta content="313" itemprop="right"/>
+                    <meta content="2672" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -3101,10 +1942,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1902" itemprop="id"/>
                   <meta content="step" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="704" itemprop="left"/>
-                    <meta content="2543" itemprop="top"/>
-                    <meta content="770" itemprop="right"/>
-                    <meta content="2673" itemprop="bottom"/>
+                    <meta content="716" itemprop="left"/>
+                    <meta content="2538" itemprop="top"/>
+                    <meta content="756" itemprop="right"/>
+                    <meta content="2672" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -3112,10 +1953,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1903" itemprop="id"/>
                   <meta content="user" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="355" itemprop="left"/>
-                    <meta content="1145" itemprop="top"/>
-                    <meta content="442" itemprop="right"/>
-                    <meta content="1290" itemprop="bottom"/>
+                    <meta content="360" itemprop="left"/>
+                    <meta content="1150" itemprop="top"/>
+                    <meta content="432" itemprop="right"/>
+                    <meta content="1282" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -3123,10 +1964,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1904" itemprop="id"/>
                   <meta content="level" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="622" itemprop="left"/>
-                    <meta content="1171" itemprop="top"/>
-                    <meta content="710" itemprop="right"/>
-                    <meta content="1298" itemprop="bottom"/>
+                    <meta content="630" itemprop="left"/>
+                    <meta content="1168" itemprop="top"/>
+                    <meta content="705" itemprop="right"/>
+                    <meta content="1308" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -3134,10 +1975,21 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="1905" itemprop="id"/>
                   <meta content="channel" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1235" itemprop="left"/>
-                    <meta content="1089" itemprop="top"/>
-                    <meta content="1293" itemprop="right"/>
-                    <meta content="1208" itemprop="bottom"/>
+                    <meta content="1239" itemprop="left"/>
+                    <meta content="1081" itemprop="top"/>
+                    <meta content="1286" itemprop="right"/>
+                    <meta content="1222" itemprop="bottom"/>
+                  </span>
+                </li>
+                <li itemprop="callouts" itemscope="" repeat="">
+                  <meta content="20" itemprop="figurePage"/>
+                  <meta content="1906" itemprop="id"/>
+                  <meta content="step" itemprop="label"/>
+                  <span itemprop="bounds" itemscope="">
+                    <meta content="943" itemprop="left"/>
+                    <meta content="720" itemprop="top"/>
+                    <meta content="987" itemprop="right"/>
+                    <meta content="845" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -3151,21 +2003,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="100" itemprop="id"/>
                   <meta content="platform" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="1026" itemprop="left"/>
-                    <meta content="1573" itemprop="top"/>
-                    <meta content="1166" itemprop="right"/>
-                    <meta content="1640" itemprop="bottom"/>
-                  </span>
-                </li>
-                <li itemprop="callouts" itemscope="" repeat="">
-                  <meta content="21" itemprop="figurePage"/>
-                  <meta content="2" itemprop="id"/>
-                  <meta content="color indicating stage" itemprop="label"/>
-                  <span itemprop="bounds" itemscope="">
-                    <meta content="816" itemprop="left"/>
-                    <meta content="1807" itemprop="top"/>
-                    <meta content="886" itemprop="right"/>
-                    <meta content="1855" itemprop="bottom"/>
+                    <meta content="1027" itemprop="left"/>
+                    <meta content="1575" itemprop="top"/>
+                    <meta content="1112" itemprop="right"/>
+                    <meta content="1634" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -3173,10 +2014,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="2002" itemprop="id"/>
                   <meta content="other statistics" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="137" itemprop="left"/>
-                    <meta content="856" itemprop="top"/>
+                    <meta content="149" itemprop="left"/>
+                    <meta content="858" itemprop="top"/>
                     <meta content="272" itemprop="right"/>
-                    <meta content="937" itemprop="bottom"/>
+                    <meta content="925" itemprop="bottom"/>
                   </span>
                 </li>
                 <li itemprop="callouts" itemscope="" repeat="">
@@ -3184,10 +2025,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <meta content="2003" itemprop="id"/>
                   <meta content="chords" itemprop="label"/>
                   <span itemprop="bounds" itemscope="">
-                    <meta content="150" itemprop="left"/>
-                    <meta content="1440" itemprop="top"/>
-                    <meta content="289" itemprop="right"/>
-                    <meta content="1522" itemprop="bottom"/>
+                    <meta content="165" itemprop="left"/>
+                    <meta content="1445" itemprop="top"/>
+                    <meta content="287" itemprop="right"/>
+                    <meta content="1511" itemprop="bottom"/>
                   </span>
                 </li>
               </ul>
@@ -3205,93 +2046,67 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
           </h2>
           <ul>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
-                    A
+                    G
                   </span>
                   —
                   <span itemprop="Description">
-                    HUMAN NECESSITIES
+                    PHYSICS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
-                    A63
+                    G09
                   </span>
                   —
                   <span itemprop="Description">
-                    SPORTS; GAMES; AMUSEMENTS
+                    EDUCATION; CRYPTOGRAPHY; DISPLAY; ADVERTISING; SEALS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
-                    A63F
+                    G09B
                   </span>
                   —
                   <span itemprop="Description">
-                    CARD, BOARD, OR ROULETTE GAMES; INDOOR GAMES USING SMALL MOVING PLAYING BODIES; VIDEO GAMES; GAMES NOT OTHERWISE PROVIDED FOR
+                    EDUCATIONAL OR DEMONSTRATION APPLIANCES; APPLIANCES FOR TEACHING, OR COMMUNICATING WITH, THE BLIND, DEAF OR MUTE; MODELS; PLANETARIA; GLOBES; MAPS; DIAGRAMS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
-                    A63F13/00
+                    G09B15/00
                   </span>
                   —
                   <span itemprop="Description">
-                    Video games, i.e. games using an electronically generated display having two or more dimensions
-                  </span>
-                </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
-                  <span itemprop="Code">
-                    A63F13/80
-                  </span>
-                  —
-                  <span itemprop="Description">
-                    Special adaptations for executing a specific game genre or game mode
-                  </span>
-                </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
-                  <span itemprop="Code">
-                    A63F13/814
-                  </span>
-                  —
-                  <span itemprop="Description">
-                    Musical performances, e.g. by evaluating the player's ability to follow a notation
+                    Teaching music
                   </span>
                   <meta content="true" itemprop="Leaf"/>
                   <meta content="true" itemprop="FirstCode"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
-                  <span itemprop="Code">
-                    A63F13/06
-                  </span>
-                  —
-                  <span itemprop="Description"></span>
-                  <meta content="true" itemprop="Leaf"/>
-                  <meta content="true" itemprop="FirstCode"/>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F13/10
                   </span>
                   —
                   <span itemprop="Description"></span>
                   <meta content="true" itemprop="Leaf"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A
                   </span>
@@ -3299,8 +2114,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     HUMAN NECESSITIES
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63
                   </span>
@@ -3308,8 +2124,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     SPORTS; GAMES; AMUSEMENTS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F
                   </span>
@@ -3317,8 +2134,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     CARD, BOARD, OR ROULETTE GAMES; INDOOR GAMES USING SMALL MOVING PLAYING BODIES; VIDEO GAMES; GAMES NOT OTHERWISE PROVIDED FOR
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F13/00
                   </span>
@@ -3326,8 +2144,149 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Video games, i.e. games using an electronically generated display having two or more dimensions
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A63F13/20
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    Input arrangements for video game devices
+                  </span>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A63F13/24
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    Constructional details thereof, e.g. game controllers with detachable joystick handles
+                  </span>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A63F13/245
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    Constructional details thereof, e.g. game controllers with detachable joystick handles specially adapted to a particular type of game, e.g. steering wheels
+                  </span>
+                  <meta content="true" itemprop="Leaf"/>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    HUMAN NECESSITIES
+                  </span>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A63
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    SPORTS; GAMES; AMUSEMENTS
+                  </span>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A63F
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    CARD, BOARD, OR ROULETTE GAMES; INDOOR GAMES USING SMALL MOVING PLAYING BODIES; VIDEO GAMES; GAMES NOT OTHERWISE PROVIDED FOR
+                  </span>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A63F13/00
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    Video games, i.e. games using an electronically generated display having two or more dimensions
+                  </span>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A63F13/40
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    Processing input control signals of video game devices, e.g. signals generated by the player or derived from the environment
+                  </span>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A63F13/44
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    Processing input control signals of video game devices, e.g. signals generated by the player or derived from the environment involving timing of operations, e.g. performing an action within a time slot
+                  </span>
+                  <meta content="true" itemprop="Leaf"/>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    HUMAN NECESSITIES
+                  </span>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A63
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    SPORTS; GAMES; AMUSEMENTS
+                  </span>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A63F
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    CARD, BOARD, OR ROULETTE GAMES; INDOOR GAMES USING SMALL MOVING PLAYING BODIES; VIDEO GAMES; GAMES NOT OTHERWISE PROVIDED FOR
+                  </span>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A63F13/00
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    Video games, i.e. games using an electronically generated display having two or more dimensions
+                  </span>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F13/50
                   </span>
@@ -3335,8 +2294,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Controlling the output signals based on the game progress
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F13/53
                   </span>
@@ -3344,8 +2304,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Controlling the output signals based on the game progress involving additional visual information provided to the game scene, e.g. by overlay to simulate a head-up display [HUD] or displaying a laser sight in a shooting game
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F13/537
                   </span>
@@ -3353,8 +2314,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Controlling the output signals based on the game progress involving additional visual information provided to the game scene, e.g. by overlay to simulate a head-up display [HUD] or displaying a laser sight in a shooting game using indicators, e.g. showing the condition of a game character on screen
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F13/5375
                   </span>
@@ -3363,12 +2325,13 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     Controlling the output signals based on the game progress involving additional visual information provided to the game scene, e.g. by overlay to simulate a head-up display [HUD] or displaying a laser sight in a shooting game using indicators, e.g. showing the condition of a game character on screen for graphically or textually suggesting an action, e.g. by displaying an arrow indicating a turn in a driving game
                   </span>
                   <meta content="true" itemprop="Leaf"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A
                   </span>
@@ -3376,8 +2339,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     HUMAN NECESSITIES
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63
                   </span>
@@ -3385,8 +2349,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     SPORTS; GAMES; AMUSEMENTS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F
                   </span>
@@ -3394,8 +2359,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     CARD, BOARD, OR ROULETTE GAMES; INDOOR GAMES USING SMALL MOVING PLAYING BODIES; VIDEO GAMES; GAMES NOT OTHERWISE PROVIDED FOR
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F13/00
                   </span>
@@ -3403,8 +2369,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Video games, i.e. games using an electronically generated display having two or more dimensions
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F13/60
                   </span>
@@ -3412,8 +2379,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Generating or modifying game content before or while executing the game program, e.g. authoring tools specially adapted for game development or game-integrated level editor
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F13/67
                   </span>
@@ -3422,53 +2390,78 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     Generating or modifying game content before or while executing the game program, e.g. authoring tools specially adapted for game development or game-integrated level editor adaptively or by learning from player actions, e.g. skill level adjustment or by storing successful combat sequences for re-use
                   </span>
                   <meta content="true" itemprop="Leaf"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
-                    G
+                    A
                   </span>
                   —
                   <span itemprop="Description">
-                    PHYSICS
+                    HUMAN NECESSITIES
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
-                    G09
+                    A63
                   </span>
                   —
                   <span itemprop="Description">
-                    EDUCATION; CRYPTOGRAPHY; DISPLAY; ADVERTISING; SEALS
+                    SPORTS; GAMES; AMUSEMENTS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
-                    G09B
+                    A63F
                   </span>
                   —
                   <span itemprop="Description">
-                    EDUCATIONAL OR DEMONSTRATION APPLIANCES; APPLIANCES FOR TEACHING, OR COMMUNICATING WITH, THE BLIND, DEAF OR MUTE; MODELS; PLANETARIA; GLOBES; MAPS; DIAGRAMS
+                    CARD, BOARD, OR ROULETTE GAMES; INDOOR GAMES USING SMALL MOVING PLAYING BODIES; VIDEO GAMES; GAMES NOT OTHERWISE PROVIDED FOR
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
-                    G09B15/00
+                    A63F13/00
                   </span>
                   —
                   <span itemprop="Description">
-                    Teaching music
+                    Video games, i.e. games using an electronically generated display having two or more dimensions
+                  </span>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A63F13/80
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    Special adaptations for executing a specific game genre or game mode
+                  </span>
+                  <meta content="true" itemprop="IsCPC"/>
+                </li>
+                <li itemprop="classifications" itemscope="" repeat="">
+                  <span itemprop="Code">
+                    A63F13/814
+                  </span>
+                  —
+                  <span itemprop="Description">
+                    Musical performances, e.g. by evaluating the player's ability to follow a notation
                   </span>
                   <meta content="true" itemprop="Leaf"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G
                   </span>
@@ -3476,8 +2469,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     PHYSICS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G09
                   </span>
@@ -3485,8 +2479,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     EDUCATION; CRYPTOGRAPHY; DISPLAY; ADVERTISING; SEALS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G09B
                   </span>
@@ -3494,8 +2489,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     EDUCATIONAL OR DEMONSTRATION APPLIANCES; APPLIANCES FOR TEACHING, OR COMMUNICATING WITH, THE BLIND, DEAF OR MUTE; MODELS; PLANETARIA; GLOBES; MAPS; DIAGRAMS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G09B15/00
                   </span>
@@ -3503,8 +2499,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Teaching music
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G09B15/02
                   </span>
@@ -3512,8 +2509,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Boards or like means for providing an indication of notes
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G09B15/023
                   </span>
@@ -3522,12 +2520,13 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     Electrically operated
                   </span>
                   <meta content="true" itemprop="Leaf"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G
                   </span>
@@ -3535,8 +2534,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     PHYSICS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10
                   </span>
@@ -3544,17 +2544,19 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     MUSICAL INSTRUMENTS; ACOUSTICS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H
                   </span>
                   —
                   <span itemprop="Description">
-                    ELECTROPHONIC MUSICAL INSTRUMENTS
+                    ELECTROPHONIC MUSICAL INSTRUMENTS; INSTRUMENTS IN WHICH THE TONES ARE GENERATED BY ELECTROMECHANICAL MEANS OR ELECTRONIC GENERATORS, OR IN WHICH THE TONES ARE SYNTHESISED FROM A DATA STORE
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H1/00
                   </span>
@@ -3562,8 +2564,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Details of electrophonic musical instruments
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H1/0008
                   </span>
@@ -3571,8 +2574,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Associated control or indicating means
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H1/0016
                   </span>
@@ -3581,12 +2585,13 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     Means for indicating which keys, frets or strings are to be actuated, e.g. using lights or leds
                   </span>
                   <meta content="true" itemprop="Leaf"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G
                   </span>
@@ -3594,8 +2599,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     PHYSICS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10
                   </span>
@@ -3603,17 +2609,19 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     MUSICAL INSTRUMENTS; ACOUSTICS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H
                   </span>
                   —
                   <span itemprop="Description">
-                    ELECTROPHONIC MUSICAL INSTRUMENTS
+                    ELECTROPHONIC MUSICAL INSTRUMENTS; INSTRUMENTS IN WHICH THE TONES ARE GENERATED BY ELECTROMECHANICAL MEANS OR ELECTRONIC GENERATORS, OR IN WHICH THE TONES ARE SYNTHESISED FROM A DATA STORE
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H1/00
                   </span>
@@ -3621,8 +2629,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Details of electrophonic musical instruments
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H1/36
                   </span>
@@ -3630,8 +2639,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Accompaniment arrangements
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H1/361
                   </span>
@@ -3639,8 +2649,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Recording/reproducing of accompaniment for use with an external source, e.g. karaoke systems
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H1/368
                   </span>
@@ -3649,12 +2660,13 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     Recording/reproducing of accompaniment for use with an external source, e.g. karaoke systems displaying animated or moving pictures synchronized with the music or audio part
                   </span>
                   <meta content="true" itemprop="Leaf"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A
                   </span>
@@ -3662,8 +2674,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     HUMAN NECESSITIES
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63
                   </span>
@@ -3671,8 +2684,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     SPORTS; GAMES; AMUSEMENTS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F
                   </span>
@@ -3680,8 +2694,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     CARD, BOARD, OR ROULETTE GAMES; INDOOR GAMES USING SMALL MOVING PLAYING BODIES; VIDEO GAMES; GAMES NOT OTHERWISE PROVIDED FOR
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F13/00
                   </span>
@@ -3689,8 +2704,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Video games, i.e. games using an electronically generated display having two or more dimensions
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F13/50
                   </span>
@@ -3698,8 +2714,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Controlling the output signals based on the game progress
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F13/54
                   </span>
@@ -3709,12 +2726,13 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                   <meta content="true" itemprop="Leaf"/>
                   <meta content="true" itemprop="Additional"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A
                   </span>
@@ -3722,8 +2740,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     HUMAN NECESSITIES
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63
                   </span>
@@ -3731,8 +2750,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     SPORTS; GAMES; AMUSEMENTS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F
                   </span>
@@ -3740,8 +2760,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     CARD, BOARD, OR ROULETTE GAMES; INDOOR GAMES USING SMALL MOVING PLAYING BODIES; VIDEO GAMES; GAMES NOT OTHERWISE PROVIDED FOR
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F2300/00
                   </span>
@@ -3749,8 +2770,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Features of games using an electronically generated display having two or more dimensions, e.g. on a television screen, showing representations related to the game
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F2300/10
                   </span>
@@ -3758,8 +2780,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Features of games using an electronically generated display having two or more dimensions, e.g. on a television screen, showing representations related to the game characterized by input arrangements for converting player-generated signals into game device control signals
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F2300/1062
                   </span>
@@ -3769,12 +2792,13 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                   <meta content="true" itemprop="Leaf"/>
                   <meta content="true" itemprop="Additional"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A
                   </span>
@@ -3782,8 +2806,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     HUMAN NECESSITIES
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63
                   </span>
@@ -3791,8 +2816,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     SPORTS; GAMES; AMUSEMENTS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F
                   </span>
@@ -3800,8 +2826,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     CARD, BOARD, OR ROULETTE GAMES; INDOOR GAMES USING SMALL MOVING PLAYING BODIES; VIDEO GAMES; GAMES NOT OTHERWISE PROVIDED FOR
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F2300/00
                   </span>
@@ -3809,8 +2836,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Features of games using an electronically generated display having two or more dimensions, e.g. on a television screen, showing representations related to the game
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F2300/30
                   </span>
@@ -3818,8 +2846,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Features of games using an electronically generated display having two or more dimensions, e.g. on a television screen, showing representations related to the game characterized by output arrangements for receiving control signals generated by the game device
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F2300/303
                   </span>
@@ -3827,8 +2856,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Features of games using an electronically generated display having two or more dimensions, e.g. on a television screen, showing representations related to the game characterized by output arrangements for receiving control signals generated by the game device for displaying additional data, e.g. simulating a Head Up Display
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F2300/305
                   </span>
@@ -3838,12 +2868,13 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                   <meta content="true" itemprop="Leaf"/>
                   <meta content="true" itemprop="Additional"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A
                   </span>
@@ -3851,8 +2882,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     HUMAN NECESSITIES
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63
                   </span>
@@ -3860,8 +2892,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     SPORTS; GAMES; AMUSEMENTS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F
                   </span>
@@ -3869,8 +2902,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     CARD, BOARD, OR ROULETTE GAMES; INDOOR GAMES USING SMALL MOVING PLAYING BODIES; VIDEO GAMES; GAMES NOT OTHERWISE PROVIDED FOR
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F2300/00
                   </span>
@@ -3878,8 +2912,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Features of games using an electronically generated display having two or more dimensions, e.g. on a television screen, showing representations related to the game
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F2300/60
                   </span>
@@ -3887,8 +2922,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Methods for processing data by generating or executing the game program
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F2300/63
                   </span>
@@ -3896,8 +2932,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Methods for processing data by generating or executing the game program for controlling the execution of the game in time
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F2300/638
                   </span>
@@ -3907,12 +2944,13 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                   <meta content="true" itemprop="Leaf"/>
                   <meta content="true" itemprop="Additional"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A
                   </span>
@@ -3920,8 +2958,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     HUMAN NECESSITIES
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63
                   </span>
@@ -3929,8 +2968,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     SPORTS; GAMES; AMUSEMENTS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F
                   </span>
@@ -3938,8 +2978,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     CARD, BOARD, OR ROULETTE GAMES; INDOOR GAMES USING SMALL MOVING PLAYING BODIES; VIDEO GAMES; GAMES NOT OTHERWISE PROVIDED FOR
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F2300/00
                   </span>
@@ -3947,8 +2988,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Features of games using an electronically generated display having two or more dimensions, e.g. on a television screen, showing representations related to the game
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F2300/80
                   </span>
@@ -3956,8 +2998,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Features of games using an electronically generated display having two or more dimensions, e.g. on a television screen, showing representations related to the game specially adapted for executing a specific type of game
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     A63F2300/8047
                   </span>
@@ -3967,12 +3010,13 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                   <meta content="true" itemprop="Leaf"/>
                   <meta content="true" itemprop="Additional"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G
                   </span>
@@ -3980,8 +3024,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     PHYSICS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10
                   </span>
@@ -3989,17 +3034,19 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     MUSICAL INSTRUMENTS; ACOUSTICS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H
                   </span>
                   —
                   <span itemprop="Description">
-                    ELECTROPHONIC MUSICAL INSTRUMENTS
+                    ELECTROPHONIC MUSICAL INSTRUMENTS; INSTRUMENTS IN WHICH THE TONES ARE GENERATED BY ELECTROMECHANICAL MEANS OR ELECTRONIC GENERATORS, OR IN WHICH THE TONES ARE SYNTHESISED FROM A DATA STORE
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H2210/00
                   </span>
@@ -4007,8 +3054,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Aspects or methods of musical processing having intrinsic musical character, i.e. involving musical theory or musical parameters or relying on musical knowledge, as applied in electrophonic musical tools or instruments
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H2210/031
                   </span>
@@ -4016,8 +3064,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Musical analysis, i.e. isolation, extraction or identification of musical elements or musical parameters from a raw acoustic signal or from an encoded audio signal
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H2210/066
                   </span>
@@ -4027,12 +3076,13 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                   <meta content="true" itemprop="Leaf"/>
                   <meta content="true" itemprop="Additional"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G
                   </span>
@@ -4040,8 +3090,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     PHYSICS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10
                   </span>
@@ -4049,17 +3100,19 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     MUSICAL INSTRUMENTS; ACOUSTICS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H
                   </span>
                   —
                   <span itemprop="Description">
-                    ELECTROPHONIC MUSICAL INSTRUMENTS
+                    ELECTROPHONIC MUSICAL INSTRUMENTS; INSTRUMENTS IN WHICH THE TONES ARE GENERATED BY ELECTROMECHANICAL MEANS OR ELECTRONIC GENERATORS, OR IN WHICH THE TONES ARE SYNTHESISED FROM A DATA STORE
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H2210/00
                   </span>
@@ -4067,8 +3120,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Aspects or methods of musical processing having intrinsic musical character, i.e. involving musical theory or musical parameters or relying on musical knowledge, as applied in electrophonic musical tools or instruments
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H2210/031
                   </span>
@@ -4076,8 +3130,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Musical analysis, i.e. isolation, extraction or identification of musical elements or musical parameters from a raw acoustic signal or from an encoded audio signal
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H2210/091
                   </span>
@@ -4087,12 +3142,13 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                   <meta content="true" itemprop="Leaf"/>
                   <meta content="true" itemprop="Additional"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G
                   </span>
@@ -4100,8 +3156,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     PHYSICS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10
                   </span>
@@ -4109,17 +3166,19 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     MUSICAL INSTRUMENTS; ACOUSTICS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H
                   </span>
                   —
                   <span itemprop="Description">
-                    ELECTROPHONIC MUSICAL INSTRUMENTS
+                    ELECTROPHONIC MUSICAL INSTRUMENTS; INSTRUMENTS IN WHICH THE TONES ARE GENERATED BY ELECTROMECHANICAL MEANS OR ELECTRONIC GENERATORS, OR IN WHICH THE TONES ARE SYNTHESISED FROM A DATA STORE
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H2220/00
                   </span>
@@ -4127,8 +3186,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Input/output interfacing specifically adapted for electrophonic musical tools or instruments
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H2220/005
                   </span>
@@ -4136,8 +3196,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Non-interactive screen display of musical or status data
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H2220/015
                   </span>
@@ -4147,12 +3208,13 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                   <meta content="true" itemprop="Leaf"/>
                   <meta content="true" itemprop="Additional"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
             </li>
             <li>
-              <ul itemprop="cpcs" itemscope="" repeat="">
-                <li itemprop="cpcs" itemscope="" repeat="">
+              <ul itemprop="classifications" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G
                   </span>
@@ -4160,8 +3222,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     PHYSICS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10
                   </span>
@@ -4169,17 +3232,19 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     MUSICAL INSTRUMENTS; ACOUSTICS
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H
                   </span>
                   —
                   <span itemprop="Description">
-                    ELECTROPHONIC MUSICAL INSTRUMENTS
+                    ELECTROPHONIC MUSICAL INSTRUMENTS; INSTRUMENTS IN WHICH THE TONES ARE GENERATED BY ELECTROMECHANICAL MEANS OR ELECTRONIC GENERATORS, OR IN WHICH THE TONES ARE SYNTHESISED FROM A DATA STORE
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H2220/00
                   </span>
@@ -4187,8 +3252,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Input/output interfacing specifically adapted for electrophonic musical tools or instruments
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H2220/135
                   </span>
@@ -4196,8 +3262,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   <span itemprop="Description">
                     Musical aspects of games or videogames; Musical instrument-shaped game input interfaces
                   </span>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
-                <li itemprop="cpcs" itemscope="" repeat="">
+                <li itemprop="classifications" itemscope="" repeat="">
                   <span itemprop="Code">
                     G10H2220/145
                   </span>
@@ -4207,8 +3274,2716 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                   <meta content="true" itemprop="Leaf"/>
                   <meta content="true" itemprop="Additional"/>
+                  <meta content="true" itemprop="IsCPC"/>
                 </li>
               </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>
+            Definitions
+          </h2>
+          <ul>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Conventional learning tools and sources of instructional information for learning to play a musical instrument
+              </span>
+              <span itemprop="definition">
+                include music teachers, music books, audio tapes or compact disks (CDs), and video tapes. While each of these offers certain advantages, each is also limited in the quality of instruction or the manner in which the information is presented.
+              </span>
+              <meta content="0003" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a music teacher
+              </span>
+              <span itemprop="definition">
+                provides personally-tailored instruction, however the cost of the instruction is relatively expensive and each session is necessarily limited in both time and depth. Additionally, the student may be limited to learning the playing style and habits (both good and bad) of the particular teacher, which may limit the student's creativity and spontaneity.
+              </span>
+              <meta content="0004" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the practice material assigned by the instructor
+              </span>
+              <span itemprop="definition">
+                is also static and is therefore unable to accommodate and adjust to the student's individual progress or proficiency.
+              </span>
+              <meta content="0004" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Music books
+              </span>
+              <span itemprop="definition">
+                provide a relatively low-cost alternative or adjunct to a music teacher.
+              </span>
+              <meta content="0005" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the material presented by music books
+              </span>
+              <span itemprop="definition">
+                is necessarily static and if the student has difficulty reading and interpreting music, particularly the tempo and rhythm, then music books provide a limited instructional capability.
+              </span>
+              <meta content="0005" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                music books
+              </span>
+              <span itemprop="definition">
+                are not interactive and provide no feedback to the student, making it difficult to develop a “feeling” for the music which is necessary to progress beyond purely technical or mechanical playing. Audio tapes or compact discs combine recorded songs and musical passages with instructional commentary and playing tips. But still, they lack visual instruction and feedback, which can make it difficult for the student to develop a feeling for the music.
+              </span>
+              <meta content="0005" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                What is needed
+              </span>
+              <span itemprop="definition">
+                is an effective way to provide interactive method and system for learning and practicing a musical instrument, which provides both audio and visual feedback, and an integrated learning approach.
+              </span>
+              <meta content="0006" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the invention
+              </span>
+              <span itemprop="definition">
+                provides for an interactive guitar game designed for learning to play the guitar.
+              </span>
+              <meta content="0007" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Various aspects of the invention described herein
+              </span>
+              <span itemprop="definition">
+                may be applied to any of the particular applications set forth below.
+              </span>
+              <meta content="0007" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the invention
+              </span>
+              <span itemprop="definition">
+                may be applied as a standalone game engine system or as a component of an integrated software solution. It shall be understood that different aspects of the invention can be appreciated individually, collectively or in combination with each other.
+              </span>
+              <meta content="0007" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 1
+              </span>
+              <span itemprop="definition">
+                illustrates an example of the various components of the interactive game system, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0012" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 2
+              </span>
+              <span itemprop="definition">
+                shows a flowchart of how information flows while playing the interactive game, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0013" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 3
+              </span>
+              <span itemprop="definition">
+                shows an example of the overall game architecture, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0014" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 4
+              </span>
+              <span itemprop="definition">
+                shows one example of a graphical representation of a screenshot of a moving notation on a screen, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0015" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 5
+              </span>
+              <span itemprop="definition">
+                shows another example of how notes may scroll across a display screen, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0016" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 6
+              </span>
+              <span itemprop="definition">
+                shows an example of visual feedback displayed on a display screen, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0017" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 7
+              </span>
+              <span itemprop="definition">
+                illustrates an example of a timeline view of notation displayed on a display screen, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0018" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 8
+              </span>
+              <span itemprop="definition">
+                illustrates an example of a carousel view of notation displayed on a display screen, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0019" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 9
+              </span>
+              <span itemprop="definition">
+                illustrates an example of a guitar neck view of notes displayed on a display screen, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0020" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 10
+              </span>
+              <span itemprop="definition">
+                shows examples of various scrolling methods for the tablature notation or notes on a display screen, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0021" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 11
+              </span>
+              <span itemprop="definition">
+                shows an example of displaying a visual graphical representation of a guitar on the screen, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0022" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 12
+              </span>
+              <span itemprop="definition">
+                shows an example of a display where the actual fingering of a chord or note is displayed, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0023" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 13
+              </span>
+              <span itemprop="definition">
+                illustrates a flowchart of what happens during Jukebox (or Song Play) mode of the game, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0024" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 14
+              </span>
+              <span itemprop="definition">
+                illustrates a flowchart of what happens during Story mode of the game, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0025" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIGS. 15A and 15B
+              </span>
+              <span itemprop="definition">
+                illustrate and example of a flowchart of what may happen during Story mode of the game, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0026" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 16
+              </span>
+              <span itemprop="definition">
+                illustrates an example of the level structure of each level of the game, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0027" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 17
+              </span>
+              <span itemprop="definition">
+                illustrates one example of completion indicators as used to indicate completion of levels, sub-levels and mini-games, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0028" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 18
+              </span>
+              <span itemprop="definition">
+                illustrates an example of a view for two players playing simultaneously on the same machine, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0029" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 19
+              </span>
+              <span itemprop="definition">
+                shows a flowchart of the game when Multiplayer (or Online) mode is selected, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0030" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 20
+              </span>
+              <span itemprop="definition">
+                shows an example of how a user's statistics may be displayed, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0031" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 21
+              </span>
+              <span itemprop="definition">
+                shows an example of how the game engine may interact over a network such as the Internet, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0032" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                An aspect of the invention
+              </span>
+              <span itemprop="definition">
+                provides an interactive game engine for learning to play a guitar.
+              </span>
+              <meta content="0034" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                any guitar
+              </span>
+              <span itemprop="definition">
+                including a MIDI guitar, an OSC guitar, or a guitar using any other format or protocol
+              </span>
+              <meta content="0034" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the computer or platform
+              </span>
+              <span itemprop="definition">
+                is capable of loading music, such that it can be displayed on a display screen in multiple ways, and allows the user to read the music and play along.
+              </span>
+              <meta content="0034" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the goal of the software or interactive game engine
+              </span>
+              <span itemprop="definition">
+                is for players to learn how to play a guitar. It is understood that any references herein to specific file formats do not limit the scope of the invention, but merely provide examples of file formats that may be used in the implementation of particular embodiments of the invention, and various other file formats, protocols, etc. are contemplated herein.
+              </span>
+              <meta content="0034" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 1
+              </span>
+              <span itemprop="definition">
+                illustrates an embodiment of the various components of the system, with a computer or platform 100 which runs a game engine 120 , a guitar or musical instrument 110 providing a guitar or musical instrument input 130 , and video and audio outputs 150 .
+              </span>
+              <meta content="0035" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the system
+              </span>
+              <span itemprop="definition">
+                may also be optionally connected to a network 140 .
+              </span>
+              <meta content="0035" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the guitar 110
+              </span>
+              <span itemprop="definition">
+                may be any type of guitar (or other musical instrument), which the user can play, and may provide an input into the computer or platform 100 , identifying which strings and frets are being played by the user or the velocity or timing with which the user plays certain notes or chords.
+              </span>
+              <meta content="0035" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the input
+              </span>
+              <span itemprop="definition">
+                may be a composite audio signal or an isolated or discrete audio signal.
+              </span>
+              <meta content="0035" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game engine 120
+              </span>
+              <span itemprop="definition">
+                may use and process this information, and may be coupled with a computer or other platform having a storage or memory 121 .
+              </span>
+              <meta content="0035" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a song
+              </span>
+              <span itemprop="definition">
+                may be selected from a song library 201 .
+              </span>
+              <meta content="0036" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a song interpreter 202
+              </span>
+              <span itemprop="definition">
+                may produce a game representation of notes 210 , to be displayed by the note manager 209 on the graphics display 211 .
+              </span>
+              <meta content="0036" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the song
+              </span>
+              <span itemprop="definition">
+                provides audio output 204 .
+              </span>
+              <meta content="0036" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the signal processing module 206
+              </span>
+              <span itemprop="definition">
+                may convert the analog or digital audio signal produced by the guitar into a digital signal read in by the computer 207 or other platform.
+              </span>
+              <meta content="0036" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the note manager 209
+              </span>
+              <span itemprop="definition">
+                may process the analog or digital audio signal (such as a MIDI signal or signal of another format), and compare it against the selected song.
+              </span>
+              <meta content="0036" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the signal
+              </span>
+              <span itemprop="definition">
+                may be a composite signal, or the signal may be an isolated or discrete signal.
+              </span>
+              <meta content="0036" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the analog or digital audio signal
+              </span>
+              <span itemprop="definition">
+                may be taken directly from a standard guitar out (by way of a 1 ⁇ 4′′ cable from the guitar to an input that the computer can handle (such as a 1 ⁇ 8′′ or USB) or from a hex pickup (six separated isolated channels of audio).
+              </span>
+              <meta content="0036" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the audio signal
+              </span>
+              <span itemprop="definition">
+                may be processed and used to provide feedback on the location, positioning, attack, velocity and action as the user plays their guitar.
+              </span>
+              <meta content="0036" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the system
+              </span>
+              <span itemprop="definition">
+                may process the signal by polyphonic pitch detection (for composite signal parsing), or may process isolated/discrete signals. Data derived from the comparison may be fed back to the game manager 208 and further processed to update the graphics display 211 .
+              </span>
+              <meta content="0036" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a song video 203
+              </span>
+              <span itemprop="definition">
+                which corresponds to the song selected from the song library 201 may be played in the background via the graphics display 211 .
+              </span>
+              <meta content="0036" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the song
+              </span>
+              <span itemprop="definition">
+                may be a compressed archive of the following resources: a description XML file giving information about the song's title, author, and the location of the MusicXML file (or file of any other format).
+              </span>
+              <meta content="0037" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the file
+              </span>
+              <span itemprop="definition">
+                may be a standard file format used for describing both the tonal representation of the song, as well as formatting information.
+              </span>
+              <meta content="0037" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the file
+              </span>
+              <span itemprop="definition">
+                may also provide information about chord names, additional MP3 tracks (or other types of tracks), or the video file to play in the background.
+              </span>
+              <meta content="0037" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                When the file is read in, it
+              </span>
+              <span itemprop="definition">
+                may be converted into both a graphical representation (for display), as well as a MIDI representation (or representation in any other format).
+              </span>
+              <meta content="0037" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the note manager 209
+              </span>
+              <span itemprop="definition">
+                may display the notes graphically, depending on notations that may be specified in the file.
+              </span>
+              <meta content="0037" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the note manager
+              </span>
+              <span itemprop="definition">
+                may display the notes to the graphics display 211 in time with the audio output 204 of the song selected from the song library 201 .
+              </span>
+              <meta content="0037" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the notes
+              </span>
+              <span itemprop="definition">
+                may be displayed in tablature, a form of musical notation which tells players where to place their fingers on the guitar.
+              </span>
+              <meta content="0037" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the notes
+              </span>
+              <span itemprop="definition">
+                may also be displayed in modern notation which uses a five-line staff. It is understood that various types of file formats, including but not limited to the XML or MusicXML file formats, are contemplated.
+              </span>
+              <meta content="0037" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 3
+              </span>
+              <span itemprop="definition">
+                shows the choices to the user which are available when the game starts, and also displays the overall game architecture.
+              </span>
+              <meta content="0038" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game
+              </span>
+              <span itemprop="definition">
+                allows for four different modes to be selected from the game mode selection menu 304 : Jukebox (or Song Play) mode 310 , Story mode 320 , Multiplayer (or Online) mode 330 , and Arcade (or Diagnostic) mode 340 .
+              </span>
+              <meta content="0038" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game
+              </span>
+              <span itemprop="definition">
+                also may have a game configuration module 303 , which allows the user to set certain game preferences such as: volume, game difficulty, library repository options, and network configuration.
+              </span>
+              <meta content="0038" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 4
+              </span>
+              <span itemprop="definition">
+                one example of a graphical representation is shown.
+              </span>
+              <meta content="0039" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the image presented in FIG. 4
+              </span>
+              <span itemprop="definition">
+                is a snapshot of a moving video image which is shown on a display screen to a user.
+              </span>
+              <meta content="0039" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the moving image
+              </span>
+              <span itemprop="definition">
+                is a moving (or scrolling) notation which prompts the user to play certain chords or notes, such as indicated by a symbol 401 directed to the chord name or displaying tablature of the strings to be played, and the manner in which to play them (i.e. the length of the chord in the song).
+              </span>
+              <meta content="0039" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a symbol 401
+              </span>
+              <span itemprop="definition">
+                directed to the chord name or displaying tablature of the strings to be played, and the manner in which to play them (i.e. the length of the chord in the song).
+              </span>
+              <meta content="0039" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                is prompted to play the G-chord (the 1 st string at the 3 rd fret, the 5 th string at the 2 nd fret, and the 6 th string at the 3 rd fret, with the 2 nd , 3 th , and 4 th strings open).
+              </span>
+              <meta content="0039" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the display
+              </span>
+              <span itemprop="definition">
+                moves, such that the notation moves and progresses in time with the song.
+              </span>
+              <meta content="0039" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the chords or notes
+              </span>
+              <span itemprop="definition">
+                move from the top-right side of the screen to the bottom-left.
+              </span>
+              <meta content="0039" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                upcoming notes 403
+              </span>
+              <span itemprop="definition">
+                are also displayed and move from the top-right side of the screen towards the bottom-left.
+              </span>
+              <meta content="0039" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the moving (or scrolling) notation
+              </span>
+              <span itemprop="definition">
+                is sometimes referred to as a “note highway” and as the song progresses, symbols which may be colored markers or gems indicate notes that travel across the screen in time with the music. The symbols' colors and positions may match those of the frets on a guitar. Once the symbol reaches a “hit zone,” the player must play the indicated note.
+              </span>
+              <meta content="0040" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may attempt to play the chords and notes that he or she is prompted to play.
+              </span>
+              <meta content="0041" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game engine
+              </span>
+              <span itemprop="definition">
+                may calculate a score or provide the user with other feedback as to his or her accuracy. As shown in FIG. 4 , the score 404 may be shown as a numerical score.
+              </span>
+              <meta content="0041" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                notes or tab bubbles 502
+              </span>
+              <span itemprop="definition">
+                may move across the screen from the right-side to the left-side in time with the song.
+              </span>
+              <meta content="0042" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the hit bar/zone 503
+              </span>
+              <span itemprop="definition">
+                may indicate when the notes 502 are supposed to be played.
+              </span>
+              <meta content="0042" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the notes
+              </span>
+              <span itemprop="definition">
+                are either shown as individual notes with their duration of play or duration bar, 505 for example, or as chords, 502 for example. If a chord 502 is being played, the name of the chord 504 may also be displayed.
+              </span>
+              <meta content="0042" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the stroke-direction
+              </span>
+              <span itemprop="definition">
+                may be shown in the duration bar by the strum indicator 506 , by the arrows indicating which direction the user is supposed to stroke the chord.
+              </span>
+              <meta content="0042" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a power-up indicator
+              </span>
+              <span itemprop="definition">
+                may also be displayed for game play. For example, if a user is able to play a certain number of notes accurately, a power-up indicator may display a note that the user may triple their score if they get the next X number of notes correct. Thus, a power-up indicator may display some kind of score modifier that may become available to a user.
+              </span>
+              <meta content="0042" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game engine
+              </span>
+              <span itemprop="definition">
+                may calculate a score and score modifiers 507 or provide the user with other feedback 508 as to his or her accuracy and performance, in the form of a success meter, for example. Further, to immerse the user or player in the music, a movie or video 510 may be played in the background.
+              </span>
+              <meta content="0043" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 6
+              </span>
+              <span itemprop="definition">
+                a more detailed example of what the visual feedback that a user experiences is shown.
+              </span>
+              <meta content="0044" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                points 601
+              </span>
+              <span itemprop="definition">
+                may be rewarded along with a textual representation of the score 602 .
+              </span>
+              <meta content="0044" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game engine
+              </span>
+              <span itemprop="definition">
+                may provide both a numeric indicator for points scored 601 and a qualitative indicator for a correctly or incorrectly played note 602 .
+              </span>
+              <meta content="0044" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the textual representation of the qualitative indicator 602
+              </span>
+              <span itemprop="definition">
+                may be words of encouragement or praise such as, “Awesome!” as shown in FIG. 6 .
+              </span>
+              <meta content="0044" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the notes or chord 603
+              </span>
+              <span itemprop="definition">
+                may visually appear to float from the block to which they were attached, and eventually fade and disappear as 604 .
+              </span>
+              <meta content="0044" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the graphical indicator for the correctly played note 603
+              </span>
+              <span itemprop="definition">
+                may fade and disappear 604 .
+              </span>
+              <meta content="0044" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the performance or success meter 607
+              </span>
+              <span itemprop="definition">
+                (or score and score modifiers 605 ) may be updated.
+              </span>
+              <meta content="0044" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the actual note played by the user
+              </span>
+              <span itemprop="definition">
+                may also be indicated.
+              </span>
+              <meta content="0044" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game
+              </span>
+              <span itemprop="definition">
+                may provide for a background audience audio feedback, which provides audio output mimicking an audience watching the user's performance. As the user plays a particular song, the volume of the background audiences may be updated in accordance with his or her performance.
+              </span>
+              <meta content="0044" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game engine
+              </span>
+              <span itemprop="definition">
+                may provide new audio and video feedback based on the success or failure of the user.
+              </span>
+              <meta content="0044" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 7
+              </span>
+              <span itemprop="definition">
+                illustrates an example of a timeline view of the scrolling notation, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0045" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the notes 703 , 705
+              </span>
+              <span itemprop="definition">
+                may scroll from the right side 701 to the left side 702 .
+              </span>
+              <meta content="0045" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                Before play begins, the user may be given a one bar count off, derived from the tempo and time signature of an audio file. As the notes reach a region towards the left side of the screen (the hit area 704 ), the user may play those notes on their guitar.
+              </span>
+              <meta content="0045" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may receive a score 706 , which is updated as the user plays along, to reflect how close to the actual hit line the user played the note, or if the user missed the note all together.
+              </span>
+              <meta content="0045" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the score
+              </span>
+              <span itemprop="definition">
+                may also reflect a note streak (how many notes the user has correctly and accurately played in a row), the number of hits (how many notes the user has played correctly in the song or exercise) and a accuracy rating (the percentage of notes that the user has played correctly in the song or exercise).
+              </span>
+              <meta content="0045" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the view
+              </span>
+              <span itemprop="definition">
+                may also give the user visual feedback by changing the representation of the note. As the user's score changes, different crowd noises may be provided as audio feedback.
+              </span>
+              <meta content="0045" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the interface
+              </span>
+              <span itemprop="definition">
+                may display the next offscreen note on the far right of the screen so as to alert the user of an upcoming note.
+              </span>
+              <meta content="0046" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the interface
+              </span>
+              <span itemprop="definition">
+                may also display certain metrics regarding the user's performance, including a score and a current note streak 706 .
+              </span>
+              <meta content="0046" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the interface
+              </span>
+              <span itemprop="definition">
+                may display a timeline for a whole song, broken into sections, showing the user where they are and giving a general sense as to how the user did on a particular section of a song. For example, a user's progress may be tracked by a progress bar 708 , which indicates how far along the user is in the song, or if the user is currently playing in the introduction, chorus, bridge, a solo breakout, etc.
+              </span>
+              <meta content="0046" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the interface elements
+              </span>
+              <span itemprop="definition">
+                may be done as 2D overlays onto a 3D space.
+              </span>
+              <meta content="0046" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the lines representing the guitar
+              </span>
+              <span itemprop="definition">
+                may be 3D curves starting at the right side far back 702 , expanding and coming nearer as they approach the left side of the screen 701 .
+              </span>
+              <meta content="0046" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the inside of the note bubble 703
+              </span>
+              <span itemprop="definition">
+                may contain the number of the fret to be pressed.
+              </span>
+              <meta content="0046" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a bubble containing the note or chord name
+              </span>
+              <span itemprop="definition">
+                may also scroll with any note or chord above the strings.
+              </span>
+              <meta content="0046" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 8
+              </span>
+              <span itemprop="definition">
+                illustrates an example of a carousel view of the scrolling notation, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                note bubbles with frets 803
+              </span>
+              <span itemprop="definition">
+                may also be displayed, in addition to note or chord names above the strings 805 .
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the notes
+              </span>
+              <span itemprop="definition">
+                may circle around clockwise and rotate. Thus, the notes will repeat, after the carousel completes each rotational cycle.
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the carousel 800
+              </span>
+              <span itemprop="definition">
+                may be semi-transparent or translucent such that some of the notation is displayed in the foreground (or a front portion) 801 , and some of the notation is displayed in the background (or a back portion) 802 .
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                notation displayed in the background
+              </span>
+              <span itemprop="definition">
+                may be viewable by the user through the foreground.
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the notation displayed in the foreground 803
+              </span>
+              <span itemprop="definition">
+                is rotated to the background 802 , and vice versa (i.e. the notation displayed in the foreground may travel along the carousel to the background, and vice versa, in a circular manner).
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the note
+              </span>
+              <span itemprop="definition">
+                is played by the user within the time that the note symbol is displayed within a hit zone 804 , the note may change in color in a certain number of stages, or other real-time feedback of the user's accuracy with regard to the notes and timing may be provided to the user, such as in a score box 806 .
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the note
+              </span>
+              <span itemprop="definition">
+                may be change in color (i.e. from the color indicating stage 1 to the color indicating stage 2.
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the note
+              </span>
+              <span itemprop="definition">
+                may change in color (i.e. from the color indicating stage 2 to the color indicating stage 1).
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a game
+              </span>
+              <span itemprop="definition">
+                may be complete when the user has gotten a percentage of the notes from stage 1 up to stage 3, for example.
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the score
+              </span>
+              <span itemprop="definition">
+                may be a function of how many notes over the minimum percentage that the user got, as well as how many cycles it took to do it in.
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the progress bar 808
+              </span>
+              <span itemprop="definition">
+                may indicate how many notes the user has gotten up to the completion point by a percentage.
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the carousel view
+              </span>
+              <span itemprop="definition">
+                may be used to work on sections of songs.
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the display
+              </span>
+              <span itemprop="definition">
+                may also include a 1 bar count off at the beginning and a second or so of dead space at the end so that the track loop can be faded out and then in again as it cycles through.
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a video 807
+              </span>
+              <span itemprop="definition">
+                may be played in the background, or a user may select any other type of static or dynamic image or video to be displayed as the background while the user plays the song.
+              </span>
+              <meta content="0047" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 9
+              </span>
+              <span itemprop="definition">
+                illustrates an example of a guitar neck view of the scrolling notation, in accordance with an embodiment of the invention.
+              </span>
+              <meta content="0048" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                notes 901
+              </span>
+              <span itemprop="definition">
+                may be displayed in a two-dimensional grid on top of a representation of a guitar fretboard.
+              </span>
+              <meta content="0048" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a line of boxes of the displayed notes' names 902
+              </span>
+              <span itemprop="definition">
+                may be shown.
+              </span>
+              <meta content="0048" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the note color
+              </span>
+              <span itemprop="definition">
+                may be updated accordingly, and the next note in line may be highlighted, such as is shown by 905 .
+              </span>
+              <meta content="0048" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the view of the fretboard
+              </span>
+              <span itemprop="definition">
+                may be moveable to accommodate the positions of the notes being displayed. For example, if the current chord is on the third and fifth frets, the view may contain at least the upper third of the fretboard.
+              </span>
+              <meta content="0048" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the view
+              </span>
+              <span itemprop="definition">
+                may contain the middle third of the fretboard.
+              </span>
+              <meta content="0048" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the transition from one part of the fretboard to another
+              </span>
+              <span itemprop="definition">
+                may be smooth and quick.
+              </span>
+              <meta content="0048" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the view
+              </span>
+              <span itemprop="definition">
+                may also display a progress bar at the bottom, for example, to show the user how far through the song that he or she is, or the user's score or other relevant feedback may be shown in a scorebox 903 .
+              </span>
+              <meta content="0048" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a fullscreen video 904
+              </span>
+              <span itemprop="definition">
+                may also be shown in the background.
+              </span>
+              <meta content="0048" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                scrolling layouts
+              </span>
+              <span itemprop="definition">
+                can be employed by the various embodiments of the invention.
+              </span>
+              <meta content="0049" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the scrolling
+              </span>
+              <span itemprop="definition">
+                may be simply horizontal, or may be curved in one or more directions such that the notes travel in an arc.
+              </span>
+              <meta content="0049" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the scrolling
+              </span>
+              <span itemprop="definition">
+                can be similarly horizontal or curved in one or more directions.
+              </span>
+              <meta content="0049" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the scrolling notation
+              </span>
+              <span itemprop="definition">
+                may appear as 2D “Linear” scrolling ( 1000 , 1010 ), 3D “Racetrack” scrolling ( 1001 , 1011 ), or 2D “Y” scrolling ( 1002 , 1012 ), as shown in each of the figures in FIG. 10 .
+              </span>
+              <meta content="0049" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the notes
+              </span>
+              <span itemprop="definition">
+                scroll across the screen in a tablature notation, but the direction of scrolling and shape of scrolling may differ in various embodiments of the invention.
+              </span>
+              <meta content="0049" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the interactive game engine
+              </span>
+              <span itemprop="definition">
+                may serve as a tool for guitar players to visually learn how to play the guitar.
+              </span>
+              <meta content="0051" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a visual graphical representation of the guitar 1101
+              </span>
+              <span itemprop="definition">
+                may be displayed on the display screen. The user can easily compare this to their own guitar that they are learning how to play.
+              </span>
+              <meta content="0051" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the chord that is to be played
+              </span>
+              <span itemprop="definition">
+                is represented by a shaded bar or hit line/zone 1102 that runs vertically across the screen. As the note or chord is supposed to be played, the opacity of the notes on particular frets may change, as can be seen near 1103 . On deck, with a different perhaps lighter opacity or a different color, the next notes to be played 1104 may be shown.
+              </span>
+              <meta content="0051" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a scrolling line
+              </span>
+              <span itemprop="definition">
+                may also indicate hit time, the chord name 1105 , and the strum direction 1106 .
+              </span>
+              <meta content="0051" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the display of the game engine
+              </span>
+              <span itemprop="definition">
+                can be varied in several ways and may include (a) a display where notes scroll across a screen in a tablature notation, as described above, or (b) a display where the actual fingering of the chord is displayed as shown in FIG. 12 , and/or (c) interactive videos.
+              </span>
+              <meta content="0052" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the guitar neck 1201
+              </span>
+              <span itemprop="definition">
+                may be shown with the guitar fret numbers 1202 labeled.
+              </span>
+              <meta content="0052" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the display
+              </span>
+              <span itemprop="definition">
+                may show actual fingering of the chord by a semi-opaque animated hand position indicator 1203 , and may change as the notes or chords in the song are played. A user then, may be able to improve upon his or her finger placement by mimicking what is shown on the display screen.
+              </span>
+              <meta content="0052" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the display
+              </span>
+              <span itemprop="definition">
+                may show, by indicating finger placement, which frets and which strings are being utilized, and may also show the direction of the stroking of the chord or notes.
+              </span>
+              <meta content="0052" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the display
+              </span>
+              <span itemprop="definition">
+                may, in addition, highlight the frets to be pressed 1204 .
+              </span>
+              <meta content="0052" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Many different types of display
+              </span>
+              <span itemprop="definition">
+                are contemplated by the invention, and the invention is not limited to the specific mini-games as described herein.
+              </span>
+              <meta content="0052" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the view
+              </span>
+              <span itemprop="definition">
+                may also be varied such that the tab may be displayed in a standard way such that the vertical string order is ascending, and also in an inverted tab display such that the vertical string order is reversed with the low string on top and the high string on the bottom.
+              </span>
+              <meta content="0053" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the guitar neck
+              </span>
+              <span itemprop="definition">
+                may be displayed for a right-handed player, and may also be flipped on a horizontal axis so as to mirror that of a left-handed perspective.
+              </span>
+              <meta content="0053" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a finger view
+              </span>
+              <span itemprop="definition">
+                may also present a real-time three dimensional render or video of the proper finger positions or location for a note or chord.
+              </span>
+              <meta content="0053" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may choose from four different game modes from the game selection screen: Story mode, Jukebox (or Song Play) mode, Arcade (or Diagnostic) mode, and Multiplayer (or Online) mode.
+              </span>
+              <meta content="0054" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Jukebox
+              </span>
+              <span itemprop="definition">
+                In Jukebox (or Song Play) mode, the game engine may allow a user to target certain weaknesses in technique or with certain songs, and practice and improve upon those particular weaknesses.
+              </span>
+              <meta content="0055" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a user
+              </span>
+              <span itemprop="definition">
+                may, in Jukebox (Song Play) mode, play through tracks of a song using tablature or note names.
+              </span>
+              <meta content="0055" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game engine
+              </span>
+              <span itemprop="definition">
+                allows a user to learn and grow by learning core elements of certain songs and the mechanics needed to play them.
+              </span>
+              <meta content="0055" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a beginning user
+              </span>
+              <span itemprop="definition">
+                may choose to view the song in a view displaying tablature, and a more advanced user may be able to play through a song just using note names or chord diagrams.
+              </span>
+              <meta content="0055" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the Jukebox (or Song Play) mode 1300
+              </span>
+              <span itemprop="definition">
+                the user may select a song 1301 .
+              </span>
+              <meta content="0055" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may either play the song 1302 or may defer to the game engine to decide which areas of the song that the player or user needs to work on 1303 .
+              </span>
+              <meta content="0055" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the song
+              </span>
+              <span itemprop="definition">
+                may be broken out into certain sections or parts, which represent different levels of play.
+              </span>
+              <meta content="0055" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                different levels
+              </span>
+              <span itemprop="definition">
+                may be different songs of different levels of difficulty.
+              </span>
+              <meta content="0055" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the different levels
+              </span>
+              <span itemprop="definition">
+                may represent different playing skills that a guitarist would like to learn or need to practice or work on.
+              </span>
+              <meta content="0055" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                One skilled in the art
+              </span>
+              <span itemprop="definition">
+                can appreciate that the different levels may be defined in many ways, and that the invention is not limited to the specific descriptions or examples as described herein.
+              </span>
+              <meta content="0055" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a user
+              </span>
+              <span itemprop="definition">
+                may choose to play a song 1301 from any track in their library 1301 .
+              </span>
+              <meta content="0056" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the library
+              </span>
+              <span itemprop="definition">
+                may include pre-installed music or music purchased or downloaded from a music store. Users may choose to view tablature or notes in a timeline view.
+              </span>
+              <meta content="0056" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may switch to a carousel view and have the user repeat that section until the user improves.
+              </span>
+              <meta content="0057" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game engine
+              </span>
+              <span itemprop="definition">
+                may assess the user's past performance and provide the user with exercises or games to target the areas that the user needs to work on in step 1303 , and the game engine may then appropriately determine or form a selection of mini-games to be played in step 1304 .
+              </span>
+              <meta content="0057" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                selects the mini-game from the options provided by the game engine to play in step 1305 and plays the game in step 1306 , the user is practicing various skills or songs or sections of songs and targeting certain weaknesses in order to improve overall performance. Users may also adjust the speed, complexity and sub-mode (or mini-game) that they play.
+              </span>
+              <meta content="0057" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the results of each game played
+              </span>
+              <span itemprop="definition">
+                may be stored in step 1309 . After the user plays a mini-game, the user may play another game 1307 or return to the main menu 1308 .
+              </span>
+              <meta content="0057" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Jukebox (or Song Play) mode
+              </span>
+              <span itemprop="definition">
+                may have three different sub-modes (or mini-games): Wait, Challenge, and Stage Ready.
+              </span>
+              <meta content="0058" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Wait sub-mode
+              </span>
+              <span itemprop="definition">
+                a user may be allowed to play along with a song, and the goal might be to play along without missing a note. The notation may be presented in a right-to-left scrolling manner, and there may be a music video playing in the background. The game may wait until the user has played the necessary notes correctly before progressing.
+              </span>
+              <meta content="0058" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Wait sub-mode
+              </span>
+              <span itemprop="definition">
+                may mimic what an individual does when they are trying to figure out a song alone in their room. However, because the real song and video are playing along with the user, Wait sub-mode may create an emotional compulsion to play in time, positively reinforcing when the user is playing correctly in time with the song.
+              </span>
+              <meta content="0058" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the timing
+              </span>
+              <span itemprop="definition">
+                may create a win/loss metric. For example, the user may only have thirty seconds of overtime to play the song, and if the user does not complete the song within this period of time, then the user may be required to repeat the game. A user's score when playing this game may be based on “Time Scoring” as further described below.
+              </span>
+              <meta content="0058" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                In Challenge sub-mode, the user will be faced with the same game as in Wait sub-mode, except the system may not longer wait for the user. Thus, the user is evaluated on accuracy and timing. This information may be tracked and if the user is having trouble on a particular section of a song, or with particular chords or notes, then the user may be directed towards other mini-games or sub-modes which will help the user master that aspect of play. The user may also be given real-time feedback on accuracy, position, playing, correct streaks, and duration. Further, there may be a music video playing in the background. A user's score when playing this game may be based on “Standard Scoring” as further described below.
+              </span>
+              <meta content="0059" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Stage-Ready sub-mode
+              </span>
+              <span itemprop="definition">
+                the notation representation may be omitted.
+              </span>
+              <meta content="0060" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may be shown only a music video, and whether the user is getting her notes correct or incorrect.
+              </span>
+              <meta content="0060" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the goal of this sub-mode
+              </span>
+              <span itemprop="definition">
+                may be to display true mastery of a song.
+              </span>
+              <meta content="0060" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may also be given real-time feedback on accuracy, position, playing, correct streaks, and duration. Further, there may be a music video playing in the background.
+              </span>
+              <meta content="0060" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a user's score when playing this game
+              </span>
+              <span itemprop="definition">
+                may be based on “Standard Scoring” as further described below.
+              </span>
+              <meta content="0060" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Story mode
+              </span>
+              <span itemprop="definition">
+                users may create certain profiles, in which their characters learn certain songs and play certain mini-games. The user may be encouraged then to practice with certain characters, and thus creates profiles in which his accomplishments or game-performance statistics are saved.
+              </span>
+              <meta content="0061" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Story mode
+              </span>
+              <span itemprop="definition">
+                may employ a framing narrative that takes a beginning user from never having picked up a guitar before through mastering rhythm guitar and basic music theory. The narrative story may frame a progression of mini-games in which the user is taken through increasingly advanced modes and increasingly difficult songs through many levels of play. Story mode may take advantage of any mini-game (or sub-mode) or view in a structured, leveled environment. The songs in Story mode may alternate between custom content for certain levels and specially tagged songs in a user's pre-loaded library.
+              </span>
+              <meta content="0061" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may select and master music that the user cares about.
+              </span>
+              <meta content="0061" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user's skill at rhythm guitar and the user's fundamental understanding of music theory
+              </span>
+              <span itemprop="definition">
+                may improve as a byproduct of compelling play, as the user acquires skills as the user plays the game.
+              </span>
+              <meta content="0061" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 14
+              </span>
+              <span itemprop="definition">
+                a flowchart of the game when Story mode is selected is shown.
+              </span>
+              <meta content="0062" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may either create a new character in step 1403 or continue an old game in step 1401 . If the user elects to continue an old game in step 1401 , then the user may select a character to load in step 1402 , the character may load in step 1410 , the current level of play may load in step 1405 , the user may play at that current level in 1406 , and the game statistics may be saved in 1407 . If the user beats the level or accomplishes whatever requirements the level has in step 1408 , then the user may advance to the next level.
+              </span>
+              <meta content="0062" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                step 1408
+              </span>
+              <span itemprop="definition">
+                If the user does not beat the level or meet the requirements in step 1408 , then the user may need to repeat the same level in 1409 . If the user elects to create a new character in 1403 , then the user will follow the same steps, except the user will start at Level 1 in 1404 .
+              </span>
+              <meta content="0062" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a user
+              </span>
+              <span itemprop="definition">
+                may, in the first chapter (or Level 1) of the Story, learn core skills of a guitar player. For example, the first thing that a beginning user may do is to make sure they are in tune.
+              </span>
+              <meta content="0063" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a user, in Level 1,
+              </span>
+              <span itemprop="definition">
+                may learn how to tune their instrument and how to recognize when the instrument is out of tune.
+              </span>
+              <meta content="0063" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                an on-screen tuning system
+              </span>
+              <span itemprop="definition">
+                may allow the user to play one string at a time until the guitar is in tune. Users may revisit this tuning view later at anytime, and the software may also detect when the guitar is out of tune to ask the user to re-tune the guitar.
+              </span>
+              <meta content="0063" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the tuning guide
+              </span>
+              <span itemprop="definition">
+                may aid the user in tuning their guitar, and may consist of a display of a diagram of each string, highlighting the current string being played.
+              </span>
+              <meta content="0064" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a note name
+              </span>
+              <span itemprop="definition">
+                may indicate what tone the system is receiving from the guitar, and a graph may highlight whether that note is flat or sharp from the ideal note.
+              </span>
+              <meta content="0064" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the string
+              </span>
+              <span itemprop="definition">
+                When the string is in tune, the string may be highlighted. Strings that are not currently in tune may be darkened or otherwise displayed to indicate their status.
+              </span>
+              <meta content="0064" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may be asked to strum the guitar to make sure that all of the strings are in tune.
+              </span>
+              <meta content="0064" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the tuning system
+              </span>
+              <span itemprop="definition">
+                may also be displayed as a Quick Tuner appearing in one small corner of the screen (e.g., the bottom right of the screen).
+              </span>
+              <meta content="0065" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the Quick Tuner
+              </span>
+              <span itemprop="definition">
+                may display to the user what note was played and whether the note was flat or sharp.
+              </span>
+              <meta content="0065" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a colored portion inside of the box
+              </span>
+              <span itemprop="definition">
+                may be yellow, for example, and lean flat for flat notes, turn the light below yellow and highlight the word “Flat” within the box.
+              </span>
+              <meta content="0065" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the color box
+              </span>
+              <span itemprop="definition">
+                may change colors to red, for example, and lean to the right, turn the light right, and highlight “Sharp” within the box.
+              </span>
+              <meta content="0065" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the box
+              </span>
+              <span itemprop="definition">
+                may disappear and the light may turn to green, for example.
+              </span>
+              <meta content="0065" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the flat and sharp notes
+              </span>
+              <span itemprop="definition">
+                may be indicated in any number of ways.
+              </span>
+              <meta content="0065" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Level 1 of Story mode
+              </span>
+              <span itemprop="definition">
+                may also introduce users to the guitar neck fret view. Users may become familiar with relating the fret numbers to different places on the guitar neck. A display may show certain highlighted notes, and then the user may play those highlighted notes at the user's own pace. Other guitar skills may be presented through mini-games or sub-modes, and in different views, where the user can be challenged to improve their ability and beat their friend's and their own, high scores.
+              </span>
+              <meta content="0066" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the Story
+              </span>
+              <span itemprop="definition">
+                may be broken up into days or different levels. For example, Story mode may span 90 days, which take the user through many different skills involved in playing a guitar.
+              </span>
+              <meta content="0066" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIGS. 15A and 15B
+              </span>
+              <span itemprop="definition">
+                illustrate an example of a user's play through Story mode.
+              </span>
+              <meta content="0067" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Each box labeled “Animation Interstitial”
+              </span>
+              <span itemprop="definition">
+                represents the story frames that the game progresses through, which frame each exercise or game that is presented to the user.
+              </span>
+              <meta content="0067" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a user
+              </span>
+              <span itemprop="definition">
+                may first be presented with a fret view of open strings to play a game that helps the user improve upon his or her picking skills, and then next presented with a timeline view of open strings to play a game that helps the user play in time, etc.
+              </span>
+              <meta content="0067" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game engine
+              </span>
+              <span itemprop="definition">
+                presents a series of frames to transition from one mini-game to another.
+              </span>
+              <meta content="0067" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                An example of content of a Story
+              </span>
+              <span itemprop="definition">
+                such as the frames to transition from one mini-game to another, may be as follows:
+              </span>
+              <meta content="0068" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may bond with the characters within the Story, as the user spends more time interacting with the system and playing the exercises or mini-games.
+              </span>
+              <meta content="0088" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Each level
+              </span>
+              <span itemprop="definition">
+                then, is somewhat like an “Act” in a play or story.
+              </span>
+              <meta content="0088" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the following
+              </span>
+              <span itemprop="definition">
+                could be some acts in Story mode:
+              </span>
+              <meta content="0088" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                STORY
+              </span>
+              <span itemprop="definition">
+                meet guitar store guy, meet love interest. End of act 1, meet band guy who invites user to come by and play rhythm for his band.
+              </span>
+              <meta content="0091" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                band
+              </span>
+              <span itemprop="definition">
+                plays small clubs, playing songs, band dynamics (band reacts poorly if user plays poorly), rock trivia/influences. Big show announced. Play big show. Love interest reacts favorably. Band mate comes backstage and says, “Cheers! We just got signed! We're going on tour!”
+              </span>
+              <meta content="0097" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                each level 1610
+              </span>
+              <span itemprop="definition">
+                may have various sub-levels which include exercises for various songs 1604 , 1605 , 1606 , 1607 , and 1608 of a certain level. For example, if level 1610 is a beginning level, then 1604 , 1605 , 1606 , 1607 , and 1608 may include exercises for five different songs for beginners. Alternatively, the level 1610 may have various segments or sub-levels 1604 , 1605 , 1606 , 1607 , and 1608 , which represent sections of the same song. Thus, alternatively, the level may have various sub-levels which have broken up one song into various parts, and have various exercises focused on these segmented parts of the song.
+              </span>
+              <meta content="0098" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Each sub-level 1604 , 1605 , 1606 , 1607 , and 1608
+              </span>
+              <span itemprop="definition">
+                may make up one level 1610 .
+              </span>
+              <meta content="0098" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Each sub-level 1604 , 1605 , 1606 , 1607 , and 1608
+              </span>
+              <span itemprop="definition">
+                may have a series of exercises or mini-games 1601 , 1602 and 1603 . There may be several types of exercises, lessons or mini-games as later described.
+              </span>
+              <meta content="0098" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Each sub-level
+              </span>
+              <span itemprop="definition">
+                may also have a mini-boss level 1602 in which a user is required to play a song fully through or an entire segment of a song fully through, or even a sub-level boss 1603 in which certain accuracy or performance requirements must be met by the user.
+              </span>
+              <meta content="0098" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the boss or super-boss sub-levels
+              </span>
+              <span itemprop="definition">
+                may reflect a more difficult challenge, for example, the most challenging part of a song, or may require the user to reach certain levels of accuracy.
+              </span>
+              <meta content="0098" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game engine
+              </span>
+              <span itemprop="definition">
+                may offer various different levels, each with its own sub-levels and mini-games, which can be selected by the user. It should be noted that the different levels may be incorporated in any of the modes: Jukebox (Song Play) mode, Story mode, Multiplayer (Online) mode, or Arcade (Diagnostic) mode.
+              </span>
+              <meta content="0099" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the menu
+              </span>
+              <span itemprop="definition">
+                may indicate completion of the level group 1701 , as shown in FIG. 17 .
+              </span>
+              <meta content="0100" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may have completed Level 1, so instead of showing the various games and sub-levels available as part of the menu, the menu may simply display a completion indicator, such as a check-mark 1702 , to show that the user has completed the level group Level 1 ( 1701 ).
+              </span>
+              <meta content="0100" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a completion indicator
+              </span>
+              <span itemprop="definition">
+                such as a check-mark 1702
+              </span>
+              <meta content="0100" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the menu
+              </span>
+              <span itemprop="definition">
+                may display the various sub-levels and mini-games that the user may play. For example, in FIG.
+              </span>
+              <meta content="0100" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the menu
+              </span>
+              <span itemprop="definition">
+                displays the yet to be played sub-level 1705 , the partially completed sub-level 1706 , and the completed sub-level 1707 . If the user has completed a certain sub-level, for example, that particular sub-level may be displayed as completed with a completion indicator, such as a check-mark 1707 .
+              </span>
+              <meta content="0100" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a completion indicator
+              </span>
+              <span itemprop="definition">
+                such as a check-mark 1707 .
+              </span>
+              <meta content="0100" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the lack of completion
+              </span>
+              <span itemprop="definition">
+                may be shown by an open-circle, square or star, for example. As the user completes the various mini-games within each sub-level, the completion may be indicated by a filled-in circle, square or star, for example.
+              </span>
+              <meta content="0100" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game engine
+              </span>
+              <span itemprop="definition">
+                may track which levels, sub-levels, and mini-games have been completed by the user. Further, the game engine may respond to the user's performance, and offer certain mini-games which cater to a user's particular weaknesses with regard to certain note or chord sequences, timing, etc. For example, if a user continues to mess up or make errors and mistakes on a particular chord sequence or in a particular section of a song, the game engine may create mini-games to address that, and the user may be allowed to practice those weaknesses through those particular mini-games. Thus, there may be visual indicators provided to the user to show how much of a song the user has learned.
+              </span>
+              <meta content="0100" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Multiplayer
+              </span>
+              <span itemprop="definition">
+                or Online
+              </span>
+              <meta content="0101" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may participate in playing the mini-games or other games against other users or players.
+              </span>
+              <meta content="0101" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                guitar playing
+              </span>
+              <span itemprop="definition">
+                becomes a social activity.
+              </span>
+              <meta content="0101" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Multi-player modes
+              </span>
+              <span itemprop="definition">
+                may enable users to play with their friends at their own speed, thus encouraging users to play together even if they have varied levels of skill.
+              </span>
+              <meta content="0101" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                One option
+              </span>
+              <span itemprop="definition">
+                is for users to play in a Live Multiplayer sub-mode. For example, as shown in FIG. 18 , two players may play simultaneously on the same machine. The view may be split by a progress bar 1801 , thus showing two scrolling notations ( 1802 and 1803 ), one for each user. If a user is competing against other players while the user plays a particular song or game, the user's status may be shown on the screen ( 1804 , 1805 ).
+              </span>
+              <meta content="0101" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user's status
+              </span>
+              <span itemprop="definition">
+                may include the user's score, number of notes that they have hit, the user's accuracy rating, etc.
+              </span>
+              <meta content="0101" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Each user
+              </span>
+              <span itemprop="definition">
+                may have his own score box to track his progress.
+              </span>
+              <meta content="0101" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the users
+              </span>
+              <span itemprop="definition">
+                can play the same track, or different tracks if they are available for the current song.
+              </span>
+              <meta content="0101" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a music video, or any other video or image selected by the user 1806
+              </span>
+              <span itemprop="definition">
+                may be displayed.
+              </span>
+              <meta content="0101" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a Mail Multiplayer sub-mode
+              </span>
+              <span itemprop="definition">
+                Another option is for users to play in a Mail Multiplayer sub-mode.
+              </span>
+              <meta content="0102" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                this sub-mode
+              </span>
+              <span itemprop="definition">
+                after an individual user finishes a song play through, the individual user can choose to send a mail challenge to a friend or to another user. The other user will be notified of a pending challenge, and the next time they login will be able to attempt to beat their friend's score.
+              </span>
+              <meta content="0102" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may be able to play the song once for free.
+              </span>
+              <meta content="0102" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may also be prompted to purchase the song before responding to the challenge, for example, if they have already sampled the song once for free previously.
+              </span>
+              <meta content="0102" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a progress bar
+              </span>
+              <span itemprop="definition">
+                may indicate how well they are doing versus their friend. Users may be able to play as many times as they want to try to beat their friend's score. If they do succeed in achieving a higher score, then the challenge may be returned to the initial user, and the initial user may try to beat the new high score.
+              </span>
+              <meta content="0102" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                FIG. 19
+              </span>
+              <span itemprop="definition">
+                shows a flowchart of the game when Multiplayer (or Online) mode is selected.
+              </span>
+              <meta content="0103" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the Multiplayer (or Online) mode
+              </span>
+              <span itemprop="definition">
+                is selected.
+              </span>
+              <meta content="0103" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the opponent
+              </span>
+              <span itemprop="definition">
+                may be selected in step 1902 , by the user 1903 , by the level 1904 , or by the channel 1905 .
+              </span>
+              <meta content="0103" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the particular game to be played
+              </span>
+              <span itemprop="definition">
+                must be selected in step 1906 .
+              </span>
+              <meta content="0103" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the interactive elements and results
+              </span>
+              <span itemprop="definition">
+                will be displayed 1908 .
+              </span>
+              <meta content="0103" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Arcade (or Diagnostic) mode
+              </span>
+              <span itemprop="definition">
+                a user may play whatever songs and exercises there are in the game engine or user's library of music. For example, a user may be able to play all of the songs and exercises packaged with the game, unlockable content, and downloadable content. The user may practice full length songs or partial portions of songs in Arcade (or Diagnostic) mode.
+              </span>
+              <meta content="0104" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Arcade (or Diagnostic) mode
+              </span>
+              <span itemprop="definition">
+                is a collection of all of the games that comprise the overall system, and may allow users to play particular games that they like for any reason. This allows the user to focus on experience points, which are assigned based on the time the user spends playing each mode.
+              </span>
+              <meta content="0104" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                mini-games
+              </span>
+              <span itemprop="definition">
+                may be played using the game engine, some of which have been previously described.
+              </span>
+              <meta content="0106" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a user
+              </span>
+              <span itemprop="definition">
+                may play a mini-game, “Notes in a row,” in which a user tries to play as many scrolling notes as they can until they make a mistake. If a user can play a certain number of “notes in a row” they will pass or win the mini-game. If they do not, then they may have to play again.
+              </span>
+              <meta content="0106" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                “Notes in a row”
+              </span>
+              <span itemprop="definition">
+                may increase in difficulty in the various levels by increasing the tempo of the scrolling notes, increasing the note complexity, or increasing the number of notes that must be played without making a mistake.
+              </span>
+              <meta content="0106" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                “Notes in a row”
+              </span>
+              <span itemprop="definition">
+                may decrease in difficulty in the various levels by allowing multiple attempts, allowing users to earn more attempts, decreasing the tempo, or freezing certain notes.
+              </span>
+              <meta content="0106" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Ear training
+              </span>
+              <span itemprop="definition">
+                in which a user is given a tone audibly, and asked to play the same tone. For example, a user can be given a certain number of tones that they must play correctly in order to pass or win the mini-game.
+              </span>
+              <meta content="0107" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                “Ear training”
+              </span>
+              <span itemprop="definition">
+                may increase in difficulty in the various levels by increasing the note complexity or increasing the number of tones that must be played correctly in order to pass or win the mini-game.
+              </span>
+              <meta content="0107" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                “Ear training”
+              </span>
+              <span itemprop="definition">
+                may decrease in difficulty in the various levels by allowing multiple attempts, allowing users to earn more attempts, or providing a range of possible choices. For example, after hearing the tone, the user may be shown that the tone is played on the 3 rd string, and somewhere between the 4 th and 8 th fret.
+              </span>
+              <meta content="0107" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                “Simon Says”
+              </span>
+              <span itemprop="definition">
+                is an additional mini-game that may be played, in which a user is briefly shown and played notes, and then is asked to play the same notes. For example, a user may be shown and played a certain number of notes, and then asked to play those same notes back. “Simon Says” may increase in difficulty throughout the levels by increasing the note complexity, increasing the number of notes that must be played back, increasing the speed of the scrolling notes that are shown to the user, or decreasing the time limit during which they must play back the notes. “Simon Says” may decrease in difficulty throughout the levels by allowing multiple attempts, allowing users to earn more attempts, providing the notes' strings but not the frets as the user plays the notes back, or freezing certain notes.
+              </span>
+              <meta content="0108" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Another mini-game that may be played
+              </span>
+              <span itemprop="definition">
+                is the “Looping notes” game in which a scrolling group of notes plays in a loop, and the user must play all of the notes before the time runs out. As the user makes mistakes, more notes may appear.
+              </span>
+              <meta content="0109" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the goal of the game
+              </span>
+              <span itemprop="definition">
+                may be to play all of the notes displayed in a certain time frame, for example, 45 seconds. “Looping notes” may increase in difficulty throughout the levels by increasing the note complexity, increasing the number of notes that must be played, increasing the speed at which the notes scroll across the screen, decreasing the time limit in which the notes must be played, or increasing the number of times that the notes must be played.
+              </span>
+              <meta content="0109" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Looping notes
+              </span>
+              <span itemprop="definition">
+                may decrease in difficulty throughout the levels by allowing multiple attempts, allowing users to earn more attempts, allowing users to earn more time in which to play all of the notes, freezing the notes, or allowing note pops which remove more than one note at a time from the screen.
+              </span>
+              <meta content="0109" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                One more mini-game that may be played
+              </span>
+              <span itemprop="definition">
+                is a game where the “Song waits until you play it right”.
+              </span>
+              <meta content="0110" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the full song
+              </span>
+              <span itemprop="definition">
+                may play until the hit line and wait for the user to play the queued note(s) correctly.
+              </span>
+              <meta content="0110" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the song
+              </span>
+              <span itemprop="definition">
+                commences again. If played well, the song would not skip a beat, but if not, the song will wait at the hit line, until the user can play the correct note(s).
+              </span>
+              <meta content="0110" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the goal of the game
+              </span>
+              <span itemprop="definition">
+                may be to play a 3 minute tune in under 5 minutes and to play a 5 note streak.
+              </span>
+              <meta content="0110" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                “Song waits until you play it right”
+              </span>
+              <span itemprop="definition">
+                may increase in difficulty by setting a shorter time limit, limiting the number of mistakes allowed, or requiring the user to play a certain number of notes in a row in addition.
+              </span>
+              <meta content="0110" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                “Song waits until you play it right”
+              </span>
+              <span itemprop="definition">
+                may decrease in difficulty over the levels by allowing users to earn more attempts, allowing users to earn more time, or keep playing the song even if the user messes up. For example, if the user plays the correct notes in time for 10 notes in a row, the mini-game may allow a free mess up without stoppage.
+              </span>
+              <meta content="0110" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Another mini-game that may be played
+              </span>
+              <span itemprop="definition">
+                may be “Rhythm action” in which a user must strum or play certain notes in sync with the rhythm that goes along with the song being played. The goal may be to play in rhythm a certain percentage of the time, e.g., 75%. “Rhythm action” may increase in difficulty by limiting the number of mistakes allowed, increasing the note complexity, or increasing the tempo of the rhythm. “Rhythm action” may decrease in complexity by allowing users to earn more attempts, allowing users to earn more time, or giving users credit or increases in score for playing a certain number of notes in rhythm in a row.
+              </span>
+              <meta content="0111" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Speed Trials
+              </span>
+              <span itemprop="definition">
+                in which the goal of the user would be to play a shown sequence as fast as possible or in time. This game may help train the user in improving their play of scales, speed exercises, chords or ear training.
+              </span>
+              <meta content="0112" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Speed Trials
+              </span>
+              <span itemprop="definition">
+                may be played with a guitar neck view in which the notes of the entire sequence would always be showing.
+              </span>
+              <meta content="0112" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the current note
+              </span>
+              <span itemprop="definition">
+                could be highlighted in a certain color (e.g., in white) and could enlarge.
+              </span>
+              <meta content="0112" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the next note in the sequence
+              </span>
+              <span itemprop="definition">
+                may be highlighted. If the user hits an incorrect note, the note may turn a different color (e.g., red). If the user hits the correct note, the note may turn a certain color (e.g., green).
+              </span>
+              <meta content="0112" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Speed Trials
+              </span>
+              <span itemprop="definition">
+                may also be played in a timeline view, in which case the current note may be situated on a hit line (or in a hit area), and as soon as the user hits the note, the system may register it as a hit or miss, and animate the note off of the screen. The timeline then may slide the notes so that the next note of the sequence is on the hit line (or within a hit area).
+              </span>
+              <meta content="0112" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Other variations of this mini-game
+              </span>
+              <span itemprop="definition">
+                could include having users play the notes on a beat, or having the users play the notes as fast as possible.
+              </span>
+              <meta content="0112" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Another mini-game that may be played
+              </span>
+              <span itemprop="definition">
+                is “Find the Note” in which the goal of the user is to play the correct note name shown.
+              </span>
+              <meta content="0113" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                This mini-game
+              </span>
+              <span itemprop="definition">
+                may train a user in note recognition and ear training. In Find the Note, a note name may be shown with several fret options highlighted, and only one of the options may be correct. If the user hits the wrong note, the display may turn a certain color (e.g., red) and the user's score may be subtracted. If the user hits the correct note, the display may turn a different color (e.g., green) and the user's score may be increased. Difficulty settings of this mini-game may increase or decrease (i.e. get harder or become easier) depending on the amount of false notes showing.
+              </span>
+              <meta content="0113" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Another mini-game that may be played
+              </span>
+              <span itemprop="definition">
+                is “Find All Notes” in which the goal of the user may be to play all of the highlighted notes on all possible frets. In this game, a user may improve their note recognition abilities. The mini-game may also help with ear training. In Find All Notes, a note name may be shown on the display along with a number of possible places to play that note. Each time the user plays the correct note on a fret, the note may be highlighted and the number of possible places may be subtracted by one. Difficulty settings of this mini-game may increase or decrease (i.e. get harder or become easier) depending on the amount of time given to find all of the possible notes.
+              </span>
+              <meta content="0114" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                non-guitar games
+              </span>
+              <span itemprop="definition">
+                may help with new players to combat fatigue.
+              </span>
+              <meta content="0115" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the non-guitar games
+              </span>
+              <span itemprop="definition">
+                may enable users to continue playing while improving their musical skill and music history. For example, users may play beat matching or note recognition games, or play musical history games involving naming certain tunes, musical trivia or instrument quizzes.
+              </span>
+              <meta content="0115" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may be shown their score and other additional information (such as their friend's high scores, links to a store, in-area concert ads, suggested challenges, etc.).
+              </span>
+              <meta content="0116" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                each mini-game
+              </span>
+              <span itemprop="definition">
+                may be presented in a number of view such as the Guitar Neck View, Timeline View, or Carousel View as appropriate.
+              </span>
+              <meta content="0117" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user's statistics
+              </span>
+              <span itemprop="definition">
+                can be stored and displayed.
+              </span>
+              <meta content="0118" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user
+              </span>
+              <span itemprop="definition">
+                may keep track of their scores, their ranking against other users, their improvement, accuracy with regard to particular chords, or even a breakdown of improvement with regard to particular chords.
+              </span>
+              <meta content="0118" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                One example of a user's statistics
+              </span>
+              <span itemprop="definition">
+                is shown in FIG. 20 .
+              </span>
+              <meta content="0118" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a user's overall player ranking
+              </span>
+              <span itemprop="definition">
+                may be tracked and stored 2000 .
+              </span>
+              <meta content="0118" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a user's song history
+              </span>
+              <span itemprop="definition">
+                may be kept and stored, and may include information such as the last song that the user played 2001 .
+              </span>
+              <meta content="0118" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a user's score on individual songs, or rankings on individual songs compared to other users
+              </span>
+              <span itemprop="definition">
+                may be calculated and presented to the user 2002 .
+              </span>
+              <meta content="0118" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Other statistics
+              </span>
+              <span itemprop="definition">
+                could include information such as the user's best score, the number of wins, number of losses, the user's longest note streak or other statistics 2002 .
+              </span>
+              <meta content="0118" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the user's percentage improvement
+              </span>
+              <span itemprop="definition">
+                may also be calculated, as well as broken down into the user's percentage improvement with respect to playing a particular chord or chords 2003 . Many types of statistics may be tracked and stored and are contemplated herein.
+              </span>
+              <meta content="0118" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Players
+              </span>
+              <span itemprop="definition">
+                may be able to earn points depending on their accuracy of play. For example, if there are 1,000 points possible, and a player has 50% accuracy in a playthrough, that user may earn 50 points for that playthrough. Once 1,000 points are earned from a song, then no more points may be earned from that song, perhaps except by mastering it through some other challenge. The system may vary the number of points earned, depending on whether the song is above or below the user's play level as well.
+              </span>
+              <meta content="0119" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the system
+              </span>
+              <span itemprop="definition">
+                may also vary the number of points on a scale. For example, scores over 90% may automatically earn the full points of a song, and an additional bonus point amount. This may allow expert users to move up quickly without having to repeat easy songs indefinitely. Additionally, each song mastered may add a modifier to a user's global point modifier. The amount added may be equal to 0.01*song or skill level, for example. Thus, if a user masters a level 2 song, a user may have 0.02 added to their point modifier. Thus, mastering more songs allows user to move up levels faster.
+              </span>
+              <meta content="0120" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a Standard Scoring mechanic
+              </span>
+              <span itemprop="definition">
+                may provide a certain number of points for each successfully hit note or chord (e.g., 75 points for each successfully hit note, and 125 points for each successfully hit chord).
+              </span>
+              <meta content="0122" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the Duration Modifier
+              </span>
+              <span itemprop="definition">
+                may be equal to the number of seconds away from the ideal sustain. This would not apply to notes without sustain.
+              </span>
+              <meta content="0125" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                each consecutive successful note
+              </span>
+              <span itemprop="definition">
+                may add to the Streak Modifier. This may reward players for constancy and encourage mastery of songs in order to achieve a top score. For example, hitting ten (or some other number) of consecutive notes may increase (e.g., double) the points earned, hitting twenty consecutive notes may triple the points earned, and so on. There may not be a cap for the Streak Modifier.
+              </span>
+              <meta content="0129" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a Pedal Bonus
+              </span>
+              <span itemprop="definition">
+                may be unlocked.
+              </span>
+              <meta content="0131" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                their score
+              </span>
+              <span itemprop="definition">
+                may be doubled (or otherwise increased) for a certain duration of time (e.g., the next 15 seconds).
+              </span>
+              <meta content="0131" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                TM
+              </span>
+              <span itemprop="definition">
+                Time Modifier
+              </span>
+              <meta content="0132" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the system
+              </span>
+              <span itemprop="definition">
+                may also incorporate a leveling system which divides groups of users into distinct levels based on their guitar experience and ability. This would allow the system to recommend mini-games and songs to users that will be challenging but not frustrating and allow users to find people of similar ability to challenge and collaborate.
+              </span>
+              <meta content="0134" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the levels
+              </span>
+              <span itemprop="definition">
+                may be increased by earning experience points. Each song may be assessed and assigned a difficulty, which would allow the system to suggest appropriate songs to users and encourage exploration of new music with a user's skill level.
+              </span>
+              <meta content="0134" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a user's statistics
+              </span>
+              <span itemprop="definition">
+                may be recorded and stored, allowing the system to identify what a user is struggling with and allowing the system to suggest new music or mini-games that could help the user overcome those struggles.
+              </span>
+              <meta content="0135" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the suggestions
+              </span>
+              <span itemprop="definition">
+                could be scaled to the user's proficiency, ensuring compelling gameplay and continued demonstrable incremental improvements. It would also give the user a sense of satisfaction of being able to look over these statistics and see their improvement over time. This may encourage the user to continue playing as well as focus on errors where their statistics show room for improvement.
+              </span>
+              <meta content="0135" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                statistics that may be tracked
+              </span>
+              <span itemprop="definition">
+                include the user's worse/best note transition, worst/best chord transition, worst/best song segment, time winning/losing, notes hit/missed, songs played/learned/mastered/domination, world/country/regional ranking, songs purchased, highest/lowest score, longest streak, time streaking, etc.
+              </span>
+              <meta content="0135" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Achievements
+              </span>
+              <span itemprop="definition">
+                may encourage users to explore new areas of the game as well as perform at the highest level possible. Users may be able to show off these achievements and compare them with their friends. For example, a user may achieve X number of note streaks, X number of songs with a certain hit accuracy, won X number of matches against other users, completed X number of songs by the same artist, completed an artist's album, completed X number of songs, purchased X number of songs, etc.
+              </span>
+              <meta content="0136" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Other achievements
+              </span>
+              <span itemprop="definition">
+                may include finishing a song without touching a string, finishing two songs in a row from vastly different genres, beating the same person X number of times in a row, beating X number of songs on a certain subject or from a certain genre (e.g., sex, drugs, broken hearts, love, pre-1950, girl songs, boy songs, pop song, songs from a certain artist, campfire songs, etc.), or playing X number of songs at a certain hour, playing the game at X different locations, etc.
+              </span>
+              <meta content="0136" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a user's statistics
+              </span>
+              <span itemprop="definition">
+                is shown in FIG. 21 .
+              </span>
+              <meta content="0136" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the software or game engine
+              </span>
+              <span itemprop="definition">
+                may also employ an online component.
+              </span>
+              <meta content="0137" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game engine
+              </span>
+              <span itemprop="definition">
+                may interact with a web page, in which a user 2202 may purchase a song from a web page or web site 2201 through the game 2203 .
+              </span>
+              <meta content="0137" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the game 2203
+              </span>
+              <span itemprop="definition">
+                may then take the newly purchased song online, such as from a web page 2201 , and allow the newly purchased songs to be played 2204 through the game 2204 .
+              </span>
+              <meta content="0137" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                the system
+              </span>
+              <span itemprop="definition">
+                may leverage the data available on the Internet to provide value-added information for the users. This may allow users to easily find out more information about the music that they are playing.
+              </span>
+              <meta content="0138" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                statistics tracking, skill progression, daily progress, play histories, and other features
+              </span>
+              <span itemprop="definition">
+                may be available online.
+              </span>
+              <meta content="0138" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                a user
+              </span>
+              <span itemprop="definition">
+                may be able to follow along with their friend's achievements, and challenge and encourage each other.
+              </span>
+              <meta content="0138" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Talented players
+              </span>
+              <span itemprop="definition">
+                may amass fans and give others pointers on how to play certain songs.
+              </span>
+              <meta content="0138" itemprop="num_attr"/>
+            </li>
+            <li itemprop="definitions" itemscope="" repeat="">
+              <span itemprop="subject">
+                Teachers and parents
+              </span>
+              <span itemprop="definition">
+                may follow along with daily progress and receive weekly breakdowns through email, for example. Users may be able to be provided feedback about how they compare to other people in their local communities. For example, when a user starts playing, they may be the “best player within 10 feet” and after playing for a few weeks, they may advance to the “best player within 100 miles.”
+              </span>
+              <meta content="0138" itemprop="num_attr"/>
             </li>
           </ul>
         </section>
@@ -4419,43 +6194,73 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 1
                 </figref>
-                illustrates an embodiment of the various components of the system, with a computer or platform
+                illustrates an embodiment of the various components of the system, with a computer or
+                <figure-callout filenames="US09839852-20171212-D00000.png,US09839852-20171212-D00001.png" id="100" label="platform" state="{{state}}">
+                  platform
+                </figure-callout>
                 <b>
                   100
                 </b>
-                which runs a game engine
+                which runs a
+                <figure-callout filenames="US09839852-20171212-D00000.png,US09839852-20171212-D00001.png" id="120" label="game engine" state="{{state}}">
+                  game engine
+                </figure-callout>
                 <b>
                   120
                 </b>
-                , a guitar or musical instrument
+                , a guitar or
+                <figure-callout filenames="US09839852-20171212-D00000.png,US09839852-20171212-D00001.png" id="110" label="musical instrument" state="{{state}}">
+                  musical instrument
+                </figure-callout>
                 <b>
                   110
                 </b>
-                providing a guitar or musical instrument input
+                providing a guitar or
+                <figure-callout filenames="US09839852-20171212-D00000.png,US09839852-20171212-D00001.png" id="130" label="musical instrument input" state="{{state}}">
+                  musical instrument input
+                </figure-callout>
                 <b>
                   130
                 </b>
-                , and video and audio outputs
+                , and video and
+                <figure-callout filenames="US09839852-20171212-D00000.png,US09839852-20171212-D00001.png" id="150" label="audio outputs" state="{{state}}">
+                  audio outputs
+                </figure-callout>
                 <b>
                   150
                 </b>
-                . The system may also be optionally connected to a network
+                . The system may also be optionally connected to a
+                <figure-callout filenames="US09839852-20171212-D00000.png,US09839852-20171212-D00001.png" id="140" label="network" state="{{state}}">
+                  network
+                </figure-callout>
                 <b>
                   140
                 </b>
-                . The guitar
+                . The
+                <figure-callout filenames="US09839852-20171212-D00000.png,US09839852-20171212-D00001.png" id="110" label="guitar" state="{{state}}">
+                  guitar
+                </figure-callout>
                 <b>
                   110
                 </b>
-                may be any type of guitar (or other musical instrument), which the user can play, and may provide an input into the computer or platform
+                may be any type of guitar (or other musical instrument), which the user can play, and may provide an input into the computer or
+                <figure-callout filenames="US09839852-20171212-D00000.png,US09839852-20171212-D00001.png" id="100" label="platform" state="{{state}}">
+                  platform
+                </figure-callout>
                 <b>
                   100
                 </b>
-                , identifying which strings and frets are being played by the user or the velocity or timing with which the user plays certain notes or chords. The input may be a composite audio signal or an isolated or discrete audio signal. The game engine
+                , identifying which strings and frets are being played by the user or the velocity or timing with which the user plays certain notes or chords. The input may be a composite audio signal or an isolated or discrete audio signal. The
+                <figure-callout filenames="US09839852-20171212-D00000.png,US09839852-20171212-D00001.png" id="120" label="game engine" state="{{state}}">
+                  game engine
+                </figure-callout>
                 <b>
                   120
                 </b>
-                may use and process this information, and may be coupled with a computer or other platform having a storage or memory
+                may use and process this information, and may be coupled with a computer or other platform having a storage or
+                <figure-callout filenames="US09839852-20171212-D00000.png,US09839852-20171212-D00001.png" id="121" label="memory" state="{{state}}">
+                  memory
+                </figure-callout>
                 <b>
                   121
                 </b>
@@ -4466,70 +6271,118 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 2
                 </figref>
-                , one example of how information flows during game-play is shown. A song may be selected from a song library
+                , one example of how information flows during game-play is shown. A song may be selected from a
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="201" label="song library" state="{{state}}">
+                  song library
+                </figure-callout>
                 <b>
                   201
                 </b>
-                . A song interpreter
+                . A
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="202" label="song interpreter" state="{{state}}">
+                  song interpreter
+                </figure-callout>
                 <b>
                   202
                 </b>
-                may produce a game representation of notes
+                may produce a game representation of
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="210" label="notes" state="{{state}}">
+                  notes
+                </figure-callout>
                 <b>
                   210
                 </b>
-                , to be displayed by the note manager
+                , to be displayed by the
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="209" label="note manager" state="{{state}}">
+                  note manager
+                </figure-callout>
                 <b>
                   209
                 </b>
-                on the graphics display
+                on the
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="211" label="graphics display" state="{{state}}">
+                  graphics display
+                </figure-callout>
                 <b>
                   211
                 </b>
-                . At the same time, the song provides audio output
+                . At the same time, the song provides
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="204" label="audio output" state="{{state}}">
+                  audio output
+                </figure-callout>
                 <b>
                   204
                 </b>
-                . Viewing this graphics display and hearing the audio output, a user or player may play either a note or chord on the guitar
+                . Viewing this graphics display and hearing the audio output, a user or player may play either a note or chord on the
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="205" label="guitar" state="{{state}}">
+                  guitar
+                </figure-callout>
                 <b>
                   205
                 </b>
-                . The signal processing module
+                . The
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="206" label="signal processing module" state="{{state}}">
+                  signal processing module
+                </figure-callout>
                 <b>
                   206
                 </b>
-                may convert the analog or digital audio signal produced by the guitar into a digital signal read in by the computer
+                may convert the analog or digital audio signal produced by the guitar into a digital signal read in by the
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="207" label="computer" state="{{state}}">
+                  computer
+                </figure-callout>
                 <b>
                   207
                 </b>
-                or other platform. The note manager
+                or other platform. The
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="209" label="note manager" state="{{state}}">
+                  note manager
+                </figure-callout>
                 <b>
                   209
                 </b>
-                may process the analog or digital audio signal (such as a MIDI signal or signal of another format), and compare it against the selected song. The signal may be a composite signal, or the signal may be an isolated or discrete signal. The analog or digital audio signal may be taken directly from a standard guitar out (by way of a ¼″ cable from the guitar to an input that the computer can handle (such as a ⅛″ or USB) or from a hex pickup (six separated isolated channels of audio). The audio signal may be processed and used to provide feedback on the location, positioning, attack, velocity and action as the user plays their guitar. Thus, the system may process the signal by polyphonic pitch detection (for composite signal parsing), or may process isolated/discrete signals. Data derived from the comparison may be fed back to the game manager
+                may process the analog or digital audio signal (such as a MIDI signal or signal of another format), and compare it against the selected song. The signal may be a composite signal, or the signal may be an isolated or discrete signal. The analog or digital audio signal may be taken directly from a standard guitar out (by way of a ¼″ cable from the guitar to an input that the computer can handle (such as a ⅛″ or USB) or from a hex pickup (six separated isolated channels of audio). The audio signal may be processed and used to provide feedback on the location, positioning, attack, velocity and action as the user plays their guitar. Thus, the system may process the signal by polyphonic pitch detection (for composite signal parsing), or may process isolated/discrete signals. Data derived from the comparison may be fed back to the
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="208" label="game manager" state="{{state}}">
+                  game manager
+                </figure-callout>
                 <b>
                   208
                 </b>
-                and further processed to update the graphics display
+                and further processed to update the
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="211" label="graphics display" state="{{state}}">
+                  graphics display
+                </figure-callout>
                 <b>
                   211
                 </b>
-                . Further, a song video
+                . Further, a
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="203" label="song video" state="{{state}}">
+                  song video
+                </figure-callout>
                 <b>
                   203
                 </b>
-                which corresponds to the song selected from the song library
+                which corresponds to the song selected from the
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="201" label="song library" state="{{state}}">
+                  song library
+                </figure-callout>
                 <b>
                   201
                 </b>
-                may be played in the background via the graphics display
+                may be played in the background via the
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="211" label="graphics display" state="{{state}}">
+                  graphics display
+                </figure-callout>
                 <b>
                   211
                 </b>
                 .
               </div>
               <div class="description-paragraph" id="p-0038" num="0037">
-                The song may be a compressed archive of the following resources: a description XML file giving information about the song's title, author, and the location of the MusicXML file (or file of any other format). The file may be a standard file format used for describing both the tonal representation of the song, as well as formatting information. The file may also provide information about chord names, additional MP3 tracks (or other types of tracks), or the video file to play in the background. When the file is read in, it may be converted into both a graphical representation (for display), as well as a MIDI representation (or representation in any other format). The note manager
+                The song may be a compressed archive of the following resources: a description XML file giving information about the song's title, author, and the location of the MusicXML file (or file of any other format). The file may be a standard file format used for describing both the tonal representation of the song, as well as formatting information. The file may also provide information about chord names, additional MP3 tracks (or other types of tracks), or the video file to play in the background. When the file is read in, it may be converted into both a graphical representation (for display), as well as a MIDI representation (or representation in any other format). The
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="209" label="note manager" state="{{state}}">
+                  note manager
+                </figure-callout>
                 <b>
                   209
                 </b>
@@ -4537,11 +6390,17 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   211
                 </b>
-                in time with the audio output
+                in time with the
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="204" label="audio output" state="{{state}}">
+                  audio output
+                </figure-callout>
                 <b>
                   204
                 </b>
-                of the song selected from the song library
+                of the song selected from the
+                <figure-callout filenames="US09839852-20171212-D00002.png" id="201" label="song library" state="{{state}}">
+                  song library
+                </figure-callout>
                 <b>
                   201
                 </b>
@@ -4555,23 +6414,38 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   304
                 </b>
-                : Jukebox (or Song Play) mode
+                : Jukebox (or Song Play)
+                <figure-callout filenames="US09839852-20171212-D00003.png" id="310" label="mode" state="{{state}}">
+                  mode
+                </figure-callout>
                 <b>
                   310
                 </b>
-                , Story mode
+                ,
+                <figure-callout filenames="US09839852-20171212-D00003.png" id="320" label="Story mode" state="{{state}}">
+                  Story mode
+                </figure-callout>
                 <b>
                   320
                 </b>
-                , Multiplayer (or Online) mode
+                , Multiplayer (or Online)
+                <figure-callout filenames="US09839852-20171212-D00003.png" id="330" label="mode" state="{{state}}">
+                  mode
+                </figure-callout>
                 <b>
                   330
                 </b>
-                , and Arcade (or Diagnostic) mode
+                , and Arcade (or Diagnostic)
+                <figure-callout filenames="US09839852-20171212-D00003.png" id="340" label="mode" state="{{state}}">
+                  mode
+                </figure-callout>
                 <b>
                   340
                 </b>
-                . The game also may have a game configuration module
+                . The game also may have a
+                <figure-callout filenames="US09839852-20171212-D00003.png" id="303" label="game configuration module" state="{{state}}">
+                  game configuration module
+                </figure-callout>
                 <b>
                   303
                 </b>
@@ -4586,7 +6460,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 4
                 </figref>
-                is a snapshot of a moving video image which is shown on a display screen to a user. The moving image is a moving (or scrolling) notation which prompts the user to play certain chords or notes, such as indicated by a symbol
+                is a snapshot of a moving video image which is shown on a display screen to a user. The moving image is a moving (or scrolling) notation which prompts the user to play certain chords or notes, such as indicated by a
+                <figure-callout filenames="US09839852-20171212-D00004.png" id="401" label="symbol" state="{{state}}">
+                  symbol
+                </figure-callout>
                 <b>
                   401
                 </b>
@@ -4638,11 +6515,17 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 4
                 </figref>
-                , upcoming notes
+                ,
+                <figure-callout filenames="US09839852-20171212-D00004.png" id="403" label="upcoming notes" state="{{state}}">
+                  upcoming notes
+                </figure-callout>
                 <b>
                   403
                 </b>
-                are also displayed and move from the top-right side of the screen towards the bottom-left. When the notes approach the hit-line or hit-area
+                are also displayed and move from the top-right side of the screen towards the bottom-left. When the notes approach the hit-line or hit-
+                <figure-callout filenames="US09839852-20171212-D00004.png" id="402" label="area" state="{{state}}">
+                  area
+                </figure-callout>
                 <b>
                   402
                 </b>
@@ -4667,7 +6550,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 5
                 </figref>
-                , another example of how notes may scroll across the display screen for a user to play is shown. The six strings of the guitar
+                , another example of how notes may scroll across the display screen for a user to play is shown. The six strings of the
+                <figure-callout filenames="US09839852-20171212-D00005.png" id="501" label="guitar" state="{{state}}">
+                  guitar
+                </figure-callout>
                 <b>
                   501
                 </b>
@@ -4675,23 +6561,38 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   502
                 </b>
-                may move across the screen from the right-side to the left-side in time with the song. The hit bar/zone
+                may move across the screen from the right-side to the left-side in time with the song. The hit bar/
+                <figure-callout filenames="US09839852-20171212-D00005.png" id="503" label="zone" state="{{state}}">
+                  zone
+                </figure-callout>
                 <b>
                   503
                 </b>
-                may indicate when the notes
+                may indicate when the
+                <figure-callout filenames="US09839852-20171212-D00005.png" id="502" label="notes" state="{{state}}">
+                  notes
+                </figure-callout>
                 <b>
                   502
                 </b>
-                are supposed to be played. When the notes
+                are supposed to be played. When the
+                <figure-callout filenames="US09839852-20171212-D00005.png" id="502" label="notes" state="{{state}}">
+                  notes
+                </figure-callout>
                 <b>
                   502
                 </b>
-                reach the hit bar
+                reach the hit
+                <figure-callout filenames="US09839852-20171212-D00005.png" id="503" label="bar" state="{{state}}">
+                  bar
+                </figure-callout>
                 <b>
                   503
                 </b>
-                , the user is supposed to play the notes
+                , the user is supposed to play the
+                <figure-callout filenames="US09839852-20171212-D00005.png" id="502" label="notes" state="{{state}}">
+                  notes
+                </figure-callout>
                 <b>
                   502
                 </b>
@@ -4703,30 +6604,48 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   502
                 </b>
-                for example. If a chord
+                for example. If a
+                <figure-callout filenames="US09839852-20171212-D00005.png" id="502" label="chord" state="{{state}}">
+                  chord
+                </figure-callout>
                 <b>
                   502
                 </b>
-                is being played, the name of the chord
+                is being played, the name of the
+                <figure-callout filenames="US09839852-20171212-D00005.png" id="504" label="chord" state="{{state}}">
+                  chord
+                </figure-callout>
                 <b>
                   504
                 </b>
-                may also be displayed. Further, the stroke-direction may be shown in the duration bar by the strum indicator
+                may also be displayed. Further, the stroke-direction may be shown in the duration bar by the
+                <figure-callout filenames="US09839852-20171212-D00005.png" id="506" label="strum indicator" state="{{state}}">
+                  strum indicator
+                </figure-callout>
                 <b>
                   506
                 </b>
                 , by the arrows indicating which direction the user is supposed to stroke the chord. A power-up indicator may also be displayed for game play. For example, if a user is able to play a certain number of notes accurately, a power-up indicator may display a note that the user may triple their score if they get the next X number of notes correct. Thus, a power-up indicator may display some kind of score modifier that may become available to a user.
               </div>
               <div class="description-paragraph" id="p-0044" num="0043">
-                As the user listens to the song and watches the display on the display screen, the user may attempt to play the chords and notes that he or she is prompted to play. Depending on the user's accuracy with regard to which fret and strings are actually played, the velocity with which each note or chord is played, the direction of the strokes, and the timing of the user's play, the game engine may calculate a score and score modifiers
+                As the user listens to the song and watches the display on the display screen, the user may attempt to play the chords and notes that he or she is prompted to play. Depending on the user's accuracy with regard to which fret and strings are actually played, the velocity with which each note or chord is played, the direction of the strokes, and the timing of the user's play, the game engine may calculate a score and score
+                <figure-callout filenames="US09839852-20171212-D00005.png" id="507" label="modifiers" state="{{state}}">
+                  modifiers
+                </figure-callout>
                 <b>
                   507
                 </b>
-                or provide the user with other feedback
+                or provide the user with
+                <figure-callout filenames="US09839852-20171212-D00005.png" id="508" label="other feedback" state="{{state}}">
+                  other feedback
+                </figure-callout>
                 <b>
                   508
                 </b>
-                as to his or her accuracy and performance, in the form of a success meter, for example. Further, to immerse the user or player in the music, a movie or video
+                as to his or her accuracy and performance, in the form of a success meter, for example. Further, to immerse the user or player in the music, a movie or
+                <figure-callout filenames="US09839852-20171212-D00005.png" id="510" label="video" state="{{state}}">
+                  video
+                </figure-callout>
                 <b>
                   510
                 </b>
@@ -4741,7 +6660,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   601
                 </b>
-                may be rewarded along with a textual representation of the score
+                may be rewarded along with a textual representation of the
+                <figure-callout filenames="US09839852-20171212-D00006.png" id="602" label="score" state="{{state}}">
+                  score
+                </figure-callout>
                 <b>
                   602
                 </b>
@@ -4749,11 +6671,17 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   601
                 </b>
-                and a qualitative indicator for a correctly or incorrectly played note
+                and a qualitative indicator for a correctly or incorrectly played
+                <figure-callout filenames="US09839852-20171212-D00006.png" id="602" label="note" state="{{state}}">
+                  note
+                </figure-callout>
                 <b>
                   602
                 </b>
-                . For example, the textual representation of the qualitative indicator
+                . For example, the textual representation of the
+                <figure-callout filenames="US09839852-20171212-D00006.png" id="602" label="qualitative indicator" state="{{state}}">
+                  qualitative indicator
+                </figure-callout>
                 <b>
                   602
                 </b>
@@ -4761,7 +6689,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 6
                 </figref>
-                . The notes or chord
+                . The notes or
+                <figure-callout filenames="US09839852-20171212-D00006.png" id="603" label="chord" state="{{state}}">
+                  chord
+                </figure-callout>
                 <b>
                   603
                 </b>
@@ -4769,7 +6700,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   604
                 </b>
-                . Thus, the graphical indicator for the correctly played note
+                . Thus, the graphical indicator for the correctly played
+                <figure-callout filenames="US09839852-20171212-D00006.png" id="603" label="note" state="{{state}}">
+                  note
+                </figure-callout>
                 <b>
                   603
                 </b>
@@ -4792,7 +6726,12 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 7
                 </figref>
-                illustrates an example of a timeline view of the scrolling notation, in accordance with an embodiment of the invention. As shown in the timeline view, the notes
+                illustrates an example of a timeline view of the scrolling notation, in accordance with an embodiment of the invention. As shown in the timeline view, the
+                <figure-callout filenames="US09839852-20171212-D00007.png" id="703" label="notes" state="{{state}}">
+                  <figure-callout filenames="US09839852-20171212-D00007.png" id="705" label="notes" state="{{state}}">
+                    notes
+                  </figure-callout>
+                </figure-callout>
                 <b>
                   703
                 </b>
@@ -4800,15 +6739,24 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   705
                 </b>
-                may scroll from the right side
+                may scroll from the
+                <figure-callout filenames="US09839852-20171212-D00007.png" id="701" label="right side" state="{{state}}">
+                  right side
+                </figure-callout>
                 <b>
                   701
                 </b>
-                to the left side
+                to the
+                <figure-callout filenames="US09839852-20171212-D00007.png" id="702" label="left side" state="{{state}}">
+                  left side
+                </figure-callout>
                 <b>
                   702
                 </b>
-                . There may also be a video in the background
+                . There may also be a video in the
+                <figure-callout filenames="US09839852-20171212-D00007.png" id="707" label="background" state="{{state}}">
+                  background
+                </figure-callout>
                 <b>
                   707
                 </b>
@@ -4824,18 +6772,27 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   704
                 </b>
-                ), the user may play those notes on their guitar. The user may receive a score
+                ), the user may play those notes on their guitar. The user may receive a
+                <figure-callout filenames="US09839852-20171212-D00007.png" id="706" label="score" state="{{state}}">
+                  score
+                </figure-callout>
                 <b>
                   706
                 </b>
                 , which is updated as the user plays along, to reflect how close to the actual hit line the user played the note, or if the user missed the note all together. The score may also reflect a note streak (how many notes the user has correctly and accurately played in a row), the number of hits (how many notes the user has played correctly in the song or exercise) and a accuracy rating (the percentage of notes that the user has played correctly in the song or exercise). Depending on the user's action, the view may also give the user visual feedback by changing the representation of the note. As the user's score changes, different crowd noises may be provided as audio feedback.
               </div>
               <div class="description-paragraph" id="p-0047" num="0046">
-                If there are no notes on the screen, the interface may display the next offscreen note on the far right of the screen so as to alert the user of an upcoming note. The interface may also display certain metrics regarding the user's performance, including a score and a current note streak
+                If there are no notes on the screen, the interface may display the next offscreen note on the far right of the screen so as to alert the user of an upcoming note. The interface may also display certain metrics regarding the user's performance, including a score and a
+                <figure-callout filenames="US09839852-20171212-D00007.png" id="706" label="current note streak" state="{{state}}">
+                  current note streak
+                </figure-callout>
                 <b>
                   706
                 </b>
-                . Additionally, the interface may display a timeline for a whole song, broken into sections, showing the user where they are and giving a general sense as to how the user did on a particular section of a song. For example, a user's progress may be tracked by a progress bar
+                . Additionally, the interface may display a timeline for a whole song, broken into sections, showing the user where they are and giving a general sense as to how the user did on a particular section of a song. For example, a user's progress may be tracked by a
+                <figure-callout filenames="US09839852-20171212-D00007.png" id="708" label="progress bar" state="{{state}}">
+                  progress bar
+                </figure-callout>
                 <b>
                   708
                 </b>
@@ -4843,11 +6800,17 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   702
                 </b>
-                , expanding and coming nearer as they approach the left side of the screen
+                , expanding and coming nearer as they approach the left side of the
+                <figure-callout filenames="US09839852-20171212-D00007.png" id="701" label="screen" state="{{state}}">
+                  screen
+                </figure-callout>
                 <b>
                   701
                 </b>
-                . The inside of the note bubble
+                . The inside of the
+                <figure-callout filenames="US09839852-20171212-D00007.png" id="703" label="note bubble" state="{{state}}">
+                  note bubble
+                </figure-callout>
                 <b>
                   703
                 </b>
@@ -4861,11 +6824,17 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   803
                 </b>
-                (or other note symbols) may also be displayed, in addition to note or chord names above the strings
+                (or other note symbols) may also be displayed, in addition to note or chord names above the
+                <figure-callout filenames="US09839852-20171212-D00008.png" id="805" label="strings" state="{{state}}">
+                  strings
+                </figure-callout>
                 <b>
                   805
                 </b>
-                . Rather than scrolling from left to right, however, the notes may circle around clockwise and rotate. Thus, the notes will repeat, after the carousel completes each rotational cycle. The carousel
+                . Rather than scrolling from left to right, however, the notes may circle around clockwise and rotate. Thus, the notes will repeat, after the carousel completes each rotational cycle. The
+                <figure-callout filenames="US09839852-20171212-D00008.png" id="800" label="carousel" state="{{state}}">
+                  carousel
+                </figure-callout>
                 <b>
                   800
                 </b>
@@ -4877,15 +6846,24 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   802
                 </b>
-                . Because the carousel
+                . Because the
+                <figure-callout filenames="US09839852-20171212-D00008.png" id="800" label="carousel" state="{{state}}">
+                  carousel
+                </figure-callout>
                 <b>
                   800
                 </b>
-                may be translucent, notation displayed in the background may be viewable by the user through the foreground. As the notation rotates, the notation displayed in the foreground
+                may be translucent, notation displayed in the background may be viewable by the user through the foreground. As the notation rotates, the notation displayed in the
+                <figure-callout filenames="US09839852-20171212-D00008.png" id="803" label="foreground" state="{{state}}">
+                  foreground
+                </figure-callout>
                 <b>
                   803
                 </b>
-                is rotated to the background
+                is rotated to the
+                <figure-callout filenames="US09839852-20171212-D00008.png" id="802" label="background" state="{{state}}">
+                  background
+                </figure-callout>
                 <b>
                   802
                 </b>
@@ -4893,7 +6871,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   804
                 </b>
-                , the note may change in color in a certain number of stages, or other real-time feedback of the user's accuracy with regard to the notes and timing may be provided to the user, such as in a score box
+                , the note may change in color in a certain number of stages, or other real-time feedback of the user's accuracy with regard to the notes and timing may be provided to the user, such as in a
+                <figure-callout filenames="US09839852-20171212-D00008.png" id="806" label="score box" state="{{state}}">
+                  score box
+                </figure-callout>
                 <b>
                   806
                 </b>
@@ -4901,11 +6882,37 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   804
                 </b>
-                , then the note may be change in color (i.e. from the color indicating stage 1 to the color indicating stage 2. Alternatively, if the user misses a note, then the note may change in color (i.e. from the color indicating stage 2 to the color indicating stage 1). In carousel view, a game may be complete when the user has gotten a percentage of the notes from stage 1 up to stage 3, for example. The score may be a function of how many notes over the minimum percentage that the user got, as well as how many cycles it took to do it in. The progress bar
+                , then the note may be change in color (i.e. from the
+                <figure-callout filenames="US09839852-20171212-D00008.png,US09839852-20171212-D00009.png" id="1" label="color indicating stage" state="{{state}}">
+                  color indicating stage
+                </figure-callout>
+                1 to the
+                <figure-callout filenames="US09839852-20171212-D00006.png,US09839852-20171212-D00008.png" id="2" label="color indicating stage" state="{{state}}">
+                  color indicating stage
+                </figure-callout>
+                2. Alternatively, if the user misses a note, then the note may change in color (i.e. from the
+                <figure-callout filenames="US09839852-20171212-D00006.png,US09839852-20171212-D00008.png" id="2" label="color indicating stage" state="{{state}}">
+                  color indicating stage
+                </figure-callout>
+                2 to the color indicating stage 1). In carousel view, a game may be complete when the user has gotten a percentage of the notes from
+                <figure-callout filenames="US09839852-20171212-D00008.png,US09839852-20171212-D00009.png" id="1" label="stage" state="{{state}}">
+                  stage
+                </figure-callout>
+                1 up to
+                <figure-callout filenames="US09839852-20171212-D00005.png,US09839852-20171212-D00006.png" id="3" label="stage" state="{{state}}">
+                  stage
+                </figure-callout>
+                3, for example. The score may be a function of how many notes over the minimum percentage that the user got, as well as how many cycles it took to do it in. The
+                <figure-callout filenames="US09839852-20171212-D00008.png" id="808" label="progress bar" state="{{state}}">
+                  progress bar
+                </figure-callout>
                 <b>
                   808
                 </b>
-                may indicate how many notes the user has gotten up to the completion point by a percentage. If the user takes longer than ten cycles, for example, the user may fail and receive no points. The carousel view may be used to work on sections of songs. The display may also include a 1 bar count off at the beginning and a second or so of dead space at the end so that the track loop can be faded out and then in again as it cycles through. In carousel view, a video
+                may indicate how many notes the user has gotten up to the completion point by a percentage. If the user takes longer than ten cycles, for example, the user may fail and receive no points. The carousel view may be used to work on sections of songs. The display may also include a 1 bar count off at the beginning and a second or so of dead space at the end so that the track loop can be faded out and then in again as it cycles through. In carousel view, a
+                <figure-callout filenames="US09839852-20171212-D00008.png" id="807" label="video" state="{{state}}">
+                  video
+                </figure-callout>
                 <b>
                   807
                 </b>
@@ -4919,7 +6926,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   901
                 </b>
-                may be displayed in a two-dimensional grid on top of a representation of a guitar fretboard. Also, a line of boxes of the displayed notes' names
+                may be displayed in a two-dimensional grid on top of a representation of a guitar fretboard. Also, a line of boxes of the displayed notes'
+                <figure-callout filenames="US09839852-20171212-D00009.png" id="902" label="names" state="{{state}}">
+                  names
+                </figure-callout>
                 <b>
                   902
                 </b>
@@ -4927,11 +6937,17 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   905
                 </b>
-                . The view of the fretboard may be moveable to accommodate the positions of the notes being displayed. For example, if the current chord is on the third and fifth frets, the view may contain at least the upper third of the fretboard. Then if the next note is on the fifteenth, sixteenth and seventeenth frets, the view may contain the middle third of the fretboard. The transition from one part of the fretboard to another may be smooth and quick. The view may also display a progress bar at the bottom, for example, to show the user how far through the song that he or she is, or the user's score or other relevant feedback may be shown in a scorebox
+                . The view of the fretboard may be moveable to accommodate the positions of the notes being displayed. For example, if the current chord is on the third and fifth frets, the view may contain at least the upper third of the fretboard. Then if the next note is on the fifteenth, sixteenth and seventeenth frets, the view may contain the middle third of the fretboard. The transition from one part of the fretboard to another may be smooth and quick. The view may also display a progress bar at the bottom, for example, to show the user how far through the song that he or she is, or the user's score or other relevant feedback may be shown in a
+                <figure-callout filenames="US09839852-20171212-D00009.png" id="903" label="scorebox" state="{{state}}">
+                  scorebox
+                </figure-callout>
                 <b>
                   903
                 </b>
-                . A fullscreen video
+                . A
+                <figure-callout filenames="US09839852-20171212-D00009.png" id="904" label="fullscreen video" state="{{state}}">
+                  fullscreen video
+                </figure-callout>
                 <b>
                   904
                 </b>
@@ -4980,11 +6996,17 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 11
                 </figref>
-                , as described above, a visual graphical representation of the guitar
+                , as described above, a visual graphical representation of the
+                <figure-callout filenames="US09839852-20171212-D00011.png" id="1101" label="guitar" state="{{state}}">
+                  guitar
+                </figure-callout>
                 <b>
                   1101
                 </b>
-                may be displayed on the display screen. The user can easily compare this to their own guitar that they are learning how to play. In one embodiment of the invention, the chord that is to be played is represented by a shaded bar or hit line/zone
+                may be displayed on the display screen. The user can easily compare this to their own guitar that they are learning how to play. In one embodiment of the invention, the chord that is to be played is represented by a shaded bar or hit line/
+                <figure-callout filenames="US09839852-20171212-D00011.png" id="1102" label="zone" state="{{state}}">
+                  zone
+                </figure-callout>
                 <b>
                   1102
                 </b>
@@ -4996,11 +7018,17 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   1104
                 </b>
-                may be shown. A scrolling line may also indicate hit time, the chord name
+                may be shown. A scrolling line may also indicate hit time, the
+                <figure-callout filenames="US09839852-20171212-D00011.png" id="1105" label="chord name" state="{{state}}">
+                  chord name
+                </figure-callout>
                 <b>
                   1105
                 </b>
-                , and the strum direction
+                , and the
+                <figure-callout filenames="US09839852-20171212-D00011.png" id="1106" label="strum direction" state="{{state}}">
+                  strum direction
+                </figure-callout>
                 <b>
                   1106
                 </b>
@@ -5011,11 +7039,17 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 12
                 </figref>
-                , and/or (c) interactive videos. For example, in an interactive video display, the guitar neck
+                , and/or (c) interactive videos. For example, in an interactive video display, the
+                <figure-callout filenames="US09839852-20171212-D00012.png" id="1201" label="guitar neck" state="{{state}}">
+                  guitar neck
+                </figure-callout>
                 <b>
                   1201
                 </b>
-                may be shown with the guitar fret numbers
+                may be shown with the guitar fret
+                <figure-callout filenames="US09839852-20171212-D00012.png" id="1202" label="numbers" state="{{state}}">
+                  numbers
+                </figure-callout>
                 <b>
                   1202
                 </b>
@@ -5023,7 +7057,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 12
                 </figref>
-                , the display may show actual fingering of the chord by a semi-opaque animated hand position indicator
+                , the display may show actual fingering of the chord by a semi-opaque animated
+                <figure-callout filenames="US09839852-20171212-D00012.png" id="1203" label="hand position indicator" state="{{state}}">
+                  hand position indicator
+                </figure-callout>
                 <b>
                   1203
                 </b>
@@ -5044,7 +7081,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 13
                 </figref>
-                , when the user chooses the Jukebox (or Song Play) mode
+                , when the user chooses the Jukebox (or Song Play)
+                <figure-callout filenames="US09839852-20171212-D00013.png" id="1300" label="mode" state="{{state}}">
+                  mode
+                </figure-callout>
                 <b>
                   1300
                 </b>
@@ -5052,7 +7092,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   1301
                 </b>
-                . The user may either play the song
+                . The user may either play the
+                <figure-callout filenames="US09839852-20171212-D00013.png" id="1302" label="song" state="{{state}}">
+                  song
+                </figure-callout>
                 <b>
                   1302
                 </b>
@@ -5074,31 +7117,52 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 . The library may include pre-installed music or music purchased or downloaded from a music store. Users may choose to view tablature or notes in a timeline view.
               </div>
               <div class="description-paragraph" id="p-0058" num="0057">
-                If a user has trouble with a particular section of a song, the user (or the game engine) may switch to a carousel view and have the user repeat that section until the user improves. Thus, the game engine may assess the user's past performance and provide the user with exercises or games to target the areas that the user needs to work on in step
+                If a user has trouble with a particular section of a song, the user (or the game engine) may switch to a carousel view and have the user repeat that section until the user improves. Thus, the game engine may assess the user's past performance and provide the user with exercises or games to target the areas that the user needs to work on in
+                <figure-callout filenames="US09839852-20171212-D00013.png" id="1303" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1303
                 </b>
-                , and the game engine may then appropriately determine or form a selection of mini-games to be played in step
+                , and the game engine may then appropriately determine or form a selection of mini-games to be played in
+                <figure-callout filenames="US09839852-20171212-D00013.png" id="1304" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1304
                 </b>
-                . As the user selects the mini-game from the options provided by the game engine to play in step
+                . As the user selects the mini-game from the options provided by the game engine to play in
+                <figure-callout filenames="US09839852-20171212-D00013.png" id="1305" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1305
                 </b>
-                and plays the game in step
+                and plays the game in
+                <figure-callout filenames="US09839852-20171212-D00013.png" id="1306" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1306
                 </b>
-                , the user is practicing various skills or songs or sections of songs and targeting certain weaknesses in order to improve overall performance. Users may also adjust the speed, complexity and sub-mode (or mini-game) that they play. The results of each game played may be stored in step
+                , the user is practicing various skills or songs or sections of songs and targeting certain weaknesses in order to improve overall performance. Users may also adjust the speed, complexity and sub-mode (or mini-game) that they play. The results of each game played may be stored in
+                <figure-callout filenames="US09839852-20171212-D00013.png" id="1309" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1309
                 </b>
-                . After the user plays a mini-game, the user may play another game
+                . After the user plays a mini-game, the user may play another
+                <figure-callout filenames="US09839852-20171212-D00013.png" id="1307" label="game" state="{{state}}">
+                  game
+                </figure-callout>
                 <b>
                   1307
                 </b>
-                or return to the main menu
+                or return to the
+                <figure-callout filenames="US09839852-20171212-D00013.png" id="1308" label="main menu" state="{{state}}">
+                  main menu
+                </figure-callout>
                 <b>
                   1308
                 </b>
@@ -5121,27 +7185,45 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 14
                 </figref>
-                , a flowchart of the game when Story mode is selected is shown. In Story mode, the user may either create a new character in step
+                , a flowchart of the game when Story mode is selected is shown. In Story mode, the user may either create a new character in
+                <figure-callout filenames="US09839852-20171212-D00014.png" id="1403" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1403
                 </b>
-                or continue an old game in step
+                or continue an old game in
+                <figure-callout filenames="US09839852-20171212-D00014.png" id="1401" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1401
                 </b>
-                . If the user elects to continue an old game in step
+                . If the user elects to continue an old game in
+                <figure-callout filenames="US09839852-20171212-D00014.png" id="1401" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1401
                 </b>
-                , then the user may select a character to load in step
+                , then the user may select a character to load in
+                <figure-callout filenames="US09839852-20171212-D00014.png" id="1402" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1402
                 </b>
-                , the character may load in step
+                , the character may load in
+                <figure-callout filenames="US09839852-20171212-D00014.png" id="1410" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1410
                 </b>
-                , the current level of play may load in step
+                , the current level of play may load in
+                <figure-callout filenames="US09839852-20171212-D00014.png" id="1405" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1405
                 </b>
@@ -5153,11 +7235,17 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   1407
                 </b>
-                . If the user beats the level or accomplishes whatever requirements the level has in step
+                . If the user beats the level or accomplishes whatever requirements the level has in
+                <figure-callout filenames="US09839852-20171212-D00014.png" id="1408" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1408
                 </b>
-                , then the user may advance to the next level. If the user does not beat the level or meet the requirements in step
+                , then the user may advance to the next level. If the user does not beat the level or meet the requirements in
+                <figure-callout filenames="US09839852-20171212-D00014.png" id="1408" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1408
                 </b>
@@ -5169,14 +7257,22 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   1403
                 </b>
-                , then the user will follow the same steps, except the user will start at Level 1 in
+                , then the user will follow the same steps, except the user will start at
+                <figure-callout filenames="US09839852-20171212-D00008.png,US09839852-20171212-D00009.png" id="1" label="Level" state="{{state}}">
+                  Level
+                </figure-callout>
+                1 in
                 <b>
                   1404
                 </b>
                 .
               </div>
               <div class="description-paragraph" id="p-0064" num="0063">
-                As an example, a user may, in the first chapter (or Level 1) of the Story, learn core skills of a guitar player. For example, the first thing that a beginning user may do is to make sure they are in tune. A user, in Level 1, may learn how to tune their instrument and how to recognize when the instrument is out of tune. As further described below, an on-screen tuning system may allow the user to play one string at a time until the guitar is in tune. Users may revisit this tuning view later at anytime, and the software may also detect when the guitar is out of tune to ask the user to re-tune the guitar.
+                As an example, a user may, in the first chapter (or Level 1) of the Story, learn core skills of a guitar player. For example, the first thing that a beginning user may do is to make sure they are in tune. A user, in
+                <figure-callout filenames="US09839852-20171212-D00008.png,US09839852-20171212-D00009.png" id="1" label="Level" state="{{state}}">
+                  Level
+                </figure-callout>
+                1, may learn how to tune their instrument and how to recognize when the instrument is out of tune. As further described below, an on-screen tuning system may allow the user to play one string at a time until the guitar is in tune. Users may revisit this tuning view later at anytime, and the software may also detect when the guitar is out of tune to ask the user to re-tune the guitar.
               </div>
               <div class="description-paragraph" id="p-0065" num="0064">
                 The tuning guide may aid the user in tuning their guitar, and may consist of a display of a diagram of each string, highlighting the current string being played. A note name may indicate what tone the system is receiving from the guitar, and a graph may highlight whether that note is flat or sharp from the ideal note. When the string is in tune, the string may be highlighted. Strings that are not currently in tune may be darkened or otherwise displayed to indicate their status. At the end of the process, the user may be asked to strum the guitar to make sure that all of the strings are in tune.
@@ -5185,7 +7281,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 The tuning system may also be displayed as a Quick Tuner appearing in one small corner of the screen (e.g., the bottom right of the screen). After analyzing a note, the Quick Tuner may display to the user what note was played and whether the note was flat or sharp. A colored portion inside of the box may be yellow, for example, and lean flat for flat notes, turn the light below yellow and highlight the word “Flat” within the box. When the note is sharp, the color box may change colors to red, for example, and lean to the right, turn the light right, and highlight “Sharp” within the box. When in tune, the box may disappear and the light may turn to green, for example. The flat and sharp notes may be indicated in any number of ways.
               </div>
               <div class="description-paragraph" id="p-0067" num="0066">
-                Level 1 of Story mode may also introduce users to the guitar neck fret view. Users may become familiar with relating the fret numbers to different places on the guitar neck. A display may show certain highlighted notes, and then the user may play those highlighted notes at the user's own pace. Other guitar skills may be presented through mini-games or sub-modes, and in different views, where the user can be challenged to improve their ability and beat their friend's and their own, high scores. The Story may be broken up into days or different levels. For example, Story mode may span 90 days, which take the user through many different skills involved in playing a guitar.
+                <figure-callout filenames="US09839852-20171212-D00008.png,US09839852-20171212-D00009.png" id="1" label="Level" state="{{state}}">
+                  Level
+                </figure-callout>
+                1 of Story mode may also introduce users to the guitar neck fret view. Users may become familiar with relating the fret numbers to different places on the guitar neck. A display may show certain highlighted notes, and then the user may play those highlighted notes at the user's own pace. Other guitar skills may be presented through mini-games or sub-modes, and in different views, where the user can be challenged to improve their ability and beat their friend's and their own, high scores. The Story may be broken up into days or different levels. For example, Story mode may span 90 days, which take the user through many different skills involved in playing a guitar.
               </div>
               <div class="description-paragraph" id="p-0068" num="0067">
                 <figref idrefs="DRAWINGS">
@@ -5285,16 +7384,26 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 Thus, the user may bond with the characters within the Story, as the user spends more time interacting with the system and playing the exercises or mini-games. Each level then, is somewhat like an “Act” in a play or story. For example, the following could be some acts in Story mode:
               </div>
               <div class="description-paragraph" id="p-0084" num="0089">
-                Act 1
+                <figure-callout filenames="US09839852-20171212-D00008.png,US09839852-20171212-D00009.png" id="1" label="Act" state="{{state}}">
+                  Act
+                </figure-callout>
+                1
               </div>
               <div class="description-paragraph" id="p-0085" num="0090">
                 SKILLS: beginning knowledge, basic fret/guitar chords
               </div>
               <div class="description-paragraph" id="p-0086" num="0091">
-                STORY: meet guitar store guy, meet love interest. End of act 1, meet band guy who invites user to come by and play rhythm for his band.
+                STORY: meet guitar store guy, meet love interest. End of
+                <figure-callout filenames="US09839852-20171212-D00008.png,US09839852-20171212-D00009.png" id="1" label="act" state="{{state}}">
+                  act
+                </figure-callout>
+                1, meet band guy who invites user to come by and play rhythm for his band.
               </div>
               <div class="description-paragraph" id="p-0087" num="0092">
-                Act 2
+                <figure-callout filenames="US09839852-20171212-D00006.png,US09839852-20171212-D00008.png" id="2" label="Act" state="{{state}}">
+                  Act
+                </figure-callout>
+                2
               </div>
               <div class="description-paragraph" id="p-0088" num="0093">
                 SKILLS: more chords, more frets
@@ -5303,7 +7412,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 STORY: band practice space, playing songs, learning chords, timing, listening to other instruments, rock trivia/influences. Show announced.
               </div>
               <div class="description-paragraph" id="p-0090" num="0095">
-                Act 3
+                <figure-callout filenames="US09839852-20171212-D00005.png,US09839852-20171212-D00006.png" id="3" label="Act" state="{{state}}">
+                  Act
+                </figure-callout>
+                3
               </div>
               <div class="description-paragraph" id="p-0091" num="0096">
                 SKILLS: more chords, more frets
@@ -5316,11 +7428,25 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 16
                 </figref>
-                , each level
+                , each
+                <figure-callout filenames="US09839852-20171212-D00017.png" id="1610" label="level" state="{{state}}">
+                  level
+                </figure-callout>
                 <b>
                   1610
                 </b>
-                may have various sub-levels which include exercises for various songs
+                may have various sub-levels which include exercises for
+                <figure-callout filenames="US09839852-20171212-D00017.png" id="1604" label="various songs" state="{{state}}">
+                  <figure-callout filenames="US09839852-20171212-D00017.png" id="1605" label="various songs" state="{{state}}">
+                    <figure-callout filenames="US09839852-20171212-D00017.png" id="1606" label="various songs" state="{{state}}">
+                      <figure-callout filenames="US09839852-20171212-D00017.png" id="1607" label="various songs" state="{{state}}">
+                        <figure-callout filenames="US09839852-20171212-D00017.png" id="1608" label="various songs" state="{{state}}">
+                          various songs
+                        </figure-callout>
+                      </figure-callout>
+                    </figure-callout>
+                  </figure-callout>
+                </figure-callout>
                 <b>
                   1604
                 </b>
@@ -5340,7 +7466,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   1608
                 </b>
-                of a certain level. For example, if level
+                of a certain level. For example, if
+                <figure-callout filenames="US09839852-20171212-D00017.png" id="1610" label="level" state="{{state}}">
+                  level
+                </figure-callout>
                 <b>
                   1610
                 </b>
@@ -5364,7 +7493,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   1608
                 </b>
-                may include exercises for five different songs for beginners. Alternatively, the level
+                may include exercises for five different songs for beginners. Alternatively, the
+                <figure-callout filenames="US09839852-20171212-D00017.png" id="1610" label="level" state="{{state}}">
+                  level
+                </figure-callout>
                 <b>
                   1610
                 </b>
@@ -5408,7 +7540,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   1608
                 </b>
-                may make up one level
+                may make up one
+                <figure-callout filenames="US09839852-20171212-D00017.png" id="1610" label="level" state="{{state}}">
+                  level
+                </figure-callout>
                 <b>
                   1610
                 </b>
@@ -5444,11 +7579,17 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   1603
                 </b>
-                . There may be several types of exercises, lessons or mini-games as later described. Each sub-level may also have a mini-boss level
+                . There may be several types of exercises, lessons or mini-games as later described. Each sub-level may also have a
+                <figure-callout filenames="US09839852-20171212-D00017.png" id="1602" label="mini-boss level" state="{{state}}">
+                  mini-boss level
+                </figure-callout>
                 <b>
                   1602
                 </b>
-                in which a user is required to play a song fully through or an entire segment of a song fully through, or even a sub-level boss
+                in which a user is required to play a song fully through or an entire segment of a song fully through, or even a
+                <figure-callout filenames="US09839852-20171212-D00017.png" id="1603" label="sub-level boss" state="{{state}}">
+                  sub-level boss
+                </figure-callout>
                 <b>
                   1603
                 </b>
@@ -5462,7 +7603,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 17
                 </figref>
-                , as the user advances or completes certain mini-games, the menu may indicate completion of the level group
+                , as the user advances or completes certain mini-games, the menu may indicate completion of the
+                <figure-callout filenames="US09839852-20171212-D00018.png" id="1701" label="level group" state="{{state}}">
+                  level group
+                </figure-callout>
                 <b>
                   1701
                 </b>
@@ -5470,7 +7614,14 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 17
                 </figref>
-                . For example, the user may have completed Level 1, so instead of showing the various games and sub-levels available as part of the menu, the menu may simply display a completion indicator, such as a check-mark
+                . For example, the user may have completed
+                <figure-callout filenames="US09839852-20171212-D00008.png,US09839852-20171212-D00009.png" id="1" label="Level" state="{{state}}">
+                  Level
+                </figure-callout>
+                1, so instead of showing the various games and sub-levels available as part of the menu, the menu may simply display a completion indicator, such as a check-
+                <figure-callout filenames="US09839852-20171212-D00018.png" id="1702" label="mark" state="{{state}}">
+                  mark
+                </figure-callout>
                 <b>
                   1702
                 </b>
@@ -5478,7 +7629,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   1701
                 </b>
-                ). If the user has not yet completed a level group, such as Level 2 shown in
+                ). If the user has not yet completed a level group, such as
+                <figure-callout filenames="US09839852-20171212-D00006.png,US09839852-20171212-D00008.png" id="2" label="Level" state="{{state}}">
+                  Level
+                </figure-callout>
+                2 shown in
                 <figref idrefs="DRAWINGS">
                   FIG. 17
                 </figref>
@@ -5498,7 +7653,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   1707
                 </b>
-                . If the user has completed a certain sub-level, for example, that particular sub-level may be displayed as completed with a completion indicator, such as a check-mark
+                . If the user has completed a certain sub-level, for example, that particular sub-level may be displayed as completed with a completion indicator, such as a check-
+                <figure-callout filenames="US09839852-20171212-D00018.png" id="1707" label="mark" state="{{state}}">
+                  mark
+                </figure-callout>
                 <b>
                   1707
                 </b>
@@ -5509,7 +7667,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 18
                 </figref>
-                , two players may play simultaneously on the same machine. The view may be split by a progress bar
+                , two players may play simultaneously on the same machine. The view may be split by a
+                <figure-callout filenames="US09839852-20171212-D00019.png" id="1801" label="progress bar" state="{{state}}">
+                  progress bar
+                </figure-callout>
                 <b>
                   1801
                 </b>
@@ -5537,7 +7698,10 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   1805
                 </b>
-                ) may include the user's score, number of notes that they have hit, the user's accuracy rating, etc. Each user may have his own score box to track his progress. The users can play the same track, or different tracks if they are available for the current song. A music video, or any other video or image selected by the user
+                ) may include the user's score, number of notes that they have hit, the user's accuracy rating, etc. Each user may have his own score box to track his progress. The users can play the same track, or different tracks if they are available for the current song. A music video, or any other video or image selected by the
+                <figure-callout filenames="US09839852-20171212-D00019.png" id="1806" label="user" state="{{state}}">
+                  user
+                </figure-callout>
                 <b>
                   1806
                 </b>
@@ -5550,27 +7714,45 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <figref idrefs="DRAWINGS">
                   FIG. 19
                 </figref>
-                shows a flowchart of the game when Multiplayer (or Online) mode is selected. In step
+                shows a flowchart of the game when Multiplayer (or Online) mode is selected. In
+                <figure-callout filenames="US09839852-20171212-D00020.png" id="1901" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1901
                 </b>
-                , the Multiplayer (or Online) mode is selected. The opponent may be selected in step
+                , the Multiplayer (or Online) mode is selected. The opponent may be selected in
+                <figure-callout filenames="US09839852-20171212-D00020.png" id="1902" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1902
                 </b>
-                , by the user
+                , by the
+                <figure-callout filenames="US09839852-20171212-D00020.png" id="1903" label="user" state="{{state}}">
+                  user
+                </figure-callout>
                 <b>
                   1903
                 </b>
-                , by the level
+                , by the
+                <figure-callout filenames="US09839852-20171212-D00020.png" id="1904" label="level" state="{{state}}">
+                  level
+                </figure-callout>
                 <b>
                   1904
                 </b>
-                , or by the channel
+                , or by the
+                <figure-callout filenames="US09839852-20171212-D00020.png" id="1905" label="channel" state="{{state}}">
+                  channel
+                </figure-callout>
                 <b>
                   1905
                 </b>
-                . After the opponent is selected, then the particular game to be played must be selected in step
+                . After the opponent is selected, then the particular game to be played must be selected in
+                <figure-callout filenames="US09839852-20171212-D00020.png" id="1906" label="step" state="{{state}}">
+                  step
+                </figure-callout>
                 <b>
                   1906
                 </b>
@@ -5651,15 +7833,24 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <b>
                   2001
                 </b>
-                . A user's score on individual songs, or rankings on individual songs compared to other users may be calculated and presented to the user
+                . A user's score on individual songs, or rankings on individual songs compared to other users may be calculated and presented to the
+                <figure-callout filenames="US09839852-20171212-D00021.png" id="2002" label="user" state="{{state}}">
+                  user
+                </figure-callout>
                 <b>
                   2002
                 </b>
-                . Other statistics could include information such as the user's best score, the number of wins, number of losses, the user's longest note streak or other statistics
+                . Other statistics could include information such as the user's best score, the number of wins, number of losses, the user's longest note streak or
+                <figure-callout filenames="US09839852-20171212-D00021.png" id="2002" label="other statistics" state="{{state}}">
+                  other statistics
+                </figure-callout>
                 <b>
                   2002
                 </b>
-                . The user's percentage improvement may also be calculated, as well as broken down into the user's percentage improvement with respect to playing a particular chord or chords
+                . The user's percentage improvement may also be calculated, as well as broken down into the user's percentage improvement with respect to playing a particular chord or
+                <figure-callout filenames="US09839852-20171212-D00021.png" id="2003" label="chords" state="{{state}}">
+                  chords
+                </figure-callout>
                 <b>
                   2003
                 </b>
@@ -5669,7 +7860,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 Players may be able to earn points depending on their accuracy of play. For example, if there are 1,000 points possible, and a player has 50% accuracy in a playthrough, that user may earn 50 points for that playthrough. Once 1,000 points are earned from a song, then no more points may be earned from that song, perhaps except by mastering it through some other challenge. The system may vary the number of points earned, depending on whether the song is above or below the user's play level as well.
               </div>
               <div class="description-paragraph" id="p-0115" num="0120">
-                The system may also vary the number of points on a scale. For example, scores over 90% may automatically earn the full points of a song, and an additional bonus point amount. This may allow expert users to move up quickly without having to repeat easy songs indefinitely. Additionally, each song mastered may add a modifier to a user's global point modifier. The amount added may be equal to 0.01*song or skill level, for example. Thus, if a user masters a level 2 song, a user may have 0.02 added to their point modifier. Thus, mastering more songs allows user to move up levels faster.
+                The system may also vary the number of points on a scale. For example, scores over 90% may automatically earn the full points of a song, and an additional bonus point amount. This may allow expert users to move up quickly without having to repeat easy songs indefinitely. Additionally, each song mastered may add a modifier to a user's global point modifier. The amount added may be equal to 0.01*song or skill level, for example. Thus, if a user masters a
+                <figure-callout filenames="US09839852-20171212-D00006.png,US09839852-20171212-D00008.png" id="2" label="level" state="{{state}}">
+                  level
+                </figure-callout>
+                2 song, a user may have 0.02 added to their point modifier. Thus, mastering more songs allows user to move up levels faster.
               </div>
               <div class="description-paragraph" id="p-0116" num="0121">
                 Players may also earn points through the amount of time that they have spent playing. This may reward users who may not be progressing as quickly, but are still putting in many hours trying to improve. Thus, for each hour that a user plays, a certain number of points may be earned. Also, perhaps for each consecutive day played, a certain number of bonus points (a Time Bonus) could be added, thus encouraging users to play daily. There may be a limit on the number of points that may be earned each day from the amount of time playing. For example, the Points=(Time Playing*100)*(1+Time Bonus*0.25)).
@@ -6065,7 +8260,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
             </a>
           </section>
           <h2>
-            Priority Applications (3)
+            Priority Applications (1)
           </h2>
           <table>
             <thead>
@@ -6085,49 +8280,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
             </thead>
             <tbody>
-              <tr itemprop="priorityApps" itemscope="" repeat="">
-                <td>
-                  <span itemprop="applicationNumber">
-                    US11705308P
-                  </span>
-                  <span itemprop="isUsProvisional">
-                    true
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  2008-11-21
-                </td>
-                <td itemprop="filingDate">
-                  2008-11-21
-                </td>
-                <td itemprop="title"></td>
-              </tr>
-              <tr itemprop="priorityApps" itemscope="" repeat="">
-                <td>
-                  <span itemprop="applicationNumber">
-                    US12/623,368
-                  </span>
-                  <a href="/patent/US9120016B2/en">
-                    <span itemprop="representativePublication">
-                      US9120016B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2008-11-21
-                </td>
-                <td itemprop="filingDate">
-                  2009-11-20
-                </td>
-                <td itemprop="title">
-                  Interactive guitar game designed for learning to play the guitar
-                </td>
-              </tr>
               <tr itemprop="priorityApps" itemscope="" repeat="">
                 <td>
                   <span itemprop="applicationNumber">
@@ -6157,7 +8309,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
             </tbody>
           </table>
           <h2>
-            Applications Claiming Priority (1)
+            Applications Claiming Priority (3)
           </h2>
           <table>
             <thead>
@@ -6177,6 +8329,46 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
             </thead>
             <tbody>
+              <tr itemprop="appsClaimingPriority" itemscope="" repeat="">
+                <td>
+                  <span itemprop="applicationNumber">
+                    US11705308P
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2008-11-21
+                </td>
+                <td itemprop="filingDate">
+                  2008-11-21
+                </td>
+                <td itemprop="title"></td>
+              </tr>
+              <tr itemprop="appsClaimingPriority" itemscope="" repeat="">
+                <td>
+                  <span itemprop="applicationNumber">
+                    US12/623,368
+                  </span>
+                  <a href="/patent/US9120016B2/en">
+                    <span itemprop="representativePublication">
+                      US9120016B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2008-11-21
+                </td>
+                <td itemprop="filingDate">
+                  2009-11-20
+                </td>
+                <td itemprop="title">
+                  Interactive guitar game designed for learning to play the guitar
+                </td>
+              </tr>
               <tr itemprop="appsClaimingPriority" itemscope="" repeat="">
                 <td>
                   <span itemprop="applicationNumber">
@@ -6245,7 +8437,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     )
                   </a>
                 </td>
-                <td itemprop=""></td>
                 <td itemprop="priorityDate">
                   2008-11-21
                 </td>
@@ -6595,7 +8786,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
             </tbody>
           </table>
           <h2>
-            Cited By (2)
+            Cited By (3)
           </h2>
           <table>
             <caption>
@@ -6623,9 +8814,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
             <tbody>
               <tr itemprop="forwardReferencesOrig" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20180366096A1/en">
+                  <a href="/patent/WO2018231315A1/en">
                     <span itemprop="publicationNumber">
-                      US20180366096A1
+                      WO2018231315A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -6645,7 +8836,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Mark Glembin
+                    Glembin Mark
                   </span>
                 </td>
                 <td itemprop="title">
@@ -6680,10 +8871,38 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   Method of learning, teaching, and playing guitar
                 </td>
               </tr>
+              <tr itemprop="forwardReferencesOrig" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US11670188B2/en">
+                    <span itemprop="publicationNumber">
+                      US11670188B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2020-12-02
+                </td>
+                <td itemprop="publicationDate">
+                  2023-06-06
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Joytunes Ltd.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Method and apparatus for an adaptive and interactive teaching of playing a musical instrument
+                </td>
+              </tr>
             </tbody>
           </table>
           <h2>
-            Families Citing this family (82)
+            Families Citing this family (90)
           </h2>
           <table>
             <caption>
@@ -6795,6 +9014,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
+                  <a href="/patent/EP2206539A1/en">
+                    <span itemprop="publicationNumber">
+                      EP2206539A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2007-06-14
+                </td>
+                <td itemprop="publicationDate">
+                  2010-07-14
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Systems and methods for simulating a rock band experience
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
                   <a href="/patent/US8678896B2/en">
                     <span itemprop="publicationNumber">
                       US8678896B2
@@ -6819,34 +9066,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Systems and methods for asynchronous band interaction in a rhythm action game
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/WO2008157477A2/en">
-                    <span itemprop="publicationNumber">
-                      WO2008157477A2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2007-06-14
-                </td>
-                <td itemprop="publicationDate">
-                  2008-12-24
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Systems and methods for simulating a rock band experience
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -6966,99 +9185,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20110294565A1/en">
-                    <span itemprop="publicationNumber">
-                      US20110294565A1
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  2010-05-28
-                </td>
-                <td itemprop="publicationDate">
-                  2011-12-01
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Microsoft Corporation
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Consolidated game flow for learning productivity applications
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US20100331075A1/en">
-                    <span itemprop="publicationNumber">
-                      US20100331075A1
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  2009-06-26
-                </td>
-                <td itemprop="publicationDate">
-                  2010-12-30
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Microsoft Corporation
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Using game elements to motivate learning
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US20110294564A1/en">
-                    <span itemprop="publicationNumber">
-                      US20110294564A1
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  2010-05-28
-                </td>
-                <td itemprop="publicationDate">
-                  2011-12-01
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Microsoft Corporation
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Animation for a productivity applications learning tool game
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US8979538B2/en">
                     <span itemprop="publicationNumber">
                       US8979538B2
@@ -7090,9 +9216,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/USD757320S1/en">
+                  <a href="/patent/US20100331075A1/en">
                     <span itemprop="publicationNumber">
-                      USD757320S1
+                      US20100331075A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7100,20 +9226,23 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
-                  2010-07-15
+                  2009-06-26
                 </td>
                 <td itemprop="publicationDate">
-                  2016-05-24
+                  2010-12-30
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    James BARTOS
+                    Microsoft Corporation
                   </span>
                 </td>
                 <td itemprop="title">
-                  Illuminated fret board
+                  Using game elements to motivate learning
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -7208,34 +9337,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2011056657A2/en">
-                    <span itemprop="publicationNumber">
-                      WO2011056657A2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2009-10-27
-                </td>
-                <td itemprop="publicationDate">
-                  2011-05-12
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Gesture-based user interface
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US9981193B2/en">
                     <span itemprop="publicationNumber">
                       US9981193B2
@@ -7264,9 +9365,65 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US8568234B2/en">
+                  <a href="/patent/US8702485B2/en">
                     <span itemprop="publicationNumber">
-                      US8568234B2
+                      US8702485B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2010-06-11
+                </td>
+                <td itemprop="publicationDate">
+                  2014-04-22
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Dance game and tutorial
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US10357714B2/en">
+                    <span itemprop="publicationNumber">
+                      US10357714B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2009-10-27
+                </td>
+                <td itemprop="publicationDate">
+                  2019-07-23
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Gesture-based user interface for navigating a menu
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US8874243B2/en">
+                    <span itemprop="publicationNumber">
+                      US8874243B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7279,7 +9436,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2010-03-16
                 </td>
                 <td itemprop="publicationDate">
-                  2013-10-29
+                  2014-10-28
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -7382,6 +9539,68 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
+                  <a href="/patent/US20110294564A1/en">
+                    <span itemprop="publicationNumber">
+                      US20110294564A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2010-05-28
+                </td>
+                <td itemprop="publicationDate">
+                  2011-12-01
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Microsoft Corporation
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Animation for a productivity applications learning tool game
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US20110294565A1/en">
+                    <span itemprop="publicationNumber">
+                      US20110294565A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2010-05-28
+                </td>
+                <td itemprop="publicationDate">
+                  2011-12-01
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Microsoft Corporation
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Consolidated game flow for learning productivity applications
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
                   <a href="/patent/US8562403B2/en">
                     <span itemprop="publicationNumber">
                       US8562403B2
@@ -7438,9 +9657,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/CA2802348A1/en">
+                  <a href="/patent/USD757320S1/en">
                     <span itemprop="publicationNumber">
-                      CA2802348A1
+                      USD757320S1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7450,18 +9669,18 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </a>
                 </td>
                 <td itemprop="priorityDate">
-                  2010-06-11
+                  2010-07-15
                 </td>
                 <td itemprop="publicationDate">
-                  2011-12-15
+                  2016-05-24
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
+                    James BARTOS
                   </span>
                 </td>
                 <td itemprop="title">
-                  Dance game and tutorial
+                  Illuminated fret board
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -7584,9 +9803,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2012053371A1/en">
+                  <a href="/patent/US9601118B2/en">
                     <span itemprop="publicationNumber">
-                      WO2012053371A1
+                      US9601118B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7602,11 +9821,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2010-10-20
                 </td>
                 <td itemprop="publicationDate">
-                  2012-04-26
+                  2017-03-21
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    株式会社メガチップス
+                    Megachips Corporation
                   </span>
                 </td>
                 <td itemprop="title">
@@ -7625,6 +9844,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2011-04-26
@@ -7639,34 +9861,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   SYSTEM AND METHOD FOR TRAINING THE MUSIC PLAYER
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US8819009B2/en">
-                    <span itemprop="publicationNumber">
-                      US8819009B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2011-05-12
-                </td>
-                <td itemprop="publicationDate">
-                  2014-08-26
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Microsoft Corporation
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Automatic social graph calculation
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -7695,6 +9889,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Collection of intranet activity data
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US8819009B2/en">
+                    <span itemprop="publicationNumber">
+                      US8819009B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2011-05-12
+                </td>
+                <td itemprop="publicationDate">
+                  2014-08-26
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Microsoft Corporation
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Automatic social graph calculation
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -7879,9 +10101,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/EP2969058B1/en">
+                  <a href="/patent/CN104884133B/en">
                     <span itemprop="publicationNumber">
-                      EP2969058B1
+                      CN104884133B
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7894,22 +10116,50 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2013-03-14
                 </td>
                 <td itemprop="publicationDate">
-                  2020-05-13
+                  2018-02-23
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Icon Health &amp; Fitness, Inc.
+                    艾肯运动与健康公司
                   </span>
                 </td>
                 <td itemprop="title">
-                  Strength training apparatus with flywheel and related methods
+                  Force exercise equipment with flywheel
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/EP3623020A1/en">
+                  <a href="/patent/JP6197366B2/en">
                     <span itemprop="publicationNumber">
-                      EP3623020A1
+                      JP6197366B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2013-05-23
+                </td>
+                <td itemprop="publicationDate">
+                  2017-09-20
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    ソニー株式会社
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Information processing apparatus and storage medium
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/WO2015100429A1/en">
+                    <span itemprop="publicationNumber">
+                      WO2015100429A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7922,7 +10172,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2013-12-26
                 </td>
                 <td itemprop="publicationDate">
-                  2020-03-18
+                  2015-07-02
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -7935,9 +10185,40 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2015138339A1/en">
+                  <a href="/patent/EP3090355A4/en">
                     <span itemprop="publicationNumber">
-                      WO2015138339A1
+                      EP3090355A4
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2014-01-03
+                </td>
+                <td itemprop="publicationDate">
+                  2017-05-31
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Yahoo! Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Systems and methods for content processing
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US10433612B2/en">
+                    <span itemprop="publicationNumber">
+                      US10433612B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -7950,7 +10231,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2014-03-10
                 </td>
                 <td itemprop="publicationDate">
-                  2015-09-17
+                  2019-10-08
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -8056,9 +10337,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US10426989B2/en">
+                  <a href="/patent/CN106470739B/en">
                     <span itemprop="publicationNumber">
-                      US10426989B2
+                      CN106470739B
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8071,15 +10352,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2014-06-09
                 </td>
                 <td itemprop="publicationDate">
-                  2019-10-01
+                  2019-06-21
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Icon Health &amp; Fitness, Inc.
+                    爱康保健健身有限公司
                   </span>
                 </td>
                 <td itemprop="title">
-                  Cable system incorporated into a treadmill
+                  It is incorporated to the funicular system of treadmill
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -8171,6 +10452,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
+                  <a href="/patent/JP6123066B2/en">
+                    <span itemprop="publicationNumber">
+                      JP6123066B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2015-03-31
+                </td>
+                <td itemprop="publicationDate">
+                  2017-05-10
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    株式会社コナミデジタルエンタテインメント
+                  </span>
+                </td>
+                <td itemprop="title">
+                  GAME DEVICE AND GAME PROGRAM
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
                   <a href="/patent/JP6123118B2/en">
                     <span itemprop="publicationNumber">
                       JP6123118B2
@@ -8202,37 +10511,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/JP6123066B2/en">
+                  <a href="/patent/EP3095494A1/en">
                     <span itemprop="publicationNumber">
-                      JP6123066B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2015-03-31
-                </td>
-                <td itemprop="publicationDate">
-                  2017-05-10
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    株式会社コナミデジタルエンタテインメント
-                  </span>
-                </td>
-                <td itemprop="title">
-                  GAME DEVICE AND GAME PROGRAM
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US9842577B2/en">
-                    <span itemprop="publicationNumber">
-                      US9842577B2
+                      EP3095494A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8245,7 +10526,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2015-05-19
                 </td>
                 <td itemprop="publicationDate">
-                  2017-12-12
+                  2016-11-23
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -8469,37 +10750,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/USD789416S1/en">
-                    <span itemprop="publicationNumber">
-                      USD789416S1
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  2016-02-04
-                </td>
-                <td itemprop="publicationDate">
-                  2017-06-13
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Lutron Electronics Co., Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Display screen or portion thereof with animated graphical user interface
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US10856394B2/en">
                     <span itemprop="publicationNumber">
                       US10856394B2
@@ -8524,6 +10774,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Configuring a load control system
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/USD789416S1/en">
+                    <span itemprop="publicationNumber">
+                      USD789416S1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2016-02-04
+                </td>
+                <td itemprop="publicationDate">
+                  2017-06-13
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Lutron Electronics Co., Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Display screen or portion thereof with animated graphical user interface
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -8556,34 +10834,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US10493349B2/en">
-                    <span itemprop="publicationNumber">
-                      US10493349B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2016-03-18
-                </td>
-                <td itemprop="publicationDate">
-                  2019-12-03
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Icon Health &amp; Fitness, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Display on exercise device
-                </td>
-              </tr>
-              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US10272317B2/en">
                     <span itemprop="publicationNumber">
                       US10272317B2
@@ -8608,6 +10858,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Lighted pace feature in a treadmill
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US10493349B2/en">
+                    <span itemprop="publicationNumber">
+                      US10493349B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2016-03-18
+                </td>
+                <td itemprop="publicationDate">
+                  2019-12-03
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Icon Health &amp; Fitness, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Display on exercise device
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -8730,9 +11008,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/CN109791740B/en">
+                  <a href="/patent/WO2018068203A1/en">
                     <span itemprop="publicationNumber">
-                      CN109791740B
+                      WO2018068203A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8748,15 +11026,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2016-10-11
                 </td>
                 <td itemprop="publicationDate">
-                  2021-05-07
+                  2018-04-19
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    森兰信息科技（上海）有限公司
+                    Sunland Information Technology Co., Ltd.
                   </span>
                 </td>
                 <td itemprop="title">
-                  Intelligent detection and feedback system for intelligent piano
+                  A smart detecting and feedback system for smart piano
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -8879,9 +11157,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2019147112A1/en">
+                  <a href="/patent/US20210049926A1/en">
                     <span itemprop="publicationNumber">
-                      WO2019147112A1
+                      US20210049926A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -8897,15 +11175,46 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2018-01-26
                 </td>
                 <td itemprop="publicationDate">
-                  2019-08-01
+                  2021-02-18
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Arellano Nava Eric Damian
+                    Eric Damián ARELLANO NAVA
                   </span>
                 </td>
                 <td itemprop="title">
                   Integral visual learning system for the electric guitar and similar instruments
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/SG11202008719YA/en">
+                    <span itemprop="publicationNumber">
+                      SG11202008719YA
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2018-03-09
+                </td>
+                <td itemprop="publicationDate">
+                  2020-10-29
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Rite Hite Holding Corp
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Methods and apparatus to monitor and manage loading docks and facility operations
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -9024,6 +11333,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
+                  <a href="/patent/JP7188337B2/en">
+                    <span itemprop="publicationNumber">
+                      JP7188337B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2019-09-24
+                </td>
+                <td itemprop="publicationDate">
+                  2022-12-13
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    カシオ計算機株式会社
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Server device, performance support method, program, and information providing system
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
                   <a href="/patent/JP6694105B1/en">
                     <span itemprop="publicationNumber">
                       JP6694105B1
@@ -9051,6 +11388,68 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Information processing method, information processing terminal, and program
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US20210389748A1/en">
+                    <span itemprop="publicationNumber">
+                      US20210389748A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2020-06-15
+                </td>
+                <td itemprop="publicationDate">
+                  2021-12-16
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Honeywell International Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Operator console with dynamic future representations for processing equipment
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US20220080320A1/en">
+                    <span itemprop="publicationNumber">
+                      US20220080320A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2020-09-11
+                </td>
+                <td itemprop="publicationDate">
+                  2022-03-17
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Sony Group Corporation
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Mini-games in music experiences
                 </td>
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
@@ -9086,9 +11485,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/USD940159S1/en">
+                  <a href="/patent/USD940158S1/en">
                     <span itemprop="publicationNumber">
-                      USD940159S1
+                      USD940158S1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -9113,6 +11512,68 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Display screen or portion thereof with animated graphical user interface
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US20230252908A2/en">
+                    <span itemprop="publicationNumber">
+                      US20230252908A2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2020-12-02
+                </td>
+                <td itemprop="publicationDate">
+                  2023-08-10
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Joytunes Ltd.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Method and apparatus for an adaptive and interactive teaching of playing a musical instrument
+                </td>
+              </tr>
+              <tr itemprop="forwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US20230107473A1/en">
+                    <span itemprop="publicationNumber">
+                      US20230107473A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
+                </td>
+                <td itemprop="priorityDate">
+                  2021-09-30
+                </td>
+                <td itemprop="publicationDate">
+                  2023-04-06
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Snap Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Providing midi controls within a virtual conferencing system
                 </td>
               </tr>
             </tbody>
@@ -9402,9 +11863,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1978-11-22
@@ -9464,9 +11922,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1987-08-26
@@ -9495,9 +11950,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1989-10-10
@@ -9526,9 +11978,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1991-01-15
@@ -9557,9 +12006,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1991-03-04
@@ -9578,9 +12024,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US5583308A/en">
+                  <a href="/patent/US6850252B1/en">
                     <span itemprop="publicationNumber">
-                      US5583308A
+                      US6850252B1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -9590,18 +12036,18 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </a>
                 </td>
                 <td itemprop="priorityDate">
-                  1993-10-14
+                  1999-10-05
                 </td>
                 <td itemprop="publicationDate">
-                  1996-12-10
+                  2005-02-01
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Maestromedia, Inc.
+                    Steven M. Hoffberg
                   </span>
                 </td>
                 <td itemprop="title">
-                  Musical effects apparatus and tone control process for a musical instrument
+                  Intelligent electronic appliance system and method
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -9634,6 +12080,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
+                  <a href="/patent/US5583308A/en">
+                    <span itemprop="publicationNumber">
+                      US5583308A
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  1993-10-14
+                </td>
+                <td itemprop="publicationDate">
+                  1996-12-10
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Maestromedia, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Musical effects apparatus and tone control process for a musical instrument
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
                   <a href="/patent/US5533903A/en">
                     <span itemprop="publicationNumber">
                       US5533903A
@@ -9644,9 +12118,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1994-06-06
@@ -9724,37 +12195,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US6011212A/en">
-                    <span itemprop="publicationNumber">
-                      US6011212A
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  1995-10-16
-                </td>
-                <td itemprop="publicationDate">
-                  2000-01-04
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Real-time music creation
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US5627335A/en">
                     <span itemprop="publicationNumber">
                       US5627335A
@@ -9765,9 +12205,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1995-10-16
@@ -9782,6 +12219,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Real-time music creation system
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US6011212A/en">
+                    <span itemprop="publicationNumber">
+                      US6011212A
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  1995-10-16
+                </td>
+                <td itemprop="publicationDate">
+                  2000-01-04
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Real-time music creation
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -9817,37 +12282,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US6369313B2/en">
-                    <span itemprop="publicationNumber">
-                      US6369313B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  2000-01-13
-                </td>
-                <td itemprop="publicationDate">
-                  2002-04-09
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    John R. Devecka
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Method and apparatus for simulating a jam session and instructing a user in how to play the drums
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US5739457A/en">
                     <span itemprop="publicationNumber">
                       US5739457A
@@ -9858,9 +12292,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1996-09-26
@@ -9871,6 +12302,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 <td>
                   <span itemprop="assigneeOriginal">
                     Devecka; John R.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Method and apparatus for simulating a jam session and instructing a user in how to play the drums
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US6369313B2/en">
+                    <span itemprop="publicationNumber">
+                      US6369313B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2000-01-13
+                </td>
+                <td itemprop="publicationDate">
+                  2002-04-09
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    John R. Devecka
                   </span>
                 </td>
                 <td itemprop="title">
@@ -9973,9 +12432,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1998-01-28
@@ -10004,9 +12460,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1998-01-29
@@ -10035,9 +12488,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1998-04-24
@@ -10094,9 +12544,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1998-07-24
@@ -10156,9 +12603,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1998-10-30
@@ -10187,9 +12631,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1998-11-26
@@ -10236,9 +12677,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US6353169B1/en">
+                  <a href="/patent/ES2481615T3/en">
                     <span itemprop="publicationNumber">
-                      US6353169B1
+                      ES2481615T3
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -10246,54 +12687,20 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1999-04-26
                 </td>
                 <td itemprop="publicationDate">
-                  2002-03-05
+                  2014-07-31
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Gibson Guitar Corp.
+                    Gibson Brands, Inc.
                   </span>
                 </td>
                 <td itemprop="title">
-                  Universal audio communications and control system and method
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US6653546B2/en">
-                    <span itemprop="publicationNumber">
-                      US6653546B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  2001-10-03
-                </td>
-                <td itemprop="publicationDate">
-                  2003-11-25
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Alto Research, Llc
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Voice-controlled electronic musical instrument
+                  Musical instrument with output for stereo headphones
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -10308,9 +12715,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1999-06-30
@@ -10357,9 +12761,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US6850252B1/en">
+                  <a href="/patent/DE60023081D1/en">
                     <span itemprop="publicationNumber">
-                      US6850252B1
+                      DE60023081D1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -10367,54 +12771,20 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  1999-10-05
-                </td>
-                <td itemprop="publicationDate">
-                  2005-02-01
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Steven M. Hoffberg
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Intelligent electronic appliance system and method
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/EP1095677B1/en">
-                    <span itemprop="publicationNumber">
-                      EP1095677B1
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1999-10-14
                 </td>
                 <td itemprop="publicationDate">
-                  2005-10-12
+                  2005-11-17
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Sony Computer Entertainment Inc.
+                    Sony Computer Entertainment Inc
                   </span>
                 </td>
                 <td itemprop="title">
-                  Entertainment system, entertainment apparatus, recording medium, and program
+                  Entertainment system, entertainment device, recording medium and program
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -10429,9 +12799,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1999-11-01
@@ -10460,9 +12827,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   1999-12-10
@@ -10519,9 +12883,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2000-02-22
@@ -10596,9 +12957,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/EP1272913A2/en">
+                  <a href="/patent/JP2003536106A/en">
                     <span itemprop="publicationNumber">
-                      EP1272913A2
+                      JP2003536106A
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -10611,15 +12972,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2000-04-07
                 </td>
                 <td itemprop="publicationDate">
-                  2003-01-08
+                  2003-12-02
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Thurdis Developments Limited
+                    サーディス・ディヴェロプメンツ・リミテッド
                   </span>
                 </td>
                 <td itemprop="title">
-                  Interactive multimedia apparatus
+                  Interactive multimedia device
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -10711,9 +13072,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/IL137234D0/en">
+                  <a href="/patent/IL137234A0/en">
                     <span itemprop="publicationNumber">
-                      IL137234D0
+                      IL137234A0
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -10752,9 +13113,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2000-08-03
@@ -10839,9 +13197,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2000-12-29
@@ -10870,9 +13225,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2001-03-23
@@ -10891,9 +13243,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/GB2392545B/en">
+                  <a href="/patent/US6696631B2/en">
                     <span itemprop="publicationNumber">
-                      GB2392545B
+                      US6696631B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -10901,19 +13253,16 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2001-05-04
                 </td>
                 <td itemprop="publicationDate">
-                  2004-12-29
+                  2004-02-24
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Realtime Music Solutions Llc
+                    Realtime Music Solutions, Llc
                   </span>
                 </td>
                 <td itemprop="title">
@@ -11009,9 +13358,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2002101687A1/en">
+                  <a href="/patent/US7030307B2/en">
                     <span itemprop="publicationNumber">
-                      WO2002101687A1
+                      US7030307B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -11019,12 +13368,15 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
+                  <span itemprop="examinerCited">
+                    *
+                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2001-06-12
                 </td>
                 <td itemprop="publicationDate">
-                  2002-12-19
+                  2006-04-18
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -11047,9 +13399,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2001-07-18
@@ -11068,9 +13417,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US7030311B2/en">
+                  <a href="/patent/US6653546B2/en">
                     <span itemprop="publicationNumber">
-                      US7030311B2
+                      US6653546B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -11083,49 +13432,18 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                 </td>
                 <td itemprop="priorityDate">
-                  2001-11-21
+                  2001-10-03
                 </td>
                 <td itemprop="publicationDate">
-                  2006-04-18
+                  2003-11-25
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Line 6, Inc
+                    Alto Research, Llc
                   </span>
                 </td>
                 <td itemprop="title">
-                  System and method for delivering a multimedia presentation to a user and to allow the user to play a musical instrument in conjunction with the multimedia presentation
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US7020635B2/en">
-                    <span itemprop="publicationNumber">
-                      US7020635B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  2001-11-21
-                </td>
-                <td itemprop="publicationDate">
-                  2006-03-28
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Line 6, Inc
-                  </span>
-                </td>
-                <td itemprop="title">
-                  System and method of secure electronic commerce transactions including tracking and recording the distribution and usage of assets
+                  Voice-controlled electronic musical instrument
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -11140,9 +13458,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2001-11-21
@@ -11161,37 +13476,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US6638135B2/en">
-                    <span itemprop="publicationNumber">
-                      US6638135B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  2001-11-21
-                </td>
-                <td itemprop="publicationDate">
-                  2003-10-28
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Peter Sui Lun Fong
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Animated display
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US6740803B2/en">
                     <span itemprop="publicationNumber">
                       US6740803B2
@@ -11202,9 +13486,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2001-11-21
@@ -11251,6 +13532,90 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
+                  <a href="/patent/US6638135B2/en">
+                    <span itemprop="publicationNumber">
+                      US6638135B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2001-11-21
+                </td>
+                <td itemprop="publicationDate">
+                  2003-10-28
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Peter Sui Lun Fong
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Animated display
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US7020635B2/en">
+                    <span itemprop="publicationNumber">
+                      US7020635B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2001-11-21
+                </td>
+                <td itemprop="publicationDate">
+                  2006-03-28
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Line 6, Inc
+                  </span>
+                </td>
+                <td itemprop="title">
+                  System and method of secure electronic commerce transactions including tracking and recording the distribution and usage of assets
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US7030311B2/en">
+                    <span itemprop="publicationNumber">
+                      US7030311B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2001-11-21
+                </td>
+                <td itemprop="publicationDate">
+                  2006-04-18
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Line 6, Inc
+                  </span>
+                </td>
+                <td itemprop="title">
+                  System and method for delivering a multimedia presentation to a user and to allow the user to play a musical instrument in conjunction with the multimedia presentation
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
                   <a href="/patent/DE10157454B4/en">
                     <span itemprop="publicationNumber">
                       DE10157454B4
@@ -11289,9 +13654,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2002-04-01
@@ -11320,9 +13682,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2002-04-15
@@ -11351,9 +13710,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2002-04-16
@@ -11441,9 +13797,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2002-08-07
@@ -11472,9 +13825,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2002-09-04
@@ -11493,9 +13843,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/AU2003275089A1/en">
+                  <a href="/patent/WO2004027577A2/en">
                     <span itemprop="publicationNumber">
-                      AU2003275089A1
+                      WO2004027577A2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -11508,11 +13858,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2002-09-19
                 </td>
                 <td itemprop="publicationDate">
-                  2004-04-08
+                  2004-04-01
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    William B. Hudak
+                    Brian Reynolds
                   </span>
                 </td>
                 <td itemprop="title">
@@ -11521,9 +13871,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/ES2323529T3/en">
+                  <a href="/patent/WO2004064026A2/en">
                     <span itemprop="publicationNumber">
-                      ES2323529T3
+                      WO2004064026A2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -11531,23 +13881,20 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2003-01-09
                 </td>
                 <td itemprop="publicationDate">
-                  2009-07-20
+                  2004-07-29
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Aerielle Technologies, Inc.
+                    Aerielle Group International Inc.
                   </span>
                 </td>
                 <td itemprop="title">
-                  CIRCUIT AND METHOD TO PROVIDE A COMBINATION OF AUTOMATIC SHUTDOWN AND / OR AUTOMATIC IGNITION CAPABILITIES FOR AN AUDIO DEVICE.
+                  Circuit and method for providing an auto-off and/or auto-on capability for an audio device
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -11646,9 +13993,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2003-10-03
@@ -11723,9 +14067,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US7202408B2/en">
+                  <a href="/patent/WO2005104090A2/en">
                     <span itemprop="publicationNumber">
-                      US7202408B2
+                      WO2005104090A2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -11738,11 +14082,11 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2004-04-22
                 </td>
                 <td itemprop="publicationDate">
-                  2007-04-10
+                  2005-11-03
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    James Calvin Fallgatter
+                    James Fallgatter
                   </span>
                 </td>
                 <td itemprop="title">
@@ -11789,9 +14133,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2004-07-08
@@ -11848,9 +14189,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2004-12-20
@@ -12012,37 +14350,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US7818078B2/en">
-                    <span itemprop="publicationNumber">
-                      US7818078B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  2005-06-06
-                </td>
-                <td itemprop="publicationDate">
-                  2010-10-19
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Gonzalo Fuentes Iriarte
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Interface device for wireless audio applications
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/JP4318047B2/en">
                     <span itemprop="publicationNumber">
                       JP4318047B2
@@ -12053,9 +14360,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2005-06-06
@@ -12070,6 +14374,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   3D object display device, 3D object switching display method, and 3D object display program
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US7818078B2/en">
+                    <span itemprop="publicationNumber">
+                      US7818078B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2005-06-06
+                </td>
+                <td itemprop="publicationDate">
+                  2010-10-19
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Gonzalo Fuentes Iriarte
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Interface device for wireless audio applications
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -12115,9 +14447,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2005-09-20
@@ -12146,9 +14475,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2005-12-19
@@ -12177,9 +14503,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2006-01-13
@@ -12257,9 +14580,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US8003872B2/en">
+                  <a href="/patent/US7705231B2/en">
                     <span itemprop="publicationNumber">
-                      US8003872B2
+                      US7705231B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -12269,18 +14592,18 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </a>
                 </td>
                 <td itemprop="priorityDate">
-                  2006-03-29
+                  2007-09-07
                 </td>
                 <td itemprop="publicationDate">
-                  2011-08-23
+                  2010-04-27
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
+                    Microsoft Corporation
                   </span>
                 </td>
                 <td itemprop="title">
-                  Facilitating interaction with a music-based video game
+                  Automatic accompaniment for vocal melodies
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -12309,6 +14632,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Game controller simulating a musical instrument
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US8003872B2/en">
+                    <span itemprop="publicationNumber">
+                      US8003872B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2006-03-29
+                </td>
+                <td itemprop="publicationDate">
+                  2011-08-23
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Facilitating interaction with a music-based video game
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -12369,9 +14720,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/WO2007124387A2/en">
+                  <a href="/patent/US7521619B2/en">
                     <span itemprop="publicationNumber">
-                      WO2007124387A2
+                      US7521619B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -12379,15 +14730,12 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2006-04-19
                 </td>
                 <td itemprop="publicationDate">
-                  2007-11-01
+                  2009-04-21
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -12395,7 +14743,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                 </td>
                 <td itemprop="title">
-                  System and method of instructing musical literacy and performance of a stringed instrument
+                  System and method of instructing musical notation for a stringed instrument
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -12456,37 +14804,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US7732703B2/en">
-                    <span itemprop="publicationNumber">
-                      US7732703B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  2007-02-05
-                </td>
-                <td itemprop="publicationDate">
-                  2010-06-08
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Ediface Digital, Llc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Music processing system including device for converting guitar sounds to MIDI commands
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US8079907B2/en">
                     <span itemprop="publicationNumber">
                       US8079907B2
@@ -12525,9 +14842,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2006-11-16
@@ -12556,9 +14870,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2006-11-23
@@ -12587,9 +14898,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2006-12-04
@@ -12618,9 +14926,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2007-01-11
@@ -12635,6 +14940,62 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Musical Instrument/Computer Interface And Method
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US20090017910A1/en">
+                    <span itemprop="publicationNumber">
+                      US20090017910A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2007-06-22
+                </td>
+                <td itemprop="publicationDate">
+                  2009-01-15
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Broadcom Corporation
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Position and motion tracking of an object
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US7732703B2/en">
+                    <span itemprop="publicationNumber">
+                      US7732703B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2007-02-05
+                </td>
+                <td itemprop="publicationDate">
+                  2010-06-08
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Ediface Digital, Llc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Music processing system including device for converting guitar sounds to MIDI commands
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -12698,34 +15059,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20090017910A1/en">
-                    <span itemprop="publicationNumber">
-                      US20090017910A1
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="priorityDate">
-                  2007-06-22
-                </td>
-                <td itemprop="publicationDate">
-                  2009-01-15
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Broadcom Corporation
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Position and motion tracking of an object
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US8138409B2/en">
                     <span itemprop="publicationNumber">
                       US8138409B2
@@ -12736,9 +15069,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2007-08-10
@@ -12757,37 +15087,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US7705231B2/en">
-                    <span itemprop="publicationNumber">
-                      US7705231B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  2007-09-07
-                </td>
-                <td itemprop="publicationDate">
-                  2010-04-27
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Microsoft Corporation
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Automatic accompaniment for vocal melodies
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/US7842875B2/en">
                     <span itemprop="publicationNumber">
                       US7842875B2
@@ -12798,9 +15097,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2007-10-19
@@ -12819,9 +15115,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/EP2244796A1/en">
+                  <a href="/patent/CN101977663A/en">
                     <span itemprop="publicationNumber">
-                      EP2244796A1
+                      CN101977663A
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -12829,23 +15125,20 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2008-01-24
                 </td>
                 <td itemprop="publicationDate">
-                  2010-11-03
+                  2011-02-16
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
-                    745 Llc
+                    745有限责任公司
                   </span>
                 </td>
                 <td itemprop="title">
-                  Method and apparatus for stringed controllers and/or instruments
+                  Methods and apparatus for stringed controllers and/or instruments
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -12888,9 +15181,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2008-07-08
@@ -12919,9 +15209,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2008-07-17
@@ -12950,9 +15237,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2008-10-07
@@ -13009,9 +15293,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2008-12-03
@@ -13030,9 +15311,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US8026435B2/en">
+                  <a href="/patent/US7935880B2/en">
                     <span itemprop="publicationNumber">
-                      US8026435B2
+                      US7935880B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -13045,7 +15326,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   2009-05-29
                 </td>
                 <td itemprop="publicationDate">
-                  2011-09-27
+                  2011-05-03
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -13053,7 +15334,35 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                 </td>
                 <td itemprop="title">
-                  Selectively displaying song lyrics
+                  Dynamically displaying a pitch range
+                </td>
+              </tr>
+              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US7923620B2/en">
+                    <span itemprop="publicationNumber">
+                      US7923620B2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="priorityDate">
+                  2009-05-29
+                </td>
+                <td itemprop="publicationDate">
+                  2011-04-12
+                </td>
+                <td>
+                  <span itemprop="assigneeOriginal">
+                    Harmonix Music Systems, Inc.
+                  </span>
+                </td>
+                <td itemprop="title">
+                  Practice mode for multiple musical parts
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -13096,9 +15405,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2009-05-29
@@ -13127,9 +15433,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2009-05-29
@@ -13176,9 +15479,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US7923620B2/en">
+                  <a href="/patent/US8026435B2/en">
                     <span itemprop="publicationNumber">
-                      US7923620B2
+                      US8026435B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -13186,15 +15489,12 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2009-05-29
                 </td>
                 <td itemprop="publicationDate">
-                  2011-04-12
+                  2011-09-27
                 </td>
                 <td>
                   <span itemprop="assigneeOriginal">
@@ -13202,38 +15502,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </span>
                 </td>
                 <td itemprop="title">
-                  Practice mode for multiple musical parts
-                </td>
-              </tr>
-              <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/US7935880B2/en">
-                    <span itemprop="publicationNumber">
-                      US7935880B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
-                </td>
-                <td itemprop="priorityDate">
-                  2009-05-29
-                </td>
-                <td itemprop="publicationDate">
-                  2011-05-03
-                </td>
-                <td>
-                  <span itemprop="assigneeOriginal">
-                    Harmonix Music Systems, Inc.
-                  </span>
-                </td>
-                <td itemprop="title">
-                  Dynamically displaying a pitch range
+                  Selectively displaying song lyrics
                 </td>
               </tr>
               <tr itemprop="backwardReferencesFamily" itemscope="" repeat="">
@@ -13276,9 +15545,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2009-06-10
@@ -13307,9 +15573,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2009-07-02
@@ -13338,9 +15601,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2009-08-03
@@ -13425,9 +15685,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                     </span>
                     )
                   </a>
-                  <span itemprop="examinerCited">
-                    *
-                  </span>
                 </td>
                 <td itemprop="priorityDate">
                   2010-04-20
@@ -13895,7 +16152,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
           </table>
         </section>
         <h2>
-          Cited By (3)
+          Cited By (4)
         </h2>
         <table>
           <caption>
@@ -13923,37 +16180,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
           <tbody>
             <tr itemprop="forwardReferences" itemscope="" repeat="">
               <td>
-                <a href="/patent/US20180366096A1/en">
-                  <span itemprop="publicationNumber">
-                    US20180366096A1
-                  </span>
-                  (
-                  <span itemprop="primaryLanguage">
-                    en
-                  </span>
-                  )
-                </a>
-                <span itemprop="examinerCited">
-                  *
-                </span>
-              </td>
-              <td itemprop="priorityDate">
-                2017-06-15
-              </td>
-              <td itemprop="publicationDate">
-                2018-12-20
-              </td>
-              <td>
-                <span itemprop="assigneeOriginal">
-                  Mark Glembin
-                </span>
-              </td>
-              <td itemprop="title">
-                System for music transcription
-              </td>
-            </tr>
-            <tr itemprop="forwardReferences" itemscope="" repeat="">
-              <td>
                 <a href="/patent/WO2018231315A1/en">
                   <span itemprop="publicationNumber">
                     WO2018231315A1
@@ -13977,6 +16203,37 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               <td>
                 <span itemprop="assigneeOriginal">
                   Glembin Mark
+                </span>
+              </td>
+              <td itemprop="title">
+                System for music transcription
+              </td>
+            </tr>
+            <tr itemprop="forwardReferences" itemscope="" repeat="">
+              <td>
+                <a href="/patent/US20180366096A1/en">
+                  <span itemprop="publicationNumber">
+                    US20180366096A1
+                  </span>
+                  (
+                  <span itemprop="primaryLanguage">
+                    en
+                  </span>
+                  )
+                </a>
+                <span itemprop="examinerCited">
+                  *
+                </span>
+              </td>
+              <td itemprop="priorityDate">
+                2017-06-15
+              </td>
+              <td itemprop="publicationDate">
+                2018-12-20
+              </td>
+              <td>
+                <span itemprop="assigneeOriginal">
+                  Mark Glembin
                 </span>
               </td>
               <td itemprop="title">
@@ -14011,6 +16268,34 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 Method of learning, teaching, and playing guitar
               </td>
             </tr>
+            <tr itemprop="forwardReferences" itemscope="" repeat="">
+              <td>
+                <a href="/patent/US11670188B2/en">
+                  <span itemprop="publicationNumber">
+                    US11670188B2
+                  </span>
+                  (
+                  <span itemprop="primaryLanguage">
+                    en
+                  </span>
+                  )
+                </a>
+              </td>
+              <td itemprop="priorityDate">
+                2020-12-02
+              </td>
+              <td itemprop="publicationDate">
+                2023-06-06
+              </td>
+              <td>
+                <span itemprop="assigneeOriginal">
+                  Joytunes Ltd.
+                </span>
+              </td>
+              <td itemprop="title">
+                Method and apparatus for an adaptive and interactive teaching of playing a musical instrument
+              </td>
+            </tr>
           </tbody>
         </table>
         <section>
@@ -14031,23 +16316,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
             <tbody>
               <tr itemprop="docdbFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20120165087A1/en">
-                    <span itemprop="publicationNumber">
-                      US20120165087A1
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="publicationDate">
-                  2012-06-28
-                </td>
-              </tr>
-              <tr itemprop="docdbFamily" itemscope="" repeat="">
-                <td>
                   <a href="/patent/WO2010059994A3/en">
                     <span itemprop="publicationNumber">
                       WO2010059994A3
@@ -14065,9 +16333,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="docdbFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US9120016B2/en">
+                  <a href="/patent/US20150367239A1/en">
                     <span itemprop="publicationNumber">
-                      US9120016B2
+                      US20150367239A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -14077,14 +16345,14 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </a>
                 </td>
                 <td itemprop="publicationDate">
-                  2015-09-01
+                  2015-12-24
                 </td>
               </tr>
               <tr itemprop="docdbFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20100137049A1/en">
+                  <a href="/patent/US20120165087A1/en">
                     <span itemprop="publicationNumber">
-                      US20100137049A1
+                      US20120165087A1
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -14094,24 +16362,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </a>
                 </td>
                 <td itemprop="publicationDate">
-                  2010-06-03
-                </td>
-              </tr>
-              <tr itemprop="docdbFamily" itemscope="" repeat="">
-                <td>
-                  <a href="/patent/WO2010059994A2/en">
-                    <span itemprop="publicationNumber">
-                      WO2010059994A2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td itemprop="publicationDate">
-                  2010-05-27
+                  2012-06-28
                 </td>
               </tr>
               <tr itemprop="docdbFamily" itemscope="" repeat="">
@@ -14133,9 +16384,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="docdbFamily" itemscope="" repeat="">
                 <td>
-                  <a href="/patent/US20150367239A1/en">
+                  <a href="/patent/US9120016B2/en">
                     <span itemprop="publicationNumber">
-                      US20150367239A1
+                      US9120016B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -14145,7 +16396,41 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </a>
                 </td>
                 <td itemprop="publicationDate">
-                  2015-12-24
+                  2015-09-01
+                </td>
+              </tr>
+              <tr itemprop="docdbFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/WO2010059994A2/en">
+                    <span itemprop="publicationNumber">
+                      WO2010059994A2
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="publicationDate">
+                  2010-05-27
+                </td>
+              </tr>
+              <tr itemprop="docdbFamily" itemscope="" repeat="">
+                <td>
+                  <a href="/patent/US20100137049A1/en">
+                    <span itemprop="publicationNumber">
+                      US20100137049A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td itemprop="publicationDate">
+                  2010-06-03
                 </td>
               </tr>
             </tbody>
@@ -14307,48 +16592,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               <tr itemprop="similarDocuments" itemscope="" repeat="">
                 <td>
                   <meta content="true" itemprop="isPatent"/>
-                  <a href="/patent/US7462104B2/en">
-                    <span itemprop="publicationNumber">
-                      US7462104B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td>
-                  <time datetime="2008-12-09" itemprop="publicationDate">
-                    2008-12-09
-                  </time>
-                </td>
-                <td itemprop="title">
-                  Method of conducting an interactive competition
-                </td>
-              </tr>
-              <tr itemprop="similarDocuments" itemscope="" repeat="">
-                <td>
-                  <meta content="true" itemprop="isScholar"/>
-                  <meta content="10638640631156620516" itemprop="scholarID"/>
-                  <a href="/scholar/10638640631156620516">
-                    <span itemprop="scholarAuthors">
-                      Shultz
-                    </span>
-                  </a>
-                </td>
-                <td>
-                  <time datetime="2017" itemprop="publicationDate">
-                    2017
-                  </time>
-                </td>
-                <td itemprop="title">
-                  Music theory in music games
-                </td>
-              </tr>
-              <tr itemprop="similarDocuments" itemscope="" repeat="">
-                <td>
-                  <meta content="true" itemprop="isPatent"/>
                   <a href="/patent/JP2012515932A/en">
                     <span itemprop="publicationNumber">
                       JP2012515932A
@@ -14372,6 +16615,29 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               <tr itemprop="similarDocuments" itemscope="" repeat="">
                 <td>
                   <meta content="true" itemprop="isPatent"/>
+                  <a href="/patent/US20050020336A1/en">
+                    <span itemprop="publicationNumber">
+                      US20050020336A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td>
+                  <time datetime="2005-01-27" itemprop="publicationDate">
+                    2005-01-27
+                  </time>
+                </td>
+                <td itemprop="title">
+                  Method of conducting an interactive competition
+                </td>
+              </tr>
+              <tr itemprop="similarDocuments" itemscope="" repeat="">
+                <td>
+                  <meta content="true" itemprop="isPatent"/>
                   <a href="/patent/EP2206540A1/en">
                     <span itemprop="publicationNumber">
                       EP2206540A1
@@ -14390,6 +16656,25 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   System and method for simulating a rock band experience
+                </td>
+              </tr>
+              <tr itemprop="similarDocuments" itemscope="" repeat="">
+                <td>
+                  <meta content="true" itemprop="isScholar"/>
+                  <meta content="963958909237274801" itemprop="scholarID"/>
+                  <a href="/scholar/963958909237274801">
+                    <span itemprop="scholarAuthors">
+                      Percival et al.
+                    </span>
+                  </a>
+                </td>
+                <td>
+                  <time datetime="2007" itemprop="publicationDate">
+                    2007
+                  </time>
+                </td>
+                <td itemprop="title">
+                  Effective use of multimedia for computer-assisted musical instrument tutoring
                 </td>
               </tr>
               <tr itemprop="similarDocuments" itemscope="" repeat="">
@@ -14437,6 +16722,29 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               <tr itemprop="similarDocuments" itemscope="" repeat="">
                 <td>
                   <meta content="true" itemprop="isPatent"/>
+                  <a href="/patent/WO2005114648A1/en">
+                    <span itemprop="publicationNumber">
+                      WO2005114648A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td>
+                  <time datetime="2005-12-01" itemprop="publicationDate">
+                    2005-12-01
+                  </time>
+                </td>
+                <td itemprop="title">
+                  System and method for synchronizing a live musical performance with a reference performance
+                </td>
+              </tr>
+              <tr itemprop="similarDocuments" itemscope="" repeat="">
+                <td>
+                  <meta content="true" itemprop="isPatent"/>
                   <a href="/patent/WO2005113095A1/en">
                     <span itemprop="publicationNumber">
                       WO2005113095A1
@@ -14459,21 +16767,25 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="similarDocuments" itemscope="" repeat="">
                 <td>
-                  <meta content="true" itemprop="isScholar"/>
-                  <meta content="963958909237274801" itemprop="scholarID"/>
-                  <a href="/scholar/963958909237274801">
-                    <span itemprop="scholarAuthors">
-                      Percival et al.
+                  <meta content="true" itemprop="isPatent"/>
+                  <a href="/patent/JP2001096061A/en">
+                    <span itemprop="publicationNumber">
+                      JP2001096061A
                     </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
                   </a>
                 </td>
                 <td>
-                  <time datetime="2007" itemprop="publicationDate">
-                    2007
+                  <time datetime="2001-04-10" itemprop="publicationDate">
+                    2001-04-10
                   </time>
                 </td>
                 <td itemprop="title">
-                  Effective use of multimedia for computer-assisted musical instrument tutoring
+                  Machine and method of rhythm game, readable recording medium and operation device
                 </td>
               </tr>
               <tr itemprop="similarDocuments" itemscope="" repeat="">
@@ -14502,9 +16814,9 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               <tr itemprop="similarDocuments" itemscope="" repeat="">
                 <td>
                   <meta content="true" itemprop="isPatent"/>
-                  <a href="/patent/WO2010055501A1/en">
+                  <a href="/patent/JP4151189B2/en">
                     <span itemprop="publicationNumber">
-                      WO2010055501A1
+                      JP4151189B2
                     </span>
                     (
                     <span itemprop="primaryLanguage">
@@ -14514,8 +16826,31 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </a>
                 </td>
                 <td>
-                  <time datetime="2010-05-20" itemprop="publicationDate">
-                    2010-05-20
+                  <time datetime="2008-09-17" itemprop="publicationDate">
+                    2008-09-17
+                  </time>
+                </td>
+                <td itemprop="title">
+                  Music game apparatus and method, and storage medium
+                </td>
+              </tr>
+              <tr itemprop="similarDocuments" itemscope="" repeat="">
+                <td>
+                  <meta content="true" itemprop="isPatent"/>
+                  <a href="/patent/EP2379186A1/en">
+                    <span itemprop="publicationNumber">
+                      EP2379186A1
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td>
+                  <time datetime="2011-10-26" itemprop="publicationDate">
+                    2011-10-26
                   </time>
                 </td>
                 <td itemprop="title">
@@ -14543,29 +16878,6 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                 </td>
                 <td itemprop="title">
                   Music game system and method of providing same
-                </td>
-              </tr>
-              <tr itemprop="similarDocuments" itemscope="" repeat="">
-                <td>
-                  <meta content="true" itemprop="isPatent"/>
-                  <a href="/patent/JP4151189B2/en">
-                    <span itemprop="publicationNumber">
-                      JP4151189B2
-                    </span>
-                    (
-                    <span itemprop="primaryLanguage">
-                      en
-                    </span>
-                    )
-                  </a>
-                </td>
-                <td>
-                  <time datetime="2008-09-17" itemprop="publicationDate">
-                    2008-09-17
-                  </time>
-                </td>
-                <td itemprop="title">
-                  Music game apparatus and method, and storage medium
                 </td>
               </tr>
               <tr itemprop="similarDocuments" itemscope="" repeat="">
@@ -14650,6 +16962,29 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
               </tr>
               <tr itemprop="similarDocuments" itemscope="" repeat="">
                 <td>
+                  <meta content="true" itemprop="isPatent"/>
+                  <a href="/patent/KR20100006135A/en">
+                    <span itemprop="publicationNumber">
+                      KR20100006135A
+                    </span>
+                    (
+                    <span itemprop="primaryLanguage">
+                      en
+                    </span>
+                    )
+                  </a>
+                </td>
+                <td>
+                  <time datetime="2010-01-18" itemprop="publicationDate">
+                    2010-01-18
+                  </time>
+                </td>
+                <td itemprop="title">
+                  Music teaching system having game function and the using method thereof
+                </td>
+              </tr>
+              <tr itemprop="similarDocuments" itemscope="" repeat="">
+                <td>
                   <meta content="true" itemprop="isScholar"/>
                   <meta content="11771144310093235727" itemprop="scholarID"/>
                   <a href="/scholar/11771144310093235727">
@@ -14664,45 +16999,7 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
                   </time>
                 </td>
                 <td itemprop="title">
-                  An investagative high-level design of an electric bass tutoring system integrating game elements
-                </td>
-              </tr>
-              <tr itemprop="similarDocuments" itemscope="" repeat="">
-                <td>
-                  <meta content="true" itemprop="isScholar"/>
-                  <meta content="12400715445476501595" itemprop="scholarID"/>
-                  <a href="/scholar/12400715445476501595">
-                    <span itemprop="scholarAuthors">
-                      Kramarova et al.
-                    </span>
-                  </a>
-                </td>
-                <td>
-                  <time datetime="2012" itemprop="publicationDate">
-                    2012
-                  </time>
-                </td>
-                <td itemprop="title">
-                  Cognition and kinesiology: A dual-strategy approach to remembering choreography
-                </td>
-              </tr>
-              <tr itemprop="similarDocuments" itemscope="" repeat="">
-                <td>
-                  <meta content="true" itemprop="isScholar"/>
-                  <meta content="338011082066357037" itemprop="scholarID"/>
-                  <a href="/scholar/338011082066357037">
-                    <span itemprop="scholarAuthors">
-                      Salmi et al.
-                    </span>
-                  </a>
-                </td>
-                <td>
-                  <time datetime="2019" itemprop="publicationDate">
-                    2019
-                  </time>
-                </td>
-                <td itemprop="title">
-                  Musicality: A Game to Improve Musical Perception
+                  An Investagative High-Level Design of an Electric Bass Tutoring System Integrating Game Elements
                 </td>
               </tr>
             </tbody>
@@ -14866,26 +17163,37 @@ Gumbo.HTMLElement{:HTML}:<HTML lang="en">
     <script type="text/javascript">
       if (window.help && window.help.service) {
         helpApi = window.help.service.Lazy.create(0, {apiKey: 'AIzaSyDTEI_0tLX4varJ7bwK8aT-eOI5qr3BmyI', locale: 'en-US'});
-
-        helpApi.requestSurvey({
-          triggerId: 'YXTwAsvoW0kedxbuTdH0RArc9VhT',
-          enableTestingMode: false,
-          callback: (requestSurveyCallbackParam) => {
-            if (!requestSurveyCallbackParam.surveyData) {
-              return;
-            }
-            helpApi.presentSurvey({
-              productData: {
-                productVersion: window.version,
-                experimentIds: [],
-              },
-              surveyData: requestSurveyCallbackParam.surveyData,
-              colorScheme: 1,
-              customZIndex: 10000,
-            });
+        window.requestedSurveys = new Set();
+        window.requestSurvey = function(triggerId) {
+          if (window.requestedSurveys.has(triggerId)) {
+            return;
           }
-        });
+          window.requestedSurveys.add(triggerId);
+          helpApi.requestSurvey({
+            triggerId: triggerId,
+            enableTestingMode: false,
+            callback: (requestSurveyCallbackParam) => {
+              if (!requestSurveyCallbackParam.surveyData) {
+                return;
+              }
+              helpApi.presentSurvey({
+                productData: {
+                  productVersion: window.version,
+                  customData: {
+                    "experiments": "72459301,72474719",
+                  },
+                },
+                surveyData: requestSurveyCallbackParam.surveyData,
+                colorScheme: 1,
+                customZIndex: 10000,
+              });
+            }
+          });
+        };
+
+        window.requestSurvey('YXTwAsvoW0kedxbuTdH0RArc9VhT');
       }
         </script>
+    <script src="/sw/null_loader.js"></script>
   </body>
 </HTML>

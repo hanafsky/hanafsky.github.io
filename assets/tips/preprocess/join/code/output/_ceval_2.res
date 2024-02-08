@@ -1,6 +1,6 @@
-5-element Vector{Union{Missing, Float64}}:
+5-element Vector{Union{Missing, Int64}}:
    missing
    missing
-  6.0
-  9.0
- 12.0
+  6
+  9
+ 12

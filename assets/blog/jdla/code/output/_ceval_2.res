@@ -1,1 +1,1 @@
-nothing
+"/home/runner/work/hanafsky.github.io/hanafsky.github.io/__site/assets/blog/jdla/code/output/hist2.svg"

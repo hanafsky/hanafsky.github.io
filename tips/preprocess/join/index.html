@@ -241,28 +241,28 @@ graph TD
   first(_,<span class="hljs-number">15</span>) <span class="hljs-comment"># 15件目のレコードまで選択</span>
   println
 <span class="hljs-keyword">end</span></code></pre>
-<div class="code-output"><pre><code class="plaintext hljs">UndefVarError: lag not defined
+<div class="code-output"><pre><code class="plaintext hljs">UndefVarError: `lag` not defined
 </code></pre></div>
 <p>初回と2回目の予約レコードについては、前々回の支払金額がmissingとして追加されていることがわかります。</p>
 <h4 id="q_過去n件の合計値"><a href="#q_過去n件の合計値" class="header-anchor">Q 過去n件の合計値</a></h4>
 <p>今度は同一顧客の過去3件の予約金額の合計値を出力する例題です。 Rのrun_sum関数に相当するものとしては、RollingFunctions.jlが使えそうです。 <code>rolling&#40;f::Function, v::Vector, window::Int64&#41;</code>の形式で呼び出してみます。</p>
 <pre><code class="julia hljs"><span class="hljs-keyword">using</span> RollingFunctions
-rolling(sum, [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>],<span class="hljs-number">3</span>)</code></pre><pre><code class="plaintext hljs">3-element Vector{Float64}:
-  6.0
-  9.0
- 12.0</code></pre>
+rolling(sum, [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>],<span class="hljs-number">3</span>)</code></pre><pre><code class="plaintext hljs">3-element Vector{Int64}:
+  6
+  9
+ 12</code></pre>
 <p>もとの配列と同じ長さで、3つ毎に足した和が得られているはずです。 ただし、最初と2つ目のデータは、3つ分のデータはありませんから、missingに置き換えたいです。 また、そもそもデータ数が窓幅より少ない場合もmissingを返したいですね。</p>
 <p>このような関数をroll_sumとして実装してみましょう。</p>
 <pre><code class="julia hljs"><span class="hljs-keyword">function</span> roll_sum(v,window=<span class="hljs-number">3</span>)
   length(v) &lt; window ? <span class="hljs-built_in">Vector</span>{<span class="hljs-built_in">Missing</span>}(<span class="hljs-literal">undef</span>,length(v)) : 
                        vcat(<span class="hljs-built_in">Vector</span>{<span class="hljs-built_in">Missing</span>}(<span class="hljs-literal">undef</span>,window-<span class="hljs-number">1</span>),rolling(sum,v,window))
 <span class="hljs-keyword">end</span>
-roll_sum([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>],<span class="hljs-number">3</span>)</code></pre><pre><code class="plaintext hljs">5-element Vector{Union{Missing, Float64}}:
+roll_sum([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>],<span class="hljs-number">3</span>)</code></pre><pre><code class="plaintext hljs">5-element Vector{Union{Missing, Int64}}:
    missing
    missing
-  6.0
-  9.0
- 12.0</code></pre>
+  6
+  9
+ 12</code></pre>
 <p>前の例のlag関数をroll<em>sumで置き換えて、新たに:price</em>sumの列を作ります。 DataFrames.jlでは、適当に作った関数を用いて、すっきりした処理を記載することができました。 <span class="marker"> 対応する処理が既存のライブラリになければ、作ってしまえばよい</span>のです。 これは処理が高速なjuliaならでは強みだと思います。</p>
 <pre><code class="julia hljs"><span class="hljs-keyword">using</span> Chain, ShiftedArrays
 
@@ -277,23 +277,23 @@ roll_sum([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,
 <span class="hljs-keyword">end</span></code></pre>
 <div class="code-output"><pre><code class="plaintext hljs">15×4 DataFrame
  Row │ customer_id  reserve_datetime     total_price  price_sum
-     │ String7      Dates.DateTime       Int64        Float64?
+     │ String7      Dates.DateTime       Int64        Int64?
 ─────┼──────────────────────────────────────────────────────────
-   1 │ c_1          2016-03-06T13:09:42        97200  missing
-   2 │ c_1          2016-07-16T23:39:55        20600  missing
-   3 │ c_1          2016-09-24T10:03:17        33600   151400.0
-   4 │ c_1          2017-03-08T03:20:10       194400   248600.0
-   5 │ c_1          2017-09-05T19:50:37        68100   296100.0
-   6 │ c_1          2017-11-27T18:47:05        36000   298500.0
-   7 │ c_1          2017-12-29T10:38:36       103500   207600.0
-   8 │ c_1          2018-05-26T08:42:51         6000   145500.0
-   9 │ c_2          2016-03-05T13:31:06        68400  missing
-  10 │ c_2          2016-06-25T09:12:22       320400  missing
-  11 │ c_2          2016-11-19T12:49:10        29700   418500.0
-  12 │ c_2          2017-05-24T10:06:21        81600   431700.0
-  13 │ c_2          2017-10-19T03:03:30       137000   248300.0
-  14 │ c_2          2018-02-18T05:12:58        75600   294200.0
-  15 │ c_2          2018-04-19T11:25:00        68800   281400.0
+   1 │ c_1          2016-03-06T13:09:42        97200    missing
+   2 │ c_1          2016-07-16T23:39:55        20600    missing
+   3 │ c_1          2016-09-24T10:03:17        33600     151400
+   4 │ c_1          2017-03-08T03:20:10       194400     248600
+   5 │ c_1          2017-09-05T19:50:37        68100     296100
+   6 │ c_1          2017-11-27T18:47:05        36000     298500
+   7 │ c_1          2017-12-29T10:38:36       103500     207600
+   8 │ c_1          2018-05-26T08:42:51         6000     145500
+   9 │ c_2          2016-03-05T13:31:06        68400    missing
+  10 │ c_2          2016-06-25T09:12:22       320400    missing
+  11 │ c_2          2016-11-19T12:49:10        29700     418500
+  12 │ c_2          2017-05-24T10:06:21        81600     431700
+  13 │ c_2          2017-10-19T03:03:30       137000     248300
+  14 │ c_2          2018-02-18T05:12:58        75600     294200
+  15 │ c_2          2018-04-19T11:25:00        68800     281400
 </code></pre></div>
 <h4 id="q_過去n件の平均値"><a href="#q_過去n件の平均値" class="header-anchor">Q 過去n件の平均値</a></h4>
 <p>この例題では、</p>
@@ -487,7 +487,7 @@ first(summary_result,<span class="hljs-number">10</span>) |&gt; println</code></
  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: September 30, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: February 08, 2024. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

@@ -219,7 +219,7 @@ savefig(p,joinpath(<span class="hljs-meta">@OUTPUT</span>,<span class="hljs-stri
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:<span class="hljs-number">2</span>
     a += <span class="hljs-number">1</span>
 <span class="hljs-keyword">end</span></code></pre>
-<p><pre><code class="plaintext hljs">UndefVarError: a not defined
+<p><pre><code class="plaintext hljs">UndefVarError: `a` not defined
 </code></pre> となってしまいます。 これを防ぐには、let環境に入れ込んでしまうか、</p>
 <pre><code class="julia hljs"><span class="hljs-keyword">let</span>
 a = <span class="hljs-number">1</span>
@@ -357,7 +357,7 @@ default(
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Kei Hanafusa. Last modified: September 30, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Kei Hanafusa. Last modified: February 08, 2024. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

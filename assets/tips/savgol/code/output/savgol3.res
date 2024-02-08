@@ -1,1 +1,1 @@
-nothing
+"/home/runner/work/hanafsky.github.io/hanafsky.github.io/__site/assets/tips/savgol/code/output/savgol3.svg"
