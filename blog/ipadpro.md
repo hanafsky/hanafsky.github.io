@@ -103,7 +103,7 @@ piascoreはIMSLPのように無料楽譜をダウンロードできるほか、�
 
 \right{めでたしめでたし}
 \share{blog/ipadpro}{iPad proを導入}
-\prev{/blog/jdla}{JDLA認定 G検定・E資格}
+\prevnext{/blog/jdla}{/blog/diet}{JDLA認定 G検定・E資格}{奇数月ダイエット}
 \backtotop
 
 {{ addcomments }}
